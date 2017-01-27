@@ -1,5 +1,3 @@
-Created by Willy McAllister, the 2016 Content Fellow for Electrical Engineering at Khan Academy.
-
 # Table of Contents
 
 ## Preparing to study electrical engineering
