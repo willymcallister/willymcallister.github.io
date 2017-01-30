@@ -20,3 +20,8 @@ Circuits with capacitors and inductors change with time. The natural and forced 
 
 ### AC circuit analysis
 If we limit ourselves to signals shaped like sines or cosines, we can develop a whole method of AC analysis to figure out what happens in circuits with any changing signal. These methods are far simpler than solving a differential equation from scratch.
+
+# Tools
+
+[Circuit sandbox](circuit-sandbox.md)
+
