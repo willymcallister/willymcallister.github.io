@@ -86,7 +86,7 @@ Here is a complete RC circuit schematic. Copy and paste this entire URL into a b
     k    10^3           p   10^-12
                         f   10^-15 
 
-example: $1000$ can be entered as $1\text k$
+example: $$1000$$ can be entered as $$1\text k$$
 
 ## On-screen controls 
 Scroll/Pan:  <img height="40" src="https://ka-perseus-images.s3.amazonaws.com/2446260ae44e7a7d850d815fedeb12506058d322.png">
