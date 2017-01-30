@@ -126,7 +126,8 @@ Delete: <img height="40" src="https://ka-perseus-images.s3.amazonaws.com/1392955
 
 The simulator has simple models for semiconductor devices and an operational amplifier, with just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
 
-The default diode saturation current is $1.0\times 10^-14 \text A$. The *area* parameter scales saturation current: $is = a * is$. 
+The default diode saturation current is $$1.0\times 10^-14 \text A
+$$. The *area* parameter scales saturation current: $$is = a \times is$$. 
 
 ## System information
 
