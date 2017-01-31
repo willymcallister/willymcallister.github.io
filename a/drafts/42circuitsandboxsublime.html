@@ -1,0 +1,976 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style>
+
+<style>
+details {
+    padding: 15px;
+    background-color: #f6f7f8;
+    margin-bottom: 20px;
+  }
+summary::-webkit-details-marker {
+    display: none;
+}
+summary {
+  color: #0099ff;
+}
+summary:before {
+    content: "[";
+    color: #0099ff;
+    margin-right: 5px;
+}
+summary:after {
+    content: "]";
+    color: #0099ff;
+    margin-left: 5px;
+
+}
+</style>
+
+<title>42 circuit sandbox</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+<script type="text/javascript" src="/Users/willymcallister/KA/katex/contrib/auto-render.min.js"></script>
+
+
+</head>
+
+<body><article id="test" class="markdown-body"><h2>
+<a id="user-content-circuit-sandbox" class="anchor" href="#circuit-sandbox" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Circuit sandbox</h2>
+
+<p>A simulator for experimenting with circuits.</p>
+
+<p><a href="https://cdn.kastatic.org/ka-article-iframes/circuit_simulator/index.html">Circuit sandbox</a></p>
+
+<p><a href="https://cdn.kastatic.org/ka-article-iframes/circuit_simulator/index-es.html">Circuit sandbox (en español)</a></p>
+
+<p><a href="https://cdn.kastatic.org/ka-article-iframes/circuit_simulator/index-mobile.html">Circuit sandbox (mobile)</a></p>
+
+<h2>
+<a id="user-content-playing-in-the-circuit-sandbox" class="anchor" href="#playing-in-the-circuit-sandbox" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Playing in the circuit sandbox</h2>
+
+<p>To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.</p>
+
+<p><a href="https://cdn.kastatic.org/ka-article-iframes/circuit_simulator/index.html"><img src="https://camo.githubusercontent.com/05e0fc92c2aaef5a5e2ba3bc40f31b2a49e8ba4c/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f383132376336633035633538653835313364666361303463366230346539623831643562316332352e706e67" data-canonical-src="https://ka-perseus-images.s3.amazonaws.com/8127c6c05c58e8513dfca04c6b04e9b81d5b1c25.png" style="max-width:100%;"></a></p>
+
+<p><a href="https://camo.githubusercontent.com/d35f6ddc9fcd25d22b5088d20e827de5fa38c65a/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f663139343365656265616630653730643530336164633666623766313863383933316561383832322e706e67" target="_blank"><img src="https://camo.githubusercontent.com/d35f6ddc9fcd25d22b5088d20e827de5fa38c65a/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f663139343365656265616630653730643530336164633666623766313863383933316561383832322e706e67" data-canonical-src="https://ka-perseus-images.s3.amazonaws.com/f1943eebeaf0e70d503adc6fb7f18c8931ea8822.png" style="max-width:100%;"></a></p>
+
+<h2>
+<a id="user-content-getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h2>
+
+<p>Drag components from the parts bin onto the main screen.</p>
+
+<p>Add wires by dragging between terminals.</p>
+
+<p>Tap on the Rotate icon or type  <strong>"r"</strong>  to rotate a component.</p>
+
+<p>Tap on $\times$ or type BACKSPACE to delete a component.</p>
+
+<p>Double-tap on a component to change its properties.</p>
+
+<p>Add a ground symbol (triangle shape at the top of the parts bin).</p>
+
+<p>Add voltage or current probes to the nodes you want to plot.
+Select DC, AC, or TRAN from the menu to simulate the circuit.</p>
+
+<p>Touch (tablet or smartphone):</p>
+
+<ul>
+<li>One finger: selects components or drags a selection rectangle </li>
+<li>Two fingers: pans schematic window</li>
+</ul>
+
+<p><details>
+  <summary><em>Build the circuit shown above.</em></summary>
+  <p>To create the RC circuit shown above, follow these steps starting from a blank schematic.</p>
+  <ul>
+<li>Add components (voltage source, resistor, capacitor) from the parts bin on the right onto the schematic. Click on a component in the bin, then click on the schematic. Or, click down on a component in the bin and drag it to the schematic. </li>
+<li>Add components (voltage source, resistor, capacitor) from the parts bin on the right onto the schematic. Click on a component in the bin, then click on the schematic. Or, click down on a component in the bin and drag it to the schematic.</li> 
+<li>Select the resistor by clicking on it. It will turn green. While it is selected, hit the <strong>"r"</strong> key on the keyboard to make it rotate to horizontal. You can also click on the $\circlearrowright$ rotation arrow icon. Do repeated rotations to see what happens.</li>
+<li>Position the components on the page by dragging them around.</li> 
+<li>Add wires by dragging between the connection points on the components. If you make a mistake, hit the backspace/delete key on your keyboard, or click on the $\large \times$ icon.</li>
+<li>Specify which node is ground by dragging the ground symbol from the parts bin (triangle with a stick) and connect it to the bottom of the voltage source.</li> 
+<li>Adjust the component properties. Double-click on the voltage source and change its type to "step". Give it a name if you want. In the same way, change the resistor value to 1k, and the capacitor value to 1u. The k and u suffixes are short for $10^3$ and $10^{-6}$.</li>
+<li>Add a voltage probe (the thing in the parts bin that looks like a voltage probe) to the top node of the capacitor. This is the voltage we will simulate and plot.</li>
+<li>Select an analysis to perform. For this example, let's do a transient analysis, so click on TRAN in the menu. Set the stop time to 10m. The suffix m stands for $10^{-3}$.</li>
+<li>Click OK and the simulation is performed.</li>
+</ul>
+</details></p>
+
+<h2>
+<a id="user-content-help" class="anchor" href="#help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help</h2>
+
+<p><strong>Add a component</strong>: Tap on a part in the parts bin, then tap on the schematic to add.</p>
+
+<p><strong>Add a wire</strong>: Wires start at connection points (open circles). Touch on a connection to start a wire, drag, and release.</p>
+
+<p><strong>Select</strong>: Drag a rectangle to select components. 
+Shift-click to include another component (desktop only).</p>
+
+<p><strong>Move</strong>: Touch to select, drag to new location.</p>
+
+<p><strong>Delete</strong>: Tap to select, then tap the $\large \times$ icon or hit BACKSPACE.</p>
+
+<p><strong>Rotate/Reflect</strong>: Tap to select, then tap on the Rotate icon or type the letter "<strong>r</strong>" to rotate 90. Repeat for more rotations and reflections.</p>
+
+<p><strong>Properties</strong>: Double-tap on a component to change its properties, like resistance or voltage.</p>
+
+<p><strong>Numeric suffixes</strong>: You can enter numbers in engineering notation:</p>
+
+<pre><code>T    10^12      m   10^-3 
+G    10^9       u   10^-6  
+M    10^6       n   10^-9  
+k    10^3       p   10^-12
+                f   10^-15
+</code></pre>
+
+<p>example: $1000$ can be entered by typing $1\text k$</p>
+
+<p><strong>View controls</strong><br>
+Scroll/Pan  <a href="https://camo.githubusercontent.com/0d4ec15e386a51e2c5e8d0ad8270022837ad6191/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f323434363236306165343465376137643835306438313566656465623132353036303538643332322e706e67" target="_blank"><img src="https://camo.githubusercontent.com/0d4ec15e386a51e2c5e8d0ad8270022837ad6191/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f323434363236306165343465376137643835306438313566656465623132353036303538643332322e706e67" data-canonical-src="https://ka-perseus-images.s3.amazonaws.com/2446260ae44e7a7d850d815fedeb12506058d322.png" style="max-width:100%;"></a></p>
+
+<p>Zoom in/out/all <a href="https://camo.githubusercontent.com/842714d0fc948ab508825eec74be892594da78cd/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f373839373963386165646238636563313631346362353065636262663965366562626163363634352e706e67" target="_blank"><img src="https://camo.githubusercontent.com/842714d0fc948ab508825eec74be892594da78cd/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f373839373963386165646238636563313631346362353065636262663965366562626163363634352e706e67" data-canonical-src="https://ka-perseus-images.s3.amazonaws.com/78979c8aedb8cec1614cb50ecbbf9e6ebbac6645.png" style="max-width:100%;"></a></p>
+
+<p>Rotate <a href="https://camo.githubusercontent.com/f0530901497550100c847b29cde5ea9624bf74ae/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f646561653564366431666233613034316463623834386665613734366162643139313564316139372e706e67" target="_blank"><img src="https://camo.githubusercontent.com/f0530901497550100c847b29cde5ea9624bf74ae/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f646561653564366431666233613034316463623834386665613734366162643139313564316139372e706e67" data-canonical-src="https://ka-perseus-images.s3.amazonaws.com/deae5d6d1fb3a041dcb848fea746abd1915d1a97.png" style="max-width:100%;"></a></p>
+
+<p>Delete <a href="https://camo.githubusercontent.com/444315eebe103bf7842483dbd498a86f5b95b437/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f313339323935356634353934303934353030613363336132623039646364353261306533313732372e706e67" target="_blank"><img src="https://camo.githubusercontent.com/444315eebe103bf7842483dbd498a86f5b95b437/68747470733a2f2f6b612d706572736575732d696d616765732e73332e616d617a6f6e6177732e636f6d2f313339323935356634353934303934353030613363336132623039646364353261306533313732372e706e67" data-canonical-src="https://ka-perseus-images.s3.amazonaws.com/1392955f4594094500a3c3a2b09dcd52a0e31727.png" style="max-width:100%;"></a></p>
+
+<h2>
+<a id="user-content-menu" class="anchor" href="#menu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Menu</h2>
+
+<p><strong>Help</strong>: Displays the help information shown above. </p>
+
+<p><strong>Open netlist</strong>: Opens a saved netlist.</p>
+
+<p><strong>Grid</strong>: Toggle the background grid on and off.</p>
+
+<p><strong>Save netlist</strong>: Saves the current netlilst. See System information below for how this works on different platforms.</p>
+
+<p><strong>Cut/Copy/Paste</strong> The usual edit functions.<br>
+Mac shortcuts: ⌘-X, ⌘-C, ⌘-V<br>
+PC shortcuts: ctl-X, ctl-C, ctl-V</p>
+
+<p><strong>Import</strong>: Select a netlist file from your computer and open it. (JSON text file)</p>
+
+<p><strong>DC</strong>:  Finds the DC voltages and currents, also called the <em>operating point</em>.</p>
+
+<p><strong>AC</strong>: Sweeps the AC frequency, plots voltage or current vs. frequency.</p>
+
+<p><strong>TRAN</strong>: Transient response. Finds the time response, plots voltage or current vs. time.</p>
+
+<h2>
+<a id="user-content-models" class="anchor" href="#models" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Models</h2>
+
+<p>The simulator has simple models for semiconductor devices and an operational amplifier, with just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below.</p>
+
+<h2>
+<a id="user-content-system-information" class="anchor" href="#system-information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>System information</h2>
+
+<p>The circuit sandbox works best in a desktop or laptop environment. (It works on a tablet, but the download/import functions are not available.) </p>
+
+<h3>
+<a id="user-content-desktoplaptop" class="anchor" href="#desktoplaptop" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Desktop/laptop</h3>
+
+<p>The <code>SAVE</code> function saves a circuit text file (in JSON format) to the Download folder on your desktop computer.  The <code>OPEN</code> function retrieves a circuit text file from anywhere you choose in your computer's file system. Your circuit is never transferred to Khan Academy servers. If you want to keep your work, be sure to <code>SAVE</code> your circuit before leaving the web page.</p>
+
+<p>The downloaded netlist file is named <em>ckt.txt</em>. (text file, JSON, JavaScript Object Notation)</p>
+
+<h3>
+<a id="user-content-tablets-and-other-mobile-devices" class="anchor" href="#tablets-and-other-mobile-devices" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tablets and other mobile devices</h3>
+
+<p>The simulator has a touch interface. The simulator saves <em>one</em> circuit file. When you <code>SAVE</code> a circuit, it is saved to a memory area inside your browser. When you <code>OPEN</code> the saved circuit, the circuit file is retrieved from browser memory. If you want to keep your work, be sure to <code>SAVE</code> your circuit before leaving the web page.</p>
+
+<h2>
+<a id="user-content-languages-and-translation" class="anchor" href="#languages-and-translation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Languages and translation</h2>
+
+<p>If you would like to translate the Circuit Sandbox into other languages, it's fairly simple. As a model, look at the Spanish strings file named es.js or the original English strings, en-US.js. If you prepare a translation file in your favorite language, mail it to me at willymcallister1 at gmail dot com. The Circuit Sandbox has been translated into:</p>
+
+<ul>
+<li>English, en-US.js</li>
+<li>Spanish, es.js</li>
+</ul>
+
+<h2>
+<a id="user-content-the-circuit-sandbox-was-created-at-mit" class="anchor" href="#the-circuit-sandbox-was-created-at-mit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The circuit sandbox was created at MIT</h2>
+
+<p>The circuit sandbox simulator was created at MIT by Professor Chris Terman in 2011, and was used by the very first massively-open-online class (MOOC), MIT 6.002x. It is licensed under the MIT License and is also part of the EdX-platform. The simulator is 100% Javascript and does not require installation. The simulator works in most modern browsers on Windows, Mac, and Linux machines. </p>
+
+<h2>
+<a id="user-content-other-circuit-simulators" class="anchor" href="#other-circuit-simulators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other circuit simulators</h2>
+
+<p>The granddaddy of all circuit simulation programs is SPICE (Simulation Program with Integrated Circuit Emphasis). This program was created at the University of California, Berkeley in the 1970's. It was originally written in FORTRAN and has always been in the public domain. </p>
+
+<p>The input to SPICE is a plain-text circuit description called the SPICE netlist.  SPICE supports sophisticated models for non-linear semiconductor devices (diodes and many types of transistors). Over the years, many people have written front-end interfaces to SPICE that allow designers to create schematics by drawing them. The SPICE netlislt is automatically generated and submitted to SPICE for simulation. The results are retrieved from SPICE and plotted.  Many of these packages can be found by searching the web for "circuit simulator."</p>
+
+<p>An excellent version of SPICE is available from <a href="http://www.linear.com/">Linear Technology</a>, a semiconductor manufacturing company in Milpitas, California. The program is called <a href="http://www.linear.com/designtools/software/#LTspice">LTspice</a>. LTspice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use."</p>
+
+<h2>
+<a id="user-content-acknowledgements" class="anchor" href="#acknowledgements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<p>schematic.js   © <em>2012 EdX</em>,  © <em>2011 MIT EECS</em></p>
+
+<p>Khan Academy software is made available under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.  </p>
+
+<p>This circuit simulator is part of the EdX Platform, licensed under the 
+<a href="https://github.com/edx/edx-platform/blob/master/LICENSE">GNU AFFERO GENERAL PUBLIC LICENSE</a>
+Version 3, 19 November 2007. More information at <a href="https://open.edx.org/open-edx-licensing">EdX licensing</a>.</p>
+
+<p>The quick brown fox[^1] jumped over the lazy dog[^2].</p>
+
+<p>[^1]: Foxes are red
+[^2]: Dogs are usually not red</p>
+
+<h4>
+<a id="user-content-libraries" class="anchor" href="#libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Libraries</h4>
+
+<p>The simulator uses two open-source libraries:  </p>
+
+<p><a href="http://danml.com/download.html">Download.js</a> is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, attributed to "dandavis". No changes were made. Download.js allows to circuit files to be downloaded to the client computer.</p>
+
+<p><a href="http://hammerjs.github.io/">Hammer.js</a> is available under the <a href="https://github.com/hammerjs/hammer.js/blob/master/LICENSE.md">MIT License</a>. No changes were made. Hammer.js provides touch functionality, in particular, the double-tap function for touch interfaces.</p>
+
+<p>This version of the circuit sandbox simulator includes additions by Willy McAllister, EE Content Fellow at Khan Academy during 2016:</p>
+
+<ul>
+<li>Save/Load netlist</li>
+<li>Touch sensitivity for tablets and smart phone.</li>
+</ul>
+</article>
+
+<script>
+  renderMathInElement(
+      document.getElementById("test"),
+      {
+          delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "\\[", right: "\\]", display: true},
+              {left: "$", right: "$", display: false},
+              {left: "\\(", right: "\\)", display: false}
+          ]
+      }
+  );
+</script>
+
+</body></html>

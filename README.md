@@ -1,3 +1,7 @@
+# Welcome to Electrical Engineering
+
+Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy
+
 # Table of Contents
 
 ## Preparing to study electrical engineering
@@ -23,5 +27,5 @@ If we limit ourselves to signals shaped like sines or cosines, we can develop a 
 
 # Tools
 
-[Circuit sandbox](circuit-sandbox.md)
+[Circuit sandbox](a/circuit-sandbox.html)
 
