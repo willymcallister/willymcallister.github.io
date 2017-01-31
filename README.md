@@ -25,5 +25,5 @@ If we limit ourselves to signals shaped like sines or cosines, we can develop a 
 
 # Tools
 
-[Circuit sandbox](a/42circuit-sandbox.html)
+[Circuit sandbox](a/circuit-sandbox.html)
 
