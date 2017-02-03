@@ -14,7 +14,7 @@ To create a circuit, drag components from the parts bin on the right, onto the s
 
 <img src="images/42image_1.png">
 
-The result of a *transient* analysis is a plot of voltage vs. time.
+Sample output: A *transient* analysis is a plot of voltage vs. time.
 
 <img src="images/42image_2.png">
 
