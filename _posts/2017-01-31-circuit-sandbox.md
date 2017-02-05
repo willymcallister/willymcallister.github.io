@@ -1,6 +1,7 @@
 ---
-layout: page
-title:  Circuit sandbox page
+layout: post
+title:  "Circuit sandbox post"
+date:   2017-01-31 15:39:00 -0800
 author: Willy McAllister
 comments: true
 ---
@@ -16,11 +17,11 @@ A simulator for experimenting with circuits.
 
 To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
 
-![circuit sandbox screenshot](/i/42screenshot.png)
+![circuit sandbox screenshot]({{ site.url }}/i/42screenshot.png)
 
 Sample output: A *transient* analysis is a plot of voltage vs. time.
 
-![transient analysis screenshot](/i/42transient_analysis.png)
+![transient analysis screenshot]({{ site.url }}/i/42transient_analysis.png)
 
 ## Getting started
 
