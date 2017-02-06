@@ -17,11 +17,11 @@ A simulator for experimenting with circuits.
 
 To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
 
-![circuit sandbox screenshot]({{ site.url }}/i/42screenshot.png)
+![circuit sandbox screenshot]({{ site.baseurl }}/i/42screenshot.png)
 
 Sample output: A *transient* analysis is a plot of voltage vs. time.
 
-![transient analysis screenshot]({{ site.url }}/i/42transient_analysis.png)
+![transient analysis screenshot]({{ site.baseurl }}/i/42transient_analysis.png)
 
 ## Getting started
 
