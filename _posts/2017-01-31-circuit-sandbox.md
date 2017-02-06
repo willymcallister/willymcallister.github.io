@@ -94,10 +94,10 @@ example: $1000$ can be entered as $1\text k$
 ## On-screen controls 
 
 |:-------------|:----------------------------------------------------------:|
-| Scroll/Pan   | ![]({{ site.url }}/i/42scroll_controls.png){:height="40px"}| 
-| Zoom         | ![]({{ site.url }}/i/42zoom_controls.png){:height="80px"}  |
-| Rotate       | ![]({{ site.url }}/i/42rotate_control.png){:height="40px"} | 
-| Delete       | ![]({{ site.url }}/i/42delete_control.png){:height="40px"} |
+| Scroll/Pan   | ![]({{ site.baseurl }}/i/42scroll_controls.png){:height="40px"}| 
+| Zoom         | ![]({{ site.baseurl }}/i/42zoom_controls.png){:height="80px"}  |
+| Rotate       | ![]({{ site.baseurl }}/i/42rotate_control.png){:height="40px"} | 
+| Delete       | ![]({{ site.baseurl }}/i/42delete_control.png){:height="40px"} |
 
 
 ## Menu
