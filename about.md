@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about/ 
 ---
 Learn the concepts of electrical engineering. The topics covered here are what you would be taught as an undergraduate majoring in electrical engineering.
 
