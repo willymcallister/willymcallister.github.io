@@ -14,4 +14,4 @@ Starting in 2017, I will be adding new material, both introductory and advanced,
 This web site is hosted by [GitHub Pages](https://pages.github.com/), and uses [Jekyll](https://jekyllrb.com/) to generate the site.  
 The Jekyll theme is '[minima](https://github.com/jekyll/minima)'.
 
-Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-fast math typesetting library from Khan Academy.
+Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-fast math typesetting library from Khan Academy. 

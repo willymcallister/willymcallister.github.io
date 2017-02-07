@@ -4,4 +4,4 @@
 #    bundle exec jekyll serve --config _config.yml,_config_dev.yml
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://localhost" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://localhost" # the base hostname & protocol for your site, e.g. http://example.com
