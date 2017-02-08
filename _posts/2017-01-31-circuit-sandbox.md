@@ -71,6 +71,7 @@ If you have a touch device (tablet or smartphone):
 </pre>
 </div>
 </details>
+$$
 
 ## Actions 
 
