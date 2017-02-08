@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-08T14:44:19-08:00</updated><id>http://localhost:4000//</id><title type="html">Electrical Engineering</title><subtitle>Learn the concepts of electrical engineering.   The topics covered here are what you would be taught as an undergraduate majoring in EE.  This work is © 2017 under the terms of the MIT License.
-</subtitle><author><name>Willy McAllister</name></author><entry><title type="html">Electrical Engineering main post</title><link href="http://localhost:4000/2017/02/04/main.html" rel="alternate" type="text/html" title="Electrical Engineering main post" /><published>2017-02-04T00:00:00-08:00</published><updated>2017-02-04T00:00:00-08:00</updated><id>http://localhost:4000/2017/02/04/main</id><content type="html" xml:base="http://localhost:4000/2017/02/04/main.html">&lt;p&gt;Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/Electrical-Engineering/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/Electrical-Engineering/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/Electrical-Engineering/" rel="alternate" type="text/html" /><updated>2017-02-08T14:52:35-08:00</updated><id>http://localhost:4000/Electrical-Engineering//</id><title type="html">Electrical Engineering</title><subtitle>Learn the concepts of electrical engineering.   The topics covered here are what you would be taught as an undergraduate majoring in EE.  This work is © 2017 under the terms of the MIT License.
+</subtitle><author><name>Willy McAllister</name></author><entry><title type="html">Electrical Engineering main post</title><link href="http://localhost:4000/Electrical-Engineering/2017/02/04/main.html" rel="alternate" type="text/html" title="Electrical Engineering main post" /><published>2017-02-04T00:00:00-08:00</published><updated>2017-02-04T00:00:00-08:00</updated><id>http://localhost:4000/Electrical-Engineering/2017/02/04/main</id><content type="html" xml:base="http://localhost:4000/Electrical-Engineering/2017/02/04/main.html">&lt;p&gt;Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy&lt;/p&gt;
 
 &lt;h2 id=&quot;preparing-to-study-electrical-engineering&quot;&gt;Preparing to study electrical engineering&lt;/h2&gt;
 &lt;p&gt;Become familiar with the two most important electrical quantities: current and voltage. Learn about engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.&lt;/p&gt;
@@ -24,7 +24,7 @@
 
 &lt;h1 id=&quot;tools&quot;&gt;Tools&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;a/circuit-sandbox.html&quot;&gt;Circuit sandbox&lt;/a&gt;&lt;/p&gt;</content><author><name>Willy McAllister</name></author><summary type="html">Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy</summary></entry><entry><title type="html">Circuit sandbox post</title><link href="http://localhost:4000/2017/01/31/circuit-sandbox.html" rel="alternate" type="text/html" title="Circuit sandbox post" /><published>2017-01-31T15:39:00-08:00</published><updated>2017-01-31T15:39:00-08:00</updated><id>http://localhost:4000/2017/01/31/circuit-sandbox</id><content type="html" xml:base="http://localhost:4000/2017/01/31/circuit-sandbox.html">&lt;p&gt;A simulator for experimenting with circuits.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;a/circuit-sandbox.html&quot;&gt;Circuit sandbox&lt;/a&gt;&lt;/p&gt;</content><author><name>Willy McAllister</name></author><summary type="html">Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy</summary></entry><entry><title type="html">Circuit sandbox post</title><link href="http://localhost:4000/Electrical-Engineering/2017/01/31/circuit-sandbox.html" rel="alternate" type="text/html" title="Circuit sandbox post" /><published>2017-01-31T15:39:00-08:00</published><updated>2017-01-31T15:39:00-08:00</updated><id>http://localhost:4000/Electrical-Engineering/2017/01/31/circuit-sandbox</id><content type="html" xml:base="http://localhost:4000/Electrical-Engineering/2017/01/31/circuit-sandbox.html">&lt;p&gt;A simulator for experimenting with circuits.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://willymcallister.github.io/Circuit-sandbox/index.html&quot;&gt;Circuit sandbox&lt;/a&gt; (English)&lt;/p&gt;
 
@@ -34,11 +34,11 @@
 
 &lt;p&gt;To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/i/42screenshot.png&quot; alt=&quot;circuit sandbox screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Electrical-Engineering/i/42screenshot.png&quot; alt=&quot;circuit sandbox screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sample output: A &lt;em&gt;transient&lt;/em&gt; analysis is a plot of voltage vs. time.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/i/42transient_analysis.png&quot; alt=&quot;transient analysis screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Electrical-Engineering/i/42transient_analysis.png&quot; alt=&quot;transient analysis screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
 
@@ -125,19 +125,19 @@ k    10^3           p   10^-12
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Scroll/Pan&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/i/42scroll_controls.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42scroll_controls.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Zoom&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/i/42zoom_controls.png&quot; alt=&quot;&quot; height=&quot;80px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42zoom_controls.png&quot; alt=&quot;&quot; height=&quot;80px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Rotate&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/i/42rotate_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42rotate_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Delete&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/i/42delete_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42delete_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
