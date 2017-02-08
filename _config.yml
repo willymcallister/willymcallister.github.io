@@ -21,7 +21,6 @@ description: > # this means to ignore newlines until "baseurl:"
   The topics covered here are what you would be taught as an undergraduate majoring in EE. 
   This work is © 2017 under the terms of the MIT License.
 
-destination: _site
 baseurl: "/Electrical-Engineering" # the subpath of your site, e.g. /blog
 url: "https://willymcallister.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
