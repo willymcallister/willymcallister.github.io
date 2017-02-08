@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://willymcallister.github.io/Electrical-Engineering/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="https://willymcallister.github.io/Electrical-Engineering/feed.xml" rel="self" type="application/atom+xml" /><link href="https://willymcallister.github.io/Electrical-Engineering/" rel="alternate" type="text/html" /><updated>2017-02-08T09:01:55-08:00</updated><id>https://willymcallister.github.io/Electrical-Engineering//</id><title type="html">Electrical Engineering</title><subtitle>Learn the concepts of electrical engineering.   The topics covered here are what you would be taught as an undergraduate majoring in EE.  This work is © 2017 under the terms of the MIT License.
-</subtitle><author><name>Willy McAllister</name></author><entry><title type="html">Electrical Engineering main post</title><link href="https://willymcallister.github.io/Electrical-Engineering/2017/02/04/main.html" rel="alternate" type="text/html" title="Electrical Engineering main post" /><published>2017-02-04T00:00:00-08:00</published><updated>2017-02-04T00:00:00-08:00</updated><id>https://willymcallister.github.io/Electrical-Engineering/2017/02/04/main</id><content type="html" xml:base="https://willymcallister.github.io/Electrical-Engineering/2017/02/04/main.html">&lt;p&gt;Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-08T14:44:19-08:00</updated><id>http://localhost:4000//</id><title type="html">Electrical Engineering</title><subtitle>Learn the concepts of electrical engineering.   The topics covered here are what you would be taught as an undergraduate majoring in EE.  This work is © 2017 under the terms of the MIT License.
+</subtitle><author><name>Willy McAllister</name></author><entry><title type="html">Electrical Engineering main post</title><link href="http://localhost:4000/2017/02/04/main.html" rel="alternate" type="text/html" title="Electrical Engineering main post" /><published>2017-02-04T00:00:00-08:00</published><updated>2017-02-04T00:00:00-08:00</updated><id>http://localhost:4000/2017/02/04/main</id><content type="html" xml:base="http://localhost:4000/2017/02/04/main.html">&lt;p&gt;Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy&lt;/p&gt;
 
 &lt;h2 id=&quot;preparing-to-study-electrical-engineering&quot;&gt;Preparing to study electrical engineering&lt;/h2&gt;
 &lt;p&gt;Become familiar with the two most important electrical quantities: current and voltage. Learn about engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.&lt;/p&gt;
@@ -24,7 +24,7 @@
 
 &lt;h1 id=&quot;tools&quot;&gt;Tools&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;a/circuit-sandbox.html&quot;&gt;Circuit sandbox&lt;/a&gt;&lt;/p&gt;</content><author><name>Willy McAllister</name></author><summary type="html">Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy</summary></entry><entry><title type="html">Circuit sandbox post</title><link href="https://willymcallister.github.io/Electrical-Engineering/2017/01/31/circuit-sandbox.html" rel="alternate" type="text/html" title="Circuit sandbox post" /><published>2017-01-31T15:39:00-08:00</published><updated>2017-01-31T15:39:00-08:00</updated><id>https://willymcallister.github.io/Electrical-Engineering/2017/01/31/circuit-sandbox</id><content type="html" xml:base="https://willymcallister.github.io/Electrical-Engineering/2017/01/31/circuit-sandbox.html">&lt;p&gt;A simulator for experimenting with circuits.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;a/circuit-sandbox.html&quot;&gt;Circuit sandbox&lt;/a&gt;&lt;/p&gt;</content><author><name>Willy McAllister</name></author><summary type="html">Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy</summary></entry><entry><title type="html">Circuit sandbox post</title><link href="http://localhost:4000/2017/01/31/circuit-sandbox.html" rel="alternate" type="text/html" title="Circuit sandbox post" /><published>2017-01-31T15:39:00-08:00</published><updated>2017-01-31T15:39:00-08:00</updated><id>http://localhost:4000/2017/01/31/circuit-sandbox</id><content type="html" xml:base="http://localhost:4000/2017/01/31/circuit-sandbox.html">&lt;p&gt;A simulator for experimenting with circuits.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://willymcallister.github.io/Circuit-sandbox/index.html&quot;&gt;Circuit sandbox&lt;/a&gt; (English)&lt;/p&gt;
 
@@ -34,11 +34,11 @@
 
 &lt;p&gt;To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Electrical-Engineering/i/42screenshot.png&quot; alt=&quot;circuit sandbox screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/i/42screenshot.png&quot; alt=&quot;circuit sandbox screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sample output: A &lt;em&gt;transient&lt;/em&gt; analysis is a plot of voltage vs. time.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Electrical-Engineering/i/42transient_analysis.png&quot; alt=&quot;transient analysis screenshot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/i/42transient_analysis.png&quot; alt=&quot;transient analysis screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
 
@@ -65,29 +65,31 @@
   &lt;li&gt;Two fingers pan the schematic window&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;details&gt;&lt;summary&gt;How to build the circuit shown above&lt;/summary&gt;
+&lt;details&gt;
+&lt;summary&gt; How to build the circuit shown above &lt;/summary&gt;
+
 &lt;p&gt;To create the RC circuit shown above, follow these steps starting from a blank schematic.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Add components (a voltage source, resistor, and capacitor). Click on a component in the parts bin on the right, then click on the schematic. Or, you can mouse down on a component in the bin and drag it to the schematic.&lt;/li&gt;
-  &lt;li&gt;Select the resistor by clicking on it. It will turn green. While it is selected, hit the &lt;strong&gt;“r”&lt;/strong&gt; key on the keyboard to make it rotate to horizontal. You can also click on the R⤵  icon. Rotate several times to see what happens.&lt;/li&gt;
-  &lt;li&gt;Position components on the page by dragging them around.&lt;/li&gt;
-  &lt;li&gt;Add wires by dragging between the connection points on the components. If you make a mistake, hit the backspace/delete key on your keyboard to delete whatever is selected, or click on the $\large \times$ icon.&lt;/li&gt;
-  &lt;li&gt;Specify a ground node by dragging the ground symbol from the parts bin (the triangle with a stick) and connect it to the bottom of the voltage source.&lt;/li&gt;
-  &lt;li&gt;Adjust the component properties. Double-click on the voltage source and change its type to “step”. Give it a name if you want. In the same way, change the resistor value to 1k, and the capacitor value to 1u. The k and u suffixes are short for $10^{+3}$ and $10^{-6}$.&lt;/li&gt;
-  &lt;li&gt;Add a voltage probe to the top node of the capacitor. (The thing in the parts bin that looks like a voltmeter probe.) This is the voltage we will plot.&lt;/li&gt;
-  &lt;li&gt;Select an analysis to perform. For this example, let’s do a transient analysis. Click TRAN in the menu. Set the stop time to 10m. The m stands for $10^{-3}$ so we will simulate for 10 milliseconds.&lt;/li&gt;
-  &lt;li&gt;Click OK. The simulation is performed and a plot should appear.&lt;/li&gt;
+&lt;li&gt; Add components (a voltage source, resistor, and capacitor). Click on a component in the parts bin on the right, then click on the schematic. Or, you can mouse down on a component in the bin and drag it to the schematic.&lt;/li&gt;
+&lt;li&gt; Select the resistor by clicking on it. It will turn green. While it is selected, hit the **&quot;r&quot;** key on the keyboard to make it rotate to horizontal. You can also click on the R&amp;#x2935;  icon. Rotate several times to see what happens.&lt;/li&gt;
+&lt;li&gt; Position components on the page by dragging them around.&lt;/li&gt;
+&lt;li&gt; Add wires by dragging between the connection points on the components. If you make a mistake, hit the backspace/delete key on your keyboard to delete whatever is selected, or click on the $\large \times$ icon.&lt;/li&gt;
+&lt;li&gt; Specify a ground node by dragging the ground symbol from the parts bin (the triangle with a stick) and connect it to the bottom of the voltage source.&lt;/li&gt;
+&lt;li&gt; Adjust the component properties. Double-click on the voltage source and change its type to &quot;step&quot;. Give it a name if you want. In the same way, change the resistor value to 1k, and the capacitor value to 1u. The k and u suffixes are short for $10^{+3}$ and $10^{-6}$.&lt;/li&gt;
+&lt;li&gt; Add a voltage probe to the top node of the capacitor. (The thing in the parts bin that looks like a voltmeter probe.) This is the voltage we will plot.&lt;/li&gt;
+&lt;li&gt; Select an analysis to perform. For this example, let's do a transient analysis. Click TRAN in the menu. Set the stop time to 10m. The m stands for $10^{-3}$ so we will simulate for 10 milliseconds.&lt;/li&gt;
+&lt;li&gt; Click OK. The simulation is performed and a plot should appear.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here is a complete RC circuit schematic. Copy and paste this entire URL into a browswer.&lt;/p&gt;
+&lt;p&gt;Here is a complete RC circuit schematic. Copy and paste this entire URL into a browser. &lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://willymcallister.github.io/Circuit-sandbox/?value=[[&quot;v&quot;,[152,80,0],{&quot;name&quot;:&quot;vin&quot;,&quot;value&quot;:&quot;step(0,1,0,1n)&quot;,&quot;_json_&quot;:0},[&quot;2&quot;,&quot;0&quot;]],[&quot;r&quot;,[232,64,1],{&quot;name&quot;:&quot;R1&quot;,&quot;r&quot;:&quot;1k&quot;,&quot;_json_&quot;:1},[&quot;1&quot;,&quot;2&quot;]],[&quot;c&quot;,[264,80,0],{&quot;name&quot;:&quot;C1&quot;,&quot;c&quot;:&quot;1u&quot;,&quot;_json_&quot;:2},[&quot;1&quot;,&quot;0&quot;]],[&quot;w&quot;,[152,80,152,64]],[&quot;w&quot;,[152,64,184,64]],[&quot;w&quot;,[232,64,264,64]],[&quot;w&quot;,[264,64,264,80]],[&quot;g&quot;,[208,128,0],{&quot;_json_&quot;:7},[&quot;0&quot;]],[&quot;w&quot;,[152,128,208,128]],[&quot;w&quot;,[264,128,208,128]],[&quot;s&quot;,[264,64,0],{&quot;color&quot;:&quot;cyan&quot;,&quot;offset&quot;:&quot;0&quot;,&quot;_json_&quot;:10},[&quot;1&quot;]],[&quot;view&quot;,110.6424,32.20688,3.814697265625,&quot;50&quot;,&quot;10&quot;,&quot;1G&quot;,null,&quot;100&quot;,&quot;10m&quot;,&quot;1000&quot;]]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;
+&lt;pre class=&quot;highlight&quot;&gt;
+&lt;code&gt;https://willymcallister.github.io/Circuit-sandbox/?value=[[&quot;v&quot;,[152,80,0],{&quot;name&quot;:&quot;vin&quot;,&quot;value&quot;:&quot;step(0,1,0,1n)&quot;,&quot;_json_&quot;:0},[&quot;2&quot;,&quot;0&quot;]],[&quot;r&quot;,[232,64,1],{&quot;name&quot;:&quot;R1&quot;,&quot;r&quot;:&quot;1k&quot;,&quot;_json_&quot;:1},[&quot;1&quot;,&quot;2&quot;]],[&quot;c&quot;,[264,80,0],{&quot;name&quot;:&quot;C1&quot;,&quot;c&quot;:&quot;1u&quot;,&quot;_json_&quot;:2},[&quot;1&quot;,&quot;0&quot;]],[&quot;w&quot;,[152,80,152,64]],[&quot;w&quot;,[152,64,184,64]],[&quot;w&quot;,[232,64,264,64]],[&quot;w&quot;,[264,64,264,80]],[&quot;g&quot;,[208,128,0],{&quot;_json_&quot;:7},[&quot;0&quot;]],[&quot;w&quot;,[152,128,208,128]],[&quot;w&quot;,[264,128,208,128]],[&quot;s&quot;,[264,64,0],{&quot;color&quot;:&quot;cyan&quot;,&quot;offset&quot;:&quot;0&quot;,&quot;_json_&quot;:10},[&quot;1&quot;]],[&quot;view&quot;,110.6424,32.20688,3.814697265625,&quot;50&quot;,&quot;10&quot;,&quot;1G&quot;,null,&quot;100&quot;,&quot;10m&quot;,&quot;1000&quot;]]&lt;/code&gt;
+&lt;/pre&gt;
 &lt;/div&gt;
-
 &lt;/details&gt;
-&lt;p&gt;$$&lt;/p&gt;
 
 &lt;h2 id=&quot;actions&quot;&gt;Actions&lt;/h2&gt;
 
@@ -123,19 +125,19 @@ k    10^3           p   10^-12
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Scroll/Pan&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42scroll_controls.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/i/42scroll_controls.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Zoom&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42zoom_controls.png&quot; alt=&quot;&quot; height=&quot;80px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/i/42zoom_controls.png&quot; alt=&quot;&quot; height=&quot;80px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Rotate&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42rotate_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/i/42rotate_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Delete&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/Electrical-Engineering/i/42delete_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/i/42delete_control.png&quot; alt=&quot;&quot; height=&quot;40px&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

@@ -9,9 +9,9 @@
   <title>Circuit sandbox post</title>
   <meta name="description" content="A simulator for experimenting with circuits.">
 
-  <link rel="stylesheet" href="/Electrical-Engineering/assets/main.css">
-  <link rel="canonical" href="https://willymcallister.github.io/Electrical-Engineering/2017/01/31/circuit-sandbox.html">
-  <link rel="alternate" type="application/rss+xml" title="Electrical Engineering" href="/Electrical-Engineering/feed.xml">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/2017/01/31/circuit-sandbox.html">
+  <link rel="alternate" type="application/rss+xml" title="Electrical Engineering" href="/feed.xml">
   
   
 </head>
@@ -23,7 +23,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/Electrical-Engineering/">Electrical Engineering</a>
+    <a class="site-title" href="/">Electrical Engineering</a>
 
     <nav class="site-nav">
       <span class="menu-icon">
@@ -38,7 +38,7 @@
       <div class="trigger">
         
              <!-- Restrict to listing just the About page. WMc -->
-          <a class="page-link" href="/Electrical-Engineering/about/">About</a>
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -81,11 +81,11 @@
 
 <p>To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.</p>
 
-<p><img src="/Electrical-Engineering/i/42screenshot.png" alt="circuit sandbox screenshot" /></p>
+<p><img src="/i/42screenshot.png" alt="circuit sandbox screenshot" /></p>
 
 <p>Sample output: A <em>transient</em> analysis is a plot of voltage vs. time.</p>
 
-<p><img src="/Electrical-Engineering/i/42transient_analysis.png" alt="transient analysis screenshot" /></p>
+<p><img src="/i/42transient_analysis.png" alt="transient analysis screenshot" /></p>
 
 <h2 id="getting-started">Getting started</h2>
 
@@ -112,29 +112,31 @@
   <li>Two fingers pan the schematic window</li>
 </ul>
 
-<details><summary>How to build the circuit shown above</summary>
+<details>
+<summary> How to build the circuit shown above </summary>
+
 <p>To create the RC circuit shown above, follow these steps starting from a blank schematic.</p>
 
 <ul>
-  <li>Add components (a voltage source, resistor, and capacitor). Click on a component in the parts bin on the right, then click on the schematic. Or, you can mouse down on a component in the bin and drag it to the schematic.</li>
-  <li>Select the resistor by clicking on it. It will turn green. While it is selected, hit the <strong>“r”</strong> key on the keyboard to make it rotate to horizontal. You can also click on the R⤵  icon. Rotate several times to see what happens.</li>
-  <li>Position components on the page by dragging them around.</li>
-  <li>Add wires by dragging between the connection points on the components. If you make a mistake, hit the backspace/delete key on your keyboard to delete whatever is selected, or click on the $\large \times$ icon.</li>
-  <li>Specify a ground node by dragging the ground symbol from the parts bin (the triangle with a stick) and connect it to the bottom of the voltage source.</li>
-  <li>Adjust the component properties. Double-click on the voltage source and change its type to “step”. Give it a name if you want. In the same way, change the resistor value to 1k, and the capacitor value to 1u. The k and u suffixes are short for $10^{+3}$ and $10^{-6}$.</li>
-  <li>Add a voltage probe to the top node of the capacitor. (The thing in the parts bin that looks like a voltmeter probe.) This is the voltage we will plot.</li>
-  <li>Select an analysis to perform. For this example, let’s do a transient analysis. Click TRAN in the menu. Set the stop time to 10m. The m stands for $10^{-3}$ so we will simulate for 10 milliseconds.</li>
-  <li>Click OK. The simulation is performed and a plot should appear.</li>
+<li> Add components (a voltage source, resistor, and capacitor). Click on a component in the parts bin on the right, then click on the schematic. Or, you can mouse down on a component in the bin and drag it to the schematic.</li>
+<li> Select the resistor by clicking on it. It will turn green. While it is selected, hit the **"r"** key on the keyboard to make it rotate to horizontal. You can also click on the R&#x2935;  icon. Rotate several times to see what happens.</li>
+<li> Position components on the page by dragging them around.</li>
+<li> Add wires by dragging between the connection points on the components. If you make a mistake, hit the backspace/delete key on your keyboard to delete whatever is selected, or click on the $\large \times$ icon.</li>
+<li> Specify a ground node by dragging the ground symbol from the parts bin (the triangle with a stick) and connect it to the bottom of the voltage source.</li>
+<li> Adjust the component properties. Double-click on the voltage source and change its type to "step". Give it a name if you want. In the same way, change the resistor value to 1k, and the capacitor value to 1u. The k and u suffixes are short for $10^{+3}$ and $10^{-6}$.</li>
+<li> Add a voltage probe to the top node of the capacitor. (The thing in the parts bin that looks like a voltmeter probe.) This is the voltage we will plot.</li>
+<li> Select an analysis to perform. For this example, let's do a transient analysis. Click TRAN in the menu. Set the stop time to 10m. The m stands for $10^{-3}$ so we will simulate for 10 milliseconds.</li>
+<li> Click OK. The simulation is performed and a plot should appear.</li>
 </ul>
 
-<p>Here is a complete RC circuit schematic. Copy and paste this entire URL into a browswer.</p>
+<p>Here is a complete RC circuit schematic. Copy and paste this entire URL into a browser. </p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>https://willymcallister.github.io/Circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]
-</code></pre>
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>https://willymcallister.github.io/Circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]</code>
+</pre>
 </div>
-
 </details>
-<p>$$</p>
 
 <h2 id="actions">Actions</h2>
 
@@ -170,19 +172,19 @@ k    10^3           p   10^-12
   <tbody>
     <tr>
       <td>Scroll/Pan</td>
-      <td><img src="/Electrical-Engineering/i/42scroll_controls.png" alt="" height="40px" /></td>
+      <td><img src="/i/42scroll_controls.png" alt="" height="40px" /></td>
     </tr>
     <tr>
       <td>Zoom</td>
-      <td><img src="/Electrical-Engineering/i/42zoom_controls.png" alt="" height="80px" /></td>
+      <td><img src="/i/42zoom_controls.png" alt="" height="80px" /></td>
     </tr>
     <tr>
       <td>Rotate</td>
-      <td><img src="/Electrical-Engineering/i/42rotate_control.png" alt="" height="40px" /></td>
+      <td><img src="/i/42rotate_control.png" alt="" height="40px" /></td>
     </tr>
     <tr>
       <td>Delete</td>
-      <td><img src="/Electrical-Engineering/i/42delete_control.png" alt="" height="40px" /></td>
+      <td><img src="/i/42delete_control.png" alt="" height="40px" /></td>
     </tr>
   </tbody>
 </table>
