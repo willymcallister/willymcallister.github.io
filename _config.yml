@@ -35,8 +35,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-disqus:
-    shortname: electrical-engineering
+#disqus:
+#    shortname: electrical-engineering
 
-#google_analytics: UA-91424157-1
+google_analytics: UA-91424157-1
 
