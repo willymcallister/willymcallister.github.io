@@ -46,6 +46,15 @@ If you have a touch device (tablet or smartphone):
 * One finger selects components or drags a selection rectangle 
 * Two fingers pan the schematic window
 
+{% capture summary %}Here is my Markdown *summary* {% endcapture %}
+{% capture details %}Here is my Markdown **captured**.{% endcapture %}
+
+<details>
+<summary> 
+    {{ summary | markdownify | remove: '<p>' | remove: '</p>' }} </summary>
+    {{ details | markdownify }}
+</details>
+
 <details>
 <summary> How to build the circuit shown above </summary>
 
