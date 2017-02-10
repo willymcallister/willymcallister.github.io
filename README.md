@@ -1,6 +1,6 @@
 # Electrical Engineering
 
-Created by Willy McAllister, 2016 Electrical Engineering Content Fellow at Khan Academy
+Created by Willy McAllister, former Electrical Engineering Content Fellow at Khan Academy
 
 ## Preparing to study electrical engineering
 Become familiar with the two most important electrical quantities: current and voltage. Learn about engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
