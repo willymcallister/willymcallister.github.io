@@ -7,7 +7,7 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields: ["name", "email", "message"]
+  allowedFields: ["name", "email", "url", "message"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
@@ -44,7 +44,7 @@ comments:
   # Whether entries need to be appproved before they are published to the main
   # branch. If set to `true`, a pull request will be created for your approval.
   # Otherwise, entries will be published to the main branch automatically.
-  moderation: false
+  moderation: true
 
   # Name of the site. Used in notification emails.
   #name: "eduardoboucas.com"
@@ -55,17 +55,17 @@ comments:
   # with Mailgun, which you can get for free at http://mailgun.com.
   notifications:
     # Enable notifications
-    enabled: true
+    enabled: false
 
     # (!) ENCRYPTED
     #
     # Mailgun API key
-    apiKey: "1q2w3e4r"
+    #apiKey: "1q2w3e4r"
 
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    domain: "4r3e2w1q"
+    #domain: "4r3e2w1q"
 
   # (*) REQUIRED
   #

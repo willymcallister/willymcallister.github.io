@@ -1,10 +1,25 @@
+
 <form method="post" action="{{ site.staticmanUrl }}">
-  <!--input name="options[redirect]" type="hidden" value="https://willymcallister.github.io/electrical-engineering"-->
+  <fieldset>
+      <legend>Question or comment</legend>
+      <input name="options[redirect]" type="hidden" value="https://willymcallister.github.io/electrical-engineering">
+      <!-- e.g. "2016-01-02-this-is-a-post" -->
+      <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+      <label><input name="fields[name]" type="text" size="35"> Name </label></br>
+      <label><input name="fields[email]" type="email" size="35"> Email </label></br></br>
+      <textarea name="fields[message]" rows="5" cols="60"></textarea></br>
+      <button type="submit" style="padding: 5px 10px;">Submit</button>
+  </fieldset>
+</form>
+
+<p>Example form</p>
+<form method="POST" action="https://api.staticman.net/v2/entry/willymcallister/electrical-engineering/master/comments">
+  <input name="options[redirect]" type="hidden" value="https://my-site.com">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <label><input name="fields[name]" type="text">Name</label>
   <label><input name="fields[email]" type="email">E-mail</label>
   <label><textarea name="fields[message]"></textarea>Message</label>
   
-  <button type="submit">Submit</button>
+  <button type="submit">Go!</button>
 </form>
