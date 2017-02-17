@@ -1,7 +1,10 @@
 <style>
 .comment { 
-    background-color: yellow;
     border-top: 1px solid #e8e8e8;
+}
+.comment__author {
+	font-size: 14px;
+	color: #828282;
 }
 </style>
 
@@ -19,13 +22,13 @@
 			{% else %}
 				{{ include.name }}
 			{% endif %}
-		</p>
-		<p class="comment__date">
+		<span class="comment__date">
 			{% if include.date %}
 				{% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
-				{% include format-date.html date=include.date time=true %}
+				{% include format-date.html date=include.date time=false weekDay=false %}
 				{% if include.index %}</a>{% endif %}
 			{% endif %}
+		</span>
 		</p>
 	</div>
 </article>

@@ -2,12 +2,12 @@
 
 <section class="comments">
 	<div class="constrain--body">
-		<h2 class="comments__heading heading-2">Question or comment</h2>
+		<h2 class="comments__heading heading-2">Questions and comments</h2>
 		{% include new-comment.html %}
 	</div>
 
 	<div class="comments__existing js-comments" {% if site.data.comments[post_slug] == null %}aria-hidden="true"{% endif %}>
-		<h2 class="comments__heading heading-2">Comments</h2>
+		<!--h2 class="comments__heading heading-2">Comments</h2 -->
 
 {% comment %} debugging
 		<p>post slug: {{ post_slug | jsonify }}</p>
