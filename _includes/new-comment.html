@@ -1,14 +1,24 @@
+<style>
+textarea, input {
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+button {padding: 3px 10px;}
+label {
+    display: block;
+    margin: 5px 0px 5px 0px;
+}
+</style>
 <p>
 <form method="post" action="{{ site.staticmanUrl }}">
   <fieldset>
-      <legend>Question or comment</legend>
+      <!--legend>Leave a question or comment</legend -->
       <input name="options[redirect]" type="hidden" value="https://willymcallister.github.io/electrical-engineering">
-      <!-- e.g. "2016-01-02-this-is-a-post" -->
       <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-      <label><input name="fields[name]" type="text" size="35"> Name </label></br>
-      <label><input name="fields[email]" type="email" size="35"> Email </label></br></br>
-      <textarea name="fields[message]" rows="5" cols="60"></textarea></br>
-      <button type="submit" style="padding: 5px 10px;">Submit</button>
+      <label><input name="fields[name]" type="text" size="35"> Name </label>
+      <label><input name="fields[email]" type="email" size="35"> Email </label>
+      <textarea name="fields[message]" rows="4" style="width:100%"></textarea>
+      <button type="submit">Submit</button>
   </fieldset>
 </form>
 </p>
