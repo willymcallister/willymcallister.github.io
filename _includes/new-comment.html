@@ -28,6 +28,8 @@ fieldset {
     border:0px;
     margin-bottom: 30px;
     width: 80%;
+    background-color:#E3E5E6;
+
 }
 </style>
 <p>
@@ -36,9 +38,8 @@ fieldset {
       <!--legend>Leave a question or comment</legend -->
       <!--input name="options[redirect]" type="hidden" value="https://willymcallister.github.io/electrical-engineering" -->
       <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-      <input type="hidden" name="options[parent]" value="{{ post_slug }}">
       <label><input name="fields[name]" type="text" size="35"> Name </label>
-      <label><input name="fields[email]" type="email" size="35"> Email </label>
+      <label><input name="fields[email]" type="email" size="35"> Email (optional)</label>
       <textarea name="fields[message]"></textarea>
       <button type="submit">Submit</button>
   </fieldset>

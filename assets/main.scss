@@ -42,10 +42,4 @@ $on-laptop:        800px;
 
 input, select, textarea, button {
   @extend body;
-  font-size: 90%;
 }
-
-fieldset { 
-  background-color:#E3E5E6;
-}
-

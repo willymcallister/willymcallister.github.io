@@ -16,11 +16,12 @@ A simulator for experimenting with circuits.
 
 To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
 
-![circuit sandbox screenshot]({{ site.baseurl }}/i/42screenshot.png)
+![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %})
 
 Sample output: A *transient* analysis is a plot of voltage vs. time.
 
-![transient analysis screenshot]({{ site.baseurl }}/i/42transient_analysis.png)
+![Transient analysis screenshot]({{ site.baseurl }}{% link i/42transient_analysis.png %})
+
 
 ## Getting started
 
@@ -101,11 +102,11 @@ example: $1000$ can be entered as $1\text k$
 ## On-screen controls 
 
 |:-------------|:----------------------------------------------------------:|
-| Scroll/Pan   | ![]({{ site.baseurl }}/i/42scroll_controls.png){:height="40px"}| 
-| Zoom         | ![]({{ site.baseurl }}/i/42zoom_controls.png){:height="80px"}  |
-| Rotate       | ![]({{ site.baseurl }}/i/42rotate_control.png){:height="40px"} | 
-| Delete       | ![]({{ site.baseurl }}/i/42delete_control.png){:height="40px"} |
-
+| Scroll/Pan   | ![Scroll/pan]({{ site.baseurl }}{% link i/42scroll_controls.png %})
+{:height="40px"}| 
+| Zoom         | ![Zoom]({{ site.baseurl }}{% link i/42zoom_controls.png %}){:height="80px"}  |
+| Rotate       | ![Rotate]({{ site.baseurl }}{% link i/42rotate_control.png %}){:height="40px"} | 
+| Delete       | ![Delete]({{ site.baseurl }}{% link i/42delete_control.png %}){:height="40px"} |
 
 ## Menu
 
