@@ -102,8 +102,7 @@ example: $1000$ can be entered as $1\text k$
 ## On-screen controls 
 
 |:-------------|:----------------------------------------------------------:|
-| Scroll/Pan   | ![Scroll/pan]({{ site.baseurl }}{% link i/42scroll_controls.png %})
-{:height="40px"}| 
+| Scroll/Pan   | ![Scroll/pan]({{ site.baseurl }}{% link i/42scroll_controls.png %}){:height="40px"}| 
 | Zoom         | ![Zoom]({{ site.baseurl }}{% link i/42zoom_controls.png %}){:height="80px"}  |
 | Rotate       | ![Rotate]({{ site.baseurl }}{% link i/42rotate_control.png %}){:height="40px"} | 
 | Delete       | ![Delete]({{ site.baseurl }}{% link i/42delete_control.png %}){:height="40px"} |

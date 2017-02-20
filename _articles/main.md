@@ -7,8 +7,11 @@ comments: true
 
 Created by Willy McAllister, former Electrical Engineering Content Fellow at Khan Academy
 
-## Simulator
-[Circuit sandbox]({{ site.baseurl }}{% link a/circuit-sandbox.md %})
+### Simulator
+
+[Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
+
+----
 
 ## Preparing to study electrical engineering
 Become familiar with the two most important electrical quantities: current and voltage. Learn about engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
