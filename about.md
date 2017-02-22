@@ -20,3 +20,8 @@ This static site is hosted at [GitHub](https://github.com/willymcallister) and i
 
 Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-fast math typesetting library from Khan Academy. 
 
+#### Acknowledgement
+
+I'm grateful for Sal Khan and everyone I worked with at Khan Academy in 2016 for allowing me to learn this style of teaching.
+
+

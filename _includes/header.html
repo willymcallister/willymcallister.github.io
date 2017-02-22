@@ -16,7 +16,7 @@
    
       <div class="trigger">
         {% for my_page in site.pages %}
-          {% if my_page.title == 'About' %}   <!-- Restrict to listing just the About page. WMc -->
+          {% if my_page.title == 'About' %}
           <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
           {% endif %}
         {% endfor %}

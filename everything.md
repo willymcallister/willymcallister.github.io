@@ -12,7 +12,7 @@ comments: true
   <li>
     <a href="{{ video.url | prepend: site.baseurl }}">{{ video.title }}</a>
   </li>
-{% endfor %}
+{% endfor %} 
 </ul>
 
 And in my own sort order:
@@ -24,7 +24,7 @@ And in my own sort order:
         <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
     </li>
   {% endfor %}
-</ul>
+</ul> 
 
 ### Articles
 

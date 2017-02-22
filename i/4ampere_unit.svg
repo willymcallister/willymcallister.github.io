@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="420px" height="234px" viewBox="0 0 420 234" style="enable-background:new 0 0 420 234;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:none;}
+	.st7{stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st10{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#11ACCD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st12{fill:#11ACCD;}
+	.st13{fill:none;stroke:#74CF70;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st14{fill:#74CF70;}
+	.st15{fill:#FF9C39;}
+	.st16{fill:none;stroke:#E07D10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st17{fill:#E07D10;}
+	.st18{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st19{font-family:'KaTeX_Main-Regular';}
+	.st20{font-size:24px;}
+	.st21{font-family:'KaTeX_Main-Italic';}
+	.st22{fill:none;stroke:#11ACCD;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st23{fill:#1FAB54;}
+</style>
+<g>
+	<g>
+		<line class="st13" x1="234" y1="114" x2="219.1" y2="114"/>
+		<g>
+			<path class="st14" d="M210,114c4.3-1.6,9.5-4.3,12.8-7.1l-2.6,7.1l2.6,7.1C219.5,118.3,214.3,115.6,210,114z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st13" x1="122.9" y1="114" x2="108" y2="114"/>
+		<g>
+			<path class="st14" d="M132,114c-4.3-1.6-9.5-4.3-12.8-7.1l2.6,7.1l-2.6,7.1C122.5,118.3,127.7,115.6,132,114z"/>
+		</g>
+	</g>
+</g>
+<polyline class="st18" points="55,54 108,54 108,180 55,180 "/>
+<polyline class="st18" points="288,54 234,54 234,180 288,180 "/>
+<text transform="matrix(1 0 0 1 138 222)" class="st19 st20">1 meter</text>
+<text transform="matrix(1 0 0 1 312 120)" class="st19 st20">1 meter</text>
+<g>
+	<g>
+		<line class="st1" x1="117.7" y1="198" x2="224.3" y2="198"/>
+		<g>
+			<path d="M108,198c4.5,1.7,10.2,4.6,13.7,7.6l-2.8-7.6l2.8-7.6C118.2,193.4,112.5,196.3,108,198z"/>
+		</g>
+		<g>
+			<path d="M234,198c-4.5,1.7-10.2,4.6-13.7,7.6l2.8-7.6l-2.8-7.6C223.8,193.4,229.5,196.3,234,198z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st1" x1="306" y1="170.3" x2="306" y2="63.7"/>
+		<g>
+			<path d="M306,180c1.7-4.5,4.6-10.2,7.6-13.7l-7.6,2.8l-7.6-2.8C301.4,169.8,304.3,175.5,306,180z"/>
+		</g>
+		<g>
+			<path d="M306,54c1.7,4.5,4.6,10.2,7.6,13.7l-7.6-2.8l-7.6,2.8C301.4,64.2,304.3,58.5,306,54z"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 42 36)"><tspan x="0" y="0" class="st12 st21 st20">i = </tspan><tspan x="37.8" y="0" class="st12 st19 st20">1 amp</tspan></text>
+<text transform="matrix(1 0 0 1 204 36)"><tspan x="0" y="0" class="st12 st21 st20">i = </tspan><tspan x="37.8" y="0" class="st12 st19 st20">1 amp</tspan></text>
+<g>
+	<g>
+		<line class="st22" x1="83.9" y1="54" x2="72" y2="54"/>
+		<g>
+			<path class="st12" d="M96,54c-5.7-2.1-12.7-5.7-17.1-9.5l3.4,9.5l-3.4,9.5C83.3,59.7,90.3,56.1,96,54z"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st22" x1="270" y1="54" x2="258.1" y2="54"/>
+		<g>
+			<path class="st12" d="M246,54c5.7-2.1,12.7-5.7,17.1-9.5l-3.4,9.5l3.4,9.5C258.7,59.7,251.7,56.1,246,54z"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 160.1641 120)" class="st23 st21 st20">F</text>
+<text transform="matrix(1 0 0 1 122.8364 148.7998)" class="st23 st19 st20">2×10</text>
+<text transform="matrix(0.583 0 0 0.583 177.5083 140.8076)" class="st23 st19 st20">-7</text>
+<text transform="matrix(1 0 0 1 189.1636 148.7998)" class="st23 st19 st20"> N</text>
+</svg>
