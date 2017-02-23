@@ -113,13 +113,13 @@ Here are some examples of large, medium and small numbers used in real-world ele
         
 ## Unit grammar
 
-These are the grammatical guidelines for writing unit names and symbols.
+There are two grammatical guidelines for writing unit names and symbols.
 
 * *Names* of all units start with a lowercase letter, even if the unit is named after a person.
 * *Symbols* for units are uppercase if the unit is named after a person, otherwise lowercase. 
 
-|Name of unit | example  | Symbol      | example            | Named after |
-|:------|:-------------:|:------------:|------------------------|--------:|
+|Unit name | example    | Unit symbol  | example            | Named after |
+|:------|---------------|:------------:|------------------------|--------:|
 |second | 1 millisecond | $\text {s}$  | $2 \text { ns}$        |         |
 |meter  | 300 kilometer | $\text {m}$  | $35  \text { nm}$      |         |
 |hertz  | 10 kilohertz  | $\text {Hz}$ | $100  \text { MHz}$    | Hertz   |
