@@ -4,6 +4,16 @@ title:  Electrical Engineering main page
 author: Willy McAllister
 comments: true
 ---
+slug = {{ page.slug | jsonify }} 
+
+title = {{ page.title | jsonify }}
+
+
+{% capture post_slug %}{{ page.title | slugify }}{% endcapture %}
+
+{{ post_slug | inspect }}
+
+{{ site.data.comments[post_slug] | jsonify }}
 
 Created by Willy McAllister, former Electrical Engineering Content Fellow at Khan Academy
 

@@ -1,8 +1,11 @@
 
 <article id="comment{{ include.index }}" class="js-comment comment">
-	<!--div class="comment__avatar-wrapper">
+	{% comment %}
+	<div class="comment__avatar-wrapper">
 		<img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=100">
-	</div -->
+	</div>
+	{% endcomment %}
+	
 	<div class="comment__content-wrapper">
 		<div class="comment__body">
 			{{ include.message | markdownify }}
