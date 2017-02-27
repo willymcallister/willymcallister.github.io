@@ -1,17 +1,17 @@
 
-<p>
-<form method="post" class="form" action="{{ site.staticmanUrl }}">
+<div>
+<form class="js-form form" method="post" action="{{ site.staticmanUrl }}">
   <fieldset>
-      <!--legend>Leave a question or comment</legend -->
       <!--input name="options[redirect]" type="hidden" value="https://willymcallister.github.io/electrical-engineering" -->
-      <!--input name="options[slug]" type="hidden" value="{{ page.slug }}"-->
       <input type="hidden" name="options[slug]" value="{{ post_slug }}">
-      <label><input type="text"  name="fields[name]"> Name </label>
-      <label><input type="email" name="fields[email]"> Email (optional)</label>
-      <textarea name="fields[message]"></textarea>
+      <label><input type="text"  name="fields[name]" placeholder="Name"></label><br>
+      <label><input type="email" name="fields[email]" placeholder="Email (optional)"></label><br>
+      <textarea name="fields[message]" placeholder="Question or comment"></textarea><br>
       <button type="submit">Submit</button>
   </fieldset>
 </form>
-</p>
+</div>
 
-{% comment %}  related to: eduardoboucas.github.io/_includes/partials/post-new-comment.html {% endcomment %} 
+{% comment %}  
+	related to: eduardoboucas.github.io/_includes/partials/post-new-comment.html 
+{% endcomment %} 

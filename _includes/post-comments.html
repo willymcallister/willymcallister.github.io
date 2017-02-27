@@ -3,7 +3,7 @@
 <section class="comments">
 	<div class="constrain--body">
 		<h2 class="comments__heading heading-2">Questions and comments</h2>
-		{% include new-comment.html %}
+		{% include mypopcorn-new-comment.html %}
 	</div>
 
 	<div class="comments__existing js-comments" {% if site.data.comments[post_slug] == null %}aria-hidden="true"{% endif %}>
@@ -23,5 +23,7 @@
 	</div>
 </section>
 
-{% comment %} based on: https://github.com/eduardoboucas/eduardoboucas.github.io/blob/master/_includes/partials/post-comments.html {% endcomment %} 
-{% comment %} Eduardo's: {% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %}  {% endcomment %} 
+{% comment %} 
+	based on: https://github.com/eduardoboucas/eduardoboucas.github.io/blob/master/_includes/partials/post-comments.html
+	Eduardo's: {% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %}  
+{% endcomment %} 

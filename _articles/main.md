@@ -4,20 +4,6 @@ title:  Electrical Engineering main page
 author: Willy McAllister
 comments: true
 ---
-slug = {{ page.slug | jsonify }} 
-
-title = {{ page.title | jsonify }}
-
-
-{% capture post_slug %}{{ page.title | slugify }}{% endcapture %}
-
-{{ post_slug | inspect }}
-
-{{ site.data.comments[post_slug] | jsonify }}
-
-Created by Willy McAllister, former Electrical Engineering Content Fellow at Khan Academy
-
-### Simulator
 
 [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
@@ -43,4 +29,3 @@ Circuits with capacitors and inductors change with time. The natural and forced 
 
 ### AC circuit analysis
 If we limit ourselves to signals shaped like sines or cosines, we can develop a whole method of AC analysis to figure out what happens in circuits with any changing signal. These methods are far simpler than solving a differential equation from scratch.
-
