@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title:  Preparing to study electrcial engineering
 author: Willy McAllister
 comments: true

@@ -39,8 +39,7 @@ exclude:
 
 google_analytics: UA-91424157-1
 
-# Staticman
-#staticmanUrl: https://api.staticman.net/v2/entry/willymcallister/electrical-engineering.github.io/master/comments
+# Staticman comments
 staticmanUrl: https://api.staticman.net/v2/entry/willymcallister/electrical-engineering/master/comments
 
 collections:

@@ -4,7 +4,7 @@
 
 @import "minima";
 
-// comment form 
+// new comment form 
 input, select, textarea, button {
     @extend body;
 }
@@ -38,27 +38,28 @@ fieldset {
 }
 button:hover {
     background-color: $grey-color;
+    color: white;
 }
 
-::-webkit-input-placeholder {color:    $grey-color-light;}
-:-moz-placeholder           {color:    $grey-color-light;}
-::-moz-placeholder          {color:    $grey-color-light;}
-:-ms-input-placeholder      {color:    $grey-color-light;}
-
-// all comments
-
-.comment {  
-    border-top: 1px solid #e8e8e8;
-}
-
-.comment__author {
-    font-size: 14px;
-    color: #828282;
-}
+// comments section
 
 .comments {
-    border-top: 1px solid #e8e8e8;
-    padding-top: 20px;
+    border-top: 1px solid $grey-color-light;
+    padding: 20px 0px 0px 0px;
+}
+.comment__new {
+    padding: 0px 0px 20px 0px;
+}
+.comment__author {
+   color: $grey-color;
+   font-size: smaller;
+}
+.comments__existing {
+    border-top: 1px solid $grey-color-light;
+}
+.comment {  
+    border-bottom: 1px solid $grey-color-light;
+    padding: 0px 0px 0px 0px;
 }
 
 // <details> styles
@@ -71,8 +72,9 @@ details[open] {
 	background: $grey-color-light
 }
 
+$ka-default5 : #236ec9 !default;
 details summary {
-    color: #236ec9;
+    color: $ka-default5;
 }
 
 // video styles
@@ -107,7 +109,7 @@ details summary {
     z-index: 1;
     position: relative;
     background: #fff;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 .modal {
     display: none;
@@ -125,13 +127,13 @@ details summary {
     background: white;
 }
 .mdl-shadow--16dp {
-    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),0 6px 30px 5px rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2);
 }
 
 .mdl-card__supporting-text {
     overflow: hidden;
     padding: 16px;
-    width: 90%
+    width: 90%;
 }
 .modal-title {
     margin-bottom: 0px;

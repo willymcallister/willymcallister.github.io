@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title:  "Defining the standard electrical units"
 author: Willy McAllister
 comments: true

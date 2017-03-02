@@ -1,24 +1,25 @@
 ---
 layout: default
 ---
+
+{% capture post_slug %}{{ page.title | slugify | prepend:'v-' }}{% endcapture %}
+
 <article class="post">
 
-<div class="video-frame">
-<iframe frameBorder="0" width="{{site.data.video.width}}" height="{{site.data.video.height}}" src="https://www.youtube.com/embed/{{page.youtubeID}}{{youtubeOptions}}" allowfullscreen></iframe> 
-</div>
+	<div class="video-frame">
+	  <iframe frameBorder="0" width="{{site.data.video.width}}" height="{{site.data.video.height}}" src="https://www.youtube.com/embed/{{page.youtubeID}}{{youtubeOptions}}" allowfullscreen></iframe> 
+	</div>
 
+	<header class="post-header">
+	  <h1 class="post-title">{{ page.title | escape }}</h1>
+	</header>
 
+	<div class="post-content">
+	  {{ content }}
+	</div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-  {% if page.disable-comments != true %}
-    {% include post-comments.html %}
-  {% endif %}
+	{% if page.disable-comments != true %}
+	  {% include post-comments.html %}
+	{% endif %}
 
 </article>

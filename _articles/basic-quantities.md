@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title:  "Basic electrical quantities: current, voltage, power"
 author: Willy McAllister
 comments: true

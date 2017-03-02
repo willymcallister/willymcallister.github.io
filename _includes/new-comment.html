@@ -1,17 +1,27 @@
-
-<div>
 <form class="js-form form" method="post" action="{{ site.staticmanUrl }}">
+  <input type="hidden" name="options[slug]" value="{{ post_slug }}">
+
   <fieldset>
-      <!--input name="options[redirect]" type="hidden" value="https://willymcallister.github.io/electrical-engineering" -->
-      <input type="hidden" name="options[slug]" value="{{ post_slug }}">
-      <label><input type="text"  name="fields[name]" placeholder="Name"></label><br>
-      <label><input type="email" name="fields[email]" placeholder="Email (optional)"></label><br>
-      <textarea name="fields[message]" placeholder="Question or comment"></textarea><br>
-      <button type="submit">Submit</button>
+    <div class="textfield">
+      <input class="textfield__input" type="text" name="fields[name]" placeholder="Your name"/>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div class="textfield">
+      <input class="textfield__input" type="email" name="fields[email]"  placeholder="Your email (optional)"/>
+    </div>
+  </fieldset>
+
+    <fieldset>
+    <div class="textfield">
+      <textarea class="textfield__input" name="fields[message]" type="text" rows= "3" placeholder="Your question or comment. (Markdown is allowed.)"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <button class="button">
+      Submit
+    </button>
   </fieldset>
 </form>
-</div>
-
-{% comment %}  
-	related to: eduardoboucas.github.io/_includes/partials/post-new-comment.html 
-{% endcomment %} 

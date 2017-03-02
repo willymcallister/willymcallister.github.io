@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title:  "Numbers in electrical engineering"
 author: Willy McAllister
 comments: true

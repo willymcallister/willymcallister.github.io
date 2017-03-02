@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture post_slug %}{{ page.title | slugify }}{% endcapture %}
+{% capture post_slug %}{{ page.title | slugify | prepend:'a-' }}{% endcapture %}
 
 <article class="post">
 
