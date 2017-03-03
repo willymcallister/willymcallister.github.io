@@ -51,8 +51,9 @@ button:hover {
     padding: 0px 0px 20px 0px;
 }
 .comment__author {
-   color: $grey-color;
-   font-size: smaller;
+    text-align: right;
+    color: $grey-color;
+    font-size: smaller;
 }
 .comments__existing {
     border-top: 1px solid $grey-color-light;
