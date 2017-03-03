@@ -4,13 +4,13 @@
 		{% include new-comment.html %}
 	</div>
 
-	{% if site.data.comments[post_slug] %
+	{% if site.data.comments[post_slug] %}
 		<div class="comments__existing">
 			<h2>All comments</h2>
 
 			{% assign comments = site.data.comments[post_slug] | sort %}
 			
-			{% for comment in comments %}
+			{% for comment in comments reversed %}
 				{% assign email = comment[1].email %}
 				{% assign name = comment[1].name %}
 				{% assign date = comment[1].date %}
