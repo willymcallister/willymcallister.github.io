@@ -1,6 +1,6 @@
 --- 
 layout: page
-title:  Electrical Engineering main page
+title:  Spinning Numbers main page 
 author: Willy McAllister
 comments: true
 ---
