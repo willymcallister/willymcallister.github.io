@@ -4,6 +4,15 @@
 
 @import "minima";
 
+blockquote {
+  font-size: $base-font-size;
+  letter-spacing: 0px;
+}
+.centered {
+    display: block;
+    margin: auto;
+}
+
 // new comment form 
 input, select, textarea, button {
     @extend body;
@@ -53,7 +62,7 @@ button:hover {
 .comment__author {
     text-align: right;
     color: $grey-color;
-    font-size: smaller;
+    font-size: $small-font-size;
 }
 .comments__existing {
     border-top: 1px solid $grey-color-light;
