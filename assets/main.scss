@@ -12,6 +12,25 @@ blockquote {
     display: block;
     margin: auto;
 }
+table {
+    border: 1px solid $grey-color-light;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    border-spacing: 0px;
+}
+th {
+    margin: 0;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid $grey-color-light;
+}
+td {
+    padding: 5px 10px;
+}
+$grey-color-zebra: lighten($grey-color, 45%) !default;
+.zebra tr:nth-child(odd) td {
+    background-color: $grey-color-zebra;
+}
 
 // new comment form 
 input, select, textarea, button {
@@ -76,6 +95,7 @@ button:hover {
 details {
     border-radius: 5px;
 	padding: 0px 5px 0px 5px;
+    margin-bottom: 15px;
 }
 
 details[open] {

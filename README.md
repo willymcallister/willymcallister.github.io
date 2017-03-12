@@ -1,7 +1,8 @@
-# Electrical Engineering
+# Spinning Numbers
 
-## Preparing to study electrical engineering
-Become familiar with the two most important electrical quantities: current and voltage. Learn about engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
+## [Introduction]({{ site.baseurl }}{% link a/introduction.html %})
+
+Become familiar with the two most important electrical quantities: current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
 
 ## Circuit analysis
 Circuit analysis is the process of finding all the currents and voltages in a network of connected components. We look at the basic elements used to build circuits, and find out what happens when elements are connected together into a circuit.
@@ -25,5 +26,7 @@ If we limit ourselves to signals shaped like sines or cosines, we can develop a 
 
 [Circuit sandbox](a/circuit-sandbox.html)
 
-This website is based on work by me, Willy McAllister. In 2016 I was at Khan Academy as the Electrical Engineering Content Fellow.
+----
+
+This website is based on work I did while I was at Khan Academy as the Electrical Engineering Content Fellow in 2016. - Willy McAllister
 

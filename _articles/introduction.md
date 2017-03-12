@@ -5,7 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-Welcome to the study of electricity and electrical engineering. In this introductory section you will become familiar with the  most important electrical quantities: charge, current and voltage. You can also become familiar with the language we use for engineering numbers, units, and notation. 
+Welcome to the study of electricity and electrical engineering! In this introductory section you will become familiar with the most important electrical concepts: charge, current and voltage. You can also get your first exposure to the language we use for numbers, units, and notation. 
+
+Check out a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
 
 ----
 
@@ -29,10 +31,10 @@ Welcome to the study of electricity and electrical engineering. In this introduc
 
 
 
-![article]({{ site.baseurl }}{% link i/article.svg %}) [Preparing to study electrical engineering]({{ site.baseurl}}/a/preparing-to-study-electrical-engineering.html) - A summary of the math and science preparation that will help you have the best experience studying electrical engineering.
+![article]({{ site.baseurl }}{% link i/article.svg %}) [Preparing to study electrical engineering]({{ site.baseurl}}/a/preparing-to-study-electrical-engineering.html)
 
 $$
 
 > #### Video ![video]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![article]({{ site.baseurl }}{% link i/article.svg %}) 
 >
-> Whenever you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view the video and have more questions, check out the article because it may go a little deeper into the topic.
+> When you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view the video and have more questions, check out the article because it may go a little deeper into the topic.
