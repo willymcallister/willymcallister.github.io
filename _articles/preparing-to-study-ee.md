@@ -9,6 +9,9 @@ A learner asked, "What math and science prerequisites and skills might be consid
 
 Good question! Here is a summary of the math and science preparation that will help you have the best experience learning the electrical engineering topics taught here. The links take you to the relevant topics on Khan Academy.
 
+* Will be replaced with the ToC
+{:toc}
+
 ## Math fundamentals
 
 * [Equation of a line, slope, y-intercept](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions)
@@ -25,7 +28,7 @@ Good question! Here is a summary of the math and science preparation that will h
 There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometry).
 
 <details>
-<summary><b>SOH CAH TOA</b></summary>
+<summary><strong>SOH CAH TOA</strong></summary>
 
 <p>Here's a way to remember the definitions of $\sin$, $\cos$, and $\tan$.
 </p>
@@ -43,7 +46,7 @@ There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometr
 
 ### A few beginning concepts from calculus
 
-It really helps to get to know these two ideas from the start of calculus. You don't have to become an expert, but check these links out so you have a basic idea of a what a derivative is.
+It really helps to get to know these two ideas from the start of calculus. You don't have to become an expert, but check out these links to get a basic idea of a what a derivative is.
 
 * [Limits](https://www.khanacademy.org/math/differential-calculus/limits-topic)
 * [Derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives)
@@ -52,13 +55,13 @@ It really helps to get to know these two ideas from the start of calculus. You d
 <details>
 <summary>Notation for derivatives</summary>
 <h4>d notation</h4>
-<p>A popular derivative notation developed by Gottfried Leibniz is <b>d notation</b>. If $y$ is some function of the variable $x$, meaning $y = f(x)$, then the derivative of function $y$ with respect to variable $x$ is written as </p>
+<p>A popular derivative notation developed by Gottfried Leibniz is $\bold{d}$ <strong>notation</strong>. If $y$ is some function of the variable $x$, meaning $y = f(x)$, then the derivative of $y$ with respect to variable $x$ is</p>
 
 <p>$\dfrac{dy}{dx}$</p>
 
-<p>Say this as "$dy\:dx$", not "$dy$ over $dx$".</p>
+<p>When you say it out loud, say it like this, "$dy\:dx$", not "$dy$ over $dx$".</p>
 
-<p>Leibniz notation suggests that derivatives can be treated like fractions. This comes up when you study the <a href="https://www.khanacademy.org/math/ap-calculus-ab/product-quotient-chain-rules-ab/chain-rule-ab/v/chain-rule-introduction">**chain rule**</a>. You will also hear this called **differential notation**, where the individual terms $dy$ and $dx$ are called **differentials**.</p>
+<p>The style of Leibniz's notation gives us a hint that derivatives can be treated like fractions. This comes up when you study the <a href="https://www.khanacademy.org/math/ap-calculus-ab/product-quotient-chain-rules-ab/chain-rule-ab/v/chain-rule-introduction">**chain rule**</a>. You will also hear this called **differential notation**, where the individual terms $dy$ and $dx$ are called **differentials**.</p>
 
 <p>You can write Leibniz's notation to make $\dfrac{d}{dx}$ look like an operator, like this $\dfrac{d}{dx} \,y$.</p>
 
@@ -69,14 +72,14 @@ It really helps to get to know these two ideas from the start of calculus. You d
 <p>Fun fact: Leibnitz also invented the elongaged $\int$ we use for the integral symbol.</p>
 
 <h4>prime notation</h4>
-<p>The <b>prime notation</b> was introduced by Joseph-Louis Lagrange. The function $f^\prime(x)$ stands for the first derivative of $f(x)$ with respect to $x$. Say this as "f prime of $x$." If $y = f(x)$, then $y^\prime = f^\prime(x)$.</p>
+<p>The <strong>prime notation</strong> was introduced by Joseph-Louis Lagrange. The function $f^\prime(x)$ stands for the first derivative of $f(x)$ with respect to $x$. Say this as "f prime of $x$." If $y = f(x)$, then $y^\prime = f^\prime(x)$.</p>
 
 <p>To indicate second-order and higher derivatives you just add prime symbols. For example, the second derivative of $y$ with respect to $x$ is written as</p>
 
 <p>$y^{\prime\prime}(x)$</p>
 
 <h4>dot notation</h4>
-<p>Isaac Newton gave us <b>dot notation</b> where the derivative of $x$ is written as $\dot{x}$.</p>
+<p>Isaac Newton gave us <strong>dot notation</strong> where the derivative of $x$ is written as $\dot{x}$.</p>
 
 <p>Say this as "$x$ dot."</p>
 

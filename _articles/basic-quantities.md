@@ -5,7 +5,18 @@ author: Willy McAllister
 comments: true
 ---
 
-Voltage and current are the cornerstone concepts in electricity.  We will create our first mental models for these basic electrical quantities. We will also talk about power, which is what happens when voltage and current act together.
+Voltage and current are the cornerstone concepts in electricity.
+
+* Will be replaced with the ToC
+{:toc}
+
+----
+### Where we are headed
+{:.no_toc}
+
+We create our first mental models for current and voltage. We will also talk about power, which happens when voltage and current act together.
+
+----
 
 ## Charge
 
@@ -58,7 +69,7 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 </details>
 </p>
 
-#### A few remarks on current
+**A few remarks on current**
 
 **What carries current in metal?** Since electrons are free to move about in metals, moving electrons are what makes up the current in metals. The positive nuclei in metal atoms are fixed in place and do not contribute to current. Even though electrons have a negative charge and do almost all the work in most electric circuits, we still define a positive current as the direction a *positive* charge would move. This is a very old historical convention.
 
@@ -72,7 +83,7 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 
 ## Voltage 
 To get our initial toehold on the concept of voltage, let's look at an analogy:  
-### Voltage resembles gravity
+**Voltage resembles gravity**ß
 For a mass $m$, a change of height $h$ corresponds to a change in potential energy, $\Delta U = mg\Delta h$.  
 
 For a charged particle $q$, a voltage $V$ corresponds to a change in potential energy, $\Delta U = qV$. 
@@ -91,7 +102,7 @@ For both the ball and the electron, the trip down the hill happens spontaneously
 <details>
 <summary>Why use an analogy?</summary>
                     
-<p><b>Why don't you just describe voltage in electrical terms?</b></p>
+<p><strong>Why don't you just describe voltage in electrical terms?</strong></p>
 
 <p>Voltage is a challenging concept. It's really hard to come up with a simple description of voltage in terms of the fundamental electrical forces. I have not come across a <em>simple</em> description that offers that happy "Aha!" moment. Electricity is a somewhat mysterious force, so be patient, let the wonder hang around for a while.</p>
 

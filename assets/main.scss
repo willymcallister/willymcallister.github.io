@@ -5,8 +5,8 @@
 @import "minima";
 
 blockquote {
-  font-size: $base-font-size;
-  letter-spacing: 0px;
+    font-size: $base-font-size;
+    letter-spacing: 0px;
 }
 .centered {
     display: block;
@@ -30,6 +30,23 @@ td {
 $grey-color-zebra: lighten($grey-color, 45%) !default;
 .zebra tr:nth-child(odd) td {
     background-color: $grey-color-zebra;
+}
+hr {
+    margin: 1em 0;
+    border-top: $grey-color-light;
+}
+.footer-heading {
+  letter-spacing: -0.25px;
+  font-weight: 300;
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
+}
+.col3-list {
+  list-style: none;
+  margin-left: 0;
 }
 
 // new comment form 

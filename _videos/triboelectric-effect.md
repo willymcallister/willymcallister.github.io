@@ -1,7 +1,6 @@
 ---
 layout: video
 title:  "Discovery of magnetism"
-date:   2017-02-13 18:00:00 -0800
 author: Brit Cruise
 youtubeID: IzyheHIPBXU
 comments: true

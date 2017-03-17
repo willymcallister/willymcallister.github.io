@@ -11,6 +11,9 @@ A simulator for experimenting with circuits.
 
 [Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/index-es.html) (Español)
 
+* Will be replaced with the ToC
+{:toc}
+
 
 ## Playing in the circuit sandbox
 

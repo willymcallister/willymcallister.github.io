@@ -28,5 +28,5 @@ If we limit ourselves to signals shaped like sines or cosines, we can develop a 
 
 ----
 
-This website is based on work I did while I was at Khan Academy as the Electrical Engineering Content Fellow in 2016. - Willy McAllister
+This website is based on work I did while at Khan Academy as the Electrical Engineering Content Fellow in 2016. - Willy McAllister
 

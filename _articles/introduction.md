@@ -11,30 +11,30 @@ Check out a summary of the math and science preparation that will help you have 
 
 ----
 
-![video]({{ site.baseurl }}{% link i/video.svg %}) [Charge]({{ site.baseurl}}/v/charge.html)
+{% comment %}
+![]({{ site.baseurl }}{% link i/video.svg %}) [Charge]({{ site.baseurl }}{% link _videos/charge.md %})
+{% endcomment %}
 
-![article]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl}}/a/charge.html)
+![]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl }}{% link _articles/charge.md %})
 
-![video]({{ site.baseurl }}{% link i/video.svg %}) [Current]({{ site.baseurl}}/v/current.html)
+![]({{ site.baseurl }}{% link i/video.svg %}) [Current]({{ site.baseurl }}{% link _videos/current.md %})
 
-![video]({{ site.baseurl }}{% link i/video.svg %}) [Current direction]({{ site.baseurl}}/v/current-direction.html)
+![]({{ site.baseurl }}{% link i/video.svg %}) [Current direction]({{ site.baseurl }}{% link _videos/current-direction.md %})
 
-![video]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl}}/v/voltage.html)
+![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
 
-![video]({{ site.baseurl }}{% link i/video.svg %}) [Conventional current]({{ site.baseurl}}/v/conventional-current.html)
+![]({{ site.baseurl }}{% link i/video.svg %}) [Conventional current]({{ site.baseurl }}{% link _videos/conventional-current.md %})
 
-![article]({{ site.baseurl }}{% link i/article.svg %}) [Basic electrical quantities](basic-quantities.html) - charge, current, voltage, power
+![]({{ site.baseurl }}{% link i/article.svg %}) [Basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) - charge, current, voltage, power
 
-![article]({{ site.baseurl }}{% link i/article.svg %}) [Numbers in electrical engineering](numbers-in-ee.html)
+![]({{ site.baseurl }}{% link i/article.svg %}) [Numbers in electrical engineering]({{ site.baseurl }}{% link _articles/numbers-in-ee.md %})
 
-![article]({{ site.baseurl }}{% link i/article.svg %}) [Defining the standard electrical units](standard-electrical-units.html)
+![]({{ site.baseurl }}{% link i/article.svg %}) [Defining the standard electrical units]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
 
-
-
-![article]({{ site.baseurl }}{% link i/article.svg %}) [Preparing to study electrical engineering]({{ site.baseurl}}/a/preparing-to-study-electrical-engineering.html)
+![]({{ site.baseurl }}{% link i/article.svg %}) [Preparing to study electrical engineering]({{ site.baseurl }}{% link _articles/preparing-to-study-ee.md %})
 
 $$
 
-> #### Video ![video]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![article]({{ site.baseurl }}{% link i/article.svg %}) 
+> #### Video ![]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![]({{ site.baseurl }}{% link i/article.svg %}) 
 >
 > When you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view the video and have more questions, check out the article because it may go a little deeper into the topic.

@@ -9,6 +9,9 @@ Electrical engineers use very large and very small numbers compared to our every
 
 Engineering numbers are written in **engineering notation**, similar to scientific notation. It helps to get comfortable with engineering notation and the wide dynamic range of numbers that we engineers deal with every day.
 
+* Will be replaced with the ToC
+{:toc}
+
 ## Scientific notation
 
 If you've studied math or science you probably came across scientific notation. You can brush up on scientific notation with this [KA video](https://www.khanacademy.org/math/pre-algebra/exponents-radicals/scientific-notation/v/scientific-notation). To express a number in scientific notation, you rewrite it as a number $\ge1$ and $\lt10$, multiplied by a power of $10$. This might make more sense if we look at some examples:
@@ -22,7 +25,7 @@ If you've studied math or science you probably came across scientific notation. 
 <p>
 <details>
 <summary> What is a coulomb?</summary>
-<p>The <b>coulomb</b> is the Système International d'Unités (SI) unit for an amount of charge. $1$ coulomb of charge flows past a point in a wire in one second when the current in the wire is $1$ ampere.
+<p>The <strong>coulomb</strong> is the Système International d'Unités (SI) unit for an amount of charge. $1$ coulomb of charge flows past a point in a wire in one second when the current in the wire is $1$ ampere.
 $1 \,\text{coulomb} = 1 \,\text{ampere flowing for} \, 1 \,\text{second}$</p>
 
 <p>In terms of electrons, $e^-$, one coulomb is the combined charge of $6.24 \times 10^{18}$ electrons.

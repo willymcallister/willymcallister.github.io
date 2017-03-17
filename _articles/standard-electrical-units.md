@@ -5,24 +5,30 @@ author: Willy McAllister
 comments: true
 ---
 
-Electrical units can be described in a formal manner, and that's what we are going to do in this article. The standard electrical units are defined in a specific order. 
+Electrical units can be described in a formal manner, and that's what we are going to do in this article. 
 
-The *ampere* is defined first. It is called an SI *base unit*, the only electrical unit derived from the outcome of an experiment. 
+* Will be replaced with the ToC
+{:toc}
 
-From the ampere, we *derive* all the rest of the electrical units. Next up after the ampere comes the *coulomb* and *charge on an electron*. 
+The standard electrical units are defined in a specific order. 
 
-Then we derive the rest of our favorites, the *watt*, the *volt*, and the *ohm*. 
+## Ampere is a *base* unit
 
-These *derived* electrical units are defined in terms of the ampere and other SI base units (meter, kilogram, second). 
+The *ampere* is defined first. It is called an SI *base unit*. The ampere is the only electrical unit defined by the outcome of an experiment. 
+
+## All the rest are derived units
+
+After defining the ampere, we *derive* the rest of the electrical units, starting with the *coulomb* and the *charge on an electron*. Then we continue on to the rest of our favorites, the *watt*, the *volt*, and the *ohm*. We derive these electrical units from the ampere and other SI base units (meter, kilogram, second). 
 
 <p>
 <details>
-<summary>What does SI mean?</summary>
-<p><b>SI</b> is the International System of Units, in French "Système International d'Unités". It is the modern form of the metric system.</p>
+<summary>What is SI?</summary>
+<p><strong>SI</strong> is the International System of Units, in French "<strong>S</strong>ystème <strong>I</strong>nternational d'Unités". It is the modern form of the metric system.</p>
 </details>
 </p>
 
 ## Ampere
+
 The definition of the SI unit of current, the **ampere**, comes from the study of magnetism. Electric currents in wires give rise to magnetic fields (Biot–Savart Law, 1820). Those magnetic fields in turn give rise to magnetic forces on the wires (Ampere's Force Law, 1825). Two parallel wires carrying a current will exert a force between them. The official SI definition of the ampere is as follows:
 
 The ampere is that constant current which—if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed $1$ meter apart in vacuum—would produce between these conductors a force equal to $2 \times 10^{-7}$ newtons per meter of length.

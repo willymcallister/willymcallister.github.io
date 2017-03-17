@@ -1,7 +1,6 @@
 ---
 layout: video
 title:  "Conventional current"
-date:   2017-02-13 18:00:00 -0800
 author: Willy McAllister
 youtubeID: 17EhKw2tsu4
 comments: true

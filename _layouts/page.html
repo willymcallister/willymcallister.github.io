@@ -14,7 +14,7 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.disable-comments != true %}
+  {% if page.comments == true %}
     {% include post-comments.html %}
   {% endif %}
 

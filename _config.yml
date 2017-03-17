@@ -18,7 +18,6 @@ email: willy@spinningnumbers.org
 author: 'Willy McAllister'
 description: > # this means to ignore newlines until "baseurl:"
   Learn the concepts of electrical engineering.  
-  The topics taught to an undergraduate majoring in EE. 
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://willymcallister.github.io" # the base hostname & protocol for your site, e.g. http://example.com

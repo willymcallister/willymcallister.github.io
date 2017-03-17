@@ -50,5 +50,6 @@ And in my own sort order:
 
 - [Home]({{ site.baseurl}}/index.html)
 - [About]({{ site.baseurl}}/about/index.html)
+- [Blog]({{ site.baseurl}}/blog/index.html)
 - [Main]({{ site.baseurl}}/main.html)
 - [Everything]({{ site.baseurl}}/everything.html)

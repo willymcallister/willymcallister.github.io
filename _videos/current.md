@@ -1,7 +1,6 @@
 ---
 layout: video
 title:  "Current"
-date:   2017-02-11 11:51:00 -0800
 author: Willy McAllister
 youtubeID: ZRLXDiiUv8Q
 comments: true

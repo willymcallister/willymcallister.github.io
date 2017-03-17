@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <h2><a class="footer-heading" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a></h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -37,13 +37,12 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
-      <div>
-        © 2017 under the terms of <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+        <ul class="col3-list">
+          <li>{{ site.description | escape }}</li>
+          <li>© 2017 under the terms of <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
+        </ul>
       </div>
     </div>
-
   </div>
 
 </footer>

@@ -1,7 +1,6 @@
 ---
 layout: video
 title:  "Current direction"
-date:   2017-02-13 18:00:00 -0800
 author: Willy McAllister
 youtubeID: 4frpZ4Q0q58
 comments: true
