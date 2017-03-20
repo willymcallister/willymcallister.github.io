@@ -11,9 +11,9 @@ Welcome to Spinning Numbers! You are about to learn about the world of electrici
 
 [![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}](https://willymcallister.github.io/Circuit-sandbox/index.html)
 
-The big new feature here is the CIRCUIT SANDBOX. Here's how it works: [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). This is a simple simulator you can use as a study aid as you progress through the videos and articles, and you can model your own designs as well. Please check it out. [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can use the [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html).
+The big new feature here is the CIRCUIT SANDBOX. Here's how it works: [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). This is a simple simulator you can use as a study aid as you progress through the videos and articles, and you can model your own designs as well. 
 
-There is no installation, just click and start drawing a circuit. You can save your work and share it with others by sending a url. 
+Please check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). There is no installation, just click and start drawing a circuit. You can save your work and share it with others by sending a url. 
 
 ## Get started
 I'm working on providing links to YouTube videos and revised/improved articles. For now, here is the introduction to electrical engineering.

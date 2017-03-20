@@ -21,7 +21,7 @@ Starting in 2017, I will be adding new introductory and advanced material and co
 
 Spinning Numbers refers to the rotating vectors that emerge from Euler's formula for complex sine and cosine. 
 
-$Euler's equations$ and a small image
+$Eulers equations$ and a small image
 
 This is one of the most beautiful and useful ideas *ever*. In electrical engineering we use spinning numbers to understand how signals move through the world. Here's what a spinning number looks like: The rotating red and green sticks in this video. For now, don't worry about the fancy math notation, just enjoy the motion and music.
 

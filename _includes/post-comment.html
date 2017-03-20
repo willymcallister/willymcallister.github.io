@@ -1,20 +1,32 @@
+<article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
+  <div class="comment__body">
+    {{ include.message | markdownify }}
+  </div>
+  {% unless include.replying_to != 0 %}
+    <div class="comment__meta">
+      <a rel="nofollow" class="comment__reply-link" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ post_slug }}')">Comment</a>
+    </div>
+  {% endunless %}  <div class="comment__author">
+    {{ include.name }}
+    <span class="comment__date">
+      {% if include.date %}
+        {% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
+        {% include format-date.html date=include.date time=false weekDay=false %}
+        {% if include.index %}</a>{% endif %}
+      {% endif %}
+    </span>
+  </div>
 
-<article id="comment{{ include.index }}" class="comment">
-		<div class="comment__body">
-			{{ include.message | markdownify }}
-		</div>
-		<div class="comment__author">
-			{{ include.name }}
-			<span class="comment__date">
-				{% if include.date %}
-					{% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
-					{% include format-date.html date=include.date time=false weekDay=false %}
-					{% if include.index %}</a>{% endif %}
-				{% endif %}
-			</span>
-		</div>
-</article>
-
-{% comment %} 
-	based on: https://github.com/eduardoboucas/eduardoboucas.github.io/blob/master/_includes/partials/post-comment.html 
-{% endcomment %} 
+{% capture i %}{{ include.index }}{% endcapture %}
+{% assign replies = site.data.comments[post_slug] | where_exp: 'item', 'item.replying_to == i' %}
+{% for reply in replies %}
+  {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
+  {% assign r           = reply.replying_to %}
+  {% assign replying_to = r | to_integer %}
+  {% assign email       = reply.email %}
+  {% assign name        = reply.name %}
+  {% assign url         = reply.url %}
+  {% assign date        = reply.date %}
+  {% assign message     = reply.message %}
+  {% include post-comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
+{% endfor %}

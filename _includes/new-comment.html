@@ -1,5 +1,12 @@
 <form class="js-form form" method="post" action="{{ site.staticmanUrl }}">
   <input type="hidden" name="options[slug]" value="{{ post_slug }}">
+  <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
+
+  <fieldset>
+  <div class="textfield">
+    <textarea class="textfield__input" name="fields[message]" type="text" rows= "3" placeholder="Ask a question. (Markdown is allowed.)"></textarea>
+  </div>
+  </fieldset>
 
   <fieldset>
     <div class="textfield">
@@ -10,12 +17,6 @@
   <fieldset>
     <div class="textfield">
       <input class="textfield__input" type="email" name="fields[email]"  placeholder="Your email (optional)"/>
-    </div>
-  </fieldset>
-
-    <fieldset>
-    <div class="textfield">
-      <textarea class="textfield__input" name="fields[message]" type="text" rows= "3" placeholder="Your question or comment. (Markdown is allowed.)"></textarea>
     </div>
   </fieldset>
 

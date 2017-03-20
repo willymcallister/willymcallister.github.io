@@ -1,27 +1,31 @@
 <section class="comments">
-	<div class="comment__new">
-		<h3>Ask a question</h3>
-		{% include new-comment.html %}
-	</div>
+  <div id="respond" class="comment__new">
+    <h3 class="page__section-label">Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
 
-	{% if site.data.comments[post_slug] %}
-		<div class="comments__existing">
-			<h2>All comments</h2>
+    {% include new-comment.html %}
+  </div>
 
-			{% assign comments = site.data.comments[post_slug] | sort %}
-			
-			{% for comment in comments reversed %}
-				{% assign email = comment[1].email %}
-				{% assign name = comment[1].name %}
-				{% assign date = comment[1].date %}
-				{% assign message = comment[1].message %}
+  {% if site.data.comments[post_slug] %}
+    <div class="comments__existing">
+      <h3 class="page__section-label">
+        Questions and comments
+      </h3>
 
-				{% include post-comment.html index=forloop.index email=email name=name url=url date=date message=message %}
-			{% endfor %}
-		</div>
-	{% endif %}
+      {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
+    
+      {% for comment in comments reversed %}
+        {% assign index       = forloop.index %}
+        {% assign r           = comment.replying_to %}
+        {% assign replying_to = r | to_integer %}
+        {% assign email       = comment.email %}
+        {% assign name        = comment.name %}
+        {% assign url         = comment.url %}
+        {% assign date        = comment.date %}
+        {% assign message     = comment.message %}
+
+        {% include post-comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
+
+      {% endfor %}
+    </div>
+  {% endif %}
 </section>
-
-{% comment %} 
-	based on: https://github.com/eduardoboucas/eduardoboucas.github.io/blob/master/_includes/partials/post-comments.html
-{% endcomment %} 
