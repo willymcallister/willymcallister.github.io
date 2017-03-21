@@ -54,16 +54,14 @@ hr {
 input, select, textarea, button {
     @extend body;
 }
-
-// from popcorn comment styles mdl
 fieldset {
-    border: 0;
+    border: none;
     padding: 0;
 }
 .textfield {
     width: 370px;
     max-width: 100%;
-    padding: 10px 0
+    padding: 4px 0px
 }
 .textfield__input {
     border: none;
@@ -81,6 +79,7 @@ fieldset {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    margin: 4px 0px 0px 0px;
 }
 button:hover {
     background-color: $grey-color;
@@ -94,7 +93,7 @@ button:hover {
     padding: 20px 0px 0px 0px;
 }
 .comment__new {
-    padding: 0px 0px 20px 0px;
+    padding: 0px 0px 14px 0px;
 }
 .comment__author {
     text-align: right;
@@ -102,10 +101,10 @@ button:hover {
     font-size: $small-font-size;
 }
 .comments__existing {
-    border-top: 1px solid $grey-color-light;
+    padding: 8px 0px 0px 0px;
 }
 .comment {  
-    border-bottom: 1px solid $grey-color-light;
+    border-top: 1px solid $grey-color-light;
     padding: 5px 0px 5px 0px;
 }
 .comment.child {

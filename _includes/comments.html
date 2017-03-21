@@ -1,15 +1,12 @@
 <section class="comments">
   <div id="respond" class="comment__new">
-    <h3 class="page__section-label">Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">Cancel reply</a></small></h3>
-
-    {% include new-comment.html %}
+    Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;"> cancel reply</a></small>
+    {% include comment_form.html %}
   </div>
 
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
-      <h3 class="page__section-label">
-        Questions and comments
-      </h3>
+    <p> Questions and comments</p>
 
       {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     
@@ -23,7 +20,7 @@
         {% assign date        = comment.date %}
         {% assign message     = comment.message %}
 
-        {% include post-comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
+        {% include comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
 
       {% endfor %}
     </div>
