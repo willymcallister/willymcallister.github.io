@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: false
 ---
 
-Welcome to Spinning Numbers! You are about to learn about the world of electricity and electrical engineering. This is based on work I did while at Khan Academy as the Electrical Engineering Content Fellow in 2016. 
+Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. This is based on work I did while at Khan Academy as the Electrical Engineering Content Fellow in 2016. 
 
 ## Circuit sandbox
 
