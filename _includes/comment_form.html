@@ -1,4 +1,5 @@
 <form class="js-form form" method="post" action="{{ site.staticmanUrl }}">
+  <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
   <input type="hidden" name="options[slug]" value="{{ post_slug }}">
   <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
 
