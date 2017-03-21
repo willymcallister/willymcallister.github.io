@@ -41,6 +41,12 @@ google_analytics: UA-91424157-1
 # Staticman comments
 staticmanUrl: https://api.staticman.net/v2/entry/willymcallister/spinningnumbers/master/comments
 
+# reCAPTCHA keys
+reCaptcha:
+  siteKey: "6LcK3xkUAAAAAKdppIIORt78Df93D2qvOGtZinEy"
+  secret: "Fny+FwO6GniFYJRmLc1bmy9eaQNGVGGsIVN/510Pb22f7QpsjyQ7dyRPEOMHy6esJtrku7k2ss4LIDUfUOjymmUEtcRwsqEDvE8OcsZt8c9H9slutW9F60n/bb+CGruk0WYS8V/uuMF8yu41NU3+mfcsJxCQrYkGvEQ0jQaOvBI="
+
+
 collections:
   videos:
     output: true
