@@ -30,7 +30,7 @@ As an example, if we combine two spinning numbers we can create a sine wave usin
 
 $\sin \omega t = \dfrac{1}{2}(e^{+j\omega t} - e^{-j\omega t})$
 
-For now, don't worry about the fancy math notation, there's plenty of time to study that. Enjoy the motion and music.
+For now, don't worry about the fancy math notation, there's plenty of time to study that. This video shows what the equation means. Chill out and enjoy.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/eulers-sine.md %})
 
