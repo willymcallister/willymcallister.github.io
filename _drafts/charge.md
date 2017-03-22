@@ -2,12 +2,11 @@
 layout: article
 title:  "Charge"
 author: Willy McAllister
-comments: true
+comments: false
 youtubeID: HpipBkRMm8U
-
 ---
 
-# Draft
+# Draft 
 
 Electricity begins with the concepts of *electric force* and *charge*. 
 

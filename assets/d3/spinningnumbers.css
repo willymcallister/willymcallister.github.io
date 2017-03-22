@@ -1,0 +1,20 @@
+
+#spin-d3{
+	margin: auto
+}
+.spin circle, .spin line{
+	stroke: lime; 
+	stroke-width:2px; 
+	fill:none
+}
+.spin .axis{
+	stroke:silver
+}
+.spin .dot {
+	fill: gold
+}
+.spin text{
+	fill:silver; 
+	font-family:sans-serif; 
+	font-size:22
+}

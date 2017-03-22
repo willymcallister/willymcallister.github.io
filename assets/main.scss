@@ -52,7 +52,7 @@ hr {
   margin-left: 0;
 }
 
-////// new comment form //////
+////// comment form //////
 
 input, select, textarea, button {
     @extend body;
@@ -88,7 +88,7 @@ button:hover {
     color: white;
 }
 
-////// comments //////
+////// existing comments //////
 
 .comments {
     border-top: 1px solid $grey-color-light;
@@ -117,7 +117,7 @@ button:hover {
   font-size: $small-font-size;
 }
 
-////// <details> //////
+////// <details> tag //////
 
 details {
     border-radius: 5px;
