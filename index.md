@@ -9,14 +9,12 @@ Welcome to Spinning Numbers! Learn about the world of electricity and electrical
 
 ## Circuit sandbox
 
+The big new feature here is the CIRCUIT SANDBOX. Here's how it works: [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) for simulating circuits. Please check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). 
+
 [![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}](https://willymcallister.github.io/Circuit-sandbox/index.html)
 
-The big new feature here is the CIRCUIT SANDBOX. Here's how it works: [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). This is a simple simulator you can use as a study aid as you progress through the videos and articles, and you can model your own designs as well. 
-
-Please check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). There is no installation, just click and start drawing a circuit. You can save your work and share it with others by sending a url. 
-
-## Get started
-I'm working on providing links to YouTube videos and revised/improved articles. For now, here is the introduction to electrical engineering.
+## Get started!
+I'm adding links to KA YouTube videos and revised/improved as many articles as I can. The introduction to electrical engineering is ready to go.
 
 ### [Introduction]({{ site.baseurl }}{% link _articles/introduction.md %})
 Become familiar with the most important electrical quantities: charge, current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
