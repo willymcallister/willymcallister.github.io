@@ -11,7 +11,7 @@ Spinning Numbers refers to a type of number engineers use to represent signals. 
 <div id="spin-d3" class="centered"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="{{ "/assets/d3/spinningnumbers-d3.js" | relative_url }}"></script>
-<link rel="stylesheet" type="text/css" href="{{ "/assets/d3/spinningnumbers.css" | relative_url }}" />
+<link rel="stylesheet" type="text/css" href="{{ "/assets/d3/spinningnumbers-d3.css" | relative_url }}" />
 </p>
 
 We can write a spinning number in rather intimidating mathematical notation as $\Large e^{j\omega t}$. 
