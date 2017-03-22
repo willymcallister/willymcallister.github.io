@@ -10,12 +10,12 @@ Welcome to Spinning Numbers. The topics covered here are what you might be taugh
 
 I remember how hard was to grasp the ideas of electricity. After I graduated form college and started my career, every few years I would have to go back to study the fundamentals I needed for a new project. Years into my job there were moments where I would slap my head and say, "So *that's* what that means!" I hope these videos and articles help you to have similar Aha! moments, but without the long years in between.
 
-This material has its roots in my time at [Khan Academy](https://www.khanacademy.org/science/electrical-engineering) in 2015-16 when I was the Content Fellow for Electrical Engineering. This site has links to the YouTube videos I created while at KA, the same videos you see on the KA site. The articles you find here at Spinning Numbers were copied over from KA, and I've been improving them based on questions from other learners.
+This material has its roots in my time at [Khan Academy](https://www.khanacademy.org/science/electrical-engineering) in 2015-16 when I was the Content Fellow for Electrical Engineering. 
+
+Starting in 2017, I will be adding new introductory and advanced material. This site currently has links to YouTube videos I created while at KA, the same videos you see on the KA site. The articles you find here at Spinning Numbers started at KA, and I've been improving them based on questions from  learners, and writting new articles as well. This is all a labor of love.
 
 ### Circuit sandbox
 A special feature here at Spinning Numbers is the [Circuit sandbox](/a/circuit-sandbox.html) simulator, where you can try out your own design ideas. This is something I wanted to make available on Khan Academy but the time wasn't avaialable until now. 
-
-Starting in 2017, I will be adding new introductory and advanced material and continue to update articles based on questions from learners. This is all a labor of love. 
 
 ### Creating the site
 
@@ -25,7 +25,7 @@ Comments for this static web site are implemented with [Staticman](https://stati
 
 Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-fast math typesetting library from Khan Academy. 
 
-Animations like the one above are created with [D3.js](http://d3js.org).
+Animations like the one above are created with [D3.js](http://d3js.org). The source code for my animations is on [github](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3).
 
 ### Acknowledgements
 
