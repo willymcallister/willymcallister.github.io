@@ -20,12 +20,10 @@ The *ampere* is defined first. It is called an SI *base unit*. The ampere is the
 
 After defining the ampere, we *derive* the rest of the electrical units, starting with the *coulomb* and the *charge on an electron*. Then we continue on to the rest of our favorites, the *watt*, the *volt*, and the *ohm*. We derive these electrical units from the ampere and other SI base units (meter, kilogram, second). 
 
-<p>
 <details>
 <summary>What is SI?</summary>
 <p><strong>SI</strong> is the International System of Units, in French "<strong>S</strong>ystème <strong>I</strong>nternational d'Unités". It is the modern form of the metric system.</p>
 </details>
-</p>
 
 ## Ampere
 
@@ -39,12 +37,10 @@ The definition of the ampere comes from the outcome of an experiment you can do 
 
 Apply the same current to both wires, flowing in the same direction, using adjustable current sources. Each current creates a magnetic field around the two wires. The magnetic fields interact with the moving charged particles (electrons) in the other wire. This generates a mechanical force pushing the wires together. Adjust the currents up or down while measuring the force on a wire. When the force is $2 \times 10^{-7}$ newtons, the current is $1$ ampere, by definition. 
 
-<p>
 <details>
 <summary>Why the unusual value for force?</summary>
 <p>The factor $2 \times 10^{-7}$ newtons/meter is historical, brought forward from an older definition of the ampere. At one time, the ampere was defined as the current that would deposit 0.001118 grams of silver in one second from a silver nitrate solution, known as the <em>silver ampere</em>. Today's SI definition of the ampere respects that older tradition.</p>
 </details>
-</p>
 
 ## Coulomb
 The **coulomb** is the SI unit of charge. The size of a coulomb is derived from the ampere. One coulomb is defined as the amount of charge flowing when the current is $1$ ampere.
@@ -70,19 +66,16 @@ $1 \,\text{coulomb} = 6.241509343 \times 10^{18} \,\text{electrons}$
 
 **How many electrons in 1 ampere?**  
 
-<p>
 <details>
 <summary>Answer</summary>
 <p>One ampere is $1 \,\text{coulomb/second}$.</p>
 
 <p>Answer: When a current of $1 \,\text{ampere}$ is flowing in a wire, there are $6.241509343 \times 10^{18}$ electrons flowing by every second.</p>
 </details>
-</p>
 
 **How many coulombs are there in 1 mole of electrons?**  
 One mole of electrons is $6.02214 \times 10^{23}$ electrons — Avogadro's Number.  
 
-<p>
 <details>
 <summary>Answer</summary>
 <p>One mole of electrons corresponds to the below amount of coulombs:</p>
@@ -93,7 +86,6 @@ One mole of electrons is $6.02214 \times 10^{23}$ electrons — Avogadro's Numbe
 
 <p>Answer: One mole of electrons is about 100,000 coulombs of charge.</p>
 </details>
-</p>
 
 ## Watt
 
@@ -146,11 +138,9 @@ There are seven SI **base units**. All other units are derived from these seven.
 | kelvin  | $\text{K}$   | temperature         |
 | candela | $\text{cd}$  | luminous intensity  |
 | mole    | $\text{mol}$ | amount of substance |
-|         |              |                     |
 
 One SI base unit comes from electricity: the ampere. The ampere has the same lofty status as the meter, kilogram, and second. It is defined as its own thing, not in terms of other units. 
 
-<p>
 <details>
 <summary>ampere vs. coulomb</summary>
 <p>There was a long debate in the 1930s and 1940s within the international standards community to select the ampere or the coulomb as the SI base unit representing electricity. It could have gone either way. One or the other could be normal scale, but not both. In the end, Monsieur Ampère's unit won the day. As a result, the ampere feels like a relatively normal-sized unit, whereas the coulomb seems huge (in the sense that it takes a huge number of electrons to add up to one coulomb).</p>
@@ -163,7 +153,6 @@ One SI base unit comes from electricity: the ampere. The ampere has the same lof
 
 <p>This is the force you would feel if a fully-loaded oil supertanker was sitting on your head.</p>
 </details>
-</p>
 
 ### SI derived units used in electricity
 
@@ -181,12 +170,11 @@ The remaining electrical units are SI **derived** units, formed by combinations 
 | siemens | $\text{S}$  | conductance| $\text A / \text V$ or $1/\Omega$    |
 | weber   | $\text{Wb}$ | magnetic flux           | $\text V \cdot \text s$ |
 | tesla   | $\text{T}$  | magnetic field strength | $\text{Wb} / \text m^2$ |
-|         |             |                         |                         |
 
 
-<p>
 <details>
 <summary>References</summary>
+
 <p>"Ampère's Force Law." Wikipedia. December 4, 2015. <a href="https://en.wikipedia.org/wiki/Ampère's_force_law">https://en.wikipedia.org/wiki/Ampère's_force_law</a></p>
 
 <p>"Biot–Savart Law." Wikipedia. March 4, 2016. <a href="https://en.wikipedia.org/wiki/Biot–Savart_law">https://en.wikipedia.org/wiki/Biot–Savart_law</a></p>
@@ -198,5 +186,3 @@ The remaining electrical units are SI **derived** units, formed by combinations 
 <p><em>The International System of Units (SI)</em>. Organisation Intergouvernementale De La Convention Du Mètre. 8th ed. Paris, France, 2006.
 <a href="http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf">http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf</a></p>
 </details>
-</p>
-

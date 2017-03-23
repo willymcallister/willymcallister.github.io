@@ -121,12 +121,16 @@ button:hover {
 
 details {
     border-radius: 5px;
-	padding: 0px 5px 0px 5px;
+	padding: 0px 8px;
     margin-bottom: 15px;
 }
-
 details[open] {
-	background: $grey-color-light
+	background: $grey-color-light;
+    padding: 0px 8px 8px 8px;
+}
+summary {
+    margin: 0px 0px 8px 0px;
+    outline:none;
 }
 
 $ka-default5 : #236ec9 !default;

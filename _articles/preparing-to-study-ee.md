@@ -9,6 +9,7 @@ A learner asked, "What math and science prerequisites and skills might be consid
 
 Good question! Here is a summary of the math and science preparation that will help you have the best experience learning the electrical engineering topics taught here. The links take you to the relevant topics on Khan Academy.
 
+<strong>Contents</strong>
 * Will be replaced with the ToC
 {:toc}
 
@@ -22,7 +23,7 @@ Good question! Here is a summary of the math and science preparation that will h
 * [Solving simultaneous equations](https://www.khanacademy.org//math/algebra/systems-of-linear-equations)
 * [Complex numbers](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2)
 
-### Trigonometry
+## Trigonometry
 
 * Definitions of sine, cosine, and tangent from the sides of a triangle.  
 There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometry).
@@ -44,7 +45,7 @@ There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometr
 
 ![SOHCAHTOA triangle]({{ site.baseurl }}{% link i/1sohcahtoa.svg%}){:height="150px" width="252px"}
 
-### A few beginning concepts from calculus
+## A few beginning concepts from calculus
 
 It really helps to get to know these two ideas from the start of calculus. You don't have to become an expert, but check out these links to get a basic idea of a what a derivative is.
 

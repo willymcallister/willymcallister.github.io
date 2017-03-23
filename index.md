@@ -5,18 +5,18 @@ author: Willy McAllister
 comments: false
 ---
 
-Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. This is based on work I did while at Khan Academy as the Electrical Engineering Content Fellow in 2016. 
+Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. This work began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. 
 
 ## Circuit sandbox
 
-The big new feature here is the [**Circuit sandbox**]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
+The shiny new feature of Spinning Numbers is the [**Circuit sandbox**]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
 
-[![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}](https://willymcallister.github.io/Circuit-sandbox/index.html)
+[![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Please check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). 
+Check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). 
 
 ## Get started!
-I'm adding links to KA YouTube videos and adding/improving articles. The introduction to electrical engineering is ready to go.
+I'm adding links to KA YouTube videos and adding/improving articles as fast as I can. The introduction sequence is ready to go.
 
 ### [Introduction]({{ site.baseurl }}{% link _articles/introduction.md %})
 Become familiar with the most important electrical quantities: charge, current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.

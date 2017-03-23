@@ -6,20 +6,15 @@ Articles and videos in the Khan Academy style, covering electrical engineering a
 
 * Introduction to the two most important electrical quantities: current and voltage. Get a first look at engineering numbers, units, and notation. Includes a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
 
-* Circuit elements
-The basic elements of circuit design are components (resistors, capacitors, and inductors), and sources (voltage and current), ideal elements and real-world components.
+* Circuit elements - The basic elements of circuit design are components (resistors, capacitors, and inductors), and sources (voltage and current), ideal elements and real-world components.
 
-* Circuits with resistors
-Series and parallel resistors, delta-wye networks, and the voltage divider.
+* Circuits with resistors - Series and parallel resistors, delta-wye networks, and the voltage divider.
 
-* DC circuit analysis
-Find the state of a DC circuit by applying Kirchhoff's Laws. The node voltage method, mesh current method, and loop current method.
+* DC circuit analysis - Find the state of a DC circuit by applying Kirchhoff's Laws. The node voltage method, mesh current method, and loop current method.
 
-* Natural and forced response
-Circuits with capacitors and inductors change with time. The natural and forced response of RC, RL, and RLC circuits. Uses calculus.
+* Natural and forced response - Circuits with capacitors and inductors change with time. The natural and forced response of RC, RL, and RLC circuits. Uses calculus.
 
-* AC circuit analysis
-We can develop a whole method of AC analysis to figure out what happens in circuits with any changing signal. These methods are far simpler than solving a differential equation from scratch.
+* AC circuit analysis - We develop a new method of AC analysis (complex exponentials) to analyze circuits with any changing signal. These methods are far simpler than solving a differential equation from scratch.
 
 ## Tools
 

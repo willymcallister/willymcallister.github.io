@@ -130,7 +130,6 @@ There are two grammatical guidelines for writing unit names and symbols.
 |farad  | 10 picofarad  | $\text {F}$  | $220  \text { pF}$     | Faraday |
 |ampere | 35 microamp   | $\text {A}$  | $65  \text { mA}$      | Ampère  |
 |volt   | 11 kilovolt   | $\text {V}$  | $5 \,\mu \text {V}$    | Volta   |
-|       |               |              |                        |         |
 
 I think it's cool how Ohm gets his own Greek symbol: $\Omega$, "Ohm ega."
 

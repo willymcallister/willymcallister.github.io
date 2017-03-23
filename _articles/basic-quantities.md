@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "Basic electrical quantities: current, voltage, power"
+title:  "Basic electrical quantities: charge, current, voltage, power"
 author: Willy McAllister
 comments: true
 ---
 
-Voltage and current are the cornerstone concepts in electricity.
+Voltage and current are the cornerstone concepts in electricity. We create our first mental pictures of current and voltage. We will also talk about power, which happens when voltage and current act together.
 
 * Will be replaced with the ToC
 {:toc}
@@ -14,7 +14,13 @@ Voltage and current are the cornerstone concepts in electricity.
 ### Where we are headed
 {:.no_toc}
 
-We create our first mental models for current and voltage. We will also talk about power, which happens when voltage and current act together.
+Current is the flow of charge. It is similar to the flow of water in a river or garden hose. The key difference is there are two types of charge, moving in opposite directions. 
+
+Voltage is like the potential energy of a mass. If you place a mass at the top of a mountain it has high potential energy. That's similar to placing a charge at a high voltage. As the mass rolls down the mountain, it gives up its potential energy. As a charge moves through a circuit, it gives up its potential energy, which we call a voltage drop.
+
+Electrical currents transfer power. Power is the product of voltage and current.
+
+$P = I \times V$, with units of watts
 
 ----
 
@@ -22,7 +28,7 @@ We create our first mental models for current and voltage. We will also talk abo
 
 The concept of electricity arises from an observation of nature, We observe a force between objects, that, like gravity, acts at a distance. The source of this force has been given the name **charge**. A very noticeable thing about electric force is that it is large, far greater than the force of gravity. Unlike gravity, however, there are two types of electric charge. Opposite types of charge attract, and like types of charge repel. Gravity has only one type: it only attracts, never repels.
 
-## Conductors and insulators
+## Materials: conductors, inulators, semiconductors
 
 **Conductors** are made of atoms whose outer, or valence, electrons have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other, creating a "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move. Copper, gold, silver, and aluminum are  good conductors. So is saltwater.
 
@@ -148,6 +154,6 @@ Electrical power is the product of voltage times current. in units of watts.
 
 ## Summary
 
-These mental pictures for current and voltage will get us started on all sorts of interesting circuits.
+These mental images for current and voltage will get us started on all sorts of interesting circuits.
 
-If you want to reach beyond this intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the Electrostatics tutorial.
+If you want to reach beyond this intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the [KA Electrostatics sequence](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics).
