@@ -15,6 +15,7 @@ comments: true
 {% endfor %} 
 </ul>
 
+{% comment %}
 And in my own sort order:
 
 {% assign videos = site.videos | sort:"order"  %}
@@ -25,11 +26,22 @@ And in my own sort order:
     </li>
   {% endfor %}
 </ul> 
+{% endcomment %}
 
 ### Articles
 
 <ul>
 {% for article in site.articles %}
+  <li>
+    <a href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+### Drafts
+
+<ul>
+{% for article in site.drafts %}
   <li>
     <a href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
   </li>

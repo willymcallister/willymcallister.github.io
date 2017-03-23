@@ -54,3 +54,6 @@ collections:
   articles:
     output: true
     permalink: /a/:title:output_ext
+  drafts:
+    output: true
+    permalink: /drafts/:title:output_ext
