@@ -8,7 +8,7 @@ comments: true
 Spinning Numbers refers to a type of number engineers use to represent signals. Numbers that spin!
 
 <p>
-<div id="spin-d3" class="centered"></div>
+<div id="spin-d3"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="{{ "/assets/d3/spinningnumbers-d3.js" | relative_url }}"></script>
 <link rel="stylesheet" type="text/css" href="{{ "/assets/d3/spinningnumbers-d3.css" | relative_url }}" />

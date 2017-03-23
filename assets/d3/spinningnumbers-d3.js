@@ -29,6 +29,8 @@
     time    = 0,
     i;
 
+    d3.select("#spin-d3").attr("align","center");
+
   xScale
     .domain([xmin, xmax])
     .range([0, width]);
