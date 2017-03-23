@@ -16,7 +16,7 @@ The big new feature here is the [**Circuit sandbox**]({{ site.baseurl }}{% link 
 Please check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). 
 
 ## Get started!
-I'm adding links to KA YouTube videos and revised/improved articles. The introduction to electrical engineering is ready to go.
+I'm adding links to KA YouTube videos and adding/improving articles. The introduction to electrical engineering is ready to go.
 
 ### [Introduction]({{ site.baseurl }}{% link _articles/introduction.md %})
 Become familiar with the most important electrical quantities: charge, current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.

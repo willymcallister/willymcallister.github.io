@@ -7,9 +7,9 @@ comments: true
 
 A simulator for experimenting with circuits.
 
-[Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/index.html) (English)
+Run the [Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/index.html) in English.
 
-[Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/index-es.html) (Español)
+Ejecutar [Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/index-es.html) en español.
 
 * Will be replaced with the ToC
 {:toc}
