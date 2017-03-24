@@ -8,7 +8,7 @@ youtubeID: HpipBkRMm8U
 
 # Draft 
 
-Electricity begins with the concepts of *electric force* and *charge*. 
+Electricity begins with *electric force*. We explain electric force by saying there is something called *charge*, a property of matter. 
 
 * Will be replaced with the ToC
 {:toc}
@@ -39,9 +39,9 @@ Electricity begins with the concepts of *electric force* and *charge*.
 
 ----
 
-## Amber
+## Eels and amber
 
-I want to start at the very beginning, like 5000 years ago. For the moment, pretend you never heard the words charge or electricity, and forget you know anything about atoms. 
+Let's start at the very beginning, like 5000 years ago. For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. 
 
 Around 5000 years ago, the Egyptians knew that if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels to make them feel better. This very first practical application of electricity was in medicine.
 
@@ -51,7 +51,7 @@ Back in those days, the Greeks made jewelry out of a pretty stone called amber. 
 
 So Egyptian or Greek aristocrats wearing their amber jewelry would pet their cats. They noticed light things like feathers or their own hair were attracted to the amber. Today we have a fancy official word for it, the *triboelectric effect*. "Tribo-" is the Greek word for "rub", so you can call it the ["rubbing-electric" effect]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}).
 
-You can create the same effect by running a plastic comb your dry hair or rubbing a balloon on your sweater.
+You can create the same effect by running a plastic comb through your dry hair, or rubbing a balloon on your sweater.
 
 The Greek word for amber is ἤ λ ε κ τ ρ ο ν. 
 
@@ -65,7 +65,7 @@ I bet you can guess what we use this word for.
 
 ## Making sense of electric force
 
-So we have these observations of nature: rubbing cats or balloons. We observe this wierd force, sometimes attraction, sometimes repulsion, depending on what was rubbed against what. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Wierdest of all, it seems like the force acts at a distance: The two objects don't have to be touching, but yet we see this obvious pushing or pulling force between them. This is super strange (and super fascinating). 
+So we have these observations of nature: rubbing cats or balloons. We observe this wierd force, sometimes attraction, sometimes repulsion, depending on what rubbed against what. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Wierdest of all, it seems like the force acts at a distance: The two objects don't have to be touching, but yet we see this obvious pushing or pulling force between them. This is super strange (and super fascinating).  
 
 <details>
 <summary>Is rubbing cats the same as magnetism?</summary>
@@ -73,30 +73,57 @@ So we have these observations of nature: rubbing cats or balloons. We observe th
 
 Later in your study of electrical engineering or physics, you will learn that electricity and magnetism are very closely related and intertwined. When these ideas come together it's called *electromagnetism*, which is responsible for light and radio waves. 
 </p>
+<p>Gravity also does the same force-at-a-distance thing, but it, too, is a very different kind of force.
+</p>
 </details>
 
-The best explanation anyone has come up with (so far) to explain what's happening is: Physical objects (matter) displaying this electric force do this because they possess a property called **charge**. 
+The best explanation anyone has come up with (so far) to explain electric force is: Physical objects (matter) displaying this electric force do this because they possess a property called **charge**. 
 
 <details>
 <summary>What is a "property" of matter? 
 </summary>
-<p>Matter has a number of properties: its mass, color, volume, squishyness. These properties are not little things that are inside the matter, they are asects of the matter itself. When an object attracts or repels other nearby objects we say it is because it has the property of *charge*. Charge is not some little tiny piece of stuff tucked inside atomic particles, it is a property of those particles.
+<p>Matter has a number of properties: its mass, color, volume, squishyness. These properties are not little things that are inside the matter, they are asects of the matter itself. When an object attracts or repels other nearby objects we say it is because it has the property of *charge*. Charge is not some little tiny piece of stuff tucked inside electrons and protons, it is a property of those particles.
 </p>
 </details>
 
+## Do we know what charge is?
+
+Great! Now we know why there is electric force. It's because objects have charge! The obvious next question: What is charge? Uhh...
+
+To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. Charge is the story we made up to make us feel like we know what's going on. And the whole "acting at a distance" thing never made anyone happy. 
+
+Fortunately, we are certain this electric force exists. That's for sure. And we've come up with a good way to describe how it works in the real world (Coulomb's Law). Best of all, we've come up with all sorts of cool things we can do with it. That is what electrcial engineers do. We make useful stuff because we understand the effects of charge and electric force. Electrical engineers can't explain the "why's" any better than physicists or philosoplers, but we are especially good at building things that exploit charge and electric force.
+
 ## Ben Franklin
 
-In 1752 1750? Ben Franklin nearly killed himself while flying a kite in a thunderstorm. He showed that lightning was indeed made of electricity (he could tell it gave off sparks.)
+In 1752 Ben Franklin nearly killed himself while flying a kite in a thunderstorm. He showed that lightning was made of electricity. He could tell because the key attached to the wet kite string gave off sparks, the same as if you shuffled your feet on the carpet an touched a door knob.
 
-Great! Now we know why there is electric force. It's because objects have charge. Next question: what is charge? Uhh...
+Franklin thought of electricity as an invisible electric fluid. While doing rubbing experiments he felt like rubbing one object caused it to lose invisible fluid while the other object gained fluid. Franklin coined the word *charge* and gave us the names of the two charges, "positive" and "negative". 
 
-To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. We don't even know if charge is real, or just some story we made up to make us feel less dumb. And the whole "acting at a distance" thing never made anyone happy. Fortunately, we are certain this force exists, that's for sure, and we've come up with a good way to describe it (Coulomb's Law). Best of all, we've come up with all sorts of cool things we can do with it. That is what electrcial engineers do. We make useful stuff because we understand the effects of charge and electric force. Electrical engineers can't explain the "why's" any better than physicists or philosoplers, but we are especially good at building things that exploit the ideas of charge and electric force.
+<details>
+<summary>What's in a name?</summary>
+<p>The names $+$ and $-$ made sense. If you let equal amounts of the two charges come together you get zero charge (neutral). This aspect of charge dan be described by positive and negative numbers. But Franklin could have chosen another pair of words instead of the signs we use for numbers. Like maybe "in" and "out".  After all, the poles of a magnet are not $+$ and $-$, they are called North and South. In some ways I wish he had picked different names. The choice of number sign names for charge causes a bit of confusion when we define the direction of current flow in a little while.</p>
+
+<p>Franklin coined several electrical terms: battery, charge, conductor, plus, minus, condenser (another name for a capacitor). </p>
+</details>
+
+So now we have a name for this electricity stuff. What's next?
 
 ## Charles Augustin de Coulomb
 
-Even if we can't explain *why* there is electric force, we can describe *what it does*. The first person to do a good job of that was French physicist [Charles Augustin de Coulomb](https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb), in 1784. (The electron was discovered in 1897 by [J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery), so Coulomb was working with the idea of charge without knowing about electrons or protons or even atoms) a century before this was worked out. Imagine how mind-bending this was.)
+Even if we can't explain *why* there is electric force, we can describe *what it does*. The first person to do a good job of this, using the concept of charge, was French physicist [Charles Augustin de Coulomb](https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb), in 1784. (30 years after Franklin, and still 113 years before the discovery of the electron in 1897 by [J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery).) So Coulomb was working with the idea of charge without knowing about electrons or protons or even atoms.
 
-Coulomb invented a very sensitive instrument to measure electric force. His *tortion balance* was based on twisting a fine wire. It could measure the attraction or repulsion of charged objects based on how much the for caused the wire to twist. Remember, he didn't know about electrons, so his reasoning had to be somewhat abstract. One object had "some charge" and was attracted to another object with "some charge". He could not measure how much charge an object had, but he was quite smart about being able to accurately create charged bodies. For example, you start with two balloons with no charge. You can tell they are uncharged because they don't attract or repel anything. Now charge up one balloon by rubbing it on your sweater. It now has some charge, let's call it $q$ charge. ($Q$ or $q$ is the variable name Coulomb used for charge, and we still do today.) Now, if you touch the charged balloon to the uncharged balloon, they will share $q$ between them. You end up with two balloons each charged the same, $q/2$. Now you can do experiments with $q/2$ balloons plus other uncharged balloons. 
+Coulomb invented a very sensitive instrument to measure electric force. His *torsion balance* was based on twisting a fine wire. It works just like if you hang a tire from a tree with a rope. If you sit in the tire you will slowly twist back and forth side-to-side.
+
+<details>
+<summary>Coulomb's torsion balance image</summary>
+<p>Coulomb drew his torsion balance for a publication.
+<img src="/i/0-5torsion_balance1.png" alt="Coulomb's torsion balance" >
+</p>
+<p> Figure 1: Two spheres are placed inside a chamber. The slightly larger sphere on the left sits still, while the smaller sphere is mounted on an arm (P) hanging from the thin torsion wire. The cylindrical glass chamber is sealed to keep air currents from messing up the measurement. It is made of glass so you can see what's going on inside. Before closing the chamber, a charge is placed on the smaller sphere. The larger fixed sphere starts out not charged. The smaller hanging sphere swings back and forth and finally comes to rest at some position. Then charge is placed on the larger sphere by touching the post holding it up (see Figure 5), held in place by the clamp that looks like chopsticks. This causes the hanging sphere to rotate towards or away from the larger sphere, depending on the sign of both charges. The amount of twist is measured on the scale (Q) going around the chamber. The other figures are close-up views of the important bits of the main instrument.</p>
+</details>
+
+Coulomb didn't know about atoms or charged electrons, and he did not have very good control over exactly how much charge was applied to the object. So his reasoning must have been somewhat abstract. One object had "some charge" and was attracted to another object with "some charge". He was quite smart about being able to accurately create charged bodies. For example, you start with two balloons with no charge. You can tell they are uncharged because they don't attract or repel anything. Now charge up one balloon by rubbing it on your sweater. It now has some charge, let's call it $q$ charge. ($Q$ or $q$ is the variable name Coulomb used for charge, and we still do today.) Now, if you touch the charged balloon to the uncharged balloon, they will share $q$ between them. You end up with two balloons each charged the same, $q/2$. Now you can do experiments with $q/2$ balloons plus other uncharged balloons. 
 
 Charging objects like this, Coulomb demonstrated that the force is proportional to the amount of charge on each object and is inversely proportional to the square of the distance between them $(1/r^2)$. We call that Coulomb's Law. We go into a lot more detail in [this article](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-force).
 
@@ -132,6 +159,7 @@ $1 \,\text{coulomb} = 1 \,\text{ampere flowing for} \, 1 \,\text{second}$</p>
 </details>
 </p>
 
+The unit of charge is the coulomb [C], which is the amount of charge transferred by one ampère of current in one second [As]. It is an unusually large unit for most day-to-day applications. Fractions of a coulomb, like microcoulombs [µC] and nanocoulombs [nC], are more common.
 
 Photo credit: ant in amber: https://commons.wikimedia.org/wiki/File:An_ant_in_amber.jpg
 

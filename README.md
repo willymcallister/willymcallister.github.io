@@ -1,6 +1,6 @@
 # Spinning Numbers
 
-This website started from my time at Khan Academy as the Electrical Engineering Content Fellow in 2016. - Willy McAllister
+This website had its start when I was at Khan Academy as the Electrical Engineering Content Fellow in 2016. - Willy McAllister
 
 Articles and videos in the Khan Academy style, covering electrical engineering as taught at the undergraduate level for EE majors, covering (eventually):
 
