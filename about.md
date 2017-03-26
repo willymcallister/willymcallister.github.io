@@ -6,9 +6,11 @@ author: Willy McAllister
 comments: true
 ---
 
-Welcome to Spinning Numbers. The topics covered here are what you might be taught as an undergraduate in electrical engineering. I try to talk to you as a good friend who wants to help you understand these beautiful ideas. I started learning about electricity when I was about twelve years old. My first sense of wonder came from a tube radio. This warm little box played music sent with invisible waves from miles away. Are you kidding me! How great is that! I was hooked. Here was this amazing invention that came from the minds of humans. Count me in.
+Welcome to Spinning Numbers. The topics covered here are what you might be taught as an undergraduate in electrical engineering. I try to talk to you as a good friend who wants to help you understand these beautiful ideas. 
 
-I remember how hard was to grasp the ideas of electricity. After I graduated from college and started my career, every few years I would have to go back to study the fundamentals I needed for a new project. Years into my job there were moments where I would slap my head and say, "So *that's* what that means!" I hope these videos and articles help you to have similar Aha! moments, but without the long years in between.
+I became interested electricity when I was about eight years old. My first sense of wonder came from a tube radio. This warm little box played music sent on invisible waves from miles away. Are you kidding me! How great is that! Radio is this amazing invention that came from the minds of people. Electricity is pretty much invisible, and yet people understand it. I wanted to understand, too.
+
+In college my major was electrical engineering. After graduation I started my career designing integrated circuits and computers. For each new project I would go back to my textbooks to re-study the fundamentals I needed. There were moments where I would slap my head and say, "So *that's* what that means!" I hope these videos and articles help you to have similar Aha! moments, but without the long years in between.
 
 This material has its roots in my time at [Khan Academy](https://www.khanacademy.org/science/electrical-engineering) in 2015-16 when I was the Content Fellow for Electrical Engineering. 
 

@@ -88,11 +88,11 @@ The best explanation anyone has come up with (so far) to explain electric force 
 
 ## Do we know what charge is?
 
-Great! Now we know why there is electric force. It's because objects have charge! The obvious next question: What is charge? Uhh...
+Great! Now we know why there is electric force. It's because objects have charge! So what is charge? Uhh...
 
-To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. Charge is the story we made up to make us feel like we know what's going on. And the whole "acting at a distance" thing never made anyone happy. 
+To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. Saying it is caused by charge is the story we made up to make us feel like we know what's going on. Whether charge is real or not, using this explanation leads us in the right direction for understanding electrictiy. The whole "acting at a distance" thing is so puzzling and never made anyone happy, but it is the best story we have for now. 
 
-Fortunately, we are certain this electric force exists. That's for sure. And we've come up with a good way to describe how it works in the real world (Coulomb's Law). Best of all, we've come up with all sorts of cool things we can do with it. That is what electrcial engineers do. We make useful stuff because we understand the effects of charge and electric force. Electrical engineers can't explain the "why's" any better than physicists or philosoplers, but we are especially good at building things that exploit charge and electric force.
+Fortunately, we are certain electric force exists. That's for sure. And we've come up with a good way to describe how it works in the real world (Coulomb's Law). Best of all, we've come up with all sorts of cool things we can do with it. That is what electrcial engineers do. We make useful stuff because we understand the effects of charge and electric force. Electrical engineers can't explain the "why's" any better than physicists or philosoplers, but we are especially good at building things that exploit charge and electric force.
 
 ## Ben Franklin
 
@@ -113,31 +113,44 @@ So now we have a name for this electricity stuff. What's next?
 
 Even if we can't explain *why* there is electric force, we can describe *what it does*. The first person to do a good job of this, using the concept of charge, was French physicist [Charles Augustin de Coulomb](https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb), in 1784. (30 years after Franklin, and still 113 years before the discovery of the electron in 1897 by [J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery).) So Coulomb was working with the idea of charge without knowing about electrons or protons or even atoms.
 
-Coulomb invented a very sensitive instrument to measure electric force. His *torsion balance* was based on twisting a fine wire. It works just like if you hang a tire from a tree with a rope. If you sit in the tire you will slowly twist back and forth side-to-side.
+Coulomb invented a very sensitive instrument to measure electric force, a *torsion balance*. He did a bunch of experiments putting different amounts and signs of charge on two spheres and measuring the electric force between them.
 
 <details>
 <summary>Coulomb's torsion balance image</summary>
+<p>The torsion balance is based on twisting a fine wire. It works just like if you hang a tire from a tree with a rope. If you sit in the tire it takes only a very small push to start you twisting back-and-forth. Eventually you come to a stop.</p>
 <p>Coulomb drew his torsion balance for a publication.
 <img src="/i/0-5torsion_balance1.png" alt="Coulomb's torsion balance" >
 </p>
 <p> Figure 1: Two spheres are placed inside a chamber. The slightly larger sphere on the left sits still, while the smaller sphere is mounted on an arm (P) hanging from the thin torsion wire. The cylindrical glass chamber is sealed to keep air currents from messing up the measurement. It is made of glass so you can see what's going on inside. Before closing the chamber, a charge is placed on the smaller sphere. The larger fixed sphere starts out not charged. The smaller hanging sphere swings back and forth and finally comes to rest at some position. Then charge is placed on the larger sphere by touching the post holding it up (see Figure 5), held in place by the clamp that looks like chopsticks. This causes the hanging sphere to rotate towards or away from the larger sphere, depending on the sign of both charges. The amount of twist is measured on the scale (Q) going around the chamber. The other figures are close-up views of the important bits of the main instrument.</p>
 </details>
 
-Coulomb didn't know about atoms or charged electrons, and he did not have very good control over exactly how much charge was applied to the object. So his reasoning must have been somewhat abstract. One object had "some charge" and was attracted to another object with "some charge". He was quite smart about being able to accurately create charged bodies. For example, you start with two balloons with no charge. You can tell they are uncharged because they don't attract or repel anything. Now charge up one balloon by rubbing it on your sweater. It now has some charge, let's call it $q$ charge. ($Q$ or $q$ is the variable name Coulomb used for charge, and we still do today.) Now, if you touch the charged balloon to the uncharged balloon, they will share $q$ between them. You end up with two balloons each charged the same, $q/2$. Now you can do experiments with $q/2$ balloons plus other uncharged balloons. 
+Coulomb didn't know about atoms or charged electrons, and he did not have very good control over exactly how much charge was applied to the spheres. So his reasoning had to have been somewhat abstract. One sphere had "some charge" and was attracted to the other sphere that had "some charge". He was quite smart about how he applied the charge. For example, you start with two balloons with no charge. You can tell they are uncharged because they don't attract or repel anything. Now charge up one balloon by rubbing it on your sweater. It now has some amount of charge, let's call it $q$ charge. ($Q$ or $q$ are the variable names Coulomb used for charge, and we still do today.) Now, if you touch the charged balloon to the uncharged balloon, they will share $q$ between them. You end up with two balloons each charged the same, $q/2$. Now you can do experiments with $q/2$ balloons. 
 
-Charging objects like this, Coulomb demonstrated that the force is proportional to the amount of charge on each object and is inversely proportional to the square of the distance between them $(1/r^2)$. We call that Coulomb's Law. We go into a lot more detail in [this article](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-force).
+Splitting charges like this, Coulomb demonstrated that the force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it Coulomb's Law. 
 
-The point of this story is that Coulomb accurately described the electric force without knowing about electrons, and without knowing how to measure charge other than precise ratios. What a smart guy. 
+$F \propto \dfrac{q_1\,q_2}{r^2}$
 
-Check out this fantastic 1959 educational video where Professor Eric Rogers from Princeton University demonstrates electric force. Watch how he transferrs charge from his "charging arrangement" machine to one balloon and shares that charge with another.
+The $propto$ symbol means "proportional to". We go into a lot more detail in [this article](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-force). 
+
+Check out this charming 1959 educational video where Professor Eric Rogers from Princeton University demonstrates electric force. You can see him transfer charge from his "charging arrangement" machine to one balloon and then sharing that charge with another.
 
 <div class="video-frame">
     <iframe frameBorder="0" width="{{site.data.video.width}}" height="{{site.data.video.height}}" src="https://www.youtube.com/embed/{{page.youtubeID}}{{youtubeOptions}}" allowfullscreen></iframe> 
 </div>
 
+## The coulomb - unit of charge
+
+Electrical scientists needed a way to talk about an amount of charge. The unit of charge was named the coulomb, in honoor of guess who. The first definition of charge (before anyone knew about electrons) was
+
+$1\,\text{coulomb}$ is the amount of charge that flows by in $1\,\text{second}$ when the current is $1\,\text{ampere}$.
+
+That's the same as saying $1\,\text{coulomb} = 1 A \cdot s$. $A \cdot s$ is an "amp second".
+
+I think of a coulomb of charge like it is a bucket of water or sand. I can understand how much water or sand that is without knowing that water or sand is made of atoms.
+
 ##Electron
 
-The smallest unit of charge exists in two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amount of charge is identical, with opposite signs. The mass of electron and proton differ by $1000\times$, but their charge is identical. Nature made it that way. 
+These days, we know the smallest unit of charge exists in two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amount of charge is identical, with opposite signs. The mass of electron and proton differ by $1000\times$, but their charge is identical. Nature made it that way. 
 
 A very noticeable thing about electric force is that it is large, far greater than the force of gravity. Unlike gravity, however, there are two types of electric charge. Opposite types of charge attract, and like types of charge repel. Gravity has only one type: it only attracts, never repels.
 

@@ -9,7 +9,7 @@ Welcome to Spinning Numbers! Learn about the world of electricity and electrical
 
 ## Circuit sandbox
 
-The shiny new feature of Spinning Numbers is the [**Circuit sandbox**]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
+The shiny new feature of Spinning Numbers is the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
 
 [![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
@@ -23,7 +23,7 @@ Become familiar with the most important electrical quantities: charge, current a
 
 ### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
 
-Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from?
+<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? 
 
 ## Coming soon
 

@@ -7,6 +7,10 @@
 //div {border: 1px solid blue;}
 //span {border: 1px solid red;}
 
+.sn-logo {
+    margin: 0em 0.25em;
+}
+
 blockquote {
     font-size: $base-font-size;
     letter-spacing: 0px;
@@ -62,7 +66,7 @@ fieldset {
     padding: 0;
 }
 .textfield {
-    width: 370px;
+    width: 360px;
     max-width: 100%;
     padding: 4px 0px
 }
