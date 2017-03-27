@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  Circuit sandbox page
+title:  Circuit sandbox
 author: Willy McAllister
 comments: true
 ---
