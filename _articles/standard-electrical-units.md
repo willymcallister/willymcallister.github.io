@@ -7,31 +7,40 @@ comments: true
 
 Electrical units can be described in a formal manner, and that's what we are going to do in this article. 
 
+----
+
+#### Contents
+{:.no_toc}
+
 * Will be replaced with the ToC
 {:toc}
 
+----
+
 The standard electrical units are defined in a specific order. 
 
-## Ampere is a *base* unit
+## Ampere is a base unit
 
-The *ampere* is defined first. It is called an SI *base unit*. The ampere is the only electrical unit defined by the outcome of an experiment. 
-
-## All the rest are derived units
-
-After defining the ampere, we *derive* the rest of the electrical units, starting with the *coulomb* and the *charge on an electron*. Then we continue on to the rest of our favorites, the *watt*, the *volt*, and the *ohm*. We derive these electrical units from the ampere and other SI base units (meter, kilogram, second). 
+The *ampere* is defined first. In the SI, the ampere is a *base unit*, which means the ampere is the only electrical unit defined as the outcome of an experiment. 
 
 <details>
-<summary>What is SI?</summary>
+<summary>What is the SI?</summary>
 <p><strong>SI</strong> is the International System of Units, in French "<strong>S</strong>ystème <strong>I</strong>nternational d'Unités". It is the modern form of the metric system.</p>
 </details>
 
+## All the rest are derived units
+
+After defining the ampere, we *derive* the rest of the electrical units, starting with the *coulomb* and the *charge on an electron*. Then we continue on to the rest of our favorites, the *watt*, the *volt*, and the *ohm*. We derive these additional electrical units from the SI base units (meter, kilogram, second, and ampere). 
+
 ## Ampere
 
-The definition of the SI unit of current, the **ampere**, comes from the study of magnetism. Electric currents in wires give rise to magnetic fields (Biot–Savart Law, 1820). Those magnetic fields in turn give rise to magnetic forces on the wires (Ampere's Force Law, 1825). Two parallel wires carrying a current will exert a force between them. The official SI definition of the ampere is as follows:
+The definition of the SI unit of current, the *ampere*, emerges from the study of magnetism. Electric currents in wires give rise to magnetic fields (Biot–Savart Law, 1820). Those magnetic fields in turn give rise to magnetic forces on the wires (Ampere's Force Law, 1825). Two parallel wires carrying a current exert a force on each other. This is the basis for defining the ampere. The official SI definition of the ampere is as follows:
 
-The ampere is that constant current which—if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed $1$ meter apart in vacuum—would produce between these conductors a force equal to $2 \times 10^{-7}$ newtons per meter of length.
+>The ampere is that constant current which—if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed $1$ meter apart in vacuum—would produce between these conductors a force equal to $2 \times 10^{-7}$ newtons per meter of length.
 
-The definition of the ampere comes from the outcome of an experiment you can do in a laboratory. The experiment is based on [Ampère's force law](https://en.wikipedia.org/wiki/Amp%C3%A8re%27s_force_law). To create a standard $1$ ampere, you perform some version of the following experiment. Set up  two $1$-meter-long wires in parallel, $1$ meter apart, and arrange for a way to measure the force on the wires (some kind of strain gauge). 
+This definition of the ampere means you can do an experiement in your laboratory to generate an accurate $1\,\text{ampere}$ current. The experiment is based on [Ampère's force law](https://en.wikipedia.org/wiki/Amp%C3%A8re%27s_force_law). This law tells you what the force is between two wires if you know the current, length, and spacing of the wires. 
+
+To create a standard $1$ ampere, you perform some version of the following experiment. Set up  two $1$-meter-long wires in parallel, $1$ meter apart, and arrange for a way to measure the force on the wires (some kind of strain gauge). 
 
 ![Ampere unit experiment]({{ site.baseurl }}{% link i/4ampere_unit.svg %}){:height="234px" width="420px"}
 
@@ -43,7 +52,7 @@ Apply the same current to both wires, flowing in the same direction, using adjus
 </details>
 
 ## Coulomb
-The **coulomb** is the SI unit of charge. The size of a coulomb is derived from the ampere. One coulomb is defined as the amount of charge flowing when the current is $1$ ampere.
+The *coulomb* is the SI unit of charge. The size of a coulomb is derived from the ampere. One coulomb is defined as the amount of charge flowing when the current is $1$ ampere.
 
 $1 \,\text{ampere} = 1\,\text{coulomb}/\text{second}$
 
@@ -89,13 +98,18 @@ One mole of electrons is $6.02214 \times 10^{23}$ electrons — Avogadro's Numbe
 
 ## Watt
 
-The **watt** is the unit of power. Power is the rate of energy transferred or consumed per unit of time; equivalently, power is the rate of doing work. In standard-speak, the watt is the power which in one second gives rise to energy of 1 joule. 
+The *watt* is the unit of power. Power is the rate of energy transferred or consumed in a certain amount of time; or, you can say power is the rate of doing work. In standard-speak, $1\,\text{watt}$ is the amount of power which, in one second, gives rise to an energy of $1\,\text{joule}$. 
 
 $1 \,\text{watt} = 1 \,\text{joule}/\,\text{second}$
 
+This is a real physics-y definition of the watt. When we talk about power in electrical systems, we can express watts as the product of current and voltage. 
+
+$1 \,\text{watt} = 1 \,\text{ampere} \times 1\,\text{volt}$
+
+
 ## Volt
 
-The **volt**  is the unit of electric potential difference—electric potential difference is also known as **voltage**. The size of 1 volt is officially defined as the potential difference between two points of a wire carrying a current of 1 ampere when the power dissipated in the wire is 1 watt.
+The *volt*  is the unit of electric potential difference—electric potential difference is also known as *voltage*. The size of 1 volt is officially defined as the potential difference between two points of a wire carrying a current of 1 ampere when the power dissipated in the wire is 1 watt.
 
 $1 \,\text{volt} = 1\,\text{watt} / \text{ampere}$
 
@@ -106,7 +120,7 @@ $1\,\text{volt} = 1 \,\text{joule}/\text{coulomb}$
 You can find an intuitive description of voltage in the introductory article on basic electrical quantities. Also, there is a formal derivation of the meaning of voltage in the electrostatics section.
 
 ## Ohm
-The **ohm** is the electrical unit of resistance. One ohm is defined as the resistance between two points of a conductor when 1 volt is applied and a current of 1 ampere is flowing.
+The *ohm* is the electrical unit of resistance. One ohm is defined as the resistance between two points of a conductor when 1 volt is applied and a current of 1 ampere is flowing.
 
 $1 \,\text{ohm} = 1\,\text{volt}/\text{ampere}$
 
@@ -125,9 +139,10 @@ Over the last 200 years, there have been three main systems of scientific units:
 
 **cgs** is based on measuring lengths in centimeters, mass in grams, and time in seconds. It was introduced in 1874. The cgs system is commonly used in theoretical physics. The difference between the SI and cgs systems goes much deeper than a simple scaling of the units for length and mass.
 
-There are seven SI **base units**. All other units are derived from these seven.
+There are seven SI *base units*. All other units are derived from these seven.
 
 ### SI base units
+{:.no_toc}
 
 | Name    |  Symbol      | Quantity            |
 |:--------|:------------:|---------------------|
@@ -142,21 +157,27 @@ There are seven SI **base units**. All other units are derived from these seven.
 One SI base unit comes from electricity: the ampere. The ampere has the same lofty status as the meter, kilogram, and second. It is defined as its own thing, not in terms of other units. 
 
 <details>
-<summary>ampere vs. coulomb</summary>
-<p>There was a long debate in the 1930s and 1940s within the international standards community to select the ampere or the coulomb as the SI base unit representing electricity. It could have gone either way. One or the other could be normal scale, but not both. In the end, Monsieur Ampère's unit won the day. As a result, the ampere feels like a relatively normal-sized unit, whereas the coulomb seems huge (in the sense that it takes a huge number of electrons to add up to one coulomb).</p>
+<summary>Which came first, the ampere or the coulomb?</summary>
+<p>There was a long debate in the 1930s and 40s to select between the ampere or the coulomb as the SI base unit representing electricity. It could have gone either way. One unit or the other could be normal scale, but not both. In the end, Monsieur Ampère's unit won the day. As a result, the ampere feels like a relatively normal-sized unit. On one hand, the coulomb is also normal-sized, $1\,\text{ampere}/\text{second}$, or it may seem like the coulomb is huge (in the sense that it takes a gigantic number of electrons to add up to one coulomb).</p>
+</details>
 
-<p>It is pretty easy for the power company to push 1 ampere (1 coulomb/second) through power lines to a wall plug. But, if you were somehow able to phsically isolate $1 \,\text{coulomb}$ of charge, it would create a gigantic force. Let's put a number to it by using Coulomb's Law to compute the force between two $1 \,\text{coulomb}$ charges placed $1 \,\text{meter}$ apart:</p>
+<details>
+<summary>How much charge is a coulomb?</summary>
+<p>It is pretty easy for the power company to push 1 ampere of current (1 coulomb/second) through power lines to the wall plug. </p>
 
-<p>$\vec F = K \,\dfrac{q_0\, q_1}{r^2} \,,\qquad K = 9 \times 10^9$ newton-meter/coulomb$^2$</p>
+<p>But, suppose we were somehow able to physically isolate $1 \,\text{coulomb}$ of charge. What would that be like? Well, it would create an absolutely gigantic force. Let's put a number to it. We will do that by using Coulomb's Law to compute the force between two $1 \,\text{coulomb}$ charges placed $1 \,\text{meter}$ apart. So what you have is a ball of positive charge on one side and a ball of negative charge a meter away, so there is a strong force of attraction between them.</p>
+
+<p>$\vec F = K \,\dfrac{q_0\, q_1}{r^2} \,,\qquad \text{where } K = 9 \times 10^9$ newton-meter/coulomb$^2$</p>
 
 <p>$\vec F = 9 \times 10^9 \cdot \dfrac{1 \cdot 1}{1^2} = 9 \times 10^9 \,\text{newtons}$</p>
 
-<p>This is the force you would feel if a fully-loaded oil supertanker was sitting on your head.</p>
+<p>This is the force you would feel if a fully-loaded oil supertanker was sitting on your head! What this means is that isolated whole coulombs of charge never happen in nature.</p>
 </details>
 
 ### SI derived units used in electricity
+{:.no_toc}
 
-The remaining electrical units are SI **derived** units, formed by combinations of the base units. If the ampere is the "first" electrical unit, these derived electrical units follow close behind.
+The remaining electrical units are SI *derived* units, formed by combinations of the base units. If the ampere is the "first" electrical unit, these derived electrical units follow close behind.
 
 |   Name  |  Symbol     | Quantity     | in terms of other SI units         |
 |:--------|:-----------:|--------------|:----------------------------------:|

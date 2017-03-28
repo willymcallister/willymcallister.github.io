@@ -9,9 +9,15 @@ A learner asked, "What math and science prerequisites and skills might be consid
 
 Good question! Here is a summary of the math and science preparation that will help you have the best experience learning the electrical engineering topics taught here. The links take you to the relevant topics on Khan Academy.
 
-<strong>Contents</strong>
+----
+
+#### Contents
+{:.no_toc}
+
 * Will be replaced with the ToC
 {:toc}
+
+----
 
 ## Math fundamentals
 
@@ -138,6 +144,7 @@ Engineering equations make more sense if you recognize the Greek alphabet.
 </p>
 
 ## Summary
+{:.no_toc}
 
 Welcome to the study of electrical engineering. Good luck!
 

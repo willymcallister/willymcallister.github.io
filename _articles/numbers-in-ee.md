@@ -9,8 +9,15 @@ Electrical engineers use very large and very small numbers compared to our every
 
 Engineering numbers are written in **engineering notation**, similar to scientific notation. It helps to get comfortable with engineering notation and the wide dynamic range of numbers that we engineers deal with every day.
 
+----
+
+#### Contents
+{:.no_toc}
+
 * Will be replaced with the ToC
 {:toc}
+
+----
 
 ## Scientific notation
 
@@ -66,6 +73,7 @@ Many numbers have been given names, derived from Greek or Latin. Engineers and s
 
 The most common prefixes used in engineering are listed below. Notice how the exponents are multiples of three. Using prefixes makes it shorter and easier to say or abbreviate numbers compared to: "$\times10 \text{ to the}$". 
 
+<p>
 Number | Prefix | Symbol | Note
 -|-:|:-:|-|
 $10^{\,+12}$ | tera- | $\text{ T}$ | 
@@ -77,8 +85,8 @@ $10^{\,-3}$ | milli- | $\text{ m}$ |
 $10^{\,-6}$ | micro- | $\mu$ | be careful $\mu$ (mu) doesn't turn into \"m\"
 $10^{\,-9}$ | nano- | $\text{ n}$ | 
 $10^{\,-12}$ | pico- | $\text{ p}$ |
+</p>
 
-<p>
 <details>
 <summary>How do you say "giga"?</summary>
 <p>The Latin word <em>gigas</em> gives us the number prefix <em>giga-</em>. It is also the source of the English word <em>giant</em>. In English, the letter "g" can be hard (goat) or soft (giant). So how should "giga-" be pronounced?</p>
@@ -86,9 +94,8 @@ $10^{\,-12}$ | pico- | $\text{ p}$ |
 <p>I hear the hard "g" most of the time, but the soft "g" is fine. You might come across someone saying it that way. One such person is <a href="https://www.youtube.com/embed/mjCRUvX2D0E?rel=0">Doc Brown in the movie Back to the Future</a>)</p>
 
 </details>
-</p>
 
-## Large and small numbers in engineering
+## Examples of large and small engineering numbers
 
 Here are some examples of large, medium and small numbers used in real-world electrical systems. These examples are every-day occurrences, and you can always find greater extremes. There are lots of electrical words here. Don't worry if some of them are new, you don't have to know them right now.
 
@@ -104,13 +111,10 @@ Here are some examples of large, medium and small numbers used in real-world ele
 
 **Capacitance:** The unit of capacitance is the farad $(\text F)$. If you have a capacitor storing $1 \,\text{coulomb}$ of charge and the measured voltage is $1\,\text{volt}$, then the capacitance is $1 \,\text{farad}$—$1$ farad is defined as $1$ coulomb per volt. A coulomb is a huge amount of charge, so a farad turns out to be a large awkward unit of capacitance. As a result, capacitance values you come across are tiny numbers. $100 \,\text{microfarads}$ ($100 \times 10^{-6}\,\text F$) is quite a large capacitance. If you twist two $1$-inch ($2$- centimeter) pieces of ordinary insulated hookup wire together, those wires have a capacitance around $1$ picofarad $(1 \times 10^{-12} \,\text F)$.
 
-<p>
 <details>
 <summary>What is a puff?</summary>
 <p>The unit symbol for the picofarad, $\text{pF}$, is often pronounced "puff". We engineers are often serious people, but not so serious that we don't enjoy a fun nickname.  $( 1 \,$ "puff" $ = 1\,\text{pF} = 1 \times 10^{-12} \,\text F)$</p>
-
 </details>
-</p>
 
 **Distance and Length**: Distance and length have units of meters $(\text m)$. We deal with huge distances and tiny lengths on a regular basis. Nature gives us some staggering distances—light travels $300 \times 10^{6}$ meters $(300 \,\text{million meters}$) in one second. Modern microelectronics blesses us with astoundingly small dimensions inside integrated circuits. Today's most aggressive—and expensive—integrated-circuit processes have dimensions as small as $15 \,\text{nanometers}$ $(15 \times 10^{-9}\,\text m)$. That's a man-made feature $15$ billionths of a meter across! The spacing between silicon atoms is $0.5430710 \,\text{nm}$ $(0.5430710 \times 10^{-9}\,\text{meters})$.
         

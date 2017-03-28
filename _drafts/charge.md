@@ -10,6 +10,11 @@ youtubeID: HpipBkRMm8U
 
 Electricity begins with *electric force*. We explain electric force by saying there is something called *charge*, a property of matter. 
 
+----
+
+#### Contents
+{:.no_toc}
+
 * Will be replaced with the ToC
 {:toc}
 

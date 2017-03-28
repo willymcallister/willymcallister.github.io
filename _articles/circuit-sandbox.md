@@ -11,9 +11,15 @@ Run the [Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/inde
 
 Ejecutar [Circuit sandbox](https://willymcallister.github.io/Circuit-sandbox/index-es.html) en español.
 
+----
+
+#### Contents
+{:.no_toc}
+
 * Will be replaced with the ToC
 {:toc}
 
+---- 
 
 ## Playing in the circuit sandbox
 
