@@ -17,7 +17,7 @@ This material has its roots in my time at [Khan Academy](https://www.khanacademy
 Starting in 2017, I will be adding new introductory and advanced material. This site currently has links to YouTube videos I created while at KA, the same videos you see on the KA site. The articles you find here at Spinning Numbers started at KA, and I've been improving them based on questions from  learners, and writting new articles as well. This is all a labor of love.
 
 ### Circuit sandbox
-A special feature here at Spinning Numbers is the [Circuit sandbox](/a/circuit-sandbox.html) simulator, where you can try out your own design ideas. This is something I wanted to make available on Khan Academy but the time wasn't avaialable until now. 
+A special feature here at Spinning Numbers is the [Circuit sandbox](/a/circuit-sandbox.html) simulator, where you can try out your own design ideas. The simulator is something I wanted to make available on Khan Academy but didn't have the time until now. Simulation is a critical tool for all engineers.
 
 ### Creating the site
 
