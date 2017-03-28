@@ -20,7 +20,7 @@ Where,
 * $e$ is the base of the natural logarithm, the special number 2.7182818... 
 * $j$ is the imaginary unit. $j = \sqrt{-1}\qquad$ 
     * We engineers use $j$ instead of $i$ because $i$ is used for something else (current).
-* $\omega$ is how fast the vector is spinning, it is called the *radian frequency*.
+* $\omega$ is how fast the vector is spinning, it is called the *angular frequency*.
 * The radius of the big circle is $1$.
 * $t$ is time. You know what time is.
 
