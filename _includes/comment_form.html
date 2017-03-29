@@ -3,19 +3,18 @@
   <input type="hidden" name="options[slug]" value="{{ post_slug }}">
   <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
 
- 
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
   <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.reCaptcha.secret }}">
 
   <fieldset>
   <div class="textfield">
-    <textarea class="textfield__input" name="fields[message]" type="text" rows= "2"></textarea>
+    <textarea class="textfield__input" name="fields[message]" type="text" ></textarea>
   </div>
   </fieldset>
 
   <fieldset>
     <div class="textfield">
-      <input class="textfield__input" type="text" name="fields[name]" placeholder="Your name"/>
+      <input class="textfield__input" name="fields[name]" type="text" placeholder="Your name"/>
     </div>
   </fieldset>
 
@@ -27,6 +26,9 @@
 
   <fieldset>
     <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+  </fieldset>
+
+  <fieldset>
     <button class="button">
       Submit
     </button>

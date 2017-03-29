@@ -1,10 +1,9 @@
 ---
 layout: video
-title:  "Euler's sine wave"
+title:  "Voltage"
 author: Willy McAllister
-youtubeID: 1tSrRYU6LKM
+youtubeID: k9SwNST1eW0
 comments: true
-order: 30
 --- 
 
-A sine wave emerges from Euler's Formula. (Music, no narration. Animated with d3.js.) Created by Willy McAllister.
+Voltage is a cornerstone concept in electricity. We build an intuitive mental image by noticing how voltage resembles gravity. Created by Willy McAllister.

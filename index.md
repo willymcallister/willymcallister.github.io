@@ -16,22 +16,23 @@ The shiny new feature of Spinning Numbers is the [Circuit sandbox]({{ site.baseu
 Check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). 
 
 ## Get started!
-I'm adding links to KA YouTube videos and adding/improving articles as fast as I can. The introduction sequence is ready to go.
+I'm adding links to KA YouTube videos and improving articles as fast as I can. These are ready to go.
 
-### [Introduction]({{ site.baseurl }}{% link _articles/introduction.md %})
+### [Introduction]({{ site.baseurl }}{% link _articles/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
+
+### [Circuit elements]({{ site.baseurl }}{% link _articles/topic-introduction.md %})
+Circuits are made of components: resistors, capacitors, and inductors, and sources: voltage and current. Ideal and real-world elements. We develop a precise vocabulary for talking about circuits.
+
+### [Circuits with resistors]({{ site.baseurl }}{% link _articles/topic-resistor-circuits.md %})
+Resistors in series and parallel, delta-wye networks, and the voltage divider.
 
 ### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
 
 <img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? 
 
+
 ## Coming soon
-
-#### Circuit elements
-The basic elements of circuit design are components: resistors, capacitors, and inductors, and sources: voltage and current. We talk about ideal and real-world elements. We develop a precise vocabulary for how to talk about circuits and schematics.
-
-#### Circuits with resistors
-Resistors in series and parallel, delta-wye networks, and the voltage divider.
 
 #### DC circuit analysis
 Learn Kirchhoff's Laws and the methods of circuit analysis: node voltage, mesh current, and loop current methods.

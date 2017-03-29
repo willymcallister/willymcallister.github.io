@@ -70,6 +70,9 @@ fieldset {
     max-width: 100%;
     padding: 4px 0px
 }
+textarea {
+    vertical-align: top;
+}
 .textfield__input {
     border: 1px solid rgba(0,0,0,.12);
     padding: 4px 5px;
