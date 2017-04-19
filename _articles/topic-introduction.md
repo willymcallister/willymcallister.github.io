@@ -15,9 +15,9 @@ Check out a summary of the math and science preparation that will get you ready 
 
 {% comment %}
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Charge]({{ site.baseurl }}{% link _videos/charge.md %})
+{% endcomment %}
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl }}{% link _articles/charge.md %})
-{% endcomment %}
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Current]({{ site.baseurl }}{% link _videos/current.md %})
 
