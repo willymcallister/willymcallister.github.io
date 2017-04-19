@@ -15,7 +15,7 @@
    id="svg3510"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="charge-coulomb_per_second.svg">
+   sodipodi:docname="0-5coulomb_per_second.svg">
   <defs
      id="defs3512">
     <marker
@@ -112,7 +112,7 @@
      id="layer1"
      transform="translate(-29.745301,-124.29362)">
     <g
-       transform="matrix(1.25,0,0,-1.25,4e-6,683.36221)"
+       transform="matrix(1.25,0,0,-1.25,4e-6,665.36221)"
        id="g8061">
       <g
          transform="matrix(1,0,0,0.97848925,180,356.2001)"
@@ -143,7 +143,7 @@
       </g>
     </g>
     <g
-       transform="matrix(1.25,0,0,-1.25,-44.999996,683.36221)"
+       transform="matrix(1.25,0,0,-1.25,-44.999996,665.36221)"
        id="g8100">
       <g
          transform="matrix(1,0,0,1.2,129.6,374.4)"
@@ -186,66 +186,66 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 117,215.3622 108,0"
+       d="m 117,197.3622 108,0"
        id="path3592"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 117,323.3622 108,0"
+       d="m 117,305.3622 108,0"
        id="path3594"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="249.97969"
-       y="278.95865"
+       y="260.95865"
        id="text3596"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3604"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          x="249.97969"
-         y="278.95865">1Ω</tspan></text>
+         y="260.95865">1Ω</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="47.363663"
-       y="277.53006"
+       y="259.53006"
        id="text3606"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3608"
          x="47.363663"
-         y="277.53006"
+         y="259.53006"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">1V</tspan></text>
     <path
        style="fill:#00aad4;fill-opacity:1;fill-rule:evenodd;stroke:#00aad4;stroke-width:1.35000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
-       d="m 153,215.3622 27,0"
+       d="m 153,197.3622 27,0"
        id="path3610"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="138.64285"
-       y="163.07648"
+       x="132.92857"
+       y="152.93362"
        id="text5034"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5036"
-         x="138.64285"
-         y="163.07648"
+         x="132.92857"
+         y="152.93362"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00aad4">1 amp</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="64.28244"
-       y="195.50508"
+       y="180.07651"
        id="text5038"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5040"
          x="64.28244"
-         y="195.50508"
+         y="180.07651"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00aad4">1 coulomb/second</tspan></text>
   </g>
 </svg>

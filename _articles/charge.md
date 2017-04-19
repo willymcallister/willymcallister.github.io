@@ -7,7 +7,8 @@ youtubeID: HpipBkRMm8U
 ---
 
 Electricity begins with *electric force*.  
-We explain electric force by saying matter has a property called *charge*. 
+We explain electric force by saying matter has a property called *charge*.  
+Written by Willy McAllister.
 
 ----
 
@@ -72,7 +73,7 @@ I bet you can guess what we use this word for.
 So we have these observations of nature: rubbing cats or balloons. We observe this invisible "amber force," sometimes attraction, sometimes repulsion, depending on what was rubbed. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Stranger yet, the force acts at a distance. The two objects don't have to be touching, yet we see this obvious pushing or pulling force between them. This is super weird (and super fascinating!).  
 
 <details>
-<summary>Maybe amber force the same as magnetism?</summary>
+<summary>Maybe amber force is the same as magnetism?</summary>
 <p>This rubbing-cats force seems kind of like magnetism, which has two kinds and the same <em>force at a distance</em> property. But electric force has to come from a different place. Magnetism is a property of certain kinds of rocks called lodestones (a rock that contains iron). This electric force comes from the friction between amber and cat and has nothing to do with iron.
 
 As you study electrical engineering or physics you will learn that electricity and magnetism are very closely related. When these ideas come together we merge their names and call it *electromagnetism*. 
@@ -98,7 +99,7 @@ So what is charge? Uhh...
 
 To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. We made up a story about charge to make us feel like we know what's going on. The idea of charge, real or not, leads us in the right direction for understanding electricity. 
 
-The whole "acting at a distance" thing has always been puzzling, but we don't have a better explanation. When we study electrostatics, we draw lines of force leading away from charges flowing out into nothing. We play-act that these lines are real and we stick with this theory as long as it produces great results, which it does. This is a problem for physicists work on while electrical engineers go off to build stuff.
+The whole "acting at a distance" thing has always been puzzling, but we don't have a better explanation. When we study electrostatics, we draw lines of force leading away from charges flowing out into nothing. We play-act that these lines are real and we stick with this theory as long as it produces great results, which it does. This is a problem for physicists to ponder on while electrical engineers go off to build stuff.
 
 ## Benjamin Franklin
 
@@ -163,6 +164,8 @@ An example circuit you could build would be a $1\,\text{volt}$ battery connected
 
 ![Coulomb per second]({{ site.baseurl }}{% link i/0-5coulomb_per_second.svg %}){: .centered }
 
+You can think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We actually use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
+
 <details>
 <summary>The definition of a coulomb assumes you know what an ampere is.</summary>
 <p>The ampere is defined as the current you get when $1\,\text{coulomb}$ of charge is passing by every second. These are circular definitions. To break the circle the ampere was also defined with specific conditions for an experiment. One of the original definitions of the ampere was based the current required to electroplate silver onto a surface and seeing how the weight changed over time:</p>
@@ -171,8 +174,6 @@ An example circuit you could build would be a $1\,\text{volt}$ battery connected
 
 <p>This was known as the <em>silver ampere</em>.</p>
 </details>
-
-You can think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We actually use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
 
 ## electron
 
