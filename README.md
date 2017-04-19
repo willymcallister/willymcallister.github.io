@@ -2,13 +2,11 @@
 
 This website emerges from my work at Khan Academy in 2016 where I was the Electrical Engineering Content Fellow. Articles and videos in the Khan Academy style, covering electrical engineering as taught at the undergraduate level for EE majors.
 
-The shiny new feature of Spinning Numbers that distinguishes it from [Khan Academy's EE topic](https://www.khanacademy.org/science/electrical-engineering) is this simple circuit simulator:
-
-[Circuit sandbox](a/circuit-sandbox.html)
+The shiny new feature of Spinning Numbers that distinguishes it from [Khan Academy's EE topic](https://www.khanacademy.org/science/electrical-engineering) is this simple circuit simulator: [Circuit sandbox](a/circuit-sandbox.html)
 
 The collection of articles and vidos is growing. 
 
-* Introduction to the two most important electrical quantities: current and voltage. 
+* Introduction to the most important electrical quantities: charge, current and voltage. 
 
 * A first look at engineering numbers, units, and notation. 
 

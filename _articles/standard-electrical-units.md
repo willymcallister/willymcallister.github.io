@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Electrical units can be described in a formal manner, and that's what we are going to do in this article. 
+Electrical units can be described in a formal manner. That's what we are going to do in this article. Don't try to memorize all this the first time you read it. Come back later when you want to go a little deeper into the strict definitions of electrical units. 
 
 ----
 
@@ -21,30 +21,39 @@ The standard electrical units are defined in a specific order.
 
 ## Ampere is a base unit
 
-The *ampere* is defined first. In the SI, the ampere is a *base unit*, which means the ampere is the only electrical unit defined as the outcome of an experiment. 
+The *ampere* is defined first. In the SI, the ampere is an SI *base unit*, which means the ampere is the only electrical unit defined as the outcome of an experiment. 
 
 <details>
 <summary>What is the SI?</summary>
-<p><strong>SI</strong> is the International System of Units, in French "<strong>S</strong>ystème <strong>I</strong>nternational d'Unités". It is the modern form of the metric system.</p>
+<p><strong>SI</strong> is the <a href="https://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a>, in French "<strong>S</strong>ystème <strong>I</strong>nternational d'Unités". It is the modern form of the metric system.</p>
+
+<p><em>The International System of Units (SI)</em>. Organisation Intergouvernementale De La Convention Du Mètre. 8th ed. Paris, France, 2006.
+<a href="http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf">http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf</a></p>
 </details>
 
 ## All the rest are derived units
 
-After defining the ampere, we *derive* the rest of the electrical units, starting with the *coulomb* and the *charge on an electron*. Then we continue on to the rest of our favorites, the *watt*, the *volt*, and the *ohm*. We derive these additional electrical units from the SI base units (meter, kilogram, second, and ampere). 
+After defining the ampere, we *derive* the rest of the electrical units, starting with the *coulomb* and the *charge on an electron*. Then we continue on to the rest of our favorites, the *watt*, the *volt*, and the *ohm*. We derive these additional electrical units from the SI base units (the ampere, along with the meter, kilogram, and second). 
 
 ## Ampere
 
-The definition of the SI unit of current, the *ampere*, emerges from the study of magnetism. Electric currents in wires give rise to magnetic fields (Biot–Savart Law, 1820). Those magnetic fields in turn give rise to magnetic forces on the wires (Ampere's Force Law, 1825). Two parallel wires carrying a current exert a force on each other. This is the basis for defining the ampere. The official SI definition of the ampere is as follows:
+The definition of the SI unit of current, the *ampere*, emerges from the study of magnetism.  
+
+Electric currents in wires give rise to magnetic fields ([Biot–Savart Law](https://en.wikipedia.org/wiki/Biot–Savart_law), 1820).
+
+The magnetic field from one wire causes a magnetic force on a nearby wire ([Ampère's Force Law](https://en.wikipedia.org/wiki/Ampère's_force_law), 1825). 
+
+This is the basis for defining the ampere unit. Here's the official SI definition of the ampere:
 
 >The ampere is that constant current which—if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed $1$ meter apart in vacuum—would produce between these conductors a force equal to $2 \times 10^{-7}$ newtons per meter of length.
 
-This definition of the ampere means you can do an experiement in your laboratory to generate an accurate $1\,\text{ampere}$ current. The experiment is based on [Ampère's force law](https://en.wikipedia.org/wiki/Amp%C3%A8re%27s_force_law). This law tells you what the force is between two wires if you know the current, length, and spacing of the wires. 
+This definition means you can do an experiement in your laboratory to generate an accurate $1\,\text{ampere}$ current. The experiment is based on Ampère's force law. If you know the current, length, and spacing of the wires, this law tells you what the force is between the wires. 
 
 To create a standard $1$ ampere, you perform some version of the following experiment. Set up  two $1$-meter-long wires in parallel, $1$ meter apart, and arrange for a way to measure the force on the wires (some kind of strain gauge). 
 
-![Ampere unit experiment]({{ site.baseurl }}{% link i/4ampere_unit.svg %}){:height="234px" width="420px"}
+![Ampere unit experiment]({{ site.baseurl }}{% link i/4ampere_unit.svg %}){:height="234px" width="420px"}{: .centered }
 
-Apply the same current to both wires, flowing in the same direction, using adjustable current sources. Each current creates a magnetic field around the two wires. The magnetic fields interact with the moving charged particles (electrons) in the other wire. This generates a mechanical force pushing the wires together. Adjust the currents up or down while measuring the force on a wire. When the force is $2 \times 10^{-7}$ newtons, the current is $1$ ampere, by definition. 
+Apply the same current to both wires, flowing in the same direction, using adjustable current sources. Each current creates a magnetic field around the two wires. The magnetic fields interact with the moving charged particles (electrons) in the other wire. This generates a mechanical force pulling the wires together. Adjust the currents up or down while measuring the force on a wire. When the force is $2 \times 10^{-7}$ newtons, the current is $1$ ampere, by definition. 
 
 <details>
 <summary>Why the unusual value for force?</summary>
@@ -87,7 +96,7 @@ One mole of electrons is $6.02214 \times 10^{23}$ electrons — Avogadro's Numbe
 
 <details>
 <summary>Answer</summary>
-<p>One mole of electrons corresponds to the below amount of coulombs:</p>
+<p>Divide the number of electrons in a mole by the number of electrons in a coulomb.</p>
 
 <p>$\dfrac{6.02214 \times 10^{23} \,\text{electrons} / \text{mole}}{ 6.24151 \times 10^{18} \,\text{electrons}/\text{coulomb}} = 96{,}485 \text{ coulombs/mole}$</p>
 
@@ -117,7 +126,7 @@ The volt can also be expressed in terms of energy and charge as,
 
 $1\,\text{volt} = 1 \,\text{joule}/\text{coulomb}$
 
-You can find an intuitive description of voltage in the introductory article on basic electrical quantities. Also, there is a formal derivation of the meaning of voltage in the electrostatics section.
+You can find an intuitive description of voltage in the introductory article on [basic electrical quantities](http://spinningnumbers.org/a/basic-quantities.html). Also, there is a formal derivation of the meaning of voltage at the very end of the [electrostatics section](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics) on Khan Academy.
 
 ## Ohm
 The *ohm* is the electrical unit of resistance. One ohm is defined as the resistance between two points of a conductor when 1 volt is applied and a current of 1 ampere is flowing.
@@ -194,7 +203,7 @@ The remaining electrical units are SI *derived* units, formed by combinations of
 
 
 <details>
-<summary>References</summary>
+<summary>Resources</summary>
 
 <p>"Ampère's Force Law." Wikipedia. December 4, 2015. <a href="https://en.wikipedia.org/wiki/Ampère's_force_law">https://en.wikipedia.org/wiki/Ampère's_force_law</a></p>
 

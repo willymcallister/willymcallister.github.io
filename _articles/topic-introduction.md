@@ -5,11 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-Welcome to the study of electricity and electrical engineering! In this introductory sequence you will become familiar with the most important electrical concepts: charge, current and voltage. 
+Welcome to the study of electricity and electrical engineering! In this introductory sequence you will become familiar with the most important electrical concepts: charge, current, and voltage. 
 
 You can also get your first exposure to the language we use for engineering numbers, units, and notation. 
 
-Check out a summary of the math and science preparation that will get you ready for the best experience studying electrical engineering.
+Check out the summary of the math and science preparation that will get you ready for the best experience studying electrical engineering.
 
 ----
 
@@ -17,7 +17,7 @@ Check out a summary of the math and science preparation that will get you ready 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Charge]({{ site.baseurl }}{% link _videos/charge.md %})
 {% endcomment %}
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl }}{% link _articles/charge.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl }}{% link _articles/charge.md %}) - New!
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Current]({{ site.baseurl }}{% link _videos/current.md %})
 
