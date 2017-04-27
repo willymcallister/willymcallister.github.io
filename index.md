@@ -21,7 +21,7 @@ I'm adding links to KA YouTube videos and improving articles as fast as I can. T
 ### [Introduction]({{ site.baseurl }}{% link _articles/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.
 
-### [Circuit elements]({{ site.baseurl }}{% link _articles/topic-introduction.md %})
+### [Circuit elements]({{ site.baseurl }}{% link _articles/topic-circuit-elements.md %})
 Circuits are made of components: resistors, capacitors, and inductors, and sources: voltage and current. Ideal and real-world elements. We develop a precise vocabulary for talking about circuits.
 
 ### [Circuits with resistors]({{ site.baseurl }}{% link _articles/topic-resistor-circuits.md %})

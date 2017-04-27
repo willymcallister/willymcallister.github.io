@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- https://bl.ocks.org/d3noob/402dd382a51a4f6eea487f9a35566de0  simple line graph -->
+<meta charset="utf-8">
+<style> 
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+</style>
+<body>
+
+<!-- load the d3.js library -->    	
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var data = [
+  {x: 0, y: 4},
+  {x: 1, y: 9},
+  {x: 2, y: 6},
+  {x: 4, y: 5},
+  {x: 6, y: 7},
+  {x: 7, y: 3},
+  {x: 9, y: 2}
+];
+
+// set the dimensions and margins of the graph
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// set the ranges
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
+
+var valueLine = d3.line()
+  .x(function(d) { return x(d.x); })
+  .y(function(d) { return y(d.y); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .style("border", "1px solid red")
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+  // Scale the range of the data
+  x.domain(d3.extent(data, function(d) { return d.x; }));
+  y.domain([0, d3.max(data, function(d) { return d.y; })]);
+
+  // Add the valueline path.
+  svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .attr("d", valueLine);
+
+  // Add the X Axis
+  svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+  // Add the Y Axis
+  svg.append("g")
+      .call(d3.axisLeft(y));
+
+  var dot = svg.append("circle")
+      .attr("r", 5)
+      .attr("cx", x(0))
+      .attr("cy", y(0));
+
+</script>
+</body>

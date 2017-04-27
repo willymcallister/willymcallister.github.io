@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- http://bl.ocks.org/veltman/7295691 4-quadrant plot with grid -->
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="d3styles.css">
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
+  var padding = 40;                                       // padding inside border
+
+  var 
+      xmin = -4,
+      xmax = +4,
+      ymin = -4,
+      ymax = +4,
+      scale = 30,
+      width  = (xmax - xmin) * scale,     // width of graph axes pixels
+      height = (ymax - ymin) * scale,     // height of graph axes pixels
+      xOrigin = -(xmin * scale);          // pixels
+      yOrigin = height + (ymin * scale);  // pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + 2 * padding)  //width of image
+      .attr("height", height + 2 * padding)  //height of image
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+    .append("g")  //group to build image inside of, offset by padding from border
+      .attr("transform",
+        "translate(" + padding + "," + padding + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .ticks(8)
+    .tickSizeOuter(0);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", function() {
+        return "translate(" + 0 + "," + yOrigin + ")";
+      })
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dx", ".71em")
+      .text("v")
+      .style("text-anchor", "start")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .ticks(8)
+      .tickSizeOuter(0);
+
+  var ya = svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dx", 6)
+      .attr("dy", -6)
+      .text("i(ma)")
+      .style("text-anchor", "start")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  // remove "0"s near origin
+  svgContainer.selectAll(".tick text")
+    .filter(function (d) { return d === 0;  })
+    .remove();
+
+  // Waveform - Constant current source
+  svgContainer
+    .append("line")
+      .style("stroke", "#11ACCD")
+      .style("stroke-width", "3px")
+      .attr("x1", -10)
+      .attr("y1", yScale(2))
+      .attr("x2", 250)
+      .attr("y2", yScale(2));
+  svgContainer
+    .append("text")
+      .attr("x", xScale(1))
+      .attr("y", yScale(2.2))
+      .text("i = 2")
+      .style("text-anchor", "start")
+      .style("font-size", "20px")
+      .style('fill', "#11ACCD");
+  svgContainer
+    .append("text")
+      .attr("x", xScale(2.3))
+      .attr("y", yScale(2.2))
+      .text("ma")
+      .style("text-anchor", "start")
+      .style("font-size", "20px")
+      .style("font", "20px katex_main")
+      .style('fill', "#11ACCD");
+
+</script>
+</body>
+</html>

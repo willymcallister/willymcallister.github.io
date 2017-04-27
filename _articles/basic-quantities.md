@@ -75,10 +75,11 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 
 <p>For example, the expression $dt$ means *a tiny change in time*. When you see $d$ in a ratio, like $dq/dt$, it means, "a tiny change in $q$ (charge) for each tiny change in $t$ (time)." An expression like $dq/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/derivative-introduction-ab/derivative-as-a-limit-ab/v/calculus-derivatives-1-new-hd-version">derivative</a>, and it is what you study in <a href="https://www.khanacademy.org/math/differential-calculus">Differential Calculus</a>.</p>
 
-<p>In calculus, $d$ represents a tiny amount of change, so small it becomes "infinitesimally small". That is, the amount of change is allowed to go to zero. A little farther down in this article you will see change indicated with a $\Delta$ symbol, as in $\Delta h$ is a change of height. We use $\Delta$ to indicate a large finite change, like $1$ meter or $1$ second. And we use $d$ to indicate tiny zero-sized change. </p>
+<p>In calculus, $d$ represents a small amount of change, so small it becomes "infinitesimally small". That is, the amount of change is allowed to go to zero. A little farther down in this article you will see change indicated with a $\Delta$ symbol, as in $\Delta h$ is a change of height. We use $\Delta$ to indicate a large finite change, like $1$ meter or $1$ second. And we use $d$ to indicate tiny nearly-zero-sized change. </p>
 
-<p>That's current in a nutshell.</p>
 </details>
+
+That's current in a nutshell.
 
 ### A few remarks on current
 {:.no_toc}

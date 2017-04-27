@@ -17,9 +17,9 @@ Finally, we learn about assigning labels to voltages and currents.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Ideal sources]({{ site.baseurl }}{% link _videos/ideal-sources.md %})
 
-{% comment %}
-![]({{ site.baseurl }}{% link i/article.svg %}) [Ideal elements and sources]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Ideal elements and sources]({{ site.baseurl }}{% link _articles/5ideal-elements-and-sources.md %})
 
+{% comment %}
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Real-world circuit elements]({{ site.baseurl }}{% link _articles/real-world-elements.md %})
 {% endcomment %}
 

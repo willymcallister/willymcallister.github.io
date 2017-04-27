@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- http://bl.ocks.org/veltman/7295691 4-quadrant plot with grid -->
+<head>
+<meta charset="utf-8">
+<style>
+
+.grid {
+  stroke-width: 0.5px;
+  stroke: steelblue;
+  opacity: 0.5;
+}
+
+.domain {
+  stroke-width: 3px;
+  stroke: black;
+}
+//.tick text { display: none; }
+
+svg {
+  border: 1px solid #ccc;
+}
+
+.path {
+  stroke-width: 3px;
+  stroke: steelblue;
+}
+
+text {
+  font: 12px katex_main;
+}
+
+</style>
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var margin = { top:10, right:10, bottom:40, left:40 };  // margin outside border
+  var padding = 40;                                       // padding inside border
+
+  var 
+      xmin = -1,
+      xmax = +15,
+      ymin = -3,
+      ymax = +5,
+      gridSpacing = 25,
+      scale = 50,
+      width  = (xmax - xmin) * scale,     // width of graph axes pixels
+      height = (ymax - ymin) * scale,     // height of graph axes pixels
+      xOrigin = -(xmin * scale);          // pixels
+      yOrigin = height + (ymin * scale);  // pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + 2 * padding)  //width of image
+      .attr("height", height + 2 * padding)  //height of image
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+    .append("g")  //group to build image inside of, offset by padding from border
+      .attr("transform",
+        "translate(" + padding + "," + padding + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .ticks(16);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", function() {
+        return "translate(" + 0 + "," + yOrigin + ")";
+      })
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dy", "-.71em")
+      .text("t (time)")
+      .style("text-anchor", "end")
+      .style("font-size", "16px")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .ticks(8);
+
+  svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dx", ".71em")
+      .attr("dy", "1em")
+      .text("v (voltage)")
+      .style("text-anchor", "start")
+      .style("font-size", "16px")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  // remove "0"s near origin
+  svgContainer.selectAll(".tick text")
+    .filter(function (d) { return d === 0;  })
+    .remove();
+  // remove "-1"s near origin
+  svgContainer.selectAll(".tick text")
+    .filter(function (d) { return d === -0.5;  })
+    .remove();
+
+  // Waveform
+  var amplitude = 3.0;
+  var frequency = 5;
+  var cycles = 3;
+  var nPoints = cycles * 100;
+  var data = d3.range(nPoints + 1);
+  
+  var sine = d3.line()
+    .x(function (d) 
+      { return xScale(cycles * Math.PI * (d / 100) - 1 ); })
+    .y(function (d) { 
+      return yScale(amplitude * Math.sin(cycles * Math.PI * d / 100)); 
+    });
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', sine(data))
+      .style("stroke", "steelblue")
+      .style("fill", "none");
+
+/*
+  var dot = svgContainer.append("circle")
+      .attr("r", 5)
+      .attr("cx", xScale(0))
+      .attr("cy", yScale(0));
+
+  var dot = svgContainer.append("circle")
+      .attr("r", 6)
+      .attr("cx", xOrigin)
+      .attr("cy", yOrigin);
+
+  var title = svgContainer.append("text")
+      .attr("x", width/2)
+      .attr("y", 0)
+      .text("Variable Voltage Source")
+      .style("font-size", "20px") 
+      .style("text-anchor", "middle")
+      .style("fill", "steelblue");
+  */
+
+</script>
