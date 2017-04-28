@@ -86,7 +86,7 @@ The equation for a variable voltage source is, $v = v(t)$, where $v(t)$ can be a
 
 The symbol for a variable voltage source looks like this, or some variation:
 
-![](https://ka-perseus-images.s3.amazonaws.com/dc21e4ebc5112e0851933480c9fe9bd68abad78f.svg)
+![Variable voltage source symbol]({{ site.baseurl }}{% link i/5variable_voltage_source_symbol.svg %})
 
 The squiggle inside the circle suggests a sine wave generator. You will come across different versions of this symbol for other waveform shapes.
 
@@ -97,7 +97,7 @@ The ideal mathematical abstraction of a voltage source can produce arbitrarily h
 
 The symbol for a constant current source looks like this:
 
-![](https://ka-perseus-images.s3.amazonaws.com/40c6b24b67d47ea198ae30184d2f2c4c3fb190a3.svg)
+![Constant current source symbol]({{ site.baseurl }}{% link i/5constant_current_source_symbol.svg %})
 
 The arrow indicates the direction of positive current flow.
 
@@ -115,7 +115,7 @@ where $\text I$ is a constant output current, like $i=2\,\text mA$. The voltage 
 
 The two symbols for a resistor look like this:
 
-![](https://ka-perseus-images.s3.amazonaws.com/92bdbb1ab8cfc9e3d76d8df7e40d3d8431efc55a.svg)
+![Resistor symbols]({{ site.baseurl }}{% link i/5resistor_symbols.svg %})
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -129,11 +129,20 @@ This relationship is known as **Ohm's law**. You'll use this equation *a lot* in
 
 $\text R$ is a constant of proportionality, representing the *resistance* of the resistor. We measure resistance in units of ohms, denoted by the Greek capital Omega symbol, $\Omega$.
 
-The $i$-$v$ graph for a resistor is shown below. The equation plotted is $i=v/\text R$, so the slope of the line is $1/\text R$.
+The $i$-$v$ plot for a resistor is shown below. The equation is Ohm's Law solved for $i=v/\text R$. The slope of the resistor line is $1/\text R$.
 
-[[[   INTERACTION GRAPH OF RESISTOR   ]]]
+![Resistor i vs. v plot]({{ site.baseurl }}{% link i/5resistor_i-v_plot.svg %}){: .centered }
 
-Ohm's Law can be written a number of ways. You will use all of these forms all the time. 
+<details>
+<summary>What is the resistance of this resistor?</summary>
+<p>Let's work out the resistance of the resistor shown in the graph above. We have to figure out the slope of the line. We need two points to do that. The resistor line <em>always</em> goes through the origin, so that gives us one point on the line, $(0, 0)$. </p>
+
+<p>You can pick any other point on the line to find the slope, so we'll pick an easy one in the upper right. The resistor line goes through the point $(v = 3\,\text V, i = 4\,\text{mA})$. So the slope is $4\,\text{mA}/3\,\text V$. That means $\text R$ is 1/slope or </p>
+
+<p>$\text R = \dfrac{3\,\text V}{4\,\text{mA}} = 750 \,\Omega$</p>
+</details>
+
+You can write Ohm's Law in a number of ways. You will use all of these forms all the time. 
 
 $v = i\,\text R \qquad\qquad i = \dfrac{v}{\text R} \qquad\qquad \text R = \dfrac{v}{i}$
 
@@ -252,9 +261,9 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 
 The some symbols for a capacitor look like this:
 
-![Capacitor symbols](https://ka-perseus-images.s3.amazonaws.com/6f39a31cf53ef849bdd45bdc1efa5735e18b51b6.svg)
+![Capacitor symbols]({{ site.baseurl }}{% link i/5capacitor_symbols.svg %})
 
-The version with the curved line is used for capacitors manufactured in a way that requires one terminal to have a positive voltage with respect to the other terminal. The curved line indicates the terminal that needs to be kept at the more negative voltage.
+The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
 We can flip the capacitor equation around to solve for $v$ in terms of $i$ by integrating both sides, resulting in the integral form of the capacitor $i$-$v$ equation,
 
@@ -304,9 +313,9 @@ The constant of proportionality $\text L$ is the called the *inductance*. The un
 
 The symbol for an inductor looks like this:
 
-![Inductor symbol](https://ka-perseus-images.s3.amazonaws.com/92a1931b3616c60726374ffbc18701f560f43de2.svg)
+![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %})
 
-It looks like a wire wrapped in a coil, since that is the usual way to make an inductor.
+It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
 Similar to the capacitor equation, we can write the inductor equation in integral form to get $i$ in terms of $v$. Notice the kinship between the capacitor and inductor equations. The $i$ and $v$ change places.
 

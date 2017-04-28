@@ -2,7 +2,37 @@
 <!-- http://bl.ocks.org/veltman/7295691 4-quadrant plot with grid -->
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="d3styles.css">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: none;
+    }
+
+    svg .path {
+      stroke-width: 3px;
+      /*stroke: #6495ED;       graphie blue */
+      stroke: #11ACCD;      /* KA math1     */
+      fill: none;
+    }
+
+    svg text {
+      font: 16px katex_math;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
 </head>
 
 <body>

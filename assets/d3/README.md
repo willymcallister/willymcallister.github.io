@@ -1,7 +1,8 @@
-# Spinning Numbers D3.js animations
+# Spinning Numbers D3.js animations and graphs
 
-This repository contains the code for animated images for spinningnumbers.org, created with [D3.js](http://d3js.org).
+This repository contains the code for animated images and graphs for spinningnumbers.org, created with [D3.js](http://d3js.org).
 
+## Animations
 Each animation is three files.
 
 * someanimation.js - javascript where this animation is created
@@ -29,3 +30,9 @@ The animation is inserted into the article at the point where you place
 The code surrounded by {{ }} is a special liquid syntax used by Jekyll to generate my static web pages. To insert this in a plain .html file replace the liquid syntax with your specific paths to the .js and .css files.
 
 Example article: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
+
+## Graphs
+
+Graph images created with D3 consist of a single .html file, including style specifications and javascript. An example article with D3 graphs is [Ideal  elements and sources](http://spinningnumbers.org/a/5ideal-elements-and-sources.html) 
+
+To view the .svg image, open the .html file in a browser, and the image is rendered by D3. To save the .svg image, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to extract the .svg image to its own tab, and then save it to my _images folder.
