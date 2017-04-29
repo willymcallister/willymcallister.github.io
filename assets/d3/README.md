@@ -33,6 +33,6 @@ Example article: [What's with the name?](http://spinningnumbers.org/a/whats-with
 
 ## Graphs
 
-Graph images created with D3 consist of a single .html file, including style specifications and javascript. An example article with D3 graphs is [Ideal  elements and sources](http://spinningnumbers.org/a/5ideal-elements-and-sources.html) 
+Graph images created with D3 consist of a single .html file, including style specifications and javascript. An example article with D3 graphs is [Ideal  elements and sources](http://spinningnumbers.org/a/5ideal-elements-and-sources.html). 
 
 To view the .svg image, open the .html file in a browser, and the image is rendered by D3. To save the .svg image, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to extract the .svg image to its own tab, and then save it to my _images folder.

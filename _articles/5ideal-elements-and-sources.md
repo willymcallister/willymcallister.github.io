@@ -131,7 +131,7 @@ $\text R$ is a constant of proportionality, representing the *resistance* of the
 
 The $i$-$v$ plot for a resistor is shown below. The equation is Ohm's Law solved for $i=v/\text R$. The slope of the resistor line is $1/\text R$.
 
-![Resistor i vs. v plot]({{ site.baseurl }}{% link i/5resistor_i-v_plot.svg %}){: .centered }
+![Resistor i vs. v plot]({{ site.baseurl }}{% link i/5resistor_i-v_plot.svg %}){: .centered }  
 
 <details>
 <summary>What is the resistance of this resistor?</summary>

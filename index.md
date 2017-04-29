@@ -27,9 +27,9 @@ Circuits are made of components: resistors, capacitors, and inductors, and sourc
 ### [Circuits with resistors]({{ site.baseurl }}{% link _articles/topic-resistor-circuits.md %})
 Resistors in series and parallel, delta-wye networks, and the voltage divider.
 
-### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
+### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) <img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> 
 
-<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? 
+Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? 
 
 
 ## Coming soon
