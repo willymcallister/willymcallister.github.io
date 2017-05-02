@@ -46,7 +46,7 @@ Later on we will learn about a few more components, like diodes and transistors.
 
 The two common symbols for constant voltage sources look like this:
 
-![Voltage source symbols]({{ site.baseurl }}{% link i/5voltage_source_symbols.svg %})
+![Voltage source symbols]({{ site.baseurl }}{% link i/5voltage_source_symbols.svg %}){: .centered }
 
 The symbol on the left is used for a battery. The longer horizontal line on the battery symbol represents the positive terminal of the battery, and the shorter horizontal line represents the negative terminal. The circle symbol represents some other source of voltage, often a power supply. It is a good practice to draw the $+$ and $-$ signs inside the circle instead of on the outside.
 
@@ -86,7 +86,7 @@ The equation for a variable voltage source is, $v = v(t)$, where $v(t)$ can be a
 
 The symbol for a variable voltage source looks like this, or some variation:
 
-![Variable voltage source symbol]({{ site.baseurl }}{% link i/5variable_voltage_source_symbol.svg %})
+![Variable voltage source symbol]({{ site.baseurl }}{% link i/5variable_voltage_source_symbol.svg %}){: .centered }
 
 The squiggle inside the circle suggests a sine wave generator. You will come across different versions of this symbol for other waveform shapes.
 
@@ -97,7 +97,7 @@ The ideal mathematical abstraction of a voltage source can produce arbitrarily h
 
 The symbol for a constant current source looks like this:
 
-![Constant current source symbol]({{ site.baseurl }}{% link i/5constant_current_source_symbol.svg %})
+![Constant current source symbol]({{ site.baseurl }}{% link i/5constant_current_source_symbol.svg %}){: .centered }
 
 The arrow indicates the direction of positive current flow.
 
@@ -115,7 +115,7 @@ where $\text I$ is a constant output current, like $i=2\,\text mA$. The voltage 
 
 The two symbols for a resistor look like this:
 
-![Resistor symbols]({{ site.baseurl }}{% link i/5resistor_symbols.svg %})
+![Resistor symbols]({{ site.baseurl }}{% link i/5resistor_symbols.svg %}){: .centered }
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -149,7 +149,7 @@ $v = i\,\text R \qquad\qquad i = \dfrac{v}{\text R} \qquad\qquad \text R = \dfra
 Ohm's Law is worth committing to memory.
 
 <details>
-<summary>remembering Ohm's Law</summary>
+<summary>Remembering Ohm's Law</summary>
 <p>The way I memorized Ohm's Law was to commit one form to memory. I repeated </p>
 
 <p>$e = i\text R \qquad e \, i\,\text R \qquad e \, i\,\text R \qquad e\, i\,\text R \quad...$ </p>
@@ -160,7 +160,7 @@ Ohm's Law is worth committing to memory.
 
 <p>This graphic is another way to remember Ohm's Law,</p>
 
-<img src="https://ka-perseus-images.s3.amazonaws.com/e1c2bc762dbe5b37a3089eea32a7ec53a9acb05d.svg">
+<img src="/i/5ohms_law_circle.svg">
 
 <p>Put your finger or thumb over the variable you want $(v$, $i$, or $\text R)$, and read the equation. For example, to find $\text R$, cover up $\text R$ and read $v/i$. To find $v$, cover $v$ and read  $i\,\text R$.</p>
 
@@ -261,7 +261,7 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 
 The some symbols for a capacitor look like this:
 
-![Capacitor symbols]({{ site.baseurl }}{% link i/5capacitor_symbols.svg %})
+![Capacitor symbols]({{ site.baseurl }}{% link i/5capacitor_symbols.svg %}){: .centered }
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -313,7 +313,7 @@ The constant of proportionality $\text L$ is the called the *inductance*. The un
 
 The symbol for an inductor looks like this:
 
-![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %})
+![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 

@@ -14,10 +14,12 @@ Spinning Numbers refers to a type of number engineers use to represent signals. 
 <link rel="stylesheet" type="text/css" href="{{ "/assets/d3/spinningnumbers-d3.css" | relative_url }}" />
 </p>
 
-We write a spinning number in this rather intimidating mathematical notation, $\Large e^{j\omega t}$. 
+We write a spinning number in this rather intimidating mathematical notation,
+
+$\Large e^{j\omega t}$ 
 
 Where,
-* $e$ is the base of the natural logarithm, the special number 2.7182818... 
+* $e$ is the base of the natural logarithm, the special number $e = 2.7182818\ldots$  
 * $j$ is the imaginary unit. $j = \sqrt{-1}\qquad$ 
     * We engineers use $j$ instead of $i$ because $i$ is used for something else (current).
 * $\omega$ is how fast the vector is spinning, it is called the *angular frequency*.
