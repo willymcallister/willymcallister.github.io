@@ -51,9 +51,9 @@ Resistors have some degree of temperature sensitivity. Sometimes we build thermo
 
 ## Real-world resistors
 
-When making real resistors, the goal is to create a component that comes as close as possible to performing like the ideal resistor equation, 
+When making real resistors, the goal is to create a component that comes as close as possible to performing like Ohm's Law, the ideal resistor equation, 
 
-Ohm's Law, $v = i\,\text R$
+$v = i\,\text R$
 
 ### Resistor properties
 

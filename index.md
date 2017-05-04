@@ -13,7 +13,7 @@ The shiny new feature of Spinning Numbers is the [Circuit sandbox]({{ site.baseu
 
 [![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Check out [Circuit sandbox in English](https://willymcallister.github.io/Circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/Circuit-sandbox/index-es.html). 
+Check out [Circuit sandbox in English](https://willymcallister.github.io/circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](https://willymcallister.github.io/circuit-sandbox/index-es.html). 
 
 ## Get started!
 I'm adding links to KA YouTube videos and improving articles as fast as I can. These are ready to go.
