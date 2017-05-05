@@ -249,7 +249,7 @@ $i = \text C \, \dfrac{dv}\{dt}$
 This equation captures the $i$-$v$ relationship for capacitors. It also tells us that electric circuits can change as time passes.
 
 <details>
-<summary>What does the <em>d</em> mean?</summary>
+<summary>What does the $d$ mean?</summary>
 
 <p>The $d$ in ${dq}/{dt}$ is notation from calculus, it means <em>differential</em>.   
 You can think of $d$ as meaning "a tiny change in ..." </p>

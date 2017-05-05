@@ -39,9 +39,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.6978528"
-     inkscape:cx="107.93114"
-     inkscape:cy="98.6625"
+     inkscape:zoom="9.6045058"
+     inkscape:cx="308.94726"
+     inkscape:cy="132.70527"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -233,7 +233,7 @@
          inkscape:connector-curvature="0"
          style="fill:#e84d39" /></g></g><g
      id="path7423"
-     transform="translate(-218.06886,-20.449035)"><path
+     transform="matrix(0.93770022,0.34744539,-0.34744539,0.93770022,-86.870619,-181.62343)"><path
        class="st1"
        d="m 516.6,280.6 0,8.2 c 0,0.3 0.4,0.5 0.6,0.3 l 4.1,-4.1 c 0.1,-0.1 0.1,-0.4 0,-0.5 l -4.1,-4.1 c -0.2,-0.3 -0.6,0 -0.6,0.2 z"
        id="path5224"
@@ -245,7 +245,7 @@
        inkscape:connector-curvature="0"
        style="fill:#e84d39" /></g><g
      id="path6508"
-     transform="translate(-218.06886,-20.449035)"><path
+     transform="matrix(0.95480085,-0.29724627,0.29724627,0.95480085,-255.40938,142.19445)"><path
        class="st1"
        d="m 516,198 0,8.2 c 0,0.3 0.4,0.5 0.6,0.3 l 4.1,-4.1 c 0.1,-0.1 0.1,-0.4 0,-0.5 l -4.1,-4.1 c -0.2,-0.3 -0.6,-0.2 -0.6,0.2 z"
        id="path5229"
@@ -257,7 +257,7 @@
        inkscape:connector-curvature="0"
        style="fill:#e84d39" /></g><g
      id="path7409"
-     transform="translate(-218.06886,-20.449035)"><path
+     transform="matrix(0.98568735,-0.16858365,0.16858365,0.98568735,-246.92878,70.341124)"><path
        class="st1"
        d="m 521.6,209.1 0,8.2 c 0,0.3 0.4,0.5 0.6,0.3 l 4.1,-4.1 c 0.1,-0.1 0.1,-0.4 0,-0.5 l -4.1,-4.1 c -0.2,-0.3 -0.6,0 -0.6,0.2 z"
        id="path5234"
@@ -317,7 +317,7 @@
        inkscape:connector-curvature="0"
        style="fill:#e84d39" /></g><g
      id="path7419"
-     transform="translate(-218.06886,-20.449035)"><path
+     transform="translate(-217.23592,-20.449035)"><path
        class="st1"
        d="m 526.6,259.5 0,8.2 c 0,0.3 0.4,0.5 0.6,0.3 l 4.1,-4.1 c 0.1,-0.1 0.1,-0.4 0,-0.5 l -4.1,-4.1 c -0.2,-0.3 -0.6,-0.2 -0.6,0.2 z"
        id="path5259"
@@ -329,7 +329,9 @@
        inkscape:connector-curvature="0"
        style="fill:#e84d39" /></g><g
      id="path7421"
-     transform="translate(-218.06886,-20.449035)"><path
+     transform="matrix(0.97962944,0.20081375,-0.20081375,0.97962944,-151.06763,-118.8905)"
+     inkscape:transform-center-x="1.2494136"
+     inkscape:transform-center-y="-0.83294239"><path
        class="st1"
        d="m 521.6,269.1 0,8.2 c 0,0.3 0.4,0.5 0.6,0.3 l 4.1,-4.1 c 0.1,-0.1 0.1,-0.4 0,-0.5 l -4.1,-4.1 c -0.2,-0.3 -0.6,0 -0.6,0.2 z"
        id="path5264"
