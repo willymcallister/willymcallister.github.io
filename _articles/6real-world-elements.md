@@ -144,71 +144,17 @@ When you make an inductor the goal is to come as close as possible to the ideal 
 
 $v = \text L \,\dfrac{di}{dt}$
 
-The theory of how an inductor actually works is actually pretty complicated. To learn more about inductors and their magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. Here is a simplified description of how an inductor does its thing. 
+The theory of how an inductor actually works is actually pretty complicated. Refer to [Inductor - how it works](http://spinningnumbers.org/a/6-3inductor_how_it_works.html) for an informal description of how an inductor does its thing. To learn more about inductors and their magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
 
-Any wire carrying a current generates a magnetic field in the surrounding region. The red lines in these images represent the magnetic field. Here's a single straight wire carrying a current, $i$. The magnetic field lines flow in circles around the wire. 
+Real-world inductors come in lots of shapes and sizes.
 
-![](/i/6inductor_straight_wire.svg){: .centered }
-
-If we wrap the wire into a coil shape, the magnetic field becomes concentrated on the inside of the coil.
-
-![](/i/6inductor_coil.svg){: .centered }
-
-Each individual section of wire still has the same field lines as in the straight wire example. In the center of the coil, all the field lines from all the neighboring loops point in the same direction. See if you can work this out in your mind.
-
-![](/i/6inductor_coil2.svg){: .centered }
-
-<details>
-<summary>Magnetic lines and the Right Hand Rule</summary>
-<p>You may notice in these magnetic field diagrams that both the current and the magnetic lines have arrowheads. The direction of these arrows is not arbitrary, it is a property of nature. If you know one of the arrows, you can figure out the other by using the handy Right Hand Rule. If you peek into a classroom where the professor is teaching Electricity and Magnetism, you will see the professor and all the students using this rule. </p>
-
-<p>Right Hand Rule <img src="/i/6right_hand_rule.svg" alt="Right Hand Rule"></p>
-
-<p>Using your RIGHT hand, wrap your fingers around the wire with your thumb pointing in the direction of current (conventional current flow, not electron flow). The magnetic field line arrows will be flowing out of your fingertips.
-</p>
-<p>See if you can use the Right Hand Rule to confirm that the arrows in the previous coil images are correct.</p>
-
-<p>Pro tip: If you are right-handed, put your pencil down when you use the rule. The most common error is to try the Right Hand Rule with your left hand, which gives you the wrong answer.</p>
-
-</details>
-
-### Inductor $i$-$v$ equation
-
-So where does the inductor $i$-$v$ equation come from? 
-
-* A constant current (moving charge) creates a nearby constant magnetic field.
-
-* A *changing* current (also moving charge) creates a *changing* magnetic field.
-* A *changing* magnetic field creates a constant electric field in the nearby wire (a voltage).
-* A constant electric field (a voltage) causes charge to move (a current). 
-
-Can you see the circular argument in the last three statements? Changing current makes a changing magnetic field. A changing magnetic field makes a voltage, and therefore a current. 
-
-This is the key trick played by an inductor: 
-
-A *changing* current creates a *changing* magnetic field, which creates a *constant* electric field (a constant voltage). We write this mathematically with a familiar-looking equation: 
-
-$v = \text L \dfrac{di}{dt}$
-
-You will often hear people say the current in an inductor "wants" to keep flowing. This comes from the back-and-forth dance between current and magnetic field. They have a reinforcing effect on each other. The current and magnetic field *induce* each other. This is where the inductor gets its name.
+![Air-core inductor](/i/6air-core-inductor.jpg) ![Toroidal ferrite-core inductor](/i/6ferrite_core_inductor.png){:height="160px"} ![Inductor on form](/i/6inductor_on_form.jpg){:height="160px"}
 
 ### Parasitics
 
-Real inductors differ from the ideal equation in a few important ways. Since inductors are made of long wires, they often have a significant parasitic resistance. This extra resistance is the main parasitic of an inductor.
+Real inductors differ from the ideal equation in one important way. Since inductors are made of long wires, they often have a significant parasitic resistance. This extra resistance is the main parasitic of an inductor.
 
 The other unavoidable feature of inductors is they take up a lot of space. The magnetic field exists in the volume of space around and inside the inductor. The coil of wire has to be big enough to surround a large amount of magnetic field to achieve a significant inductance. It is rare to see an inductor designed into an integrated circuit. 
-
-### Analogy to mass
-
-Inductance is analogous to mass in a mechanical system. Magnetic energy is stored in an inductor in the same sense that kinetic energy is stored in a moving mass. An inductor reminds me of a rotating flywheel (a wheel with a heavy rim). You can't bring a spinning flywheel to an instantaneous standstill. If you spin a bicycle wheel really fast and then grab it with your hand, you get quite a jolt of energy and the wheel takes a little while to stop. It seems like the wheel "wants" to keep going. Likewise, the current in an inductor "wants" to keep going and does not stop instantaneously.
-
-### Increasing inductance
-
-To get higher inductance (higher $\text{L}$), inductors are made by winding wire in a coil. Putting different kinds of magnetic material inside the coil can intensify the magnetic field even more. This toroidal inductor (*toroid* means donut-shaped) is wound around a core of iron/ceramic material called *ferrite*. (You can't see the ferrite core, it is covered by the copper wire.)
-
-![](https://ka-perseus-images.s3.amazonaws.com/f4a0082fa2acce037c5c146a1e5dcfb3b74a65f0.png){: .centered }
-
-The ferrite core concentrates and intensifies the magnetic field more than just an air core, which increases the value of inductance, $\text{L}$.
 
 We finish up with this astonishing image of an air-core inductor. This large copper coil was part of a wireless telegraph station built in New Jersey, USA in 1912. It could send a message 4000 miles (6400 km), all the way across the Atlantic Ocean to Germany. Wow. Needless to say, most inductors are *much* smaller.
 
@@ -216,16 +162,17 @@ We finish up with this astonishing image of an air-core inductor. This large cop
 
 ----
 
-#### Photo credits
-{:.no_toc}
+<details>
+<summary>Photo credits</summary>
 
->Resistor assortment photo from [pixabay](https://pixabay.com/en/electronics-components-resistors-759228/), [(CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
-330 ohm resistor photo from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Resistor.jpg), [(CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0)  
-2260 ohm resistor photo from [Wikipedia Commons](https://en.wikipedia.org/wiki/Electronic_color_code#/media/File:2.26_kilo-ohm_precision_resistor.jpg),   [(CC0)](http://creativecommons.org/publicdomain/zero/1.0/deed.en)  
-SMT resistor photo from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1_kiloohm_SMD_0603_resistor.jpg), ([CC BY-SA 2.0](http://creativecommons.org/licenses/by-sa/2.0/))  
-Capacitor photo from [Wikimedia Commons](https://en.wikipedia.org/wiki/Capacitor),   ([CC BY-SA 2.0](http://creativecommons.org/licenses/by-sa/2.0/))   
-Surface mount capacitor photo from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SMD_capacitor.jpg), [{CC BY-SA 3.0}](http://creativecommons.org/licenses/by-sa/3.0)  
-SMD capacitor construction image from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:MLCC-Construction.png), [(CC0)](http://creativecommons.org/publicdomain/zero/1.0/deed.en)  
-Inductor with B-field image derived from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Basic_Inductor_with_B-field.svg), public domain  
-Inductor photo from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Basic_Inductor_with_B-field.svg), public domain  
-Large air-core coil from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Large_antenna_loading_coil.jpg), public domain
+<p><a href="https://pixabay.com/en/electronics-components-resistors-759228/">Resistor assortment photo</a><br>
+<a href="https://commons.wikimedia.org/wiki/File:Resistor.jpg">330 ohm resistor</a><br>  
+<a href="https://en.wikipedia.org/wiki/Electronic_color_code#/media/File:2.26_kilo-ohm_precision_resistor.jpg">2260 ohm precision resistor</a><br>  
+<a href="https://commons.wikimedia.org/wiki/File:1_kiloohm_SMD_0603_resistor.jpg">SMT resistor</a>  <br>
+<a href="https://en.wikipedia.org/wiki/Capacitor">Capacitor</a><br> 
+<a href="https://commons.wikimedia.org/wiki/File:SMD_capacitor.jpg">SMT capacitor</a><br>  
+<a href="https://commons.wikimedia.org/wiki/File:MLCC-Construction.png">SMT capacitor construction</a><br>  
+<a href="https://www.indiamart.com/proddetail/air-core-inductors-4126873333.html">Air-core inductor</a><br>  
+<a href="https://en.wikipedia.org/wiki/Electrical_resonance#/media/File:RLC_series.png">Toroidal inductor wound on ferrite core</a><br>  
+<a href="http://howtotestelectroniccomponents.com/wp-content/uploads/2013/08/inductor-300x201.jpg">Inductor wound on form</a><br>  
+<a href="https://commons.wikimedia.org/wiki/File:Large_antenna_loading_coil.jpg">Humongous air-core coil</a><br>

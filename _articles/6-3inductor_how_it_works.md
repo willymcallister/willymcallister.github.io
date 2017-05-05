@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-When you make an inductor your goal is to create a component that behaves like the ideal inductor equation, 
+When you make an inductor the goal is to create a component that behaves like the ideal inductor equation, 
 
 $v = \text L \,\dfrac{di}{dt}$
 
