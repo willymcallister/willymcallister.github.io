@@ -5,11 +5,11 @@ author: Willy McAllister
 comments: false
 ---
 
-Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. This work began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. 
+Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. The concepts are taught at the level of an undergraduate EE major just starting out. These videos and articles began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. 
 
 ## Circuit sandbox
 
-The shiny new feature of Spinning Numbers is the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
+The shiny new feature of Spinning Numbers is a simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
 
 [![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 

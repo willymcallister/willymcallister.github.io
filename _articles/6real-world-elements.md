@@ -55,6 +55,12 @@ When making real resistors, the goal is to create a component that comes as clos
 
 $v = i\,\text R$
 
+The two symbols for a resistor look like this:
+
+![Resistor symbols]({{ site.baseurl }}{% link i/5resistor_symbols.svg %}){: .centered }
+
+In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
+
 ### Resistor properties
 
 The resistance value of a resistor depends on two things: *what it is made of*, and *how it is shaped*. The bulk material properties determine how difficult it is for electrons flow through. You could think of it as how often electrons crash into the atoms in the material as they try to flow by. This property of a bulk material is called *resistivity*. You might also hear about *conductivity*, which is just the inverse of resistivity.
@@ -106,7 +112,13 @@ When making real capacitors, the goal is to create a component that comes as clo
 
 $i = \text C \,\dfrac{dv}{dt}$
 
-We make capacitors from two metal surfaces placed close to each other but not touching. Between the plates there can be air or any other kind of insulating material. The capacitance of the structure depends the area of the plates, the distance between the plates (the thickness of the insulator), and the physical properties of the insulating material.
+The some symbols for a capacitor look like this:
+
+![Capacitor symbols]({{ site.baseurl }}{% link i/5capacitor_symbols.svg %}){: .centered }
+
+The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
+
+We make capacitors from two metal surfaces placed close to each other but not touching. Between the plates there can be air or some other kind of insulating material. The capacitance of the structure depends the area of the plates, the distance between the plates (the thickness of the insulator), and the physical properties of the insulating material.
 
 Learn more about capacitors and how they work in the [capacitors and capacitance](https://www.khanacademy.org/science/physics/circuits-topic/circuits-with-capacitors/v/capacitors-and-capacitance) section in Khan Academy Physics.  
 
@@ -143,6 +155,12 @@ Here's a peek inside a surface-mount capacitor. It is a stack of many layers of 
 When you make an inductor the goal is to come as close as possible to the ideal inductor equation, 
 
 $v = \text L \,\dfrac{di}{dt}$
+
+The symbol for an inductor looks like this:
+
+![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered }
+
+It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
 The theory of how an inductor actually works is actually pretty complicated. Refer to [Inductor - how it works](http://spinningnumbers.org/a/6-3inductor_how_it_works.html) for an informal description of how an inductor does its thing. To learn more about inductors and their magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
 

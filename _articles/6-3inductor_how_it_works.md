@@ -114,6 +114,12 @@ Each individual little section of wire still has the same field lines as in the 
 
 See if you can use the Right Hand Rule to confirm that the magnetic field line arrows in the coil images are correct.
 
+The symbol for an inductor looks like this:
+
+![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered }
+
+It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
+
 ### Increasing inductance even more
 
 You can get even higher inductance (higher $\text{L}$) by putting magnetic material inside the coil to intensify the magnetic field even more. This toroidal inductor (*toroid* means donut-shaped) is wound around a core of iron/ceramic material called *ferrite*. (You can't see the ferrite core, it is covered by the copper wire.)
