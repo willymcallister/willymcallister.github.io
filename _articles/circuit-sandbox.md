@@ -7,9 +7,9 @@ comments: true
 
 A simulator for experimenting with circuits.
 
-Run the [Circuit sandbox](https://willymcallister.github.io/circuit-sandbox/index.html) in English.
+Run the [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English.
 
-Ejecutar [Circuit sandbox](https://willymcallister.github.io/circuit-sandbox/index-es.html) en español.
+Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
 ----
 
@@ -76,7 +76,7 @@ If you have a touch device (tablet or smartphone):
 
 <div class="highlighter-rouge">
 <pre class="highlight">
-<code>https://willymcallister.github.io/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]</code>
+<code>http://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]</code>
 </pre>
 </div>
 </details>
