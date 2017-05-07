@@ -7,16 +7,16 @@ comments: false
 
 Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. The concepts are taught at the level of an undergraduate EE major just starting out. These videos and articles began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. 
 
-## Circuit sandbox
+### Circuit sandbox
 
 The shiny new feature of Spinning Numbers is a simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). 
 
 [![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: .centered }{:height="200px"}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Check out [Circuit sandbox in English](http://spinningnumbers.org/circuit-sandbox/index.html) or you can try [Circuit sandbox en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
+Check out [Circuit sandbox in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [Circuit sandbox en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
 
 ## Get started!
-I'm adding links to KA YouTube videos and improving articles as fast as I can. These are ready to go.
+I'm adding links to KA YouTube videos and making articles better as fast as I can. These are ready to go.
 
 ### [Introduction]({{ site.baseurl }}{% link _articles/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current and voltage. Get a first look at engineering numbers, units, and notation. Read a summary of the math and science preparation that will help you have the best experience studying electrical engineering.

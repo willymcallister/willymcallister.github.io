@@ -27,7 +27,7 @@ Written by Willy McAllister.
 
 * There are two types of charge. Benjamin Franklin gave us the names for charge, Plus and Minus. The same (like) charges repel each other, and different (unlike) charges attract each other.
 
-* Charles Augustin de Coulomb worked out how the electric force behaves. He showed the electric force is proportional to the product of the two charges $(q_1, q_2)$, and inversely proportional to the square of the distance between the charges. This is called Coulomb's Law.
+* Charles Augustin de Coulomb worked out how the electric force behaves. He showed the electric force is proportional to the product of the two charges $(q_1, q_2)$, and inversely proportional to the square of the distance between the charges. This is called [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law).
 
     $F_e \propto \dfrac{q_1 \, q_2}{r^2}$
 
@@ -136,7 +136,7 @@ Coulomb invented a very sensitive instrument to measure electric force, the *tor
 <p>Coulomb did not have very good control over exactly how much charge was applied to the spheres, but he did have good control of ratios of charge. One sphere had "some charge" and was attracted to the other sphere that had "some charge". He was quite smart about how he applied the charge. For example, start with no charge on the two spheres. You can tell they are uncharged because they don't attract or repel anything. Now put some charge on one sphere. It now has some amount of charge, let's call it $q$. ($Q$ or $q$ are the variable names Coulomb used for charge, and we still use them today.) If you touch the charged sphere to the uncharged sphere, they will share $q$ evenly between them. You don't know what the charge is precisely, but you know they are both charged the same, both with a charge of $q/2$. Can you think of a way to charge a sphere with $q/4$?</p>
 </details>
 
-Coulomb demonstrated that the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it Coulomb's Law. 
+Coulomb demonstrated that the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law). 
 
 $F \propto \dfrac{q_1\,q_2}{r^2}$
 
@@ -212,9 +212,16 @@ Franklin and Coulomb gave us the terminology and equation that describes the eff
 
 Charge can be measured either in terms of coulombs or by counting electron charges. Pick the method that suits the discussion. 
 
-### Credits
-{:.no_toc}
+Now that you have the concept of charge, move on to explore [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law) and [Electric Force](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-force).
 
-Photo: [Electric eel](https://commons.wikimedia.org/wiki/File:Electric-Eel-03.jpg)  
-Photo: [Ant in amber](https://commons.wikimedia.org/wiki/File:An_ant_in_amber.jpg)  
-Video: [Princeton PSSC Coulomb's Law](https://archive.org/details/coulombs_law)
+---- 
+
+<details>
+<summary>Photo credits</summary>
+
+<p>[Electric eel](https://commons.wikimedia.org/wiki/File:Electric-Eel-03.jpg) </p> 
+
+<p>[Ant in amber](https://commons.wikimedia.org/wiki/File:An_ant_in_amber.jpg)  </p>
+
+<p>[Princeton PSSC Coulomb's Law](https://archive.org/details/coulombs_law)</p>
+</details>
