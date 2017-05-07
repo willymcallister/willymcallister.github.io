@@ -5,6 +5,8 @@ author: Willy McAllister
 comments: false
 ---
 
+New.
+
 Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. The concepts are taught at the level of an undergraduate EE major just starting out. These videos and articles began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. 
 
 ## Circuit sandbox
