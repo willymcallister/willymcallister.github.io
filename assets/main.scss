@@ -4,8 +4,8 @@
 
 @import "minima";
 
-//div {border: 1px solid blue;}
-//span {border: 1px solid red;}
+//div {border: 1px solid blue;}     //debug
+//span {border: 1px solid red;}     //debug
 
 .sn-logo {
     margin: 0em 0.25em;
@@ -22,6 +22,11 @@ blockquote {
 .centered {
     display: block;
     margin: auto;
+}
+.caption {
+    color: $grey-color;
+    font-style: normal;
+    font-size: $small-font-size;
 }
 table {
     border: 1px solid $grey-color-light;

@@ -34,16 +34,16 @@ Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats
 
 ## Coming soon
 
-#### DC circuit analysis
+### DC circuit analysis
 Learn Kirchhoff's Laws and the methods of circuit analysis: node voltage, mesh current, and loop current methods.
 
-#### Natural and forced response
+### Natural and forced response
 Circuits with capacitors and inductors change with time. The natural and forced response of RC, RL, and RLC circuits. This is where we start to use calculus.
 
-#### AC circuit analysis
+### AC circuit analysis
 If we limit ourselves to signals shaped like sines, a whole method of AC analysis emerges. We'll be able to figure out what happens in circuits with *any* signal. AC methods are far simpler than solving a differential equation from scratch.
 
-#### Tools
+### Tools
 
 [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) is a simulator for modeling circuits.
 

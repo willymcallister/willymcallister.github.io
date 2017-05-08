@@ -2,7 +2,7 @@
 layout: article
 title:  "Charge"
 author: Willy McAllister
-comments: false
+comments: true
 youtubeID: HpipBkRMm8U
 ---
 

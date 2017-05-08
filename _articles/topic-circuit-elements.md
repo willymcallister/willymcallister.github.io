@@ -21,10 +21,14 @@ Finally, we learn about assigning labels to voltages and currents.
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Real-world circuit elements]({{ site.baseurl }}{% link _articles/6real-world-elements.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor - how it works]({{ site.baseurl }}{% link _articles/6-3inductor_how_it_works.md %})
-
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Circuit terminology]({{ site.baseurl }}{% link _videos/circuit-terminology.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Circuit terminology]({{ site.baseurl }}{% link _articles/7circuit-terminology.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Schematic equivalence]({{ site.baseurl }}{% link _articles/7-5schematic-equivalence.md %}) 
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Sign convention for passive components]({{ site.baseurl }}{% link _videos/passive-sign-convention.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Labeling voltages]({{ site.baseurl }}{% link _videos/labeling-voltages.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor - how it works]({{ site.baseurl }}{% link _articles/6-3inductor_how_it_works.md %})
