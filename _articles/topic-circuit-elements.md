@@ -29,6 +29,8 @@ Finally, we learn about assigning labels to voltages and currents.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Sign convention for passive components]({{ site.baseurl }}{% link _videos/passive-sign-convention.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Sign convention for passive components]({{ site.baseurl }}{% link _articles/8sign-convention.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Labeling voltages]({{ site.baseurl }}{% link _videos/labeling-voltages.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor - how it works]({{ site.baseurl }}{% link _articles/6-3inductor_how_it_works.md %})

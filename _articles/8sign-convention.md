@@ -180,7 +180,7 @@ The voltage polarity tells us the top of the resistor is $2\,\text V$ above the 
 
 What would happen if we labeled the resistor with the other sign convention?  The diagram below shows the same resistor with the same voltage polarity, but the current arrow points *out* of the positive terminal, so the sign convention for passive components is not being used.
 
-![](https://ka-perseus-images.s3.amazonaws.com/f00de133e48415c6a1d99db448fc85cc8095f90f.svg){: .centered }{: height="200px"}
+![](https://ka-perseus-images.s3.amazonaws.com/f00de133e48415c6a1d99db448fc85cc8095f90f.svg){: .centered }{: height="180px"}
 
 Apply Ohm's Law, exactly the same as Example 1,
 
@@ -194,7 +194,7 @@ Lesson: it's a lot less error prone to use the sign convention for passive compo
 
 ### Example 2
 
-![](https://ka-perseus-images.s3.amazonaws.com/7523be60cbf48f66c7be633c0d24fce327c4add3.svg){: .centered }{: height="200px"}
+![](https://ka-perseus-images.s3.amazonaws.com/7523be60cbf48f66c7be633c0d24fce327c4add3.svg){: .centered }{: height="180px"}
 
 This $10\,\text k\Omega$ resistor has been labeled with the sign convention for passive components, just like Example 1: The voltage polarity has $+$ at the top and the blue current arrow points down. This time, the current is specified instead of the voltage. The value of the current is $-20 \,\mu\text A$. This may look a little odd, to show $-20 \,\mu\text A$ current flowing in the direction of the arrow. But let's wait and see what happens.
 
@@ -233,7 +233,7 @@ $P = i \, v$
 
 The sign convention has an impact on how we think about power. Power can be generated or it can be dissipated. When we use the sign convention, power *dissipation* ends up with a positive sign, and power *generation* ends up getting a negative sign.
 
-![Voltage source driving resistor](/i/8voltage-source-and-resistor1.svg){: .centered }
+![Voltage source driving resistor](/i/8voltage-source-and-resistor1.svg){: .centered }{: height="200px"}
 
 $i = v/\text R = 2\,\text V / 250 \,\Omega = 8 \,\text{ma}$
 
@@ -244,7 +244,7 @@ $P_\text{resistor} = 8\,\text{ma} \times 2\,\text V = +16\,\text{mw}$
 
 What happens when we apply the *passive* sign convention to an *active* circuit element?
 
-![Voltage source with passive sign convention](/i/8voltage-source-and-resistor2.svg){: .centered }
+![Voltage source with passive sign convention](/i/8voltage-source-and-resistor2.svg){: .centered }{: height="200px"}
 
 We know the voltage source will provide $8\,\text{ma}$ coming out of its top terminal (Ohm's Law for the resistor tells us that). With the current arrow pointing in the direction shown, the current is expressed as $i = -8\,\text{ma}$. You may think this is another minus sign we want to avoid, but this one is okay to have around, since it doesn't trigger a new version of Ohm's Law.
 

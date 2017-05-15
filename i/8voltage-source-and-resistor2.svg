@@ -14,11 +14,11 @@
    x="0px"
    y="0px"
    width="218.09421"
-   height="117.02227"
-   viewBox="0 0 218.09421 117.02227"
+   height="171.02226"
+   viewBox="0 0 218.09421 171.02226"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="8voltage-source.svg"><metadata
+   sodipodi:docname="8voltage-source-and-resistor2.svg"><metadata
      id="metadata21504"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -36,20 +36,20 @@
      id="namedview21500"
      showgrid="true"
      inkscape:zoom="3.9051579"
-     inkscape:cx="130.59651"
-     inkscape:cy="58.530482"
+     inkscape:cx="67.602898"
+     inkscape:cy="85.53048"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="Layer_1"
-     fit-margin-top="3"
+     fit-margin-top="30"
      fit-margin-left="3"
      fit-margin-right="3"
-     fit-margin-bottom="3"><inkscape:grid
+     fit-margin-bottom="30"><inkscape:grid
        type="xygrid"
        id="grid22259"
        originx="-59.629016"
-       originy="-2.3039929" /></sodipodi:namedview><style
+       originy="24.696004" /></sodipodi:namedview><style
      type="text/css"
      id="style21456">
 	.st0{fill:none;stroke:#1FAB54;stroke-width:6;stroke-miterlimit:10;}
@@ -132,15 +132,15 @@
 	.st77{fill:none;stroke:#BABEC2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style><path
      style="fill:#cccccc;fill-rule:evenodd;stroke:#b3b3b3;stroke-width:1.177338;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 30.452189,113.43354 171.833631,0"
+     d="m 30.452189,140.43354 171.833631,0"
      id="path22263"
      inkscape:connector-curvature="0" /><path
      style="fill:#cccccc;fill-rule:evenodd;stroke:#b3b3b3;stroke-width:1.07118905px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 30.370979,4.6284112 172.116901,0"
+     d="m 30.370979,31.628411 172.116901,0"
      id="path22261"
      inkscape:connector-curvature="0" /><g
      id="g21470"
-     transform="translate(-59.629021,-0.37372932)"><g
+     transform="translate(-59.629021,26.626271)"><g
        id="g21472"><path
          class="st62"
          d="m 120,95.7 c 3.7,-6.4 6.2,-18.8 6.2,-33 0,-10.2 -1.3,-19.5 -3.4,-26.3"
@@ -157,28 +157,28 @@
      id="text21490"
      style="font-size:24px;font-family:KaTeX_Main-Regular;fill:#e07d10"
      x="45.03508"
-     y="23.29307">+</text>
+     y="50.293068">+</text>
 <text
      class="st2 st65 st58"
      id="text21492"
      style="font-size:13.99199963px;font-family:KaTeX_Main-Regular;fill:#e07d10"
      x="54.371078"
-     y="88.884872" />
+     y="115.88487" />
 <text
      class="st2 st65 st58"
      id="text21494"
      style="font-size:24px;font-family:KaTeX_Main-Regular;fill:#e07d10"
      x="45.03508"
-     y="109.69347">−</text>
+     y="136.69347">−</text>
 <text
      class="st2 st65 st58"
      id="text21496"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
      sodipodi:linespacing="125%"
      x="75.557281"
-     y="71.293076">2V</text>
+     y="98.293076">2V</text>
 <g
-     transform="matrix(1.25,0,0,-1.25,-59.609731,472.97084)"
+     transform="matrix(1.25,0,0,-1.25,-59.609731,499.97084)"
      id="g8121"><g
        transform="matrix(1,0,0,1.05,72,374.4)"
        id="g6653"><path
@@ -215,7 +215,7 @@
            style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            id="path6671"
            inkscape:connector-curvature="0" /></g></g></g><g
-     transform="matrix(1.25,0,0,-1.25,-22.405601,473.13942)"
+     transform="matrix(1.25,0,0,-1.25,-22.405601,500.13942)"
      id="g8061"
      style="fill:none;stroke:#cccccc"><g
        transform="matrix(1,0,0,0.97848925,180,356.2001)"
@@ -239,14 +239,14 @@
          id="path6755"
          style="fill:none;stroke:#cccccc;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          d="M 0,0 0,18.6" /></g></g><text
-     y="21.980743"
+     y="48.980743"
      x="1.125"
      class="st17 st57 st58"
      id="text21458"
      style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Italic';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      sodipodi:linespacing="125%">i</text>
 <g
-     transform="translate(-58.875011,-1.6857573)"
+     transform="translate(-58.875011,25.314243)"
      id="g21460"><g
        id="g21462"><line
          class="st55"
@@ -262,7 +262,7 @@
            d="m 78,35.7 c 1.3,-3.4 3.4,-7.6 5.7,-10.3 L 78,27.5 72.3,25.4 c 2.3,2.6 4.4,6.9 5.7,10.3 z"
            id="path21468"
            style="fill:#11accd" /></g></g></g><text
-     y="70.873276"
+     y="97.873276"
      x="123.17112"
      class="st65 st58 st66"
      id="text21498"
@@ -271,5 +271,5 @@
        sodipodi:role="line"
        id="tspan22046"
        x="123.17112"
-       y="70.873276">250Ω</tspan></text>
+       y="97.873276">250Ω</tspan></text>
 </svg>
