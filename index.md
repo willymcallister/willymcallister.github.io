@@ -31,6 +31,9 @@ Resistors in series and parallel, delta-wye networks, and the voltage divider.
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? 
 
+### [FAQ]({{ site.baseurl }}{% link _articles/topic-FAQ.md %})
+Interesting questions and answers about electrical topics that need a home.
+
 
 ## Coming soon
 
