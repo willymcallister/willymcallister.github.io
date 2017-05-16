@@ -30,9 +30,9 @@ This rule allows us to directly apply Ohm's Law $(v = i\,\text R)$ to a resistor
 
 *Active* elements generate power. Voltage sources and current sources are active elements. 
 
-When you use this rule with passive components, the power $(P = i \times v)$ has a positive sign. So a positive sign associated with power *dissipation*.
+For passive elements, the power $(P = i \times v)$ has a positive sign. So a positive sign associated with power *dissipation*.
 
-If you use this rule with active elements, the power calculation comes out with a negative sign. So a negative sign is associated with power *generation*.
+For active elements, the power calculation comes out with a negative sign. So a negative sign is associated with power *generation*.
 
 ----
 
@@ -82,11 +82,13 @@ We know the value of $\text R$ is always positive.
 
 Suppose we connect a real battery to a real resistor and touch voltmeter probes to the resistor. The red voltmeter probe defines which resistor terminal is the $+$ polarity of the voltage we read, while the black probe defines the $-$ voltage polarity. 
 
-The following diagram shows two versions of the experiment. The voltmeter touches the resistor the same way in both versions. The thing that's different is the current direction. On the left, the current flows down from the top. On the right, the current flows up from the bottom.
+The following diagram shows two versions of the experiment. The voltmeter touches the resistor the same way in both versions. The thing that's different is the current direction.  
+$a.$ The current flows down from the top.  
+$b.$ the current flows up from the bottom.
 
 ![Resistors and voltmeters](/i/8resistor-voltmeter0.svg)
-<p class="caption">Left: The voltmeter reads $+1.0\,\text V$, so the top end of the resistor is $+1.0\,\text V$ above the bottom terminal. $\goldD v = +1\,\text V$.<br>
-Right: The voltmeter reads $-1.0\,\text V$, so it is telling us the red probe is $1.0\,\text V$ <em>below</em> the black probe. $\goldD v = -1\,\text V$.</p>
+<p class="caption">$a.$ The voltmeter reads $+1.0\,\text V$, so the red probe is $1.0\,\text V$ <em>above</em> the black probe. $\goldD v = +1\,\text V$.<br>
+$b.\,$ The voltmeter reads $-1.0\,\text V$, so the red probe is $1.0\,\text V$ <em>below</em> the black probe. $\goldD v = -1\,\text V$.</p>
 
 We reversed the current direction and the voltage sign change from $+$ to $-$. That makes sense.
 
@@ -118,17 +120,17 @@ Let $\text R = 100 \Omega$, and $i = +10\,\text{ma}$. **Find $v$ using Ohm's Law
 
 $v = i\,\text R = +10\,\text{ma} \times 100\,\Omega = +1\,\text V$. 
 
-THAT'S NOT RIGHT! The voltmeter reads $-1\,\text V$.
+But that isn't what the voltmeter says! The voltmeter reads $-1\,\text V$.
 
-This labeling convention forces us to learn and use a version of Ohm's Law with a minus sign. $v = -i\,\text R$. Any time we see a current arrow going into the negative side of a resistor, we have to use this version of Ohm's Law.
+This labeling convention forces us to learn what to do when the current arrow is in this direction. We have to adapt Ohm's Law by including a minus sign, $v = -i\,\text R$. Any time we see a current arrow going into the negative side of a resistor, we have to use this version of Ohm's Law. 
 
 $v = -i\,\text R = -10\,\text{ma} \times 100\,\Omega = -1\,\text V$.
 
-Now the answer comes out matching the voltmeter. You may think there is something seriously broken here, but there's not. If we wanted to, we could learn this version of Ohm's Law and learn to recognize when we need the minus sign. 
+Now the answer comes out matching the voltmeter. 
 
-But that little minus sign is a source of a lot of silly errors in circuit analysis. So what do engineers do to eliminate this potential error? We try very hard not to label components this way. We are disciplined and point the current arrow into the plus sign whenever possible, and a whole lot of potential errors simply vanish.
+You may think there is something seriously broken here, but there's not. If we wanted to, we could check every resistor in the circuit to see what which way the current arrow points and add a minus sign when needed. That is a big mental load we can avoid.
 
-So what do we do?
+That little minus sign could be a source of a lot of silly errors in circuit analysis. So what do engineers do? We try very hard not to label components this way. We discipline ourselves to point the current arrow into the plus sign whenever possible. A whole lot of potential errors simply vanish.
 
 >Point the current arrow into the positive voltage polarity.
 
@@ -142,9 +144,11 @@ We apply this convention to all passive components, like this:
 
 ![Sign convention for I and V polarity](https://ka-perseus-images.s3.amazonaws.com/05dde709db5ebf61d2dbf4085b1e617672f7cd56.svg){: .centered }{: height="180px"}
 
+This labeling convention helps you get the right answer when analyzing a circuit.
+
 <details>
     <summary>What does <em>passive</em> mean?</summary>
-    <p>The term <em>passive</em> describes components that dissipate or temporarily store power, like resistors, inductors, and capacitors. The opposite of passive is <em>active</em>. Batteries and current sources generate power, and are called <em>active</em> elements.
+    <p>The term <em>passive</em> describes elements that dissipate or temporarily store power, like resistors, inductors, and capacitors. The opposite of passive is <em>active</em>. Batteries and current sources generate power, and are called <em>active</em> elements.
     </p>
 </details>
 <details>
@@ -196,7 +200,7 @@ Lesson: it's a lot less error prone to use the sign convention for passive compo
 
 ![](https://ka-perseus-images.s3.amazonaws.com/7523be60cbf48f66c7be633c0d24fce327c4add3.svg){: .centered }{: height="180px"}
 
-This $10\,\text k\Omega$ resistor has been labeled with the sign convention for passive components, just like Example 1: The voltage polarity has $+$ at the top and the blue current arrow points down. This time, the current is specified instead of the voltage. The value of the current is $-20 \,\mu\text A$. This may look a little odd, to show $-20 \,\mu\text A$ current flowing in the direction of the arrow. But let's wait and see what happens.
+This $10\,\text k\Omega$ resistor has been labeled with the sign convention for passive components, just like Example 1: The voltage polarity has $+$ at the top and the blue current arrow points down. This time, the current is specified instead of the voltage. The value of the current is $-20 \,\mu\text A$. This may look a little odd, to show $-20 \,\mu\text A$ current flowing in the direction of the arrow. But let's see what happens.
 
 **What is the voltage, $v$?**
 
@@ -214,7 +218,7 @@ The voltage came out with a minus sign, meaning the terminal with the $+$ voltag
 
 ## Exceptions
 
-You will run into cases every now and then where you can't or don't want to use the sign convention for passive components. In those cases, the current arrow will be pointing into the negative terminal of the element. When this happens, you don't have to freak out, but your spidey sense should be tingling. You can deal with this the same way we did in Example 1x where we included a $-$ sign in Ohm's Law. 
+You will run into cases every now and then where you can't or don't want to use the sign convention for passive components. In those cases, the current arrow will be pointing into the negative terminal of the element. When this happens, you don't need to freak out, but your spidey sense should be tingling. You deal with this the same way we did in Example 1x where we included a $-$ sign in Ohm's Law. 
 
 This happened to me as I wrote the article about [RC Natural Response](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/ee-rc-natural-response), in the Formal Derivation section.
 
@@ -252,7 +256,7 @@ However, something interesting happens when we compute the power for the voltage
 
 $P_\text{voltage source} = -8\,\text{ma} \times 2\,\text V = -16\,\text{mw}$
 
-The power is negative! That's one of the side effects of using the sign convention for passive components on active elements like voltage sources. It's not a bad thing. If you are carefully tracking power in a system power budget, you compute all the positive power dissipated by passive components and balance that against all the negative power from active (power generating) components. Everything should add up to zero.
+The power is negative! That's one of the side effects of using the sign convention for passive components on active elements like voltage sources. It's not a bad thing. If you are carefully tracking power in a system power budget, you compute all the positive power dissipated by passive elements and balance that against all the negative power from active (power generating) elements. Everything should add up to zero.
 
 <details>
     <summary>What the heck is negative power?</summary>
@@ -261,7 +265,7 @@ The power is negative! That's one of the side effects of using the sign conventi
 </details>
 <details>
     <summary>What is negative power good for?</summary>
-    <p>The idea of negative power is not a bad thing. If you are creating a power budget for a complicated system, you compute all the positive power dissipated by passive components and balance that against all the negative power from active (power generating) components. Everything should add up to zero.</p>
+    <p>The idea of negative power is not a bad thing. If you are creating a power budget for a complicated system, you compute all the positive power dissipated by passive elements and balance that against all the negative power from active (power generating) elements. Everything should add up to zero.</p>
 </details>
 
 ----
@@ -272,16 +276,14 @@ The *sign convention for passive components* says:
 
 >The current arrow points into positive voltage terminal of the element. 
 
-With this sign convention we directly apply Ohm's Law $(v = i\,\text R)$ to resistors. You never need an extra minus sign.
+With this sign convention we directly apply Ohm's Law $(v = i\,\text R)$ to resistors.
+
+If you ever see the sign convention being violated, it should grab your attention and remind you to include a minus sign in Ohm's Law.
 
 *Passive* elements dissipate or store power. Resistors, capacitors, and inductors are passive elements, as are diodes and transistors.
 
 *Active* elements generate power. Voltage sources and current sources are  active elements. 
 
-When you use this sign convention on passive components, the power $(P = i \times v)$ has a positive sign. So a positive sign on power is associated with power *dissipation*.
+When you use this sign convention on passive elements, the power $(P = i \times v)$ has a positive sign. So a positive sign on power is associated with power *dissipation*.
 
 If you use this sign convention on an active element, the power calculation comes out with a negative sign. So a negative sign on power is associated with power *generation*.
-
-This labeling convention is not just a good idea, helps you get the right answer when analyzing a circuit.
-
-----

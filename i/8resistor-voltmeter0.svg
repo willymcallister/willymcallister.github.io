@@ -18,7 +18,7 @@
    viewBox="0 0 542.55036 282.36121"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="8resistors-voltmeter.svg"><metadata
+   sodipodi:docname="8resistor-voltmeter0.svg"><metadata
      id="metadata11848"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -252,9 +252,9 @@
      inkscape:window-height="725"
      id="namedview11844"
      showgrid="true"
-     inkscape:zoom="1.475189"
-     inkscape:cx="307.66522"
-     inkscape:cy="141.18061"
+     inkscape:zoom="1.5040079"
+     inkscape:cx="211.10262"
+     inkscape:cy="141.1806"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -648,7 +648,7 @@
        sodipodi:role="line"
        id="tspan17938"
        x="300.05038"
-       y="248.49997"></tspan></text>
+       y="248.49997" /></text>
 <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.00000381px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -698,4 +698,28 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        x="166.98947"
        y="8.9162378">100 Ω</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-style:italic;font-weight:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'KaTeX_Main, Italic';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     x="13.722484"
+     y="33.597607"
+     id="text12767-7-8-7-9"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan12769-5-5-5-4"
+       x="13.722484"
+       y="33.597607"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Italic';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;">a.</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-style:italic;font-weight:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:'KaTeX_Main, Italic';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;"
+     x="333.72247"
+     y="35.597607"
+     id="text12767-7-8-7-9-2"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan12769-5-5-5-4-8"
+       x="333.72247"
+       y="35.597607"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Italic';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;">b.</tspan></text>
 </svg>
