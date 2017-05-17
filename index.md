@@ -15,6 +15,10 @@ The shiny new feature of Spinning Numbers is a simulator, the [Circuit sandbox](
 
 Check out [Circuit sandbox in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [Circuit sandbox en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
 
+## New
+
+[New articles and videos]({{ site.baseurl }}{% link _articles/topic-new.md %}) - New to spinningnumbers.org, (not on Khan Academy).
+
 ## Get started!
 I'm adding links to KA YouTube videos and making articles better as fast as I can. These are ready to go.
 

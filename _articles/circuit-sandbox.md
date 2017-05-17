@@ -7,7 +7,7 @@ comments: true
 
 A simulator for experimenting with circuits.
 
-Run the [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English.
+Run the [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
