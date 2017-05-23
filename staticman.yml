@@ -14,7 +14,7 @@ comments:
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted. The origin is sent as part of the `options` object
   # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
-  allowedOrigins: ["spinningnumbers.org"]
+  allowedOrigins: ["localhost", "spinningnumbers.org"]
 
   # (*) REQUIRED
   #
@@ -56,17 +56,18 @@ comments:
   # with Mailgun, which you can get for free at http://mailgun.com.
   notifications:
     # Enable notifications
-    enabled: false
+    enabled: true
 
     # (!) ENCRYPTED
     #
     # Mailgun API key
-    #apiKey: "1q2w3e4r"
+    apiKey: "WQ1XRFlolM6kZnQorsQn+IilznPTaUIOwvJ37Q5hNfXj9O6AZp4yANxciyosYabANYZF5Py8NZ5mB7R5Kkgg7/dum+Rb4KkMx/0Ny9/3g9D83/p7MpAdvkGywR4cQg4RCxfjzHLiW3EF+15gLwZYMHmn2vFiScpQpxm1tvgCi/E=
+"
 
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    #domain: "4r3e2w1q"
+    domain: "cfDHHwwF7f4lCTzvPkPfmebKMESn9Z0X0X4G5y2COM44tAbcDTw4DIK3DGE+Pviy1tdMBKis0m7bjQYcMlXcMRr++wIX4qhurvPghi/jNo0NtiLDR1w9/NAxCBLmbgSEQpWUMeOI3KNtL5dQbqDVheOIbsPi3DTCddpIJrY2Rkc="
 
   # (*) REQUIRED
   #

@@ -17,7 +17,7 @@ Check out [Circuit sandbox in English](http://spinningnumbers.org/circuit-sandbo
 
 ## New
 
-[New articles and videos]({{ site.baseurl }}{% link _articles/topic-new.md %}) - New to spinningnumbers.org, (not on Khan Academy).
+[New articles and videos]({{ site.baseurl }}{% link _articles/topic-new.md %}) on spinningnumbers.org that don't appear on Khan Academy.
 
 ## Get started!
 I'm adding links to KA YouTube videos and making articles better as fast as I can. These are ready to go.

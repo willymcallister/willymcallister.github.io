@@ -67,7 +67,7 @@ hr {
 
 ////// comment form //////
 
-input, select, textarea, button {
+input, select, textarea, label, button {
     @extend body;
 }
 fieldset {
@@ -77,7 +77,7 @@ fieldset {
 .textfield {
     width: 360px;
     max-width: 100%;
-    padding: 4px 0px
+    padding: 0.5rem 0;
 }
 textarea {
     vertical-align: top;
@@ -86,6 +86,9 @@ textarea {
     border: 1px solid rgba(0,0,0,.12);
     padding: 4px 5px;
     width: 100%;
+}
+.notify-me, .g-recaptcha {
+    padding: 0.5rem 0;
 }
 .button {
     background: rgba(158,158,158,.2);
