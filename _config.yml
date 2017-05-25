@@ -39,7 +39,7 @@ exclude:
 google_analytics: UA-91424157-1
 
 # Staticman comments
-staticmanUrl: https://api.staticman.net/v2/entry/willymcallister/spinningnumbers/master/comments
+staticmanUrl: https://api.staticman.net/v2/entry/willymcallister/willymcallister.github.io/master/comments
 
 # reCAPTCHA keys
 reCaptcha:
