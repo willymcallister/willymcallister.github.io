@@ -72,7 +72,7 @@ $1 \,\text{coulomb} = 1\,\text{ampere} \cdot \,\text{second}$
 
 ## Electron charge
 
-In 1897, J.J. Thompson proved the existence of the electron. Twelve years later, starting in 1909, Robert Millikan performed his oil drop experiments to establish the charge of the electron.
+In 1897, J.J. Thomson proved the existence of the electron. Twelve years later, starting in 1909, Robert Millikan performed his oil drop experiments to establish the charge of the electron.
 
 The charge on an electron can be expressed as $e^- = -1.602176565 \times 10^{-19} \,\text {coulomb}$.
 
