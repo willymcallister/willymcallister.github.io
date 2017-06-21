@@ -150,7 +150,7 @@ Check out this marvelous 1959 educational video with Professor Eric Rogers from 
 </div>
 </p>
 
-## coulomb - the unit of charge
+## The coulomb - the unit of charge
 
 Early electrical scientists needed a way to talk about amounts of charge. Since they didn't know about electrons and protons they couldn't define amounts of charge based on those particles. So charge was first defined based on a certain current flowing in a circuit. 
 
@@ -175,7 +175,7 @@ You can think of a coulomb as a bucket of charge, like a bucket of water. You ca
 <p>This was known as the <em>silver ampere</em>.</p>
 </details>
 
-## electron
+## The electron
 
 The electron was discovered in 1892 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). We now know the smallest charged objects are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amounts of charge on the electron and proton are identical, with opposite signs. The mass of electron is $1000\times$ less than a proton, but the charge of the two particles is identical. Nature made it that way. 
 
@@ -185,7 +185,7 @@ The variable name we use for the charge of an electron is $e^-$, with the $^-$ w
 
 We use the expression $e^-$ for the charge on an electron, and sometimes to indicate an electron itself. The context of the discussion will tell you which.
 
-## $e^-$ is another way to measure charge
+## Measuring charge with $e^-$ 
 
 Now that we know about electrons, we have a second way to think about an amount of charge. In addition to coulombs, we can measure charge in terms of number of electron charges. Think of charge as a bucket of sand, where each grain of sand is an electron charge, $e^-$. This is a useful way to talk about charge at the atomic level, where there are not so many grains of sand and each one matters. 
 
