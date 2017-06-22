@@ -7,22 +7,18 @@
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
     <p> Questions and comments</p>
-
-      {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
-    
-      {% for comment in comments reversed %}
-        {% assign index       = forloop.index %}
-        {% assign r           = comment.replying_to %}
-        {% assign replying_to = r | to_integer %}
-        {% assign email       = comment.email %}
-        {% assign name        = comment.name %}
-        {% assign url         = comment.url %}
-        {% assign date        = comment.date %}
-        {% assign message     = comment.message %}
-
-        {% include comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
-
-      {% endfor %}
+    {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %} 
+    {% for comment in comments reversed %}
+      {% assign index       = forloop.index %}
+      {% assign r           = comment.replying_to %}
+      {% assign replying_to = r | to_integer %}
+      {% assign email       = comment.email %}
+      {% assign name        = comment.name %}
+      {% assign url         = comment.url %}
+      {% assign date        = comment.date %}
+      {% assign message     = comment.message %}
+      {% include comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
+    {% endfor %}
     </div>
   {% endif %}
 </section>

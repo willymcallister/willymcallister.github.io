@@ -10,16 +10,16 @@
 
     $.ajax({
       type: $(this).attr('method'),
-      url: $(this).attr('action'),
+      url:  $(this).attr('action'),
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        showModal('Comment submitted', 'Thanks! Refresh the window to see your comment.');
+        showModal('Comment submitted', 'Thanks! Refresh the window in a minute to see your comment.');
         $(form).removeClass('form--loading');
       },
       error: function (err) {
         console.log(err);
-        showModal('Error', 'Sorry, there was an error when the ting was submitted!');
+        showModal('Error', 'Sorry, there was an error when your comment was submitted!');
         $(form).removeClass('form--loading');
       }
     });
@@ -38,9 +38,10 @@
   }
 })(jQuery);
 
-// Staticman comment replies
+// Staticman comment replies, from https://github.com/mmistakes/made-mistakes-jekyll
 // modified from Wordpress https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js
 // Released under the GNU General Public License - https://wordpress.org/about/gpl/
+// addComment.moveForm is called from comment.html when the comment button is clicked.
 var addComment = {
   moveForm: function( commId, parentId, respondId, postId ) {
     var div, element, style, cssHidden,
