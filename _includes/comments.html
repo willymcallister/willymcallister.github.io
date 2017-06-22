@@ -8,7 +8,7 @@
     <div class="comments__existing">
     <p> Questions and comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %} 
-    {% for comment in comments reversed %}
+    {% for comment in comments %}
       {% assign index       = forloop.index %}
       {% assign r           = comment.replying_to %}
       {% assign replying_to = r | to_integer %}
