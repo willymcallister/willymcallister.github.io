@@ -1,4 +1,4 @@
-<section class="comments"> 
+<section class="comments">
   <div id="respond" class="comment__new">
     Comment
     {% include comment_form.html %}
@@ -8,6 +8,7 @@
     <div class="comments__existing">
     <p> Questions and comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
+    {{ comments | inspect }}
     {% for comment in comments %}
       {% assign index       = forloop.index %}
       {% assign r           = comment.replying_to %}
