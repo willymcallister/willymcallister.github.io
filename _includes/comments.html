@@ -4,6 +4,11 @@
     {% include comment_form.html %}
   </div>
 
+  {% assign fruits = "orange,apple,peach" | split: ',' %}
+  {% for fruit in fruits %}
+    {{ fruit }}
+  {% endfor %}
+
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
     <p> Questions and comments</p>
