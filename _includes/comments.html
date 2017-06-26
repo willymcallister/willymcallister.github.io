@@ -9,6 +9,10 @@
     <p> Questions and comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     {{ comments | inspect }}
+
+    <p>comments reversed</p>
+    {{ comments | reverse | inspect }}
+
     <p>All comments and replies x</p>
     {{ site.data.comments[post_slug]}}
 
