@@ -7,11 +7,13 @@
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
     <p> Questions and comments</p>
+    <p>main comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     {{ comments | inspect }}
 
-    <p>comments reversed</p>
-    {{ comments | reverse | inspect }}
+    <p>comments sorted by date</p>
+    {% assign comments_date = comments | sort: 'date' %}
+    {{ comments_date | inspect }}
 
     <p>All comments and replies x</p>
     {{ site.data.comments[post_slug]}}
