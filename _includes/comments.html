@@ -7,13 +7,8 @@
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
     <p> Questions and comments</p>
-    <p>extract main comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
-    {{ comments | inspect }}
-
-    <p>main comments sorted</p>
     {% assign comments_date = comments | sort: 'date' %}
-    {{ comments_date | inspect }}
 
     {% for comment in comments_date %}
       {% assign index       = forloop.index %}
