@@ -4,16 +4,13 @@
     {% include comment_form.html %}
   </div>
 
-  {% assign fruits = "orange,apple,peach" | split: ',' %}
-  {% for fruit in fruits %}
-    {{ fruit }}
-  {% endfor %}
-
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
     <p> Questions and comments</p>
-    {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" | reverse %}
+    {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     {{ comments | inspect }}
+    <p>All comments and replies x</p>
+    {{ site.data.comments[post_slug]}}
 
     {% for comment in comments %}
       {% assign index       = forloop.index %}

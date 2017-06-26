@@ -27,7 +27,7 @@ The animation is inserted into the article at the point where you place
 <div id="someanimationID"></div>
 ```
 
-The code surrounded by {{ }} is a special liquid syntax used by Jekyll to generate my static web pages. To insert this in a plain .html file replace the liquid syntax with your specific paths to the .js and .css files.
+The code surrounded by double curly brackets is a special liquid syntax used by Jekyll to generate my static web pages. To insert this in a plain .html file replace the liquid syntax with your specific paths to the .js and .css files.
 
 Example article: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
 
