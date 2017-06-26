@@ -11,14 +11,11 @@
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     {{ comments | inspect }}
 
-    <p>comments sorted by date</p>
-    {% assign comments_date = comments | sort: 'date' %}
-    {{ comments_date | inspect }}
+    <p>All comments and replies sorted</p>
+    {% assign all_comments_sorted = site.data.comments[post_slug] | sort %}
+    {{ all_comments_sorted | inspect }}
 
-    <p>All comments and replies x</p>
-    {{ site.data.comments[post_slug]}}
-
-    {% for comment in comments_date %}
+    {% for comment in comments %}
       {% assign index       = forloop.index %}
       {% assign r           = comment.replying_to %}
       {% assign replying_to = r | to_integer %}
