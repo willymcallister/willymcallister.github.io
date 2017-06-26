@@ -7,7 +7,13 @@
   {% if site.data.comments[post_slug] %}
     <div class="comments__existing">
     <p> Questions and comments</p>
+    <p>main comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
+    {{ comments | inspect }}
+
+ 
+
+
     {% for comment in comments %}
       {% assign index       = forloop.index %}
       {% assign r           = comment.replying_to %}
