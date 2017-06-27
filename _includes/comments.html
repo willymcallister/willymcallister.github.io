@@ -1,19 +1,12 @@
 <section class="comments">
-  <div id="respond" class="comment__new">
-    Comment
-    {% include comment_form.html %}
-  </div>
 
   {% if site.data.comments[post_slug] %}
+    <!-- Existing comments -->
     <div class="comments__existing">
-    <p> Questions and comments</p>
-    <p>extract main comments</p>
+    <h3> Questions and comments</h3>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
-    {{ comments | inspect }}
 
-    <p>main comments sorted</p>
     {% assign comments_date = comments | sort: 'date' %}
-    {{ comments_date | inspect }}
 
     {% for comment in comments_date %}
       {% assign index       = forloop.index %}
@@ -26,7 +19,12 @@
       {% assign message     = comment.message %}
       {% include comment.html index=index replying_to=replying_to email=email name=name url=url date=date message=message %}
     {% endfor %}
-    </div>
-    
+    </div>    
   {% endif %}
+  
+  <!-- New comment form -->
+  <div id="respond" class="comment__new">
+    <h3>Leave a question or comment</h3>
+    {% include comment_form.html %}
+  </div>
 </section>

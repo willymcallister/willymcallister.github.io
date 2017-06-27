@@ -110,7 +110,7 @@ button:hover {
 ////// existing comments //////
 
 .comments {
-    border-top: 1px solid $grey-color-light;
+    border-top: 0px solid $grey-color-light;
     padding: 20px 0px 0px 0px;
 }
 .comment__new {
@@ -125,7 +125,7 @@ button:hover {
     padding: 8px 0px 0px 0px;
 }
 .comment {  
-    border-top: 1px solid $grey-color-light;
+    border-top: 0px solid $grey-color-light;
     padding: 5px 0px 5px 0px;
 }
 .comment.child {

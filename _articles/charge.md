@@ -219,9 +219,9 @@ Now that you have the concept of charge, move on to explore [Coulomb's Law](http
 <details>
 <summary>Photo credits</summary>
 
-<p>[Electric eel](https://commons.wikimedia.org/wiki/File:Electric-Eel-03.jpg) </p> 
+<p><a href="https://commons.wikimedia.org/wiki/File:Electric-Eel-03.jpg">Electric Eel</a> </p> 
 
-<p>[Ant in amber](https://commons.wikimedia.org/wiki/File:An_ant_in_amber.jpg)  </p>
+<p><a href="(https://commons.wikimedia.org/wiki/File:An_ant_in_amber.jpg">Ant in Amber</a></p>
 
-<p>[Princeton PSSC Coulomb's Law](https://archive.org/details/coulombs_law)</p>
+<p><a href="https://archive.org/details/coulombs_law">Princeton PSSC Coulomb's Law</a></p>
 </details>

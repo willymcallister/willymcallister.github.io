@@ -24,7 +24,10 @@
 
 {% capture i %}{{ include.index }}{% endcapture %}
 {% assign replies = site.data.comments[post_slug] | where_exp: 'item', 'item.replying_to == i' %}
-{% for reply in replies %}
+<p>just replies</p> {{ replies | inspect }}
+{% assign replies_date = replies | sort: 'date' %}
+<p>replies_date </p>{{ replies_date | inspect }}
+{% for reply in replies_date %}
   {% assign index       = forloop.index | prepend: '-' | prepend: include.index %}
   {% assign r           = reply.replying_to %}
   {% assign replying_to = r | to_integer %}
