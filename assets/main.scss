@@ -116,7 +116,7 @@ button:hover {
 .comment__new {
     padding: 0px 0px 14px 0px;
 }
-.comment__author {
+.comment__author, .comment__meta {
     text-align: right;
     color: $grey-color;
     font-size: $small-font-size;

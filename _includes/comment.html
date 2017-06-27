@@ -3,12 +3,6 @@
   <div class="comment__body">
     {{ include.message | markdownify }} 
   </div>
-  
-  {% unless include.replying_to != 0 %}
-    <div class="comment__meta">
-      <a rel="nofollow" class="comment__reply-link" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ post_slug }}')">Reply to {{ include.name }}</a>
-    </div>
-  {% endunless %}  
 
   <div class="comment__author">
     {{ include.name }}
@@ -20,6 +14,12 @@
       {% endif %}
     </span>
   </div>
+
+  {% unless include.replying_to != 0 %}
+    <div class="comment__meta">
+      <a rel="nofollow" class="comment__reply-link" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ post_slug }}')">Reply to {{ include.name }}</a>
+    </div>
+  {% endunless %}  
 </article>
 
 {% capture i %}{{ include.index }}{% endcapture %}
