@@ -3,7 +3,7 @@
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
     <div class="comments__existing">
-    <p> Questions and comments</p>
+    <h3> Questions and comments</h3>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     {% assign comments_date = comments | sort: 'date' %}
 
@@ -23,7 +23,7 @@
   
   <!-- New comment form -->
   <div id="respond" class="comment__new">
-    <h3>Leave a question or comment</h3>
+    <h3>Add a question or comment</h3>
     {% include comment_form.html %}
   </div>
 </section>
