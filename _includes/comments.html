@@ -3,9 +3,8 @@
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
     <div class="comments__existing">
-    <h3> Questions and comments</h3>
+    <p> Questions and comments</p>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
-
     {% assign comments_date = comments | sort: 'date' %}
 
     {% for comment in comments_date %}
