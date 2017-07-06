@@ -210,9 +210,9 @@ There are two types of charge. Like charges repel, and unlike charges attract.
 
 Franklin and Coulomb gave us the terminology and equation that describes the effect of charge.
 
-Charge can be measured either in terms of coulombs or by counting electron charges. Pick the method that suits the discussion. 
+You can talk about charge either in units of coulombs or by counting electron charges. Pick whichever way suits the discussion best. 
 
-Now that you have the concept of charge, move on to explore [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law) and [Electric Force](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-force).
+
 
 ---- 
 
