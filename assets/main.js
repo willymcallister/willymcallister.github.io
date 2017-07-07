@@ -14,7 +14,7 @@
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        showModal('Comment submitted', 'Thanks! Refresh your browser window in a minute to see your comment.');
+        showModal('Comment submitted', 'Thanks! Refresh your browser in a minute to see your comment.');
         $(form).removeClass('form--loading');
       },
       error: function (err) {
