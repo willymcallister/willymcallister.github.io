@@ -20,19 +20,19 @@
 
   <fieldset>
     <div class="textfield">
-      <input class="textfield__input" type="email" name="fields[email]"  placeholder="Email (Optional, used for replies.)"/>
+      <input class="textfield__input" type="email" name="fields[email]"  placeholder="Your email (optional, used if you subscribe.)"/>
     </div>
-  </fieldset>
-
-  <fieldset>
-    <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
   </fieldset>
 
   <fieldset>
     <div class="notify-me">
       <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
-      Send me an email when someone responds.
+      Send an email when someone comments on this article.
     </div>
+  </fieldset>
+
+  <fieldset>
+    <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
   </fieldset>
 
   <fieldset>

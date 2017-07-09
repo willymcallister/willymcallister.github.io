@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-New articles at spinningnumbers.org. These are not found on Khan Academy.
+New articles written for spinningnumbers.org. These are not found on Khan Academy.
 
 ----
 
@@ -14,3 +14,5 @@ New articles at spinningnumbers.org. These are not found on Khan Academy.
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Sign convention for passive components]({{ site.baseurl }}{% link _articles/8sign-convention.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor - how it works]({{ site.baseurl }}{% link _articles/6-3inductor_how_it_works.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Resistance and Resistivity]({{ site.baseurl }}{% link _articles/resistance-resistivity.md %})
