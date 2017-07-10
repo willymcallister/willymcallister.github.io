@@ -19,8 +19,13 @@ layout: default
 		{{ content }}
 	</div>
 
+	<div class="youtube_div">
+	<a class="youtube_link" href="https://www.youtube.com/watch?v={{page.youtubeID}}">video on YouTube</a>
+	</div>
+
 	{% if page.comments == true %}
 	{% include comments.html %}
 	{% endif %}
 
 </article>
+

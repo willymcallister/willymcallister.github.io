@@ -149,4 +149,4 @@ Conductivity | $\sigma$               | siemens/meter  | $\text S / m$
 
 ## Reference
 
-Wikipedia has a nice table of [resistivity and conductivity of various materials](https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity#Resistivity_and_conductivity_of_various_materials). The second column $(\rho)$ and third column $(\sigma)$ are just reciprocals of each other.
+Wikipedia has a nice table of [resistivity and conductivity of various materials](https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity#Resistivity_and_conductivity_of_various_materials). The second column is resistivity, $(\rho)$, and the third  is conductivity, $(\sigma)$. They are reciprocals of each other.

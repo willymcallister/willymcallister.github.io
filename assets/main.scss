@@ -107,6 +107,15 @@ button:hover {
     color: white;
 }
 
+.youtube_div {
+    font-size: $small-font-size;
+    text-align: right;
+    padding-bottom: 16px;
+}
+a.youtube_link:link, a.youtube_link:visited {
+    color: $grey-color;
+}
+
 ////// existing comments //////
 
 .comments {

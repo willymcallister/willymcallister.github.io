@@ -6,4 +6,6 @@ youtubeID: 0IeWoAiHbAY
 comments: true
 --- 
 
-Multiple resistors in parallel can be combined into a single equivalent resistor. Created by Willy McAllister.
+Multiple resistors in parallel can be combined into a single equivalent resistor. 
+
+Created by Willy McAllister.

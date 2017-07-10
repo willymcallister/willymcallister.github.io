@@ -8,6 +8,7 @@ youtubeID: HpipBkRMm8U
 
 Electricity begins with *electric force*.  
 We explain electric force by saying matter has a property called *charge*.  
+
 Written by Willy McAllister.
 
 ----

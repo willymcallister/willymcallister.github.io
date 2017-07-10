@@ -6,4 +6,6 @@ youtubeID: CBlfcuUXzUY
 comments: true
 --- 
 
-Introduction to the voltage source and current source. Created by Willy McAllister.
+Introduction to the voltage source and current source. 
+
+Created by Willy McAllister.
