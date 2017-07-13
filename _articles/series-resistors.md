@@ -37,7 +37,7 @@ The resistors in the following image are *not* in series. There are extra branch
 
 ![Resistors with branches in between are not in series.](https://ka-perseus-images.s3.amazonaws.com/2ca3a9010c1b0206bbf9a3fbc4baba44fe9312cb.svg){: .centered }
 
-## Properties of resistors in series
+## Resistors in series
 
 Here is a circuit with resistors in series. Voltage source $\text V_{\text{S}}$ is connected to a chain of resistors connected head-to-tail, so we know they are in series. 
 
@@ -61,11 +61,11 @@ With this little bit of knowledge, plus Ohm's Law, we can figure out what's goin
 
 $v_{\text{S}} = v_{R1} + v_{R2} + v_{R3}$
 
-$v_{\text R1} = i\cdot\text R_1 \qquad v_{\text R2} = i\cdot\text R_2 \qquad v_{\text R3} = i\cdot\text R_3 \qquad$
+$v_{\text R1} = i\,\text R_1 \qquad v_{\text R2} = i\,\text R_2 \qquad v_{\text R3} = i\,\text R_3 \qquad$
 
 and then use Ohm's Law to make substitutions,
 
-$v_{\text{S}} = i\cdot \text{R1} \,+\, i\cdot \text{R2} \,+\, i\cdot \text{R3}$
+$v_{\text{S}} = i\, \text{R1} \,+\, i\, \text{R2} \,+\, i\, \text{R3}$
 
 Now factor out the current and gather the resistors together:
 
@@ -115,7 +115,7 @@ $\text R_{\text{series}} = \text{R1} + \text{R2} + \ldots + \text{R}_\text N$
 Now let's take a look at the voltage across each resistor in a series circuit. 
 We do this by applying Ohm's Law to the individual resistors, one at a time. The current $i$ is the same for each resistor.
 
-$v_{\text R1} = i\cdot\text R_1 \qquad v_{\text R2} = i\cdot\text R_2 \qquad v_{\text R3} = i\cdot\text R_3 \qquad$
+$v_{\text R1} = i\,\text R_1 \qquad v_{\text R2} = i\,\text R_2 \qquad v_{\text R3} = i\,\text R_3 \qquad$
 
 This idea makes more sense if you do an example with real numbers. I encourage you to try this on your own before peeking at the answer.
 
@@ -152,11 +152,11 @@ This idea makes more sense if you do an example with real numbers. I encourage y
 
 <p>Knowing $i$, we compute the individual resistor voltages,</p>
 
-<p>$v_{\text{R1}} = i\cdot \text{R1} = 5\,\text{mA} \cdot 300\,\Omega = 1.5\,\text V$</p>
+<p>$v_{\text{R1}} = i\, \text{R1} = 5\,\text{mA} \cdot 300\,\Omega = 1.5\,\text V$</p>
 
-<p>$v_{\text{R2}} = i\cdot \text{R2} = 5\,\text{mA} \cdot 500\,\Omega = 2.5\,\text V$</p>
+<p>$v_{\text{R2}} = i\, \text{R2} = 5\,\text{mA} \cdot 500\,\Omega = 2.5\,\text V$</p>
 
-<p>$v_{\text{R3}} = i\cdot \text{R3} = 5\,\text{mA} \cdot 1200\,\Omega = 6.0\,\text V$</p>
+<p>$v_{\text{R3}} = i\, \text{R3} = 5\,\text{mA} \cdot 1200\,\Omega = 6.0\,\text V$</p>
 
 <p>Here's the full solution:</p>
 

@@ -41,7 +41,7 @@ The resistors in the following image are *not* in parallel. There are extra comp
 
 ![Components not in parallel.](https://ka-perseus-images.s3.amazonaws.com/5286c85ca0e5fbcbfa3dc661fc8376943ef6b03b.svg){: .centered }
 
-## Properties of resistors in parallel
+## Resistors in parallel
 
 Here is a circuit with resistors in parallel. (This circuit has a current source. We don't get to use those very often, so this should be fun.)
 
@@ -58,7 +58,7 @@ With just this little bit of knowledge, and Ohm's Law, we can write these expres
 
 $i = i_{\text{R1}} + i_{\text{R2}} + i_{\text{R3}} $
 
-$v = i_{\text{R1}} \cdot \text{R1} \qquad v = i_{\text{R2}} \cdot \text{R2} \qquad v = i_{\text{R3}} \cdot \text{R3}$
+$v = i_{\text{R1}} \, \text{R1} \qquad v = i_{\text{R2}} \, \text{R2} \qquad v = i_{\text{R3}} \, \text{R3}$
 
 This is enough to get going. Rearrange the three Ohm's Law expressions to solve for current in terms of voltage and resistance:
 
@@ -155,7 +155,7 @@ This will sink in better if you do an example with real numbers.
 <p>Now we know the equivalent resistance. <br>
 We can solve for voltage $v$ between the two nodes,</p>
 
-<p>$v = i\cdot\text R_{\text{parallel}}$</p>
+<p>$v = i\,\text R_{\text{parallel}}$</p>
 
 <p>$v  = 100\,\text{mA} \cdot 31.25\,\Omega = 3.125\,\text V$</p>
 

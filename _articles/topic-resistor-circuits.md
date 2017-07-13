@@ -21,9 +21,7 @@ Series and parallel resistors, and the voltage divider.
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %})
 
-{% comment %}
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Parallel conductance]({{ site.baseurl }}{% link _articles/parallel-conductance.md %})
-{% endcomment %}
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Delta-Wye resistor networks]({{ site.baseurl }}{% link _articles/delta-wye-resistor-networks.md %})
 

@@ -31,7 +31,7 @@ $P = I \times V$, with units of watts
 
 ## Charge
 
-The concept of electricity arises from an observation of nature, We observe a force between objects, that, like gravity, acts at a distance. The source of this force has been given the name *charge*. A very noticeable thing about electric force is that it is large, far greater than the force of gravity. Unlike gravity, however, there are two types of electric charge. Opposite types of charge attract, and like types of charge repel. Gravity has only one type: it only attracts, never repels.
+The concept of electricity arises from an observation of nature. We observe a force between objects, that, like gravity, acts at a distance. The source of this force has been given the name *charge*. A very noticeable thing about electric force is that it is large, far greater than the force of gravity. Unlike gravity, however, there are two types of electric charge. Opposite types of charge attract, and like types of charge repel. Gravity has only one type: it only attracts, never repels.
 
 ## Materials: conductors, inulators, semiconductors
 
