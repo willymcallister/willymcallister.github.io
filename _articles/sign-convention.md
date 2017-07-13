@@ -36,7 +36,7 @@ For active elements, the power calculation comes out with a negative sign. So a 
 
 ----
 
-Reminder: In this article we are using conventional current direction, *not* electron current.
+Reminder: In this article we are using conventional current direction, *not* electron current direction.
 
 -----
 
@@ -64,7 +64,7 @@ So we actually have just two ways to put symbolic labels on the resistor. Both a
 
 **BUT**, one way is a much better choice than the other. Whenever possible, you should point the current arrow into the $+$ voltage sign. Why? Because it means we use the normal version of Ohm's Law, $v = i\,\text R$. If we use the other labeling method (arrow pointing into the negative sign) it forces us to include a minus sign in Ohm's Law, $v = -i\,\text R$.  
 
-In the next two sections we'll justify where that minus sign comes from. If everything so far makes perfect sense, it is okay for you to hop over the next two sections to where we apply this rule to [all passive elements and give some examples](/a/8sign-convention.html#sign-convention-for-passive-components). 
+In the next two sections we'll justify where that minus sign comes from. If everything so far makes perfect sense, it is okay for you to hop over the next two sections to where we apply this rule to [all passive elements and give some examples](/a/sign-convention.html#sign-convention-for-passive-components). 
 
 
 ## A resistor experiment

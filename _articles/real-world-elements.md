@@ -100,6 +100,10 @@ This is a  *surface mount* resistor:
 
 The resistance value is encoded in the $3$-digit code: $102$, meaning $10 \times 10^2 = 1000 \,\Omega$. You can't tell from the picture but the size of this resistor happens to be "0602", indicating its footprint is $6 \, \text{mm} \times 2 \, \text{mm}$.
 
+Here's how a surface mount resistor is made. The resistor itself is a single layer of material screened on top of a little chunk of ceramic insulator, and covered with a protective layer.
+
+![Surface mount resistor cross section]({{ site.baseurl }}{% link i/6surface-mount-resistor-construction.svg %}){: .centered }
+
 Example of a resistor that's part of an integrated circuit:
 
 ![](https://ka-perseus-images.s3.amazonaws.com/f754369c927f3e89a88a18898a4ed745b5846e49.svg){: .centered }
@@ -162,7 +166,7 @@ The symbol for an inductor looks like this:
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
-The theory of how an inductor actually works is actually pretty complicated. Refer to [Inductor - how it works](http://spinningnumbers.org/a/6-3inductor_how_it_works.html) for an informal description of how an inductor does its thing. To learn more about inductors and their magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
+The theory of how an inductor actually works is actually pretty complicated. Refer to [Inductor - how it works](http://spinningnumbers.org/a/inductor_how_it_works.html) for an informal description of how an inductor does its thing. To learn more about inductors and their magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
 
 Real-world inductors come in lots of shapes and sizes.
 

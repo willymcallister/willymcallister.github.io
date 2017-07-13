@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Let's define some of the terms used around resistors. You may have heard the words resistance and resistivity. They sound alike but mean slightly different things. There are two more words related to resistors you should know about: conductance and conductivity. We'll define these four terms and show how they are related. You will use resistance all the time, but the other terms not so much. However, it helps if you've heard of them and can tell them apart. Before reading this article, you should be familiar with [Ohm's Law](http://spinningnumbers.org/a/5ideal-elements-and-sources.html#ohms-law), $v = i\,\text R$.
+Let's define some of the terms used around resistors. You may have heard the words resistance and resistivity. They sound alike but mean slightly different things. There are two more words related to resistors you should know about: conductance and conductivity. We'll define these four terms and show how they are related. You will use resistance all the time, but the other terms not so much. However, it helps if you've heard of them and can tell them apart. Before reading this article, you should be familiar with [Ohm's Law](http://spinningnumbers.org/a/ideal-elements-and-sources.html#ohms-law), $v = i\,\text R$.
 
 Written by Willy McAllister.
 
