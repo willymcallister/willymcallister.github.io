@@ -1,18 +1,20 @@
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
 
-  <div class="comment__body">
-    {{ include.message | markdownify }} 
-  </div>
-
   <div class="comment__author">
     {{ include.name }}
     <span class="comment__date">
       {% if include.date %}
-        {% if include.index %}<a href="#comment{{ include.index }}">{% endif %}
+        {% if include.index %}
+          <a href="#comment{{ include.index | prepend: '-' }}" title="Permalink to this comment">
+        {% endif %}
         {% include format-date.html date=include.date time=false weekDay=false %}
         {% if include.index %}</a>{% endif %}
       {% endif %}
     </span>
+  </div>
+
+  <div class="comment__body">
+    {{ include.message | markdownify }} 
   </div>
 
   {% unless include.replying_to != 0 %}

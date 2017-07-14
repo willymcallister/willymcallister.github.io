@@ -20,6 +20,9 @@ Circuits are made of resistors, capacitors, inductors, and voltage and sources.
 ### [Circuits with resistors]({{ site.baseurl }}{% link _articles/topic-resistor-circuits.md %})
 Resistors in series and parallel, delta-wye networks, and the voltage divider.
 
+### [DC circuit analysis]({{ site.baseurl }}{% link _articles/topic-dc-analysis.md %})
+Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage method, mesh and loop current methods. Linearity and superposition.
+
 ### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? <img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> 

@@ -6,6 +6,7 @@ comments: true
 ---
 
 This will become the article on linearity.
+
 ----
 
 ### Contents

@@ -126,15 +126,13 @@ What does it mean to turn off a current source? It means we set $\text I = 0$. T
 
 ![Replace current source with an open](https://ka-perseus-images.s3.amazonaws.com/829dc509a0950795063226adc13318d5474d1bf5.svg){: .centered }
 
-It may seem like doing this suppression could completely mess up how the circuit works, but it won't. Please be patient.
-
-#### Solve two circuits
+It may seem like doing this suppression could completely mess up the circuit, but it won't. It sounds strange, but it won't.
 
 In the next two schematics, one of the voltage inputs has been turned off (*suppressed* ) by replacing it with a short circuit.
 
 ![Replace one voltage source with a short](https://ka-perseus-images.s3.amazonaws.com/44c69ff19df0189cb4d60f854f855d02e2db396d.svg){: .centered }
 
-When we zero out (suppress) an input, we replace one of the inputs with $0$, allowing one input to shine through by itself.
+When we zero out (suppress) an input, we replace it with $0$, allowing the other input to shine through by itself.
 
 $f(\text{Vs1} + 0) \rightarrow  f(\text{Vs1})$ and  
 $f(\text{0 + Vs2}) \rightarrow  f(\text{Vs2})$
@@ -154,11 +152,15 @@ $out_3 = f(0,0,in_3)$</p>
 <p>$out = out_1 + out_2 + out_3$</p>
 </details>
 
+#### Solve the two circuits
+
 Now we solve each circuit individually,
 
 $i_1 = \text R\cdot\text{Vs1} \qquad$ and $\qquad i_2 = \text R\cdot\text{Vs2}$
 
 where $i_1$ is the current caused by source $\text{Vs}1$, and $i_2$ is the current caused by source $\text{Vs}2$. 
+
+(You can come up with your own system for naming all the different $i$ and $v$ variables that make up the two new circuits.)
 
 #### Superimpose (add) the two solutions
 
@@ -176,7 +178,7 @@ Check it out! Compare this superposition solution to the conventional solution w
 
 What we did here is called the *linear superposition* of two circuits. 
 
-Here's a key thing to appreciate. Notice how taking out one voltage source did not modify or mess up how the other voltage source was causing current to flow in the resistor. It's like those two circuits we created with suppression are living inside/with each other, without affecting the other one. Very cool to think about. 
+Here's a key thing to appreciate. Notice how taking out one voltage source did not modify or mess up the contribution from the other voltage source. It's like those two circuits we created with suppression are living inside/with each other, without affecting the other one. Very cool to think about. 
 
 In this toy example our function was so simple that superposition really didn't save much (if any) effort. In the following examples the circuits are more complicated, and the difference in effort becomes more apparent.
 
@@ -184,13 +186,13 @@ In this toy example our function was so simple that superposition really didn't 
 
 Consider the following circuit composed of two linear components (resistors) and two sources: a current source and a voltage source. The two sources are the inputs. We define two outputs to be the currents $i_1$ and $i_2$. In functional notation we write this as,
 
-$i_1 = f_1(\text{Is},\text{Vs)}\,$ and $\,i_2 = f_2(\text{Is},\text{Vs)}$
+$i_1 = f_1(\text{Is},\text{Vs)}\quad$ and $\quad i_2 = f_2(\text{Is},\text{Vs)}$
 
 ![Example 1 circuit](https://ka-perseus-images.s3.amazonaws.com/15548ad524440df6a887158ab78b21ff0bed1e61.svg){: .centered }
 
 ### Solve using superposition
 
-Let’s analyze this circuit using superposition.  
+Let’s go through the steps to analyze this circuit using superposition.  
 
 First, we suppress the current source and analyze the circuit with just the voltage source acting alone. To suppress the current source, we replace it with an open circuit.
 
@@ -202,7 +204,7 @@ $i_{1V} = 0 \qquad i_{2V} = \dfrac{\text{Vs}}{\text R2}$
 
 Where $i_{1V}$ and $i_{2V}$ are the currents in $\text R1$ and $\text R2$ caused by the voltage source.
 
-Next, we restore the current source and suppress the voltage source.
+Next, we restore the current source and suppress the voltage source by replacing it with a short circuit.
 
 ![suppress the voltage source](https://ka-perseus-images.s3.amazonaws.com/effc66654a6dee892eae8e7d71bd2de5a2aa9879.svg){: .centered }
 
@@ -227,17 +229,17 @@ The full solution looks like this:
 
 ![Solution to Example 1](https://ka-perseus-images.s3.amazonaws.com/27a5680c43830c8c4a261d5466cc343cb5480641.svg){: .centered }
 
-This could have been a tricky analysis because of the two sources. Superposition gave us two simpler circuits to deal with.
+This could have been a tricky analysis because of the two sources. Superposition gave us two simpler circuits to deal with. Notice how whole chunks of the original circuit fall away when we suppress the sources.  
 
 ## Example 2
 
-For the following linear circuit let’s calculate the output voltage $\goldD v$. 
+For the following linear circuit let’s calculate the output voltage $v$. 
 
 ![Example 2 circuit](https://ka-perseus-images.s3.amazonaws.com/9d8228e8d6b8f70952fb738c931f1265fc65c737.svg){: .centered }
 
 ### Conventional solution
 
-We will do it the conventional way first. We write [Kirchhoff's Current Law](http://spinningnumbers.org/a/kirchhofs-current-law.html) at output node $\goldD v$:
+We will do it the conventional way first. We write [Kirchhoff's Current Law](http://spinningnumbers.org/a/kirchhofs-current-law.html) at output node $v$:
 
 ![Example 2 conventional solution](https://ka-perseus-images.s3.amazonaws.com/5c35079fc61e41706ed0bb509012d00002abe668.svg){: .centered }
 
@@ -245,25 +247,66 @@ $\quad +i_{\text R1} \qquad - i_{\text R2} \qquad +\text{Is} \quad = 0$
 
 $+\dfrac{\text{Vs}-v}{\text{R1}} \quad - \dfrac{v}{\text{R2}} \qquad + \text{Is} \quad = 0$
 
-We can rearrange this to get an expression for $\goldD v$ by gathering like terms together on the right side:
+We can rearrange this to get an expression for $v$ by gathering like terms together on the right side:
 
 $v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text R2}{\text R1+\text R2}\,\text{Is} $
 
 (Conventional solution)
+
+<details>
+<summary>please show the algebra</summary>
+<p>When I did this algebra I took a shortcut I will share it with you.</p>
+<ol>
+<li>Starting from,</li>
+<p>$+\dfrac{\text{Vs}-v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$</p>
+
+<li>Separate the first fraction into separate numerators. </li>
+
+<p>$+\dfrac{\text{Vs}}{\text{R1}} - \dfrac{v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$</p>
+
+<li>Group together the two fractions with $v$ in the numerator.</li>
+<p>$+\dfrac{\text{Vs}}{\text{R1}} - \left ( \dfrac{v}{\text{R1}} + \dfrac{v}{\text{R2}} \right ) + \text{Is}= 0$</p>
+
+<li>Factor out $v$ from the group.</li>
+<p>$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( \dfrac{1}{\text{R1}} + \dfrac{1}{\text{R2}} \right ) + \text{Is}= 0$</p>
+
+<p>Now the trick: That resistor expression resembles two resistors in parallel,</p>
+
+<p>$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} \right )} = {\dfrac{\text{R1}\cdot\text{R2}} {\text{R1} + \text{R2}}}$</p>
+
+<li>Substitute the last term for the resistor reciprocals, flipping it over the right way,</li>
+<p>$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) + \text{Is}= 0$</p>
+
+
+<li>Move some stuff over to the right side and keep the signs right.</li>
+<p>$ v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) = \dfrac{\text{Vs}}{\text{R1}} + \text{Is}$</p>
+
+<li>Move and flip the parallel $\text R$ expression over to the right side to isolate $v$,</li>
+<p>$ v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \left ( \dfrac{\text{Vs}}{\text{R1}} + \text{Is} \right ) $</p>
+
+<li>Multiply through to get the form we want for later comparison to the superposition result.</li>
+<p>$ v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \dfrac{\text{Vs}}{\text{R1}} + \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \text{Is} $</p>
+
+<p>$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is} $</p>
+</ol>
+
+<p>The expression for two parallel resistors is fully worked out in this article about
+<a href="http://spinningnumbers.org/a/parallel-resistors.html">parallel resistors</a> where it says Special Case - Two Resistors In Parallel. It's a good one to memorize.</p>
+</details>
 
 ### Solution using superposition
 
 Now we will solve the same problem using the principle of superposition. As before, we suppress the input sources and solve new simpler circuits.
 
 **How would you suppress the current source?**  
-Replace the current source with a \_\_\_. (short circuit or open circuit?)
+Replace the current source with a \_\_\_\_\_\_. (short circuit or open circuit?)
 
 <details>
     <summary>show answer</summary>
     <p>Replace the current source with an open circuit.</p>
 </details>
 
-The circuit collapses down to two resistors in [series](http://spinningnumbers.org/a/series-resistors.html) (a [voltage divider](http://spinningnumbers.org/v/voltage-divider.html)). 
+The circuit collapses down to two resistors in [series](http://spinningnumbers.org/a/series-resistors.html) (also known as a [voltage divider](http://spinningnumbers.org/v/voltage-divider.html)). 
 
 ![Example 2 with current source suppressed](https://ka-perseus-images.s3.amazonaws.com/7c16652515a22815282c1c53e022a4d39b7edee8.svg){: .centered }
 
@@ -272,10 +315,10 @@ With just the voltage source, the output voltage is:
 
 $v_{Vs}= \text{Vs} \,\dfrac{\text R2}{\text R1+ \text R2}$
 
- Now we restore the current source and suppress the voltage source. 
+ Now restore the current source and suppress the voltage source. 
 
 **How would you suppress the voltage source?**  
-Replace the voltage source with a \_\_\_. (short circuit or open circuit?)
+Replace the voltage source with a \_\_\_\_\_\_. (short circuit or open circuit?)
 
 <details>
     <summary>show answer</summary>
@@ -284,13 +327,13 @@ Replace the voltage source with a \_\_\_. (short circuit or open circuit?)
 
 The circuit collapses down to two resistors in [parallel](http://spinningnumbers.org/a/parallel-resistors.html). 
 
-![Example 2 with voltge source suppressed](https://ka-perseus-images.s3.amazonaws.com/532320f532ecd3ae37c894b33a92cfd52f3fbd0b.svg){: .centered }
+![Example 2 with voltage source suppressed](https://ka-perseus-images.s3.amazonaws.com/532320f532ecd3ae37c894b33a92cfd52f3fbd0b.svg){: .centered }
 
 Voltage ${v_{Is}}$ is the contribution to the output from current source $\text{Is}$.
 
 $v_{Is} = \text{Is}\,\dfrac{\text R1\cdot\text R2}{\text R1 + \text R2}$
 
-We complete the superposition analysis by adding the two voltage contributions. As predicted, we get the same result as the conventional solution shown above. 
+We complete the superposition analysis by adding the two voltage contributions. 
 
 $v = v_{Vs} + v_{Is}$
 
@@ -298,11 +341,11 @@ $v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\te
 
 (Superposition solution)
 
-There is no approximation involved. The solutions are exactly the same. The key thing to notice is that the two simpler circuits took significantly less work to analyze.
+As predicted, we get the same result as the conventional solution shown above. With superposition, there is no approximation involved. The solutions are exactly the same. The key thing to notice is that the two simpler circuits took less work to analyze.
 
 ## Closing thoughts 
 
-Linearity and superposition are useful tools. If you have a circuit made from linear elements, you get to use the principle of superposition. This means the original complicated circuit is really made of simpler circuits that happen to be sitting on top of each other. It seems like magic, but this property means that overlapping inputs and superimposed circuits don't affect each other or intertwine at all. Every simple circuit is blissfully unaware of the others until you do the final addition. 
+Linearity and superposition are useful tools. If you have a circuit made from linear elements, you get to use the principle of superposition. This means the original complicated circuit is really made of simpler circuits that happen to be sitting on top of each other. It seems like magic, but this means superimposed circuits don't affect each other or intertwine at all. Every simple circuit is blissfully unaware of the others until you do the final addition. 
 
 This is a marvelous property of *linear* circuits, and it is one of the reasons we love linearity so much. Circuits that are not linear (*non-linear* circuits) don't have this property, and superposition cannot be applied. (But don't worry, we love non-linear circuits, too, just in a different way.)
 
