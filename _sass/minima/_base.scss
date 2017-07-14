@@ -17,7 +17,7 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
-//  -webkit-text-size-adjust: 100%;   //WMc removed to allow mobile font to grow in landscape
+//  -webkit-text-size-adjust: 100%;        //WMc commented out to let mobile text be bigger in landscape
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
        -o-font-feature-settings: "kern" 1;
