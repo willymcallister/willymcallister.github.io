@@ -41,17 +41,17 @@
 // Staticman comment replies, from https://github.com/mmistakes/made-mistakes-jekyll
 // modified from Wordpress https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js
 // Released under the GNU General Public License - https://wordpress.org/about/gpl/
-// addComment.moveForm is called from comment.html when the comment button is clicked.
+// addComment.moveForm is called from comment.html when the reply link is clicked.
 var addComment = {
   moveForm: function( commId, parentId, respondId, postId ) {
     var div, element, style, cssHidden,
-    t           = this,
-    comm        = t.I( commId ),
-    respond     = t.I( respondId ),
-    cancel      = t.I( 'cancel-comment-reply-link' ),
-    parent      = t.I( 'comment-replying-to' ),
-    post        = t.I( 'comment-post-slug' ),
-    commentForm = respond.getElementsByTagName( 'form' )[0];
+    t           = this,                    //t is the addComment object, with functions moveForm and I, and variable respondId
+    comm        = t.I( commId ),                                //whole comment
+    respond     = t.I( respondId ),                             //whole new comment form
+    cancel      = t.I( 'cancel-comment-reply-link' ),           //whole reply cancel link
+    parent      = t.I( 'comment-replying-to' ),                 //a hidden element in the comment
+    post        = t.I( 'comment-post-slug' ),                   //null
+    commentForm = respond.getElementsByTagName( 'form' )[0];    //the <form> part of the comment_form div
 
     if ( ! comm || ! respond || ! cancel || ! parent || ! commentForm ) {
       return;
@@ -64,30 +64,30 @@ var addComment = {
       div = document.createElement( 'div' );
       div.id = 'sm-temp-form-div';
       div.style.display = 'none';
-      respond.parentNode.insertBefore( div, respond );
+      respond.parentNode.insertBefore( div, respond ); //create and insert a bookmark div right before comment form
     }
 
-    comm.parentNode.insertBefore( respond, comm.nextSibling );
+    comm.parentNode.insertBefore( respond, comm.nextSibling );  //move the form from the bottom to above the next sibling
     if ( post && postId ) {
       post.value = postId;
     }
     parent.value = parentId;
-    cancel.style.display = '';
+    cancel.style.display = '';                        //make the cancel link visible
 
     cancel.onclick = function() {
       var t       = addComment,
-      temp    = t.I( 'sm-temp-form-div' ),
-      respond = t.I( t.respondId );
+      temp    = t.I( 'sm-temp-form-div' ),            //temp is the original bookmark
+      respond = t.I( t.respondId );                   //respond is the comment form
 
       if ( ! temp || ! respond ) {
         return;
       }
 
-      t.I( 'comment-replying-to' ).value = null;
-      temp.parentNode.insertBefore( respond, temp );
-      temp.parentNode.removeChild( temp );
-      this.style.display = 'none';
-      this.onclick = null;
+      t.I( 'comment-replying-to' ).value = null;      //forget the name of the comment
+      temp.parentNode.insertBefore( respond, temp );  //move the comment form to its original location
+      temp.parentNode.removeChild( temp );            //remove the bookmark div
+      this.style.display = 'none';                    //make the cancel link invisible
+      this.onclick = null;                            //retire the onclick handler
       return false;
     };
 
