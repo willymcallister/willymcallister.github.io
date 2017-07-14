@@ -1,0 +1,7 @@
+_id: 7415c600-68db-11e7-89b4-79fbd5ed8e2b
+_parent: 'http://spinningnumbers.org/a/sign-convention.html'
+replying_to: '1'
+message: "This definition applies to the term \"voltage\". \"Volt\" is the honorary name of electric potential difference. \r\n\r\nThe Passive Sign Convention is more of a bookkeeping rule. If we want to have only one version of Ohm's Law, with no minus signs in it, we need to have a rule that the voltage and current polarities have to be arranged in the proper way. It would be a drag to have two versions of Ohm's Law so we could let everyone draw polarity any which way. Sometimes you would use v = iR, and other times v = -iR, and there would be tons of errors."
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2017-07-14T21:29:01.865Z'
