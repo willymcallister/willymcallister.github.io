@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: page
 title:  "Printing"
 author: Willy McAllister
 comments: true
@@ -11,7 +11,7 @@ The articles print nicely straight out of your browser. You probably want to red
 
 Start by setting the scale to 80% in your browser's File: Print dialog box.
 
-### Example: Mac running Chrome
+### Example: Mac running the Chrome browser
 
 This is what the Print dialog box looks like on Mac running the Chrome browser. Your browser will have something similar.
 

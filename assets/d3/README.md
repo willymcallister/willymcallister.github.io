@@ -31,7 +31,6 @@ The code surrounded by double curly brackets is a special syntax used by Jekyll/
 
 Example article with embedded D3 image: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
 
-
 ## Saving D3 images
 
 Open the .html file in a browser and the .svg image is generated and rendered by D3. To save the .svg image, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to open the .svg image in its own tab, and then save it to my /_images/ folder.
