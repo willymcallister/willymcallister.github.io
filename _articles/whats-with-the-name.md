@@ -38,4 +38,6 @@ For now, don't worry about the fancy math notation, there's plenty of time to st
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/eulers-sine.md %})
 
-If you want to more right now and you can't stand to wait, go [here](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-ac-analysis/v/ee-ac-analysis-intro1).
+Animated images are created with [D3.js](http://d3js.org). The source code for my animations is on [github](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3).
+
+If you want to know more right now and you can't stand to wait, go [here](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-ac-analysis/v/ee-ac-analysis-intro1).

@@ -2,14 +2,21 @@
 
 This repository contains the code for animated images and graphs for spinningnumbers.org, created with [D3.js](http://d3js.org).
 
-## Animations
-Each animation is three files.
+## Animation files
+
+Each animation has three files.
 
 * someanimation.js - javascript where this animation is created
 * someanimation.css - stylesheet specific to this animation
 * someanimation.html - test .html file to demonstrate this animation
 
-Here's an example of how I embed an amimation in a Jekyll markdown article.
+For example, the animation files for the spinningnumbers.org logo are spinninnumbers.js, spinningnumbers.css, and spinningnumbers.html. 
+
+The animated .svg image is created with calls to the D3 library. The D3 library is accessed remotely from d3js.org, currently version 4.
+
+### Embedding animations
+
+Here's how to embed a D3 amimation in a Jekyll markdown article.
 
 ```
 <p>
@@ -20,19 +27,11 @@ Here's an example of how I embed an amimation in a Jekyll markdown article.
 </p>
 ```
 
-The animated .svg image is created with calls to the D3 library. The D3 library is accessed remotely from d3js.org, currently version 4.
+The code surrounded by double curly brackets is a special syntax used by Jekyll/Liquid to generate static web pages. If you want to insert an image into a conventional .html file replace the liquid syntax with the specific paths to the .js and .css files.
 
-The animation is inserted into the article at the point where you place 
-```
-<div id="someanimationID"></div>
-```
+Example article with embedded D3 image: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
 
-The code surrounded by double curly brackets is a special liquid syntax used by Jekyll to generate my static web pages. To insert this in a plain .html file replace the liquid syntax with your specific paths to the .js and .css files.
 
-Example article: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
+## Saving D3 images
 
-## Graphs
-
-Graph images created with D3 consist of a single .html file, including style specifications and javascript. An example article with D3 graphs is [Ideal  elements and sources](http://spinningnumbers.org/a/5ideal-elements-and-sources.html). 
-
-To view the .svg image, open the .html file in a browser, and the image is rendered by D3. To save the .svg image, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to extract the .svg image to its own tab, and then save it to my _images folder.
+Open the .html file in a browser and the .svg image is generated and rendered by D3. To save the .svg image, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to open the .svg image in its own tab, and then save it to my /_images/ folder.
