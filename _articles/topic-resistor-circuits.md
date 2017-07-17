@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: topic
 title:  Resistor circuits
 author: Willy McAllister
 comments: true

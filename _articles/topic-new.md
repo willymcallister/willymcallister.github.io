@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: topic
 title:  New on spinningnumbers
 author: Willy McAllister
 comments: true

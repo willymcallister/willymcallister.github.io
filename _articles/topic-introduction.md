@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: topic
 title:  Introduction
 author: Willy McAllister
 comments: true

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: topic
 title:  DC circuit analysis
 author: Willy McAllister
 comments: true

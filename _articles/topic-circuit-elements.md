@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: topic
 title:  Circuit elements
 author: Willy McAllister
 comments: true

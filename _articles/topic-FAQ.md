@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: topic
 title:  Frequently asked questions
 author: Willy McAllister
 comments: true

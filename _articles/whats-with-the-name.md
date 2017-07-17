@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: article
 title: What's with the name?
 author: Willy McAllister
 comments: true
 ---
 
-Spinning Numbers refers to a type of number engineers use to represent signals. Numbers that spin!
+The name Spinning Numbers refers to a type of number engineers use to represent signals. Numbers that spin!
 
 <p>
 <div id="spin-d3"></div>
@@ -14,21 +14,23 @@ Spinning Numbers refers to a type of number engineers use to represent signals. 
 <link rel="stylesheet" type="text/css" href="{{ "/assets/d3/spinningnumbers-d3.css" | relative_url }}" />
 </p>
 
-We write a spinning number in this rather intimidating mathematical notation,
+We write a spinning number with this crazy-looking mathematical notation,
 
 $\Large e^{j\omega t}$ 
 
 Where,
 * $e$ is the base of the natural logarithm, the special number $e = 2.7182818\ldots$  
 * $j$ is the imaginary unit. $j = \sqrt{-1}\qquad$ 
-    * We engineers use $j$ instead of $i$ because $i$ is used for something else (current).
-* $\omega$ is how fast the vector is spinning, it is called the *angular frequency*.
-* The radius of the big circle is $1$.
+    * Engineers use $j$ instead of $i$ because we use $i$ for something else (current).
+* $\omega$ (omega) indicates how fast the number is spinning. It is called the *angular frequency*.
 * $t$ is time. You know what time is.
 
-This $e^{j\omega t}$ notation is pretty scary looking. Don't be bothered by how strange it looks for the moment, and just know it represents a number that rotates with time. This is one of the most beautiful and useful ideas in mathematics and engineering. We use spinning numbers to model and understand how signals move through the world. 
+* The radius of the big circle is $1$.
+* The green stick that connects the origin to the yellow spinning number isn't part of the number, it's just there to help us see it.
 
-As an example, if we combine two spinning numbers we can create a sine wave using Euler's Formula.
+This $e^{j\omega t}$ notation is pretty scary looking. For the moment, don't let that bother you, and just appreciate that it represents a number that spins around. This is one of the most beautiful and useful ideas in mathematics and engineering. We use spinning numbers to represent sigals and understand how they move through the world. 
+
+Here's one example of how we use spinning numbers. If we combine two spinning numbers we can create a sine wave using Euler's Formula.
 
 $\sin \omega t = \dfrac{1}{2}(e^{+j\omega t} - e^{-j\omega t})$
 
@@ -36,4 +38,4 @@ For now, don't worry about the fancy math notation, there's plenty of time to st
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/eulers-sine.md %})
 
-If you can't stand it and you want to know more right now, go [here](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-ac-analysis/v/ee-ac-analysis-intro1).
+If you want to more right now and you can't stand to wait, go [here](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-ac-analysis/v/ee-ac-analysis-intro1).
