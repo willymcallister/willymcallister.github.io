@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "Kirchhoff's Current Law"
+title:  "Diode as a circuit element"
 author: Willy McAllister
 comments: true
 ---
 
-This will become the article on KCL.
+This will become the article on diodes as a circuit element.
 
 ----
 

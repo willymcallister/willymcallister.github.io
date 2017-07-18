@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "Kirchhoff's Current Law"
+title:  "Mesh current method"
 author: Willy McAllister
 comments: true
 ---
 
-This will become the article on KCL.
+This will become the Mesh current method article.
 
 ----
 
@@ -19,5 +19,3 @@ This will become the article on KCL.
 
 ### Where we're headed 
 {:.no_toc}
-
-----

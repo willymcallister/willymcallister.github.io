@@ -4,13 +4,13 @@ This repository contains the code for animated images and graphs for spinningnum
 
 ## Animation files
 
-Each animation has three files.
+Each animation needs three kinds of code.
 
 * someanimation.js - javascript where this animation is created
 * someanimation.css - stylesheet specific to this animation
 * someanimation.html - test .html file to demonstrate this animation
 
-For example, the animation files for the spinningnumbers.org logo are spinninnumbers.js, spinningnumbers.css, and spinningnumbers.html. 
+Sometimes I mash all three into a single .html file, and sometimes in three separate files. For example, the animation files for the spinningnumbers.org logo are spinninnumbers.js, spinningnumbers.css, and spinningnumbers.html. 
 
 The animated .svg image is created with calls to the D3 library. The D3 library is accessed remotely from d3js.org, currently version 4.
 

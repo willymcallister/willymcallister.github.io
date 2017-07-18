@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Kirchhof's Voltage Law"
+title:  "Kirchhoff's Voltage Law"
 author: Willy McAllister
 comments: true
 ---

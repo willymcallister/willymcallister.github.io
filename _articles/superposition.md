@@ -84,7 +84,7 @@ We now solve this circuit two ways: first by conventional analysis, and then usi
 
 ### Conventional solution
 
-To solve by conventional means we write the [KVL](http://spinningnumbers.org/a/kirchhofs-voltage-law.html) equation around the loop:
+To solve by conventional means we write the [KVL]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) equation around the loop:
 
 $\text{Vs1} + \text{Vs2} - i \,\text R = 0$
 
@@ -239,7 +239,7 @@ For the following linear circuit let’s calculate the output voltage $v$.
 
 ### Conventional solution
 
-We will do it the conventional way first. We write [Kirchhoff's Current Law](http://spinningnumbers.org/a/kirchhofs-current-law.html) at output node $v$:
+We will do it the conventional way first. We write [Kirchhoff's current law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) at output node $v$:
 
 ![Example 2 conventional solution](https://ka-perseus-images.s3.amazonaws.com/5c35079fc61e41706ed0bb509012d00002abe668.svg){: .centered }
 
@@ -290,7 +290,7 @@ $v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text 
 <p>$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is} $</p>
 </ol>
 
-<p>The expression for two parallel resistors is fully worked out in this article about
+<p>The expression for two parallel resistors is fully worked out in this article about 
 <a href="http://spinningnumbers.org/a/parallel-resistors.html">parallel resistors</a> where it says Special Case - Two Resistors In Parallel. It's a good one to memorize.</p>
 </details>
 
@@ -306,7 +306,7 @@ Replace the current source with a \_\_\_\_\_\_. (short circuit or open circuit?)
     <p>Replace the current source with an open circuit.</p>
 </details>
 
-The circuit collapses down to two resistors in [series](http://spinningnumbers.org/a/series-resistors.html) (also known as a [voltage divider](http://spinningnumbers.org/v/voltage-divider.html)). 
+The circuit collapses down to two resistors in [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) (also known as a [voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %}). 
 
 ![Example 2 with current source suppressed](https://ka-perseus-images.s3.amazonaws.com/7c16652515a22815282c1c53e022a4d39b7edee8.svg){: .centered }
 
@@ -325,7 +325,7 @@ Replace the voltage source with a \_\_\_\_\_\_. (short circuit or open circuit?)
     <p>Replace the voltage source with a short circuit.</p>
 </details>
 
-The circuit collapses down to two resistors in [parallel](http://spinningnumbers.org/a/parallel-resistors.html). 
+The circuit collapses down to two resistors in [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}). 
 
 ![Example 2 with voltage source suppressed](https://ka-perseus-images.s3.amazonaws.com/532320f532ecd3ae37c894b33a92cfd52f3fbd0b.svg){: .centered }
 
