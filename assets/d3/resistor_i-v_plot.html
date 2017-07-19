@@ -130,48 +130,42 @@
 
   // Resistor i-v plot
   svgContainer
+    .append("line")   // resistor slope rise line
+      .style("stroke", "#74CF70")
+      .style("stroke-width", "3px")
+      .style("stroke-linecap", "round")
+      .attr("x1", xScale(2))
+      .attr("y1", yScale(4/3))
+      .attr("x2", xScale(2))
+      .attr("y2", yScale(8/3));
+  svgContainer
+    .append("line")   // resistor slope run line
+      .style("stroke", "#74CF70")
+      .style("stroke-width", "3px")
+      .style("stroke-linecap", "round")
+      .attr("x1", xScale(1))
+      .attr("y1", yScale(4/3))
+      .attr("x2", xScale(2))
+      .attr("y2", yScale(4/3));  
+  svgContainer
     .append("line")   // resistor sloped i-v line
       .style("stroke", "#11ACCD")
       .style("stroke-width", "3px")
+      .style("stroke-linecap", "round")
       .attr("x1", xScale(3))
       .attr("y1", yScale(4))
       .attr("x2", xScale(-3))
       .attr("y2", yScale(-4));
   svgContainer
-    .append("text")
+    .append("text")   // resistor annotation
       .attr("x", xScale(2))
-      .attr("dx", ".2em")
-      .attr("y", yScale(1.5))
-      .text("slope = 1/")
-      .style("text-anchor", "start")
-      .style("font-size", "20px")
-      .style('fill', "#11ACCD");
-  svgContainer
-    .append("text")
-      .attr("x", xScale(4.9))
-      .attr("y", yScale(1.5))
-      .text("R")
+      .attr("dx", ".3em")
+      .attr("y", yScale(1.8))
+      .text("slope = 1/R")
       .style("text-anchor", "start")
       .style("font-size", "20px")
       .style("font", "18px katex_main")
       .style('fill', "#11ACCD");
-  svgContainer
-    .append("line")   // resistor slope rise line
-      .style("stroke", "#74CF70")
-      .style("stroke-width", "3px")
-      .attr("x1", xScale(2))
-      .attr("y1", yScale(2 * 4/3))
-      .attr("x2", xScale(2))
-      .attr("y2", yScale(1));
-  svgContainer
-    .append("line")   // resistor slope run line
-      .style("stroke", "#74CF70")
-      .style("stroke-width", "3px")
-      .attr("x1", xScale(1 * 3/4))
-      .attr("y1", yScale(1))
-      .attr("x2", xScale(2))
-      .attr("y2", yScale(1));
-
 </script>
 </body>
 </html>

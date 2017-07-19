@@ -17,7 +17,7 @@ Check out the summary of the math and science preparation that will get you read
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Charge]({{ site.baseurl }}{% link _videos/charge.md %})
 {% endcomment %}
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl }}{% link _articles/charge.md %}) - New!
+![]({{ site.baseurl }}{% link i/article.svg %}) [Charge]({{ site.baseurl }}{% link _articles/charge.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Current]({{ site.baseurl }}{% link _videos/current.md %})
 

@@ -16,4 +16,6 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %})
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Superposition]({{ site.baseurl }}{% link _articles/superposition.md %})
