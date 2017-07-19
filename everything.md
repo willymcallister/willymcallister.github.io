@@ -5,56 +5,29 @@ author: Willy McAllister
 comments: true
 ---
 
-### Videos
-
-<ul>
-{% for video in site.videos %}
-  <li>
-    <a href="{{ video.url | prepend: site.baseurl }}">{{ video.title }}</a>
-  </li>
-{% endfor %} 
-</ul>
-
-{% comment %}
-And in my own sort order:
-
-{% assign videos = site.videos | sort:"order"  %}
-<ul>
-  {% for p in videos %}
-    <li>
-        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
-    </li>
-  {% endfor %}
-</ul> 
-{% endcomment %}
-
 ### Articles
 
+{% assign articles = site.articles | sort  %}
 <ul>
-{% for article in site.articles %}
-  <li>
-    <a href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+  {% for a in articles %}
+    <li><a href="{{ a.url | prepend: site.baseurl }}">{{ a.title }}</a></li>
+  {% endfor %}
+</ul> 
 
-### Drafts
+### Videos
 
+{% assign videos = site.videos | sort  %}
 <ul>
-{% for article in site.drafts %}
-  <li>
-    <a href="{{ article.url | prepend: site.baseurl }}">{{ article.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+  {% for v in videos %}
+    <li><a href="{{ v.url | prepend: site.baseurl }}">{{ v.title }}</a></li>
+  {% endfor %}
+</ul> 
 
-### Blog posts
+### Blog posts and draft articles
 
 <ul>
-{% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
+{% for p in site.posts %}
+  <li><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
 {% endfor %}
 </ul>
 
