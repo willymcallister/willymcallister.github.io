@@ -131,7 +131,7 @@ In general, functions with non-linear behavior don't have linearity properties. 
 
 <details>
 <summary>Should I avoid non-linear circuits?</summary>
-<p>I've gone a little overboard here, perhaps giving the impression that non-linear elements are bad. They are great in their own way. Every semiconductor device is non-linear (diodes and transistors) and they are used every day by the billions in computers and mobile phones and many other things. Engineers have figured out how to use non-linear devices, and you will, too, as you continue your studies.</p>
+<p>I've gone a little overboard here, perhaps giving the impression that non-linear elements are bad. They are great in their own way. Every semiconductor device is non-linear (diodes and transistors), and there are billions of them in every computer, mobile phone, and every other electronic gadget. Engineers have figured out how to use non-linear devices, and you will, too, as you continue your studies.</p>
 </details>
 
 ## Summary
