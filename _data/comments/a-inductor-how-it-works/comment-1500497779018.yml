@@ -1,0 +1,7 @@
+_id: b6350f90-6cc4-11e7-a639-bb0964fd6b0b
+_parent: 'http://spinningnumbers.org/a/inductor_how_it_works.html'
+replying_to: ''
+message: "\"A changing current creates a changing magnetic field, which creates a constant voltage. We write this mathematically with an equation that you may have seen before: v = L (di/dt)\"\r\n\r\nYou have assumed  here that di/dt is constant for the Orsted experiment isn't it? \r\n\r\nIf we have for instance i = sin(wt) the resultant voltage is another sinusoidal. Can we found circuits with current expressed by oddest mathematical functions and real utility? \r\n\r\nThank you!"
+name: Fernando
+email: 1e022bc059badf2580ac630c0ad1ff5d
+date: '2017-07-19T20:56:19.016Z'
