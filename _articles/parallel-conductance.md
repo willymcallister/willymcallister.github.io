@@ -65,7 +65,7 @@ This gives us another way to write Ohm's Law,
 
 The unit of conductance is the *siemens*, abbreviated $\text S$. It is named after [Werner von Siemens](https://en.wikipedia.org/wiki/Werner_von_Siemens), electrical engineer and founder of the German electronics and telecommunications company that bears his name. There is always an *s* at the end of *siemens*, because that's how he spelled his name, $1\,\text{siemens}$. 
 
-You may come across an older term, *conductance*, specified in units of *mhos*, which is just \"ohms\" spelled backwards. That term isn't used anymore.
+You may come across an older term, the *mho*, as the unit of conductance. Mho is just ohm spelled backwards. The symbol for the mho was the super fun character $\mho$. Mho is obsolete and isn't used anymore.
 
 When we use the word *conductance* instead of *resistance* to describe the same physical object we are simply emphasizing a different aspect of its behavior. Resistance fights against or impedes current flow, while conductance welcomes or allows current to pass through. The terms are two sides of the same idea. 
 
