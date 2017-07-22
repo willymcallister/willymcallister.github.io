@@ -23,7 +23,7 @@ comments: true
   {% endfor %}
 </ul> 
 
-### Blog posts and draft articles
+### Other posts
 
 <ul>
 {% for p in site.posts %}

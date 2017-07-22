@@ -67,39 +67,41 @@ So where does the inductor $i$-$v$ equation come from? Here are some observation
 
 * A *changing* current creates a *changing* magnetic field.
 
-* A *changing* magnetic field creates a *constant* electric field in the wire. (This was discovered by [Michael Faraday](https://en.wikipedia.org/wiki/Michael_Faraday#Electricity_and_magnetism) and [Joseph Henry[(https://en.wikipedia.org/wiki/Joseph_Henry).)
+* A *changing* magnetic field creates an electric field in the wire.  
+(This was a discovery by [Michael Faraday](https://en.wikipedia.org/wiki/Michael_Faraday#Electricity_and_magnetism) and [Joseph Henry](https://en.wikipedia.org/wiki/Joseph_Henry).)
 
-* The constant electric field is the same thing as saying there's a voltage in the wire. 
+* An electric field in the wire is the same thing as saying there's a voltage. 
 
-* A constant voltage causes charge to move in the wire, so you get a current. 
+* Voltage causes charge to move in the wire, so you get a current. 
 
-Can you see the circular argument in these four statements? Changing current makes a changing magnetic field. Changing magnetic field makes a constant voltage, and the voltage makes a current in the same wire. 
+Do you see the circular argument? Changing current makes a changing magnetic field. Changing magnetic field makes voltage, and voltage makes current. 
 
 <details>
     <summary>This seems terribly complicated.</summary>
-    <p>Don't feel bad if your head is spinning at this point. Electromagnetism <em>is</em> complicated. </p>
-    <p>There are a couple of reasons. The things that make electromagnetism so hard to figure out are </p>
-    <p>1) The plane of the magnetic lines surrounding the wire is perpendicular to the current in the wire. This means you have to do all your math in three dimensions and learn things like the Right Hand Rule and cross products. Ørsted actually needed some luck to figure out what was going on.</p>
-    <p>2) The other complication is that you get a constant voltage only if the magnetic field is <em>changing</em>. If the magnetic field is constant, no voltage, no current. This may seem strange, but it's what nature gives us. </p>
+    <p>If this seems really complicated, don't feed bad. It seems that way to me, too. </p>
+    <p>Electromagnetism <em>is</em> complicated. There are a couple of reasons. Two things contribute to making electromagnetism hard to figure out, </p>
+    <p>1) One complication is that you get voltage only if the magnetic field is <em>changing</em>. If the magnetic field is constant (not changing), you get no voltage, and no current. So if you just hold a magnet near a wire, nothing happens. This may seem strange, but it's what nature gives us.
+    </p>
+    <p>2) The other complication is how magnetism and electricity interact in three dimensional space. Recall the first image in this article, with the wire and magnetic field. The plane of the magnetic lines surrounding the wire is perpendicular to the wire. This means all your math in three dimensions and you have to learn things like the Right Hand Rule and vector cross products. It's hard to hold all this in your head. Ørsted actually needed some luck to position a moving magnet at just the right angle before he figured out what was going on.</p>
 </details>
 
-Now we can explain the key trick played by an inductor: 
+Now we can explain the key trick performed by an inductor: 
 
-A *changing* current creates a *changing* magnetic field, which creates a *constant* voltage. We write this mathematically with an equation that you may have seen before: 
+A *changing* current creates a *changing* magnetic field, which in turn creates a voltage. We write this mathematically with an equation you may have seen before: 
 
 $v = \text L \dfrac{di}{dt}$
 
-The constant voltage $v$ is on the left side. The changing current is represented by $di/dt$ on the right side, along with a constant of proportionality, known as the inductance, $\text L$. 
+The changing current is represented by $di/dt$ on the right side, along with a constant of proportionality, known as the inductance, $\text L$. And the voltage created by the changing current appears on the left side.
 
-For a short straight wire, the value of $\text L$ is really small. It doesn't make a very useful inductor for everyday circuits. 
+For a short straight wire, the value of $\text L$ is really small. It doesn't make a very useful inductor for designing everyday circuits. However, if you are designing a very fast circuit (up in the $\text{GHz}$), where the current is changing very rapidly, (very high $di/dt$), then even the small $\text L$ of a short wire can make a difference in how the circuit works.  
 
 <details>
 <summary>What does the $d$ mean?</summary>
 
-<p>The $d$ in ${dq}/{dt}$ is notation from calculus, it means <em>differential</em>.   
+<p>The $d$ in ${di}/{dt}$ is notation from calculus, it means <em>differential</em>.   
 You can think of $d$ as meaning "a tiny change in ..." </p>
 
-<p>For example, the expression $dt$ means *a tiny change in time*. When you see $d$ in a ratio, like $dq/dt$, it means, "a tiny change in $q$ (charge) for each tiny change in $t$ (time)." An expression like $dq/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/derivative-introduction-ab/derivative-as-a-limit-ab/v/calculus-derivatives-1-new-hd-version">derivative</a>, and it is what you study in <a href="https://www.khanacademy.org/math/differential-calculus">Differential Calculus</a>.</p>
+<p>For example, the expression $dt$ means *a tiny change in time*. When you see $d$ in a ratio, like $di/dt$, it means, "a tiny change in $i$ (current) for each tiny change in $t$ (time)." An expression like $di/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/derivative-introduction-ab/derivative-as-a-limit-ab/v/calculus-derivatives-1-new-hd-version">derivative</a>, and it is what you study in <a href="https://www.khanacademy.org/math/differential-calculus">Differential Calculus</a>.</p>
 </details>
 
 ## Increasing inductance
@@ -130,7 +132,7 @@ The ferrite core concentrates and intensifies the magnetic field more than just 
 
 ## Inductor slang
 
-You will sometimes hear people say an inductor "wants" to keep its current flowing. Well little coils of wire don't actually "want" anything, but this idea comes from the back-and-forth dance between current and magnetic field. Once the magnetic field builds up around the inductor, that field keeps pushing a current in the wire. The current and magnetic field have a reinforcing effect on each other, they *induce* each other. This is where the inductor gets its name.
+You will sometimes hear people say an inductor "wants" to keep current flowing. Little coils of wire can't actually "want" anything, but this is a useful idea. It comes from the back-and-forth dance between current and magnetic field. Once a magnetic field builds up around an inductor, it keeps pushing current in the wire. The current and magnetic field have a reinforcing effect on each other, they *induce* each other. This is where the inductor gets its name.
 
 ## Flywheel analogy
 
@@ -144,11 +146,11 @@ You can think of an inductor like a rotating flywheel. Once it starts spinning, 
 
 Here are a few more interesting points about electromagnetism.
 
-* The voltage generated by a changing magnetic field has a formal name, it is called an *electro-motive force*, or *emf*. This is why you sometimes see the variable name $e$ or $\text E$ used to represent voltage.
+* The voltage generated by a changing magnetic field has a formal name, it is called an *electromotive force*, or *emf*. This is why you often see the variable name $e$ or $\text E$ used to represent voltage.
 
-* A changing magnetic field creates a voltage! Oh my goodness! Now you know a second way to create a voltage. The other way is with chemical reactions inside a battery.
+* You know a voltage is created from the chemical reactions inside a battery. A changing magnetic field also creates a voltage! Oh my goodness! Now you know two ways to create voltage. 
 
-* There are two ways you can create a changing magnetic field. One way we talked about here is to induce a changing magnetic field with a changing current. The other way to generate a changing magnetic field is to actually move a magnet. This is what's going on inside a generator at a hydroelectric dam. The falling water spins a shaft with a magnet attached. Coils of copper wire surrounding the magnet have an induced voltage that is sent to our homes to make popcorn and heat soldering irons.
+* There are two ways you can create a changing magnetic field. One way we talked about here with a changing current. The other way to generate a changing magnetic field is to actually move a magnet. This is what's going on inside a generator at a hydroelectric dam. The falling water spins a shaft with a magnet attached. Coils of copper wire surrounding the magnet have an induced voltage that is sent to our homes to make popcorn and heat soldering irons.
 
 ----
 
