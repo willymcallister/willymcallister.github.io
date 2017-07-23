@@ -11,10 +11,12 @@
 	{% else %}
 		{{ day }}th,
 {% endcase %} 
+
 {{ include.date | date: "%Y" }}{% if include.time %}, 
-{{ include.date | date: "%I" }}.{{ include.date | date: "%M" }}{{ include.date | date: "%p" | downcase }}{% endif %}
+  {{ include.date | date: "%I" }}.{{ include.date | date: "%M" }}{{ include.date | date: "%p" | downcase }}
+{% endif %}
 
 {% comment %}  
-based on: eduardoboucas.github.io/_includes/helpers/format-date.html
+based on: https://github.com/eduardoboucas/eduardoboucas.github.io/blob/master/_includes/helpers/format-date.html
 time formatting options: http://jekyll.tips/jekyll-casts/date-formatting/
 {% endcomment %} 

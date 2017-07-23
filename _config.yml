@@ -33,9 +33,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-#disqus:
-#    shortname: electrical-engineering
-
 google_analytics: UA-91424157-1
 
 # Staticman comments
@@ -57,3 +54,5 @@ collections:
   drafts:
     output: true
     permalink: /drafts/:title:output_ext
+
+timezone: America/Los_Angeles

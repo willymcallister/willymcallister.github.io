@@ -4,9 +4,9 @@
     <div class="comments__existing">
     <h2>Questions</h2>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
-    {% assign comments_date = comments | sort: 'date' %}
+    {% assign comments_by_date = comments | sort: 'date' %}
 
-    {% for comment in comments_date %}
+    {% for comment in comments_by_date %}
       {% assign index       = forloop.index %}
       {% assign r           = comment.replying_to %}
       {% assign replying_to = r | to_integer %}
@@ -19,7 +19,7 @@
     {% endfor %}
     </div>    
   {% endif %}
-  
+
   <!-- New comment form -->
   <div id="respond" class="comment__new">
     <h2>Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2>
