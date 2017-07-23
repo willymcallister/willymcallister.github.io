@@ -1,0 +1,7 @@
+_id: 55843630-6ff8-11e7-8b70-69edbf0fd562
+_parent: 'http://spinningnumbers.org/a/inductor_how_it_works.html'
+replying_to: '1'
+message: "If you apply a sine current or voltage into a system, typically every other current and voltage is some sort of sine function as well. The different signals all have different amplitude and phase delay (timing delay), but they all look like sinusoids. This is what is covered in the AC Analysis section. \r\n\r\nIf you wonder about other \"odd\" mathematical functions with utility, the first one I think of is the step function, just a single abrupt change from 0 volts to 1 volt. The square wave is also very useful, because it appears in every digital circuit (repeating sharp transitions from 0 to 1 to 0 to 1 , etc). The whole field of \"Signals and systems\" explores these types of signals. Engineers are really good at sine waves and there is a lot of beautiful theory (Fourier analysis) that tells you what a system will do with \"oddball\" inputs if you already know how it responds to sine waves."
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2017-07-23T22:43:24.128Z'
