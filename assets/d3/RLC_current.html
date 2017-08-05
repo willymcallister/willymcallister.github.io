@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: 0px solid red;
+    }
+
+    svg .path {
+      stroke-width: 3px;
+      stroke: #11ACCD;      /* KA math1 */
+      fill: none;
+    }
+
+    svg text {
+      font: 16px katex_math;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var padding = { top:40, right:100, bottom:40, left:40 };  // padding outside graph
+
+  var 
+      xmin = -2,
+      xmax = +6,
+      ymin = -4,
+      ymax = +4,
+      scale = 36,                         // pixels per "1"
+      width  = (xmax - xmin) * scale,     // width of graph axes pixels
+      height = (ymax - ymin) * scale,     // height of graph axes pixels
+      xOrigin = -(xmin * scale);          // distance of origin from left in pixels
+      yOrigin = height + (ymin * scale);  // distance of origin from bottom in pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + padding.left + padding.right)  //width of image inc. padding
+      .attr("height", height + padding.top + padding.bottom)  //height of image inc. padding
+    .append("g")  //group to build image inside of, offset by padding
+      .attr("transform", "translate(" + padding.left + "," + padding.top + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .tickSizeOuter(0);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", "translate(" + 0 + "," + yOrigin + ")")
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dx", ".71em")
+      .text("t (seconds)")
+      .style("text-anchor", "start")
+      .style("font-size", "16px")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .tickSizeOuter(0);
+
+  var ya = svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dx", 6)
+      .attr("dy", -6)
+      .text("i (amperes)")
+      .style("text-anchor", "start")
+      .style("font-size", "16px")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  // remove "0"s near origin
+  svgContainer.selectAll(".tick text")
+    .filter(function (d) { return d === 0;  })
+    .remove();
+
+  // Waveform - RLC current natural response
+  // i = 5 e^{-t} \sin 2 t
+  var nPoints = 100;
+  var samples = d3.range(0, nPoints + 1)  //0 1 2 3 ... 100 (101 points)
+  var xData = samples.map(function (i) 
+ //   { return ((i / nPoints) * (xmax-xmin)) + xmin;
+    { return ((i / nPoints) * (xmax));
+    }); //0 ... 6  (101 points)
+
+  var rlci = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(5 * Math.exp(-d) * Math.sin(2*d)); 
+    });
+
+  var expPos = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(5 * Math.exp(-d)); 
+    });
+
+  var expNeg = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(-5 * Math.exp(-d)); 
+    });
+
+  var pathExpPos = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', expPos(xData))
+      .style("fill", "none")
+      .style("stroke", "#D6D8DA")
+      .style("stroke-width", "3px");
+
+  var pathExpNeg = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', expNeg(xData))
+      .style("fill", "none")
+      .style("stroke", "#D6D8DA")
+      .style("stroke-width", "3px");
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', rlci(xData))
+      .style("fill", "none")
+      .style("stroke", "#11ACCD")
+      .style("stroke-width", "3px");
+  
+  var beforeZeroLine = svgContainer.append("line")
+      .attr("x1", xmin)
+      .attr("y1", yOrigin)
+      .attr("x2", xOrigin)
+      .attr("y2", yOrigin)
+      .style("stroke", "#11ACCD")
+      .style("stroke-width", "3px");
+
+</script>
+</body>
+</html>

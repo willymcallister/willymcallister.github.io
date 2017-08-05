@@ -49,11 +49,11 @@ Written by Willy McAllister.
 Let's start 5000 years ago. For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). This very first practical application of electricity was in medicine.
 
 
-![Electric eel]({{ site.baseurl }}{% link i/0-5Electric-Eel-03.jpg %}){: .centered }{: height="200px"}
+![Electric eel]({{ site.baseurl }}{% link i/0-5Electric-Eel-03.jpg %}){: .centered :}{: height="200px"}
 
 Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes when this goopy stuff drips from the tree it turns into a solid (fossilizes) and gets the name amber. Amber is basically a natural version of plastic.
 
-![ant in amber]({{ site.baseurl }}{% link i/0-5ant_in_amber.jpg %}){: .centered }
+![ant in amber]({{ site.baseurl }}{% link i/0-5ant_in_amber.jpg %}){: .centered :}
 
 So Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats. They noticed light things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" in Greek means "rub", so you can call it the "rubbing-electric" effect if you want.
 
@@ -163,7 +163,7 @@ The unit of charge was named the coulomb, in honor of guess who.
 
 An example circuit you could build would be a $1\,\text{volt}$ battery connected to a $1\,\Omega$ resistor. Ohm's Law tells us the current will be $I = V/R = 1/1 = 1 \,\text{ampere}$. When that is happening, there is $1 \,\text{coulomb}$ of charge passing by every second at every point in the circuit, by definition.
 
-![Coulomb per second]({{ site.baseurl }}{% link i/0-5coulomb_per_second.svg %}){: .centered }
+![Coulomb per second]({{ site.baseurl }}{% link i/0-5coulomb_per_second.svg %}){: .centered :}
 
 You can think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We actually use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
 

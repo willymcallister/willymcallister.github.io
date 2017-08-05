@@ -1,11 +1,14 @@
 ---
 layout: post
 title: How to format a date
-date: 2016-03-23T10:20:00Z
+date: 2017-07-23T22:43:24.128Z
 ---
 date: 2017-07-21T22:10:15.374Z
 
 date: 2016-03-23T10:20:00Z
+
+date: 2017-07-23T22:43:24.128Z
+
 
 <ul>
 <li>{{ page.date }}</li>

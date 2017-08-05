@@ -23,6 +23,9 @@ Resistors in series and parallel, delta-wye networks, and the voltage divider.
 ### [DC circuit analysis]({{ site.baseurl }}{% link _articles/topic-dc-analysis.md %})
 Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage method, mesh and loop current methods. Linearity and superposition.
 
+### [Natural and forced response]({{ site.baseurl }}{% link _articles/topic-natural-and-forced-response.md %})
+Natural response is what simple circuits do with stored internal energy. Forced response is what happens when an external signal is applied. RC, RL, LC, and RLC natural response. 
+
 ### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? <img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> 
