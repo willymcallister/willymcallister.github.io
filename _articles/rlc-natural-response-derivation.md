@@ -247,7 +247,7 @@ $i = K_1 e^{s_1t} + K_2 e^{s_2t}$
 
 where $s_1$ and $s_2$ are natural frequencies, and $K_1$ and $K_2$ are amplitude terms. We'll see why this extra twist is needed in the upcoming Example circuit.
 
-# Worked example 
+## Worked example 
 
 At this point makes sense to do a specific example with actual component values to see how one particular solution plays out. Here is our example circuit,
 
@@ -310,7 +310,7 @@ Notice how the real part of $s$ came through the factoring process to give us th
 
 The terms in the parentheses are a sum of two imaginary exponentials where the exponents are complex conjugates. This looks just like what we saw in the $\text{LC}$ natural response. As we did then, we call on Euler's formula to help us with these terms. 
 
-## Euler's formula
+### Euler's formula
 
 Using [Maclaurin series expansions](https://www.khanacademy.org/math/calculus-home/series-calc/maclaurin-taylor-calc/v/euler-s-formula-and-euler-s-identity) for $e^{jx}$, $\sin jx$, and $\cos jx$, it is possible to derive *Euler's formula,*
 
@@ -324,7 +324,7 @@ In the linked video, whenever Sal says $i$, we say $j$.
 
 We take advantage of Euler's formula to turn $e^{j\,something}$ into a normal complex number. 
 
-## Use Euler's formula
+### Use Euler's formula
 
 We can use Euler's formula to transform this sum,
 
@@ -358,7 +358,7 @@ So far so good. We started guessing a proposed solution for $i(t)$ based on expo
 
 The last thing we have to find is $A_1$ and $A_2$. We will do that using the initial conditions, once we figure out what those initial conditions are.
 
-## Find the initial conditions
+### Find the initial conditions
 
 For a second-order equation, it turns out you need *two* initial conditions to get a complete solution: one for the independent variable, $i$,  and another for its first derivative, $di/dt$.
 
@@ -413,7 +413,7 @@ $\dfrac{di}{dt}(0^+) = 10\,\text A/\text{sec}$
 
 This is our second initial condition. The moment just after the switch closes, the current in the inductor has an initial slope of $10$ amperes per second. 
 
-## Find constants $A_1$ and $A_2$ using the initial conditions
+### Find constants $A_1$ and $A_2$ using the initial conditions
 
 As a reminder, our proposed solution is,
 
@@ -469,7 +469,7 @@ $A_2$ is the last step in our journey to find the current. Replace $A_2$ with $5
 
 $ i = 5 e^{-t} \sin 2 t$
 
-## Plot the current
+### Plot the current
 
 Let's take a look at $i$ to appreciate what we have. The graph of $i$ as a function of time is,
 
@@ -482,13 +482,13 @@ The role of "friction" in this example is played by the resistor. It represents 
 
 This example is called an *underdamped* solution. We will introduce this descriptive term in the next section.
 
-## Solve the voltages
+### Solve the voltages
 
 ![](https://ka-perseus-images.s3.amazonaws.com/252e4fdf7032e7c2763aa9adc92c281b55c60d0c.svg){: .centered :}
 
 Now that we know the natural response of the current, we can find the natural response of the three component voltages.
 
-### Resistor voltage
+#### Resistor voltage
 {: .no_toc :}
 
 Ohm's Law tells us the resistor voltage: $($remember there's a $-$ sign because $i$ is backwards relative to $v_\text R)$
@@ -499,7 +499,7 @@ $v_\text R = -5 e^{-t} \sin 2 t \cdot 2\,\Omega$
 
 $v_\text R = -10 e^{-t} \sin 2 t$
 
-### Inductor voltage
+#### Inductor voltage
 {: .no_toc :}
 
 The inductor voltage emerges from the inductor $i$-$v$ equation,
@@ -523,7 +523,7 @@ $v_\text L = -5e^{-t} (\sin 2t - 2\cos 2t)$
 <p>$\left (f \cdot g \right )' = -5e^{-t} \sin 2t + 5\,e^{-t}\,2\cos 2t$</p>
 </details>
 
-### Capacitor voltage
+#### Capacitor voltage
 {: .no_toc :}
 
 How do you find the voltage on a capacitor? We use the integral form of the capacitor $i$-$v$ equation $($with an extra $-$ sign because $i$ is reversed relative to $v_\text C)$,
@@ -607,12 +607,15 @@ $f = e^{-t} \qquad\,\,\,\,\, g' = -4 \sin 2t$</p>
 <p>It's reassuring the answer is the same as we found by integration. This KVL method worked because we knew all the other voltages. This might not always be the case, so there might be times when you have to do the integration. Who doesn't enjoy a nice integration by parts every now and then?</p>
 </details>
 
-## Plot the voltages
+### Plot the voltages
 
 I don't fully understand a waveform until I see a picture of it. Here are all three voltages plotted together,
 
 ![RLC voltage waveforms]({{ site.baseurl }}{% link i/rlc_voltages.svg %}){: .centered :}
 <p class="caption">Natural response voltages $vR, vL, vC$ for $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$.</p>
+
+<figcaption>Natural response voltages $vR, vL, vC$ for $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$.</figcaption>
+
 
 Talk it through:  
 * The capacitor voltage starts at $10\,\text V$ as it should, and rapidly moves down towards and through zero as its charge flows through the inductor and back onto the other plate of the capacitor. 
