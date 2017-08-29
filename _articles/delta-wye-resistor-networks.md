@@ -31,6 +31,8 @@ The configurations can be redrawn to square up the resistors. This is called a $
 
 The $\pi - \text T$ style is what you might find in a typical schematic. The transformation equations apply to $\pi - \text T$ as well.
 
+You may also hear the $\text Y$ configuration called a *star*.
+
 ## Transformations
 
 For the transformation to be valid, the resistance between each pair of terminals must be the same before and after. 
@@ -41,7 +43,9 @@ For the transformation to be valid, the resistance between each pair of terminal
 
 It is possible to write three simultaneous equations to capture this constraint. 
 
-Consider terminals $x$ and $y$. (For the moment assume terminal $z$ isn't connected to anything, so the current in $\text R3$ is $0$.) In the $\Delta$ configuration, the resistance between  $x$ and $y$ is $Rc$ in parallel with $Ra +Rb$ . On the $\text Y$ side, the resistance between $x$ and $y$ is the series combination $R1+R2$ (because we assumed terminal $z$ isn't connected to anything, so $\text R1$ and $\text R2$ carry the same current and can be considered in series). 
+Consider terminals $x$ and $y$. Assume terminal $z$ isn't connected to anything, so the current in $\text R3$ is $0$. We can make this assumption because we know resistors are [linear]({{ site.baseurl }}{% link _articles/linearity.md %}) devices and we can apply the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). (If you haven't studied linearity and superposition yet, please trust me for now that the assumption is a good one.) 
+
+In the $\Delta$ configuration, the resistance between  $x$ and $y$ is $Rc$ in parallel with $Ra +Rb$. On the $\text Y$ side, the resistance between $x$ and $y$ is the series combination $R1+R2$ (because we assumed terminal $z$ isn't connected to anything, so $\text R1$ and $\text R2$ carry the same current and can be considered in series). 
 
 We set these equal to each other to get the first of three simultaneous equations,
 
@@ -53,29 +57,28 @@ After solving the simultaneous equations (not shown), we get the equations to tr
 
 ### $\Delta \rightarrow \text Y$ transformation
 
-Equations for transforming a $\Delta$ network into a $\text Y$ network:
+Equations for transforming a $\Delta$ network into a $\text Y$ network,
 
-<p>$\quad R1 = \dfrac{Rb\,Rc}{Ra + Rb + Rc}$</p>
-$$
-<p>$\quad R2 = \dfrac{Ra\,Rc}{Ra + Rb + Rc}$</p>
-$$
-<p>$\quad R3 = \dfrac{Ra\,Rb}{Ra + Rb + Rc}$</p>
+$\quad R1 = \dfrac{Rb\,Rc}{Ra + Rb + Rc}$
 
-$$
-<p>Transforming from $\Delta$ to $\text Y$ introduces one additional node.</p>
+$\quad R2 = \dfrac{Ra\,Rc}{Ra + Rb + Rc}$
+
+$\quad R3 = \dfrac{Ra\,Rb}{Ra + Rb + Rc}$
+
+
+Transforming from $\Delta$ to $\text Y$ introduces one additional node.
 
 ### $\text Y \rightarrow\Delta$ transformation
 
-Equations for transforming a $\text Y$ network into a $\Delta$ network:
+Equations for transforming a $\text Y$ network into a $\Delta$ network,
 
-<p>$\quad Ra = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R1}$</p>
-$$
-<p>$\quad Rb = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R2}$</p>
-$$
-<p>$\quad Rc = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R3}$</p>
+$\quad Ra = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R1}$
 
-$$
-<p>Transforming from $\text Y$ to $\Delta$ removes one node.</p>
+$\quad Rb = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R2}$
+
+$\quad Rc = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R3}$
+
+Transforming from $\text Y$ to $\Delta$ removes one node.
 
 ## Example 1 - symmetric
 
@@ -176,3 +179,8 @@ $R_{equivalent} = 2.33 + 1.66 = 4\,\Omega$
 $\Delta - \text Y$ transformations are another tool in your bag of tricks for simplifying circuits prior to detailed analysis.
 
 You don't need to memorize the transformation equations. If the need arises, you can look them up.
+
+For the curious: A full derivation of the transform equations is in this [article]({{ site.baseurl }}{% link _articles/delta-wye-derivations.md %}).
+
+
+
