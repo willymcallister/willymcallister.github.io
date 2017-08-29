@@ -25,6 +25,8 @@ Series and parallel resistors, and the voltage divider.
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Delta-Wye resistor networks]({{ site.baseurl }}{% link _articles/delta-wye-resistor-networks.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Delta-Wye derivations]({{ site.baseurl }}{% link _articles/delta-wye-derivations.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Simplifying resistor networks]({{ site.baseurl }}{% link _videos/simplifying-resistor-networks.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %})
