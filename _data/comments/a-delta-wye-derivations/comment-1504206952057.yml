@@ -1,0 +1,15 @@
+_id: cd85de30-8e80-11e7-b692-5be3d941184b
+_parent: 'http://spinningnumbers.org/a/delta-wye-derivations.html'
+replying_to: '1'
+message: >-
+  Whenever you have a resistor circuit you are allowed to treat it as either
+  resistors or conductances, your choice. The reason you would do this is to
+  take advantage of the new combining equations for series and parallel. That's
+  why I used conductance for one of the derivations. To combine parallel
+  conductance you simply add. That change of perspective from R to G made the
+  steps of the Y-to-Delta derivation look just like the Delta-to-Y algebra. I
+  didn't come up with this technique myself, but it's very clever.
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2017-08-31T19:15:52.056Z'
+timestamp: 1504206952
