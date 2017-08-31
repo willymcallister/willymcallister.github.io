@@ -81,7 +81,7 @@ Example of a conventional *axial* resistor:
 
 ![](https://ka-perseus-images.s3.amazonaws.com/779f0952f353edf27ca9c9eb8978f7741ef1ef9f.jpg){: .centered }
 
-The color bands tell you the value of the resistor and its tolerance. The bands on this resistor are Orange  Orange  Brown  Gold. From the resistor color code chart, the first two bands corresponds to the *digits* of the value, $3\, 3$. The third band is the *multiplier*, brown stands for $\times 10^1$. The fourth (last) band indicates the tolerance, gold is $\pm 5\%$. The resistor value is $330 \,\Omega\,\pm5\%$.
+The color bands tell you the value of the resistor and its tolerance. The bands on this resistor are Orange Orange Brown Gold. From the resistor color code chart, the first two bands corresponds to the *digits* of the value, $3\, 3$. The third band is the *multiplier*, brown stands for $\times 10^1$. The fourth (last) band indicates the tolerance, gold is $\pm 5\%$. The resistor value is $330 \,\Omega\,\pm5\%$.
 
 <details>
 <summary>resistor color code chart</summary>
@@ -92,7 +92,7 @@ This precision resistor has 5 color bands:
 
 ![](https://ka-perseus-images.s3.amazonaws.com/b1f771301e3da7ada6e3603ad31ed55cb97704b6.jpg){: .centered }
 
-Read the bands from left to right:  Red Red Blue Brown Brown $= 2 \,2 \,6 \,1 \,1$. The first three bands $(2\,2\,6)$ are the value. The fourth band is the multiplier $(\times 10^1)$. The fifth (last) band indicates the tolerance, brown is $1\%$. The resistor value is $2260 \,\Omega\,\pm 1\%$.
+Read the bands from left to right:  Red Red Blue Brown Brown $= 2 \,2 \,6 \,1 \,1$. The first three bands $(2\,2\,6)$ are the value. The fourth band is the multiplier $(\times 10^1)$. The fifth (last) band indicates the tolerance, brown is $1\%$ (a red band stands for a tolerance of $2\%$). The resistor value is $2260 \,\Omega\,\pm 1\%$. If you look very closely, the gap between the two brown bands is slightly larger than the other gaps. That tells you the last brown band is the tolerance.
 
 This is a  *surface mount* resistor:
 

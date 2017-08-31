@@ -23,6 +23,15 @@ comments: true
   {% endfor %}
 </ul> 
 
+### Images
+
+<ul>
+{% assign image_files = site.static_files | where: "image", true %}
+{% for myimage in image_files %}
+<li><a href="{{ myimage.path }}">{{ myimage.name}}</a></li>
+{% endfor %}
+</ul>
+
 ### Other posts
 
 <ul>
