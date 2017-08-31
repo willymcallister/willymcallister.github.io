@@ -7,7 +7,6 @@ comments: true
 
 The Node Voltage Method is one of the well-organized methods for analyzing a circuit. It is based on [Kirchhoff's Current Law](electrical-engineering/ee-circuit-analysis/a/ee-kirchhoffs-laws). The Node Voltage Method is embedded inside the popular circuit simulator, $\small \text{SPICE}$.
 
-
 Written by Willy McAllister.
 
 ----
@@ -23,6 +22,15 @@ Written by Willy McAllister.
 ### Where we're headed 
 {: .no_toc :}
 
+This article teaches you the Node Voltage Method by working through two example circuits. We also figure out how to handle the special case of a floating voltage source (something called a *supernode*).
+
+**Node voltage method**  
+* Assign a reference node (ground).
+* Assign node voltage names.
+* Solve the nodes with a voltage source connected to the reference node.
+* Write Kirchhoff's Current Law for each node.
+* Solve the resulting system of equations.
+* Solve the currents.
 
 ----
 
@@ -36,7 +44,7 @@ The Node Voltage Method is not mysterious new science. It is simply a procedure 
 
 ![Node voltage circuit]({{ site.baseurl }}{% link i/node_voltage0.svg %}){: .centered :}
 
-## Annotating the schematic
+## Prepare the schematic
 
 Start every circuit analysis by finding and naming all the nodes. Then identify one of the nodes to be the *reference node*. The reference node is also called the *ground node*. The potential of the ground node is defined to be $0\,\text V$. 
 
