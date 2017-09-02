@@ -33,6 +33,9 @@ Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats
 ### [New]({{ site.baseurl }}{% link _articles/topic-new.md %})
 Here's a list of [new material]({{ site.baseurl }}{% link _articles/topic-new.md %}) created for Spinning Numbers you won't find on KA.
 
+### [Everything]({{ site.baseurl }}{% link everything.md %})
+Here's a list of [everything]({{ site.baseurl }}{% link everything.md %}) on Spinning Numbers. Articles, videos, images, other files.
+
 ### [FAQ]({{ site.baseurl }}{% link _articles/topic-FAQ.md %})
 A collection of interesting questions and answers about electrical topics.
 
@@ -50,5 +53,5 @@ We confine signals to only sine waves, and then develop an analysis method using
 
 ----
 These videos and articles got their start at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. I hope you enjoy them.  
-- Willy McAllister
+   \- Willy McAllister
 
