@@ -72,9 +72,9 @@ $2\,\text{V} + 4\,\text{V} + 6\,\text{V} + 8\,\text{V} = 20 \,\text V$
 
 The individual resistor voltages add up to the source voltage. This makes sense, and confirms our calculations.
 
-Now we add up the voltages again, using a slightly different procedure: by "going around the loop." There's no new science here, we are just rearranging the same computation.
-
 ### Procedure: Adding element voltages around a loop
+
+Now we add up voltages again, using a slightly different procedure: by "going around the loop." There's no new science here, we are just rearranging the same computation.
 
 **Step 1.** Pick a starting node. 
 
@@ -185,7 +185,6 @@ $v_{\text{ab}} + v_{\text{R1}} + v_{\text{R2}} + v_{\text{R3}} + v_{\text{R4}} =
 <p>In the end, it does not matter which way you walk around the loop.</p>
 </details>
 </details>
-
 
 This observation about voltages around a loop always adding up to zero is nicely captured as Kirchhoff's Voltage Law.
 
