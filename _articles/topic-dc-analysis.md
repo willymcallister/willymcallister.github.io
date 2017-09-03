@@ -9,7 +9,7 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 
 ----
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Circuit analysis - overview]({{ site.baseurl }}{% link _articles/circuit-analysis-overview.md %}) 
+![]({{ site.baseurl }}{% link i/article.svg %}) [DC circuit analysis - overview]({{ site.baseurl }}{% link _articles/circuit-analysis-overview.md %}) 
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
 
@@ -22,6 +22,10 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Node Voltage Method (step 5)]({{ site.baseurl }}{% link _videos/node-voltage-step5.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Mesh Current Method]({{ site.baseurl }}{% link _articles/mesh-current.md %})
+
+![]({{ site.baseurl }}{% link i/video.svg %}) [Mesh Current Method (steps 1 to 3)]({{ site.baseurl }}{% link _videos/mesh-current-steps1to3.md %})
+
+![]({{ site.baseurl }}{% link i/video.svg %}) [Mesh Current Method (step 4)]({{ site.baseurl }}{% link _videos/mesh-current-steps4and5.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %})
 

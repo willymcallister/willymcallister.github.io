@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Circuit analysis overview"
+title:  "DC circuit analysis overview"
 author: Willy McAllister
 comments: true
 ---
