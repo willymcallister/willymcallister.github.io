@@ -198,7 +198,7 @@ The index $n$ counts the element voltages around the loop.
 
 <details>
 <summary>What is that funny zig-zag symbol?</summary>
-<p>The $\sum$ symbol is the Greek letter capital Sigma. In mathematical notation it is the <em>summation</em> operation. It adds up a series of related quantities. The expression</p>
+<p>The $\sum$ symbol is the Greek letter capital Sigma. In mathematical notation it is the <em>summation</em> operation. It adds up a series of related quantities. The expression,</p>
 
 <p>$v_1 + v_2 + v_3 + v_4 = 0$</p>
 

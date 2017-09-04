@@ -15,6 +15,8 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Application of the fundamental laws]({{ site.baseurl }}{% link _articles/fundamental-laws.md %})
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Node Voltage Method]({{ site.baseurl }}{% link _articles/node-voltage.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Node Voltage Method (steps 1 to 4)]({{ site.baseurl }}{% link _videos/node-voltage-steps1to4.md %})

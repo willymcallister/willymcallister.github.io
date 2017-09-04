@@ -6,7 +6,7 @@ youtubeID: j8LHrm3_brk
 comments: true
 ---
 
-We solve a circuit by writing Kirchhoff's Voltage Law in terms of "mesh currents." This video covers the first three steps of the Mesh Current Method.
+We solve a circuit by writing Kirchhoff's Voltage Law in terms of *mesh currents*. This video covers the first three steps of the Mesh Current Method.
 
 The steps of the Mesh Current Method are,
 
