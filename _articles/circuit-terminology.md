@@ -20,6 +20,13 @@ We are developing methods for analyzing a circuit. So far we've defined the most
 ### Where we're headed 
 {:.no_toc}
 
+Definitions and concept checks for important features of a circuit, including,
+* Symbols
+* Wires (lines) and junctions (dots)
+* Node and Branch
+* Loop and Mesh
+* Reference node (ground)
+
 ----
 
 ## Circuit terms

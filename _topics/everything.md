@@ -1,9 +1,18 @@
 ---
-layout: page
+layout: topic
 title: Everything
 author: Willy McAllister
 comments: true
 ---
+
+### Topic pages
+
+{% assign topics = site.topics | sort  %}
+<ul>
+  {% for t in topics %}
+    <li><a href="{{ t.url | prepend: site.baseurl }}">{{ t.title }}</a></li>
+  {% endfor %}
+</ul> 
 
 ### Articles
 
