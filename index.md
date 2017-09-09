@@ -5,36 +5,37 @@ author: Willy McAllister
 comments: false
 ---
 
-Welcome to Spinning Numbers! Learn about the world of electricity and electrical engineering. The concepts are taught at the level of an undergraduate EE student.  
+Welcome to Spinning Numbers! Learn about electricity and electrical engineering, explained at the level of an undergraduate EE student.  
 
-### [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
-The shiny new feature of Spinning Numbers is a circuit simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}).  
-Run the [Circuit sandbox in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [Circuit sandbox en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
+### [Circuit sandbox <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
+
+Spinning Numbers has a circuit simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}).    
+Run the Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
-Become familiar with the most important electrical quantities: charge, current and voltage.
+Become familiar with the most important electrical quantities: charge, current, and voltage.
 
 ### [Circuit elements]({{ site.baseurl }}{% link _topics/topic-circuit-elements.md %})
 Circuits are made of resistors, capacitors, inductors, and voltage and sources.
 
 ### [Circuits with resistors]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %})
-Resistors in series and parallel, delta-wye networks, and the voltage divider.
+Resistors in series and parallel, the voltage divider, and delta-wye networks.
 
 ### [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})
-Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage method, mesh and loop current methods. Linearity and superposition.
+Figure out the currents and voltges in a DC circuit using Kirchhoff's Laws, node voltage method, mesh and loop current methods. Linearity and superposition.
 
 ### [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %})
-Natural response is what simple circuits do with stored internal energy. Forced response is what happens when an external signal is applied. RC, RL, LC, and RLC natural response. 
+Natural response is what a circuit does with its own internal stored energy. Forced response is what happens when you apply an external signal. Learn a trick for quickly sketching exponential waveforms.
+
+### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
+The *operational amplifier* is the building block of analog electronics.
 
 ### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? <img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> 
 
-### [New]({{ site.baseurl }}{% link _topics/topic-new.md %})
-Here's a list of [new material]({{ site.baseurl }}{% link _articles/topic-new.md %}) created for Spinning Numbers you won't find on KA.
-
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
-Here's a list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topic areas, articles, videos, images, other files.
+Here's a list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topic areas, articles, videos, images, etc.
 
 ## Coming soon
 

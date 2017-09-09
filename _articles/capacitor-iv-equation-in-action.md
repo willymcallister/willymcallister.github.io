@@ -31,12 +31,24 @@ The two forms of the capacitor's $i$-$v$ equation are:
 $i = \text C \,\dfrac{dv}{dt}\qquad$ and  $\quad\displaystyle v = \dfrac1{\text C}\, \int_{\,0}^{\,T} i\,\text dt + v_0$
 
 $\text C$ is the *capacitance*, a physical property of the capacitor.  
-$\text C$ is also the scale factor in the relationship between $i$ and $dv/dt$.  
-$\text C$ determines how much $i$ gets generated for a given amount of $dv/dt$.  
+$\text C$ is also the scale factor between $i$ and $dv/dt$.  
+$\text C$ tells you how much $i$ gets generated for a given amount of $dv/dt$.  
 $v_0$ is the initial voltage across the capacitor, at $t=0$. 
 
-In this article we'll work with the integral form of the capacitor equation. 
+<details>
+<summary>calculus notation: $di/dt$</summary>
+<p>$v = \text C\,\dfrac{dv}{dt}$</p>
 
+<p>$d$ is calculus notation for 'differential', or "a tiny change in ...". For example, $dt$ means 'a tiny change in time'. When you see it in a ratio, like $dv/dt$, that means, "a tiny change in $v$ (voltage) for each tiny change in time" An expression like $dv/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-intro/ab-defining-derivative/v/calculus-derivatives-1-new-hd-version">derivative</a>. This derivative is the slope of current when it is plotted against time.</p>
+</details>
+
+<details>
+<summary>calculus notation: $\int$ </summary>
+<p>$\displaystyle v = \dfrac1{\text C}\, \int_{\,0}^{\,T} i\,\text dt + v_0$</p>
+<p>The loopy $\int$ symbol is also from calculus. It is an <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-antiderivatives-ftc/ab-antiderivatives-intro/v/antiderivatives-and-indefinite-integrals">integral</a> sign. It's meaning is similar to the summation symbol $\Sigma$. In the capacitor equation, the integral sign means you add up the products of the current times a tiny interval of time, $dt$, starting at time $t=0$ and stopping at time $t=T$. Integration is the opposite of taking the derivative.</p>
+</details>
+
+In this article we'll work with the integral form of the capacitor equation. 
 Our example circuit is a current source connected to a $1\,\mu\text F$ capacitor.
 
 ![Capacitor and current source]({{ site.baseurl }}{% link i/capacitor_in_action1.svg %}){: .centered :}
