@@ -16,16 +16,18 @@ Run the Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/
 Become familiar with the most important electrical quantities: charge, current, and voltage.
 
 ### [Circuit elements]({{ site.baseurl }}{% link _topics/topic-circuit-elements.md %})
-Circuits are made of resistors, capacitors, inductors, and voltage and sources.
+Circuits are made of resistors, capacitors, inductors, and power sources.
 
 ### [Circuits with resistors]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %})
-Resistors in series and parallel, the voltage divider, and delta-wye networks.
+Resistors in series and parallel, the voltage divider, delta-wye resistor networks.
 
 ### [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})
 Figure out the currents and voltges in a DC circuit using Kirchhoff's Laws, node voltage method, mesh and loop current methods. Linearity and superposition.
 
 ### [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %})
-Natural response is what a circuit does with its own internal stored energy. Forced response is what happens when you apply an external signal. Learn a trick for quickly sketching exponential waveforms.
+Natural response is what a circuit does with its own internal stored energy.  
+Forced response is what happens when you apply an external signal.  
+Learn a trick for quickly sketching exponential waveforms.
 
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
 The *operational amplifier* is the building block of analog electronics.
