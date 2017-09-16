@@ -1,0 +1,409 @@
+0:00:00.800,0:00:04.110
+Okay, now we're going to work on our
+first op-amp circuit.
+
+0:00:04.110,0:00:08.610
+here's what the circuit is going to look
+like watch where I put the plus sign is
+
+0:00:08.610,0:00:22.890
+on the top on this one and we're going
+to have a voltage source over here this
+
+0:00:22.890,0:00:31.529
+will be plus or minus Vin that's our
+input signal and over on the output will
+
+0:00:31.529,0:00:40.800
+have Vout and it's hooked up this way
+there's a resistor another resistor to
+
+0:00:40.800,0:00:48.300
+ground and this goes back to the
+inverting input and we're going to look
+
+0:00:48.300,0:00:52.170
+at this circuit and see what it does
+now we know that connected up here the
+
+0:00:52.170,0:00:58.760
+power supplies hooked up to these points
+here and the ground symbol is zero volts
+
+0:00:58.760,0:01:02.940
+and we want to analyze this
+circuit and what do we know about this
+
+0:01:02.940,0:01:10.200
+we know that Vout equals some gain. We'll write the gain right there, a big big
+
+0:01:10.200,0:01:18.900
+number times v-, sorry v+ minus v-.
+And let's label that v+ is this
+
+0:01:18.900,0:01:25.170
+point right here and v- is this
+point right here. And we also know that
+
+0:01:25.170,0:01:34.770
+the currents, let's call them i+ and
+i- equals zero and that's the
+
+0:01:34.770,0:01:39.299
+currents going in here this is i-
+here and that's i+. And we know those
+
+0:01:39.299,0:01:47.579
+are both zero. So now what I want to do
+is I want to describe our amplifier with
+
+0:01:47.579,0:01:52.079
+some sort of a circuit model with these
+properties, alright? And the circuit model
+
+0:01:52.079,0:01:59.820
+for an amplifier looks like this: We have
+v- here v+ here and over on
+
+0:01:59.820,0:02:04.290
+this side we haven't here's a new symbol
+that you haven't seen before it's
+
+0:02:04.290,0:02:09.649
+usually drawn as a diamond shape and
+this is a voltage source
+
+0:02:10.649,0:02:18.950
+but is this it's a special kind of
+voltage source it's called a voltage
+
+0:02:21.920,0:02:30.170
+dependent voltage source
+
+0:02:32.849,0:02:36.959
+and it's the same as a regular ideal
+voltage source except for one thing, it
+
+0:02:36.959,0:02:45.920
+says that the V in this case Vout
+equals gain times v+ minus v-
+
+0:02:45.920,0:02:51.689
+so the voltage here depends on the
+voltage somewhere else and that's what
+
+0:02:51.689,0:02:54.030
+makes it a voltage dependent that's what
+that means
+
+0:02:54.030,0:02:59.549
+so we've just taken our gain expression
+here and drawn a circuit diagram that
+
+0:02:59.549,0:03:06.150
+represents our voltage expression for
+our circuit now specifically over here
+
+0:03:06.150,0:03:11.549
+we draw on an open circuit on v+ + v -
+so we know that those currents are zero
+
+0:03:11.549,0:03:18.449
+so this model this circuit sketch
+represents our two properties of our of
+
+0:03:18.449,0:03:25.349
+our op-amp. So I'm going to take a second here and I'm going to draw the rest
+
+0:03:25.349,0:03:33.510
+of our circuit surrounding this model
+but I need a little bit more space.
+
+0:03:33.510,0:03:39.290
+So let's put in the rest of our circuit
+here we had our voltage source
+
+0:03:40.069,0:03:50.069
+connected to v+ and that's Vin, and
+over here we had Vout let's check V out
+
+0:03:50.069,0:04:01.979
+was connected to two resistors and the
+bottom is connected to ground and this
+
+0:04:01.979,0:04:10.229
+was connected there. So what our goal is
+right now we want to find Vout as a
+
+0:04:10.229,0:04:19.139
+function of Vin. That's what we're
+shooting for so let's see if we can do
+
+0:04:19.139,0:04:24.630
+that. Let's give our resistor some names,
+let's call this R1 and R2, our favorite
+
+0:04:24.630,0:04:30.690
+names always. And now everything is
+labeled. Oh, and we can label this point
+
+0:04:30.690,0:04:36.740
+here and this point we can call v-, v-
+
+0:04:38.520,0:04:44.830
+So that's our two unknowns. Our unknowns are Vo (Vout), and V-. So let's
+
+0:04:44.830,0:04:49.240
+see if we can find them. So what I'm
+going to do is just start writing some
+
+0:04:49.240,0:04:54.520
+expressions for things that I know are
+true. For example, I know that I know that
+
+0:04:54.520,0:05:06.460
+Vout equals A times v+  -   v-.  Alright, that's what
+
+0:05:06.460,0:05:11.380
+this op-amp is telling us is true. Now
+what else do I know? Let's look at this
+
+0:05:11.380,0:05:16.390
+resistor chain here. This resistor chain
+actually looks a lot like a voltage
+
+0:05:16.390,0:05:20.320
+divider. And it's actually a very good
+voltage divider. Remember we said this
+
+0:05:20.320,0:05:26.850
+current here, what is this current here?
+It's zero. I can use the voltage divider
+
+0:05:26.850,0:05:31.600
+expression that I know. In that case I
+know that v-, this is the voltage
+
+0:05:31.600,0:05:42.960
+divider equation, equals Vout times what?
+times the bottom resistor. Remember this?
+
+0:05:42.960,0:05:52.810
+R2 over R1 plus R2. So the voltage
+divider expression says that when you
+
+0:05:52.810,0:05:56.860
+have a stack of resistors like this with
+a voltage on the top and ground on the
+
+0:05:56.860,0:06:06.190
+bottom, this is the expression for the
+voltage at the mid point. Okay, so what
+
+0:06:06.190,0:06:11.140
+I'm going to do next is I'm going to
+take this expression and stuff it right
+
+0:06:11.140,0:06:19.840
+in there. Let's do that see if we get
+enough room okay let's go over here now
+
+0:06:19.840,0:06:36.430
+I can say that Vout equals a times v+ minus Vout times R2 over R1 plus
+
+0:06:36.430,0:06:38.760
+R2.
+
+0:06:39.950,0:06:45.300
+Right, so far so good. Let's keep going,
+let's keep working on this Vo
+
+0:06:45.300,0:07:00.500
+equals a times v+ minus A Vo
+R2 over R1 plus R2.
+
+0:07:01.430,0:07:06.660
+All right, so now I'm going to gather all
+the V naught terms over on the left hand
+
+0:07:06.660,0:07:21.300
+side. Let's try that so that gives me V
+naught plus A V naught times R2 over R1
+
+0:07:21.300,0:07:30.900
+plus R2. And that equals A times v+,
+and actually I can change that now,
+
+0:07:30.900,0:07:43.730
+v+ is what? v+ is Vin.  Okay, let's
+keep going. I can factor out the V naught.
+
+0:07:43.730,0:08:01.470
+V naught is 1 plus A R2 over R1 plus R2, and that equals A Vin. Alright, so
+
+0:08:01.470,0:08:06.990
+we're getting close and our original
+goal, we want to find Vout in terms of
+
+0:08:06.990,0:08:12.120
+Vin. So I'm going to take this whole
+expression here and divide it over to
+
+0:08:12.120,0:08:16.050
+the other side, so then I have just V
+naught on this side and Vin on the
+
+0:08:16.050,0:08:27.800
+other side. Let's make some more room. I
+can do that. I can say V naught equals A
+
+0:08:28.250,0:08:43.250
+Vin divided by this big ol'
+expression 1 plus A R2 over R1 plus R2.
+
+0:08:43.250,0:08:50.790
+Alright, so that's our answer. That's
+the answer, that's Vout equals some
+
+0:08:50.790,0:08:54.800
+function of Vin.
+
+0:08:54.949,0:08:58.980
+Now I want to make a really important
+observation here. We're going to, this is
+
+0:08:58.980,0:09:03.899
+going to be a real cool simplification.
+Okay so this is the point where op-amp
+
+0:09:03.899,0:09:08.730
+theory gets really cool. Watch what
+happens here. We know that A is a giant
+
+0:09:08.730,0:09:12.899
+number. A is something like 10 to the
+fifth or 10 to the sixth, and it's
+
+0:09:12.899,0:09:17.160
+whatever we have here, if our resistors
+are sort of normal sized resistors, we
+
+0:09:17.160,0:09:21.389
+know that a giant number times a normal
+number is still going to be a very big
+
+0:09:21.389,0:09:27.029
+number compared to 1. So this 1 is
+almost insignificant in this expression
+
+0:09:27.029,0:09:31.889
+down here. So what I'm going to do, bear with me, I'm going to cross it out, I'm going to say
+
+0:09:31.889,0:09:36.509
+no, I don't need that anymore.
+So if this if this number here if A is a
+
+0:09:36.509,0:09:40.970
+million, 10 to the sixth, and this
+expression here is something like 1/2
+
+0:09:40.970,0:09:47.100
+then this total thing is 1/2 of 10
+to the 6 or a half a million, and that's
+
+0:09:47.100,0:09:52.250
+huge compared to 1, so I can pretty
+safely ignore the 1, it's very very small.
+
+0:09:52.250,0:09:57.839
+Now when I do that, well look what
+happens next. Now I have A top and bottom
+
+0:09:57.839,0:10:03.480
+in the expression and I can cancel that,
+too. So the A goes away. Now this is
+
+0:10:03.480,0:10:07.649
+pretty astonishing. We have this
+amplifier circuit, and all of a sudden I
+
+0:10:07.649,0:10:12.029
+have an expression here where A doesn't
+appear the gain does not appear. And what
+
+0:10:12.029,0:10:20.910
+does this turn into? This is called V
+naught equals Vin times what? times R1
+
+0:10:20.910,0:10:31.740
+plus R2 divided by R2. So our amplifier,
+our feedback circuit, came down to Vout
+
+0:10:31.740,0:10:37.490
+is Vin multiplied by the ratio of the
+resistors that we added to the circuit.
+
+0:10:37.490,0:10:41.790
+This is one of the really cool
+properties of using op amps in circuits,
+
+0:10:41.790,0:10:46.379
+really high gain amplifiers. What we've
+done is we have chosen the gain of our
+
+0:10:46.379,0:10:51.029
+circuit based on the components that we
+pick to add to the amplifier. It's not
+
+0:10:51.029,0:10:55.379
+determined by the gain of the amplifier
+as long as the amplifier gain is really
+
+0:10:55.379,0:11:01.380
+really big. And for op amps that's a
+good assumption it is really big. So this
+
+0:11:01.380,0:11:06.779
+expression came out with a positive sign,
+right, all the R's are positive values, so
+
+0:11:06.779,0:11:12.950
+this
+is referred to as a non-inverting op-amp
+
+0:11:15.019,0:11:25.829
+circuit, amplifier. So just to do a quick
+example, if R1 and R2 are the same then
+
+0:11:25.829,0:11:30.779
+we end up with an expression that looks
+like this Vout equals R1 plus R2, R
+
+0:11:30.779,0:11:42.779
+plus R over R is equal to 2, so the gain
+is 2 times Vin. So just to do a quick
+
+0:11:42.779,0:11:51.420
+sketch, just to remind ourselves what
+this looks like, this was Vin and we had
+
+0:11:51.420,0:12:05.399
+what out here? We had a resistor and a
+resistor to ground, and this is Vout.
+
+0:12:05.399,0:12:09.329
+So this is the configuration of a
+non-inverting amplifier built with an
+
+0:12:09.329,0:12:15.240
+op-amp. The two resistors in this voltage
+divider string connected to the negative
+
+0:12:15.240,0:12:19.110
+input, and it's going to be one of the
+familiar patterns that you'll see over
+
+0:12:19.110,0:12:24.649
+and over again as you read schematics
+and you design your own circuits.
+

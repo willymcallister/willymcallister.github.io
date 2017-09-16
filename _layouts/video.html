@@ -20,6 +20,10 @@ layout: default
 	</div>
 
 	<div class="youtube_div">
+		{% if page.transcript %}
+			<a class="youtube_link" href="{{ site.baseurl }}/cc/{{page.transcript}}">video transcript</a><br>
+	    {% endif %}
+
 	<a class="youtube_link" href="https://www.youtube.com/watch?v={{page.youtubeID}}">video on YouTube</a>
 	</div>
 

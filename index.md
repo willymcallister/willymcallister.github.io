@@ -29,22 +29,18 @@ Natural response is what a circuit does with its own internal stored energy.
 Forced response is what happens when you apply an external signal.  
 Learn a trick for quickly sketching exponential waveforms.
 
+### [AC circuit analysis]({{ site.baseurl }}{% link _topics/topic-ac-analysis.md %})
+We limit signals to be only sine waves, and develop an analysis method based on complex exponentials. This ends up being *much* simpler than solving differential equations from scratch every time.
+
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
 The *operational amplifier* is the building block of analog electronics.
-
-### [What's with the name?]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})
-
-Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? <img class="sn-logo" src="/i/sn_logo2.svg" alt="logo"> 
 
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
 Here's a list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topic areas, articles, videos, images, etc.
 
-## Coming soon
-
-### AC circuit analysis
-We limit signals to be only sine waves, and then develop an analysis method based on complex exponentials. This ends up being *much* simpler than solving differential equations from scratch every time.
+Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? [<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) 
 
 ----
-These videos and articles got their start at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. I hope you enjoy them.  
+These videos and articles began as my contribution to Khan Academy where I was the Electrical Engineering Content Fellow in 2016. I hope you enjoy them.  
    \- Willy McAllister
 
