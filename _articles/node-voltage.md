@@ -264,7 +264,7 @@ If you want to work this problem on your own, go for it! Copy this schematic and
 
 <p><img src="../i/node_voltage7.svg"></p>
 
-<p>Take a good look at the numerators of each scribble. Notice how the order of the voltages controls the direction of the current arrow.</p> 
+<p>Take a good look at the numerators of each scribble. Notice how you can pick the order of the voltages to control the direction of the current arrow. The current in the $10\,\Omega$ resistor is specified two different ways by exchanging the voltage terms.</p> 
 
 <p>Node $\greenD b$: $\qquad+\dfrac{v_a - v_b}{25} - \dfrac{v_b}{50} + \dfrac{v_c - v_b}{10} = 0$</p>
 
