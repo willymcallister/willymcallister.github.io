@@ -5,15 +5,13 @@ author: Willy McAllister
 comments: true
 ---
 
-Semiconductor devices considered as circuit elements.
+Using semiconductor devices in circuits.
 
 ----
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Diode]({{ site.baseurl }}{% link _videos/diode.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Diode graphical solution]({{ site.baseurl }}{% link _videos/diode-graphical-solution.md %})
-
-![]({{ site.baseurl }}{% link i/article.svg %}) [Diode circuit element]({{ site.baseurl }}{% link _articles/diode-circuit-element.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Diode introduction]({{ site.baseurl }}{% link _articles/diode-introduction.md %})
 

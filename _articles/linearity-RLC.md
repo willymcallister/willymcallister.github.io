@@ -110,7 +110,7 @@ Some examples of greatness: [Kirchhoff's Current Law]({{ site.baseurl }}{% link 
 
 ## Non-linear electronic components
 
-It might help to talk a little bit something that is *not* a linear device, just for contrast. A [diode]({{ site.baseurl }}{% link _articles/diode-circuit-element.md %}) is a kind of non-linear semiconductor device. 
+It might help to talk a little bit something that is *not* a linear device, just for contrast. A [diode]({{ site.baseurl }}{% link _articles/diode-introduction.md %}) is a kind of non-linear semiconductor device. 
 
 ![Diode circuit symbol](https://ka-perseus-images.s3.amazonaws.com/1f8173073dbe9f75bb92c6d4185a9a05e565ba6e.svg){: height="100px"}{: .centered }
 
