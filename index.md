@@ -35,6 +35,9 @@ We limit signals to be only sine waves, and develop an analysis method based on 
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
 The *operational amplifier* is the building block of analog electronics.
 
+### [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) 
+Using a diode in a circuit.
+
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
 Here's a list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topic areas, articles, videos, images, etc.
 

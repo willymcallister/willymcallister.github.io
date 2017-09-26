@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: none;
+    }
+
+    svg .path {
+      stroke-width: 4px;
+      fill: none;
+      stroke-linecap: round;
+    }
+
+    svg text {
+      font: 16px katex_main;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
+  var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
+
+  var 
+      xmin = -1,
+      xmax = +5,
+      ymin = -1,
+      ymax = +35,
+      hScale = 60,
+      vScale = 10,
+      width  = (xmax - xmin) * hScale,     // width of graph axes pixels
+      height = (ymax - ymin) * vScale,     // height of graph axes pixels
+      xOrigin = -(xmin * hScale);          // pixels
+      yOrigin = height + (ymin * vScale);  // pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + padding.left + padding.right)  //width of image
+      .attr("height", height + padding.top + padding.bottom)  //height of image
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+    .append("g")  //group to build image inside of, offset by padding from border
+      .attr("transform",
+        "translate(" + padding.left + "," + padding.top + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  //Original 120 ohm resistor load line
+  svgContainer.append("line")
+    .attr("x1", xScale(0))
+    .attr("y1", yScale(27.5))
+    .attr("x2", xScale(3.3))
+    .attr("y2", yScale(0))
+    .attr("stroke-width", 4)
+    .style("stroke-linecap", "round")
+    .attr("stroke", "#c8ecc6");
+
+  //New 100 ohm resistor load line
+  svgContainer.append("line")
+    .attr("x1", xScale(0))
+    .attr("y1", yScale(33))
+    .attr("x2", xScale(3.3))
+    .attr("y2", yScale(0))
+    .attr("stroke-width", 4)
+    .style("stroke-linecap", "round")
+    .attr("stroke", "#c8ecc6");
+
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .ticks(8)
+    .tickSizeOuter(0);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", function() {
+        return "translate(" + 0 + "," + yOrigin + ")";
+      })
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dx", ".71em")
+      .text("v (volts)")
+      .style("text-anchor", "start")
+      .style("font-size", "16px")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .ticks(8)
+      .tickSizeOuter(0);
+
+  var ya = svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dy", "-12px")
+      .text("i (mA)")
+      .style("text-anchor", "middle")
+      .style("font-size", "16px")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  // remove "0"s near origin
+  svgContainer.selectAll(".tick text")
+    .filter(function (d) { return d === 0;  })
+    .remove();
+
+  // Waveform - silicon diode i-v curve with no resistor load line
+  var Io = 2.38e-15;      // LED Io (in mA)
+  var k = 1.380e-23;
+  var q = 1.602e-19;
+  var T = 300;
+  var N = 1.85;
+  var kTonq = k*T/q;
+
+  var nPoints = 100;
+  var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 101
+  var fromX = -2;
+  var toX = 2;
+  var xData = samples.map(function (i) 
+    { return ((i / nPoints) * (toX - fromX)) + fromX;
+    });
+
+  var diode = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(Io * (Math.exp(d/(N*kTonq)) - 1)); });
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', diode(xData))
+    .style("fill", "none")
+    .style("stroke", "#11ACCD");
+
+  //No resistor load line
+  svgContainer.append("line")
+    .attr("x1", xScale(3.3))
+    .attr("y1", yScale(36))
+    .attr("x2", xScale(3.3))
+    .attr("y2", yScale(0))
+    .attr("stroke-width", 4)
+    .style("stroke-linecap", "round")
+    .attr("stroke", "#74CF70");   // KA CS2
+
+  //Labels
+  svgContainer.append("text")
+    .attr("x", xScale(2))
+    .attr("y", yScale(20))
+    .text("diode")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style('fill', 'black');
+
+  svgContainer.append("text")
+    .attr("x", xScale(3.5))
+    .attr("y", yScale(15))
+    .text("resistor")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style('fill', 'black');
+
+  svgContainer.append("text")
+    .attr("x", xScale(3.5))
+    .attr("y", yScale(17))
+    .text("0 Ω")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style('fill', 'black');
+
+</script>
+</body>
+</html>

@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<!-- http://bl.ocks.org/veltman/7295691 4-quadrant plot with grid -->
 <head>
-<meta charset="utf-8">
-<style>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
 
-svg .grid {
-  stroke-width: 0.5px;
-  stroke: #BBB;
-  opacity: 0.5;
-}
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
 
-svg .domain {
-  stroke-width: 3px;
-  stroke: black;
-}
+    svg {
+      border: none;
+    }
 
-svg {
-  border: none;
-}
+    svg .path {
+      stroke-width: 4px;
+      /*stroke: #6495ED;       graphie blue */
+      stroke: #11ACCD;      /* KA math1     */
+      fill: none;
+    }
 
-svg .path {
-  stroke-width: 4px;
-  /*stroke: #6495ED;      /* graphie blue */
-  /*stroke: #11ACCD;      /* KA math1     */
-  stroke: #E07D10;        /* KA econ1     */
-  stroke-linecap: round;
-  fill: none;
-}
+    svg text {
+      font: 16px katex_main;
+    }
 
-svg text {
-  font: 12px katex_math;
-}
-
-</style>
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
 </head>
 
 <body>
@@ -41,15 +40,15 @@ svg text {
 <script>
 // http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
   var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
-  var padding = { top:40, right:80, bottom:40, left:40 };  // padding inside border
+  var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
 
   var 
-      xmin = -1,
-      xmax = +5,
-      ymin = -1,
-      ymax = +8,
-      hScale = 40,
-      vScale = 20,
+      xmin = -.15,
+      xmax = +.15,
+      ymin = -2,
+      ymax = +6,
+      hScale = 1000,
+      vScale = 40,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
       xOrigin = -(xmin * hScale);          // pixels
@@ -84,7 +83,7 @@ svg text {
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("t (msec)")
+      .text("v (volts)")
       .style("text-anchor", "start")
       .style("font-size", "16px")
       .style('fill', 'black');
@@ -111,8 +110,8 @@ svg text {
       .call(yAxis)
     .append("text")
       .attr("dy", "-12px")
-      .text("v(volts)")
-      .style("text-anchor", "start")
+      .text("i (picoamp)")
+      .style("text-anchor", "middle")
       .style("font-size", "16px")
       .style("fill", "black");
 
@@ -130,23 +129,39 @@ svg text {
     .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - capacitor in action, voltage ramp
-  var nPoints = 100;
-  var samples = d3.range(0, nPoints + 1)
+  // Waveform - silicon diode i-v curve
+  //var Io = 1e-9;      // normal Io (in mA)
+  var Io = 1;           // close-up  (change the i label, too)
+  var k = 1.380e-23;
+  var q = 1.602e-19;
+  var T = 400;
+  var kTonq = k*T/q;
+
+  var nPoints = 200;
+  var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 101
+  var fromX = -2;
+  var toX = 0.07;
   var xData = samples.map(function (i) 
-    { return ((i / nPoints) * (xmax-xmin)) + xmin;
+    { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var wave = [ { "x": -1,  "y": 0}, { "x": 0,  "y": 0},
-               { "x":  3,  "y": 6}, { "x": 5,  "y": 6}];
+  var diode = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(Io * (Math.exp(d/kTonq) - 1)); });
 
-  var pulse = d3.line()
-    .x(function (d) { return xScale(d.x); })
-    .y(function (d) { return yScale(d.y); });
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', diode(xData))
+    .style("fill", "none")
+    .style("stroke", "#11ACCD")
+    .style("stroke-width", "3px");
 
-  var path = svgContainer.append('svg:path')
-      .classed("path", true)
-      .attr('d', pulse(wave));
+  svgContainer.append("text")
+    .attr("x", xScale(-.13))
+    .attr("y", yScale(-1.5))
+    .text("-Is")
+    .style("text-anchor", "start")
+    .style("font-size", "20px");
 
 </script>
 </body>
