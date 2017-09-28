@@ -170,7 +170,7 @@ Having $3$ nodes and $6$ loops is a lot of possibilities for coming up with $E=5
 
 ### What is an *independent* equation?
 
-An equation is *linearly independent* if it *can't* be derived by *linear combinations* other equations. Linear combinations are when you merge two equations by adding, subtracting, or multiplying by a constant. There is an example in the next paragraph. 
+An equation is *linearly independent* if it *can't* be derived by *linear combinations* other equations. Linear combinations are when you merge two equations by adding, subtracting, or multiplying by a constant. There is an example in the next paragraph showing how in a system of KCL equations, one of them is *not* independent because it *can* be derived from other equations. 
 
 ### How many independent equations come from KCL?
 
