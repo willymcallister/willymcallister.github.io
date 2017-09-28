@@ -37,6 +37,8 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Mesh Current Method (step 4)]({{ site.baseurl }}{% link _videos/mesh-current-steps4and5.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [How circuits become equations]({{ site.baseurl }}{% link _articles/how-circuits-become-equations.md %})
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %})

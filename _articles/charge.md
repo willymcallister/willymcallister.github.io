@@ -6,8 +6,7 @@ comments: true
 youtubeID: HpipBkRMm8U
 ---
 
-Electricity begins with *electric force*.  
-We explain electric force by saying matter has a property called *charge*.  
+Electricity begins with *electric force*.  Electric force can be explained by saying matter has a property called *charge*.  
 
 Written by Willy McAllister.
 
@@ -151,7 +150,7 @@ Check out this marvelous 1959 educational video with Professor Eric Rogers from 
 </div>
 </p>
 
-## The coulomb - the unit of charge
+## Coulomb - the unit of charge
 
 Early electrical scientists needed a way to talk about amounts of charge. Since they didn't know about electrons and protons they couldn't define amounts of charge based on those particles. So charge was first defined based on a certain current flowing in a circuit. 
 
@@ -176,7 +175,7 @@ You can think of a coulomb as a bucket of charge, like a bucket of water. You ca
 <p>This was known as the <em>silver ampere</em>.</p>
 </details>
 
-## The electron
+## Electron
 
 The electron was discovered in 1892 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). We now know the smallest charged objects are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amounts of charge on the electron and proton are identical, with opposite signs. The mass of electron is $1000\times$ less than a proton, but the charge of the two particles is identical. Nature made it that way. 
 
