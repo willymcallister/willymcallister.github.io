@@ -21,6 +21,8 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (2 of 2)]({{ site.baseurl }}{% link _videos/inductor-kickback2.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC natural response - intuition]({{ site.baseurl }}{% link _videos/rc-natural-response-intuition.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC natural response - derivation]({{ site.baseurl }}{% link _videos/rc-natural-response-derivation.md %})
