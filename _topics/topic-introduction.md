@@ -23,9 +23,11 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Current direction]({{ site.baseurl }}{% link _videos/current-direction.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
-
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Conventional current]({{ site.baseurl }}{% link _videos/conventional-current.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Conventional current vs. electron current]({{ site.baseurl }}{% link _articles/conventional-vs-electron-current.md %})
+
+![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) - charge, current, voltage, power
 
@@ -35,8 +37,6 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Preparing to study electrical engineering]({{ site.baseurl }}{% link _articles/preparing-to-study-ee.md %})
 
-$$
-
-<strong>Video ![]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![]({{ site.baseurl }}{% link i/article.svg %})</strong>
+## Video ![]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![]({{ site.baseurl }}{% link i/article.svg %})
 
 When you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view the video and have more questions, check out the corresponding article because it may go a little deeper into the topic.
