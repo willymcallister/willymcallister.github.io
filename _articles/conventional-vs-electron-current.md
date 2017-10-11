@@ -61,6 +61,6 @@ Buried within the electron's sign is another coincidence. Franklin introduced th
 
 Scientists assign a single number to the movement of charge, since that's what our instruments report. The conventional habit was to track the movement of positive charge. Seems like an innocent choice; who doesn't like positive things? Electrons happen to be negative, and they are what's moving in most electronic circuits. Does it matter? Should we turn everything around? Naa. This only bugs new students for a week or two, and crabby old engineers who complain about everything.
 
-## Franklin gave us a gift
+## Franklin's gift
 
-In the end, I think Franklin's "mistake" is no mistake at all. It's actually a gift to every engineer and engineering student. It means we really have to understand and appreciate the nature of charge and current.    
+I think Franklin's "mistake" is no mistake at all. It's actually a gift to every engineer and student. It means we really have to understand and appreciate the nature of charge and current.    
