@@ -27,17 +27,17 @@ Written by Willy McAllister.
 
 ## Conventional current is not a "kind" of current
 
-Conventional current is not an old or alternative "theory" of how current works, nor is it a "kind" of current. It is just a shared way of talking about current direction. 
+Conventional current is not an alternative "theory" of current, nor is it a "kind" of current. It is just a shared way of talking about current direction. 
 
 The definition of current is short and simple, 
 
 >Current is the movement of charge.
 
-This simple definition gets interesting (and perhaps confusing) because charge comes in two types, and they move in opposite directions. If negative charge is moving right, then positive charge would be moving left. 
+This simple definition gets interesting (and perhaps confusing) because there are two types of charge, and they move in opposite directions. If negative charge is moving right, then positive charge would be moving left. 
 
 In addition, the instruments we use to measure current (ammeters) can't tell the difference between positive charge moving one way from negative charge moving the other way. An ammeter can only report a single number when it measures current, so it gives us one number for the combined amount of positive and negative charge moving around (see the [definition of current]({{ site.baseurl }}{% link _articles/basic-quantities.md %}#current)). 
 
-Given we have two types of charge and the limitations of an ammeter, the convention (habit) we use to indicate current direction is to identify the direction positive charges are *moving to* (even if no positive charge is present and moving). With this convention, the current arrow points in the direction negative charges (electrons) are *coming from*. 
+Given we have two types of charge and the limitations of an ammeter, the convention (habit) we use to indicate current direction is to identify the direction positive charges are moving (even if no positive charge is present and moving). When we use this convention, the current arrow points in the direction negative charges (electrons) are *coming from*. 
 
 ## Other conventions for direction
 
@@ -57,9 +57,9 @@ This issue about the direction of current arises from some coincidences.
 
 The first was how the electron got its negative sign $(-)$. This is Ben Franklin's contribution. Around the time of his kite/key/lightning experiment he published a theory of electricity that said electricity was made of a single invisible fluid. If you rubbed certain substances against each other (fur and glass rods), one of them gained extra fluid and the other lost or lacked fluid. The electron was discovered $150$ years later. Folks figured out the fluid-lacking material actually had an excess of electrons. That's how the electron got its minus sign.
 
-Buried within the electron's sign is another coincidence. Franklin introduced the names "plus" and "minus" for the two types of charge. That's completely arbitrary. Those names make it seem like some kind of arithmetic is going on. Using names from arithmetic makes sense when combining charges. Opposite charges come together to give you something that's neutral (something that seems like "zero" charge). But we have lots of opposites that are not based on arithmetic signs. On/off, up/down, North/South, red(go)/green(stop), left/right, light/dark. If you were taught, "The convention for the current arrow is to point in the direction the red charge moves", I think there would be far less anxiety surrounding current direction, even if green charge is what moves in metal wires. 
+Buried within the electron's sign is another coincidence. Franklin introduced the names "plus" and "minus" for the two types of charge. That's completely arbitrary. Those names make it seem like some kind of arithmetic is going on. Using names from arithmetic serves us well when combining charges. Opposite charges come together to give you something that's neutral (something that seems like "zero" charge). But there are lots of examples of opposites that are not based on arithmetic signs. On/off, up/down, North/South, red(go)/green(stop), left/right, light/dark. If you were taught, "The convention for the current arrow is to point in the direction the red charge moves", I think there would be far less anxiety surrounding current direction, even if green charge is what moves in metal wires. 
 
-Scientists assign a single number to the movement of charge. That's what our instruments report. The conventional habit was to track the movement of positive charge. Seems like an innocent choice; who doesn't like positive things? Electrons happen to be negative, and they are what's moving in most electronic circuits. Does it matter? Naa. This only bugs new students for a week or two, and crabby old engineers who complain about everything.
+Scientists assign a single number to the movement of charge, since that's what our instruments report. The conventional habit was to track the movement of positive charge. Seems like an innocent choice; who doesn't like positive things? Electrons happen to be negative, and they are what's moving in most electronic circuits. Does it matter? Should we turn everything around? Naa. This only bugs new students for a week or two, and crabby old engineers who complain about everything.
 
 ## Franklin gave us a gift
 
