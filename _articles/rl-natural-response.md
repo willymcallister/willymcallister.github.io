@@ -7,6 +7,8 @@ comments: true
 
 This will become the article on RL natural response.
 
+There is a link to this article in the Epilog of RC Natural Response.
+
 Written by Willy McAllister.
 
 ----

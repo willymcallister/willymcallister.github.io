@@ -283,7 +283,7 @@ The time constant determines how fast the exponential curve comes down to zero. 
 ![RC natural response example 1]({{ site.baseurl }}{% link i/rc_natural_response4.svg %}){: .centered :}{: height="200px"}
 
 For the natural response circuit,  
-let $\text R = 3 \,\text{k}\Omega$, $\text C = 1 \,\mu\text{F}$, and $v(0) = 1.4 \,\text{V}$.  
+let $\text R = 3 \,\text k\Omega$, $\text C = 1 \,\mu\text F$, and $v(0) = 1.4 \,\text V$.  
 
 **a. Write the expression for $v(t)$**  
 **b. What is $v(t)$ when $t = \text{RC}$ ?**  
@@ -331,7 +331,7 @@ When time equals the time constant, $\text{RC}$, the voltage is down from its in
 
 ![RC natural response example 2]({{ site.baseurl }}{% link i/rc_natural_response5.svg %}){: .centered :}{: height="200px"}
 
-Let $\text R = 1\,\text{k}\Omega$, $\text C = 1\,\text{pF}$, and $\text V_0 = 1.0\,\text{V}$.
+Let $\text R = 1\,\text{k}\Omega$, $\text C = 1\,\text{pF}$, and $\text V_0 = 1.0\,\text V$.
 
 **a. Write the expression for $v(t)$.**  
 **b. What is the time constant?**  
@@ -360,15 +360,39 @@ With a time constant of $1\,\text{nsec}$, this is a pretty quick circuit.
 
 ![RC natural response example 2 plot]({{ site.baseurl }}{% link i/rc_natural_response_ex2.svg %}){: .centered :}
 
-The $\redB{\text{circle}}$ shows the answer for part **d**.
-
 **d. How many times constants does it take for the voltage to drop below $95\%$ of its initial value?**  
 
-$95\%$ of $V_0 = 0.05$ volts. Reading the plot above we see that happens at around $3\,\text{nsec}$. This corresponds to $3$ time constants. This point is marked by the $\redB{\text{circle}}$.
+$95\%$ below $\text V_0$ is $1.0 - (0.95 \times 1.0) = 0.05$ volts. Looking at the graph we see that happens at around $3\,\text{nsec}$. This corresponds to $3$ time constants. This point is marked by the $\redB{\text{circle}}$ just above in part **c.**
 
 ### Another rule of thumb
 
 Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazingly, this is true for any initial voltage and any $\text{RC}$ product.
+
+## Epilogue
+
+### Is there another way to solve this ODE?
+
+The ODE we solved here is a *separable* differential equation. We used a guessing method. Another method for solving separable differential equations is included as an appendix at the end of [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). The math is more sophisticated, but there is no guessing involved. 
+
+Sal h as a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving asecond-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}).
+
+### $e$ is special
+
+The function $e^x$ either grows ($x>0$) or decays ($x<0$) at some rate, depending on $x$. There are plenty of other functions with this same general shape. Any function that looks like $y^x$ has a similar curve. If we can get the same shape with different values of $y$, like $2^x$ or $10^x$, what's the big deal about this irrational number $e = 2.71828...$? 
+
+The reason we love $e$ more than any other choice is that $e$ is the *one and only* number for which the derivative of $y^x$ is exactly the same as $y^x$. That is, the slope of $e^x$ at every point equals the value of $e^x$.
+
+$\dfrac{\phantom{^x}\text de^x}{\phantom{^x}\text dx\phantom{^x}} = e^x$ 
+
+No muss, no fuss, exactly the same thing. This is worth memorizing.
+
+[//]: # (The \phantom in the previous equation is a trick to typeset the denominator nicely aligned with the numerator. Purely optional.)
+
+### Exponentials occur in nature
+
+The problem we just solved, the natural response or an RC circuit, is representative of things that occur often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
+
+In the broadest terms: **Exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
 
 ## Summary
 
@@ -386,31 +410,3 @@ The $\text{RC}$ circuit can be found everywhere in electronics. Sometimes you cr
     <summary>by accident?</summary>
     <p>In a real-world circuit, wires are always surrounded by other conductive elements, for example, other wires or a metal enclosure. Two conductors separated by an insulator is a capacitor. These capacitors (usually small, usually unwanted) are connected to the wire you care about. Many times you can ignore these so-called <em>parasitic</em> capacitances, but sometimes they play an important role in how the circuit works.</p>
 </details>
-
-## Epilogue
-
-### Are there other ways to solve this ODE?
-
-The ODE we solved here is a *separable* differential equation. We used a guessing method. Another method for solving separable differential equations is included as an appendix at the end of [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). The math is more sophisticated, but there is no guessing involved. Sal's video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) goes into depth on this method. 
-
-Sal talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) when solving second-order differential equations. We use the guessing method again when we solve the $\text{RLC}$ natural response.
-
-### Exponential function $e^x$
-
-The function $e^x$ either grows ($x>0$) or decays ($x<0$) at some rate, depending on $x$. There are plenty of other functions with this same general shape. Any function that looks like $y^x$ has a similar curved shape. If we can get the same shape with different values of $y$, like $2^x$ or $10^x$, what's the big deal about this irrational number $e$? 
-
-The reason we love $e$ more than any other choice is that $e$ is the *one and only* number for which the derivative of $y^x$ is exactly the same as $y^x$. That is, the slope of $e^x$ at every point equals the value of $e^x$.
-
-$\dfrac{\phantom{^x}\text de^x}{\phantom{^x}\text dx\phantom{^x}} = e^x$ 
-
-No muss, no fuss, exactly the same thing. 
-
-[//]: # (The \phantom in the previous equation is a trick to typeset the denominator nicely aligned with the numerator. Purely optional.)
-
-### Exponentials occur in nature
-
-The problem we just solved, the natural response or an RC circuit, is representative of things that occur often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
-
-In the broadest terms: **Exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
-
-

@@ -180,13 +180,12 @@ Power is dissipated by a resistor when current flows through it.
 <p>Power is measured in joules/second (also known as <em>watts</em>).</p>
 
 <h4>Electrical power</h4>
-<p>We know voltage is a measure of energy transfer per unit of charge, $dU/dq$.<br>
-We know current is the rate of flow of charge, $dq/dt$.<br>  
-We can break up $dU/dt$ and express power as,</p>
+
+<p>We know voltage is a measure of energy transfer per unit of charge, $dU/dq$.<br>We know current is the rate of flow of charge, $dq/dt$.<br> We can break up $dU/dt$ and express power as,</p>
 
 <p>$p = \dfrac{dU}{dt} = \left (\dfrac{dU}{dq}\right ) \cdot \left (\dfrac{dq}{dt}\right ) = \left (v \right ) \cdot \left (i \right )$</p>
 
-<p>So in electrical systems we measure power as:</p>
+<p>So in electrical systems we measure power as,</p>
 
 <p>$p = v \,i $</p>
 </details>
@@ -223,7 +222,7 @@ The last two expressions reveal that power in a resistor goes up (or down) propo
 
 ## Capacitor
 
-The basic equation describing a capacitor relates charge on the capacitor to the voltage across the capacitor. 
+The basic equation describing a capacitor relates charge $\text Q$ on the capacitor to the voltage $\text V$ across the capacitor. 
 
 $\text Q = \text C\,\text V$
 
@@ -234,7 +233,7 @@ The constant of proportionality $\text C$ is the *capacitance*. The unit of capa
 <p>Learn how a capacitor is constructed and see how $\text Q = \text C\,\text V$ is derived in this <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-with-capacitors/v/capacitors-and-capacitance">video</a>.</p>
 </details>
 
-If the charge $\text Q$ is able to move, we have a term for this; moving charge is called *current*. Current is the time rate of change of charge, 
+If the charge $\text Q$ is able to move, we have a term for this: moving charge is called *current*. Current is the time rate of change of charge, 
 
 $i = \dfrac{dq\}{dt}$
 

@@ -27,8 +27,6 @@ Written by Willy McAllister.
 
 ## Conventional current is not a "kind" of current
 
-The term "conventional current" sets off alarms for beginners. This term sounds like a new or different kind of current. It would probably generate less confusion if everyone always said "conventional current direction". Whenever you see "conventional current" it is a definition of current *direction*, not a different kind of current.
-
 Conventional current is not an alternative "theory" for current. It is just a shared way of talking about current direction. 
 
 The definition of current is short and simple, 
@@ -42,6 +40,8 @@ This "two types" property isn't something we come across in everyday life. For e
 Another twist: The instruments we use to measure current (ammeters) can't tell the difference between current caused by positive charge moving one way from negative charge moving the other way. An ammeter can only report a single number when it measures current, so it gives us one number for the combined amount of positive and negative charge moving around (see the [definition of current]({{ site.baseurl }}{% link _articles/basic-quantities.md %}#current)). 
 
 We have to make a choice about which way to indicate current direction (the sign of the number on the ammeter display). The convention (the habit) we use to indicate current direction is to say positive current is the direction positive charges move. We use this definition even if no positive charge is on the move. With this convention, the current arrow points in the direction negative charges (electrons) *come from*. 
+
+The term "conventional current" sounds like it may be a new type of current. It would probably generate less confusion if we always said the longer "conventional current direction" with emphasis on *direction*. Whenever you see "conventional current" it is referring to the definition of current *direction*.
 
 ## Other conventions for direction
 

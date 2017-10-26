@@ -18,7 +18,7 @@ Become familiar with the most important electrical quantities: charge, current, 
 ### [Circuit elements]({{ site.baseurl }}{% link _topics/topic-circuit-elements.md %})
 Circuits are made of resistors, capacitors, inductors, and power sources.
 
-### [Circuits with resistors]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %})
+### [Resistor circuits]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %})
 Resistors in series and parallel, the voltage divider, delta-wye resistor networks.
 
 ### [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})

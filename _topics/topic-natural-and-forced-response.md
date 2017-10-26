@@ -17,6 +17,8 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor i-v equations]({{ site.baseurl }}{% link _videos/inductor-iv-equations.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor kickback]({{ site.baseurl }}{% link _articles/inductor-kickback.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (1 of 2)]({{ site.baseurl }}{% link _videos/inductor-kickback1.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (2 of 2)]({{ site.baseurl }}{% link _videos/inductor-kickback2.md %})
