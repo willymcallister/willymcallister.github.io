@@ -57,4 +57,4 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - example]({{ site.baseurl }}{% link _videos/lc-natural-response-example.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response - derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %})
