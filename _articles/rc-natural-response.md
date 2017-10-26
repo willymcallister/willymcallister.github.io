@@ -378,9 +378,9 @@ Sal h as a video on [separable differential equations](https://www.khanacademy.o
 
 ### $e$ is special
 
-The function $e^x$ either grows ($x>0$) or decays ($x<0$) at some rate, depending on $x$. There are plenty of other functions with this same general shape. Any function that looks like $y^x$ has a similar curve. If we can get the same shape with different values of $y$, like $2^x$ or $10^x$, what's the big deal about this irrational number $e = 2.71828...$? 
+The function $e^x$ either grows ($x>0$) or decays ($x<0$) at some rate, depending on $x$. There are plenty of other functions with this same general shape. Any function that looks like $y^x$ has a similar curve. If we can get the same shape with different values of the base $y$, like $2^x$ or $10^x$, what's the big deal about this irrational number $e = 2.71828...$? 
 
-The reason we love $e$ more than any other choice is that $e$ is the *one and only* number for which the derivative of $y^x$ is exactly the same as $y^x$. That is, the slope of $e^x$ at every point equals the value of $e^x$.
+The reason we love $e$ more than any other choice is that $e$ is the *one and only* number where the derivative of $y^x$ is exactly equal to $y^x$. That is, the slope of $e^x$ for any value of $x$ equals $e^x$.
 
 $\dfrac{\phantom{^x}\text de^x}{\phantom{^x}\text dx\phantom{^x}} = e^x$ 
 
@@ -390,7 +390,7 @@ No muss, no fuss, exactly the same thing. This is worth memorizing.
 
 ### Exponentials occur in nature
 
-The problem we just solved, the natural response or an RC circuit, is representative of things that occur often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
+The problem we just solved, the natural response of an RC circuit, is representative of things that occur often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
 
 In the broadest terms: **Exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
 
