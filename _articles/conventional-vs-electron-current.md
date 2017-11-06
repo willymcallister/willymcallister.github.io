@@ -58,17 +58,24 @@ Rather than getting stuck trying to ponder what this all means, my advice is to 
 ## How did we get here?
 
 This somewhat quirky definition arises from some coincidences.
+* The electron (our favorite conducting particle) has a negative sign.
+* We use arithmetic signs to name charge.
+* Ammeters report a single number for current.
 
-The first was how the electron got a negative sign $(-)$ instead of a $+$ sign. This is Ben Franklin's contribution. Around the time of his kite/key/lightning experiment he published a theory of electricity that said electricity was a single invisible fluid. If you rubbed fur and a glass rod together, one of them gained electric fluid and the other lost or lacked fluid. The electron was discovered $150$ years later. Folks figured out the fluid-lacking material actually had excess electrons. That's how the electron got its minus sign.
+How the electron got its negative sign $(-)$: This is Ben Franklin's contribution. Around the time of his kite/key/lightning experiment he published a theory of electricity that said electricity was a single invisible fluid. If you rubbed fur and a glass rod together, one of them gained electric fluid and the other lost or lacked fluid. This led to naming the two charges $+$ and $-$. The electron was discovered $150$ years later. Folks went back and figured out the fluid-lacking material wasn't lacking anything, it actually had excess electrons. That's how the electron got its minus sign.
 
-Buried within the electron's sign is another coincidence. Franklin introduced the names "plus" and "minus" for the two types of charge. That's completely arbitrary. Those names make it seem like some kind of arithmetic is going on. Using names from arithmetic serves us well when we observe how charges combine. Opposite charges come together to give you something neutral (something that seems like "zero" charge). 
+Buried within the electron's minus sign is another coincidence. Franklin gave the names "plus" and "minus" to the two types of charge. Those names make it seem like arithmetic is going on. It's not a bad idea. Using names from arithmetic serves us well when we see how charges combine. Opposite charges come together to give you something neutral (something that seems like it has "zero" charge). That seems arithmeticky. 
 
-But we have lots of examples of opposites that are not based on arithmetic signs. On/off, up/down, North/South, red(go)/green(stop), left/right, light/dark. My guess is that $+$ and $-$ names for charge may accidentally trigger beginners concerns about the "right" or "wrong" direction for current. 
+But we have lots of examples of opposites that are not based on arithmetic. On/off, up/down, North/South (like magnets), red(go)/green(stop), left/right, or even vitreous (glass-like)/resinous (amber-like). It is easy to jumble up the notion of arithmetic $+$ and $-$ charge names with $+$ and $-$ current *direction*. They are similar but not exactly the same thing.
 
-Consider this thought experiment. Suppose Franklin had picked the names "red" and "green" for the two types of charge. In school you would be taught, "Current direction can be positive or negative. The positive current arrow points in the direction red charge moves (or would move, even if there is no red charge present)". I think there would be less anxiety surrounding the definition of current direction. What do you think? 
+Consider this thought experiment: If Franklin had picked "red" and "green" for the two types of charge, in school you would be taught, "Current is made up of red and green charges moving in opposite directions. Current gets a positive sign in the direction the red charge moves. In wires, only green charge is moving, but we still point the current arrow the way red charge would move." Would there be less anxiety surrounding the definition of current direction if we had chosen something besides arithmetic symbols for naming charge.  I think so. What do you think? 
 
-Scientists assign a single number to the movement of charge, since that's what our instruments report. The conventional habit a long time ago was to track the movement of positive charge. Seems like an innocent choice; who doesn't like positive things? Electrons happen to be negative, and they are what's moving in most electronic circuits. Does it matter? Should we turn everything around? Naa. This only bugs two groups of people: new students for a week or two, and crabby old engineers who like to complain about everything.
+Scientists assign a single number to the movement of charge, since we only get a single number from an ammeter. It would be nice if ammeters told us, "$10\,\text{mA}$ of negative charge is going that way and $1 \,\text{mA}$ of positive charge is going the other way for a total of $11\,\text{mA}$." But they don't. You just get $11\,\text{mA}$ and the rest is up to you to figure out.
+
+The habit since forever is to track the movement of positive charge. Electrons happen to be negative and that's what moves in most electronic circuits. Does it matter? Should we point the current arrow where negative charge is going, or redefine the charge on an electron to $+$? It's possible, but... Naa. 
+
+This little quirk only bugs two groups of people: new learners for a week or two, and crabby old engineers who like to complain about everything.
 
 ## Franklin's gift
 
-I think Franklin's "mistake" is no mistake at all. It's actually a gift to every engineer and student. It means we really have to understand and appreciate the nature of charge and current.    
+I think Franklin's "mistake" is no mistake at all. It's actually a gift to every engineer and student. It means we really get to understand and appreciate the nature of charge and current.    
