@@ -23,7 +23,7 @@ Before reading this article, I recommend you review the concept of [Linearity]({
 ### Where we're headed 
 {:.no_toc}
 
-The *principle of superposition* is another name for the additivity property of [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %}):
+The *principle of superposition* is another name for the additivity property of [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %}),
 
 $f(x_1 + x_2) = f(x_1) + f(x_2)$
 
@@ -44,7 +44,7 @@ The principle of superposition uses *functional notation*, so we talk a bit here
 
 Start simply... How might we represent a lone resistor using functional notation? There's nothing remarkable going on here. We just talk about Ohm's Law using function terminology. 
 
-![Resistor as a function](https://ka-perseus-images.s3.amazonaws.com/dc74d3730d8b6a208aee6890c420e91afb7eff8a.svg){: .centered }
+![Resistor as a function](https://ka-perseus-images.s3.amazonaws.com/dc74d3730d8b6a208aee6890c420e91afb7eff8a.svg){: .centered :}
 
 Begin by identifying three things: the inputs, the outputs, and the thing performing the function.
 
@@ -66,13 +66,13 @@ Looking at our resistor function, we see it has the *scaling property*. The outp
 
 Refresh me on the [scaling property and linearity]({{ site.baseurl }}{% link _articles/linearity.md %}).
 
-## Example 0: Solve a simple circuit
+## Example 0 Solve a simple circuit
 
 (This is a "toy" example to give you a feel for how we apply superposition.) 
 
-Let's use the same resistor function, but we change the input to two voltage sources: 
+Let's use the same resistor function, but we change the input to two voltage sources, 
 
-![Ciruit with two batteries in series](https://ka-perseus-images.s3.amazonaws.com/eaf82407737099438c04b9e8658d9c72198fc05b.svg){: .centered }
+![Ciruit with two batteries in series](https://ka-perseus-images.s3.amazonaws.com/eaf82407737099438c04b9e8658d9c72198fc05b.svg){: .centered :}
 
 The input to our function is two batteries in series, so $v_i = \text{Vs1} + \text{Vs2}$.  
 
@@ -84,11 +84,11 @@ We now solve this circuit two ways: first by conventional analysis, and then usi
 
 ### Conventional solution
 
-To solve by conventional means we write the [KVL]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) equation around the loop:
+To solve by conventional means we write the [KVL]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) equation around the loop,
 
 $\text{Vs1} + \text{Vs2} - i \,\text R = 0$
 
-and solve for $i$:
+and solve for $i$,
 
 $i = f(\text{Vs1}+\text{Vs2}) = {\dfrac{\text{Vs1} +\text{Vs2}}{\text R}}$ 
 
@@ -120,17 +120,17 @@ To use superposition we need to apply one input at a time. How do you apply just
 
 What does it mean to turn off (suppress) a voltage source? It means we set $\text V = 0$. This is the same thing as replacing the voltage source or battery by a short circuit.
 
-![Replace voltage source with a short](https://ka-perseus-images.s3.amazonaws.com/54bc66846c6209299a7487b522fe15ea806cb470.svg){: .centered }
+![Replace voltage source with a short](https://ka-perseus-images.s3.amazonaws.com/54bc66846c6209299a7487b522fe15ea806cb470.svg){: .centered :}
 
 What does it mean to turn off a current source? It means we set $\text I = 0$. That's the same as replacing the current source with an open circuit. 
 
-![Replace current source with an open](https://ka-perseus-images.s3.amazonaws.com/829dc509a0950795063226adc13318d5474d1bf5.svg){: .centered }
+![Replace current source with an open](https://ka-perseus-images.s3.amazonaws.com/829dc509a0950795063226adc13318d5474d1bf5.svg){: .centered :}
 
 It may seem like doing this suppression could completely mess up the circuit, but it won't. It sounds strange, but it won't.
 
 In the next two schematics, one of the voltage inputs has been turned off (*suppressed* ) by replacing it with a short circuit.
 
-![Replace one voltage source with a short](https://ka-perseus-images.s3.amazonaws.com/44c69ff19df0189cb4d60f854f855d02e2db396d.svg){: .centered }
+![Replace one voltage source with a short](https://ka-perseus-images.s3.amazonaws.com/44c69ff19df0189cb4d60f854f855d02e2db396d.svg){: .centered :}
 
 When we zero out (suppress) an input, we replace it with $0$, allowing the other input to shine through by itself.
 
@@ -143,7 +143,7 @@ $f(\text{0 + Vs2}) \rightarrow  f(\text{Vs2})$
 
 <p>$out = f(in_1, in_2, in_3)$</p>
 
-<p>then you isolate $in_1$ by suppressing $in_2$ and $in_3$ and so on:</p>
+<p>then you isolate $in_1$ by suppressing $in_2$ and $in_3$ and so on,</p>
 
 <p>$out_1 = f(in_1, 0, 0)$</p>
 $out_2 = f(0,in_2,0)$</p>
@@ -188,7 +188,7 @@ Consider the following circuit composed of two linear components (resistors) and
 
 $i_1 = f_1(\text{Is},\text{Vs)}\quad$ and $\quad i_2 = f_2(\text{Is},\text{Vs)}$
 
-![Example 1 circuit](https://ka-perseus-images.s3.amazonaws.com/15548ad524440df6a887158ab78b21ff0bed1e61.svg){: .centered }
+![Example 1 circuit](https://ka-perseus-images.s3.amazonaws.com/15548ad524440df6a887158ab78b21ff0bed1e61.svg){: .centered :}
 
 ### Solve using superposition
 
@@ -196,7 +196,7 @@ Let’s go through the steps to analyze this circuit using superposition.
 
 First, we suppress the current source and analyze the circuit with just the voltage source acting alone. To suppress the current source, we replace it with an open circuit.
 
-![Suppress the current source](https://ka-perseus-images.s3.amazonaws.com/1876cb75c1fa06b0846f37e6253fe03c4ce605e0.svg){: .centered }
+![Suppress the current source](https://ka-perseus-images.s3.amazonaws.com/1876cb75c1fa06b0846f37e6253fe03c4ce605e0.svg){: .centered :}
 
 With just the voltage source, we solve for the two output currents,
 
@@ -206,7 +206,7 @@ Where $i_{1V}$ and $i_{2V}$ are the currents in $\text R1$ and $\text R2$ caused
 
 Next, we restore the current source and suppress the voltage source by replacing it with a short circuit.
 
-![suppress the voltage source](https://ka-perseus-images.s3.amazonaws.com/effc66654a6dee892eae8e7d71bd2de5a2aa9879.svg){: .centered }
+![suppress the voltage source](https://ka-perseus-images.s3.amazonaws.com/effc66654a6dee892eae8e7d71bd2de5a2aa9879.svg){: .centered :}
 
 With just the current source, we solve for the two output currents,
 
@@ -219,15 +219,15 @@ Where $i_{1I}$ and $i_{2I}$ are the currents in $\text R1$ and $\text R2$ caused
 <p>The ends of $\text R2$ are connected together. There is no voltage across $\text R2\,$ and therefore there is no current through it.</p>
 </details>
 
-We finish by adding the contributions from each source:
+We finish by adding the contributions from each source,
 
 $i_1 = i_{1V} + i_{1I} = 0 + \text{Is}= \text{Is}$
 
 $i_2 = i_{2V} + i_{2I} = \dfrac{\text{Vs}}{\text R2} + 0 = \dfrac{\text{Vs}}{\text R2} $
 
-The full solution looks like this:
+The full solution looks like this,
 
-![Solution to Example 1](https://ka-perseus-images.s3.amazonaws.com/27a5680c43830c8c4a261d5466cc343cb5480641.svg){: .centered }
+![Solution to Example 1](https://ka-perseus-images.s3.amazonaws.com/27a5680c43830c8c4a261d5466cc343cb5480641.svg){: .centered :}
 
 This could have been a tricky analysis because of the two sources. Superposition gave us two simpler circuits to deal with. Notice how whole chunks of the original circuit fall away when we suppress the sources.  
 
@@ -235,19 +235,19 @@ This could have been a tricky analysis because of the two sources. Superposition
 
 For the following linear circuit let’s calculate the output voltage $v$. 
 
-![Example 2 circuit](https://ka-perseus-images.s3.amazonaws.com/9d8228e8d6b8f70952fb738c931f1265fc65c737.svg){: .centered }
+![Example 2 circuit](https://ka-perseus-images.s3.amazonaws.com/9d8228e8d6b8f70952fb738c931f1265fc65c737.svg){: .centered :}
 
 ### Conventional solution
 
-We will do it the conventional way first. We write [Kirchhoff's current law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) at output node $v$:
+We will do it the conventional way first. We write [Kirchhoff's current law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) at output node $v$,
 
-![Example 2 conventional solution](https://ka-perseus-images.s3.amazonaws.com/5c35079fc61e41706ed0bb509012d00002abe668.svg){: .centered }
+![Example 2 conventional solution](https://ka-perseus-images.s3.amazonaws.com/5c35079fc61e41706ed0bb509012d00002abe668.svg){: .centered :}
 
 $\quad +i_{\text R1} \qquad - i_{\text R2} \qquad +\text{Is} \quad = 0$ 
 
 $+\dfrac{\text{Vs}-v}{\text{R1}} \quad - \dfrac{v}{\text{R2}} \qquad + \text{Is} \quad = 0$
 
-We can rearrange this to get an expression for $v$ by gathering like terms together on the right side:
+We can rearrange this to get an expression for $v$ by gathering like terms together on the right side,
 
 $v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text R2}{\text R1+\text R2}\,\text{Is} $
 
@@ -308,10 +308,10 @@ Replace the current source with a \_\_\_\_\_\_. (short circuit or open circuit?)
 
 The circuit collapses down to two resistors in [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) (also known as a [voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %}). 
 
-![Example 2 with current source suppressed](https://ka-perseus-images.s3.amazonaws.com/7c16652515a22815282c1c53e022a4d39b7edee8.svg){: .centered }
+![Example 2 with current source suppressed](https://ka-perseus-images.s3.amazonaws.com/7c16652515a22815282c1c53e022a4d39b7edee8.svg){: .centered :}
 
 Voltage ${v_{Vs}}$ is the contribution from voltage source $\text{Vs}$.
-With just the voltage source, the output voltage is:
+With just the voltage source, the output voltage is,
 
 $v_{Vs}= \text{Vs} \,\dfrac{\text R2}{\text R1+ \text R2}$
 
@@ -327,7 +327,7 @@ Replace the voltage source with a \_\_\_\_\_\_. (short circuit or open circuit?)
 
 The circuit collapses down to two resistors in [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}). 
 
-![Example 2 with voltage source suppressed](https://ka-perseus-images.s3.amazonaws.com/532320f532ecd3ae37c894b33a92cfd52f3fbd0b.svg){: .centered }
+![Example 2 with voltage source suppressed](https://ka-perseus-images.s3.amazonaws.com/532320f532ecd3ae37c894b33a92cfd52f3fbd0b.svg){: .centered :}
 
 Voltage ${v_{Is}}$ is the contribution to the output from current source $\text{Is}$.
 
@@ -350,19 +350,19 @@ Linearity and superposition are useful tools. If you have a circuit made from li
 This is a marvelous property of *linear* circuits, and it is one of the reasons we love linearity so much. Circuits that are not linear (*non-linear* circuits) don't have this property, and superposition cannot be applied. (But don't worry, we love non-linear circuits, too, just in a different way.)
 
 ## Summary
-{:.no_toc}
+{ .no_toc}
 
 If a circuit is made of linear elements, you can use superposition to simplify the analysis. This is especially useful for circuits with several sources. 
 
 To analyze a linear circuit with multiple inputs, suppress all but one input or source and analyze the resulting simpler circuit. Repeat for all inputs and sources. Then add the results to find the total response for the full circuit. 
 
-To suppress a voltage source, replace it with a short circuit:
+To suppress a voltage source, replace it with a short circuit,
 
-![Suppress a voltage source](https://ka-perseus-images.s3.amazonaws.com/54bc66846c6209299a7487b522fe15ea806cb470.svg){: .centered }
+![Suppress a voltage source](https://ka-perseus-images.s3.amazonaws.com/54bc66846c6209299a7487b522fe15ea806cb470.svg){: .centered :}
 
-To suppress a current source, replace it with an open circuit:  
+To suppress a current source, replace it with an open circuit,  
 
-![Suppress a current source](https://ka-perseus-images.s3.amazonaws.com/829dc509a0950795063226adc13318d5474d1bf5.svg){: .centered }
+![Suppress a current source](https://ka-perseus-images.s3.amazonaws.com/829dc509a0950795063226adc13318d5474d1bf5.svg){: .centered :}
 
 ----
 
