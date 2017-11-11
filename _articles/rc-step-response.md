@@ -83,7 +83,9 @@ The *final state* of the circuit is $i(\infty) = 0$ and $v(\infty) = \text V_\te
 
 ### Intuition summary 
 
-The voltage starts at an initial value and ends at the step voltage forced by the input. Between the initial and final states, the voltage and current make some sort of interesting transition. The circuit starts with no current and ends with no current. In between, some current flows from the source onto the capacitor.
+![Intuitive step response plot ]({{ site.baseurl }}{% link i/rc_step_intuition1.svg %}){: .centered :}
+
+The voltage starts at an initial value and ends at the step voltage forced by the input. Between the initial and final states, the voltage and current make some sort of interesting transition (three possibilities shown). The circuit starts with no current and ends with no current. In between, some sort of current flows from the source onto the capacitor.
 
 Next, we come up with a precise understanding of the transient response.
 
@@ -198,7 +200,7 @@ The steps for solving a circuit driven by an external input are,
 
 ### Forced response
 
-For the forced response, $\goldC{v_f(t)}$, we want to find any solution to the differential equation, and we don't have to account for the initial condition. That's the key to finding the forced response without going crazy. It’s the same as saying we are looking for the final state, long after the original stored energy has dissipated.
+For the forced response, $\goldC{v_f(t)}$, we want to find any solution to the differential equation, and we don't have to pay attention to the initial condition at the beginning of the step. That's the key to finding the forced response without going crazy. It’s the same as saying we are looking for the final state, long after the original stored energy has dissipated.
 
 ![Forced response circuit]({{ site.baseurl }}{% link i/rc_step3.svg %}){: .centered :}{: height="180px" :}
 
@@ -224,7 +226,7 @@ The forced response for a step input looks like this,
 
 ![Forced response plot]({{ site.baseurl }}{% link i/rc_step_forced_response.svg %}){: .centered :}
 
-The forced response happens to look exactly like the input. That doesn't always happen.
+The forced response happens to look exactly like the input. (That doesn't always happen.) Notice how the force response solves the equation but completely misses the initial condition, $v(0) = \text V_0$. That's ok. The natural response will take care of that. The forced response tells us after a long time the capacitor voltage will be $\text V_{\text S}$.
 
 In this plot and the others following I'm using a voltage step with $V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. 
 
