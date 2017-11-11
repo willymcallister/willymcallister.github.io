@@ -14,7 +14,7 @@
    version="1.1"
    id="svg4804"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="rc_step_intuition1.svg">
+   sodipodi:docname="rc_step_intuition.svg">
   <metadata
      id="metadata4926">
     <rdf:RDF>
@@ -23,7 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -440,20 +440,8 @@ svg text { font-style: normal; font-variant: normal; font-weight: normal; font-s
        sodipodi:linespacing="125%"><tspan
    style="-inkscape-font-specification:'KaTeX_Math, Normal';font-family:KaTeX_Math;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.00000024px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
    id="tspan5579">v(volts</tspan>
+
 )</text>
-  </g>
-  <g
-     class="tick"
-     transform="translate(76.855509,168.52299)"
-     id="g4373"
-     style="font-size:medium;font-family:sans-serif;text-anchor:end;opacity:1;fill:none">
-    <line
-       class="grid"
-       x1="-40"
-       y1="0"
-       x2="200"
-       y2="0"
-       id="line4377" />
   </g>
   <path
      style="fill:none;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:1.89999998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
