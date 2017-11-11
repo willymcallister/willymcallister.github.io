@@ -77,7 +77,7 @@ The *transient period* will probably be some kind of gentle curve.
 
 Now jump much later in time to waaaay after the step. The input voltage has been at $\text V_\text S$ for a looong time. Let's figure out where the voltage and current finish up. Current has been flowing around the circuit. More and more charge appears on the capacitor, causing its voltage to rise.
 
-At some point the rising capacitor voltage, $v$, becomes the same as $\text V_\text S$. When this happens, the voltage across the resistor, $\text V_\text S -v$, becomes $0$ and current stops. 
+At some point the rising capacitor voltage, $v$, becomes the same as $\text V_\text S$. When this happens, the voltage across the resistor, $\text V_\text S -v$, becomes $0$. Think about Ohm's Law when voltage is zero. There's no longer a reason for current to flow, so it stops. 
 
 The *final state* of the circuit is $i(\infty) = 0$ and $v(\infty) = \text V_\text S$. 
 
@@ -105,7 +105,7 @@ This version of the circuit is a better match to the math coming up since the in
 <p>Both switches are thrown at the exact same moment. The one on the right opens, and the one on the left closes at $t = 0$.</p>
 </details>
 
-We start the analysis by writing an equation for the currents flowing *out* of the top right node using [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}),
+We model the circuit by writing an equation for the currents flowing *out* of the top right node using [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}),
 
 <p>$\begin{array}{cccc}
  i_\text R && + && i_\text C &=  0 \\
@@ -114,7 +114,7 @@ We start the analysis by writing an equation for the currents flowing *out* of t
 \end{array}$
 </p>
 
-We rearrange the terms a little to format it like a differential equation,
+Let's rearrange the terms a little to format it like a differential equation,
 
 $\dfrac{v}{\text R} - \dfrac{\text V_\text S}{\text R} + \text C\,\dfrac{dv}{dt} = 0$
 
@@ -198,15 +198,13 @@ The steps for solving a circuit driven by an external input are,
 
 ### Forced response
 
-The forced response, $\goldC{v_f(t)}$, is the portion of the total response caused by the input, while ignoring the initial condition of the capacitor. That's the key to making it possible to solve the forced response without going crazy.
+For the forced response, $\goldC{v_f(t)}$, we want to find any solution to the differential equation, and we don't have to account for the initial condition. That's the key to finding the forced response without going crazy. It’s the same as saying we are looking for the final state, long after the original stored energy has dissipated.
 
-There are two viewpoints for ignoring the initial conditions. You can set them to $0$, or you can wait a really long time until the stored energy has dissipated. Either viewpoint works. I'm going to set the i.c. on the capacitor to $0$.  
+![Forced response circuit]({{ site.baseurl }}{% link i/rc_step3.svg %}){: .centered :}{: height="180px" :}
 
-![Forced response circuit]({{ site.baseurl }}{% link i/rc_step3.svg %}){: .centered :}{: .centered :}{: height="160px" :}
+The forced response often looks like the input plus its derivatives. It usually ends up with the same shape as the input scaled by some factor. 
 
-We want to find any solution to the differential equation. Our forced solution does not have to satisfy the initial conditions. The forced response often looks like the input plus its derivatives. It usually ends up with the same shape as the input scaled by some factor.
-
-Take a guess at a solution and try it out: Since the input is a constant for $t>0$ let's guess the forced response is also a constant,
+Take a guess at a solution and try it out: Since the input is a constant after the switch closes let's guess the forced response is also a constant,
 
 $v_{f} = K_f$ where $K_f$ is some number.
 
@@ -232,9 +230,9 @@ In this plot and the others following I'm using a voltage step with $V_0 = 2\,\t
 
 ### Natural response
 
-Now we solve the natural response. (We worked through the full derivation in [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response.md %}). The derivation below is pretty quick.) For the natural response we use the initial conditions but suppress (turn off, set to zero) the input. 
+Now we solve the natural response. (We worked through the full derivation in [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response.md %}). The derivation below is pretty quick.) For the natural response we use the initial conditions but suppress (turn off, set to zero) the input.
 
-![Step response natural response circuit](https://ka-perseus-images.s3.amazonaws.com/dee62d832b9e3b62844f6eef4497a1af9da6f9e3.svg){: .centered :}{: height="200px" :} 
+![Step response natural response circuit]({{ site.baseurl }}{% link i/rc_step4.svg %}){: .centered :}{: height="180px" :}
 
 Turning off the input means replacing the voltage source with a short. The voltage across a short is $0$. (If the input comes from a current source, we would replace it with an open circuit. For more on suppressing sources see [Superposition]({{ site.baseurl }}{% link _articles/superposition.md %}).) 
 
@@ -303,7 +301,7 @@ $v_t$ looks like this,
 
 ![Total response plot ]({{ site.baseurl }}{% link i/rc_step_total_response1.svg %}){: .centered :}
 
-And we've done it! This is the total response of an $\text{RC}$ combination to a voltage step.
+And we've done it! This is the total response of an $\text{RC}$ network to a voltage step.
 
 #### Starting from $0$
 {:.no_toc}
