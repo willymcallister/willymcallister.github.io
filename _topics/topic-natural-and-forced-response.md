@@ -31,6 +31,8 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC natural response - example]({{ site.baseurl }}{% link _videos/rc-natural-response-example.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [RC step response]({{ site.baseurl }}{% link _articles/rc-step-response.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - intuition]({{ site.baseurl }}{% link _videos/rc-step-response-intuition.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - setup (1 of 2)]({{ site.baseurl }}{% link _videos/rc-step-response-setup.md %})

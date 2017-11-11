@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: none;
+    }
+
+    svg .path {
+      stroke-width: 4px;
+      stroke: #FF9C39;        /* KA econ2     */
+      fill: none;
+    }
+
+    svg text {
+      font: 16px katex_math;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
+  var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
+
+  var 
+      xmin = -1,
+      xmax = +5,
+      ymin = -1,
+      ymax = +8,
+      hScale = 40,
+      vScale = 20,
+      width  = (xmax - xmin) * hScale,     // width of graph axes pixels
+      height = (ymax - ymin) * vScale,     // height of graph axes pixels
+      xOrigin = -(xmin * hScale);          // pixels
+      yOrigin = height + (ymin * vScale);  // pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + padding.left + padding.right)  //width of image
+      .attr("height", height + padding.top + padding.bottom)  //height of image
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+    .append("g")  //group to build image inside of, offset by padding from border
+      .attr("transform",
+        "translate(" + padding.left + "," + padding.top + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .ticks(8)
+    .tickSizeOuter(0);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", function() {
+        return "translate(" + 0 + "," + yOrigin + ")";
+      })
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dx", ".71em")
+      .text("t (time)")
+      .style("text-anchor", "start")
+      .style("font-size", "16px")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .ticks(8)
+      .tickSizeOuter(0);
+
+  var ya = svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dy", "-12px")
+      .text("v (volts)")
+      .style("text-anchor", "middle")
+      .style("font-size", "16px")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  // remove tick labels
+  svgContainer.selectAll(".tick text")
+    //.filter(function (d) { return d === 0;  })
+    .remove();
+
+  // Waveform - general form of the natural response for RC step response article
+  // R = 3k  C = 1uF  Vo = 1.4v
+  var R = 3000;
+  var C = .0000004;
+  var Kn = 4;
+
+  var nPoints = 200;
+  var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 101
+  var fromX = 0;
+  var toX = xmax;
+  var xData = samples.map(function (i) 
+    { return ((i / nPoints) * (toX - fromX)) + fromX;
+    });
+
+  var response = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(Kn * (Math.exp(-d/(R*C)/1000))); });
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', response(xData))
+    .style("fill", "none");
+
+  var lineData = [  
+      { "x": xmin, "y": Kn}, 
+      { "x":    0, "y": Kn}];
+
+  var lineFunction = d3.line()
+    .x(function (d) { return xScale(d.x); })
+    .y(function (d) { return yScale(d.y); });
+
+  svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', lineFunction(lineData));
+
+  svgContainer.append("text")
+    .attr("x", xScale(-1))
+    .attr("y", yScale(Kn + 0.2))
+    .text("Kn")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style('fill', 'black');
+
+</script>
+</body>
+</html>

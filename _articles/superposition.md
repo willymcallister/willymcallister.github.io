@@ -352,9 +352,9 @@ This is a marvelous property of *linear* circuits, and it is one of the reasons 
 ## Summary
 { .no_toc}
 
-If a circuit is made of linear elements, you can use superposition to simplify the analysis. This is especially useful for circuits with several sources. 
+If a circuit is made of linear elements, you can use superposition to simplify the analysis. This is especially useful for circuits with multiple sources. Whenever you have a circuit with two energy sources, like two batteries, or one input and some internal energy, the possibility of using superposition should pop into your head.
 
-To analyze a linear circuit with multiple inputs, suppress all but one input or source and analyze the resulting simpler circuit. Repeat for all inputs and sources. Then add the results to find the total response for the full circuit. 
+To analyze a linear circuit with multiple inputs, suppress all but one input or energy source and analyze the resulting simpler circuit. Repeat for all inputs and sources. Then add the results to find the total response for the full circuit. 
 
 To suppress a voltage source, replace it with a short circuit,
 
