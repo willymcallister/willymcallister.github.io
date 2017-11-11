@@ -202,7 +202,7 @@ The forced response, $\goldC{v_f(t)}$, is the portion of the total response caus
 
 There are two viewpoints for ignoring the initial conditions. You can set them to $0$, or you can wait a really long time until the stored energy has dissipated. Either viewpoint works. I'm going to set the i.c. on the capacitor to $0$.  
 
-![Forced response circuit]({{ site.baseurl }}{% link i/rc_step3.svg %}){: .centered :}{: .centered :}{: height="200px" :}
+![Forced response circuit]({{ site.baseurl }}{% link i/rc_step3.svg %}){: .centered :}{: .centered :}{: height="160px" :}
 
 We want to find any solution to the differential equation. Our forced solution does not have to satisfy the initial conditions. The forced response often looks like the input plus its derivatives. It usually ends up with the same shape as the input scaled by some factor.
 
@@ -268,7 +268,7 @@ $v_n = K_n\,e^{-t/\text{RC}}$
 
 ![Natural response plot general form]({{ site.baseurl }}{% link i/rc_step_natural_response_Kn.svg %}){: .centered :}
 
-The natural response is an exponential curve whose speed of descent is determined by the product $\text{RC}$. The shape has nothing to do with the driving input. We still have to figure out the specific value of $K_n$. We'll do that in a moment, as part of the total response.
+The natural response is an exponential curve whose speed of descent is determined by the product $\text{RC}$. We still have to figure out the specific value of $K_n$. We'll do that in a moment, as part of the total response.
 
 ### Total response
 
@@ -295,18 +295,11 @@ Which gives us $K_n$,
 
 $K_n = \text V_0 - \text V_\text S$
 
-![Natural response plot]({{ site.baseurl }}{% link i/rc_step_natural_response1.svg %}){: .centered :}
-
-This is the natural response for this specific circuit with a given $\text V_0$ and $\text V_{\text S}$. You can't actually observe this natural response with an oscilloscope because it is buried inside the total response. That comes next.
-
-#### Assemble the total response
-{:.no_toc}
-
-We can replace $K_n$ with $\text V_0 - \text V_\text S$ to give us the answer we've been looking for,
+We replace $K_n$ with $\text V_0 - \text V_\text S$ to give us the step response we've been looking for,
 
 $v_t = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
 
-And here's what $v_t$ looks like,
+$v_t$ looks like this,
 
 ![Total response plot ]({{ site.baseurl }}{% link i/rc_step_total_response1.svg %}){: .centered :}
 
@@ -324,6 +317,15 @@ or
 $v_t = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$
 
 ![Total response with V0 = 0 ]({{ site.baseurl }}{% link i/rc_step_total_response2.svg %}){: .centered :}
+
+## Informed intuition
+
+You don't need to memorize the equation for step response. You know what happens, 
+* The output starts at some value before the step. 
+* When the step arrives, the output voltage head towards the destination, rising (or falling) with a smooth *exponential* shape controlled by the time constant $\text{RC}$. 
+* The output finishes at some new value.
+
+This is the analog circuit all computer hardware designers deeply understand. It sets the speed limit for how fast a digital system can run. The resistor comes from the driving gate plus the wiring. The capacitance comes from the wiring plus the input pin of driven gate.
 
 ## Concept check
 
@@ -348,15 +350,6 @@ $v(t) = $  \_\_\_\_\_\_\__
 
 <p>$v(t) = 2 + 4\,e^{-t/1.2\,\text{msec}}$</p>
 </details>
-
-## Informed intuition
-
-You don't need to memorize the equation for step response. You know what happens, 
-* The output starts at some value before the step. 
-* When the step arrives, the output voltage head towards the destination, rising (or falling) with a smooth exponential shape controlled by the time constant $\text{RC}$. 
-* The output finishes at some new value.
-
-This is the analog circuit all computer hardware designers deeply understand. It sets the speed limit for how fast a digital system can run. The resistor comes from the driving gate plus the wiring. The capacitance comes from the wiring plus the input pin of driven gate.
 
 ## Simulation model
 
