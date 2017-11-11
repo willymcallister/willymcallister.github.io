@@ -83,7 +83,7 @@ The *final state* of the circuit is $i(\infty) = 0$ and $v(\infty) = \text V_\te
 
 ### Intuition summary 
 
-![Intuitive step response plot ]({{ site.baseurl }}{% link i/rc_step_intuition1.svg %}){: .centered :}
+![Intuitive step response plot ]({{ site.baseurl }}{% link i/rc_step_intuition.svg %}){: .centered :}
 
 The voltage starts at an initial value and ends at the step voltage forced by the input. Between the initial and final states, the voltage and current make some sort of interesting transition (three possibilities shown). The circuit starts with no current and ends with no current. In between, some sort of current flows from the source onto the capacitor.
 
