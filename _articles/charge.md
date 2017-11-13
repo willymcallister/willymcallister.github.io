@@ -144,11 +144,7 @@ The $\propto$ symbol means "proportional to". Later we will replace it with an $
 
 Check out this marvelous 1959 educational video with Professor Eric Rogers from Princeton University demonstrating electric force. You can see Professor Rogers transfer charge from his "charging arrangement" machine to one balloon and then sharing that charge with another.
 
-<p>
-<div class="videowrapper">
-    <iframe frameBorder="0" width="{{site.data.video.width}}" height="{{site.data.video.height}}" src="https://www.youtube.com/embed/{{page.youtubeID}}{{site.data.video.youtubeOptions}};end=74" allowfullscreen></iframe> 
-</div>
-</p>
+{% include embed-video.html %}
 
 ## Coulomb - the unit of charge
 

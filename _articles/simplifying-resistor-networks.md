@@ -160,11 +160,7 @@ Working in this "backwards" direction may initially feel awkward, given that man
 #### Just for fun   
 Here is an animation of the circuit simplification,
 
-<p>
-<div class="videowrapper">
-    <iframe frameBorder="0" width="{{site.data.video.width}}" height="{{site.data.video.height}}" src="https://www.youtube.com/embed/{{page.youtubeID}}{{site.data.video.youtubeOptions}};" allowfullscreen></iframe> 
-</div>
-</p>
+{% include embed-video.html %}
 
 ## Exceptions
 
