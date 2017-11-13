@@ -130,11 +130,7 @@ The following schematics are equivalent, but the one on the left is not as easy 
 
 ![](https://ka-perseus-images.s3.amazonaws.com/96485f35a789b7deec56c3abe11721713fef7b87.svg){: .centered }
 
-<p>
-    <div>
-        <iframe frameBorder="0" width="{{site.data.video.width}}" height="{{site.data.video.height}}" src="https://www.youtube.com/embed/{{page.youtubeID}}?modestbranding=1;controls=0;showinfo=0;rel=0;fs=0;" allowfullscreen=""></iframe> 
-    </div>
-</p>
+{% include embed-video.html %}
 
 ## Good schematics capture your intent
 

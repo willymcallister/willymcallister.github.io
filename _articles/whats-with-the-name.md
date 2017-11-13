@@ -2,19 +2,15 @@
 layout: article
 title: What's with the name?
 author: Willy McAllister
+d3: logo-d3.js
 comments: true
 ---
 
 The name Spinning Numbers refers to a type of number engineers use to represent signals. Numbers that spin!
 
-<p>
-<div id="spin-d3"></div>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="{{ "/assets/d3/spinningnumbers-d3.js" | relative_url }}"></script>
-<link rel="stylesheet" type="text/css" href="{{ "/assets/d3/spinningnumbers-d3.css" | relative_url }}" />
-</p>
+{% include embed-d3.html %}
 
-We write a spinning number with this crazy-looking mathematical notation,
+We write a spinning number with this crazy-looking notation,
 
 $\Large e^{j\omega t}$ 
 
