@@ -230,6 +230,25 @@ The forced response happens to look exactly like the input. (That doesn't always
 
 In this plot and the others following I'm using a voltage step with $V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. 
 
+<details>
+<summary>What happens if the guess is wrong?</summary>
+<p>What does it look like if you guess at a solution and it doesn't work?</p>
+
+<p>You guess at a solution, like $v(t) = K\text{(something)}$. 
+Then you test it by plugging it into the differential equation.
+Your guess works if you can solve for the $K$ constant and it actually turns out to be a constant.</p>
+
+<p>As an example, suppose you guessed a solution $v(t) = K\cdot t$ (instead of $v(t) = K)$. When you plug v(t) into the differential equation,</p>
+
+<p>$\dfrac{dKt}{dt} + \dfrac{Kt}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$</p>
+
+<p>You get,</p> 
+
+<p>$K + Kt = V/\text{RC}$</p>
+
+<p>When you go to solve this for $K$ you can't get rid of that time term. This says $K$ depends on time, so it's not constant. That's a fail for this proposed solution.</p>
+</details>
+
 ### Natural response
 
 Now we solve the natural response. (We worked through the full derivation in [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response.md %}). The derivation below is pretty quick.) For the natural response we use the initial conditions but suppress (turn off, set to zero) the input.

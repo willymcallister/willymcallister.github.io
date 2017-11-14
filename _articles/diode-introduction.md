@@ -97,7 +97,7 @@ This red LED (light emitting diode) has wire leads of different length. The forw
 
 A reliable way to verify the identity of the terminals is using a multimeter to figure out the forward current direction. On the resistance setting, $\Omega$, the meter puts a small voltage on its test leads (this is why an ohm meter needs a battery). You  use that small voltage to see which way current flows. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/3fa8e14bb7c2a6e1afa7bccfa50d188a797eda76.svg){: .centered :}
+![Use an ohmmeter to test diodes]({{ site.baseurl }}{% link i/diode_voltmeters.svg %}){: .centered :}
 
 The diode is flipped in each image. If the ohmmeter reads a finite resistance, that means the diode is conducting a small current in the forward direction, and the red $+$ lead from the meter is touching the anode. If the resistance reads O.L (for overload), the diode is not conducting current. That means the red $+$ test lead is touching the cathode.
 
