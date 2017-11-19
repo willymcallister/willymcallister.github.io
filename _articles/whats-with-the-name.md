@@ -2,15 +2,14 @@
 layout: article
 title: What's with the name?
 author: Willy McAllister
-d3: logo-d3.js
 comments: true
 ---
 
 The name Spinning Numbers refers to a type of number engineers use to represent signals. Numbers that spin!
 
-{% include embed-d3.html %}
+{% include_relative d3/logo-d3.html %}
 
-We write a spinning number with this crazy-looking notation,
+We write a spinning number with this unusual notation,
 
 $\Large e^{j\omega t}$ 
 
@@ -18,15 +17,15 @@ Where,
 * $e$ is the base of the natural logarithm, the special number $e = 2.7182818\ldots$  
 * $j$ is the imaginary unit. $j = \sqrt{-1}\qquad$ 
     * Engineers use $j$ instead of $i$ because we use $i$ for something else (current).
-* $\omega$ (omega) indicates how fast the number is spinning. It is called the *angular frequency*.
+* $\omega$ (omega) indicates how fast the number spins. It is called the *angular frequency*, measured in radians per second.
 * $t$ is time. You know what time is.
 
 * The radius of the big circle is $1$.
 * The green stick that connects the origin to the yellow spinning number isn't part of the number, it's just there to help us see it.
 
-This $e^{j\omega t}$ notation is pretty scary looking. For the moment, don't let that bother you, and just appreciate that it represents a number that spins around. This is one of the most beautiful and useful ideas in mathematics and engineering. We use spinning numbers to represent sigals and understand how they move through the world. 
+This $e^{j\omega t}$ notation is pretty scary looking. For the moment, don't let that bother you, and just appreciate that as a whole, it represents a number that spins around. This is one of the most beautiful and useful ideas in mathematics and engineering. We use spinning numbers to represent signals. 
 
-Here's one example of how we use spinning numbers. If we combine two spinning numbers we can create a sine wave using Euler's Formula.
+Here's an example of how we use spinning numbers to represent a sine wave. You can combine two spinning numbers using Euler's Formula to create a sine wave.
 
 $\sin \omega t = \dfrac{1}{2}(e^{+j\omega t} - e^{-j\omega t})$
 
