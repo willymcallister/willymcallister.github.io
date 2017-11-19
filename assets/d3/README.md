@@ -1,36 +1,25 @@
-# Spinning Numbers D3.js animations and graphs
+# Spinning Numbers D3.js graphs
 
-This repository contains the code for animated images and graphs for spinningnumbers.org, created with [D3.js](http://d3js.org).
+This repository contains the code for static images (graphs) for spinningnumbers.org. The images are created with [D3.js](http://d3js.org). I chose this as an alternative to Khan Academy's graphie program. I use this tool for graphs that require computed waveforms like exponentials or sines.
 
-## Animation files
+## D3 static images
 
-Each animation needs three kinds of code.
+Open ./assets/d3/whateverD3file.html in a browser. D3 runs and the .svg image is generated and rendered. To save the .svg image as an independent file, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to pull the image out of the d3 page and open it in its own tab. Then save the image to the /_images/ folder where it can be accessed in articles.
+
+## Animated images 
+
+Animated images are saved over in the \_articles/d3 folder. They are referenced with an "include_relative filename.html" command in the markdown article. The animation file has to be saved in the same folder (or subfolder) as the markdown article.
+
+Each animation needs three kinds of code,
 
 * someanimation.js - javascript where this animation is created
 * someanimation.css - stylesheet specific to this animation
-* someanimation.html - test .html file to demonstrate this animation
+* someanimation.html - .html file to demonstrate this animation
 
-Sometimes I mash all three into a single .html file, and sometimes in three separate files. For example, the animation files for the spinningnumbers.org logo are spinninnumbers.js, spinningnumbers.css, and spinningnumbers.html. 
+I mash all three types of code into a single .html file. See for example logo-d3.html.
 
-The animated .svg image is created with calls to the D3 library. The D3 library is accessed remotely from d3js.org, currently version 4.
+The animated .svg image is created by calling functions in the D3 library. The D3 library is pulled from d3js.org. I'm currently calling version 4 of D3.
 
-### Embedding animations
+Example article with an embedded D3 image: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
 
-Here's how to embed a D3 amimation in a Jekyll markdown article.
 
-```
-<p>
-<div id="someanimationID"></div>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="{{ "/assets/d3/someanimation.js" | relative_url }}"></script>
-<link rel="stylesheet" type="text/css" href="{{ "/assets/d3/someanimation.css" | relative_url }}" />
-</p>
-```
-
-The code surrounded by double curly brackets is a special syntax used by Jekyll/Liquid to generate static web pages. If you want to insert an image into a conventional .html file replace the liquid syntax with the specific paths to the .js and .css files.
-
-Example article with embedded D3 image: [What's with the name?](http://spinningnumbers.org/a/whats-with-the-name.html)
-
-## Saving D3 images
-
-Open the .html file in a browser and the .svg image is generated and rendered by D3. To save the .svg image, I use a bookmarklet called [SVG Crowbar](http://nytimes.github.io/svg-crowbar/) to open the .svg image in its own tab, and then save it to my /_images/ folder.
