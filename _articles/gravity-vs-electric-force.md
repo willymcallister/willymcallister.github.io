@@ -11,7 +11,7 @@ Written by Willy McAllister.
 
 ----
 
-The reason you don't feel electric force in everyday life is that almost every electron in the universe has nestled up close to an identical positive charge (the nucleus of an atom). That equalizes (neutralizes) the electric force. That's why we are not aware of it most of the time.
+The reason you don't feel electric force in everyday life is because almost every electron in the universe has nestled up close to an identical positive charge (the nucleus of an atom). That equalizes (neutralizes) the electric force. That's why we are not aware of it most of the time.
 
 Let's compare the force of gravity to the electric force between two apples.
 
@@ -19,7 +19,7 @@ Let's compare the force of gravity to the electric force between two apples.
 
 ## Gravitational force between two apples
 
-Suppose you have two apples. A medium small apple has a volume of about $100$ cubic centimeters and weighs $100\,\text{grams}$ on earth. If you hold an apple in your hand you feel a downward force of about $1$ newton. That's the force of attraction between the apple and the Earth. It is not too hard to lift an apple off the table. You are easily strong enough to overcome the gravitational attraction between the apple and our planet.
+Suppose you have two apples. A medium sized apple has a volume of about $100$ cubic centimeters and weighs roughly $100\,\text{grams}$ on earth. If you hold an apple in your hand you feel a downward force of about $1$ newton. That's the force of attraction between the apple and the Earth. It is not too hard to lift an apple off the table. You are easily strong enough to overcome the gravitational attraction between the apple and our planet.
 
 You already know the gravitational attraction between two apples. It's practically nothing. You can compute the tiny force using the gravitational equation with $m_{1,2} = 100\,\text g$. 
 
@@ -55,9 +55,9 @@ The electric force is unimaginably greater than the force of gravity.
 The [mole](https://en.wikipedia.org/wiki/Mole_(unit)) is defined by Avogadro’s Number, $6.022 \times 10^{23}$.  
 $1\,\text{mole}$ of $\text H_2\text O$ weighs $18\,\text{grams}$. $2\,\text{grams}$ of hydrogen plus $16\,\text{grams}$ of oxygen.  
 An apple is mostly water. $100\,\text{grams}$ of water is $100\,\text g/(18\,\text g/\text{mole}) = 5.5\,\text{moles}$ of water molecules.   
-
-$1\,\text{coulomb}$ of electrons [is very close to](https://en.wikipedia.org/wiki/Faraday_constant) $1/10{,}000\,\text{mole}$ of electrons.  
-Removing $1$ electron from $1$ out of every $55{,}000$ water molecules in an apple adds up to $1\,\text{coulomb}$ of electrons.    
+ 
+There are [almost exactly]((https://en.wikipedia.org/wiki/Faraday_constant)) $10{,}000\,\text{coulombs}$ of negative charge in $1\,\text{mole}$ of electrons.  
+If you remove $1$ electron from $1$ out of every $55{,}000$ molecules in an apple, it adds up to $1\,\text{coulomb}$ of electrons.    
 
 $1\,\text{newton}$ is about $0.25\,\text{pounds}$.  
 $2000 \,\text{pounds} = 1\,\text{ton}$  
