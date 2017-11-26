@@ -35,6 +35,8 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Defining the standard electrical units]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Gravity compared to electric force]({{ site.baseurl }}{% link _articles/gravity-vs-electric-force.md %})
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Preparing to study electrical engineering]({{ site.baseurl }}{% link _articles/preparing-to-study-ee.md %})
 
 ## Video ![]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![]({{ site.baseurl }}{% link i/article.svg %})
