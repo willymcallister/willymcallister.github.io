@@ -7,7 +7,7 @@ comments: true
 
 Spinning Numbers refers to a special type of number engineers use to represent signals. Numbers that spin!
 
-{% include_relative d3/logo-d3.html %}
+{% include_relative d3a/logo-d3.html %}
 
 ## Notation
 

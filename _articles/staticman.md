@@ -68,7 +68,6 @@ My site has a comment form (\_includes/comment form.html). When the user fills o
 
 At the same time Staticman is sending the PR to GitHub, it sends a request to my MailGun account to add the comment author's email address to a mailing list for this particular article. If the mailinglist does't exist, Staticman asks for one to be created. The mailinglist will have an encoded name, like affa4704f06fda2245c5ed9d54932d35@mg.spinningnumbers.org. The addition of new comment triggers an email sent to the entire mailing list, so everybody who has subscribed gets to see it.
 
-
 ## Setting up MailGun
 
 Sign up for an account at MailGun. The signup page is https://app.mailgun.com/new/signup/. 

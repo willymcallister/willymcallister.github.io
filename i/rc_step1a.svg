@@ -39,9 +39,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="2.7204589"
-     inkscape:cx="112.58705"
-     inkscape:cy="55.546598"
+     inkscape:zoom="1.476688"
+     inkscape:cx="208.23627"
+     inkscape:cy="70.25"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -174,14 +174,18 @@
      style="font-size:20.99999905px;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
      x="251.20894"
      y="52.000599"
-     sodipodi:linespacing="125%">R</text>
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:22.5px"
+       id="tspan8439">R</tspan></text>
 <text
      class="st23 st24"
      id="text4879"
      style="font-size:20.99999905px;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
      x="287.20996"
      y="82.000496"
-     sodipodi:linespacing="125%">C</text>
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:22.5px"
+       id="tspan8441">C</tspan></text>
 <text
      class="st16 st23 st24"
      id="text4881"
@@ -195,35 +199,29 @@
      style="font-size:20.99999905px;font-family:KaTeX_Math;fill:#ff9c39;-inkscape-font-specification:'KaTeX_Math, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
      x="371.20935"
      y="82.000397"
-     sodipodi:linespacing="125%">v(t)</text>
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:22.5px"
+       id="tspan6927">v(t)</tspan></text>
 <text
      class="st16 st23 st24"
      id="text4887"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#ff9c39;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
      x="9.6841965"
      y="91.809021"
-     sodipodi:linespacing="125%">V</text>
-<text
-     class="st16 st23 st24"
-     id="text4889"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.62125015px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="21.434196"
-     y="98.802094"
-     sodipodi:linespacing="125%">0</text>
+     sodipodi:linespacing="125%">V<tspan
+   style="font-size:16.25px"
+   id="tspan8443"
+   dy="6">0</tspan></text>
 <text
      class="st23 st24"
      id="text4893"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#ff9c39;fill-opacity:1;stroke:none;stroke-opacity:1;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39;fill-opacity:1;stroke:none;stroke-opacity:1"
      x="103.20895"
      y="66.000397"
-     sodipodi:linespacing="125%">V</text>
-<text
-     class="st23 st24"
-     id="text4895"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.62125015px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39;fill-opacity:1;stroke:none;stroke-opacity:1"
-     x="114.95895"
-     y="72.993599"
-     sodipodi:linespacing="125%">S</text>
+     sodipodi:linespacing="125%">V<tspan
+   style="font-size:16.25px"
+   id="tspan8445"
+   dy="6">S</tspan></text>
 <text
      class="st16 st23 st24"
      id="text4897"

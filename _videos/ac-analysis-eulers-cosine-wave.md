@@ -10,6 +10,7 @@ A cosine wave emerges from Euler's Formula.
 
 Just music, with no narration. The background music is *NirvanaVEVO* by Chris Zabriskie. 
 
-Animated with d3.js.
+Animated with d3.js, Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3/eulers-cosine-d3.html).
+
 
 Created by Willy McAllister.

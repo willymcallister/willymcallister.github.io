@@ -47,7 +47,7 @@ $F = K \dfrac{q_0 \,q_1}{r^2},\quad$ where $K = 9 \times 10^9$
 ​​
 This is the force you would feel if a fully loaded oil supertanker was sitting on your head.
 
-![Suezmax supertanker]({{ site.baseurl }}{% link i/blarg.jpg %}){: .centered :}
+![Suezmax supertanker]({{ site.baseurl }}{% link i/supertanker.jpg %}){: .centered :}
 
 The electric force is unimaginably greater than the force of gravity.
 
