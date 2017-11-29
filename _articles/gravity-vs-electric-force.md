@@ -13,15 +13,13 @@ Explained by Willy McAllister.
 
 ----
 
-The reason you don't feel electric force in everyday life is because almost every electron in the universe has nestled up close to an identical positive charge (the nucleus of an atom). That equalizes (neutralizes) the electric force. That's why we are not aware of it most of the time.
-
-Let's compare the force of gravity to the electric force between two apples.
+The reason you don't feel electric force in everyday life is because almost every electron in the universe is nestled up close to an identical positive charge (the nucleus of an atom). That equalizes (neutralizes) the electric force. That's why we are not aware of it most of the time. Let's compare the force of gravity to the electric force between two apples.
 
 ![Two apples]({{ site.baseurl }}{% link i/apples.jpg %}){: .centered :}{: height="260px"}
 
 ## Gravitational force between two apples
 
-Suppose you have two apples. A medium sized apple has a volume of about $100$ cubic centimeters and weighs roughly $100\,\text{grams}$ on earth. If you hold an apple in your hand you feel a downward force of about $1$ newton. That's the force of attraction between the apple and the Earth. It is not too hard to lift an apple off the table. You are easily strong enough to overcome the gravitational attraction between the apple and our planet. 
+Suppose you have two apples. A medium sized apple has a volume of about $100$ cubic centimeters and weighs roughly $100\,\text{grams}$ (about $1/4$ pound). If you hold an apple in your hand the downward force you feel is about $1$ newton. That's the force of attraction between the apple and the Earth. It is not too hard to lift an apple off the table. You are easily strong enough to overcome the gravitational attraction between the apple and our planet. 
 
 You already know the gravitational attraction between two apples. It's practically nothing. You can compute the tiny force using the gravitational equation with $m_{1,2} = 100\,\text{grams}$ and $r = 1\,\text{meter}$. 
 
@@ -43,11 +41,11 @@ To charge an apple up to a coulomb you could (conceptually) remove $1$ electron 
 
 You get a gigantic force of attraction. Electric force is computed with Coulomb's Law. Compute the force between two $1$ coulomb charges placed $1$ meter apart,
 
-$F = K \dfrac{q_0 \,q_1}{r^2},\quad$ where $K = 9 \times 10^9$
+$\|\vec F\| = K \dfrac{q_0 \,q_1}{r^2}\qquad$ where $K = 9 \times 10^9\, \text{newton-meter}^2/\text{coulomb}^2$
 
-​$F = K (1  \times 1) / 1^2$
+$\|\vec F\| = 9 \times 10^9 \times \dfrac{1 \times 1}{1^2}$
 
-<p>$F = 9 \times 10^9\,\text{newtons}$ </p> 
+<p>$|\vec F| = 9 \times 10^9 \,\text{newtons}$ (attracting) </p> 
 ​​
 This is the force you would feel if a fully loaded oil supertanker was sitting on your head.
 

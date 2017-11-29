@@ -156,7 +156,7 @@ The first definition of charge was:
 
 The unit of charge was named the coulomb, in honor of guess who. 
 
-An example circuit you could build would be a $1\,\text{volt}$ battery connected to a $1\,\Omega$ resistor. Ohm's Law tells us the current will be $I = V/R = 1/1 = 1 \,\text{ampere}$. When that is happening, there is $1 \,\text{coulomb}$ of charge passing by every second at every point in the circuit, by definition.
+An example circuit you could build would be a $1\,\text{volt}$ battery connected to a $1\,\Omega$ resistor. Ohm's Law tells us the current will be $\text I = \text V/\text R = 1/1 = 1 \,\text{ampere}$. When that is happening, there is $1 \,\text{coulomb}$ of charge passing by every second at every point in the circuit, by definition.
 
 ![Coulomb per second]({{ site.baseurl }}{% link i/0-5coulomb_per_second.svg %}){: .centered :}
 
