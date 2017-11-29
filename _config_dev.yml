@@ -1,7 +1,8 @@
 
 # Set url for local development
 # Start the local jekyll server with: 
-#    bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts
+#    bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts --profile --incremental
+
 
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://localhost" # the base hostname & protocol for your site, e.g. http://example.com
