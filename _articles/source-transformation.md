@@ -35,27 +35,23 @@ Convert Thévenin to Norton: set $\text I_\text N = \text V_\text T / \text R_\t
 
 Convert Norton to Thévenin: set $\text V_\text T = \text I_\text N \, \text R_\text N$. 
 
-Notice how the conversion process resembles Ohm's Law.
-
 Thévenin and Norton forms are *equivalent* because they have the same $i$-$v$ behavior from the viewpoint of the output port.
 
 ----
 
-We explain this idea by looking at the $i$-$v$ graphs of the Thévenin and Norton forms, and show how they are equivalent. It's a helpful trick as you work with circuits. 
-
 We'll draw a lot of $i$-$v$ graphs to visualize what's going on. This sinks in better if you to do most of the work. Please follow along with pencil and paper. 
 
-The article after this one is on [Thévenin and Norton equivalents]({{ site.baseurl }}{% link _articles/thevenin-norton.md %}). It uses source transformation to derive a powerful tool to simplify circuits, Thévenin's theorem: Any complicated network of resistors and sources can be reduced down to a Thévenin or Norton equivalent. 
+The theory of [Thévenin and Norton equivalents]({{ site.baseurl }}{% link _articles/thevenin-norton.md %}) is based on source transformation. Thévenin's theorem says any complicated network of resistors and sources can be reduced down to a Thévenin or Norton equivalent. 
 
 ## $i$-$v$ graphs for $\text V$, $\text I$, and $\text R$
 
-Let's review the $i$-$v$ graphs of sources and resistors. Carefully sketch each of these as separate lines on an $i$-$v$ graph,
+Let's review the individual $i$-$v$ graphs of sources and resistors. Carefully sketch each of these as separate lines on an $i$-$v$ graph,
 * voltage source, $v = 5\,\text V$
 * current source, $i = 6\,\text{mA}$
 * resistor, $\text R = 2\,\text k\Omega$  
 
-A voltage source plots as a vertical straight line. Same voltage for any current.  
-A current source plots as a horizontal straight line. Same current for any voltage.
+A voltage source plots as a vertical straight line. It's the same voltage for any current.  
+A current source plots as a horizontal straight line. It's the same current for any voltage.
 
 A resistor appears as a line, $i = \dfrac{v}{\text R_{\text T}}$, where the slope (rise over run) is $\dfrac{1}{\text R_{\text T}}$.
 
@@ -64,13 +60,13 @@ A resistor appears as a line, $i = \dfrac{v}{\text R_{\text T}}$, where the slop
 <details>
 <summary>show answer</summary>
 <p><img src="/i/thevenin1.svg"></p>
-<p>The resistor passes through the origin and has a tilt of $1/\text R$.</p>
+<p>The resistor passes through the origin and has a tilt of $1/\text R = 1/2\,\text k\Omega$.</p>
 <p>The ideal sources are either vertical or horizontal. They don't pass through the origin.</p>
 </details>
 
 ## Thévenin equivalent
 
-Now we get a bit more interesting: combine a resistor with a voltage source. 
+Now make it more interesting: What does the graph a resistor and voltage source look like on an $i$-$v$ plot? 
 
 ![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2.svg %}){: .centered :}
 
@@ -91,7 +87,7 @@ See if you can derive and plot the $i$-$v$ graph for this circuit.
 
 **Work out a symbolic expression for $i$ in terms of** $v,\text R_\text T,\text V_\text T$. 
 
-Try to find an equation for $i$ in terms of $v$ and the circuit elements, something with the form $i = f(v,\text R_\text T,\text V_\text T)$. Give it a try. Use what you already know about the two components and Ohm's Law.  
+Try to find an equation for $i$ in terms of $v$ and the circuit elements, something with the form $i(v) = f(v,\text R_\text T,\text V_\text T)$. Give it a try. Use what you already know about the two components and Ohm's Law.  
 
 $i(v) = f(v,\text R_\text T,\text V_\text T) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_ 
 
@@ -101,7 +97,7 @@ $i(v) = f(v,\text R_\text T,\text V_\text T) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 {% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_2" %} 
 
-Now you've had a try. My turn to derive an $i$-$v$ expression by traditional circuit analysis, and then again with some EE cleverness. 
+Now that you've had a try, it's my turn. I want to derive an $i$-$v$ expression by traditional circuit analysis, and then again with some EE cleverness. 
 
 #### Traditional circuit analysis
 {:.no_toc}
@@ -189,7 +185,7 @@ Two easy points are where the line crosses the voltage axis and where it crosses
 <p>$y = \dfrac{x}{2000} - 2.5\,\text{mA}\qquad$ (same as what we got with the traditional KVL method)</p>
 </details>
 
-What have we learned? We worked through two ways to reveal the $i$-$v$ behavior of a Thévenin circuit. The tilt of the line is controled by $\text R_\text T$. The line crosses the voltage axis at $\text V_\text T$. You can position the line anywhere you want on the $i$-$v$ graph by picking resistor and voltage values. 
+What have we learned? We worked through two ways to reveal the $i$-$v$ behavior of a Thévenin circuit. The tilt of the line is controlled by $\text R_\text T$. The line crosses the voltage axis at $\text V_\text T$. You can position the line anywhere you want on the $i$-$v$ graph with your choice of resistor and voltage values. 
 
 The open-circuit/short-circuit technique is pretty handy. We will use it again.
 
@@ -265,13 +261,22 @@ $(0, i_{sc}) = (0$, \_\_\_\_\_\_\_\_ $)$
 <p><img src="/i/thevenin8a.svg"></p>
 </details>
 
-What have we learned? The Norton form, as weird it is, behaves just like the Thévenin form. It creates a line in $i$-$v$ space. You can move it anywhere by changing component values.
+What have we learned? The Norton form, as weird it is, behaves just like the Thévenin form. It plots as a line in $i$-$v$ space. You can move it anywhere you want depending on your choice of component values.
 
-Next is a design challenge: We find a way to match the two forms.
+## Observations
+{:.no_toc}
 
-## Design challenge
+$\text V_{\text{Thevenin}}$ creates a left-right offset away from the vertical current axis.  
 
-The two circuits generate lines on the $i$-$v$ plot. Here's a design challenge,
+$\text I_{\text{Norton}}$ creates an up/down offset away from the horizontal voltage axis. 
+
+$\text R$ creates the tilt. The tilt is the same for both forms, which is why $\text R_{\text{Thevenin}} = \text R_{\text{Norton}}$. 
+
+$\text V_\text{Thevenin}$ and $\text I_\text{Norton}$ have no effect tilt, they just generate offset. The tilt depends only on the resistance.
+
+## Design challenge 1
+
+Both circuits generate tilted lines on the $i$-$v$ plot.
 
 **1. Make the two circuits produce the same line.**
 
@@ -289,10 +294,9 @@ $\text I_\text N \,= $ \_\_\_\_\_\_\_\_
 
 $\text V_\text T = $ \_\_\_\_\_\_\_\_
 
-
 <details>
 <summary>show answer</summary>
-<p>Two lines are the same if they have the same slope and the same y-intercept. Look at the two equations and match the things that need to match.</p>
+<p>Two lines are the same if they have the same slope and the same y-intercept. Look at the two equation. Match the things that need to match.</p>
 <p>To get the slopes to match, $\text R_\text N = \text R_\text T$. The resistors have to be the same.</p>
 <p>To get the y-intercepts to match, $\text I_\text N = \text V_\text T / \text R_\text T$.</p>
 <p>This is the same as $\text V_\text T = \text I_\text N\,\text R_\text N$.</p>
@@ -329,20 +333,52 @@ $\text R_{\text T} =$ \_\_\_\_\_\_\_\_
 <p><img src="/i/thevenin12.svg"></p>
 </details> 
 
+Notice how the conversion process resembles Ohm's Law.
+
 When you "look into" these circuits from the port you can't tell them apart. (You "look" with a voltmeter or ammeter.) They produce identical behavior for any $v$ or any $i$. This means they are equivalent and therefore interchangeable. We will take advantage of this when we put Thévenin's theorem to work in the next article.
 
-## Example - source transformation
+## Design challenge 2
 
-Make an example where you put a load resistor on the circuit and it operates at a particular point on the $i$-$v$ graph. (Not the same point as either of the other two points.)
+You can use this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[88,80,0],{"name":"Vt","value":"dc(0)","_json_":0},["4","0"]],["r",[240,80,4],{"name":"RL1","r":"","_json_":1},["7","6"]],["r",[176,64,1],{"name":"Rt","r":"","_json_":2},["5","4"]],["g",[152,144,0],{"_json_":3},["0"]],["w",[88,128,88,144]],["w",[88,144,152,144]],["w",[88,80,88,64]],["w",[88,64,128,64]],["w",[176,64,200,64]],["w",[152,144,200,144]],["w",[240,128,240,144]],["w",[240,144,224,144]],["w",[240,80,240,64]],["w",[240,64,224,64]],["r",[240,208,4],{"name":"RL2","r":"","_json_":14},["3","2"]],["r",[152,256,2],{"name":"Rn","r":"","_json_":15},["0","1"]],["g",[152,272,0],{"_json_":16},["0"]],["w",[240,256,240,272]],["w",[240,272,224,272]],["w",[240,208,240,192]],["w",[240,192,224,192]],["i",[88,256,6],{"name":"In","value":"dc(0)","_json_":21},["0","1"]],["w",[192,192,152,192]],["w",[152,256,152,272]],["w",[192,272,152,272]],["w",[88,208,88,192]],["w",[152,208,152,192]],["w",[152,192,88,192]],["w",[152,272,88,272]],["w",[88,272,88,256]],["view",-95.5,25.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) to help you with this design challenge. Open the link in another tab. Follow the steps of the challenge. Make changes to component values by double-clicking on them. At the appropriate step, click **DC** in the top menu bar to tell you the voltage and current.
 
-Let's connect our Thevenin circuit form to something,
- 
-## Observations
+**1. Design your own Thévenin form. Pick any values for $\text V_\text T$ and $\text R_\text T$.**
 
-$\text V_{\text{Thevenin}}$ creates a left-right offset away from the vertical current axis.  
-$\text I_{\text{Norton}}$ creates an up/down offset away from the horizontal voltage axis. 
+![Design challenge 2 Thévenin circuit]({{ site.baseurl }}{% link i/thevenin13.svg %}){: .centered :}
 
-$\text R$ makes the tilt. The tilt is the same for both forms, which is why $\text R_{\text{Thevenin}} = \text R_{\text{Norton}}$. $\text V_\text{Thevenin}$ and $\text I_\text{Norton}$ have no effect tilt, they just generate offset. The tilt depends only on the resistance.
+{:start="2"}
+**2. Design the Norton equivalent to your Thévenin circuit,**
+
+![Design challenge 2 Norton circuit]({{ site.baseurl }}{% link i/thevenin15.svg %}){: .centered :}
+
+{:start="3"}
+**3. Determine the open-circuit voltage and short-circuit current,**
+
+$v_{oc} =$ \_\_\_\_\_\_\_\_\_ $\quad i_{sc} =$ \_\_\_\_\_\_\_\_\_ 
+
+{:start="4"}
+**4. Write the $i$-$v$ equation and plot it on an $i$-$v$ graph.** It's the same equation for both forms,
+
+$i(v) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+{% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_4" %}  
+(Adjust the scales so your particular graph look nice.) 
+
+{:start="5"}
+**5. Connect a load resistor $\text R_\text L$ to both forms.** Use the same resistance for both load resistors.
+
+![Design challenge 2 with load resistor]({{ site.baseurl }}{% link i/thevenin16.svg %})
+
+{:start="6"}
+**6. Compute the voltage and current for both load resistors,**
+
+$v_\text{RLTh} = $ \_\_\_\_\_\_\_\_\_ $\quad i_\text{RLTh} = $ \_\_\_\_\_\_\_\_\_ 
+
+$v_\text{RLN} = $ \_\_\_\_\_\_\_\_\_ $\quad i_\text{RLN} = $ \_\_\_\_\_\_\_\_\_
+
+{:start="7"}
+**7. Plot this point on your $i$-$v$ graph.** It's not the same point as $v_{oc}$ or $i_{sc}$, but it should fall on the $i$-$v$ line you plotted.
+
+If you used the simulation model to help you with this design challenge, notice the simulator didn't tell you the answer. You had to figure out the Norton equivalent on your own. However, the simulator did confirm if your answer was right or wrong. 
 
 ## Summary
 {:.no_toc}
@@ -351,20 +387,24 @@ Thévenin's circuit is a voltage source in series with a resistor.
 
 Norton's circuit is a current source in parallel with a resistor.
 
-They have identical $i$-$v$ behavior if you set,
+Thévenin and Norton forms have identical $i$-$v$ behavior if you set,
 
 $\text R_{\text{Thevenin}} = \text R_{\text{Norton}}\quad$
 
 $\text V_{\text{Thevenin}} = \text I_{\text{Norton}}\, \text R$
 
-When circuits produce the same $i$-$v$ curve from the viewpoint of a selected port, we say they are *equivalent* from the perspective of the port. You can swap a Norton for a Thévenin any time you want.
+When circuits produce the same $i$-$v$ curve from the viewpoint of a selected port, we say they are *equivalent* from the perspective of the port. 
 
-Source transformation stands on the shoulders of Ohm's Law and Kirchhoff's Laws. It is useful when you come across the familiar circuit pattern of source plus resistor.
+You can swap a Norton for a Thévenin or the other way round any time you want.
 
-In the next article we will simplify complex networks of many $\text R$'s and sources down to a *Thévenin equivalent* or *Norton equivalent*.
+Source transformation stands on the shoulders of Ohm's Law and Kirchhoff's Laws. It is useful when you come across the pattern of a source and a resistor. 
+
+Don't short out real electronic equipment to find $i_{sc}$. That is a recipe for smoke.
+
+The next article shows how to apply [source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %}).
 
 <details>
-<summary>what about other circuits with one source and one resistor?</summary>
+<summary>What about other circuits with one source and one resistor?</summary>
 <p>After so much talk about Thévenin and Norton circuits, it's an obvious question to ask about the other two possibilities. Consider,</p>
 
 <ul>
@@ -380,8 +420,8 @@ In the next article we will simplify complex networks of many $\text R$'s and so
 </details>
 
 <details>
-    <summary>credit to the inventors</summary>
-<p>Thévenin's theorem was independently derived in 1853 by German scientist Hermann von Helmholtz and thirty years later in 1883 by Léon Charles Thévenin, an electrical engineer with France's national Postes et Télégraphes Telecommunications (PTT).</p>
+    <summary>Credit the inventors.</summary>
+<p>Thévenin's theorem was independently derived in 1853 by German scientist Hermann von Helmholtz and thirty years later in 1883 by Léon Charles Thévenin, an electrical engineer with France's national Postes et Télégraphes Telecommunications (PTT). Thévenin's name is attached to the idea. Don't feel bad, Helmholtz gets plenty of naming rights for other ideas in engineering.</p>
 
-<p>Norton's theorem was independently derived in 1926 by Siemens & Halske researcher Hans Ferdinand Mayer and Bell Labs engineer Edward Lawry Norton. Published the same month.</p>
+<p>Norton's theorem was independently derived in 1926 by researcher Hans Ferdinand Mayer of Siemens & Halske and Bell Labs engineer Edward Lawry Norton. They published the same month.</p>
 </details>
