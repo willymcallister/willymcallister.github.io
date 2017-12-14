@@ -37,9 +37,9 @@ $v_0$ is the initial voltage across the capacitor, at $t=0$.
 
 <details>
 <summary>calculus notation: $di/dt$</summary>
-<p>$v = \text C\,\dfrac{dv}{dt}$</p>
+<p>$i = \text C\,\dfrac{dv}{dt}$</p>
 
-<p>$d$ is calculus notation for 'differential', or "a tiny change in ...". For example, $dt$ means 'a tiny change in time'. When you see it in a ratio, like $dv/dt$, that means, "a tiny change in $v$ (voltage) for each tiny change in time" An expression like $dv/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-intro/ab-defining-derivative/v/calculus-derivatives-1-new-hd-version">derivative</a>. This derivative is the slope of current when it is plotted against time.</p>
+<p>$d$ is calculus notation for 'differential', or "a tiny change in ...". For example, $dt$ means 'a tiny change in time'. When you see it in a ratio, like $dv/dt$, that means, "a tiny change in $v$ (voltage) for each tiny change in time" An expression like $dv/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-intro/ab-defining-derivative/v/calculus-derivatives-1-new-hd-version">derivative</a>. The derivative is the slope of voltage as it changes with time.</p>
 </details>
 
 <details>
