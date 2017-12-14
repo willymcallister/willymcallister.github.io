@@ -9,8 +9,7 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering,
 
 ### [Circuit sandbox <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Spinning Numbers has a circuit simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}).    
-Run the Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
+Spinning Numbers circuit simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}). Run it [in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
@@ -22,15 +21,16 @@ Circuits are made of resistors, capacitors, inductors, and power sources.
 Resistors in series and parallel, the voltage divider, delta-wye resistor networks.
 
 ### [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})
-Figure out the currents and voltges in a DC circuit using Kirchhoff's Laws, node voltage method, mesh and loop current methods. Linearity and superposition.
+Kirchhoff's Laws, node voltage method, mesh and loop current methods. 
+
+### [Special topics in DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})
+Linearity and superposition. Source transformation. Thévenin and Norton equivalents.
 
 ### [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %})
 Natural response is what a circuit does with its own internal stored energy.  
-Forced response is what happens when you apply an external signal.  
-Learn a trick for quickly sketching exponential waveforms.
 
 ### [AC circuit analysis]({{ site.baseurl }}{% link _topics/topic-ac-analysis.md %})
-We limit signals to be only sine waves, and develop an analysis method based on complex exponentials. This ends up being *much* simpler than solving differential equations from scratch every time.
+If we limit signals to only sine waves, we get AC analysis based on complex exponentials. 
 
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
 The *operational amplifier* is the building block of analog electronics.
@@ -44,6 +44,6 @@ Here's a list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? [<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) 
 
 ----
-These videos and articles began as my contribution to Khan Academy where I was the Electrical Engineering Content Fellow in 2016. I hope you enjoy them.  
+These videos and articles began as my contribution to Khan Academy where I was the Electrical Engineering Content Fellow in 2016. In the past year all the articles you find here have been significantly improved. I hope you enjoy them.  
    \- Willy McAllister
 
