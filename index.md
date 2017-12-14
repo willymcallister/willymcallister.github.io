@@ -23,7 +23,7 @@ Resistors in series and parallel, the voltage divider, delta-wye resistor networ
 ### [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})
 Kirchhoff's Laws, node voltage method, mesh and loop current methods. 
 
-### [Special topics in DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %})
+### [Special topics in DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis-special.md %})
 Linearity and superposition. Source transformation. Thévenin and Norton equivalents.
 
 ### [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %})
