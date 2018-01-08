@@ -29,20 +29,20 @@ Source transformation between Thévenin and Norton forms,
 
 The resistor value is the same for the Thévenin and Norton forms, $\text R_\text T = \text R_\text N$.
 
-Convert Thévenin to Norton by setting $\text I_\text N = \text V_\text T / \text R_\text T$.  
+Convert Thévenin to Norton: set $\text I_\text N = \text V_\text T / \text R_\text T$.  
 
-Convert Norton to Thévenin by setting $\text V_\text T = \text I_\text N \, \text R_\text N$. 
+Convert Norton to Thévenin: set $\text V_\text T = \text I_\text N \, \text R_\text N$. 
 
 Thévenin and Norton forms are *equivalent* because they have the same $i$-$v$ behavior from the viewpoint of the output port.
 
 ## General strategy
 
-Think about using source transformation when the problem asks you about a single voltage or current for one specific component. Everything besides that one component is a candidate for source transformation.
+Think about source transformation when the problem asks you about a single voltage or current for one specific component. Everything besides that one component is a candidate for source transformation.
 
 The **one rule**: Don't include the component with the requested $i$ or $v$ in a source transformation. 
 
 The general strategy,
-* Read the problem carefully. Identify what is being asked for.
+* Read the problem carefully. Identify what is asked for.
 * Scan the circuit. Look for the familiar pattern of the two forms, 
   * Thévenin form is a voltage source in series with a resistor.
   * Norton form is a current source in parallel with a resistor.
@@ -60,10 +60,10 @@ The general strategy,
 
 We could go after this circuit with methods we've learned before, like Node Voltage or Mesh Current. But this time we will do it with source transformation.
 
-**What is being asked for?**
+**What is asked for?**
 <details>
     <summary>show answer</summary>
-    <p>We are asked to find $i$ flowing in the $470 \,\Omega resistor.</p>
+    <p>We are asked to find $i$ in the $470 \,\Omega resistor.</p>
 </details>
 
 **Are there any Thévenin or Norton forms?**
@@ -76,7 +76,7 @@ We could go after this circuit with methods we've learned before, like Node Volt
 **Which ones are candidates for source transformation?**
 <details>
     <summary>show answer</summary>
-    <p>According to the one rule, the Thévenin form is *not* a candidate for transformation because we've been asked to find the current in its $470\,\Omega$ resistor. We can't disturb that component if we want to get the right answer.</p>
+    <p>From the one rule, the Thévenin form is *not* a candidate for transformation because we've been asked to find the current in its $470\,\Omega$ resistor. We can't disturb that component if we want to get the right answer.</p>
 </details>
 
 **Anticipate: What good thing would happen if we did a source transformation?**
@@ -128,7 +128,7 @@ Here's the circuit with the correct values filled in,
 Things to notice,
 * $\text R1$ and $\text R1\text b$ have the same current and voltage. That's what it means to be equivalent. 
 * The current in $\text V2$ is not the same as $\text I2$. That's ok. We focused on $\text R1$ and $\text R1\text b$.
-* Transforming the current source gave us the same answer with a simpler circuit. This would have been a challenging circuit for Node Voltage or Mesh Current methods. Source transformation simplified it down to something we could solve with Ohm's Law. 
+* When we transformed the current source we got the same answer with a simpler circuit. This would have been a challenge for Node Voltage or Mesh Current methods. Source transformation simplified it down to something we could solve with Ohm's Law. 
 
 In the next article we simplify complex networks of many $\text R$'s and sources down to a *Thévenin equivalent* or *Norton equivalent*.
 

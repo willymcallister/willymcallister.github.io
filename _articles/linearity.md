@@ -20,7 +20,7 @@ The mathematical concept of *linearity* has a profound impact on electronic desi
 ### Where we're headed 
 {:.no_toc}
 
-A function is linear in the mathematical sense if it has these properties:
+A function is linear in the mathematical sense if it has these properties,
 
 Homogeneity (scaling): $f(ax) = af(x)$  
 
@@ -62,10 +62,10 @@ This is the *scaling* property.
 
 Do you recognize it as the equation of a line? That's what it is. The line goes through the origin and has a slope of $a$. Slope and scale factor mean the same thing. The fancy mathematical word for the scaling property is *homogeneity*. 
 
-Any function that looks like a line through the origin has the scaling property. Here's a specific example: 
+Any function that looks like a line through the origin has the scaling property. Here's a specific example, 
 Let $y = f(x) = 2x$. The scale factor is $a = 2$.
 
-![y = f(x) = 2x]({{ site.baseurl }}{% link i/linearity_2x_slope.svg %}){: .centered }
+![y = f(x) = 2x]({{ site.baseurl }}{% link i/linearity_2x_slope.svg %}){: .centered :}
 
 If $x=2$, then $y = f(2) = 2 \cdot 2 = 4$, (blue dot).
 
@@ -82,7 +82,7 @@ If you want, pick out some points along the negative $x$-axis and verify the sca
 
 If $f(x)$ is any other shape besides a line, like $f(x)=x^2$ or $1/x$ or $2^x$, the scale factor *is not* the same for every $x$, it depends on the value of $x$. Let's show an example. Let $y = f(x) = x^2/16$, the green parabola shown here,
 
-![y = f(x) = x^2 / 16]({{ site.baseurl }}{% link i/linearity_parabola.svg %}){: .centered }
+![y = f(x) = x^2 / 16]({{ site.baseurl }}{% link i/linearity_parabola.svg %}){: .centered :}
 
 At $x=4$, the $y$ value is $y=4^2/16 = 1$. So the scale factor is $y/x = 1/4$. 
 
@@ -124,7 +124,7 @@ To tell if the guitar makes the singer sound different, we make three recordings
 2. Second, the singer goes on a break and the guitar player wails on his guitar, $x_2$. We record the amplified guitar by itself, $f(x_2)$, (middle box).
 3. Third, we have the singer and guitar play together at the same time and record the ampilfied sound of the full band, $f(x_1 + x_2)$, (bottom box)   
 
-![Demonstration of additivity]({{ site.baseurl }}{% link i/linearity_additivity2.svg %}){: .centered }
+![Demonstration of additivity]({{ site.baseurl }}{% link i/linearity_additivity2.svg %}){: .centered :}
 
 The question is, does $f(x_1 + x_2)$ sound the same or different than $f(x_1) + f(x_2)$? We ask our sound technician to play back the voice and guitar together and we listen to $f(x_1) + f(x_2)$. Then we listen to the full band recording, $f(x_1 + x_2)$. Can we tell them apart?
 
@@ -166,7 +166,7 @@ In the next article, [Linearity of electronic components]({{ site.baseurl }}{% l
 ## Summary
 {:.no_toc}
 
-A function is linear if it has these properties:
+A function is linear if it has these properties,
 
 Homogeneity (scaling): $f(ax) = af(x)$  
 

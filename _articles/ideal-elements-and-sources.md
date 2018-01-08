@@ -110,7 +110,7 @@ An ideal constant current source has a fixed output current, independent of the 
 
 The equation for a constant current source is, $i = \text I$
 
-where $\text I$ is a constant output current, like $i=2\,\text mA$. The voltage across this source can be anything, but the current is always the same, $\text I$. 
+where $\text I$ is a constant output current, like $i=2\,\text{mA}$. The current is always the same no matter what voltage appears across the source. 
 
 ## Resistor
 

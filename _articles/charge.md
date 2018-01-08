@@ -76,7 +76,7 @@ So we have these observations of nature: rubbing cats or balloons. We observe th
 <summary>Maybe amber force is the same as magnetism?</summary>
 <p>This rubbing-cats force seems kind of like magnetism, which has two kinds and the same <em>force at a distance</em> property. But electric force has to come from a different place. Magnetism is a property of certain kinds of rocks called lodestones (a rock that contains iron). This electric force comes from the friction between amber and cat and has nothing to do with iron.
 
-As you study electrical engineering or physics you will learn that electricity and magnetism are very closely related. When these ideas come together we merge their names and call it *electromagnetism*. 
+As you study electrical engineering or physics you will learn that electricity and magnetism are very closely related. When these ideas come together we merge their names and call it <em>electromagnetism</em>. 
 </p>
 <p>Gravity has the same <em>force at a distance</em> thing, but there is only one kind of gravity (only attraction). So it is a very different kind of force.
 </p>

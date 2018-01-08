@@ -16,6 +16,8 @@ You can convert between Thévenin and Norton forms. This is called *source trans
 
 Explained by Willy McAllister.
 
+(These names are used in the United States. If you learned other names, please let me know.)
+
 ----
 
 ### Contents
@@ -78,7 +80,7 @@ There is a common convention to label $v$ and $i$ at a port. It is an extension 
 
 ![Labeled resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2a.svg %}){: .centered :}
 
-A lot of the time current actually flows out of the top port, towards the right. Quite often it means $i$ will have a negative sign. That's fine. We like this convention because it gives a consistent current arrow direction; it doesn't flip around for different people and different ports. We're happy to deal with a few minus signs in return for consistency.
+A lot of times current actually flows out of the top port, towards the right. Quite often it means $i$ will have a negative sign. That's fine. We like this convention because it gives a consistent current arrow direction; it doesn't flip around for different people and different ports. We're happy to deal with a few minus signs in return for consistency.
 
 ### Thévenin $i$-$v$ plot
 {:.no_toc}
@@ -261,7 +263,7 @@ $(0, i_{sc}) = (0$, \_\_\_\_\_\_\_\_ $)$
 <p><img src="/i/thevenin8a.svg"></p>
 </details>
 
-What have we learned? The Norton form, as weird it is, behaves just like the Thévenin form. It plots as a line in $i$-$v$ space. You can move it anywhere you want depending on your choice of component values.
+What have we learned? The Norton form, as weird it is, behaves just like the Thévenin form. It plots as a line in $i$-$v$ space. You can move it anywhere just by your choice of component values.
 
 ## Observations
 {:.no_toc}
@@ -273,6 +275,8 @@ $\text I_{\text{Norton}}$ creates an up/down offset away from the horizontal vol
 $\text R$ creates the tilt. The tilt is the same for both forms, which is why $\text R_{\text{Thevenin}} = \text R_{\text{Norton}}$. 
 
 $\text V_\text{Thevenin}$ and $\text I_\text{Norton}$ have no effect tilt, they just generate offset. The tilt depends only on the resistance.
+
+Notice the current in the Norton resistor. Current in $\text R_\text N$ isn't available to the load resistor. It seems like "wasted" power. That's what happens when you drive a load with a Norton source. In the Thevenin circuit, the equivalent "waste" is the voltage across the Thevenin resistor. This voltage dissipates power (heat) in $\text R_\text T$ and isn't available to the load. The amount of waste is the same. 
 
 ## Design challenge 1
 
@@ -339,7 +343,7 @@ When you "look into" these circuits from the port you can't tell them apart. (Yo
 
 ## Design challenge 2
 
-You can use this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[88,80,0],{"name":"Vt","value":"dc(0)","_json_":0},["4","0"]],["r",[240,80,4],{"name":"RL1","r":"","_json_":1},["7","6"]],["r",[176,64,1],{"name":"Rt","r":"","_json_":2},["5","4"]],["g",[152,144,0],{"_json_":3},["0"]],["w",[88,128,88,144]],["w",[88,144,152,144]],["w",[88,80,88,64]],["w",[88,64,128,64]],["w",[176,64,200,64]],["w",[152,144,200,144]],["w",[240,128,240,144]],["w",[240,144,224,144]],["w",[240,80,240,64]],["w",[240,64,224,64]],["r",[240,208,4],{"name":"RL2","r":"","_json_":14},["3","2"]],["r",[152,256,2],{"name":"Rn","r":"","_json_":15},["0","1"]],["g",[152,272,0],{"_json_":16},["0"]],["w",[240,256,240,272]],["w",[240,272,224,272]],["w",[240,208,240,192]],["w",[240,192,224,192]],["i",[88,256,6],{"name":"In","value":"dc(0)","_json_":21},["0","1"]],["w",[192,192,152,192]],["w",[152,256,152,272]],["w",[192,272,152,272]],["w",[88,208,88,192]],["w",[152,208,152,192]],["w",[152,192,88,192]],["w",[152,272,88,272]],["w",[88,272,88,256]],["view",-95.5,25.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) to help you with this design challenge. Open the link in another tab. Follow the steps of the challenge. Make changes to component values by double-clicking on them. At the appropriate step, click **DC** in the top menu bar to tell you the voltage and current.
+You can use this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[88,80,0],{"name":"Vt","value":"dc(0)","_json_":0},["4","0"]],["r",[240,80,4],{"name":"RL1","r":"","_json_":1},["7","6"]],["r",[176,64,1],{"name":"Rt","r":"","_json_":2},["5","4"]],["g",[152,144,0],{"_json_":3},["0"]],["w",[88,128,88,144]],["w",[88,144,152,144]],["w",[88,80,88,64]],["w",[88,64,128,64]],["w",[176,64,200,64]],["w",[152,144,200,144]],["w",[240,128,240,144]],["w",[240,144,224,144]],["w",[240,80,240,64]],["w",[240,64,224,64]],["r",[240,208,4],{"name":"RL2","r":"","_json_":14},["3","2"]],["r",[152,256,2],{"name":"Rn","r":"","_json_":15},["0","1"]],["g",[152,272,0],{"_json_":16},["0"]],["w",[240,256,240,272]],["w",[240,272,224,272]],["w",[240,208,240,192]],["w",[240,192,224,192]],["i",[88,256,6],{"name":"In","value":"dc(0)","_json_":21},["0","1"]],["w",[192,192,152,192]],["w",[152,256,152,272]],["w",[192,272,152,272]],["w",[88,208,88,192]],["w",[152,208,152,192]],["w",[152,192,88,192]],["w",[152,272,88,272]],["w",[88,272,88,256]],["view",-95.5,25.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) to help you with this design challenge. Open the link in another tab. Follow the steps of the challenge. To change a component value, double-click on it. At the appropriate step, click **DC** in the top menu bar to tell you the voltage and current.
 
 **1. Design your own Thévenin form. Pick any values for $\text V_\text T$ and $\text R_\text T$.**
 
@@ -417,11 +421,4 @@ The next article shows how to apply [source transformation]({{ site.baseurl }}{%
 <p>If you put a resistor in parallel with a voltage source it has no effect on the voltage, and it doesn't influence $i$. All you do is pull some extra current out of the ideal voltage source, a current we can't observe from the port. Who cares if there's a resistor in parallel with the ideal voltage source? The resistor is useless.</p>
 <p>The same goes for the resistor in series with a current source. The source pushes its current through the resistor no matter what the resistor value is. The resistor just forces the ideal current source to create some extra voltage to drive the required current. We can't observe the source voltage from the port.</p>
 <p>So after some thought, these two variations don't make sense and therefore don't matter to us.</p>
-</details>
-
-<details>
-    <summary>Credit the inventors.</summary>
-<p>Thévenin's theorem was independently derived in 1853 by German scientist Hermann von Helmholtz and thirty years later in 1883 by Léon Charles Thévenin, an electrical engineer with France's national Postes et Télégraphes Telecommunications (PTT). Thévenin's name is attached to the idea. Don't feel bad, Helmholtz gets plenty of naming rights for other ideas in engineering.</p>
-
-<p>Norton's theorem was independently derived in 1926 by researcher Hans Ferdinand Mayer of Siemens & Halske and Bell Labs engineer Edward Lawry Norton. They published the same month.</p>
 </details>

@@ -156,6 +156,8 @@ Here's a peek inside a surface-mount capacitor. It is a stack of many layers of 
  
 ## Real-world inductors
 
+The theory of how an inductor works is actually pretty complicated. To learn more about inductors and magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
+
 When you make an inductor the goal is to come as close as possible to the ideal inductor equation, 
 
 $v = \text L \,\dfrac{di}{dt}$
@@ -165,8 +167,6 @@ The symbol for an inductor looks like this:
 ![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
-
-The theory of how an inductor actually works is actually pretty complicated. Refer to [Inductor - how it works](http://spinningnumbers.org/a/inductor_how_it_works.html) for an informal description of how an inductor does its thing. To learn more about inductors and their magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
 
 Real-world inductors come in lots of shapes and sizes.
 

@@ -120,7 +120,7 @@ Let's say we used Ohm's Law and the equivalent resistor to figure out both $i$ a
 
 $i_{\text R1} = v/\text R_1 \qquad i_{\text R2} = v/\text R_2 \qquad i_{\text R3} = v/\text R_3$
 
-The main current $i$ splits up into three separate resistor currents. Those currents rejoin each other and flow back to the current source. That means the the individual resistor currents have to add up to the main current.
+The main current $i$ splits up into three separate resistor currents. Those currents rejoin each other and flow back to the current source. That means the individual resistor currents have to add up to the main current.
 
 The amount of current in each resistor is *inversely* proportional to the value of the resistor.
 
