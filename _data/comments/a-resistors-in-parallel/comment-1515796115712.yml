@@ -1,0 +1,7 @@
+_id: ed6c4010-f7e7-11e7-b9b3-1d7d6620696e
+_parent: 'http://spinningnumbers.org/a/parallel-resistors.html'
+replying_to: '1'
+message: "Hi Robert,\r\nTip: When thinking about how the current splits up between the three resistors, think about currents *in* the resistors. Avoid trying to figure out the currents flowing in the little line segments of the distributed nodes above and below the resistors. The currents in those little wire segments will always mess up your mind (because you can draw the resistors in a different order and the little segment currents will be different). However, the currents *in* the resistors will always stay the same.\r\n\r\nThe way to visualize current splitting up in parallel resistors is to imagine water flowing in a creek. Draw a line across the creek, from bank to bank. Place two rocks in the creek on the line, with gaps between them. That creates three channels for water to flow through. Those channels are the resistors. All the water flowing from upstream reaches the rocks and splits up to go through the channels. All the water makes it through the gaps and rejoins on the downstream side of the rocks. If you add up the total gallons/minute in the three channels, it will exactly equal the current upstream (Is) and downstream. \r\n\r\nThis article may help clear up my point about currents in a distributed node: http://spinningnumbers.org/a/schematic-equivalence.html"
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2018-01-12T22:28:35.711Z'
