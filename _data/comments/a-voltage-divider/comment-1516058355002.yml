@@ -1,0 +1,17 @@
+_id: 800a6be0-fa4a-11e7-b2d1-c1e0adb3ae7e
+_parent: 'http://spinningnumbers.org/a/voltage-divider.html'
+replying_to: '2'
+message: >-
+  I suggest you build the sample project by rote, just doing what the
+  instructions say. You can leave Pin 5 unconnected to start with. If you can
+  get your circuit to blink the LED, then you have your foot in the door. In
+  this circuit, the capacitor acts like a bucket for charge. If you provide a
+  current to the capacitor, charge builds up and the voltage rises. If you take
+  away charge, the voltage drops. If you multiply R * C you will get the "time
+  constant" of the circuit, measured in seconds. That's roughly how fast things
+  happen. RC = (10k+4.7k) * 10uF = 0.147 seconds. Your LED should blink roughly
+  8-10 times/sec.
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2018-01-15T23:19:15.001Z'
+id: '{@id}'
