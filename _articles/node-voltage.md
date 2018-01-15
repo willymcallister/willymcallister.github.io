@@ -374,11 +374,11 @@ In this circuit, battery $\text V_2$ is floating. Let's use the Node Voltage Met
 * Node $\greenD a$ is an easy node, since it is connected to $\text V1$ and then to ground. We immediately know $\goldD{v_a} = \text V_1$. 
 * The next step is to write a KCL equation for node $b$. 
 
-$i_{\text V_2} + \quad i_{\text R2} \quad + \quad i_{\text R_3} = 0$
+$\quad i_{\text R2} \quad + \quad i_{\text R_3} + i_{\text V_2} = 0$
 
-$i_{\text V_2} + \dfrac{(v_a - v_b)}{\text R2} + \dfrac{v_b}{\text R3} = 0$
+$\dfrac{(v_a - v_b)}{\text R2} - \dfrac{v_b}{\text R3} + i_{\text V_2}? = 0$
 
-Oops, we have to somehow figure out the current in the floating battery, $i_{\text V_2}$. But the defining equation for the battery does not mention current. Its defining equation is $v = \text V$. There is no $i$ involved. A battery won't tell us what its own current is. So what do we do?
+Oops, we have to somehow figure out the current in the floating battery, $i_{\text V_2}$. But the defining equation for the battery does not mention current. Its defining equation is $v = \text V$. There is no $i$ involved. A battery doesn't tell us what its own current is. So what do we do?
 
 At this point we break away from the standard script for Node Voltage Method, and resort to our own creativity. It is okay to do this. Remember the Node Voltage script nothing more than an efficient way to create simultaneous equations. The floating battery is giving us a little trouble, so we're going to do a little improvising. Here's the circuit again,
 
@@ -398,7 +398,7 @@ $i_{\text V_2} = \dfrac{\text V_1 - (v_b + \text V_2)}{\text R1}$
 
 Now we can go back and finish up the KCL equation for node $b$. 
 
-$\dfrac{\text V_1 - (v_b + \text V_2)}{\text R1} + \dfrac{(v_a - v_b)}{\text R2} + \dfrac{v_b}{\text R3} = 0$
+$\dfrac{(v_a - v_b)}{\text R2} - \dfrac{v_b}{\text R3} + \dfrac{\text V_1 - (v_b + \text V_2)}{\text R1} = 0$
 
 This equation is a little more complicated than usual, but it is still just one equation in one unknown, $v_b$. Once we solve for $v_b$, we use our extra equation to immediately get $v_c$.
 
@@ -412,7 +412,7 @@ If you want to find currents, proceed with Ohm's Law as we did earlier.
 
 ### Supernode
 
-This pair of floating but highly constrained nodes is often called a *supernode*. I could have used that term and come up with some rule for what to do. Instead, we resorted to our creativity to work through the puzzle. Some textbooks add an exception and extra steps to the Node Voltage Method to account for a supernode. But I like to keep the steps simple and allow myself to mess around and come up with an extra constraint when needed. 
+This pair of constrained floating nodes is called a *supernode*. I could have used that term and come up with some rules for what to do. Instead, we resorted to our creativity to work through the puzzle. Some textbooks add extra steps to the Node Voltage Method to account for a supernode. But I like to keep the steps simple and allow myself to mess around and come up with an extra constraint equation when needed. 
 
 ## Summary
 {: .no_toc :}
@@ -426,4 +426,4 @@ The Node Voltage Method is one of two efficient methods of solving a circuit. Th
 * Solve the resulting system of equations to find all the node voltages.
 * Solve the currents you want using Ohm's Law.
 
-If the circuit includes a floating source, come up with an extra equation to account for the missing current variable.
+If the circuit includes a floating voltage source, come up with an extra equation to account for the unknown current in the voltage source.
