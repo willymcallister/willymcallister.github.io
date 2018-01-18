@@ -148,7 +148,7 @@ $i_5 = $ \_\_\_\_\_ $\text{mA}$
 
 <p>$i_5 = -6 \,\text{mA}$</p>
 
-<p>A current of $-6\,\text{mA}$ flowing <em>in</em> is the same thing as  $+6\,\text{mA}$ is flowing *out* of the node.</p>
+<p>(A current of $-6\,\text{mA}$ flowing <em>in</em> is the same thing as  $+6\,\text{mA}$ is flowing *out* of the node.)</p>
 </details>
 
 problem 3  
