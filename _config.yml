@@ -28,7 +28,7 @@ github_username:  willymcallister
 markdown: kramdown
 github: [metadata]
 theme: minima
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
