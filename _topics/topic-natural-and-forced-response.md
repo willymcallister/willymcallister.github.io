@@ -35,11 +35,11 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - intuition]({{ site.baseurl }}{% link _videos/rc-step-response-intuition.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - setup (1 of 2)]({{ site.baseurl }}{% link _videos/rc-step-response-setup.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - setup (1 of 3)]({{ site.baseurl }}{% link _videos/rc-step-response-setup.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - solve (2 of 2)]({{ site.baseurl }}{% link _videos/rc-step-response-solve.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - solve (2 of 3)]({{ site.baseurl }}{% link _videos/rc-step-response-solve.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - example]({{ site.baseurl }}{% link _videos/rc-step-response-solve.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - example (3 of 3)]({{ site.baseurl }}{% link _videos/rc-step-response-example.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Sketching RC exponentials]({{ site.baseurl }}{% link _videos/sketching-rc-exponentials.md %})
 
