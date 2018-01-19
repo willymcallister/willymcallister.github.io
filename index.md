@@ -9,7 +9,8 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering,
 
 ### [Circuit sandbox <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-A circuit simulator. Run [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) it [in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). If you can help translate it to other languages, write me (address below).
+A circuit simulator. Run [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) it [in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html).  
+<small>If you can help translate Circuit Sandbox into other languages, write me at willy@spinningnumbers.org.</small>
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
@@ -33,7 +34,7 @@ Natural response is what a circuit does with its own internal stored energy.
 If we limit signals to only sine waves, we get AC analysis based on complex exponentials. 
 
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
-The *operational amplifier* is the building block of analog electronics.
+The operational amplifier is the building block of analog electronics.
 
 ### [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) 
 Using a diode in a circuit.
