@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-Welcome to the study of electricity and electrical engineering! In this introductory sequence you will become familiar with the most important electrical concepts: charge, current, and voltage. 
+Welcome to electricity and electrical engineering! In this introductory sequence you will become familiar with the most important electrical concepts: charge, current, and voltage. 
 
-You can also get your first exposure to the language we use for engineering numbers, units, and notation. 
+You also learn about the language we use for engineering numbers, units, and notation. 
 
 Check out the summary of the math and science preparation that will get you ready for the best experience studying electrical engineering.
 
@@ -25,11 +25,11 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Conventional current]({{ site.baseurl }}{% link _videos/conventional-current.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Conventional current vs. electron current]({{ site.baseurl }}{% link _articles/conventional-vs-electron-current.md %})
-
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) - charge, current, voltage, power
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Conventional current vs. electron current]({{ site.baseurl }}{% link _articles/conventional-vs-electron-current.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Numbers in electrical engineering]({{ site.baseurl }}{% link _articles/numbers-in-ee.md %})
 
