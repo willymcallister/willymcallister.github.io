@@ -3,6 +3,7 @@ layout: video
 title:  "RC step response - example"
 author: Willy McAllister
 youtubeID: apkcw-1-ebo
+transcript: rc-step-response-3-cc.txt
 comments: true
 --- 
 
