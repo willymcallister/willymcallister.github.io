@@ -36,7 +36,9 @@ For active elements, the power calculation comes out with a negative sign. So a 
 
 ----
 
-Reminder: In this article we are using conventional current direction, *not* electron current direction.
+Reminder: In this article we use the conventional current direction, *not* electron current direction.
+
+Veterans: Some military electronic training programs (for example the U.S. Navy NEETS program in the 1960s) use the opposite convention, defining current to flow in the direction of electron motion, but we don't use that here at Spinning Numbers. We follow the SI convention for current direction.
 
 -----
 

@@ -3,13 +3,13 @@ layout: article
 title:  Ideal elements and sources
 author: Willy McAllister
 comments: true
----
+--- 
 
-A circuit is made of *elements*. There's usually at least one *source* element to provide the energy to make the circuit do something. The source is connected to a bunch of *components*. The terms *element* and *component* are pretty much interchangeable. 
+A circuit is made of *elements*. There's usually at least one *source* element to provide the energy to make the circuit do something. The source connects to one or more *components*. The terms *element* and *component* are pretty much interchangeable. 
 
-In this article, we describe sources and components as ideal mathematical abstractions. By the end, we will have a nice collection of equations that model the ideal elements.  
+In this article, we define sources and components as ideal mathematical abstractions. By the end, we will have a nice collection of equations that model the ideal elements. 
 
-The next article describes real-world components that come close to the ideal abstract versions we talk about here.
+The next article is about [real-world circuit elements]({{ site.baseurl }}{% link _articles/real-world-elements.md %}) that come close to the ideal versions.  
 
 Written by Willy McAllister.
 
@@ -50,7 +50,9 @@ The two common symbols for constant voltage sources look like this,
 
 ![Voltage source symbols]({{ site.baseurl }}{% link i/5voltage_source_symbols.svg %}){: .centered :}
 
-The symbol on the left is used for a battery. The longer horizontal line on the battery symbol represents the positive terminal of the battery, and the shorter horizontal line represents the negative terminal. The circle symbol represents some other source of voltage, often a power supply. It is a good practice to draw the $+$ and $-$ signs inside the circle instead of on the outside.
+The symbol on the left is a battery. The long horizontal line represents the positive terminal of the battery, and the short horizontal line is the negative terminal. Sometimes the battery is not marked with $+$ and +-$ signs, so this long-line short-line thing is to memorize. 
+
+The circle symbol represents some other kind of voltage source, a power supply or generator. It is best practice to draw the $+$ and $-$ signs inside the circle instead of on the outside. That way they don't get confused with other voltage labels added to the schematic later.
 
 An ideal constant voltage source has a fixed output voltage, independent of the current drawn by the components connected to its terminals, as shown in this *current versus voltage* plot,
 

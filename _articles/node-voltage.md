@@ -300,7 +300,7 @@ If you want to work this problem on your own, go for it! Copy this schematic and
 <p>Multiply through. The $v_c$ terms cancel. Add the equations, </p>
 
 <p>$\begin{aligned}
-&\text{Node }\greenD b: & \biggl [-\dfrac{15 \cdot 8}{500}\,v_b + \cancel{\dfrac{15}{100}\,v_c}  &  = -\dfrac{45}{10} \ \biggr ] \\
+&\text{Node }\greenD b: & \biggl [-\dfrac{15 \cdot 8}{10 \cdot 50}\,v_b + \cancel{\dfrac{15\cdot 1}{10 \cdot 10}\,v_c}  &  = -\dfrac{15 \cdot 3}{10 \cdot 1} \ \biggr ] \\
 \\
 &\text{Node }\greenD c: &+ \biggl [ +\dfrac{1}{10}v_b - \cancel{\dfrac{15}{100} v_c}  & =  \,-\dfrac{3}{4} \ \ \biggr ] \\
 \\
