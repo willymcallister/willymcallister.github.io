@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-### Topic pages
+### Topics
 
 {% assign topics = site.topics | sort  %}
 <ul>
