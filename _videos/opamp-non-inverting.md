@@ -9,7 +9,6 @@ comments: true
 
 An op-amp can be used to amplify a voltage. The increase in voltage (gain) is determined by the ratio of the resistors in the circuit.
 
-(This version of the video has a small error corrected.)
-
 Created by Willy McAllister.
 
+This is an updated version of the same [video](https://www.youtube.com/watch?v=_Ut-nQ535iE) on Khan Academy. A small flaw has been repaired.
