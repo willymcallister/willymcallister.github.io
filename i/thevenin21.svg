@@ -76,9 +76,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="5.6733227"
-     inkscape:cx="377.03479"
-     inkscape:cy="24.158421"
+     inkscape:zoom="1.2592705"
+     inkscape:cx="247.76249"
+     inkscape:cy="75.348183"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -307,28 +307,28 @@
      class="st16 st23 st24"
      id="text4881-9"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="350.67981"
+     x="396.67981"
      y="133.43488"
      sodipodi:linespacing="125%">−</text>
 <text
      class="st16 st25 st24"
      id="text4883-8"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="354.6795"
+     x="400.6795"
      y="93.835617"
-     sodipodi:linespacing="125%">v<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan5596" /></text>
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:22.50000201px"
+       id="tspan12791">v</tspan></text>
 <text
      class="st16 st23 st24"
      id="text4897-1"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="352.67981"
+     x="398.67981"
      y="61.435284"
      sodipodi:linespacing="125%">+</text>
 <g
      id="g4899-9"
-     transform="translate(120.67919,-18.565619)"><g
+     transform="translate(166.67919,-18.565619)"><g
        id="g4901-6"><path
          class="st19"
          d="m 252,144 c 3.7,-7 6.2,-20.5 6.2,-36 0,-11.4 -1.4,-21.8 -3.6,-29.3"
@@ -344,10 +344,10 @@
      class="st22 st24 st25 st26"
      id="text4351-6"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;letter-spacing:1;writing-mode:lr-tb;text-anchor:start;fill:#11accd;stroke:#11accd;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
-     x="349.51117"
+     x="395.51117"
      y="36.307453"
      sodipodi:linespacing="125%"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:none"
        id="tspan5806-2">i</tspan></text>
 <g
      id="g4867-1"
@@ -388,7 +388,7 @@
      y="24.783993"
      sodipodi:linespacing="125%">500Ω</text>
 <g
-     transform="matrix(-1,0,0,1,472.57078,-70.28229)"
+     transform="matrix(-1,0,0,1,518.57078,-70.28229)"
      id="g5760-0"><line
        style="font-family:KaTeX_Main-Regular;fill:none;stroke:#11accd;stroke-width:3.62247801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="line4509-8"

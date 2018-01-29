@@ -316,9 +316,9 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
      x="354.6795"
      y="93.835617"
-     sodipodi:linespacing="125%">v<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan5596" /></text>
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:22.50000201px"
+       id="tspan13568">v</tspan></text>
 <text
      class="st16 st23 st24"
      id="text4897-1"
@@ -347,7 +347,7 @@
      x="349.51117"
      y="36.307453"
      sodipodi:linespacing="125%"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:none"
        id="tspan5806-2">i</tspan></text>
 <g
      id="g4867-1"
@@ -421,9 +421,9 @@
      class="st5" /><line
      style="fill:none;stroke:#808080;stroke-width:1;stroke-miterlimit:10;stroke-dasharray:none;marker-start:url(#marker7822)"
      id="line4849-4-9"
-     y2="71.430931"
+     y2="100.51651"
      x2="424.63629"
-     y1="98.516518"
+     y1="73.430939"
      x1="424.63629"
      class="st9" /><text
      class="st23 st24"
@@ -431,7 +431,8 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
      x="450.63617"
      y="91.691681"
-     sodipodi:linespacing="125%">Iext</text>
+     sodipodi:linespacing="125%"
+     dy="0 6">Iext</text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 424.91332,67.732021 0,-25.811582"
