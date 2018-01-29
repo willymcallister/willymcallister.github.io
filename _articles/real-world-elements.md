@@ -35,7 +35,7 @@ Another way real elements deviate from their ideal equations when current or vol
 
 ### Parasitics
 
-Real components are always more than just their component name. I'll use a resistor as an example to show what I mean. A real resistor's connecting leads have current flowing in them, so the leads generate a surrounding magnetic field. That means the resistor's leads inevitably display the properties of a small inductor. Also, resistors are usually located near other conductors. Together these conductors act like the plates of a capacitor with an electric field between them. So resistors display the properties of a small capacitor. 
+Real components are always more than just their component name. I'll use a resistor as an example. A real resistor's connecting wires have current flowing in them, which generate a surrounding magnetic field. That means the resistor inevitably displays the properties of a small inductor. Also, resistors are usually located near other conductors. Together these conductors act like the plates of a capacitor with an electric field between them. So resistors display the properties of a small capacitor. 
 
 These extra properties are called *parasitic* effects. These tiny inductors and capacitors are important if they the circuit works different than you expect. Parasitics have their largest effect when the frequency is high, or any time there are sharp changes to voltage or current. 
 
@@ -138,7 +138,7 @@ For real-world capacitors the most likely departure from the ideal capacitor equ
 
 ### Parasitics
 
-Since a capacitor has connection leads, it inevitably has a small parasitic resistance and inductance. The parasitic inductance can be important if the capacitor is expected to provide sudden bursts of current, such as when it is connected to the power pin of a digital chip. This parasitic inductance can become significant if you build very fast digital circuits.
+Since a capacitor has connection wires, it inevitably has a small parasitic resistance and inductance. The parasitic inductance can be important if the capacitor is expected to provide sudden bursts of current, such as when it is connected to the power pin of a digital chip. This parasitic inductance may be big enough to matter if you build very fast digital circuits.
 
 ### Leakage
 
