@@ -43,6 +43,10 @@ We have to make a choice about which way to indicate current direction (the sign
 
 The term "conventional current" sounds like it may be a new type of current. It would probably generate less confusion if we always said the longer "conventional current direction" with emphasis on *direction*. Whenever you see "conventional current" it is referring to the definition of current *direction*.
 
+## The opposite current convention
+
+Veterans: Some military electronic training programs (for example the U.S. Navy [NEETS](http://www.hnsa.org/resources/manuals-documents/2575-2/) program in the 1960s) use the opposite convention, defining current to flow in the direction of electron motion, but we don't use that here at Spinning Numbers. We follow the SI convention for current direction.
+
 ## Other conventions for direction
 
 We know current in wires is carried by negatively charged electrons. Even so, we still use the convention for current direction when we talk about wires. The conventional current direction is not "false" or "incorrect" for wires. It's just a habit, like our habit of holding maps with North at the top. North at the top isn't right or wrong, it's just a habit that everybody knows. We could all put South at the top, but we don't. The conventional direction for holding maps is North at the top.
