@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Here's a template for inserting a Details tag into Jekyll kramdown. It allows you to use markdown syntax in both the summary and the body of the details tag. Replace SUMMARY and DETAILS with your content.
+Here's a template for inserting a Details tag into Jekyll kramdown. It allows you to use markdown syntax in both the summary and the body of the details tag. 
 
 {% capture summary %}SUMMARY{% endcapture %}  
 {% capture details %}  
@@ -14,7 +14,7 @@ DETAILS
 
 ## Markdown template
 
-Copy and paste the next four lines into your markdown document. 
+Copy and paste these four lines into your markdown document. 
 
 ```
 {% raw %}
@@ -24,6 +24,8 @@ DETAILS
 {% endcapture %}{% include details.html %} 
 {% endraw %}
 ```
+
+Replace SUMMARY and DETAILS with your content.
 
 ## .html include file
 
@@ -49,5 +51,5 @@ $\text V_{\text T} = \text V_{\text T} \, \text R_{\text N} = 0.002 \cdot 500 = 
 ![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2.svg %}){: .centered :}
 {% endcapture %}{% include details.html %} 
 
-The markdown source file for this article is in \_articles\details.md.
+The markdown source file for this article is in \_articles/details.md.
 
