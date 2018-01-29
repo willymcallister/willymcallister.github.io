@@ -11,4 +11,4 @@ An op-amp can be used to amplify a voltage. The increase in voltage (gain) is de
 
 Created by Willy McAllister.
 
-This is an updated version of the same [video](https://www.youtube.com/watch?v=_Ut-nQ535iE) on Khan Academy. A small flaw has been repaired.
+This is an updated version of the same [video](https://www.youtube.com/watch?v=_Ut-nQ535iE) on Khan Academy. A reference to an extra $v_{in}$ variable is removed.
