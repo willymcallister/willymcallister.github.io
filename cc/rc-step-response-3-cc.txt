@@ -1,0 +1,89 @@
+0:00:00.560,0:00:05.940
+In the last video we worked out the step
+response of an RC circuit and now we're
+
+0:00:05.940,0:00:11.250
+going to look at a real example. This is the step response, the total response to our
+
+0:00:11.250,0:00:16.379
+circuit to a step input. And what does
+this look like? So I'm going to move down a
+
+0:00:16.379,0:00:22.039
+little bit. We'll make up a circuit and
+we'll do a real example here.
+
+0:00:40.600,0:00:52.270
+Let's say we do a step and the step goes
+from 0.2 volts up to say 1.1 volts,
+
+0:00:52.270,0:01:03.640
+and let's let R equal 1k ohm,
+and let the capacitor equal 4 microfarads.
+
+0:01:03.640,0:01:10.479
+So now let's plug these values
+over here into our solution and see what
+
+0:01:10.479,0:01:19.810
+we get. Now first I'm going to work out
+RC. RC is equal to 1 K ohm times 4 microfarads.
+
+0:01:19.810,0:01:29.200
+And what is that equal? K is +3
+and micro is -6, so 1 times 4 is 4
+
+0:01:29.200,0:01:39.820
+and plus 3 minus 6 is times 10 to the
+minus 3 and that is in seconds so that's
+
+0:01:39.820,0:01:49.259
+equal to 4 milliseconds. Now let's plug
+the rest of our values in here. V of T,
+
+0:01:49.259,0:02:00.460
+the total response or the step response,
+equals V0, 0.2, minus Vs, that's the
+
+0:02:00.460,0:02:16.329
+step voltage, 1.1, times e to the -t
+over 4 milliseconds plus Vs. Vs
+
+0:02:16.329,0:02:25.360
+is 1.1. So I went ahead and I
+plotted this using a computer and
+
+0:02:25.360,0:02:30.000
+we'll see how close this comes to what
+we sketched earlier.
+
+0:02:35.000,0:02:44.260
+So here's VT, or the step response, the total response of our RC network to a step voltage.
+
+0:02:44.260,0:02:52.359
+The step voltage is here in
+rose color, and it goes from 0.2 volts up
+
+0:02:52.359,0:03:02.290
+to, oh I got it wrong, 1.2 volts. Let's
+change that to the right number, 1.2, 1.2.
+
+0:03:02.290,0:03:07.000
+And this is what it looks like. And if
+you go back and compare this to what we
+
+0:03:07.000,0:03:11.720
+saw what we sketched at the beginning
+it'll look pretty similar. So the output
+
+0:03:12.220,0:03:16.900
+voltage, the voltage on the capacitor
+here,
+
+0:03:19.100,0:03:26.980
+starts at V0, which is 0.2. It ends up at Vs, which is 1.2, in this case. And that's the forced
+
+0:03:26.980,0:03:33.300
+response up here, and in between it did
+that smooth exponential curve.
+
