@@ -1,13 +1,13 @@
 ---
 layout: article
-title:  "RC natural response"
+title:  "RC natural response - derivation"
 author: Willy McAllister
 comments: true
 ---
 
 The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create and analyze. Understanding the behavior of this circuit is essential to understanding electronic systems. 
 
-This is the first circuit we come across that changes with time. To develop a precise understanding requires methods from calculus. We need [derivatives](https://www.khanacademy.org/math/calculus-home/taking-derivatives-calc) to describe how the $\text{RC}$ circuit works.
+To develop a precise understanding of the $\text{RC}$ requires methods from calculus. We use [derivatives](https://www.khanacademy.org/math/calculus-home/taking-derivatives-calc) to describe how the $\text{RC}$ circuit behaves.
 
 Written by Willy McAllister. 
 
@@ -24,7 +24,7 @@ Written by Willy McAllister.
 ### Where we're headed 
 {:.no_toc}
 
-The natural response of a resistor-capacitor circuit is a diminishing exponential, 
+The natural response of a resistor-capacitor circuit is a decaying exponential, 
 
 $v(t) = \text V_0\,e^{-t/\text{RC}}$
 
@@ -32,87 +32,35 @@ $\text V_0$ is the initial voltage at time $t=0$.
 
 The time constant for an $\text{RC}$ circuit is $\tau = \text{RC}$.
 
+$v(t) = \text V_0\,e^{-t/\tau}$
+
 ----
 
-We want to understand the *natural response* of this circuit. 
+We derive a precise equation for the *natural response* of this circuit. 
 
-![RC natural response circuit](https://fastly.kastatic.org/ka-perseus-images/10a848b3284fc5d64bf1ff8f77735ad06990c78f.svg){: .centered :}{: height="200px"} 
+![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0.svg %}){: .centered :}{: height="180px"}
 
-We will force an initial charge onto the capacitor. This will cause a voltage to appear according to $q = \text C\,v$. Then we step back and watch what the voltage does 'naturally.' Whatever happens is called the *natural response*.
+We give the circuit some energy by placing an initial charge $q$ on the capacitor. This causes a voltage to appear according to $q = \text C\,v$. Then we step back and watch what the voltage does 'naturally.' Whatever happens is called the *natural response*. The natural response is what the circuit does when it has some initial energy, but nothing else is driving the circuit.
 
-## Intuition - predict what happens
+By "find the response" we mean find $\goldD v$ and $\blueD i$ as a function of time.
 
-The circuit we explore in this section is set up to place an initial charge on the capacitor and then let go.
+## Strategy
 
-![RC natural response circuit with switch]({{ site.baseurl }}{% link i/rc_natural_response1.svg %}){: .centered :}{: height="200px"}
+Here is the strategy we will use to turn this circuit into a differential equation and solve it. If this is your first differential equation, don't be nervous, we'll go through every step,
 
-The switch starts in the down position as shown, connecting the resistor in parallel with the capacitor. We want to know what happens to $\goldD{v_\text C}$, the capacitor voltage, when we flip the switch back and forth. 
+* Model the $\text R$ and $\text C$ components with their $i$-$v$ equations
+* Model the circuit using Kirchhoff's Current Law (KCL)
+* KCL gives us a differential equation
+* Solve the differential equation step-by-step
+  * Guess at a solution with adjustable constants
+  * Plug the solution into the differential equation
+  * Gather like factors and identify the *characteristic equation*
+  * Find the root, $s$, of the characteristic equation
+  * Find the amplitude constant, $K$, using the initial condition, $\text V_0$
+  * The guess is confirmed if a $K$ is found and is in fact constant (does not change with time)
+  * Assemble the result 
 
-<details>
-<summary>giving names to voltages and currents</summary>
-<p>A common way to name voltages and currents is to use lower-case names for values that change with time, $v$ or $i(t)$. We use upper-case names to suggest constant values, $\text V$ or $\text I$. For example, a battery or power supply voltage might begin with an uppercase letter like $\text{VDD}$, or $\text V_{\text{BAT}}$. The capital $\text V$ reminds us the voltage doesn't change. This naming convention is not guaranteed for every schematic you come across, but it is a helpful practice.</p>
-</details>
-
-We'll think about these questions one at a time, 
-
-**What is $v_\text C$, the voltage across the capacitor...**  
-* **before the switch flips up?**
-* **after the switch flips up?** 
-* **after the switch flips back down?**
-
-### Before the switch flips up
-
-We begin by figuring out the *initial state* of the circuit, before anything changes. With the switch in the down position we draw the following equivalent circuit. $v_{in}$ is $0$ volts, and the left end of $\text R$ is connected to the bottom of $\text C$.
-
-![RC natural response circuit with switch down]({{ site.baseurl }}{% link i/rc_natural_response2.svg %}){: .centered :}{: height="200px"}
-
-Let's assume for the moment the circuit has been sitting in this state for a long time, so any charge that may have been stored on the capacitor in the past has long since drained away through the resistor, leaving no charge on the capacitor, $q_\text C = 0$. From this we know the voltage across the capacitor must be $0$ volts, because $v_\text C = q / \text C = 0 / \text C = 0$.
-
-Since the capacitor has $0$ volts across it, so must the resistor, so the current through $\text R$ must be $0$. Everything is $0$, current and voltage. We say the circuit is *in steady state* or *quiescent* or *at an equilibrium*. This answers the first question, "What is the voltage across $\text C$ before the switch flips."
-
-### After the switch flips up
-
-Now flip the switch up. Voltage $v_{in}$ becomes $\text V_{\text{BAT}}$, and something is about to change.
-
-![RC natural response circuit with switch up]({{ site.baseurl }}{% link i/rc_natural_response3.svg %}){: .centered :}{: height="200px"}
-
-Current begins flowing out of the positive terminal of the battery, through $\text R$ and $\text C$. Charge accumulates on the capacitor. The accumulating charge generates a rising voltage across the capacitor ($v_\text C = q / \text C$). The time period where voltage $v_\text C$ is changing is called a *transient* period. 
-
-What keeps $v_\text C$ from rising forever? Charge accumulates on the capacitor until $v_\text C$ rises to the same value as the battery voltage, until $v_\text C = \text V_{\text{BAT}}$. At that point, the voltage across the resistor is $0$ volts, so current in the resistor stops flowing (Ohm's Law). That also means  current  (charge) stops flowing into the capacitor. The amount of charge on the capacitor stops changing and therefore the capacitor voltage becomes constant at $v_\text c=\text V_{\text{BAT}}$. At this point, nothing is changing, and the transient period has come to an end.
-
-We've answered the second question. After the switch flips up and after a transient period comes to an end, the circuit assumes a new steady state with $v_{\text C} = \text V_{\text{BAT}}$. It stays in this state until something comes along to disturb its bliss. 
-
-### After the switch flips back down
-
-Now we'll flip the switch again, returning it back to the negative terminal of the battery ($v_{in}=0$). What happens? 
-
-![RC natural response circuit with switch down]({{ site.baseurl }}{% link i/rc_natural_response2.svg %}){: .centered :}{: height="200px"}
-
-This is the same circuit we started with, but this time $\text C$ is storing some charge. The left end of $\text R$ is at $0\,\text{volts}$ and the right end is at $\text V_{\text{BAT}}\,\text{volts}$. This voltage across the resistor terminals means a current starts to flow at the moment the switch flips down. The capacitor provides the charge needed to form this current. 
-
-Charge will continue to flow out of the capacitor and through the resistor until all the charge originally stored in $\text C$ is depleted. $v_\text C$ gradually falls from $\text V_{\text{BAT}}$ down to zero volts. The voltage difference across $\text R$ also falls to zero and the current stops. The circuit has now returned to its original equilibrium state. This answers the third question, "What is the voltage across $\text C$ after the switch flips back down?" 
-
-### Summary 
-
-Using just our intuition, we figured out the capacitor voltage starts at $0$ volts, rises to $\text V_{\text{BAT}}$, and then goes back to $0$ volts again. Said another way, $v_\text C$ goes from an initial steady state, through a transient period to a new steady state, then through a second transient back to its original state. We know the exact starting and ending voltage of each transient. Not bad for intuition, but ... What do we not know? We don't know how long the transients last or their exact shape. It's time to break out  some calculus to get a precise and useful solution.
-
-## Formal derivation of the $\text{RC}$ natural response
-
-We look at the simplest possible case. The circuit is just $\text R$ and $\text C$ connected together. By "find the response" we mean find $\goldD v$ and $\blueD i$ as a function of time.
-
-![](https://ka-perseus-images.s3.amazonaws.com/5de080e55a9fb04612b3db5660821c1606268ab7.svg){: .centered :}{: height="200px"}
-
-To make the circuit do something other than just sit there we place an initial charge on the capacitor. Some external unseen circuit does this. After adding this initial energy, we step back and see what the circuit does *naturally*. Imagine the capacitor was charged to some initial voltage $\text V_0$ by an external circuit, which was disconnected just a moment ago. 
-
-The result we are about to derive is called the *natural response* of an $\text{RC}$ circuit. The natural response is what the circuit does when there is an initial condition, but nothing else is driving the circuit.
-
-The steps we are going to follow next are,
-* Model the components with their $i$-$v$ equations
-* Model the circuit using Kirchhoff's Current Law
-* The models give us a differential equation
-* We solve the equation step-by-step and plot the result
-
-### Model the components
+## Model the components
 
 $\text R$ and $\text C$ can be described by their voltage-current equations. 
 
@@ -140,7 +88,7 @@ $i_{\text C} = \text C\,\dfrac{dv}{dt}$
 <p>$i = \text C \,\dfrac {dv} {dt}$</p>
 </details>
 
-### Model the circuit
+## Model the circuit
 
 Next we write an equation using Kirchhoff's Current Law (KCL).
 
@@ -154,7 +102,7 @@ Substitute in the two $i$-$v$ relationships,
 
 $\text C\,\dfrac{dv}{dt} + \dfrac 1 {\text R} \, {v} = 0$
 
-### Solve the circuit
+## Solve the circuit
 
 The previous equation has a fancy name. It is called a *first-order ordinary differential equation* (ODE). 
 
@@ -173,7 +121,7 @@ $\text C\,\dfrac{dv}{dt} + \dfrac 1 {\text R} \, {v} = 0\qquad$ (differential eq
 
 When you solve a differential equation you have to find some sort of function, in our case, a function of voltage with respect to time, $v(t)$, where plugging $v(t)$ into the differential equation makes it come true. 
 
-Where do solutions come from? One way is to guess at a solution, and try it out. (Not any wild guess, but an informed guess.)
+Where do solutions come from? One way is to guess at a solution, and try it out. (Not any wild guess, but an informed guess.) If your text book says, "assume a solution of the form ...", that's the same as a guess.
 
 While gazing at the differential equation, consult the depths of your memory where you store what you know about functions. Relax your mind and follow along...
 
@@ -193,13 +141,15 @@ If everything works out and we make the differential equation true, then our pro
 
 Our proposed solution is an exponential function decorated with a few adjustable parameters, $K$ and $s$.
 
-$v(t) = K\,e^{\displaystyle st}$
+$v(t) = Ke^{\displaystyle st}$
 
-* $t$ is time 
-* $v(t)$ is voltage as a function of time 
-* $K$ and $s$ are constants we have to figure out
+* $t$ is time. 
+* $v(t)$ is voltage as a function of time. 
+* $K$ and $s$ are constants we have to figure out.
   * $K$ is an amplitude factor that makes the voltage bigger or smaller.
-  * $s$ is in the exponent. $s$ has to have units that cancel out time, so its units are $1/t$.
+  * $s$ is in the exponent. 
+  * Since exponents can't have dimensions, the units of $s$ have to be $1/t$.
+  * $1/t$ is the unit of frequency, so $s$ is called the *natural frequency*.
 
 Let's check if our proposed solution works...
 
@@ -244,9 +194,9 @@ So far, our proposed solution looks like:
 
 $v(t) = Ke^{-t/\text{RC}}$
 
-Nearly done. We have $s$ and all that's left is to figure out $K$. 
+Nearly done. We found $s$. All that's left is to figure out $K$. If we can find a $K$ and it is truly constant (not changing with time) that will confirm our original guess for $v(t)$.
 
-To find $K$ we examine the *initial conditions* of the circuit. Recall the capacitor was initially charged to voltage $\text V_0$ at the time the switch was flipped. If we call that time $t = 0$, then,
+To find $K$ we examine the *initial conditions* of the circuit. Recall the capacitor was initially charged to voltage $\text V_0$. There was a moment we let go of the circuit to watch its response. If we call that time $t = 0$, then,
 
 $v(0) = \text V_0 = Ke^{-0/\text{RC}} = K e^0$
 
@@ -254,11 +204,13 @@ Solving for $K$,
 
  $K = \text V_0$ 
 
-We found values for $s$ and $K$ to make the differential equation true. We are all done. Drum roll please...  
+We found $K$, and it is a constant. That confirms that our original guess about an exponential solution was a good choice. If we could not find a $K$, or if $K$ wasn't constant (if it turned out to depend on time, for example), then our guess fails and we have to start over with a new guess.
+
+We have $s$ and $K$ to make the differential equation true. We are done. Drum roll please...  
 
 The general solution for the natural response of an $\text{RC}$ circuit is,
 
-$\large v(t) = \text V_0\,e^{-t/\text{RC}}$
+$v(t) = \text V_0\,e^{-t/\text{RC}}$
 
 ## Time Constant
 
@@ -323,7 +275,7 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}\qquad$ (circled in the plot below)
 
 The $\redB{\text{circle}}$ shows the answer from part **b**: $v(t) = 0.515 \,\text V$ when $t=\text{RC} = 3 \,\text{ms}$. 
 
-### A useful rule of thumb
+### A useful rule of thumb - $37\%$
 
 When time equals the time constant, $\text{RC}$, the voltage is down from its initial value by a factor of $1/e$, or down to roughly $37\%$ of its starting value. This is true for any initial voltage and any $\text{RC}$ product.
 
@@ -364,7 +316,7 @@ With a time constant of $1\,\text{nsec}$, this is a pretty quick circuit.
 
 $95\%$ below $\text V_0$ is $1.0 - (0.95 \times 1.0) = 0.05$ volts. Looking at the graph we see that happens at around $3\,\text{nsec}$. This corresponds to $3$ time constants. This point is marked by the $\redB{\text{circle}}$ just above in part **c.**
 
-### Another rule of thumb
+### Another rule of thumb - $3$ time constants
 
 Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazingly, this is true for any initial voltage and any $\text{RC}$ product.
 
@@ -395,6 +347,7 @@ The problem we just solved, the natural response of an RC circuit, is representa
 In the broadest terms: **Exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
 
 ## Summary
+{:.no_toc}
 
 The natural response of an $\text{RC}$ circuit is an exponential function,
 
