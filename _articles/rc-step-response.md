@@ -15,7 +15,7 @@ This step response happens billions of times every second inside all digital dev
 
 We introduce the method of *forced plus natural response* to solve the challenging "non-homogeneous" differential equation that models the $\text R\text C$ step circuit. 
 
-You may want to review the [RC natural response - intuition]({{ site.baseurl }}{% link _videos/rc-natural-response-intuition.md %}) and [RC natural response - derivation]({{ site.baseurl }}{% link _videos/rc-natural-response-derivation.md %})before diving into the step response.
+Before diving into the step response you may want to review [RC natural response - intuition]({{ site.baseurl }}{% link _articles/rc-natural-response-intuition.md %}) and [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
 
 Written by Willy McAllister. 
 
