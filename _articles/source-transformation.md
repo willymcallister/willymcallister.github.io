@@ -66,7 +66,7 @@ A resistor appears as a line, $i = \dfrac{v}{\text R_{\text T}}$, where the slop
 <p>The ideal sources are either vertical or horizontal. They don't pass through the origin.</p>
 </details>
 
-## Thévenin equivalent
+## Thévenin form
 
 Now make it more interesting: What does the graph a resistor and voltage source look like on an $i$-$v$ plot? 
 
@@ -191,7 +191,7 @@ What have we learned? We worked through two ways to reveal the $i$-$v$ behavior 
 
 The open-circuit/short-circuit technique is pretty handy. We will use it again.
 
-## Norton equivalent
+## Norton form
 
 Now let's look at the Norton form,
 
@@ -278,7 +278,7 @@ $\text V_\text{Thevenin}$ and $\text I_\text{Norton}$ have no effect tilt, they 
 
 Notice the current in the Norton resistor. Current in $\text R_\text N$ isn't available to the load resistor. It seems like "wasted" power. That's what happens when you drive a load with a Norton source. In the Thevenin circuit, the equivalent "waste" is the voltage across the Thevenin resistor. This voltage dissipates power (heat) in $\text R_\text T$ and isn't available to the load. The amount of waste is the same. 
 
-## Design challenge 1
+## Source transfomation challenge 1
 
 Both circuits generate tilted lines on the $i$-$v$ plot.
 
@@ -341,7 +341,7 @@ Notice how the conversion process resembles Ohm's Law.
 
 When you "look into" these circuits from the port you can't tell them apart. (You "look" with a voltmeter or ammeter.) They produce identical behavior for any $v$ or any $i$. This means they are equivalent and therefore interchangeable. We will take advantage of this when we put Thévenin's theorem to work in the next article.
 
-## Design challenge 2
+## Source transformation challenge 2
 
 You can use this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[88,80,0],{"name":"Vt","value":"dc(0)","_json_":0},["4","0"]],["r",[240,80,4],{"name":"RL1","r":"","_json_":1},["7","6"]],["r",[176,64,1],{"name":"Rt","r":"","_json_":2},["5","4"]],["g",[152,144,0],{"_json_":3},["0"]],["w",[88,128,88,144]],["w",[88,144,152,144]],["w",[88,80,88,64]],["w",[88,64,128,64]],["w",[176,64,200,64]],["w",[152,144,200,144]],["w",[240,128,240,144]],["w",[240,144,224,144]],["w",[240,80,240,64]],["w",[240,64,224,64]],["r",[240,208,4],{"name":"RL2","r":"","_json_":14},["3","2"]],["r",[152,256,2],{"name":"Rn","r":"","_json_":15},["0","1"]],["g",[152,272,0],{"_json_":16},["0"]],["w",[240,256,240,272]],["w",[240,272,224,272]],["w",[240,208,240,192]],["w",[240,192,224,192]],["i",[88,256,6],{"name":"In","value":"dc(0)","_json_":21},["0","1"]],["w",[192,192,152,192]],["w",[152,256,152,272]],["w",[192,272,152,272]],["w",[88,208,88,192]],["w",[152,208,152,192]],["w",[152,192,88,192]],["w",[152,272,88,272]],["w",[88,272,88,256]],["view",-95.5,25.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) to help you with this design challenge. Open the link in another tab. Follow the steps of the challenge. To change a component value, double-click on it. At the appropriate step, click **DC** in the top menu bar to tell you the voltage and current.
 
@@ -408,7 +408,7 @@ Don't short out real electronic equipment to find $i_{sc}$. That is a recipe for
 The next article shows how to apply [source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %}).
 
 <details>
-<summary>What about other circuits with one source and one resistor?</summary>
+<summary>Aren't there other circuits with one source and one resistor?</summary>
 <p>After so much talk about Thévenin and Norton circuits, it's an obvious question to ask about the other two possibilities. Consider,</p>
 
 <ul>
