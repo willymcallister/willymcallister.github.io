@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "Basic electrical quantities: charge, current, voltage, power"
+title:  "Basic electrical quantities: charge, current, voltage"
 author: Willy McAllister
 comments: true
 ---
 
-Voltage and current are the cornerstone concepts in electricity. We create our first mental pictures of current and voltage. We will also talk about power, which happens when voltage and current act together.
+Charge is the stuff electricity is made of. Voltage and current are the cornerstone concepts in electricity. We create our first mental pictures of current and voltage. Power is what happens when voltage and current act together.
 
 ----
 
@@ -19,27 +19,27 @@ Voltage and current are the cornerstone concepts in electricity. We create our f
 ### Where we are headed
 {:.no_toc}
 
-Current is the flow of charge. It is similar to the flow of water in a river or garden hose. The key difference is there are two types of charge, moving in opposite directions. 
+Current is the flow of charge. It is similar to the flow of water in a river or garden hose. The key difference is there is one type of water but there are two types of charge, moving in opposite directions. 
 
-Voltage is like the potential energy of a mass. If you place a mass at the top of a mountain it has high potential energy. That's similar to placing a charge at a high voltage. As the mass rolls down the mountain, it gives up its potential energy. As a charge moves through a circuit, it gives up its potential energy, which we call a voltage drop.
+Voltage is the honorary name of *electric potential difference*. Voltage is similar to the change of potential energy that happens to a mass when it's lifted or lowered. 
 
-Electrical currents transfer power. Power is the product of voltage and current.
-
-$P = I \times V$, with units of watts
+Electrical power is the product of voltage and current, $P = I \times V$, in units of watts.
 
 ----
 
 ## Charge
 
-The concept of electricity arises from an observation of nature. We observe a force between objects, that, like gravity, acts at a distance. The source of this force has been given the name *charge*. A very noticeable thing about electric force is that it is large, far greater than the force of gravity. Unlike gravity, however, there are two types of electric charge. Opposite types of charge attract, and like types of charge repel. Gravity has only one type: it only attracts, never repels.
+Our awareness of electric charge comes from observing nature. We observe an invisible force between objects, that, like gravity, seems to act at a distance. We made up a name for where this force comes from. We call it *charge*. 
 
-## Materials: conductors, inulators, semiconductors
+If you fiddle around with static electricity you will reason out there are two types of electric charge. Opposite types attract, and like types repel. On the other hand, there is only one type of gravity: it only attracts, never repels.
+
+## Conductors, inulators, semiconductors
 
 **Conductors** are made of atoms whose outer, or valence, electrons have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other, creating a "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move. Copper, gold, silver, and aluminum are  good conductors. So is saltwater.
 
 ![Copper atom]({{ site.baseurl }}{% link i/2copper_atom.svg %}){:height="160px" width="245px"}
 
-There are also poor conductors. Tungsten—a metal used for light bulb filaments—and carbon—used in graphite form in pencils—are relatively poor conductors because their electrons are less prone to move.
+There are also poor conductors. Tungsten — a metal used for the filament in an incandescent light bulb — is a relatively poor conductor compared to copper. Carbon in graphite form used in pencils is also a relatively poor conductor. The electrons in these materials are less prone to escape from an atom. (An exotic form of carbon called graphene is a superb conductor).
 
 **Insulators** are materials whose outer electrons are tightly bound to their nuclei. Modest electric forces are not able to pull these electrons free. When an electric force is applied, the electron clouds around the atom stretch and deform in response to the force, but the electrons do not depart. Glass, plastic, stone, and air are insulators. Even for insulators, though, electric force can always be turned up high enough to rip electrons away—this is called breakdown. That's what is happening to air molecules when you see a spark.
 
@@ -56,14 +56,13 @@ Charge flows in a current.
 <p>Notice the careful grammar here. Current <em>is</em> a flow. It is technically more correct to say "charge flows" than "current flows". However, the common habit among engineers is to say, "current flows". This is such an ingrained habit that it is perfectly acceptable engineering chitchat, as long as you remember that it's actually charge that's moving.</p>
 </details>
 
-When we give a number for current, it is reported as the number of charges per unit time passing through a boundary. To visualize current, imagine placing a boundary all the way through a wire. Station yourself near the boundary and count the number of charges passing by. Report how much charge passed through the boundary in one second. We assign a *positive* sign to current corresponding to the direction a *positive* charge would be moving. 
+When we give a number for current, it is reported as the number of charges per unit time passing through a boundary. To visualize current, imagine placing a boundary all the way across a wire. Station yourself near the boundary and count the number of charges passing by. Count how much charge passed through the boundary in one second, and report that as the current. We say the direction of current is the direction a *positive* charge would be moving. 
 
 ![Current flow]({{ site.baseurl }}{% link i/2current_flow.svg %})
 
-This choice of the positive current direction often leads to confusion.
-Defining positive current direction in the same direction as positive charge sounds simple, but it causes of a lot of confusion for beginners. It opposite the direction electrons move. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).
+This definition of current direction often causes confusion. It is opposite the direction electrons move. There are some training programs (for example the U.S. Navy NEETS program) that use the opposite convention where current flow is defined as electron motion, but we don't use that here at Spinning Numbers. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).
 
-Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in very general terms using this calculus notation:
+Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in general terms using this notation from calculus,
 
 $i = \dfrac{dq}{dt}$
 
@@ -163,7 +162,8 @@ $\text{power} = \dfrac{\text dU}{\text dt} = \dfrac{\text dU}{\text dq} \cdot \d
 Electrical power is the product of voltage times current. in units of watts.
 
 ## Summary
+{:.no_toc}
 
-These mental images for current and voltage will get us started on all sorts of interesting circuits.
+These mental images for current and voltage will serve you well and gets us started on all sorts of interesting circuits.
 
-If you want to reach beyond this intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the [KA Electrostatics sequence](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics).
+If you want to reach beyond the intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the [KA Electrostatics sequence](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics).
