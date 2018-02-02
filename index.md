@@ -10,7 +10,7 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering,
 ### [Circuit sandbox <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
 A circuit simulator. Run [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) it [in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html).  
-<small>If you can help translate Circuit Sandbox into other languages, write me at willy@spinningnumbers.org.</small>
+<small>Can you help translate Circuit Sandbox into other languages? Write to me at willy@spinningnumbers.org.</small>
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
