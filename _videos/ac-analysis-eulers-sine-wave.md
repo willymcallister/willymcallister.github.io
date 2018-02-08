@@ -10,7 +10,7 @@ A sine wave emerges from Euler's Formula.
 
 Just music, with no narration. 
 
-The music in the background is *Book Bag* by E's Jammy Jams. 
+The background music is *Book Bag* by E's Jammy Jams. 
 
 Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3/eulers-sinewave-d3.html).
 
