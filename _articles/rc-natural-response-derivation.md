@@ -304,9 +304,9 @@ $v(t) = 1.0 \,\large e^{-t/1\,\text{ns}}$
 
 $\tau = \text{RC} =  1\,\text{k}\Omega \cdot 1\,\text{pF} =  1 \times 10^{+3} \cdot 1 \times 10^{-12}$
 
-$\tau = 1 \times 10^{-9} = 1\,\text{ns}$
+$\tau = 1 \times 10^{-9} = 1\,\text{nsec}$
 
-With a time constant of $1\,\text{nsec}$, this is a pretty quick circuit.
+With a time constant of $1\,\text{nanosecond}$, this is a pretty quick circuit.
 
 **c. Plot $v(t)$.**
 
@@ -326,7 +326,7 @@ Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazing
 
 The ODE we solved here is a *separable* differential equation. We used a guessing method. Another method for solving separable differential equations is included as an appendix at the end of [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). The math is more sophisticated, but there is no guessing involved. 
 
-Sal h as a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving asecond-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}).
+Sal has a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving a second-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation1.md %}).
 
 ### $e$ is special
 
@@ -362,4 +362,4 @@ The $\text{RC}$ circuit can be found everywhere in electronics. Sometimes you cr
 <details>
     <summary>by accident?</summary>
     <p>In a real-world circuit, wires are always surrounded by other conductive elements, for example, other wires or a metal enclosure. Two conductors separated by an insulator is a capacitor. These capacitors (usually small, usually unwanted) are connected to the wire you care about. Many times you can ignore these so-called <em>parasitic</em> capacitances, but sometimes they play an important role in how the circuit works.</p>
-</details>
+</details> 

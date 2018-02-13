@@ -47,6 +47,10 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Sketching RC exponentials - examples]({{ site.baseurl }}{% link _videos/sketching-rc-exponentials-examples.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - intuition]({{ site.baseurl }}{% link _articles/lc-natural-response-intuition.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - derivation]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (1 of 2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition1.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (2 of 2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition2.md %})

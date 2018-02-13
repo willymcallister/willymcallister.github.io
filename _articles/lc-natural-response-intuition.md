@@ -5,6 +5,8 @@ author: Willy McAllister
 comments: true
 ---
 
+UNDER CONSTRUCTION
+
 We develop an intuition for the natural response  of the inductor-capacitor, $\\\\text\{LC\}$, circuit. \\n\\n[[
 \f1 \uc0\u9731 
 \f0  image 4]]\\n\\nAfter we get a good mental image of what's going on, the next article is a formal derivation of the [$\\\\underline\{\\\\text\{LC\}\}$](w/a/ee-lc-natural-response-derivation) natural response.",\
