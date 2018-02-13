@@ -11,7 +11,7 @@ We derive the natural response of a series resistor-inductor-capacitor $(\text{R
 
 The $\text{RLC}$ circuit is representative of real life circuits we actually build, since every real circuit has some finite resistance, inductance, and capacitance. This circuit has a rich and complex behavior. It shows up in many areas of engineering. The mechanical analog of an $\text{RLC}$ circuit is a pendulum with friction.
 
-If you've never solved a differential equation I recommend you begin with the [RC natural response](http://spinningnumbers.org/a/rc-natural-response-derivation.html).
+If you've never solved a differential equation I recommend you begin with the [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %})
 
 Written by Willy McAllister.
 
@@ -56,7 +56,7 @@ Where $\alpha$ is called the *damping factor*, and $\omega_o$ is called the *res
 
 ## Strategy
 
-The strategy for solving this circuit is the same one we used for the second-order [LC](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/ee-lc-natural-response) circuit.
+The strategy for solving this circuit is the same one we used for the second-order [LC]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %}) circuit.
 
 1. The second-order differential equation is based on the $i$-$v$ equations for $\text R$, $\text L$, and $\text C$. Use Kirchhoff's Voltage Law (sum of voltages around a loop) to assemble the equation.
 2. Make an informed guess at a solution.  
