@@ -41,16 +41,16 @@
   var padding = { top:40, right:100, bottom:40, left:40 };  // padding outside graph
 
   var 
-      xmin = -2,
-      xmax = +6,
-      ymin = -6,
-      ymax = +12,
-      pp1x = 36,                         // pixels per "1"
-      pp1y = 18,                         // pixels per "1"
-      width  = (xmax - xmin) * pp1x,     // width of graph axes pixels
-      height = (ymax - ymin) * pp1y,     // height of graph axes pixels
-      xOrigin = -(xmin * pp1x);          // distance of origin from left in pixels
-      yOrigin = height + (ymin * pp1y);  // distance of origin from bottom in pixels
+      xmin = -1,
+      xmax = +5,
+      ymin = -2,
+      ymax = +2,
+      hScale = 60,                         // horizontal scale pixels per real "x"
+      vScale = 80,                         // vertical scale pixels per real "y"
+      width  = (xmax - xmin) * hScale,     // width of graph axes pixels
+      height = (ymax - ymin) * vScale,     // height of graph axes pixels
+      xOrigin = -(xmin * hScale);          // distance of origin from left in pixels
+      yOrigin = height + (ymin * vScale);  // distance of origin from bottom in pixels
 
   // main container
   var svgContainer = d3.select("body")
@@ -60,7 +60,7 @@
     .append("g")  //group to build image inside of, offset by padding
       .attr("transform", "translate(" + padding.left + "," + padding.top + ")");
 
-  // scale functions
+  // scales
   var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
   var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
   
@@ -102,7 +102,7 @@
     .append("text")
       .attr("dx", 6)
       .attr("dy", -6)
-      .text("v (volts)")
+      .text("i (amperes)")
       .style("text-anchor", "start")
       .style("font-size", "16px")
       .style("fill", "black");
@@ -121,10 +121,8 @@
     .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveforms - RLC voltages natural response
-  // vC = 5e^{-t} (sin 2t + 2cos 2t)
-  // vL = -5e^{-t} (sin 2t - 2cos 2t)
-  // vR = -10 e^{-t} sin 2 t
+  // Waveform - RLC overdamped current natural response
+  // $i = 1.25e^{-t} - 1.25 e^{-9t}$
   var nPoints = 100;
   var samples = d3.range(0, nPoints + 1)  //0 1 2 3 ... 100 (101 points)
   var xData = samples.map(function (i) 
@@ -132,88 +130,48 @@
     { return ((i / nPoints) * (xmax));
     }); //0 ... 6  (101 points)
 
-  var vC = d3.line()
+  var rlci = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale(5*Math.exp(-d) * (Math.sin(2*d) + 2*Math.cos(2*d))); 
+    .y(function (d) { return yScale(1.25 * Math.exp(-d) - 1.25 * Math.exp(-9*d)); 
     });
 
-  var vL = d3.line()
+  var expPos = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale(-5*Math.exp(-d) * (Math.sin(2*d) - 2*Math.cos(2*d))); 
+    .y(function (d) { return yScale(1.25 * Math.exp(-d)); 
     });
 
-  var vR = d3.line()
+  var expNeg = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale(-10 * Math.exp(-d) * Math.sin(2 * d)); 
+    .y(function (d) { return yScale(-1.25 * Math.exp(-9*d)); 
     });
 
-  var pathvC = svgContainer.append('svg:path')
+  var pathExpPos = svgContainer.append('svg:path')
       .classed("path", true)
-      .attr('d', vC(xData))
+      .attr('d', expPos(xData))
+      .style("fill", "none")
+      .style("stroke", "#D6D8DA")
+      .style("stroke-width", "3px");
+
+  var pathExpNeg = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', expNeg(xData))
+      .style("fill", "none")
+      .style("stroke", "#D6D8DA")
+      .style("stroke-width", "3px");
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', rlci(xData))
       .style("fill", "none")
       .style("stroke", "#11ACCD")
       .style("stroke-width", "3px");
   
-  var labelvC = svgContainer.append("text")
-      .attr("x", xScale(1))
-      .attr("y", yScale(4))
-      .text("vC")
-      .style("text-anchor", "start")
-      .style("font-size", "16px")
-      .style('fill', '#11ACCD');
-
-  var pathvL = svgContainer.append('svg:path')
-      .classed("path", true)
-      .attr('d', vL(xData))
-      .style("fill", "none")
-      .style("stroke", "#CA337C")
-      .style("stroke-width", "3px");
-
-   var labelvL = svgContainer.append("text")
-      .attr("x", xScale(1.5))
-      .attr("y", yScale(-3.5))
-      .text("vL")
-      .style("text-anchor", "start")
-      .style("font-size", "16px")
-      .style('fill', '#CA337C');
-
-  var pathvR = svgContainer.append('svg:path')
-      .classed("path", true)
-      .attr('d', vR(xData))
-      .style("fill", "none")
-      .style("stroke", "#1FAB54")
-      .style("stroke-width", "3px");
-
-  var labelvR = svgContainer.append("text")
-      .attr("x", xScale(0.9))
-      .attr("y", yScale(-5.5))
-      .text("vR")
-      .style("text-anchor", "start")
-      .style("font-size", "16px")
-      .style('fill', '#1FAB54');
-  
-  var beforeZerovC = svgContainer.append("line")
-      .attr("x1", xmin)
-      .attr("y1", yScale(10))
-      .attr("x2", xOrigin)
-      .attr("y2", yScale(10))
-      .style("stroke", "#11ACCD")
-      .style("stroke-width", "3px");
-
-  var beforeZerovL = svgContainer.append("line")
+  var beforeZeroLine = svgContainer.append("line")
       .attr("x1", xmin)
       .attr("y1", yOrigin)
       .attr("x2", xOrigin)
       .attr("y2", yOrigin)
-      .style("stroke", "#CA337C")
-      .style("stroke-width", "3px");
-
-  var verticalvL = svgContainer.append("line")
-      .attr("x1", xOrigin)
-      .attr("y1", yOrigin)
-      .attr("x2", xOrigin)
-      .attr("y2", yScale(10))
-      .style("stroke", "#CA337C")
+      .style("stroke", "#11ACCD")
       .style("stroke-width", "3px");
 
 </script>
