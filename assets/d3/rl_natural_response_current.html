@@ -19,8 +19,8 @@
 
     svg .path {
       stroke-width: 4px;
+      stroke: #11ACCD;      /* KA math1     */
       fill: none;
-      stroke-linecap: round;
     }
 
     svg text {
@@ -42,16 +42,16 @@
   var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
 
   var 
-      xmin = -1,
-      xmax = +5,
-      ymin = -1,
-      ymax = +35,
-      hScale = 60,
-      vScale = 10,
+      xmin = -40,
+      xmax = +200,  // in ns
+      ymin = -4,
+      ymax = +10,   // in mA
+      hScale = 2,
+      vScale = 20,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
-      xOrigin = -(xmin * hScale);          // pixels
-      yOrigin = height + (ymin * vScale);  // pixels
+      xOrigin = -(xmin * hScale);          // origin in pixels
+      yOrigin = height + (ymin * vScale);  // origin in pixels
 
   // main container
   var svgContainer = d3.select("body")
@@ -68,16 +68,6 @@
   var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
   var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
   
-  //Original resistor load line
-  svgContainer.append("line")
-    .attr("x1", xScale(0))
-    .attr("y1", yScale(27.5))
-    .attr("x2", xScale(3.3))
-    .attr("y2", yScale(0))
-    .attr("stroke-width", 4)
-    .style("stroke-linecap", "round")
-    .attr("stroke", "#c8ecc6");
-
   // x axis
   var xAxis = d3.axisBottom(xScale)
     .ticks(8)
@@ -92,7 +82,7 @@
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("v (volts)")
+      .text("t (nsec)")
       .style("text-anchor", "start")
       .style("font-size", "16px")
       .style('fill', 'black');
@@ -138,92 +128,50 @@
     .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - silicon diode i-v curve with load line, brighter
-  var Io = 2.38e-15;      // LED Io (in mA)
-  var k = 1.380e-23;
-  var q = 1.602e-19;
-  var T = 300;
-  var N = 1.85;
-  var kTonq = k*T/q;
+  // Waveform - RL natural response current
+  // R = 200  L = 16uH  Io = 8mA
+  var R = 200;
+  var L = .000016;
+  var Io = 8;       // in mA
+  var tau = L / R;
 
   var nPoints = 100;
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 100
-  var fromX = -2;
-  var toX = 2;
+  var fromX = 0;
+  var toX = xmax;
   var xData = samples.map(function (i) 
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var diode = d3.line()
+  var rlCurrent = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale(Io * (Math.exp(d/(N*kTonq)) - 1)); });
+    .y(function (d) { return yScale(Io * (Math.exp(-d/tau/100000000))); });
 
   svgContainer.append('svg:path')
     .classed("path", true)
-    .attr('d', diode(xData))
+    .attr('d', rlCurrent(xData))
     .style("fill", "none")
-    .style("stroke", "#11ACCD");
+    .style("stroke", "#11ACCD")
+    .style("stroke-width", "3px");
 
-  //New resistor load line
-  svgContainer.append("line")
-    .attr("x1", xScale(0))
-    .attr("y1", yScale(33))
-    .attr("x2", xScale(3.3))
-    .attr("y2", yScale(0))
-    .attr("stroke-width", 4)
-    .style("stroke-linecap", "round")
-    .attr("stroke", "#74CF70");   // KA CS2
+  var lineData = [  
+      { "x": xmin, "y": Io}, 
+      { "x":    0, "y": Io}];
 
-  //Intersection circle
+  var lineFunction = d3.line()
+    .x(function (d) { return xScale(d.x); })
+    .y(function (d) { return yScale(d.y); });
+
+  svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', lineFunction(lineData));
+
+  // Circle
   svgContainer.append("circle")
-    .attr("cx", xScale(1.74))
-    .attr("cy", yScale(15.6))
-    .attr("r",4)
+    .attr("cx", xScale(0))
+    .attr("cy", yScale(0))
+    .attr("r",5)
     .style("fill", "#F9685D");  // KA HUM2
-
-  //Dotted lines
-  svgContainer.append("line")
-    .attr("x1", xScale(0))
-    .attr("y1", yScale(15.6))
-    .attr("x2", xScale(1.74))
-    .attr("y2", yScale(15.6))
-    .attr("stroke-width", 1)
-    .attr("stroke", "black")
-    .style("stroke-dasharray", ("3, 3"));
-
-  svgContainer.append("line")
-    .attr("x1", xScale(1.74))
-    .attr("y1", yScale(15.6))
-    .attr("x2", xScale(1.74))
-    .attr("y2", yScale(0))
-    .attr("stroke-width", 1)
-    .attr("stroke", "black")
-    .style("stroke-dasharray", ("3, 3"));
-
-  //Labels
-  svgContainer.append("text")
-    .attr("x", xScale(2))
-    .attr("y", yScale(20))
-    .text("diode")
-    .style("text-anchor", "start")
-    .style("font-size", "20px")
-    .style('fill', 'black');
-
-  svgContainer.append("text")
-    .attr("x", xScale(2.7))
-    .attr("y", yScale(7))
-    .text("resistor")
-    .style("text-anchor", "start")
-    .style("font-size", "20px")
-    .style('fill', 'black');
-
-  svgContainer.append("text")
-    .attr("x", xScale(2.7))
-    .attr("y", yScale(9))
-    .text("100 Ω")
-    .style("text-anchor", "start")
-    .style("font-size", "20px")
-    .style('fill', 'black');
 
 </script>
 </body>
