@@ -82,7 +82,7 @@
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("t (nsec)")
+      .text("t")
       .style("text-anchor", "start")
       .style("font-size", "16px")
       .style('fill', 'black');
@@ -109,7 +109,7 @@
       .call(yAxis)
     .append("text")
       .attr("dy", "-12px")
-      .text("i (mA)")
+      .text("i")
       .style("text-anchor", "middle")
       .style("font-size", "16px")
       .style("fill", "black");
@@ -123,9 +123,9 @@
       .attr("x2", width - xOrigin)
       .attr("y2", 0);
 
-  // remove "0"s near origin
+  // remove all labels
   svgContainer.selectAll(".tick text")
-    .filter(function (d) { return d === 0;  })
+    //.filter(function (d) { return d === 0;  })
     .remove();
 
   // Waveform - RL natural response current
@@ -133,6 +133,7 @@
   var R = 200;
   var L = .000016;
   var Io = 8;                       // in mA
+  var Vo = R * Io / 1000;
   var tau = (L / R) * 1000000000;   // in ns
 
   var nPoints = 100;
@@ -165,6 +166,23 @@
   svgContainer.append('svg:path')
       .classed("path", true)
       .attr('d', lineFunction(lineData));
+
+  svgContainer.append("text")
+    .attr("x", xScale(-100))
+    .attr("y", yScale(Io))
+    .attr("dy", "-5px")
+    .text("Io")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style('fill', 'black');
+
+  var lineData0 = [  
+      { "x": xScale(700), "y": 0}, 
+      { "x": xmax, "y": 0}];
+
+  svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', lineFunction(lineData0));
 
 </script>
 </body>

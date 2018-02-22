@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="380"
+   height="360"
+   transform="translate(0,0)"
+   version="1.1"
+   id="svg7906"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="rl_natural_response2.svg">
+  <metadata
+     id="metadata8020">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8018" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1245"
+     inkscape:window-height="728"
+     id="namedview8016"
+     showgrid="false"
+     inkscape:zoom="1.4611111"
+     inkscape:cx="183.4981"
+     inkscape:cy="180"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg7906" />
+  <xhtml:defs>
+    <xhtml:style
+       type="text/css"><![CDATA[
+svg .grid { stroke-width: 0.5px; stroke: rgb(187, 187, 187); opacity: 0.5; }
+svg .domain { stroke-width: 3px; stroke: black; }
+svg { border: none; }
+svg .path { stroke-width: 4px; stroke: rgb(17, 172, 205); fill: none; }
+svg text { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: normal; font-family: katex_main; }
+svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: katex_math; }]]></xhtml:style>
+  </xhtml:defs>
+  <path
+     class="domain"
+     d="m 40.5,240 0,0.5 240,0 0,-0.5"
+     id="path7912"
+     inkscape:connector-curvature="0"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000" />
+  <g
+     class="tick"
+     transform="translate(40.5,240)"
+     id="g7914"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7916"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7918" />
+  </g>
+  <g
+     class="tick"
+     transform="translate(80.5,240)"
+     id="g7920"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7922"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7924" />
+  </g>
+  <g
+     class="tick"
+     transform="translate(120.5,240)"
+     id="g7926"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7928"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7930" />
+  </g>
+  <g
+     class="tick"
+     transform="translate(160.5,240)"
+     id="g7932"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7934"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7936" />
+  </g>
+  <g
+     class="tick"
+     transform="translate(200.5,240)"
+     id="g7938"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7940"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7942" />
+  </g>
+  <g
+     class="tick"
+     transform="translate(240.5,240)"
+     id="g7944"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7946"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7948" />
+  </g>
+  <g
+     class="tick"
+     transform="translate(280.5,240)"
+     id="g7950"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;opacity:1;fill:none">
+    <line
+       y2="6"
+       id="line7952"
+       x1="0"
+       y1="0"
+       x2="0"
+       style="stroke:#000000" />
+    <line
+       class="grid"
+       x1="0"
+       y1="-200"
+       x2="0"
+       y2="80"
+       id="line7954" />
+  </g>
+  <text
+     x="288"
+     dx="0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text7956"
+     y="240"
+     sodipodi:linespacing="125%">
+    <tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan8638">t</tspan>
+  </text>
+  <g
+     style="font-size:10px;font-family:sans-serif;text-anchor:end;fill:none"
+     id="g7958"
+     font-size="10"
+     transform="translate(80,40)"
+     class="y-axis">
+    <path
+       style="stroke:#000000"
+       inkscape:connector-curvature="0"
+       id="path7960"
+       d="m 0,280.5 0.5,0 0,-280 -0.5,0"
+       class="domain" />
+    <g
+       style="opacity:1"
+       id="g7962"
+       transform="translate(0,280.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line7964"
+         x2="-6" />
+      <line
+         id="line7966"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g7968"
+       transform="translate(0,240.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line7970"
+         x2="-6" />
+      <line
+         id="line7972"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g7974"
+       transform="translate(0,200.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line7976"
+         x2="-6" />
+      <line
+         id="line7978"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g7980"
+       transform="translate(0,160.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line7982"
+         x2="-6" />
+      <line
+         id="line7984"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g7986"
+       transform="translate(0,120.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line7988"
+         x2="-6" />
+      <line
+         id="line7990"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g7992"
+       transform="translate(0,80.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line7994"
+         x2="-6" />
+      <line
+         id="line7996"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g7998"
+       transform="translate(0,40.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line8000"
+         x2="-6" />
+      <line
+         id="line8002"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <g
+       style="opacity:1"
+       id="g8004"
+       transform="translate(0,0.5)"
+       class="tick">
+      <line
+         style="stroke:#000000"
+         y2="0"
+         y1="0"
+         x1="0"
+         id="line8006"
+         x2="-6" />
+      <line
+         id="line8008"
+         y2="0"
+         x2="200"
+         y1="0"
+         x1="-40"
+         class="grid" />
+    </g>
+    <text
+       id="text8010"
+       style="font-size:16px;line-height:125%;text-anchor:middle;fill:#000000"
+       dy="-12"
+       sodipodi:linespacing="125%">
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="tspan8642">i</tspan>
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="tspan8640" />
+    </text>
+  </g>
+  <path
+     inkscape:connector-curvature="0"
+     id="path8012"
+     d="m 40,80 40,0"
+     class="path"
+     style="fill:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke:#00aad4;stroke-linecap:round" />
+  <text
+     id="text110"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     dy="0 0 0 -6 6"
+     y="85.851234"
+     x="96.716125"
+     sodipodi:linespacing="125%">i(0+) = <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4297"
+   dy="0 6 -12">I<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4356">0</tspan>
+</tspan>
+</text>
+</svg>

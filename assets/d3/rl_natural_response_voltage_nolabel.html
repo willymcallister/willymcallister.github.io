@@ -19,7 +19,8 @@
 
     svg .path {
       stroke-width: 4px;
-      stroke: #11ACCD;      /* KA math1     */
+//    stroke: #11ACCD;      /* KA math1     */
+      stroke: #FF9C39;      /* KA econ2     */
       fill: none;
     }
 
@@ -44,10 +45,10 @@
   var 
       xmin = -100,
       xmax = +500,  // in ns
-      ymin = -4,
-      ymax = +10,   // in mA
+      ymin = -1,
+      ymax = +2.5,   // in mA
       hScale = 0.4,
-      vScale = 20,
+      vScale = 80,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
       xOrigin = -(xmin * hScale);          // origin in pixels
@@ -82,7 +83,7 @@
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("t (nsec)")
+      .text("t")
       .style("text-anchor", "start")
       .style("font-size", "16px")
       .style('fill', 'black');
@@ -109,7 +110,7 @@
       .call(yAxis)
     .append("text")
       .attr("dy", "-12px")
-      .text("i (mA)")
+      .text("v")
       .style("text-anchor", "middle")
       .style("font-size", "16px")
       .style("fill", "black");
@@ -123,9 +124,9 @@
       .attr("x2", width - xOrigin)
       .attr("y2", 0);
 
-  // remove "0"s near origin
+  // remove all labels
   svgContainer.selectAll(".tick text")
-    .filter(function (d) { return d === 0;  })
+    //.filter(function (d) { return d === 0;  })
     .remove();
 
   // Waveform - RL natural response current
@@ -133,6 +134,7 @@
   var R = 200;
   var L = .000016;
   var Io = 8;                       // in mA
+  var Vo = R * Io / 1000;
   var tau = (L / R) * 1000000000;   // in ns
 
   var nPoints = 100;
@@ -145,18 +147,18 @@
 
   var rlCurrent = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale(Io * (Math.exp(-d/tau))); });
+    .y(function (d) { return yScale(Vo * (Math.exp(-d/tau))); });
 
   svgContainer.append('svg:path')
     .classed("path", true)
     .attr('d', rlCurrent(xData))
     .style("fill", "none")
-    .style("stroke", "#11ACCD")
     .style("stroke-width", "3px");
 
   var lineData = [  
-      { "x": xmin, "y": Io}, 
-      { "x":    0, "y": Io}];
+      { "x": xmin, "y": 0}, 
+      { "x":    0, "y": 0},
+      { "x":    0, "y": Vo}];
 
   var lineFunction = d3.line()
     .x(function (d) { return xScale(d.x); })
@@ -166,6 +168,22 @@
       .classed("path", true)
       .attr('d', lineFunction(lineData));
 
+  svgContainer.append("text")
+    .attr("x", xScale(-120))
+    .attr("y", yScale(Vo))
+    .attr("dy", "-1px")
+    .text("Io R")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style('fill', 'black');
+
+  var lineData0 = [  
+      { "x": xScale(700), "y": 0}, 
+      { "x": xmax, "y": 0}];
+
+  svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', lineFunction(lineData0));
 </script>
 </body>
 </html>

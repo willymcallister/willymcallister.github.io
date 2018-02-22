@@ -56,7 +56,7 @@ Where $\alpha$ is called the *damping factor*, and $\omega_o$ is called the *res
 
 ## Strategy
 
-The strategy for solving this circuit is the same one we used for the second-order [LC]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %}) circuit.
+The strategy for solving this circuit is the same one we used for the second-order [LC circuit]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %}).
 
 1. The second-order differential equation is based on the $i$-$v$ equations for $\text R$, $\text L$, and $\text C$. Use Kirchhoff's Voltage Law (sum of voltages around a loop) to assemble the equation.
 2. Make an informed guess at a solution.  
@@ -144,7 +144,7 @@ Now we solve our differential equation.
 
 ## Propose a solution
 
-Just like we did with previous natural response problems ([RC](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/ee-rc-natural-response),  [RL](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/ee-rl-natural-response), [LC](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/ee-lc-natural-response)), we assume a solution with an exponential form, ("assume a solution" is a mathy way to say "guess"),
+Just like we did with previous natural response problems ([RC]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}), [RL]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}), [LC]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %})), we assume a solution with an exponential form, ("assume a solution" is a mathy way to say "guess"),
 
 $i(t) = Ke^{st}$
 
