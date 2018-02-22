@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "Details template"
+title:  "<details> tag template"
 author: Willy McAllister
 comments: true
 ---
 
-Here's a template for inserting a Details tag into Jekyll kramdown. It allows you to use markdown syntax in both the summary and the body of the details tag. 
+Here's a template for inserting a \<details\> tag into markdown. It allows you to use markdown syntax inside the summary and the body of a \<details\> tag. This works with Jekyll kramdown, served by GitHub Pages.
 
 {% capture summary %}SUMMARY{% endcapture %}  
 {% capture details %}  
