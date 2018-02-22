@@ -74,7 +74,7 @@ $\large v_{\text{R}20} = v_a - v_b\qquad$ or $\large \qquad v_{\text{R}20} = v_b
 
 We make our choice depending on which way we want the current arrow to point.
 
-$\Rightarrow$ **Node voltage essential skill - The difference expression controls the current arrow**
+>Essential skill - The difference expression controls the current arrow.
 
 The element voltage across the $20\,\Omega$ resistor can be written with either $v_a$ or $v_b$ in the first position in the difference equation. Whichever voltage we write first is considered the more positive when we use the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). The choice of the first voltage term determines the direction of the current arrow. The current arrow points *into* the resistor terminal with the first voltage term.
 
@@ -119,10 +119,10 @@ Are there any easy nodes? There's a voltage source connected directly between no
 
 The next step is to write KCL equations for the remaining nodes. For us, that's just node $\greenD b$.
 
-$\Rightarrow$ **Node voltage essential skill - scribble on the schematic**  
+>Essential skill - Scribble on the schematic!    
 The challenging part of writing KCL equations is getting the signs right. Scribble on the schematic. A lot. Draw voltage signs and current arrows to help you get the signs right in the KCL equation. 
 
-$\Rightarrow$ **Node voltage essential skill - do Ohm's Law in your head as you write KCL**  
+>Essential skill - Do Ohm's Law in your head as you write KCL.    
 As you write each term of the KCL equation, do Ohm's Law in your head and immediately write the current in terms of node voltages divided by resistance. 
 
 Let's first work out the individual currents flowing in the three resistors connected to node $\greenD b$. Remember, scribbling is good.

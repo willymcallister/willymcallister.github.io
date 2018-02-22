@@ -160,11 +160,11 @@ By defining a current in every mesh, you are guaranteed to have enough independe
 
 ### Write Kirchhoff's Voltage Law around each mesh
 
-To get ready, we mark up the schematic with element currents (blue arrows) and element voltages (orange $+$ and $-$), using the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). 
+To get ready, we mark up the schematic with element currents (green arrows) and element voltages (orange $+$ and $-$), using the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). 
 
-![](https://ka-perseus-images.s3.amazonaws.com/026d8d4fa92a7c18c29daca9a6edf3dc1185b431.svg){: .centered :}
+![Add arrows for element currents]({{ site.baseurl }}{% link i/mesh_current7.svg %}){: .centered :}
 
-$\Rightarrow$ **Mesh Current essential skill - scribble on the schematic!**
+>Essential skill: Scribble on the schematic! 
 
 * Draw element currents first (before assigning voltages). It is a good idea to point currents in the same direction as the nearby mesh current. You can't always do this. (Notice where $i_{\text{II}}$ flows up against the $1\,\text k\Omega$ current arrow. This is okay, it will work out fine in the end.) 
 * Then add element voltages with the $+$ sign near the incoming current arrow (the passive sign convention).
@@ -303,7 +303,7 @@ And finally we find the voltage at the node between the three resistors using Oh
 
 $v_{1\text k\Omega} = 1\,\text k\Omega \cdot 1.75\,\text{mA} = \goldD{1.75\,\text V}$
 
-![Cmomplete solution]({{ site.baseurl }}{% link i/mesh_current5.svg %}){: .centered :}{: height="220px"}
+![Complete solution]({{ site.baseurl }}{% link i/mesh_current5.svg %}){: .centered :}{: height="220px"}
 
 
 Congratulations! We analyzed a circuit using the Mesh Current Method.
