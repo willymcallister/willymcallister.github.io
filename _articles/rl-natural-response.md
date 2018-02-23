@@ -5,11 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-We investigate the *natural response* of a resistor inductor circuit. This derivation is similar to the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
+We investigate the *natural response* of a resistor inductor $(\text{RL})$ circuit. This derivation is similar to the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
 
 ![RL natural response circuit]({{ site.baseurl }}{% link i/rl_natural_response1.svg %}){: .centered :}
 
-This kind of $\text{RL}$ circuit appears any time a wire is involved in a circuit. The wire may be formed into a coil to form an inductor.Inductors are used in almost every power supply and in frequency filters. If you design with a mechanical relay, part of it is a coiled wire used as an electromagnet. Simple wires and traces on circuit boards always have a small inductance. This becomes important in very fast circuits. 
+This kind of $\text{RL}$ circuit appears any time a wire is involved in a circuit. The wire may be formed into a coil to form an inductor. Inductors are used in almost every power supply and in frequency filters. If you design with a mechanical relay, part of it is a coiled wire used as an electromagnet. Simple wires and traces on circuit boards always have a small inductance. This becomes important in very fast circuits. 
 
 To figure out this circuit we have to account for time, so we have to use some concepts from calculus. We use [derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives) to describe how the $\text{RL}$ circuit behaves.
 
@@ -427,6 +427,10 @@ The natural response looks like this,
 
 |![RL natural response current]({{ site.baseurl }}{% link i/rl_natural_response_current.svg %})|![RL natural response voltage]({{ site.baseurl }}{% link i/rl_natural_response_voltage.svg %})|
 {% endcapture %}{% include details.html %} 
+
+### Simulation model
+
+Try this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[208,128,0],{"_json_":0},["0"]],["w",[272,48,272,24]],["w",[152,24,152,32]],["r",[272,48,4],{"name":"R","r":"200","_json_":3},["1","0"]],["l",[152,48,0],{"name":"L","l":"16u","_json_":4},["2","0"]],["i",[40,48,0],{"name":"I0","value":"step(8m,0,0,1n)","_json_":5},["1","0"]],["w",[152,96,152,128]],["w",[272,96,272,128]],["w",[40,128,40,96]],["w",[40,48,40,24]],["s",[208,24,0],{"color":"red","offset":"0","_json_":10},["1"]],["w",[272,24,208,24]],["w",[272,128,208,128]],["w",[152,128,208,128]],["w",[152,24,40,24]],["w",[152,128,40,128]],["a",[152,48,5],{"color":"cyan","offset":"0","_json_":16},["2","1"]],["w",[152,24,208,24]],["view",1.1599999999999966,-17.708,2.44140625,"50","10","1G",null,"100","400n","1000"]]). Click on **TRAN** to perform a transient analysis. The current source has its own internal switch. It starts at $8\,\text{mA}$ and steps abruptly down to $0$ at $t=0$. Confirm for yourself the current is down to $37\%$ of its $t(0)$ value after one time constant. 
 
 ## Summary
 {:.no_toc}

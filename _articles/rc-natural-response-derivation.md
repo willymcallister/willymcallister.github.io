@@ -275,6 +275,10 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}\qquad$ (circled in the plot below)
 
 The $\redB{\text{circle}}$ shows the answer from part **b**: $v(t) = 0.515 \,\text V$ when $t=\text{RC} = 3 \,\text{ms}$. 
 
+### Simulation model
+
+[Simulation model of Example 1](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[272,136,0],{"_json_":0},["0"]],["s",[208,24,0],{"color":"cyan","offset":"0","_json_":1},["1"]],["w",[320,48,320,160]],["w",[392,112,392,96]],["w",[136,136,136,96]],["w",[272,136,272,96]],["w",[296,24,272,24]],["w",[272,48,272,24]],["g",[200,208,0],{"_json_":8},["0"]],["v",[200,160,4],{"name":"SW1-ctl","value":"step(0,20,20u,1n)","_json_":9},["3","0"]],["w",[392,24,344,24]],["p",[296,24,3],{"name":"SW2","WL":"10000","_json_":11},["1","4","5"]],["g",[392,112,0],{"_json_":12},["0"]],["w",[392,48,392,24]],["v",[392,48,0],{"name":"V0","value":"dc(1.4)","_json_":14},["5","0"]],["g",[320,208,0],{"_json_":15},["0"]],["v",[320,160,0],{"name":"SW2-ctl","value":"step(0,20,5u,1n)","_json_":16},["4","0"]],["w",[224,136,272,136]],["w",[136,136,176,136]],["n",[176,136,3],{"name":"SW1","WL":"10000","_json_":19},["2","3","0"]],["c",[272,48,0],{"name":"C","c":"1u","_json_":20},["1","0"]],["r",[136,96,6],{"name":"R","r":"3k","_json_":21},["2","1"]],["w",[136,24,208,24]],["w",[272,24,208,24]],["w",[136,24,136,48]],["view",12,-34.69999999999999,1.5625,"50","10","1G",null,"100","20m","1000"]]). Click on **TRAN** to perform a transient analysis. The MOS transistor at the bottom acts as a switch.
+
 ### A useful rule of thumb - $37\%$
 
 When time equals the time constant, $\text{RC}$, the voltage is down from its initial value by a factor of $1/e$, or down to roughly $37\%$ of its starting value. This is true for any initial voltage and any $\text{RC}$ product.

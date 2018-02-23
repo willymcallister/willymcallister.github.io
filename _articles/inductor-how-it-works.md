@@ -1,17 +1,19 @@
 ---
 layout: article
-title:  Inductor - how it works
+title:  Inductor - how it works - under construction
 author: Willy McAllister
 comments: true
 ---
+When this article is ready to publish, add this line back to Ideal or Real World elements:  
+Refer to [Inductor - how it works](http://spinningnumbers.org/a/inductor-how-it-works.html) for an informal description of how an inductor does its thing. 
 
 When you make an inductor the goal is to create a component that behaves like the ideal inductor equation, 
 
 $v = \text L \,\dfrac{di}{dt}$
 
-This article is a simplified description of how an inductor does its thing. I don't tell you *why* we want this equation. We will talk about that another time. For now, we want to build a physical object that creates the inductor $i$-$v$ (current-voltage) equation.
+I don't tell you *why* we want this equation. We will talk about that another time. For now, we want to build a physical object that creates the inductor $i$-$v$ (current-voltage) equation.
 
-The theory of how inductors actually work is pretty complicated in the fine details. To learn more about inductors and magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
+The theory of how inductors actually work is pretty complicated. To learn more about inductors and magnetic fields, see the [magnetic fields](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields) section of Khan Academy Physics. 
 
 Written by Willy McAllister.
 
@@ -27,9 +29,9 @@ Written by Willy McAllister.
 
 ## First, a little magnetism
 
- Any wire carrying a current generates a magnetic field in the surrounding region. This important fact was discovered by Danish scientist [Hans Christian Ørsted](https://en.wikipedia.org/wiki/Hans_Christian_Oersted) in 1820. Up to that time, everyone thought electricity and magnetism were separate things. Ørsted showed they were related, and we call the merged concept *electromagnetism*.
+Any wire carrying a current generates a magnetic field in the surrounding region. This important fact was discovered by Danish scientist [Hans Christian Ørsted](https://en.wikipedia.org/wiki/Hans_Christian_Oersted) in 1820. Up to that time, everyone thought electricity and magnetism were separate things. Ørsted showed they were related, and we call the merged concept *electromagnetism*.
 
-The red lines in these images represent the magnetic field. Here's a single straight wire carrying a current, $i$. Whenever there is a current, there are magnetic field lines flowing in circles around the wire. 
+The red lines in these images represent the magnetic field. Here's a single straight wire carrying a current, $i$. Whenever there is a current, there are magnetic field lines flowing in circles in the space around the wire. 
 
 ![](/i/6inductor_straight_wire.svg){: .centered }
 
@@ -43,7 +45,7 @@ You already know what that is, it's called a compass.</p>
 
 <p>If there is no nearby magnetic field, the needle of the compass lines up with the magnetic field of the Earth, and points towards magnetic north. If you create a magnetic field, the compass needle swings around and lines up with the new field. The magnetic field from the wire is stronger than the earth's field, so it overpowers it and tips the compass needle.</p>
 
-<p>Using a compass as a magnetic field sensor is an example of how electrical engineers create "eyes" to  "see" the invisible. Electricity and magnetism are invisible, so we build different kinds of "eyes" all the time. It is an essential skill. This is one reason a lot of people think EE's are wizards.</p>
+<p>Using a compass as a magnetic field sensor is an example of how we create "eyes" to  "see" the invisible. Electricity and magnetism are invisible, so we build different kinds of "eyes" all the time. It is an essential skill. This is one reason a lot of people think EE's are wizards.</p>
 </details>
 
 <details>
@@ -63,7 +65,9 @@ So now we have something called an inductor. It's just a straight wire, but it h
 
 ## Inductor $i$-$v$ equation
 
-So where does the inductor $i$-$v$ equation come from? Here are some observations about Ørsted's experiment, plus some new information. This all starts from the observation that a current (moving charge) creates a nearby magnetic field.
+So where does the inductor $i$-$v$ equation come from? Here are some observations about Ørsted's experiment, plus some new information. 
+
+We start from the observation that a current (moving charge) creates a nearby magnetic field.
 
 * A *changing* current creates a *changing* magnetic field.
 
