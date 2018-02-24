@@ -463,7 +463,7 @@ $\begin{aligned}
 \text L \frac{di}{dt} &= -i\,\text R \\
 \text L \frac{di}{i} &= -\text R \,dt \\
 \int_0^{t} \text L \frac{di}{i} &= -\int_0^t \text R \,dt \\
-\text L\,\big[\ln i(t) - \ln i(0)\big] &= -\text R\,t \\
+\text L\,(\ln i(t) - \ln i(0)) &= -\text R\,t \\
 \text L\,\ln(i(t)/\text I_0) &= -\text R\,t \\
 \ln(i(t)/\text I_0) &= -\text R\,t/\text L \\
 i(t)/\text I_0 &= e^{-\text Rt/\text L} \\
