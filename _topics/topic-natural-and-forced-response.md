@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Circuits with energy storage elements (capacitors and inductors) change over time. The *natural response* is what the circuit does when it has interally stored energy and there are no outside signals connected. When you connect an external signal to a circuit, the behavior is called the *forced response*.
+Capacitors and inductors store energy. In circuits with these components the voltage and current change over time as the energy moves around. The *natural response* of a circuit is what it does "naturally," when it has internal stored energy but no outside signals connected. When you connect an external energy source to a circuit, the behavior includes both the natural response and a *forced response*.
 
 ----
 
@@ -61,9 +61,9 @@ Circuits with energy storage elements (capacitors and inductors) change over tim
 
 ---
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - intuition]({{ site.baseurl }}{% link _articles/lc-natural-response-intuition.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - intuition]({{ site.baseurl }}{% link _articles/lc-natural-response-intuition.md %}) (under construction)
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - derivation]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - derivation]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %}) (under construction)
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (1 of 2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition1.md %})
 
