@@ -212,6 +212,12 @@ The general solution for the natural response of an $\text{RC}$ circuit is,
 
 $v(t) = \text V_0\,e^{-t/\text{RC}}$
 
+Here's what the voltage looks like,
+
+![RC natural response graph]({{ site.baseurl }}{% link i/rc_natural_response_voltage.svg %}){: .centered :}
+
+The curve touches the voltage axis at $\text V_0$. The speed of the falling voltage is determined by the $\text{RC}$ product in the exponent.
+
 ## Time Constant
 
 Now we peer inside this $\text{RC}$ natural response and make some observations.
