@@ -7,6 +7,8 @@ comments: true
 
 The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create and analyze. Understanding the behavior of this circuit is essential to understanding electronic systems. 
 
+![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0c.svg %}){: .centered :}{: height="160px"}
+
 To develop a precise understanding of the $\text{RC}$ requires methods from calculus. We use [derivatives](https://www.khanacademy.org/math/calculus-home/taking-derivatives-calc) to describe how the $\text{RC}$ circuit behaves.
 
 Written by Willy McAllister. 
@@ -92,7 +94,7 @@ $i_{\text C} = \text C\,\dfrac{dv}{dt}$
 
 Next we write an equation using Kirchhoff's Current Law (KCL).
 
-![](https://ka-perseus-images.s3.amazonaws.com/141b45ec632e07acf70c67d0a29d3c66262304b5.svg){: .centered :}{: height="200px"}
+![RC natural response circuit with labeled current arrows]({{ site.baseurl }}{% link i/rc_natural_response0b.svg %}){: .centered :}{: height="180px"}
 
 Using the form of KCL that says, "the sum of currents flowing out of a node is $0$",
 
@@ -214,7 +216,7 @@ $v(t) = \text V_0\,e^{-t/\text{RC}}$
 
 Here's what the voltage looks like,
 
-![RC natural response graph]({{ site.baseurl }}{% link i/rc_natural_response_voltage.svg %}){: .centered :}
+![RC natural response plot]({{ site.baseurl }}{% link i/rc_natural_response_voltage.svg %}){: .centered :}
 
 The curve touches the voltage axis at $\text V_0$. The speed of the falling voltage is determined by the $\text{RC}$ product in the exponent.
 
@@ -238,7 +240,7 @@ The time constant determines how fast the exponential curve comes down to zero. 
 
 ## Example 1
 
-![RC natural response example 1]({{ site.baseurl }}{% link i/rc_natural_response4.svg %}){: .centered :}{: height="200px"}
+![RC natural response example 1]({{ site.baseurl }}{% link i/rc_natural_response4.svg %}){: .centered :}{: height="180px"}
 
 For the natural response circuit,  
 let $\text R = 3 \,\text k\Omega$, $\text C = 1 \,\mu\text F$, and $v(0) = 1.4 \,\text V$.  
@@ -291,7 +293,7 @@ When time equals the time constant, $\text{RC}$, the voltage is down from its in
 
 ## Example 2
 
-![RC natural response example 2]({{ site.baseurl }}{% link i/rc_natural_response5.svg %}){: .centered :}{: height="200px"}
+![RC natural response example 2]({{ site.baseurl }}{% link i/rc_natural_response5.svg %}){: .centered :}{: height="180px"}
 
 Let $\text R = 1\,\text{k}\Omega$, $\text C = 1\,\text{pF}$, and $\text V_0 = 1.0\,\text V$.
 

@@ -5,9 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create. Understanding the behavior of this circuit is essential to understanding electronic systems. This is the first circuit we come across that changes with time. This article gives you an intuitive understanding of how the $(\text{RC})$ works.
+The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create. This is the first circuit we come across that changes with time. This article gives you an intuitive understanding of how the $\text{RC}$ works. The formal derivation is in the next article, [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}). 
 
-To develop a precise understanding requires methods from calculus. We need [derivatives](https://www.khanacademy.org/math/calculus-home/taking-derivatives-calc) to describe how the $\text{RC}$ circuit works. We do the formal derivation in the article that follows, [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
+![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0c.svg %}){: .centered :}{: height="160px"}
+
+Understanding what this circuit does is essential to understanding electronic systems. To develop a precise answer requires methods from calculus. We use [derivatives](https://www.khanacademy.org/math/calculus-home/taking-derivatives-calc) to describe how the $\text{RC}$ circuit works. 
 
 Written by Willy McAllister. 
 
@@ -87,9 +89,11 @@ The circuit has now returned to its original equilibrium state. This answers the
 
 Using just our intuition, we figured out the capacitor voltage starts at $0$ volts, rises to $\text V_{\text{BAT}}$, and then goes back to $0$ volts again. 
 
-Said another way, $v_\text C$ goes from an initial steady state, through a transient period to a new steady state, then through a second transient back to its original state. 
+Saying the same thing another way, $v_\text C$ starts at an initial steady state, goes through a transient period to a new steady state, and then through a second transient back to its original state. 
 
 We know the exact starting and ending voltage of each transient. Not bad for intuition, but ... What do we not know? 
 
-We don't know how long the transients last or their exact shape. It's time to break out some calculus to get a precise and useful solution. We do that in the article that follows, [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
+We don't know how long the transients last or their exact shape. 
+
+It's time to break out some calculus to get a precise and useful solution. We do that in the article that follows, [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
 

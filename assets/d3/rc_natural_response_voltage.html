@@ -19,7 +19,7 @@
 
     svg .path {
       stroke-width: 4px;
-      stroke: #11ACCD;      /* KA math1     */
+      stroke: #FF9C39;      /* KA econ2     */
       fill: none;
     }
 
@@ -151,8 +151,7 @@
   svgContainer.append('svg:path')
     .classed("path", true)
     .attr('d', diode(xData))
-    .style("fill", "none")
-    .style("stroke", "#11ACCD");
+    .style("fill", "none");
 
   var lineData = [  
       { "x": xmin, "y": Vo}, 
@@ -167,11 +166,21 @@
       .attr('d', lineFunction(lineData));
 
   svgContainer.append("text")
-    .attr("x", xScale(-2.5))
-    .attr("y", yScale(1.45))
-    .text("Vo")
+    .attr("x", xScale(-2.6))
+    .attr("y", yScale(1.5))
+    .text("V")
     .style("text-anchor", "start")
     .style("font-size", "20px")
+    .style('fill', 'black');
+
+  svgContainer.append("text")
+    .attr("x", xScale(-2.6))
+    .attr("dx", 13)
+    .attr("y", yScale(1.5))
+    .attr("dy", 8)
+    .text("0")
+    .style("text-anchor", "start")
+    .style("font-size", "18px")
     .style('fill', 'black');
 
 </script>
