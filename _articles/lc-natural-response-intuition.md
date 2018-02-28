@@ -7,7 +7,7 @@ comments: true
 
 We develop an intuition for the natural response  of the inductor-capacitor $(\text\{LC\})$ circuit. 
  
-![LC circuit](https://ka-perseus-images.s3.amazonaws.com/e11e853050cfcb3b21fb71159ee18f39f490f1f2.svg){: .centered :}{: height="180px" :}
+![LC natural response circuit]({{ site.baseurl }}{% link i/lc_natural_response0.svg %}){: .centered :}{: height="180px" :}
 
 Circuits with two energy storage elements (capacitors or inductors) are called *second-order systems*. The voltage and current rock back-and-forth, or *oscillate*. Second-order systems are where sine waves come from in analog circuits. 
 
@@ -41,21 +41,19 @@ Second-order systems are the simplest systems that rock back and forth in time, 
 
 ## Predict the natural response
 
-![](https://ka-perseus-images.s3.amazonaws.com/d5c107bac0b68aca65c7ac4e6a328a7662fe1267.svg){: .centered :}{: height="180px" :}
+![LC natural response circuit after switch]({{ site.baseurl }}{% link i/lc_natural_response2.svg %}){: .centered :}{: height="200px" :}
 
-<p class="caption">Circuit conditions just before the switch closes.</p>
+<p class="caption">Circuit conditions just after the switch closes.</p>
 
-Let's say the capacitor has an initial voltage, which means it is storing some charge, $q$. We assume there is no initial current in the inductor (and therefore, no current in the capacitor, either). What is going to happen when the switch closes and we let this circuit do "whatever it wants"? We are going to reason through this by tracking what happens to the charge, $q$. 
+Let's say the capacitor has an initial voltage, which means it is storing some charge, $q = \text C\,\text V_0$. Think of $q$ as positive charge sitting on the top plate of the capacitor. We are going to reason through this by tracking what happens to $q$. 
 
-The amount of $q$ is set by the product of the initial voltage on the capacitor and the value of the capacitor, $q=\text C\,v$. $q$ does not change during the natural response. Starting out, all the charge is sitting still on the capacitor.
+There is no initial current in the inductor, and therefore no current in the capacitor, either. The charge is just sitting there on the capacitor. What happens when the switch closes and we let the circuit "do whatever it wants"? (It's natural response.)
 
-Now we release the circuit by closing the switch to let it do its "natural" thing.
-
-The inductor starts with $0$ current. All of a sudden it "sees" the initial voltage, $v = \text V_0$. This voltage will  generate a  rising current in the inductor, and it starts storing energy in its surrounding magnetic field. 
+The inductor starts with $0$ current. All of a sudden the initial voltage, $v = \text V_0$ shows up when the switch closes. This voltage generates a current in the inductor, and it starts storing energy in its surrounding magnetic field. 
 
 Where does that current (flowing charge) come from? It comes from the capacitor, of course. 
 
-Over at the capacitor, current flows out away from the top plate, shown in blue below. Current flows through the inductor and around to the bottom capacitor plate. As charge leaves the top plate, that means $q$ is going down. $q=\text C\,v$ tells us $v$ has to be going down, as shown in orange. 
+Over at the capacitor, charge (current) flows out of the top plate, shown in blue below. It flows through the inductor and around to the bottom capacitor plate. As charge leaves the top plate, $q=\text C\,v$ is going down. That tells us $v$ has to be going down, as shown in orange. 
 
 ![LC natural response intuition 1]({{ site.baseurl }}{% link i/lc_natural_response_intuition1.svg %}){: .centered :}
 
@@ -63,14 +61,14 @@ Over at the capacitor, current flows out away from the top plate, shown in blue 
 
 Eventually, we reach a state where the charge on the top plate is the same as the bottom plate. The voltage across the capacitor therefore falls to $0$.
 
-Over at the inductor there is a current flowing, even though the voltage is $0$, because the energy stored in the inductor's magnetic field keeps the current flowing. (Current does not abruptly drop to $0$ when the voltage reaches $0$.)  
+Over at the inductor there is a current flowing, even though the voltage is $0$, because the energy stored in the inductor's magnetic field keeps it flowing. (Current does not abruptly drop to $0$ when the voltage reaches $0$.)  
 ![LC natural response intuition 2]({{ site.baseurl }}{% link i/lc_natural_response_intuition2.svg %}){: .centered :}
 
-<p class="caption">The voltage eventually falls to $0$ (the amount of charge on the top and bottom capacitor plates is the same). At the same time, the current in the inductor reaches a peak value. That current continues to pump charge onto the bottom plate of the capacitor.</p>
+<p class="caption">The voltage eventually falls to $0$ as the amount of charge on the top and bottom capacitor plates becomes the same. At the same time, the current in the inductor reaches its highest value. That current continues to pump the remaining charge onto the bottom plate of the capacitor.</p>
 
-The inductor current continues to move charge from the top plate of the capacitor to the bottom. Now there is more positive charge on the bottom plate than the top, so the voltage actually reverses sign and becomes negative.
+The inductor current continues to move charge from the top plate to the bottom. Now there is more positive charge on the bottom plate than the top, so the voltage actually reverses sign and becomes negative.
 
-As charge builds up on the bottom plate, it repels against the arrival of new charge from the inductor current (electrostatic repulsion). The inductor current bends over and starts to drop back towards $0$. 
+As charge continues to build up on the bottom plate, it repels against the arrival of new charge from the inductor current. The inductor current bends over and starts to drop back towards $0$. 
 
 ![LC natural response intuition 3]({{ site.baseurl }}{% link i/lc_natural_response_intuition3.svg %}){: .centered :}
 
@@ -88,25 +86,20 @@ The previous image is almost identical to where we started. The current is back 
 
 <p class="caption">The second half of the cycle is the same as the first, but with charge moving from the bottom plate of the capacitor back to the top plate.</p>
 
-The rate of oscillation (the frequency), is determined by the value of $\text L$ and $\text C$. We will discover how that works when we do the formal derivation of the $\text{LC}$ natural response in the next article.
+The exchange of charge between top and bottom plates continues forever. The rate of oscillation (the frequency), is determined by the value of $\text L$ and $\text C$. We will discover how that works when we do the formal derivation of the $\text{LC}$ natural response in the next article.
 
 ## Mechanical analogy: pendulum
 
-A swinging pendulum is a mechanical analog for an $\text{LC}$ circuit. 
+A frictionless pendulum is a mechanical analog for an $\text{LC}$ circuit. 
 
 ![](https://ka-perseus-images.s3.amazonaws.com/2ba6d9e0b647d88fd3ee97b5b60af4051110e382.svg){: .centered :}{: height="300px" :}
 
-*Voltage $v(t)$ is the analog of the position.* We measure position of the pendulum as it moves away from the center point. The distance is $0$, $(\goldD v=0)$, when the pendulum is hanging straight down, and goes to $\goldD v=+\text V_0$ or $-\text V_0$ at either extreme position. 
+Voltage $v(t)$ is the analog of position. We measure position of the pendulum as it swings away from the center point. The distance is $0$ $(v=0)$ when the pendulum hangs straight down. It swings to $v=+\text V_0$ or $-\text V_0$ at either extreme position. 
 
-*Current $i(t)$ is the analog of velocity.* The pendulum moves its fastest at the mid-point $(\blueD i=\text I_\{max\})$. It is motionless, $(\blueD i=0)$, for an instant at either end of its swing.  
+Current $i(t)$ is the analog of velocity. The pendulum moves fastest at the mid-point $(i=\text I_\{max\})$. It is motionless $(i=0)$ at end of its swing, just for an instant.  
 
-The initial voltage of $+\text V_0$ corresponds to how much we pull the pendulum to the right before letting go. 
+The initial voltage $+\text V_0$ corresponds to how far we pull the pendulum to the right before letting go. 
 
 Letting go of the pendulum corresponds to closing the switch. What happens next is the natural response. If the pivot point is frictionless and there is no air resistance, the pendulum swings forever.
 
-The $\text\{LC\}$ circuit (and the pendulum) trade voltage and current back and forth in a sine wave pattern. Both voltage and current are sine waves, and we can see a timing difference of $1/4$ of a cycle between them.
-
-## Summary
-{:.no_toc}
-
-We explored an intuitive description of the natural response of an $\text\{LC\}$ circuit (a second-order system). Both the voltage and current have a sine wave pattern.
+The $\text\{LC\}$ circuit (and the pendulum) trade voltage and current back and forth in a sine wave pattern. We see a timing difference of $1/4$ of a cycle between them. When either is $0$, the other is $\pm$peak value.

@@ -61,9 +61,9 @@ Capacitors and inductors store energy. In circuits with these components the vol
 
 ---
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - intuition]({{ site.baseurl }}{% link _articles/lc-natural-response-intuition.md %}) (under construction)
+![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - intuition]({{ site.baseurl }}{% link _articles/lc-natural-response-intuition.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - derivation]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %}) (under construction)
+![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - derivation]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (1 of 2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition1.md %})
 
