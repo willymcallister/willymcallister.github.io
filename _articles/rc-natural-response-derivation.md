@@ -338,7 +338,7 @@ Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazing
 
 The ODE we solved here is a *separable* differential equation. We used a guessing method. Another method for solving separable differential equations is included as an appendix at the end of [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). The math is more sophisticated, but there is no guessing involved. 
 
-Sal has a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving a second-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation1.md %}).
+Sal has a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving a second-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}).
 
 ### $e$ is special
 

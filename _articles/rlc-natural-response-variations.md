@@ -9,7 +9,7 @@ We dive into variations of the series resistor-inductor-capacitor $(\text{RLC)}$
 
 ![](https://ka-perseus-images.s3.amazonaws.com/7bf2a85a2432376373d66e4a86fe015fdb5f5570.svg){: .centered :}
 
-The previous article [RLC natural response - derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation1.md %}) set up the differential equation and derived the characteristic equation. You should study that article before this one. Our story picks up at the point where we solve for $s$, the roots of the characteristic equation.
+The previous article [RLC natural response - derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}) set up the differential equation and derived the characteristic equation. You should study that article before this one. Our story picks up at the point where we solve for $s$, the roots of the characteristic equation.
 
 What follows is one of the truly beautiful results in analog electronics. The blizzard of math may seem overwhelming. Take it slow and go through one solution at a time, with breaks in between. This is the last circuit we'll analyze with the full differential equation treatment. Whew!
 
@@ -54,7 +54,7 @@ The strategy we use to solve a second-order differential equation is this,
 8. Assemble the result
 9. Pick real component values, plug them into the result, and plot 
 
-The [previous article]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation1.md %}) covered Steps 1 - 4 and gave us the characteristic equation,
+The [previous article]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}) covered Steps 1 - 4 and gave us the characteristic equation,
 
 $s^2 + \dfrac{\text R}{\text L}s + \dfrac{1}{\text{LC}} = 0$
 
@@ -589,7 +589,7 @@ We have both $s$ exponents. If we can find two $K$'s it will confirm the propose
 
 ![RLC with initial voltage Vo]({{ site.baseurl }}{% link i/rlc_natural_response20.svg %}){: .centered :}
 
-We already worked out these initial conditions in the [under damped case]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations1.md %}#find-the-initial-conditions). The analysis is exactly the same for the over damped case we are doing now, so I won't repeat it here, 
+We already worked out these initial conditions in the [under damped case]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#find-the-initial-conditions). The analysis is exactly the same for the over damped case we are doing now, so I won't repeat it here, 
 
 $i(0^+) = 0$
 
@@ -739,7 +739,7 @@ The critically damped case can turn out two ways. It depends on how the initial 
 
 ### Critically damped with an initial voltage
 
-The initial conditions are the same as the [under damped case]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations1.md %}#find-the-initial-conditions), so I won't repeat it here, 
+The initial conditions are the same as the [under damped case]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#find-the-initial-conditions), so I won't repeat it here, 
 
 $i(0^+) = 0$
 
@@ -917,7 +917,7 @@ $\dfrac{di}{dt} = \dfrac{d}{dt}\left ( \text I_0 \,e^{-\alpha t} + K_2\,t\,e^{-\
 
 This is the derivative of a sum, and one of the terms is a product.
 
->Derivative [sum rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-basic-diff-rules/v/basic-differentiation-rules), start at 3:15. We did the same product rule derivative [just above]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations1.md %}#critically-damped-with-an-initial-voltage).
+>Derivative [sum rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-basic-diff-rules/v/basic-differentiation-rules), start at 3:15. We did the same product rule derivative [just above]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#critically-damped-with-an-initial-voltage).
 
 $\dfrac{di}{dt} = -\alpha I_0 e^{-\alpha t} + K_2 e^{-\alpha t}(1 - \alpha t)$
 

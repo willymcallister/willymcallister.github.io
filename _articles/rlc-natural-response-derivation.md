@@ -68,7 +68,7 @@ As usual, our guess will be an exponential function of the form $Ke^{st}$.
 7. The original guess is confirmed if $K$'s are found and are in fact constant (not changing with time).
 8. Celebrate the solution!
 
-In this article we cover the first three steps of the derivation up to the point where we have the so-called *characteristic equation*. The following article on [RLC natural response - variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations1.md %}) carries through with three possible outcomes depending on the specific component values. 
+In this article we cover the first three steps of the derivation up to the point where we have the so-called *characteristic equation*. The following article on [RLC natural response - variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}) carries through with three possible outcomes depending on the specific component values. 
 
 ## Model the circuit
 
@@ -318,7 +318,7 @@ We have nicknames for the three variations,
 
 
 
-Now you are ready to go to the following article, [RLC natural response - variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations1.md %}), where we look at each outcome in detail. 
+Now you are ready to go to the following article, [RLC natural response - variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}), where we look at each outcome in detail. 
 
 ## Summary
 {:.no_toc}
@@ -353,5 +353,5 @@ Since two roots come out of the characteristic equations, we modified the propos
 
 $i = K_1 e^{s_1t} + K_2 e^{s_2t}$
 
-The [next article]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations1.md %}) picks up at this point and completes the solution(s).
+The [next article]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}) picks up at this point and completes the solution(s).
 

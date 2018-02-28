@@ -18,6 +18,9 @@ This article goes step-by-step through the solution to a second-order differenti
 
 Also check out first-order differential equations solved step-by-step in [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}) and [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). Sal has many videos on [first-order differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-diff-eq-intro/v/differential-equation-introduction).
 
+Written by Willy McAllister.
+
+
 ----
 
 ### Contents
