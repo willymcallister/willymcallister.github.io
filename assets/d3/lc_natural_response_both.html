@@ -42,12 +42,12 @@
   var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
 
   var 
-      xmin = -4,
-      xmax = +20,
-      ymin = -.4,
-      ymax = +1.6,
-      hScale = 12,
-      vScale = 120,
+      xmin = -3,
+      xmax = 3.5 * Math.PI,
+      ymin = -12,
+      ymax = +12,
+      hScale = 20,
+      vScale = 10,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
       xOrigin = -(xmin * hScale);          // pixels
@@ -110,7 +110,7 @@
       .call(yAxis)
     .append("text")
       .attr("dy", "-12px")
-      .text("v")
+      .text("i,v")
       .style("text-anchor", "middle")
       .style("font-size", "20px")
       .style("font-style", "italic")
@@ -125,16 +125,17 @@
       .attr("x2", width - xOrigin)
       .attr("y2", 0);
 
-  // remove axis tick labels
+  // remove axis tick labels near origin
   svgContainer.selectAll(".tick text")
-    //.filter(function (d) { return d === 0;  })
+    .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - RC natural response with no specific time scale
-  // R = 3k  C = 1uF  Vo = 1.4v
-  var R = 3000;
-  var C = .000001;
-  var Vo = 1.4;
+  // Waveform - LC natural response current
+  var Vo = 10;
+  var L = 1;
+  var C = 0.25;
+  var w = 1 / Math.sqrt(L * C);
+  var T = 1 / w;
 
   var nPoints = 200;
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
@@ -144,45 +145,67 @@
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var diode = d3.line()
-    .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale(Vo * (Math.exp(-d/(R*C)/1000))); });
-
-  svgContainer.append('svg:path')
-    .classed("path", true)
-    .attr('d', diode(xData))
-    .style("fill", "none");
-
-  var lineData = [  
-      { "x": xmin, "y": Vo}, 
-      { "x":    0, "y": Vo}];
-
   var lineFunction = d3.line()
     .x(function (d) { return xScale(d.x); })
     .y(function (d) { return yScale(d.y); });
 
+//current
+  var iLC = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(Math.sqrt(C/L) * Vo * Math.sin(w*d)); });
+
   svgContainer.append('svg:path')
-      .classed("path", true)
-      .attr('d', lineFunction(lineData));
+    .classed("path", true)
+    .attr('d', iLC(xData))
+    .style("stroke", "#11ACCD")
+    .style("fill", "none");
+
+  var ilineData = [  
+      { "x": xmin, "y": 0}, 
+      { "x":    0, "y": 0}];
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .style("stroke", "#11ACCD")
+    .attr('d', lineFunction(ilineData));
+
+//voltage
+  var vLC = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(Vo * Math.cos(w*d)); });
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', vLC(xData))
+    .style("fill", "none");
+
+  var vlineData = [  
+      { "x": xmin, "y": Vo}, 
+      { "x":    0, "y": Vo}];
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', lineFunction(vlineData));
 
   svgContainer.append("text")
-    .attr("x", xScale(-2.6))
-    .attr("y", yScale(1.5))
-    .text("V")
-    .style("text-anchor", "start")
-    .style("font-size", "20px")
-    .style('fill', 'black');
-
-  svgContainer.append("text")
-    .attr("x", xScale(-2.6))
-    .attr("dx", 13)
-    .attr("y", yScale(1.5))
-    .attr("dy", 8)
-    .text("0")
+    .attr("x", xmin)
+    .attr("y", yScale(Vo))
+    .attr("dy", -6)
+    .text("v(t)")
     .style("text-anchor", "start")
     .style("font-size", "18px")
+    .style("font-style", "italic")
     .style('fill', 'black');
 
+  svgContainer.append("text")
+    .attr("x", xmin)
+    .attr("y", yScale(0))
+    .attr("dy", -6)
+    .text("i(t)")
+    .style("text-anchor", "start")
+    .style("font-size", "18px")
+    .style("font-style", "italic")
+    .style('fill', 'black');
 </script>
 </body>
 </html>
