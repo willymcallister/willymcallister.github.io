@@ -461,6 +461,16 @@ Here is a plot of current and voltage together. They are sinusoid waveforms with
 
 ![LC natural response current and voltage]({{ site.baseurl }}{% link i/lc_natural_response_both.svg %}){: .centered :}
 
+## Simulation model
+
+Try this [LC simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["l",[136,48,0],{"name":"L","l":"1","_json_":0},["3","6"]],["c",[272,48,0],{"name":"C","c":"0.25","_json_":1},["1","0"]],["n",[176,136,3],{"name":"SW1","WL":"1000000","_json_":2},["6","2","0"]],["w",[136,136,176,136]],["w",[224,136,272,136]],["v",[320,160,0],{"name":"SW2-ctl","value":"step(0,20,5u,1n)","_json_":5},["5","0"]],["g",[320,208,0],{"_json_":6},["0"]],["v",[392,48,0],{"name":"Vo","value":"dc(10)","_json_":7},["4","0"]],["w",[392,48,392,24]],["g",[392,112,0],{"_json_":9},["0"]],["p",[296,24,3],{"name":"SW2","WL":"10000","_json_":10},["1","5","4"]],["a",[136,32,1],{"color":"black","offset":"0","_json_":11},["1","3"]],["w",[136,24,136,32]],["w",[392,24,344,24]],["v",[200,160,4],{"name":"SW1-ctl","value":"step(0,20,10m,1n)","_json_":14},["2","0"]],["g",[200,208,0],{"_json_":15},["0"]],["w",[272,48,272,24]],["w",[296,24,272,24]],["w",[272,136,272,96]],["w",[136,136,136,96]],["w",[392,112,392,96]],["w",[320,48,320,160]],["g",[272,136,0],{"_json_":22},["0"]],["s",[200,24,0],{"color":"magenta","offset":"0","_json_":23},["1"]],["w",[272,24,200,24]],["w",[136,24,200,24]],["view",12,-34.69999999999999,1.5625,"50","10","1G",null,"100","6","1000"]]). Click on **TRAN** to run a transient simulation. The inductor current is shown in black. The capacitor voltage appears in magenta. If you run the simulation long enough you will see a slow exponential decay. This is caused by the small resistance of SW1, the MOS transistor used as a switch.
+
+Challenge:  
+* Modify the component values to get a different frequency.  
+* Design component values to achieve exactly $2\times$ the frequency.  
+* Does changing the frequency cause the amplitude to change?
+
+Here is a similar [LC simulation model driven by a current source](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["l",[264,56,0],{"name":"L","l":"1","_json_":0},["2","0"]],["c",[400,56,0],{"name":"C","c":"0.25","_json_":1},["1","0"]],["a",[264,40,1],{"color":"black","offset":"0","_json_":2},["1","2"]],["w",[264,32,264,40]],["w",[400,56,400,32]],["w",[400,144,400,104]],["w",[264,144,264,104]],["g",[400,144,0],{"_json_":7},["0"]],["s",[328,32,0],{"color":"magenta","offset":"0","_json_":8},["1"]],["w",[400,32,328,32]],["w",[264,32,328,32]],["w",[264,144,400,144]],["i",[144,104,6],{"name":"Io","value":"step(1,0,200m,1n)","_json_":12},["0","1"]],["w",[144,56,144,32]],["w",[144,32,264,32]],["w",[144,104,144,144]],["w",[144,144,264,144]],["view",12,-34.69999999999999,1.5625,"50","10","1G",null,"100","60","1000"]]). This one sets up an initial current in the inductor with a current source. At 0.2 seconds the current source switches off, leaving the circuit to oscillate forever. This way of initializing the circuit does not require MOS transistor switches with their residual resistance. 
 
 ## Summary
 {:.no_toc}
