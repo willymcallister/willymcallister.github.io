@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "<details> tag template"
+title:  "Details html tag template"
 author: Willy McAllister
 comments: true
 ---
