@@ -49,9 +49,7 @@ Let's say the capacitor has an initial voltage, which means it is storing some c
 
 There is no initial current in the inductor, and therefore no current in the capacitor, either. The charge is just sitting there on the capacitor. What happens when the switch closes and we let the circuit "do whatever it wants"? (It's natural response.)
 
-The inductor starts with $0$ current. All of a sudden the initial voltage, $v = \text V_0$ shows up when the switch closes. This voltage generates a current in the inductor, and it starts storing energy in its surrounding magnetic field. 
-
-Where does that current (flowing charge) come from? It comes from the capacitor, of course. 
+The inductor starts with $0$ current. All of a sudden the initial voltage, $v = \text V_0$ shows up when the switch closes. This voltage generates a current in the inductor, and it starts storing energy in its surrounding magnetic field. Where does that current (flowing charge) come from? It comes from the capacitor, of course. 
 
 Over at the capacitor, charge (current) flows out of the top plate, shown in blue below. It flows through the inductor and around to the bottom capacitor plate. As charge leaves the top plate, $q=\text C\,v$ is going down. That tells us $v$ has to be going down, as shown in orange. 
 
@@ -94,12 +92,14 @@ A frictionless pendulum is a mechanical analog for an $\text{LC}$ circuit.
 
 ![](https://ka-perseus-images.s3.amazonaws.com/2ba6d9e0b647d88fd3ee97b5b60af4051110e382.svg){: .centered :}{: height="300px" :}
 
-Voltage $v(t)$ is the analog of position. We measure position of the pendulum as it swings away from the center point. The distance is $0$ $(v=0)$ when the pendulum hangs straight down. It swings to $v=+\text V_0$ or $-\text V_0$ at either extreme position. 
+* Voltage $v(t)$ is the analog of position. We measure position of the pendulum as it swings away from the center point. The distance is $0$ $(v=0)$ when the pendulum hangs straight down. It swings to $v=+\text V_0$ or $-\text V_0$ at either extreme position. 
 
-Current $i(t)$ is the analog of velocity. The pendulum moves fastest at the mid-point $(i=\text I_\{max\})$. It is motionless $(i=0)$ at end of its swing, just for an instant.  
+* Current $i(t)$ is the analog of velocity. The pendulum moves fastest at the mid-point $(i=\text I_\{max\})$. It is motionless $(i=0)$ at end of its swing, just for an instant.  
 
-The initial voltage $+\text V_0$ corresponds to how far we pull the pendulum to the right before letting go. 
+* The initial voltage $+\text V_0$ corresponds to how far we pull the pendulum to the right before letting go. 
 
 Letting go of the pendulum corresponds to closing the switch. What happens next is the natural response. If the pivot point is frictionless and there is no air resistance, the pendulum swings forever.
 
 The $\text\{LC\}$ circuit (and the pendulum) trade voltage and current back and forth in a sine wave pattern. We see a timing difference of $1/4$ of a cycle between them. When either is $0$, the other is $\pm$peak value.
+
+(Full disclosure: The pendulum swings in a sine wave if the distance from the rest position is small. If the initial displacement is large, the answer is not exactly a sine wave.)
