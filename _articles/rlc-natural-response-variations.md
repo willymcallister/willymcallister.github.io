@@ -540,6 +540,7 @@ $f = e^{-t} \qquad\,\,\,\,\, g^\prime = -4 \sin 2t$</p>
 I never fully understand a waveform until I see a picture of it. Here are all three voltages plotted together,
 
 ![RLC voltage waveforms]({{ site.baseurl }}{% link i/rlc_underdamped_voltages.svg %}){: .centered :}
+
 <p class="caption">Series $\text{RLC}$ under damped voltages, $v_\text R, v_\text L, v_\text C$, for $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$.</p>
 {% capture summary %}current waveform for comparison{% endcapture %}  
 {% capture details %}  
@@ -550,6 +551,17 @@ Talk it through,
 * The capacitor voltage (blue) starts at $10\,\text V$ as predicted, and rapidly moves down as charge flows out. It goes negative as charge flows around through the inductor and onto the other plate of the capacitor. 
 * The inductor voltage (magenta) makes a sharp positive jump from $0$ to $10\,\text V$ when the switch closes. Remember how we figured this out when we found the second initial condition? The inductor voltage is positive as long as $i$ has a positive slope. It becomes negative a little after $0.5$ seconds. This coincides with when the current reaches its peak. As the current rolls over to a negative slope, the inductor voltage goes negative at the same time. 
 * The resistor voltage (green) goes along for the ride, doing its Ohm's Law thing the whole time. The resistor voltage is a scaled version of the current.
+
+{% capture summary %}symbolic voltages{% endcapture %}  
+{% capture details %}  
+Now that you've seen how to solve the voltages with example components, try deriving the symbolic representation of the under damped voltages. Here's what you should end up with,
+
+$v_\text R = -\dfrac{2\text V_0}{\omega_d} e^{-\alpha t}\alpha \sin \omega_d t$
+
+$v_\text L = \phantom{-} \,\dfrac{\text V_0}{\omega_d}e^{-\alpha t}(\omega_d \cos \omega_d t - \alpha \sin \omega_d t)$
+
+$v_\text C = \phantom{-} \,\dfrac{\text V_0}{\omega_d} e^{-\alpha t}(\omega_d \cos \omega_d t + \alpha \sin \omega_d t)$  
+{% endcapture %}{% include details.html %} 
 
 ### Under damped discussion
 
@@ -1031,16 +1043,16 @@ $s_{1,2} = -\alpha \pm j\omega_d$
 
 After you work out $\alpha$ and $\omega_o$, compute $\alpha^2 - \omega_o^2$. Based on the sign, select one of these solutions for $i(t)$,
 
-|------------------+---------------+------+----------------------------------|
-| variant          |$v_\text C, i_\text L$| $\alpha^2 - \omega_o^2$ | $i(t)$ |
-|------------------|:-------------:|:----:|----------------------------------|
-| over damped      |$\text V_0, 0$ | $+$  | $i = \dfrac{\text V_0}{(s_1 - s_2) \, \text L} \left ( e^{s_1 t} - e^{s_2 t} \right )$ |
-|------------------+---------------+------+----------------------------------|
-| critically damped|$\text V_0, 0$ | $0$  | $i = \dfrac{\text V_0}{\text L}\, t\, e^{-\alpha t}$   |
-|------------------+---------------+------+----------------------------------|
-| critically damped|$0, \text I_0$ | $0$  | $i = \text I_0 e^{-\alpha t}(1 - \alpha t)$        | 
-|------------------+---------------+------+----------------------------------|
-| under damped     |$\text V_0, 0$ | $-$  | $i = \dfrac{\text V_0}{\omega_d \text L} e^{-\alpha t} \sin \omega_d t$    | 
-|------------------+---------------+------+----------------------------------|
+|----------------+------------|-----+------+----------------------------------|
+| variant        |$v_\text C$ | $i_\text L$| $\alpha^2 - \omega_o^2$ | $i(t)$ |
+|----------------|:----------:|:---:|:----:|----------------------------------|
+| over damped    |$\text V_0$ | $0$ | $+$  | $i = \dfrac{\text V_0}{(s_1 - s_2) \, \text L} \left ( e^{s_1 t} - e^{s_2 t} \right )$ |
+|----------------+------------+-----+------+----------------------------------|
+| critically damped|$\text V_0$ | $0$ | $0$ | $i = \dfrac{\text V_0}{\text L}\, t\, e^{-\alpha t}$|
+|----------------+------------+-----+------+----------------------------------|
+| critically damped|$0$ | $\text I_0$ | $0$ | $i = \text I_0 e^{-\alpha t}(1 - \alpha t)$       | 
+|----------------+------------+-----+------+----------------------------------|
+| under damped   |$\text V_0$ | $0$ | $-$  | $i = \dfrac{\text V_0}{\omega_d \text L} e^{-\alpha t} \sin \omega_d t$     | 
+|----------------+------------+-----+------+----------------------------------|
 
-The $v_\text C, i_\text L$ column indicates the voltage and current at $t = 0^-$.
+The $v_\text C, i_\text L$ columns indicate the voltage and current at $t = 0^-$.
