@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-The fundamental laws are Ohm's Law (and the $i$-$v$ equations for capactor and inductor) and Kirchhoff's Laws. We applied Ohm's Law a few times already. We came up with equations for [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({{ site.baseurl }}{% link _videos/voltage-divider.md %}), and [simplified a resistor network]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}). Now we put [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) to work for us, too.
+The fundamental laws are Ohm's Law (and the $i$-$v$ equations for capactor and inductor) and Kirchhoff's Laws. We applied Ohm's Law a few times already. We came up with equations for [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({{ site.baseurl }}{% link _videos/voltage-divider.md %}), and [simplified a resistor network]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}). Now we put [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) to work for us, too. 
 
 ----
 
