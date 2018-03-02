@@ -27,9 +27,9 @@ The *natural response* of a circuit is what it does "naturally," when it has int
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor kickback]({{ site.baseurl }}{% link _articles/inductor-kickback.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (1 of 2)]({{ site.baseurl }}{% link _videos/inductor-kickback1.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (1)]({{ site.baseurl }}{% link _videos/inductor-kickback1.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (2 of 2)]({{ site.baseurl }}{% link _videos/inductor-kickback2.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (2)]({{ site.baseurl }}{% link _videos/inductor-kickback2.md %})
 
 ---
 
@@ -53,11 +53,11 @@ The *natural response* of a circuit is what it does "naturally," when it has int
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - intuition]({{ site.baseurl }}{% link _videos/rc-step-response-intuition.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - setup (1 of 3)]({{ site.baseurl }}{% link _videos/rc-step-response-setup.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - setup (1)]({{ site.baseurl }}{% link _videos/rc-step-response-setup.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - solve (2 of 3)]({{ site.baseurl }}{% link _videos/rc-step-response-solve.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - solve (2)]({{ site.baseurl }}{% link _videos/rc-step-response-solve.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - example (3 of 3)]({{ site.baseurl }}{% link _videos/rc-step-response-example.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - example (3)]({{ site.baseurl }}{% link _videos/rc-step-response-example.md %})
 
 ---
 
@@ -81,17 +81,17 @@ The *natural response* of a circuit is what it does "naturally," when it has int
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - derivation]({{ site.baseurl }}{% link _articles/lc-natural-response-derivation.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (1 of 2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition1.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (1)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition1.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (2 of 2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition2.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - intuition (2)]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition2.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (1 of 4)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation1.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (1)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation1.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (2 of 4)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation2.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (2)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation2.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (3 of 4)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation3.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (3)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation3.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (4 of 4)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation4.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - derivation (4)]({{ site.baseurl }}{% link _videos/lc-natural-response-derivation4.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - example]({{ site.baseurl }}{% link _videos/lc-natural-response-example.md %})
 
