@@ -5,9 +5,13 @@ author: Willy McAllister
 comments: true
 ---
 
-Capacitors and inductors store energy. In circuits with these components the voltage and current change over time as the energy moves around. The *natural response* of a circuit is what it does "naturally," when it has internal stored energy but no outside signals connected. When you connect an external energy source to a circuit, the behavior includes both the natural response and a *forced response*.
+Capacitors and inductors store energy. Voltage and current change over time as the energy moves around. 
+
+The *natural response* of a circuit is what it does "naturally," when it has internal stored energy but no outside signals connected. When you connect an external energy source, the behavior includes both the natural response and a *forced response*.
 
 ----
+
+### Capacitor
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Capacitor i-v equations]({{ site.baseurl }}{% link _videos/capacitor-iv-equations.md %})
 
@@ -16,6 +20,8 @@ Capacitors and inductors store energy. In circuits with these components the vol
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Capacitor i-v equation in action]({{ site.baseurl }}{% link _articles/capacitor-iv-equation-in-action.md %})
 
 ---
+
+### Inductor
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor i-v equations]({{ site.baseurl }}{% link _videos/inductor-iv-equations.md %})
 
@@ -26,6 +32,8 @@ Capacitors and inductors store energy. In circuits with these components the vol
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inductor kickback (2 of 2)]({{ site.baseurl }}{% link _videos/inductor-kickback2.md %})
 
 ---
+
+### RC
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RC natural response - intuition]({{ site.baseurl }}{% link _articles/rc-natural-response-intuition.md %})
 
@@ -39,6 +47,8 @@ Capacitors and inductors store energy. In circuits with these components the vol
 
 ---
 
+### RC step response
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RC step response]({{ site.baseurl }}{% link _articles/rc-step-response.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [RC step response - intuition]({{ site.baseurl }}{% link _videos/rc-step-response-intuition.md %})
@@ -51,15 +61,21 @@ Capacitors and inductors store energy. In circuits with these components the vol
 
 ---
 
+### Sketching exponentials 
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Sketching RC exponentials]({{ site.baseurl }}{% link _videos/sketching-rc-exponentials.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Sketching RC exponentials - examples]({{ site.baseurl }}{% link _videos/sketching-rc-exponentials-examples.md %})
 
 ---
 
+### RL
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %})
 
 ---
+
+### LC
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [LC natural response - intuition]({{ site.baseurl }}{% link _articles/lc-natural-response-intuition.md %})
 
@@ -80,6 +96,8 @@ Capacitors and inductors store energy. In circuits with these components the vol
 ![]({{ site.baseurl }}{% link i/video.svg %}) [LC natural response - example]({{ site.baseurl }}{% link _videos/lc-natural-response-example.md %})
 
 ---
+
+### RLC
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response - intuition]({{ site.baseurl }}{% link _articles/rlc-natural-response-intuition.md %})
 
