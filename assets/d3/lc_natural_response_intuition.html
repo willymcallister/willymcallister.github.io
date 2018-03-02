@@ -130,12 +130,11 @@
     //.filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - LC natural response 
+  // Waveform - LC natural response intuition 
   var Vo = 10;
   var L = 1;
   var C = 1;
   var w = 1 / Math.sqrt(L * C);
-  var T = 1 / w;
 
   var nPoints = 200;
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
@@ -143,8 +142,9 @@
   //var toX = xmax;
   //var toX = Math.PI/2;
   //var toX = 0.75*Math.PI;
-  var toX = Math.PI;
+  //var toX = Math.PI;
   var toX = 2*Math.PI;
+
   var xData = samples.map(function (i) 
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });

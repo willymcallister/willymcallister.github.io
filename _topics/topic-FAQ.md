@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-I get a lot of questions about electrical topics that are interesting but don't have a natural place to live. So they come here.
+I get a questions about electrical engineering that are interesting but don't have a natural place to live. So they camp out here.
 
 ----
 

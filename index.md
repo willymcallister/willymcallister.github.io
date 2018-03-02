@@ -40,11 +40,11 @@ The operational amplifier is the building block of analog electronics.
 Using a diode in a circuit.
 
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
-Here's a list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topic areas, articles, videos, images, etc.
+A list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? [<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) 
 
 ----
-These videos and articles began as my contribution to Khan Academy where I was the Electrical Engineering Content Fellow in 2016. In the past year all the articles you find here have been significantly improved. I hope you enjoy them.  
+These videos and articles began as my contribution to Khan Academy where I was the Electrical Engineering Content Fellow in 2016. Since then all the articles have been significantly improved. The addition of simulation models brings the ideas to life. I hope this material helps you in your quest become an electrical engineer.  
    \- Willy McAllister
 
