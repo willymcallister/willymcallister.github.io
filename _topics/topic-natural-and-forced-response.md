@@ -81,6 +81,8 @@ Capacitors and inductors store energy. In circuits with these components the vol
 
 ---
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response - intuition]({{ site.baseurl }}{% link _articles/rlc-natural-response-intuition.md %})
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response - derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response - variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %})

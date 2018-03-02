@@ -5,13 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-UNDER CONSTRUCTION
-
-The resistor-inductor-capacitor circuit $\text{RLC}$ circuit is the monarch of analog circuits. It is representative of real life circuits we actually build, since every real circuit has some finite resistance, inductance, and capacitance. This circuit has a rich and complex behavior with application in many areas of engineering.
+The resistor-inductor-capacitor $\text{RLC}$ circuit is the popular kid of analog circuits. It is found in real life circuits we actually build, since every real circuit has finite resistance, inductance, and capacitance. It has a rich and complex behavior with application in many areas of engineering.
 
 ![](https://ka-perseus-images.s3.amazonaws.com/7bf2a85a2432376373d66e4a86fe015fdb5f5570.svg){: .centered :}
 
-In this article we take an intuitive look at the natural response of an $\text{RLC}$. Then we do a formal mathematical derivation in two follow-on articles.
+In this article we take an intuitive look at the natural response of an $\text{RLC}$. Then we do the formal math in two follow-on articles, RLC natural response [derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}) and [variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}).
 
 Written by Willy McAllister.
 
@@ -28,105 +26,100 @@ Written by Willy McAllister.
 ### Where we're headed 
 {:.no_toc}
  
-The $\text{RLC}$ is the electrical analog of a swinging pendulum with friction. 
+We follow charge as it moves through the $\text{RLC}$ circuit over time. Charge sloshes back and forth from one plate of the capacitor to the other, passing through the inductor and resistor in both directions. Each oscillation is a little lower because energy is lost to heat in the resistor.
 
-To gain an intuition for the $\text{RLC}$ we think about how charge moves over time. Charge sloshes back and forth from one plate of the capacitor to the other, passing through the inductor and resistor in both directions. Each oscillation is a little lower because energy is lost to heat in the resistor.
+The mechanical analog of the $\text{RLC}$ is a swinging pendulum with friction. 
 
 ---
 
-## Predict the natural response
-
-![](https://ka-perseus-images.s3.amazonaws.com/a32d1f3b5d1523eb38f5199042d5423734cb484b.svg){: .centered :}
-
-<p class="caption">The circuit for the  $\text{RLC}$ natural response.  The switch starts open and there is an initial voltage $\text V_0$ on the capacitor.</p>
+## Setup
 
 This prediction is similar what we did for the [LC natural response](http://spinningnumbers.org/a/lc-natural-response-intuition.html). This time we include a small resistor (a few ohms) to make it more representative of real life circuits.
 
-Let's say the capacitor has an initial voltage $\text V_0$, so it is storing some charge, $q$. Assume the charge came from some external circuit, not shown. Because the switch is open, there is no current in the inductor, and no current in the capacitor or resistor, either. So the charge just sits on the capacitor with no place else to go. 
+![RLC circuit initial setup]({{ site.baseurl }}{% link i/rlc_natural_response_intuition0.svg %}){: .centered :}
 
-The amount of $q$ is set by the product of the initial voltage on the capacitor and the value of the capacitor, $q=\text C\,v_\text C$. Starting out, all the charge is sitting on the capacitor. We can track where it is by observing the voltage on the capacitor.
+<p class="caption">$\text{RLC}$ natural response. The switch is open and there is an initial voltage $\text V_0$ on the capacitor.</p>
 
-### Charge on the capacitor
+Let's say the capacitor has an initial voltage $\text V_0$. That means it is storing some charge, $q = \text C\,\text V_0$. Focus on $+q$, the positive charge sitting on the top plate of the capacitor. We will follow that as it moves around the circuit. 
 
-What does it mean when we say "charge on the capacitor"? It means we create a charge separation. Electrons are a lot easier to move around than protons, so that's what we work with. To get a charge separation we take some electrons away from the top plate, to create an electron deficit, and place them on the bottom plate, to create an electron excess. 
+The switch is open, so there is no current in the inductor, and no current in the capacitor or resistor, either. As long as the switch is open, the charge just sits on the capacitor with no place to go. 
 
-When $\text V_0$ is a positive number, electrons are missing from the top plate. That's equivalent to saying there is positive charge on the top plate. Whenever we say "there's $+q$ on the top plate," we really mean "there's a deficit of electrons on the top plate."
+{% capture summary %}Charge on a capacitor{% endcapture %}  
+{% capture details %}  
+What does it mean when we say "charge on the capacitor"? It means we create a charge separation. Electrons are a lot easier to move around than protons, so that's what we work with. To get a charge separation we take some electrons away from the top plate, to create an electron deficit, and place them on the bottom plate, to create an electron excess. Batteries and other voltage sources are capable of doing that.
 
-Charge excesses and charge deficits attract each other. The attraction is what makes charge move. In our case, negative charge (excess electrons) on the bottom plate are attracted to the "positive charge" (electron deficit) on the top plate. Electrons can't travel through the capacitor's insulator, but they can reach the top plate via the resistor and inductor when the switch closes. 
+When $\text V_0$ is a positive number, some electrons are missing from the top plate. That's equivalent to saying there is positive charge on the top plate. Whenever we say, "There's $+q$ on the top plate," we really mean "there's a deficit of electrons on the top plate." It's the same for excess charge on the bottom plate. "There's $-q$ on the bottom plate."
 
-The charge will slosh around for a while (more on that below). By the end of the natural response, the charge separation will go away. The once-separated charges will have found each other and become neutral. The electrons do not vanish, but the charge *separation* goes away. 
+As we work through our prediction, we track what happens to $+q$. We know the same amount of $-q$ is moving in the opposite direction, but we can ignore that and just follow $+q$. Try to track the motion of the "positive charge" in your mind as we go through this discussion.
 
-As we work through our prediction, we track what happens to $+q$. We know the same amount of $-q$ is actually moving in the opposite direction. Try to imagine the motion of the positive charge in your mind as we go through this discussion.
+By the end of the natural response, the charge separation will vanish. The positive and negative charges will  find each other, pair up, and become neutral. The electrons do not vanish, but the charge *separation* does. 
+{% endcapture %}{% include details.html %} 
 
-### Close the switch
+This discussion gets complicated because we follow multiple things at once, capacitor voltage and inductor current, not to mention our little resistor friend. Hang in there. 
 
-What will happen when the switch closes and we let the circuit do "whatever it wants"? That behavior is called the *natural response*. We reason through this by following what happens to the charge, $q$. 
+## Natural response - follow the charge
 
-The inductor starts out with $0$ current and $0$ volts. The resistor also has $0$ current, so by Ohm's Law, there is $0$ volts across the resistor. 
+What happens when the switch closes and we let the circuit do "whatever it wants"? This behavior is called the *natural response*. Follow the charge! 
 
-The closed switch all of a sudden provides a closed path for the $+$ charge on the top plate to search out the $-$ charge on the bottom plate.
+Close the switch. $+q$ on the top plate has a closed path to move towards the bottom plate.
 
-![](https://ka-perseus-images.s3.amazonaws.com/c603cd86d591948dd4fba50318ba2f1cefebe594.svg){: .centered :}
+![Charge has a path from the top plate to the bottom plate]({{ site.baseurl }}{% link i/rlc_natural_response_intuition0a.svg %}){: .centered :}
 
-All of a sudden the inductor and resistor together "see" the capacitor voltage, $v_\text C = \text V_0$. This voltage will  create a current in the inductor and resistor. Where does that current come from? It comes from the charge on the capacitor, of course. The charge is pulled by the electric force of attraction towards the opposite charge on the other plate.
+The switch closes and suddenly the inductor and resistor in series "see" the capacitor voltage, $v_\text C = \text V_0$. This creates a current in the resistor, $i=v/\text R$, and a current slope in the inductor, $di/dt = v/\text L$. The charge for the current comes from the capacitor, of course.
 
-The resistor now has a current flowing through it, and Ohm's Law tells us there will be a voltage drop across $\text R$. We assumed $\text R$ was small, so the voltage drop will be small, too. Nevertheless, the resistor does get a little warm as it dissipates a little bit of power. 
+We assumed $\text R$ was small, so its voltage drop will be small, too. Nevertheless, the resistor does get a little warm and dissipates a little bit of power in the form of heat. The energy lost to heat comes from the energy of the moving charge. A little bit of that charge is de-energized and does not make it all the way over to the bottom of the capacitor.
 
-The inductor has a current, so it starts storing energy in its surrounding magnetic field. That energy will come back out of the magnetic field in a moment. (The voltage across the inductor is a little bit lower than $v_\text C$ due to the small voltage drop across the resistor.)
+The inductor has a current, so it starts storing energy in its surrounding magnetic field. That energy will come back into the circuit in a moment.
 
-Over at the capacitor, current flows out of the top plate, goes through the resistor, through the inductor, and around to the bottom capacitor plate. If $q$ is going down, then $q=\text C\,v$ tells us $v_\text C$ has to be going down, too. 
+Over at the capacitor, charge flows out of the top plate, goes around through the resistor, through the inductor, and onto the bottom capacitor plate. As $q$ goes down, $q=\text Cv_\text C$ tells us $v_\text C$ has to be go down, too. 
 
-web+graphie://ka-perseus-graphie.s3.amazonaws.com/0f07d674cb65a2b784ab83c79fd2f71226409e26 {: .centered :}
+![RLC circuit intuition 1]({{ site.baseurl }}{% link i/rlc_natural_response_intuition1.svg %}){: .centered :}
 
 <p class="caption">A little after closing the switch, inductor current is rising and capacitor voltage is falling.</p>
 
-Eventually, the amount of charge on the top plate is the same as the bottom plate. The voltage across the capacitor therefore falls to $0$.
+Eventually, the amount of charge on the bottom plate equals the charge on the top plate, so the voltage across the capacitor falls to $0$.
 
-Meanwhile, over at the inductor there is still a current flowing. Wait! How could there be a current if the inductor voltage is $0$? The energy in the inductor's magnetic field keeps the current flowing, that's why. When you have a current in an inductor it tends to keep going. It's like when you spin a bicycle wheel. It's inertia keeps it going even if you try to stop it with your hand.
+Meanwhile, over at the inductor, current is still flowing. How can there be current if the voltage is $0$? Because the stored energy in the inductor's magnetic field keeps the current going. It's like when you spin a bicycle wheel. The inertia stored in the spinning wheel keeps it going even if you attempt to stop it suddenly. The magnetic field does the same thing for an inductor.
 
-web+graphie://ka-perseus-graphie.s3.amazonaws.com/ccd290c160a84f7896d73de45546cdf4041013ef {: .centered :}
+![RLC circuit intuition 2]({{ site.baseurl }}{% link i/rlc_natural_response_intuition2.svg %}){: .centered :}
 
-<p class="caption">The voltage eventually falls to $0$ (the amount of charge on the top and bottom capacitor plates is the same). At the same time, the current in the inductor reaches a peak value. That current continues to pump charge onto the bottom plate of the capacitor.</p>
+<p class="caption">The voltage falls to $0$ when the top and bottom plate have the same charge. The current in the inductor reaches a peak value and continues to pump charge onto the bottom plate of the capacitor.</p>
 
-Even after the voltage falls to $0$, the inductor current continues to move charge from the top plate of the capacitor to the bottom. Now there is more positive charge on the bottom plate than the top, so the voltage actually reverses sign and becomes negative.
+As the voltage falls below $0$ the current continues to pump charge from the top plate to the bottom. Now the bottom plate has more charge than the top, so the voltage goes negative.
 
-As charge builds up on the bottom plate, it repels against the arrival of new charge from the inductor current (electrostatic repulsion). The inductor current bends over and starts to drop back towards $0$. 
+![RLC circuit intuition 3]({{ site.baseurl }}{% link i/rlc_natural_response_intuition3.svg %}){: .centered :}
 
-web+graphie://ka-perseus-graphie.s3.amazonaws.com/542736546b541fb572a6110142301d18b8c9ee51 {: .centered :}
+<p class="caption">As the inductor current continues heaping positive charge on the bottom plate of the capacitor, the capacitor voltage goes negative.</p>
 
-<p class="caption">As the inductor continues heaping positive charge on the bottom plate of the capacitor, the capacitor voltage goes negative.</p>
+After a while, all the charge has moved to the bottom plate. The voltage reaches its peak negative value. The peak negative voltage is a little bit less than the original $v_\text C(0)$. Remember the resistor? Any time there's a current it is dissipating energy, so the peak negative voltage isn't quite as high as the starting point. 
 
-After a little while, the voltage will reach a peak negative value. The voltage will be negative, and a little bit less than the original $v_\text C(0)$ where the capacitor started. Remember the resistor? It is draining energy from the circuit, so the peak negative voltage isn't quite as high as the starting point. Charge stops moving for a brief moment when the voltage peaks out, so the current falls to $0$. 
+When the voltage reaches its negative peak charge stops moving for a brief moment and the current becomes $0$. Remember being on a playground swing? When you reach the highest point from the ground you stop just for a moment.
 
-web+graphie://ka-perseus-graphie.s3.amazonaws.com/4fcc21b550a59e3b8c5e5ccb20089e0c46cce0a8 {: .centered :}
+![RLC circuit intuition 4]({{ site.baseurl }}{% link i/rlc_natural_response_intuition4.svg %}){: .centered :}
 
 <p class="caption">After the available charge has flowed to the bottom plate,  the voltage reaches its negative peak, and the current falls to $0$.</p>
 
-The previous image is nearly the same as where we started. The current is back to zero, and the voltage is at a (slightly lower) peak value. We can go back to the start of the story and tell it again just the same, except with charge moving from the bottom plate of the capacitor back to the top. Here's the end result after one full cycle,
+The previous image is nearly the same as where we started. The current is back to zero, and the voltage is at a (slightly lower) peak value. We can go back to the start of the story and tell it again just the same, except with charge moving from the bottom plate of the capacitor back to the top. Here's the result after one full cycle,
 
-web+graphie://ka-perseus-graphie.s3.amazonaws.com/a8de1e6e2e38dea080a109ae0ee32ca849c43646 {: .centered :}
+![RLC circuit intuition 5]({{ site.baseurl }}{% link i/rlc_natural_response_intuition5.svg %}){: .centered :}
 
-<p class="caption">The second half of the cycle is similar to the first, but with charge moving from the bottom plate of the capacitor back to the top plate. By the time of the second voltage peak, the charge has moved through the resistor two times, so the peak is lower than the starting point.</p>
+<p class="caption">The second half of the cycle is like the first, but charge moves from the bottom plate of the capacitor back to the top. At the second positive voltage peak charge has moved through the resistor two times, so the peak is even lower than before.</p>
 
-At the end of one cycle we are back where we started, but with some energy removed from the system. The charge will continue to slosh back and forth between the top and bottom capacitor plates, losing a little energy each time, until the system eventually comes to rest.
+At the end of one cycle we are back where we started, but with some energy removed from the system. The process continues. Charge continues to slosh back and forth between the top and bottom plates, losing a little energy each time, until the system eventually comes to rest.
 
-web+graphie://ka-perseus-graphie.s3.amazonaws.com/cb10fc6a9488ff8259064f04c877a7e32fae385b {: .centered :}
+![RLC circuit intuition 6]({{ site.baseurl }}{% link i/rlc_natural_response_intuition6.svg %}){: .centered :}
 
-<p class="caption">As time goes on, the height of the oscillations decays until all the energy is dissipated in the resistor an everything comes to a stop.</p>
+<p class="caption">As time goes on, the height of the oscillation decays until all the energy is dissipated in the resistor and everything comes to a stop.</p>
 
 ## Mechanical analog
 
-The $\text{LC}$ circuit is analogous to a mechanical oscillator, the frictionless [swinging pendulum](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/harmonic-motion/v/pendulum). The $\text{RLC}$ circuit has a similar mechanical analog, The addition of the resistor to the $\text{RLC}$ is equivalent to adding air resistance to make the pendulum dissipate energy and slow to a halt.
+The $\text{RLC}$ circuit has mechanical analog, a pendulum with friction. The addition of the resistor to the $\text{RLC}$ is equivalent to adding friction. Friction causes the pendulum to dissipate energy and slowly come to a halt.
 
-As a pendulum swings back and forth, friction due to air resistance dissipates energy, and each swing gets shorter and shorter until the pendulum finally stops moving. If air resistance is low, the pendulum swings for a long time before it stops. If it is very high, the pendulum makes just one slow drop to the bottom center and stops. At one precise value, the pendulum will fall to the bottom center as fast as it can, without overshooting and coming back.
+As a pendulum swings back and forth, friction from both air resistance and the pivot point dissipates energy. Each swing gets shorter and shorter until the pendulum finally stops moving. If friction low, the pendulum swings for a long time before it stops (under damped). If friction is very high, the pendulum makes just one slow drop to the bottom center and stops (over damped). At one precise value, the pendulum will fall to the bottom center as fast as possible, without overshooting and coming back (critically damped).
 
 ![](https://ka-perseus-images.s3.amazonaws.com/7096c1bfc06a0eeab18dab76b5240aa8218721c9.svg){: .centered :}
 
 Our  $\text{RLC}$ circuit will display the same kinds of behavior as its current and voltage swing back and forth. (Another good mechanical analog is a weight hanging from a spring. If you pull the weight down and let it go, its up-and-down motion is similar to the pendulum's back-and-forth.)
-
-### Adding friction
-
-Do you remember we assumed the resistor was relatively small? A small resistance allows the system to swing back and forth for a while. What do you think will happen if the resistor is larger? (Hint: how long would a pendulum swing if there was more friction in the bearing?) Heck, the friction might be so great the pendulum doesn't even swing back and forth even one time, it just slumps down to the bottom and stops. 
 
 In the next two articles we will discover precisely how the $\text{RLC}$ works when we do a formal derivation of the natural response. We'll be able to predict the oscillation frequency, and will see how quickly the signal fades away.
 

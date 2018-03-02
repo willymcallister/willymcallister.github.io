@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: none;
+    }
+
+    svg .path {
+      stroke-width: 4px;
+      stroke: #FF9C39;      /* KA econ2     */
+      fill: none;
+    }
+
+    svg text {
+      font: 16px katex_main;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
+  var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
+
+  var 
+      xmin = -3,
+      xmax = 3.5 * Math.PI,
+      ymin = -12,
+      ymax = +12,
+      hScale = 24,
+      vScale = 10,
+      width  = (xmax - xmin) * hScale,     // width of graph axes pixels
+      height = (ymax - ymin) * vScale,     // height of graph axes pixels
+      xOrigin = -(xmin * hScale);          // pixels
+      yOrigin = height + (ymin * vScale);  // pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + padding.left + padding.right)  //width of image
+      .attr("height", height + padding.top + padding.bottom)  //height of image
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+    .append("g")  //group to build image inside of, offset by padding from border
+      .attr("transform",
+        "translate(" + padding.left + "," + padding.top + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .ticks(8)
+    .tickSizeOuter(0);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", function() {
+        return "translate(" + 0 + "," + yOrigin + ")";
+      })
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dx", ".71em")
+      .text("t")
+      .style("text-anchor", "start")
+      .style("font-size", "20px")
+      .style("font-style", "italic")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .ticks(8)
+      .tickSizeOuter(0);
+
+  var ya = svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dy", "-12px")
+      .text("i,v")
+      .style("text-anchor", "middle")
+      .style("font-size", "20px")
+      .style("font-style", "italic")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  // remove axis tick labels
+  svgContainer.selectAll(".tick text")
+    //.filter(function (d) { return d === 0;  })
+    .remove();
+
+  // Waveform - RLC natural response intuition 
+  var Vo = 10;
+  var R = 0.12;
+  var L = 1;
+  var C = 0.6;
+  var wo = 1 / Math.sqrt(L * C);
+  var a = R / (2*L);
+  var wd = Math.sqrt(wo*wo - a*a);
+
+  var nPoints = 200;
+  var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
+  var fromX = 0;
+  //var toX = 0.5;
+  //var toX = Math.PI/(2*wd)+.05;
+  //var toX = 0.8*Math.PI/wd;
+  //var toX = Math.PI/wd;
+  //var toX = 2*Math.PI/wd;
+  var toX = xmax;
+
+  var xData = samples.map(function (i) 
+    { return ((i / nPoints) * (toX - fromX)) + fromX;
+    });
+
+  var lineFunction = d3.line()
+    .x(function (d) { return xScale(d.x); })
+    .y(function (d) { return yScale(d.y); });
+
+//current - with an extra 1.2* factor to increase current on the same scale as voltage.
+  var iL = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(1.2*(Vo / (wd*L)) * Math.exp(-a*d) * Math.sin(wd*d)); 
+    });
+
+  svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', iL(xData))
+      .style("fill", "none")
+      .style("stroke", "#11ACCD");
+
+  var ilineData = [  
+      { "x": xmin, "y": 0}, 
+      { "x":    0, "y": 0}];
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .style("stroke", "#11ACCD")
+    .attr('d', lineFunction(ilineData));
+
+//voltage
+  var vC = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale((Vo/wd) * Math.exp(-a*d) * (a*Math.sin(wd*d) + wd*Math.cos(wd*d))); 
+    });
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', vC(xData))
+    .style("fill", "none");
+
+  var vlineData = [  
+      { "x": xmin, "y": Vo}, 
+      { "x":    0, "y": Vo}];
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', lineFunction(vlineData));
+
+  svgContainer.append("text")
+    .attr("x", xmin)
+    .attr("y", yScale(Vo))
+    .attr("dy", -6)
+    .text("v")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style("font-style", "italic")
+    .style('fill', 'black');
+
+  svgContainer.append("text")
+    .attr("x", xmin)
+    .attr("y", yScale(0))
+    .attr("dy", -6)
+    .text("i")
+    .style("text-anchor", "start")
+    .style("font-size", "18px")
+    .style("font-style", "italic")
+    .style('fill', 'black');
+
+</script>
+</body>
+</html>

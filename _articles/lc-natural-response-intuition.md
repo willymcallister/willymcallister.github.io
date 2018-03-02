@@ -88,7 +88,7 @@ The exchange of charge between top and bottom plates continues forever. The rate
 
 ## Mechanical analogy: pendulum
 
-A frictionless pendulum is a mechanical analog for an $\text{LC}$ circuit. 
+The $\text{LC}$ circuit is analogous to a mechanical oscillator, the frictionless [swinging pendulum](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/harmonic-motion/v/pendulum).  
 
 ![](https://ka-perseus-images.s3.amazonaws.com/2ba6d9e0b647d88fd3ee97b5b60af4051110e382.svg){: .centered :}{: height="300px" :}
 
