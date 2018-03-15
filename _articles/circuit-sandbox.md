@@ -7,9 +7,11 @@ comments: true
 
 A simulator for experimenting with circuits.
 
-Run the [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
+Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/index.html) on a laptop screen, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
+
+>Want to help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
 ----
 
@@ -21,7 +23,7 @@ Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.h
 
 ---- 
 
-## Playing in the circuit sandbox
+## Playing in the sandbox
 
 To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
 
@@ -50,7 +52,7 @@ Add voltage or current probes to the nodes you want to plot.
 
 Select DC, AC, or TRAN from the menu to simulate the circuit.
 
-If you have a touch device (tablet or smartphone):
+If you have a touch device (tablet or smart phone):
 
 * One finger selects components or drags a selection rectangle 
 * Two fingers pan the schematic window
@@ -66,9 +68,9 @@ If you have a touch device (tablet or smartphone):
 <li> Position components on the page by dragging them around.</li>
 <li> Add wires by dragging between the connection points on the components. If you make a mistake, hit the backspace/delete key on your keyboard to delete whatever is selected, or click on the $\large \times$ icon.</li>
 <li> Specify a ground node by dragging the ground symbol from the parts bin (the triangle with a stick) and connect it to the bottom of the voltage source.</li>
-<li> Adjust the component properties. Double-click on the voltage source and change its type to "step". Give it a name if you want. In the same way, change the resistor value to 1k, and the capacitor value to 1u. The k and u suffixes are short for $10^{+3}$ and $10^{-6}$.</li>
+<li> Adjust the component properties. Double-click on the voltage source and change its type to "step". Give it a name if you want. In the same way, change the resistor value to $1$k, and the capacitor value to $1$u. The k and u suffixes are short for $10^{+3}$ and $10^{-6}$.</li>
 <li> Add a voltage probe to the top node of the capacitor. (The thing in the parts bin that looks like a voltmeter probe.) This is the voltage we will plot.</li>
-<li> Select an analysis to perform. For this example, let's do a transient analysis. Click TRAN in the menu. Set the stop time to 10m. The m stands for $10^{-3}$ so we will simulate for 10 milliseconds.</li>
+<li> Select an analysis to perform. For this example, let's do a transient analysis. Click TRAN in the menu. Set the stop time to $10$m. The m stands for $10^{-3}$ so we will simulate for $10$ milliseconds.</li>
 <li> Click OK. The simulation is performed and a plot should appear.</li>
 </ul>
 
@@ -144,11 +146,11 @@ example: $1000$ can be entered as $1\text k$
 
 The simulator has simple models for semiconductor devices and an operational amplifier, with just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
 
-The default diode saturation current is $I_s = 1.0\times 10^{-14} \text A$. The diode's *area* parameter scales up the saturation current to $a \times I_s$. 
+The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14} \text A$. The diode's *area* parameter scales up the saturation current to $a \times \text I_\text s$. 
 
 ## System information
 
-The circuit sandbox works best in a desktop or laptop computer environment where you have plenty of viewing area. You can also use it on a tablet. (It works on smartphone, too, but the experience is a bit awkward because the screen is so small.) 
+The circuit sandbox works best on a desktop or laptop computer where you have plenty of viewing area. You can also use it on a tablet. (It works on smart phone, too, but the experience is a bit awkward because the screen is so small.) It should work seamlessly in most modern browsers under Windows, Mac, and Linux. If you experience problems, please let me know.
 
 ### Desktop/laptop
 
@@ -162,22 +164,30 @@ The simulator has a touch interface. On a tablet you can save *one* circuit file
 
 ### Other mobile devices
 
-The simulator works on a smartphone, but the display is a bit small for drawing schematics. You can pan the screen by touching down two fingers at once and dragging the window. You can save and load a single circuit file, the same as for a tablet.
+The simulator works on a smart phone, but the display is a bit small for drawing schematics. You can pan the screen by touching down two fingers at once and dragging the window. You can save and load a single circuit file, the same as for a tablet.
 
-## Languages and translation
+## Translation
 
-If you would like to translate the Circuit Sandbox into other languages, it's fairly simple. As a model, look at the Spanish strings file named es.js compared to the original English strings, en-US.js. If you prepare a translation file in your favorite language, mail it to me and I will include it. The Circuit Sandbox has been translated into:
+If you would like to help translate the Circuit Sandbox into other languages, that would be great! Translate about 170 terms and short phrases in [this text file](https://github.com/willymcallister/circuit-sandbox/blob/master/js/en-US.js) from English to the new language. Here is an example of the translation to [Spanish](https://github.com/willymcallister/circuit-sandbox/blob/master/js/es.js). 
+
+If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Translate the file, test it with a modified version of this [index.html](https://github.com/willymcallister/circuit-sandbox/blob/master/index.html). Modify this line: 
+
+`<script type="text/javascript" src="js/en-US.js"></script>`  
+to   
+`<script type="text/javascript" src="js/YOURLANG.js"></script>` 
+
+Then compress the file and email it to me at the address in the footer. 
+
+The Circuit Sandbox has been translated into
 
 * English, en-US.js
 * Spanish, es.js
 
 ## The circuit sandbox was created at MIT
 
-The Circuit Sandbox simulator was created at MIT by Professor Chris Terman in 2011, and was used by the very first massively-open-online class (MOOC), MIT 6.002x. It was transferred to EdX in 2012. I made further improvements to the simulator interface while I was at Khan Academy in 2016, and since then.
+The Circuit Sandbox simulator was created at MIT by Professor Chris Terman in 2011, and was used by the very first massively-open-online class (MOOC), MIT 6.002x. MIT transferred Circuit Sandbox to [EdX](www.edx.org) in 2012. I made further improvements to the simulator interface while at Khan Academy in 2016 and since then.
 
-The Circuit Sandbox is *not* a version of SPICE. It is its own version of a circuit simulator. It includes schematic capture and a circuit simulation engine. The simulator is 100% Javascript and does not require installation. All you have to do is click on the link to the simulator.
-
-The Circuit Sandbox is licensed under the MIT License and is also part of the EdX-platform. The simulator works in most modern browsers on Windows, Mac, and Linux machines. 
+Circuit Sandbox is *not* a version of SPICE. It is its own interpretation of a circuit simulator. It includes schematic capture and a circuit simulation engine. The simulator is 100% Javascript and does not require installation. All you have to do is click on the link and the simulator opens, ready to run.
 
 ## Other circuit simulators
 
@@ -187,31 +197,29 @@ The input to SPICE is a plain-text circuit description (the SPICE netlist). SPIC
 
 Many people have written front-end interfaces to SPICE that allow designers to create SPICE netlists by drawing schematics. The SPICE netlist is submitted to SPICE for simulation. The results are retrieved from SPICE and plotted.  Many of these packages can be found by searching the web for "circuit simulator." 
 
-An excellent version of SPICE is available from [Linear Technology](http://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTspice](http://www.linear.com/designtools/software/#LTspice). LTspice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use."
+An excellent version of SPICE is available from [Linear Technology](http://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTspice](http://www.linear.com/designtools/software/#LTspice). LTspice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use." Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The links to LTSpice may be changed in the future.
 
-## Acknowledgements
+## Acknowledgments
 
-schematic.js   &copy; *2012 EdX*,  &copy; *2011 MIT EECS*
+© 2017-18 Willy McAllister, © 2016 Khan Academy, Inc., © 2012 EdX,  © 2011 MIT EECS
 
-Khan Academy software is made available under the [MIT License](https://opensource.org/licenses/MIT).  
+Khan Academy makes its software available under the [MIT License](https://opensource.org/licenses/MIT).  
 
 This circuit simulator is part of the EdX Platform, licensed under the 
 [GNU AFFERO GENERAL PUBLIC LICENSE](https://github.com/edx/edx-platform/blob/master/LICENSE)
 Version 3, 19 November 2007. More information at [EdX licensing](https://open.edx.org/open-edx-licensing).
 
-
 #### Libraries
 
-The simulator uses two open-source libraries:  
+The simulator uses two open-source libraries,  
 
 [Download.js](http://danml.com/download.html) is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/), attributed to "dandavis". No changes were made. Download.js allows to circuit files to be downloaded to the client computer.
 
 [Hammer.js](http://hammerjs.github.io/) is available under the [MIT License](https://github.com/hammerjs/hammer.js/blob/master/LICENSE.md). No changes were made. Hammer.js provides touch functionality, in particular, the double-tap function for touch interfaces.
 
-This version of the circuit sandbox simulator includes additions by Willy McAllister, EE Content Fellow at Khan Academy during 2016:
+This version of the circuit sandbox simulator includes additions by Willy McAllister, EE Content Fellow at Khan Academy during 2016,
 
-* Save/Load netlist, sharable link
-* Touch sensitivity for tablets and smartphone
+* Save/Load netlist with a sharable link
+* Touch sensitivity for tablets and smart phone
 * Language extensions
-
 
