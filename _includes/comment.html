@@ -1,13 +1,16 @@
 <article id="comment{% unless include.r %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endunless %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% unless include.replying_to == 0 %}child{% endunless %}">
 
   <div class="comment__author">
-    {{ include.name }}
+    {{ include.name }},
     <span class="comment__date">
       {% if include.date %}
         {% if include.index %}
           <a href="#comment{{ include.index | prepend: '-' }}" title="Permalink to this comment">
         {% endif %}
-        {% include format-date.html date=include.date time=false weekDay=false %}
+        {{ include.date | date_to_long_string }}
+        {% comment %}
+          {% include format-date.html date=include.date time=false weekDay=false %}
+        {% endcomment %}
         {% if include.index %}</a>{% endif %}
       {% endif %}
     </span>

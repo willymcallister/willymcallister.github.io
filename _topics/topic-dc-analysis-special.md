@@ -1,11 +1,11 @@
 ---
 layout: topic
-title:  Special topics in DC analysis
+title:  "Special topics in DC analysis"
 author: Willy McAllister
 comments: true
 ---
 
-Special topics in DC circuit analyisis. How circuits become equations.   
+Special topics in DC circuit analysis. How circuits become equations.   
 Linearity and superposition. Transforming sources. Thévenin and Norton equivalents.
 
 ----
