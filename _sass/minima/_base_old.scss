@@ -17,7 +17,7 @@ body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
-  //  -webkit-text-size-adjust: 100%;        //WMc commented out to let mobile text be bigger in landscape
+//  -webkit-text-size-adjust: 100%;        //WMc commented out to let mobile text be bigger in landscape
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
        -o-font-feature-settings: "kern" 1;
@@ -35,15 +35,6 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
-}
-
-
-
-/**
- * `main` element
- */
-main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
 
@@ -112,15 +103,8 @@ a {
     color: $text-color;
     text-decoration: underline;
   }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
-  }
 }
+
 
 
 /**
@@ -130,7 +114,7 @@ blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
+  font-size: 18px;
   letter-spacing: -1px;
   font-style: italic;
 
@@ -146,7 +130,7 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
+  font-size: 15px;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: #eef;
@@ -205,48 +189,11 @@ pre {
 /**
  * Icons
  */
+.icon > svg {
+  display: inline-block;
+  vertical-align: middle;
 
-.svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
-    vertical-align: text-top;
-}
-
-.social-media-list {
-  li + li {
-    padding-top: 5px;
-  }
-}
-
-
-
-/**
- * Tables
- */
-table {
-  margin-bottom: $spacing-unit;
-  width: 100%;
-  text-align: $table-text-align;
-  color: lighten($text-color, 18%);
-  border-collapse: collapse;
-  border: 1px solid $grey-color-light;
-  tr {
-    &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
-    }
-  }
-  th, td {
-    padding: ($spacing-unit / 3) ($spacing-unit / 2);
-  }
-  th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
-  }
-  td {
-    border: 1px solid $grey-color-light;
+  path {
+    fill: $grey-color;
   }
 }
