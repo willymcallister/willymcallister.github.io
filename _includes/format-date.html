@@ -16,7 +16,8 @@
   {{ include.date | date: "%I" }}.{{ include.date | date: "%M" }}{{ include.date | date: "%p" | downcase }}
 {% endif %}
 
-{% comment %}  
+{% comment %} 
+This file is not currently used. Date is formatted in the calling function, _include/comment.html 
 based on: https://github.com/eduardoboucas/eduardoboucas.github.io/blob/master/_includes/helpers/format-date.html
 time formatting options: http://jekyll.tips/jekyll-casts/date-formatting/
 {% endcomment %} 
