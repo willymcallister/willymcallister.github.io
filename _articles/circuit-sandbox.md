@@ -11,7 +11,7 @@ Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/inde
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
->Want to help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
+>Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
 ----
 
@@ -197,7 +197,7 @@ The input to SPICE is a plain-text circuit description (the SPICE netlist). SPIC
 
 Many people have written front-end interfaces to SPICE that allow designers to create SPICE netlists by drawing schematics. The SPICE netlist is submitted to SPICE for simulation. The results are retrieved from SPICE and plotted.  Many of these packages can be found by searching the web for "circuit simulator." 
 
-An excellent version of SPICE is available from [Linear Technology](http://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTspice](http://www.linear.com/designtools/software/#LTspice). LTspice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use." Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The links to LTSpice may be changed in the future.
+An excellent version of SPICE is available from [Linear Technology](http://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTSpice](http://www.linear.com/designtools/software/#LTspice) or [LTSpice](http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html). LTSpice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use." Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The web sites have been merged together.
 
 ## Acknowledgments
 
