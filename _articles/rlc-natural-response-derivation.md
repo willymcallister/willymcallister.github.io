@@ -138,7 +138,7 @@ This is called a *homogeneous second-order ordinary differential equation*.
 
 It is *homogeneous* because every term is related to $i$ and its derivatives.  
 It is *second order* because the highest derivative is a second derivative.  
-It is *ordinary* because there is only one independent variable (no partial derivatives). 
+It is *ordinary* because there is only one independent variable, $t$, (no partial derivatives). 
 
 Now we solve our differential equation.
 

@@ -206,9 +206,9 @@ $\text L \,\dfrac{di}{dt} + i\,\text R = 0$
 
 This equation is called a *first-order ordinary differential equation* (ODE). What does this jargon mean? 
 
-* It is a "differential" equation because it contains derivatives.
-* It is “first-order” because the highest derivative is a first derivative $({di} / {dt})$.
-* It is “ordinary” because there is just a single independent variable ($t$), (as opposed to partial derivatives of multiple variables).   
+* It is a *differential* equation because it contains derivatives.
+* It is *first-order* because the highest derivative is a first derivative $({di} / {dt})$.
+* It is *ordinary* because there is just a single independent variable $(t)$, (as opposed to partial derivatives of multiple variables).   
 
 Now we go through the solution of an ODE step by step. 
 

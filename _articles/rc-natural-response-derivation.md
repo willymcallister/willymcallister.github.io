@@ -110,9 +110,9 @@ The previous equation has a fancy name. It is called a *first-order ordinary dif
 
 <details>
 <summary>What do these terms mean?</summary>
-<p>It is a differential equation because it contains derivatives $dv/dt$.</p>
-<p>It is 'first-order' because the highest derivative is a first derivative $dv/dt$.</p>
-<p>It is 'ordinary' because there is just one independent variable $t$, (as opposed to partial derivatives of multiple independent variables). Ordinary comes from 'ordinal'. </p> 
+<p>It is a *differential* equation because it contains derivatives $dv/dt$.</p>
+<p>It is *first-order* because the highest derivative is a first derivative $dv/dt$.</p>
+<p>It is *ordinary* because there is just one independent variable $t$, (as opposed to partial derivatives of multiple independent variables).</p> 
 
 <p>It amazes me how schematic symbols turn into bits and pieces of differential equations. Simple symbols, sophisticated ideas.</p>
 </details>

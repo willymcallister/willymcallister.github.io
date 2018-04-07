@@ -181,11 +181,11 @@ Internally stored energy is referred to as the *initial conditions*, or i.c.'s.
 <p>More math jargon,</p>
 <p>Our differential equation is a mouthful, <br> <em>non-homogeneous first-order constant-coefficient ordinary differential equation</em>.</p>
 <ul>
-<li>Homogeneous means the equation contains $v$ and derivatives of $v$, and nothing else.</li>
-<li>Non-homogeneous means there is some term that's not $v$ or one of its derivatives. Our equation has a $\text V_{\text S}$ term not related to $v$.</li> 
-<li>First-order means the highest derivative is the first derivative $dv/dt$.</li>
-<li>Constant coefficient means the values of the components $(\text{R, C})$ are constant and do not change as time goes by.</li> 
-<li>Ordinary means there is just one independent variable, $v$.</li>
+<li>*Homogeneous* means the equation contains $v$ and derivatives of $v$, and nothing else. Specifically, there is no constant term.</li>
+<li>*Non-homogeneous* means there is some term that's not $v$ or one of its derivatives. Our equation has a $\text V_{\text S}$ term not related to $v$.</li> 
+<li>*First-order* means the highest derivative is the first derivative $dv/dt$.</li>
+<li>*Constant coefficient* means the values of the components $(\text{R, C})$ are constant and do not change as time goes by.</li> 
+<li>*Ordinary* means there is just one independent variable, $t$.</li>
 </ul>
 </details> 
 

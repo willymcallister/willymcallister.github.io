@@ -176,7 +176,9 @@ One SI base unit comes from electricity: the ampere. The ampere has the same lof
 
 <p>But, suppose we were somehow able to physically isolate $1 \,\text{coulomb}$ of charge. What would that be like? Well, it would create an absolutely gigantic force. Let's put a number to it. We will do that by using Coulomb's Law to compute the force between two $1 \,\text{coulomb}$ charges placed $1 \,\text{meter}$ apart. So what you have is a ball of positive charge on one side and a ball of negative charge a meter away, so there is a strong force of attraction between them.</p>
 
-<p>$\vec F = K \,\dfrac{q_0\, q_1}{r^2} \,,\qquad \text{where } K = 9 \times 10^9$ newton-meter/coulomb$^2$</p>
+<p>$\vec F = K \,\dfrac{q_0\, q_1}{r^2}$</p>
+
+<p>Where $K = 9 \times 10^9$ newton-meter$^2$/coulomb$^2$</p>
 
 <p>$\vec F = 9 \times 10^9 \cdot \dfrac{1 \cdot 1}{1^2} = 9 \times 10^9 \,\text{newtons}$</p>
 

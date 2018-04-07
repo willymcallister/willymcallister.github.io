@@ -33,7 +33,7 @@ Our awareness of electric charge comes from observing nature. We observe an invi
 
 If you fiddle around with static electricity you will reason out there are two types of electric charge. Opposite types attract, and like types repel. On the other hand, there is only one type of gravity: it only attracts, never repels.
 
-## Conductors, inulators, semiconductors
+## Conductors, insulators, semiconductors
 
 **Conductors** are made of atoms whose outer, or valence, electrons have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other, creating a "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move. Copper, gold, silver, and aluminum are  good conductors. So is saltwater.
 
@@ -43,7 +43,7 @@ There are also poor conductors. Tungsten — a metal used for the filament in an
 
 **Insulators** are materials whose outer electrons are tightly bound to their nuclei. Modest electric forces are not able to pull these electrons free. When an electric force is applied, the electron clouds around the atom stretch and deform in response to the force, but the electrons do not depart. Glass, plastic, stone, and air are insulators. Even for insulators, though, electric force can always be turned up high enough to rip electrons away—this is called breakdown. That's what is happening to air molecules when you see a spark.
 
-**Semiconductors** are materials that have conduction properties falling inbetween insulators and conductors. Semiconductors usually act like insulators, but we can make them act like conductors in certain circumstances. The most well-known semiconductor material is Silicon (atomic number $14$, right below Carbon). We have figured out how to finely control the insulating and conducting properties of silicon, allowing us to invent modern marvels like computers and mobile phones. The details of how a semiconductor works is governed by the ideas of quantum mechanics.
+**Semiconductors** materials have conduction properties falling between insulators and conductors. Semiconductors usually act like insulators, but we can make them act like conductors in certain circumstances. The most well-known semiconductor material is Silicon (atomic number $14$, right below Carbon). We have figured out how to finely control the insulating and conducting properties of silicon, allowing us to invent modern marvels like computers and mobile phones. The atomic-level details of how semiconductor devices work is governed by the theories of quantum mechanics.
 
 ## Current
 
@@ -155,7 +155,7 @@ $1 \,\text{watt} = 1\,\text{joule}/\text{second}$
 
 $\text{power} = \dfrac{\text dU}{\text dt}$
 
-An electric circuit is capable of transferring power. That's the warmth you feel when you put your hand near a lightbulb. Current is the rate of flow of charge, and voltage measures the energy transferred per unit of charge. We can insert these definitions into the equation for power:
+An electric circuit is capable of transferring power. That's the warmth you feel when you put your hand near a light bulb. Current is the rate of flow of charge, and voltage measures the energy transferred per unit of charge. We can insert these definitions into the equation for power:
 
 $\text{power} = \dfrac{\text dU}{\text dt} = \dfrac{\text dU}{\text dq} \cdot \dfrac{\text dq}{\text dt} = v \,i $
 
