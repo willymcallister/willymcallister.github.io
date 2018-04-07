@@ -22,4 +22,7 @@ Linearity and superposition. Transforming sources. Thévenin and Norton equivale
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Source transformation - worked example]({{ site.baseurl }}{% link _articles/source-transformation-example.md %})
 
-Coming soon: Thévenin and Norton equivalents.
+![]({{ site.baseurl }}{% link i/article.svg %}) [Thévenin's theorem - proof]({{ site.baseurl }}{% link _articles/thevenin-proof.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Thévenin's theorem - how to]({{ site.baseurl }}{% link _articles/thevenin-howto.md %})
+
