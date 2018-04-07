@@ -10,7 +10,7 @@ Two simple circuits have special names,
 The *Thévenin* form is a voltage source in series with a resistor.  
 The *Norton* form is a current source in parallel with a resistor.
 
-![Thevenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
+![Thévenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
 
 You can convert between Thévenin and Norton forms. This is called *source transformation*. 
 
@@ -43,7 +43,7 @@ Thévenin and Norton forms are *equivalent* because they have the same $i$-$v$ b
 
 We'll draw a lot of $i$-$v$ graphs to visualize what's going on. This sinks in better if you to do most of the work. Please follow along with pencil and paper. 
 
-The theory of [Thévenin and Norton equivalents]({{ site.baseurl }}{% link _articles/thevenin-norton.md %}) is based on source transformation. Thévenin's theorem says any complicated network of resistors and sources can be reduced down to a Thévenin or Norton equivalent. 
+The theory of [Thévenin and Norton equivalents]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}) is based on source transformation. Thévenin's theorem says any complicated network of resistors and sources can be reduced down to a Thévenin or Norton equivalent. 
 
 ## $i$-$v$ graphs for $\text V$, $\text I$, and $\text R$
 
@@ -95,7 +95,7 @@ $i(v) = f(v,\text R_\text T,\text V_\text T) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Then plot your function with** $\text V_\text T = 5\,\text V$ and $\text R_\text T = 2\,\text k\Omega$.
 
-![Thevenin schematic with 5 V and 2 kohms]({{ site.baseurl }}{% link i/thevenin2b.svg %}){: .centered :}
+![Thévenin schematic with 5 V and 2 kohms]({{ site.baseurl }}{% link i/thevenin2b.svg %}){: .centered :}
 
 {% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_2" %} 
 
@@ -272,13 +272,13 @@ $\text V_{\text{Thevenin}}$ creates a left-right offset away from the vertical c
 
 $\text I_{\text{Norton}}$ creates an up/down offset away from the horizontal voltage axis. 
 
-$\text R$ creates the tilt. The tilt is the same for both forms, which is why $\text R_{\text{Thevenin}} = \text R_{\text{Norton}}$. 
+$\text R$ creates the tilt. The tilt is the same for both forms, which is why $\text R_{\text{Thévenin}} = \text R_{\text{Norton}}$. 
 
-$\text V_\text{Thevenin}$ and $\text I_\text{Norton}$ have no effect tilt, they just generate offset. The tilt depends only on the resistance.
+$\text V_\text{Thévenin}$ and $\text I_\text{Norton}$ have no effect tilt, they just generate offset. The tilt depends only on the resistance.
 
-Notice the current in the Norton resistor. Current in $\text R_\text N$ isn't available to the load resistor. It seems like "wasted" power. That's what happens when you drive a load with a Norton source. In the Thevenin circuit, the equivalent "waste" is the voltage across the Thevenin resistor. This voltage dissipates power (heat) in $\text R_\text T$ and isn't available to the load. The amount of waste is the same. 
+Notice the current in the Norton resistor. Current in $\text R_\text N$ isn't available to the load resistor. It seems like "wasted" power. That's what happens when you drive a load with a Norton source. In the Thévenin circuit, the equivalent "waste" is the voltage across the Thévenin resistor. This voltage dissipates power (heat) in $\text R_\text T$ and isn't available to the load. The amount of waste is the same. 
 
-## Source transfomation challenge 1
+## Source transformation challenge 1
 
 Both circuits generate tilted lines on the $i$-$v$ plot.
 
@@ -393,9 +393,9 @@ Norton's circuit is a current source in parallel with a resistor.
 
 Thévenin and Norton forms have identical $i$-$v$ behavior if you set,
 
-$\text R_{\text{Thevenin}} = \text R_{\text{Norton}}\quad$
+$\text R_{\text{Thévenin}} = \text R_{\text{Norton}}$
 
-$\text V_{\text{Thevenin}} = \text I_{\text{Norton}}\, \text R$
+$\text V_{\text{Thévenin}} = \text I_{\text{Norton}}\, \text R$
 
 When circuits produce the same $i$-$v$ curve from the viewpoint of a selected port, we say they are *equivalent* from the perspective of the port. 
 

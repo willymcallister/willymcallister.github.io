@@ -51,9 +51,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.3134186"
-     inkscape:cx="322.34442"
-     inkscape:cy="75.235828"
+     inkscape:zoom="1.3041451"
+     inkscape:cx="235.78665"
+     inkscape:cy="75.235817"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -94,7 +94,7 @@
      cy="86.034027"
      cx="58.447304"
      class="st7" /><line
-     style="fill:none;stroke:#000000;stroke-width:1.18366194;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+     style="fill:none;stroke:#000000;stroke-width:1.00000009;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none"
      id="line4847"
      y2="137.86166"
      x2="58.447304"
@@ -149,16 +149,16 @@
        height="24"
        id="rect4875"
        style="fill:none" /></g><path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75347233;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 58.735449,41.876071 45.013421,0.0315"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 58.726738,41.941596 27.613015,0.04932"
      id="path4962"
      inkscape:connector-curvature="0" /><path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 58.207779,138.00826 256.140331,0"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000009;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 58.579221,138.00826 255.769619,0"
      id="path4191"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99488044px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000009;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
      d="m 58.724339,68.029887 0,-25.811583"
      id="path4225"
      inkscape:connector-curvature="0" /><path
@@ -168,14 +168,14 @@
      inkscape:connector-curvature="0" /><text
      class="st23 st24"
      id="text4877"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;"
      x="106.99998"
      y="25.437473"
      sodipodi:linespacing="125%">1kΩ</text>
 <text
      class="st23 st24"
      id="text4893"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1;"
      x="9.000001"
      y="93.437271"
      sodipodi:linespacing="125%">5V</text>
@@ -229,8 +229,8 @@
        style="fill:none" /></g><text
      class="st23 st24"
      id="text4893-0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
-     x="250.03558"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+     x="244.03558"
      y="93.773697"
      sodipodi:linespacing="125%">2mA</text>
 <path
@@ -263,8 +263,8 @@
      inkscape:connector-curvature="0" /><text
      class="st23 st24"
      id="text4877-9"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="139.05605"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="133.05605"
      y="94.619614"
      sodipodi:linespacing="125%">1kΩ</text>
 <flowRoot
@@ -281,14 +281,14 @@
        id="flowPara13799" /></flowRoot><text
      class="st16 st23 st24"
      id="text4881-9"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#ff9c39;"
      x="350.67981"
      y="133.43488"
      sodipodi:linespacing="125%">−</text>
 <text
      class="st16 st23 st24"
      id="text4897-1"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#ff9c39;"
      x="350.67981"
      y="61.435284"
      sodipodi:linespacing="125%">+</text>
@@ -349,7 +349,7 @@
      inkscape:connector-curvature="0" /><text
      class="st23 st24"
      id="text4877-6"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;"
      x="228.03986"
      y="24.783993"
      sodipodi:linespacing="125%">500Ω</text>
@@ -387,7 +387,7 @@
      inkscape:connector-curvature="0" /><text
      class="st23 st24"
      id="text4877-9-1"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;"
      x="425.74112"
      y="94.460701"
      sodipodi:linespacing="125%">2kΩ</text>
@@ -411,10 +411,10 @@
          class="st22" /></g></g><text
      class="st16 st25 st24"
      id="text4883-8"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000201px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr;text-anchor:start;fill:#ff9c39;"
      x="353.17056"
      y="93.690643"
      sodipodi:linespacing="125%"><tspan
-       style="font-size:22.50000201px"
+       style="font-size:22.50000201px;-inkscape-font-specification:'KaTeX_Math, Normal';font-family:KaTeX_Math;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
        id="tspan13530">v</tspan></text>
 </svg>

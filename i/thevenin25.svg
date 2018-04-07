@@ -134,9 +134,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.6115423"
-     inkscape:cx="246.96838"
-     inkscape:cy="75.348183"
+     inkscape:zoom="13.318078"
+     inkscape:cx="83.242155"
+     inkscape:cy="108.80454"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -171,7 +171,7 @@
 	.st25{font-family:'KaTeX_Main-Italic';}
 	.st26{fill:none;stroke:#11ACCD;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
 </style><line
-     style="fill:none;stroke:#000000;stroke-width:1.18366194;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;marker-start:url(#marker10780)"
+     style="fill:none;stroke:#000000;stroke-width:1.00000009;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;marker-start:url(#marker10780);stroke-dasharray:none"
      id="line4847"
      y2="137.86166"
      x2="60.652599"
@@ -205,8 +205,8 @@
        height="24"
        id="rect4875"
        style="fill:none" /></g><path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.75347233;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 60.735449,41.876071 45.013421,0.0315"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 60.727203,42.01735 27.985412,0.04929"
      id="path4962"
      inkscape:connector-curvature="0" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000009;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -214,7 +214,7 @@
      id="path4191"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.99488044px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker10844)"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000009;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker10844);stroke-miterlimit:4;stroke-dasharray:none"
      d="m 60.724339,68.029887 0,-25.811583"
      id="path4225"
      inkscape:connector-curvature="0" /><path
