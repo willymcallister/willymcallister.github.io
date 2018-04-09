@@ -60,18 +60,19 @@ The loopy $\int$ is another symbol from calculus. It is the <a href="https://www
 In the capacitor equation, the integral sign means you add up a sequence of products $(i \times dt)$ or (current $\times$ a tiny interval of time). When you see upper and lower limits on the integral symbol that makes it a *definite* integral. It means to integrate over a specific range of $t$. You start at time $t=0$ and stop at time $t=T$.  
 {% endcapture %}{% include details.html %} 
 
-In this article we'll work with the integral form of the capacitor equation. 
-Our example circuit is a current source connected to a $1\,\mu\text F$ capacitor.
-
-![Capacitor and current source]({{ site.baseurl }}{% link i/capacitor_in_action1.svg %}){: .centered :}
 
 ## Voltage response to a current pulse
 
-Suppose we apply a $2 \text{ mA}$ pulse of current to the $1 \,\mu\text F$ capacitor. the pulse lasts $3\,\text{msec}$, $(3 \times 10^{-3}$ seconds$)$. The initial voltage across the capacitor is zero.
+In this article we'll work with the integral form of the capacitor equation. 
+Our example circuit is a current source connected to a $1\,\mu\text F$ capacitor.
+
+![Capacitor and current source]({{ site.baseurl }}{% link i/capacitor_in_action1.svg %}){: .centered :}{: height="160px" :}
+
+Suppose we apply a $2 \text{ mA}$ pulse of current to the $1 \,\mu\text F$ capacitor. The pulse lasts $3\,\text{msec}$, $(3 \times 10^{-3}$ seconds$)$. The initial voltage across the capacitor is zero.
 
 ![Current pulse]({{ site.baseurl }}{% link i/capacitor_in_action_current_pulse.svg %}){: .centered :}
 
-If the capacitor current looks like this, what does the capacitor voltage look like?
+If the capacitor current looks like this, what does the voltage look like?
 
 **Find the capacitor voltage, $v(t)$**
 
@@ -117,7 +118,9 @@ With a constant current of $2\,\text{mA}$, the voltage on the capacitor rises in
 
 ### After the pulse
 
-This part is rather interesting if you haven't thought about it before. After the pulse the current falls to $0$, so that means charge stops accumulating on the capacitor. Since no charge is moving, we should expect the voltage not to change. We can see how the math represents this by writing the capacitor equation at starting time $t=3\,\text{ms}$. We plug in the starting voltage at that time, $v_{3\,\text{ms}} = 6 \,\text V$.
+This part is rather interesting if you haven't thought about it before. After the pulse the current falls to $0$. That means charge stops accumulating on the capacitor. Since no charge is moving, we should expect the voltage to stay the same. 
+
+We can see how the math captures this by writing the capacitor equation at starting time $t=3\,\text{ms}$. We plug in the starting voltage at that time, $v_{3\,\text{ms}} = 6 \,\text V$.
 
 $\displaystyle v(T) = \dfrac1{\text C}\, \int_{\,3\,\text{ms}}^{\,T} 0\,dt + 6$
 
@@ -125,25 +128,22 @@ The integral evaluates to $0$ and we get,
 
 $v(T) = 6\,\text V\quad$ for any value of $T$. 
 
-Once the current stops, the charge stays put, so the capacitor voltage remains at $6\,\text V$. 
+Once the current stops, the charge stays put, so the capacitor voltage remains constant at $6\,\text V$. It stays there forever.
 
-
-$q = \text C\,v$
-
-$v = \dfrac{q}{\text C}$
+### Total response
 
 Assembling the three chunks together gives us $v(t)$ in the lower graph,
 
 ![Current pulse]({{ site.baseurl }}{% link i/capacitor_in_action_current_pulse.svg %}){: .centered :}
 ![Voltage ramp]({{ site.baseurl }}{% link i/capacitor_in_action_voltage_ramp.svg %}){: .centered :}
 
-This circuit configuration (a current source driving a capacitor) has a nickname. It is called an *integrator* because it accumulates or *integrates* charge over time. 
+This circuit configuration (a current source driving a capacitor) has a nickname. It is called an *integrator* because it accumulates or *integrates* charge over time. It is often used to generate a ramp-shaped voltage.
 
 ## Simulation model
 
 Find the current and voltage with this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["w",[144,72,120,72]],["w",[96,72,104,72]],["a",[104,72,0],{"color":"blue","offset":"0","_json_":2},["1","2"]],["w",[192,120,144,120]],["w",[96,120,144,120]],["g",[144,120,0],{"_json_":5},["0"]],["w",[192,72,144,72]],["s",[144,72,0],{"color":"red","offset":"0","_json_":7},["2"]],["c",[192,72,0],{"name":"C","c":"1u","_json_":8},["2","0"]],["i",[96,120,2],{"name":"Is","value":"pulse(0,2m,0,1n,1n,3m,1000M)","_json_":9},["0","1"]],["view",-81.84,-1.7080000000000126,2.44140625,"50","10","1G",null,"100","0.006","1000"]]). Open the link and click on **TRAN** in the upper menu bar to perform a transient simulation. The current source is modeled as a single PULSE. (Double-click on the current source to see how it is defined.) The zoom controls are on the left side of the window, in light gray.
 
-### Design challenge
+## Design challenge
 
 Here's another [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["i",[136,120,2],{"name":"Is","value":"pwl(-1s,0,0s,0,1ns,2m,3ms,2m,3ms,0,5s,0)","_json_":0},["0","2"]],["c",[232,72,0],{"name":"C","c":"1u","_json_":1},["1","0"]],["s",[184,72,0],{"color":"red","offset":"0","_json_":2},["1"]],["w",[232,72,184,72]],["g",[184,120,0],{"_json_":4},["0"]],["w",[136,120,184,120]],["w",[232,120,184,120]],["a",[144,72,0],{"color":"blue","offset":"0","_json_":7},["2","1"]],["w",[136,72,144,72]],["w",[184,72,160,72]],["view",-22.80000000000001,-25.260000000000012,1.953125,"50","10","1G",null,"100","0.009","1000"]]) with the current source defined a different way, as a PWL (piece-wise-linear) waveform. The time and current are entered as a list of comma-separated [time, current] pairs, like this: -1s,0,0s,0,1ns,2m,3ms,2m,3ms,0,5s,0.
 
@@ -155,7 +155,7 @@ See if you can modify the current waveform to get the capacitor voltage to ramp 
 <summary>show answer</summary>
 <p>Double-click on the current source and enter this in the PWL "comma-separated list of alternating times and values".</p>
 <p>-1s,0,0s,0,1ns,2m,3ms,2m,3ms,-2m,6ms,-2m,6ms,0,10s,0</p>
-<p>The current source pours in charge for $3\,\text{ms}$ and the voltage ramps up. Then it reverses direction to pull out charge for another $3\,\text{ms}$. The voltage is another ramp, this time with negative slope since charge is removed.</p>
+<p>The current source pours charge into the capacitor for $3\,\text{ms}$ and the voltage ramps up. Then it reverses direction to pull out charge for another $3\,\text{ms}$. The voltage is another ramp, this time with negative slope since charge is removed.</p>
 </details>
 
 ## Summary

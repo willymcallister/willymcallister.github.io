@@ -4,6 +4,8 @@
 
 @import "minima";
 
+// Styles in MYSITE/assets/main.scss
+
 //div {border: 1px solid blue;}     //debug
 //span {border: 1px solid red;}     //debug
 
@@ -16,8 +18,8 @@
 }
 
 blockquote {
-    font-size: $base-font-size;
-    letter-spacing: 0px;
+    font-size: $base-font-size;     //overrides 1.125 increase in _base.scss
+    letter-spacing: 0px;            //overrides -1px spacing in _base.scss
 }
 .centered {
     display: block;
@@ -48,7 +50,7 @@ $grey-color-zebra: lighten($grey-color, 45%) !default;
 }
 hr {
     margin: 1em 0;
-    border-top: $grey-color-light;
+    border-top: $grey-color;
 }
 .footer-heading {
   letter-spacing: -0.25px;
@@ -157,8 +159,8 @@ a.youtube_link:link, a.youtube_link:visited {
 ////// <details> tag //////
 
 details {
-    border-radius: 5px;
-	padding: 0px 8px;
+    border-radius: 10px;
+	padding: 0px 8px;     //padding matches [open] padding to keep the summary sitting still when opened.
     margin-bottom: 15px;
 }
 details[open] {
