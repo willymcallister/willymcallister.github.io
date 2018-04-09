@@ -26,14 +26,23 @@ A constant current driven into a capacitor creates a voltage with a straight ram
 
 ----
 
-The two forms of the capacitor's $i$-$v$ equation are:
+The capacitor $i$-$v$ equation can be written in terms of $i$ with a derivative, as an indefinite integral or definite integral,
 
-$i = \text C \,\dfrac{dv}{dt}\qquad$ and  $\quad\displaystyle v = \dfrac1{\text C}\, \int_{\,0}^{\,T} i\,\text dt + v_0$
+$i = \text C \,\dfrac{dv}{dt}$
 
-$\text C$ is the *capacitance*, a physical property of the capacitor.  
-$\text C$ is also the scale factor between $i$ and $dv/dt$.  
-$\text C$ tells you how much $i$ gets generated for a given amount of $dv/dt$.  
-$v_0$ is the initial voltage across the capacitor, at $t=0$. 
+where $\text C$ is the *capacitance*, a physical property of the capacitor. $\text C$ acts as the scale factor between $i$ and $dv/dt$. It tells you how much $i$ you get for a given amount of $dv/dt$.
+
+Or you can write the capacitor $i$-$v$ equation in terms of $v$ as a definite integral,
+
+$\displaystyle v = \dfrac1{\text C}\, \int_{\,0}^{\,T} i\,\text dt + v_0$
+
+where $v_0$ is the voltage across the capacitor at the beginning of the integral, at $t=0$. 
+
+The notation for time is a bit tricky,
+
+Little $t$ is the time variable inside the integral. It runs continuously. 
+
+Big $T$ is the upper limit of the integral. $T$ is the moment you want to know the voltage on the capacitor. 
 
 <details>
 <summary>calculus notation: $di/dt$</summary>
@@ -89,7 +98,7 @@ $\displaystyle v(T) = \dfrac{i}{\text C}\,\, t\bigg  \|_{\,0}^{\,T}$
 
 $v(T) = \dfrac{i}{\text C} \,T\qquad\text{volts}$ 
 
-This is an equation for $v$ as a function of pulse duration $T$, for a given pulse height $i$. The equation has the shape of a line, with slope $i/\text C$. The slope is:
+This is an equation for $v$ as a function of pulse duration $T$, for a given pulse height $i$. The equation has the shape of a line, with slope $i/\text C$. The slope is,
 
  $\dfrac{i}{\text C} =\dfrac{2\times 10^{-3}\,\text A}{1 \times 10^{-6}\,\text F} = 2000\,\text{volts/second}$
 
@@ -137,7 +146,7 @@ Here's another [simulation model](http://spinningnumbers.org/circuit-sandbox/ind
 
 See if you can modify the current waveform to get the capacitor voltage to ramp down to $0\text V$ in another $3\,\text{ms}$. You are going for something that looks like this,
 
-![Voltage ramp up and ramp down]({{ site.baseurl }}{% link i/capacitor_in_action2.png %}){: .centered :}{: height="260px"}
+![Voltage ramp up and ramp down]({{ site.baseurl }}{% link i/capacitor_in_action2.png %}){: .centered :}{: height="260px" :}
 
 <details>
 <summary>show answer</summary>
