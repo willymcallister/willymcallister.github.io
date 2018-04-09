@@ -69,23 +69,19 @@ Over time, you will develop a feel for numerical accuracy and rounding in differ
 
 ## Number prefixes
 
-Many numbers have been given names, derived from Greek or Latin. Engineers and scientists use the number prefixes defined in the Système International d'Unités (SI).
+Many numbers have names derived from Greek or Latin. Engineers and scientists use the number prefixes defined in the Système International d'Unités (SI). Here's a list of the most common prefixes we use in engineering. Notice how the exponents are multiples of three. 
 
-The most common prefixes used in engineering are listed below. Notice how the exponents are multiples of three. Using prefixes makes it shorter and easier to say or abbreviate numbers compared to: "$\times10 \text{ to the}$". 
-
-<p>
-Number | Prefix | Symbol | Note
--|-:|:-:|-|
-$10^{\,+12}$ | tera- | $\text{ T}$ | 
-$10^{\,+9}$ | giga- | $\text{ G}$ | 
-$10^{\,+6}$ | mega- | $\text{ M}$ |
-$10^{\,+3}$ | kilo- | $\text{ k}$ | the only >1 prefix in lower case
-$10^{\,0}$ | |  |
-$10^{\,-3}$ | milli- | $\text{ m}$ |
-$10^{\,-6}$ | micro- | $\mu$ | be careful $\mu$ (mu) doesn't turn into \"m\"
-$10^{\,-9}$ | nano- | $\text{ n}$ | 
-$10^{\,-12}$ | pico- | $\text{ p}$ |
-</p>
+Number       | Prefix  | Symbol    | Note
+-------------|--------:|:---------:|------|
+$10^{\,+12}$ | tera-   | $\text T$ | 
+$10^{\,+9}$  | giga-   | $\text G$ | 
+$10^{\,+6}$  | mega-   | $\text M$ |
+$10^{\,+3}$  | kilo-   | $\text k$ | $\text k$ is the only >1 prefix in lower case
+$10^{\,0}$   |         |           |
+$10^{\,-3}$  | milli-  | $\text m$ |
+$10^{\,-6}$  | micro-  | $\mu$     | be careful $\mu$ (mu) doesn't turn into \"m\"
+$10^{\,-9}$  | nano-   | $\text n$ | 
+$10^{\,-12}$ | pico-   | $\text p$ |
 
 <details>
 <summary>How do you say "giga"?</summary>
@@ -95,38 +91,41 @@ $10^{\,-12}$ | pico- | $\text{ p}$ |
 
 </details>
 
-## Examples of large and small engineering numbers
+## Large and small engineering numbers
 
-Here are some examples of large, medium and small numbers used in real-world electrical systems. These examples are every-day occurrences, and you can always find greater extremes. There are lots of electrical words here. Don't worry if some of them are new, you don't have to know them right now.
+Here are some examples of large, medium and small numbers used in real-world electrical systems. These examples are every-day occurrences, but you can always find greater extremes. There are lots of electrical words here. Don't worry if some of them are new, you don't have to know them right now.
 
-**Frequency:** Frequency counts the number of times something happens in some interval of time. The SI unit for frequency is the hertz $(\text{Hz})$, which is the same as $1/s$ ("reciprocal second" or "per second"). The clock signal inside a personal computer has a frequency of around $3\,\text{GHz}$ $(3 \times 10 ^{9}\,\text{Hz})$. This corresponds to a clock period—the amount of time between clock ticks—of $1/(3 \times 10^9)$ or $333\,\text{ps}$ $(333 \times 10^{-12} \,\text{s})$. Your heart beats about one time per second $(1 \,\text{Hz}$), as detected by an electrocardiogram (ECG) machine.
+**Frequency:** Frequency counts the number of times something happens in some interval of time. The SI unit for frequency is the hertz $(\text{Hz})$, which is the same as $1/s$ (*reciprocal second* or *per second*). The clock signal inside a personal computer has a high frequency of around $3\,\text{GHz}$ $(3 \times 10 ^{9}\,\text{Hz})$. This corresponds to a very short clock period — the amount of time between clock ticks — of $1/(3 \times 10^9)$ or $333\,\text{ps}$ $(333 \times 10^{-12} \,\text{s})$. Your heart beats about one time per second $(1 \,\text{Hz}$ or $60$ beats per minute).
 
 **Resistance:** Resistance is measured in units of ohms $(\Omega)$. The resistance of a wire is often much less than one ohm. It is not unusual to find resistance values up to tens of megohms $10\, \text M\Omega$ $(10\times10^{6}\, \Omega)$ in circuits.
 
-**Voltage:** The unit of electrical potential is the volt $(\text V)$. A battery you buy at the store is $1.5 \,\text{volts}$. You can hold this battery in your hand without fear of electric shock. Inside a computer, the chips usually operate with $3$ to $5 \,\text{volts}$. A car battery is $12 \,\text{volts}$. A wall socket is $110$ or $220 \,\text{volts}$, depending on which country you live in. This voltage can be fatal if you touch it with your bare hand. High-tension power lines overhead are hundreds of thousands of volts—*tension* is the French word for voltage. As for tiny voltages, wireless signals transmitted through the air are measured in microvolts $(10^{-6}\,\text{V})$ when detected by a radio or mobile phone.
+**Voltage:** The unit of electrical potential is the volt $(\text V)$. A battery you buy at the store is $1.5 \,\text{volts}$. You can hold this battery in your hand without fear of electric shock. Inside a computer, the chips usually operate with $3.3$ or $5 \,\text{volts}$. A car battery is $12 \,\text{volts}$. Depending on which country you live in a wall socket is $110$ or $220 \,\text{VAC}$ (Volts AC). This high voltage can be fatal if you touch it. Overhead high-tension power lines are thousands of volts — *tension* is the French word for voltage. Wireless signals transmitted through the air are tiny voltages — measured in microvolts $(10^{-6}\,\text{V})$ by the time they reach your radio, TV, or mobile phone.
 
 **Current:** Currents are measured in amperes $(\text A)$. One ampere is a large current. Car batteries momentarily supply $100 \,\text{amperes}$ or more to start a car. A house may consume $150 \,\text{amperes}$ if all the appliances are running. Currents can also be absurdly small. There are situations where 1 femtoamp $(1 \times 10^{-15} \,\text A)$ matters.
 
-**Time:** Electrical circuits are capable of working at very short time scales. Time intervals in electronics range from $1 \,\text{second}$, for the heartbeat example above, down to 1 picosecond $(1\times10^{-12}\,\text{s})$.
+**Time:** Electrical circuits can work at very short time scales. Time intervals in electronics range from $1 \,\text{second}$, for the heartbeat example above, down to 1 picosecond $(1\times10^{-12}\,\text{s})$.
 
-**Capacitance:** The unit of capacitance is the farad $(\text F)$. If you have a capacitor storing $1 \,\text{coulomb}$ of charge and the measured voltage is $1\,\text{volt}$, then the capacitance is $1 \,\text{farad}$—$1$ farad is defined as $1$ coulomb per volt. A coulomb is a huge amount of charge, so a farad turns out to be a large awkward unit of capacitance. As a result, capacitance values you come across are tiny numbers. $100 \,\text{microfarads}$ ($100 \times 10^{-6}\,\text F$) is quite a large capacitance. If you twist two $1$-inch ($2$- centimeter) pieces of ordinary insulated hookup wire together, those wires have a capacitance around $1$ picofarad $(1 \times 10^{-12} \,\text F)$.
+**Capacitance:** The unit of capacitance is the farad $(\text F)$. If you have a capacitor storing $1 \,\text{coulomb}$ of charge and the measured voltage is $1\,\text{volt}$, then the capacitance is $1 \,\text{farad}$. A coulomb is a huge amount of charge, so a farad turns out to be a large awkward unit of capacitance. As a result, capacitance values you ordinarily come across are tiny numbers. $100 \,\text{microfarads}$ ($100 \times 10^{-6}\,\text F$) is quite a large capacitance. If you twist two $1$-inch ($2$- centimeter) pieces of ordinary insulated hookup wire together, those wires have a capacitance around $1$ picofarad $(1 \times 10^{-12} \,\text F)$.
 
 <details>
 <summary>What is a puff?</summary>
 <p>The unit symbol for the picofarad, $\text{pF}$, is often pronounced "puff". We engineers are often serious people, but not so serious that we don't enjoy a fun nickname.  $( 1 \,$ "puff" $ = 1\,\text{pF} = 1 \times 10^{-12} \,\text F)$</p>
 </details>
 
-**Distance and Length**: Distance and length have units of meters $(\text m)$. We deal with huge distances and tiny lengths on a regular basis. Nature gives us some staggering distances—light travels $300 \times 10^{6}$ meters $(300 \,\text{million meters}$) in one second. Modern microelectronics blesses us with astoundingly small dimensions inside integrated circuits. Today's most aggressive—and expensive—integrated-circuit processes have dimensions as small as $15 \,\text{nanometers}$ $(15 \times 10^{-9}\,\text m)$. That's a man-made feature $15$ billionths of a meter across! The spacing between silicon atoms is $0.5430710 \,\text{nm}$ $(0.5430710 \times 10^{-9}\,\text{meters})$.
+**Distance and Length**: Distance and length have units of meters $(\text m)$. We deal with huge distances and tiny lengths on a regular basis. Nature gives us some staggering distances—light travels $300 \times 10^{6}$ meters $(300 \,\text{million meters}$) in one second. 
+
+Modern microelectronics blesses us with astoundingly small dimensions inside integrated circuits. Today's most aggressive—and expensive—integrated-circuit processes have dimensions as small as $15 \,\text{nanometers}$ $(15 \times 10^{-9}\,\text m)$. That's a man-made feature $15$ billionths of a meter across! The spacing between silicon atoms is $0.543 \,\text{nm}$ $(0.543 \times 10^{-9}\,\text{meters})$. Therefore, feature $15\,\text{nm}$ in width is on $28$ silicon atoms across. Astonishing!
         
 ## Unit grammar
 
-There are two grammatical guidelines for writing unit names and symbols.
+There are two grammatical guidelines for unit names and unit symbols.
 
 * *Names* of all units start with a lowercase letter, even if the unit is named after a person.
-* *Symbols* for units are uppercase if the unit is named after a person, otherwise lowercase. 
+* *Symbols* are uppercase if the unit is named after a person, otherwise lowercase. 
 
-|Unit name | example    | Unit symbol  | example            | Named after |
-|:------|---------------|:------------:|------------------------|--------:|
+
+|Unit name | example    | Unit symbol  | example              | Named for |
+|:------|---------------|:------------:|------------------------|---------|
 |second | 1 millisecond | $\text {s}$  | $2 \text { ns}$        |         |
 |meter  | 300 kilometer | $\text {m}$  | $35  \text { nm}$      |         |
 |hertz  | 10 kilohertz  | $\text {Hz}$ | $100  \text { MHz}$    | Hertz   |
@@ -135,8 +134,8 @@ There are two grammatical guidelines for writing unit names and symbols.
 |ampere | 35 microamp   | $\text {A}$  | $65  \text { mA}$      | Ampère  |
 |volt   | 11 kilovolt   | $\text {V}$  | $5 \,\mu \text {V}$    | Volta   |
 
-I think it's cool how Ohm gets his own Greek symbol: $\Omega$, "Ohm ega."
+I think it's cool how Ohm gets his own Greek symbol: $\Omega$, "Ohm-ega."
 
 The short form "amp" is a perfectly acceptable way to abbreviate "ampere".
 
-We've reviewed some of the numbers you encounter as you study electrical engineering. They span an enormous range. With practice this will become second nature to you.
+We've reviewed some of the numbers you encounter as you study electrical engineering. They span an enormous range. With practice this will become second nature.
