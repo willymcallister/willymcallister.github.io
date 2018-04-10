@@ -9,7 +9,7 @@ Thévenin's theorem says a complicated network of resistors and sources, when vi
 
 We cover Thévenin's theorem in two steps. In this article we present the proof. In the next article we use Thévenin's theorem to find equivalent circuits.
 
-Consider Thévenin's theorem when you want to focus on a specific part a circuit and hide the rest. For example, suppose you care about what happens at the output port of a circuit. The theorem allows you to model the $i$-$v$ behavior at the output port and replace the whole circuit with a simple Thévenin equivalent. This keeps the exact behavior you care about while hiding the internal complexity. 
+Consider Thévenin's theorem when you want to focus on a specific part of a circuit and hide the rest. For example, suppose you care about what happens at the output port of a circuit. The theorem allows you to model the $i$-$v$ behavior at the output port and replace the whole circuit with a simple Thévenin equivalent. The Thévenin equivalent retains the exact behavior you care about while hiding the internal complexity. 
 
 Thévenin's theorem is another design tool to put in your toolbox. Use it is an alternative to [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) or [Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}). 
 
@@ -35,7 +35,7 @@ Any combination of resistors and sources can be simplified down to a single volt
 
 ----
 
-One of the surprising concepts from linear circuit theory is the idea that two circuits can be *equivalent*. Two circuits are equivalent if they display the same $i$-$v$ behavior *at a selected port*. Thévenin's theorem says: If you have a complicated a linear circuit, you can replace it with an equivalent Thévenin circuit made from one voltage source and one resistance. 
+One of the surprising concepts from linear circuit theory is the idea that two circuits can be *equivalent*. Two circuits are equivalent if they display the same $i$-$v$ behavior *at a selected port*. Thévenin's theorem says: If you have a complicated linear circuit, you can replace it with an equivalent Thévenin circuit made from one voltage source and one resistance. 
 
 In an earlier article, [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to simplify any resistor network down to a single resistor. Thévenin's theorem is the next step. It teaches us how to simplify networks of resistors *and* sources. 
 
@@ -105,7 +105,7 @@ To solve a circuit using superposition,
 
 ### External current source 
 
-Before diving into the proof, we do a cute trick. We connect something to the port to get a handle on the current coming in from the right. We introduce an external current source connected to the port, $i = \text I_{\text{ext}}$.
+Before diving into the proof, we do a clever trick. We connect something to the port to get a handle on the current coming in from the right. We introduce an external current source connected to the port, $i = \text I_{\text{ext}}$.
 
 ![Example circuit with external current source]({{ site.baseurl }}{% link i/thevenin23.svg %}){: .centered :}
 
@@ -190,9 +190,8 @@ Open this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.ht
 * Look at the current and voltage for the $2\,\text k\Omega$ load resistor on the right. Are they the same? 
 * Change the load resistor in both circuits by double-clicking on the resistor symbol. 
 * Run DC analysis again. 
-* What happens to the current and voltage on the load resistor? Are $i$ and $v$ the same for any resistor value you pick? 
 
-They are always be the same because both circuits have the same $i$-$v$ equation. Pretty cool, eh? This is what is meant by an *equivalent* circuit.
+What happens to the current and voltage on the load resistor? Are $i$ and $v$ the same for any resistor value you pick? They are always the same because both circuits have the same $i$-$v$ equation. Pretty cool, eh? This is what is meant by an *equivalent* circuit.
 
 Try out this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["w",[392,192,368,192]],["w",[328,192,352,192]],["w",[304,256,392,256]],["w",[392,192,392,200]],["w",[248,200,248,192]],["w",[248,248,248,256]],["w",[392,248,392,256]],["w",[248,256,304,256]],["a",[352,192,0],{"color":"magenta","offset":"0","_json_":8},["9","1"]],["w",[312,136,256,136]],["w",[208,136,256,136]],["g",[304,256,0],{"_json_":11},["0"]],["w",[248,192,280,192]],["r",[328,192,5],{"name":"Rth","r":"1k","_json_":13},["9","8"]],["v",[248,200,4],{"name":"Vth","value":"dc(4.5)","_json_":14},["8","0"]],["a",[352,72,0],{"color":"magenta","offset":"0","_json_":15},["5","2"]],["g",[256,136,0],{"_json_":16},["0"]],["w",[392,128,392,136]],["w",[312,128,312,136]],["w",[104,136,208,136]],["w",[208,128,208,136]],["w",[104,128,104,136]],["w",[312,80,312,72]],["w",[392,72,392,80]],["w",[232,72,208,72]],["w",[208,80,208,72]],["w",[104,72,136,72]],["w",[104,80,104,72]],["r",[208,80,0],{"name":"R2","r":"1000","_json_":28},["3","0"]],["r",[232,72,3],{"name":"R3","r":"500","_json_":29},["3","6"]],["r",[184,72,5],{"name":"R1","r":"1k","_json_":30},["4","7"]],["i",[312,128,2],{"name":"I","value":"dc(2.m)","_json_":31},["0","5"]],["v",[104,80,4],{"name":"V","value":"dc(5)","_json_":32},["7","0"]],["a",[288,72,0],{"color":"magenta","offset":"0","_json_":33},["6","5"]],["w",[280,72,288,72]],["w",[312,72,304,72]],["a",[192,72,0],{"color":"magenta","offset":"0","_json_":36},["4","3"]],["w",[184,72,192,72]],["w",[392,136,312,136]],["w",[368,72,392,72]],["w",[352,72,312,72]],["i",[392,80,0],{"name":"","value":"dc(1m)","_json_":41},["2","0"]],["i",[392,200,0],{"name":"","value":"dc(1m)","_json_":42},["1","0"]],["view",-11.5,21.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) where the external load has been changed to a current source.
 
@@ -218,7 +217,7 @@ Assume a linear network composed of,
 * $N$ voltage sources: $\text V1 \ldots \text V_N$, 
 * $M$ current sources: $\text I1 \ldots \text I_{M-1}$ internal current sources plus an external current source $\text I_M$ connected to the port. 
 
-![Generalized linear resistor circuit]({{ site.baseurl }}{% link i/thevenin29.svg %}){: .centered :}
+![Generalized linear circuit with an external current source connected to the port]({{ site.baseurl }}{% link i/thevenin29.svg %}){: .centered :}
 
 Now apply the principle of superposition. The original circuit can be decomposed into $N+M$ sub-circuits, one for each source. Each sub-circuit contains a single source and some arbitrary network of resistors. (All the other sources have been suppressed.) We know how the answer comes out for circuits like this.
 
@@ -232,7 +231,7 @@ $v_m = \text I_m \bold R_m, \quad$ where $m$ ranges from $1 \ldots \text M-1$
 
 The last current source is the external $\text I_M$, which produces this voltage,
 
-$v_m = \text I_M \bold R_M$ 
+$v_M = \text I_M \bold R_M$ 
 
 where $\bold R_M$ is the equivalent resistance looking into the port when *all* the internal sources are suppressed. This is Sub-circuit 3 of the example circuit.
 

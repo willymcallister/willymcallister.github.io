@@ -31,7 +31,7 @@ Written by Willy McAllister.
 To create a Thévenin or Norton equivalent,
 * Pick two nodes to be the port of the circuit you want to transform.
 * Remove the external component(s) connected to the port.
-* Find any two of these three: $\bold R, v_{oc}, i_{sc}$, whichever two are the easiest to find. To find,
+* Find any two of these three: $\bold R, v_{oc}, i_{sc}$, whichever two are the easiest,
     - $\bold R$ -- Suppress the internal sources and simplify the resulting resistor network down to a single resistor.
     - $v_{oc}$ -- Restore the internal sources, leave the port open, find the open-circuit voltage.
     - $i_{sc}$ -- Restore the internal sources, short across the port, find the short-circuit current.
@@ -140,7 +140,7 @@ We are interested in what's happening at the $2\,\text k\Omega$ resistor on the 
 
 The next task is to identify the Thévenin voltage source and the Thévenin resistor. 
 
-We derive three key variables, $\text R_\text T$, $\text V_\text T$, and $\text I_\text N$. Actually, we just need to find two, because the third can be quickly derived. I'll show you how to get all three from the original circuit. You pick the two easiest to fine and derive the third if needed.
+We derive three key variables, $\text R_\text T$, $\text V_\text T$, and $\text I_\text N$. Actually, we just need to find two, because the third can be quickly derived. I'll show you how to get all three from the original circuit. If you want, you can guess which two are the easiest to find and derive the third if you need it. If you can't tell, just dive in and find any of them. 
 
 #### Thévenin resistance
 {:.no_toc}
@@ -278,9 +278,9 @@ Open this [simulation model](http://spinningnumbers.org/circuit-sandbox/index.ht
 * Run **DC** analysis again. 
 * The the current and voltage will be different values, but will still match for the original circuit and the two equivalents.
 
-They are always be the same because both circuits have the same $i$-$v$ equation. Pretty cool, eh?
-* If you want to simulate the superposition solutions, suppress the sources one at a time in the two versions in the lower left and run **DC** again. 
+They are always the same because both circuits have the same $i$-$v$ equation. Pretty cool, eh?
 
+* If you want to simulate the superposition solutions, suppress the sources one at a time in the two versions in the lower left and run **DC** again. 
 
 ## Example 2
 

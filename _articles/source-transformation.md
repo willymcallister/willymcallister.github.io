@@ -135,7 +135,7 @@ The result resembles the tilted $i$-$v$ line of a resistor, but shifted away fro
 
 Let's see if we can get the circuit to tell us its $i$-$v$ graph. 
 
-We expect it to be a line, since it's made from the sum of two lines. If we know two points on the line, we can form the equation. Can get the circuit to tell us two points? 
+We expect it to be a line, since it's made from the sum of two lines. If we know two points on the line, we can form the equation. Can we get the circuit to tell us two points? 
 
 Two easy points are where the line crosses the voltage axis and where it crosses the current axis. For this we need some equipment: a voltmeter, an ammeter, and a short wire. 
 
@@ -208,7 +208,7 @@ $i(v) = f(v,\text R_{\text N},\text I_{\text N}) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 {% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_3" %} 
 
-Now you've had a chance. I will derive the Norton $i$-$v$ expression by traditional circuit analysis, and again use the EE cleverness we learned above. 
+Now that you've had a chance to plot the function, I will go ahead and derive the Norton $i$-$v$ expression by traditional circuit analysis, and then again use the EE cleverness we learned above. 
 
 #### Traditional circuit analysis
 {:.no_toc}
