@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Thévenin and Norton - how to"
+title:  "Thévenin's theorem - how to"
 author: Willy McAllister
 comments: true
 ---
@@ -60,11 +60,7 @@ Thévenin's and Norton's theorems work for *linear* circuits. We cover linear ci
 
 ## Using Thévenin's theorem
 
-Thévenin's theorem in words is,
-
-A circuit with *any* combination of resistors and voltage and current sources can be simplified down to a single voltage source in series with a single resistor.
-
-In schematic form, Thévenin's theorem looks like this,
+Thévenin's theorem looks like this in schematic form,
 
 ![Thévenin's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22.svg %}){: .centered :}
 
@@ -78,23 +74,23 @@ Sometimes you can use Thévenin's theorem as an alternative to [Kirchhoff's Curr
 
 ## Preview the steps
 
-We use [aspects of the proof]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}#observations) to come up with practical steps to finding an equivalent circuit.
+We use aspects of the [proof]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}#observations) to come up with practical steps to finding an equivalent circuit.
 
 To create a Thévenin equivalent,
 * Pick two nodes to be the port of the circuit you want to transform.
 * Remove the external component(s) connected to the port.
 * Transform what remains to a Thévenin equivalent.
 
-A Thévenin equivalent has two components, a resistor $\bold R$ and a voltage source, $\text V_\text T$. 
+A Thévenin equivalent has two components, a voltage source, $\text V_\text T$, and a resistor $\bold R$. 
 
-* The Thévenin voltage source is equal to $v_{oc}$, the voltage appearing at the port when the port is left open. 
+* The Thévenin voltage source is the same as $v_{oc}$, the voltage appearing at the port when the port is left open. 
 
-* For the Norton form, the current source is equal to $i_{sc}$ the current appearing at the port when a short is placed across the port. If it is hard to find $v_{oc}$, it might be easier to find $i_{sc}$ instead, and compute $v_{oc}$.
+* Alternatively, if you think it will be an easier analysis problem, you can figure out $i_{sc}$, the current appearing at the port when a short is placed across the port. If you have $i_{sc}$ and $\bold R$ you can quickly compute $v_{oc}$.
 
-* For both forms, the resistor (you can call it $\text R_\text T$ or $\text R_\text N$) is the simplified equivalent resistance of the resistor network in the original circuit, when all the internal sources are suppressed. The resistor has the same value for both Thévenin and Norton forms.
+* For both forms, the resistor (you can call it $\bold R$ or $\text R_\text T$ or $\text R_\text N$) is the simplified equivalent resistance of the resistor network from the original circuit, when all the internal sources are suppressed. The resistor has the same value for both Thévenin and Norton forms.
 
-To suppress a voltage source, replace it with a short.  
-To suppress a current source, replace it with an open.
+    To suppress a voltage source, replace it with a short.  
+    To suppress a current source, replace it with an open.
 
 In practice, here are the steps,
 

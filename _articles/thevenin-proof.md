@@ -7,7 +7,7 @@ comments: true
 
 Thévenin's theorem says a complicated network of resistors and sources, when viewed from a port, can be simplified down to one voltage source and one resistor. 
 
-We cover Thévenin's theorem in two steps. In this article we present the proof. In the next article we use Thévenin's theorem to find equivalent circuits.
+We cover Thévenin's theorem in two steps. In this article we present the proof. In the [next article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) we use Thévenin's theorem to find equivalent circuits.
 
 Consider Thévenin's theorem when you want to focus on a specific part of a circuit and hide the rest. For example, suppose you care about what happens at the output port of a circuit. The theorem allows you to model the $i$-$v$ behavior at the output port and replace the whole circuit with a simple Thévenin equivalent. The Thévenin equivalent retains the exact behavior you care about while hiding the internal complexity. 
 
