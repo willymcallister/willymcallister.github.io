@@ -134,9 +134,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="13.318078"
-     inkscape:cx="83.242155"
-     inkscape:cy="108.80454"
+     inkscape:zoom="1.2450986"
+     inkscape:cx="246.96838"
+     inkscape:cy="75.348183"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -331,28 +331,31 @@
      class="st16 st23 st24"
      id="text4881-9"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="350.67981"
+     x="371.93964"
      y="133.43488"
      sodipodi:linespacing="125%">−</text>
 <text
      class="st16 st25 st24"
      id="text4883-8"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="354.6795"
+     x="347.5929"
      y="93.835617"
      sodipodi:linespacing="125%">v<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan5596" /></text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25000191px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan5614"
+   dy="6">2<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan5616">mA</tspan></tspan></text>
 <text
      class="st16 st23 st24"
      id="text4897-1"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="352.67981"
+     x="373.93964"
      y="61.435284"
      sodipodi:linespacing="125%">+</text>
 <g
      id="g4899-9"
-     transform="translate(120.67919,-18.565619)"><g
+     transform="translate(141.93905,-18.565619)"><g
        id="g4901-6"><path
          class="st19"
          d="m 252,144 c 3.7,-7 6.2,-20.5 6.2,-36 0,-11.4 -1.4,-21.8 -3.6,-29.3"
