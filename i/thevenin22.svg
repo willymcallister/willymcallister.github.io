@@ -486,7 +486,9 @@
      x="49.400356"
      y="200.37743"
      sodipodi:linespacing="125%"
-     dy="0 6">V1</text>
+     dy="0 6"><tspan
+   style="-inkscape-font-specification:'KaTeX_Main, Normal';font-family:KaTeX_Main;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:21.0000003px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4466">V</tspan>1</text>
 <circle
      style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10"
      id="circle4843-3-8"
@@ -679,7 +681,9 @@
      x="143.75214"
      y="237.11472"
      sodipodi:linespacing="125%"
-     dy="0 6">V2</text>
+     dy="0 6"><tspan
+   style="-inkscape-font-specification:'KaTeX_Main, Normal';font-family:KaTeX_Main;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:21.0000003px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4468">V</tspan>2</text>
 <circle
      style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10"
      id="circle4843-7-9"
@@ -725,11 +729,12 @@
      x="319.26483"
      y="156.64981"
      sodipodi:linespacing="125%"
-     dy="0 6"><tspan
+     dy="0"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       id="tspan4459">V</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.00000191px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       id="tspan4457">N</tspan></text>
+       id="tspan4459"
+       dy="0 6">V<tspan
+   style="-inkscape-font-specification:'KaTeX_Math, Normal';font-family:KaTeX_Math;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25000097px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4464">M</tspan></tspan></text>
 <circle
      style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10"
      id="circle4843-3-1-9"
@@ -750,11 +755,14 @@
      x="304.16226"
      y="271.66461"
      sodipodi:linespacing="125%"
-     dy="0 6"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4461">I</tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.00000191px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4455">M</tspan>-1</text>
+     dy="0"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4461"
+       dy="0 6">I<tspan
+   style="-inkscape-font-specification:'KaTeX_Math, Normal';font-family:KaTeX_Math;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25000097px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan4458">N</tspan></tspan><tspan
+       style="-inkscape-font-specification:'KaTeX_Math, Normal';font-family:KaTeX_Math;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:16.25000097px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+       id="tspan4462">-1</tspan></text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 354.43942,223.76696 0,-25.8116"

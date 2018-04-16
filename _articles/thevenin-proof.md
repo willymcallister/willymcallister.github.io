@@ -206,6 +206,11 @@ This shows the Thévenin equivalent still works when loaded with a current sourc
 
 ## Proof of Thévenin's theorem 
 
+{% capture summary %}acknowledgment{% endcapture %}  
+{% capture details %}  
+This proof is inspired by a question I found on [Physics StackExchange](https://physics.stackexchange.com/questions/110498/proof-of-thevenin-and-norton-theorem). One of the answer's paraphrased a proof from a text by Kendall Su  "Fundamentals of Circuits, Electronics, and Signal Analysis", Appendix A.1, page 568). 
+{% endcapture %}{% include details.html %} 
+
 Now you've seen the proof for a particular example, let's prove the theorem in general. For the general form of Thévenin's theorem we allow unlimited resistors and unlimited independent voltage or current sources. (Dependent sources add a small complication we won't cover here. They basically get grouped in with the resistors.)
 
 ![Thévenin's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22.svg %}){: .centered :}
@@ -214,50 +219,54 @@ Select any two nodes inside the circuit and bring them out to a port. Our goal i
 
 Assume a linear network composed of, 
 * any number of resistors, 
-* $N$ voltage sources: $\text V1 \ldots \text V_N$, 
-* $M$ current sources: $\text I1 \ldots \text I_{M-1}$ internal current sources plus an external current source $\text I_M$ connected to the port. 
+* $M$ voltage sources: $\text V1 \ldots \text V_M$ 
+* $N$ current sources: $\text I1 \ldots \text I_{N-1}$ internal current sources 
+* One extra external current source $\text I_N$ connected to the port 
 
 ![Generalized linear circuit with an external current source connected to the port]({{ site.baseurl }}{% link i/thevenin29.svg %}){: .centered :}
 
-Now apply the principle of superposition. The original circuit can be decomposed into $N+M$ sub-circuits, one for each source. Each sub-circuit contains a single source and some arbitrary network of resistors. (All the other sources have been suppressed.) We know how the answer comes out for circuits like this.
+Now apply the principle of superposition. The original circuit can be decomposed into $M+N$ sub-circuits, one for each source. Each sub-circuit contains a single source and some arbitrary network of resistors. (All the other sources have been suppressed.) We know how the answer comes out for circuits like this.
 
-For the $N$ sub-circuits with a voltage source, the voltage at the port is always a scaled version of the internal voltage source, just like we saw in Sub-circuit 1 of the example circuit. The scale factor is a dimensionless ratio of resistances, $\bold A$, 
+For the $M$ sub-circuits with a voltage source, the voltage at the port is always a scaled version of the internal voltage source, just like we saw in Sub-circuit 1 of the example circuit. The scale factor is a dimensionless ratio of resistances, $\bold A$, 
 
-$v_n = \bold A_n \text V_n, \quad$ where $n$ ranges from $1 \ldots \text N$
+$v_m = \bold A_m \text V_m, \quad$ where $m$ ranges from $1 \ldots \text M$
 
-For $M-1$ sub-circuits with an internal current source the voltage at the port is always the Ohm's Law product of the current source $\text I_m$ times some resistance expression $\bold R$. This is what we saw in Sub-circuit 2 of the example circuit.
+For $N-1$ sub-circuits with an internal current source the voltage at the port is always the Ohm's Law product of the current source $\text I_n$ times some resistance expression $\bold R$. This is what we saw in Sub-circuit 2 of the example circuit.
 
-$v_m = \text I_m \bold R_m, \quad$ where $m$ ranges from $1 \ldots \text M-1$ 
+$v_n = \text I_n \bold R_n, \quad$ where $n$ ranges from $1 \ldots \text N-1$ 
 
-The last current source is the external $\text I_M$, which produces this voltage,
+The last current source is the external $\text I_N$, which produces this voltage,
 
-$v_M = \text I_M \bold R_M$ 
+$v_N = \text I_N \bold R_N$ 
 
-where $\bold R_M$ is the equivalent resistance looking into the port when *all* the internal sources are suppressed. This is Sub-circuit 3 of the example circuit.
+where $\bold R_N$ is the equivalent resistance looking into the port when *all* the internal sources are suppressed. This is Sub-circuit 3 of the example circuit.
 
-We've found all the separate contributions to the port voltage. Now we superimpose (add them all up),
+We've found the separate contributions to the port voltage. Now we superimpose (add up) all the voltage contributions,
 
-$\displaystyle v = \sum_{n=1}^N v_n + \sum_{m = 1}^{M-1} v_m + v_M$
+<p>
+$\begin{aligned}
+\displaystyle v &= \sum_{m=1}^M v_m &&+ \sum_{n = 1}^{N-1} v_n &&+ v_N \\
+\displaystyle v &= \sum_{m=1}^M A_m \text V_m &&+ \sum_{n=1}^{N-1} \text I_n \bold R_n &&+ \text I_N \bold R_N
+\end{aligned}$
+</p>
 
-$\displaystyle v = \sum_{n=1}^N A_n \text V_n + \sum_{m=1}^{M-1} \text I_m \bold R_m + \text I_M \bold R_M$
+The first two terms are voltage values based on the internals of the circuit, with nothing connected to the port. For every one of these sub-circuits the external current source was suppressed. We combine these two terms and give them a special name, $v_{oc}$, which stands for *open-circuit voltage*, 
 
-The first two summation terms produce voltage values based on the internals of the circuit, with nothing connected to the port. For every one of these sub-circuits the external current source was suppressed. The combination of these two summation terms gets a special name, $v_{oc}$, which stands for *open-circuit voltage*, 
-
-$v_{oc} = \displaystyle \sum_{n=1}^N A_n \text V_n + \sum_{m=1}^{M-1} \text I_m \bold R_m$
+$v_{oc} = \displaystyle \sum_{m=1}^M A_m \text V_m + \sum_{n=1}^{N-1} \text I_n \bold R_n$
 
 $v_{oc}$ is the voltage that appears at the port when the port is left open.
 
 With this new variable name we rewrite the superposition equation,
 
-$v = v_{oc} + \text I_M \bold R_M$
+$v = v_{oc} + \text I_N \bold R_N$
 
 Wow. The whole arbitrary circuit boils down to this equation. It's exactly what we want. This voltage-current relationship allows us to construct a Thévenin equivalent circuit,
 
 ![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2a.svg %}){: .centered :}
 
 |$\text V_\text T = v_{oc}$ |The Thévenin voltage is the voltage on the port of the original circuit when left open.|
-|$\text R_\text T = \bold R_M$ |The Thévenin resistance is the equivalent resistance of the original circuit when all internal sources are suppressed (turned off).|
-|$\blueD i = \text I_M$ |The current that flows into or out of the port.|
+|$\text R_\text T = \bold R_N$ |The Thévenin resistance is the equivalent resistance of the original circuit when all internal sources are suppressed (turned off).|
+|$\blueD i = \text I_N$ |The current that flows into or out of the port.|
 |$\goldC v = \text V_\text T + \blueD i\,\text R_\text T$ | Solve for $v$, the voltage on the port from an unknown $i$.|
 |$\blue i = \dfrac{\goldC v}{\text R_\text T} - \dfrac{\text V_\text T}{\text R_\text T}\quad$|Solve for $i$, the current at the port from an unknown $v$.|
 

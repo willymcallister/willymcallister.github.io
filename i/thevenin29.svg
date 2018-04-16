@@ -16,7 +16,7 @@
    viewBox="0 0 572.57586 344.68136"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="thevenin29a.svg"
+   sodipodi:docname="thevenin29.svg"
    width="161.59363mm"
    height="97.276741mm"><metadata
      id="metadata4923"><rdf:RDF><cc:Work
@@ -149,7 +149,7 @@
      fit-margin-right="8"
      fit-margin-bottom="10"
      inkscape:zoom="1.086319"
-     inkscape:cx="286.28792"
+     inkscape:cx="277.54279"
      inkscape:cy="172.34068"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -225,12 +225,12 @@
      class="st23 st24"
      id="text4893-0-9-9"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
-     x="522.58911"
-     y="192.33809"
+     x="526.13245"
+     y="188.79478"
      sodipodi:linespacing="125%"
      dy="0 6">I<tspan
-   style="font-size:16.25px"
-   id="tspan15693">M</tspan></text>
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan5749">N</tspan></text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 500.86622,166.13957 0,-25.8116"
@@ -615,11 +615,12 @@
      x="319.26483"
      y="156.64981"
      sodipodi:linespacing="125%"
-     dy="0 6"><tspan
+     dy="0"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan4459">V</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.00000191px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       id="tspan4457">N</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4457"
+       dy="6">M</tspan></text>
 <circle
      style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10"
      id="circle4843-3-1-9"
@@ -640,11 +641,12 @@
      x="304.16226"
      y="271.66464"
      sodipodi:linespacing="125%"
-     dy="0 6"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4461">I</tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.00000191px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4455">M</tspan>-1</text>
+     dy="0"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4461">I</tspan><tspan
+       id="tspan5755"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       dy="6">N-1</tspan></text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 354.43942,223.76697 0,-25.8116"
