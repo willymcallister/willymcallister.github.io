@@ -240,7 +240,7 @@ If the charge $\text Q$ is able to move, we have a term for this: moving charge 
 
 $i = \dfrac{dq}{dt}$
 
-Using this idea that moving charge is current, let's go back to $\,\text Q = \text C\,\text V$ and take the derivative of both sides with respect to time and see what we get. (When I start talking about things changing with time, I switch from uppercase variable names to lower case, $q$, $i$, and $v$.)
+Using this idea that moving charge is current, let's go back to $\text Q = \text C\,\text V$ and take the derivative of both sides with respect to time and see what we get. (When I start talking about things changing with time, I switch from uppercase variable names to lower case, $q$, $i$, and $v$.)
 
 $\dfrac{dq}{dt} = \text C \, \dfrac{dv}{dt}$
 
@@ -325,7 +325,8 @@ It looks like a wire wrapped around in a coil, since that is the usual way to ma
 Similar to the capacitor equation, we can write the inductor equation in integral form to get $i$ in terms of $v$. Notice the kinship between the capacitor and inductor equations. The $i$ and $v$ change places.
 
 $\displaystyle i = \dfrac1{\text L}\int_{-\infty}^{\,T} v\,dt$
-$\qquad\qquad\qquad \grayF{\displaystyle v = \dfrac1{\text C}\, \int_{-\infty}^{\,T}  i\,dt} $
+
+$\grayF{\displaystyle v = \dfrac1{\text C}\, \int_{-\infty}^{\,T}  i\,dt}$
 
 The $-\infty$ lower limit on the integral means the inductor's current at time $T$ depends on the entire past history of the inductor voltage. We usually write this integral starting from some known current $i_0$ at some known time like $t=0$, and then keeping track of the changes from there.
 
@@ -364,7 +365,7 @@ In addition, we also developed these expressions for power and energy.
 
 The power in a resistor can be found three ways 
 
-$p =i\,v \quad$ $\quad p=i^2 \,r \quad$ $\quad p=v^2/r$
+$p =i\,v \quad$ or $\quad p=i^2 \,r \quad$ or $\quad p=v^2/r$
 
 The energy in a capacitor is $\dfrac 12 \,\text C \,v^2$
 
