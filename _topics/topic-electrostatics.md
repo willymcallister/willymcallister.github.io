@@ -5,8 +5,6 @@ author: Willy McAllister
 comments: true
 ---
 
-**There is a link to this page in the Basic Quantities article.**
-
 Electrostatics is the study of the forces between charged objects. The *statics* part of the name means the charges are not moving.
 
 The examples collected here are the classic electrostatics configurations. Point charges, two examples of a line of charge, and a plane of charge. With just these simple geometries you will build up a good intuition about electric force.
