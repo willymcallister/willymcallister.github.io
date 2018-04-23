@@ -39,6 +39,9 @@ The operational amplifier is the building block of analog electronics.
 ### [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) 
 Using a diode in a circuit.
 
+### [Electrostatics]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %})  
+The force between charged objects is described by Coulomb's Law.
+
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
 A list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
 
