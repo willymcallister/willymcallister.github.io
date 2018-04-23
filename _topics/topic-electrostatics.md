@@ -19,4 +19,4 @@ The examples collected here are the classic electrostatics configurations. Point
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Inverse square law - the fable of the butter gun]({{ site.baseurl }}{% link _articles/inverse-square-law.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Line of charge - off the end]({{ site.baseurl }}{% link _articles/line-of-charge1.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Line of charge - test charge off the end]({{ site.baseurl }}{% link _articles/line-of-charge.md %})
