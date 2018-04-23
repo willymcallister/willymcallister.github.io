@@ -166,4 +166,4 @@ Electrical power is the product of voltage times current. in units of watts.
 
 These mental images for current and voltage will serve you well and gets us started on all sorts of interesting circuits.
 
-If you want to reach beyond the intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the [KA Electrostatics sequence](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics).
+If you want to reach beyond the intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the Spinning Numbers [Electrostatics sequence]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}).
