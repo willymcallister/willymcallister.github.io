@@ -11,6 +11,8 @@ Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/inde
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
+执行 [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文 (Simplified Chinese).
+
 >Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
 ----
@@ -181,7 +183,8 @@ Then compress the file and email it to me at the address in the footer.
 The Circuit Sandbox has been translated into
 
 * English, en-US.js
-* Spanish, es.js
+* Spanish, es.js (courtesy of Khan Academy volunteer translators)
+* Simplified Chinese, xh-ch.js (courtesy of GitHub user Hao Zhu)
 
 ## The circuit sandbox was created at MIT
 
@@ -199,7 +202,7 @@ Many people have written front-end interfaces to SPICE that allow designers to c
 
 An excellent version of SPICE is available from [Linear Technology](http://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTSpice](http://www.linear.com/designtools/software/#LTspice) or [LTSpice](http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html). LTSpice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use." Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The web sites have been merged together.
 
-## Acknowledgments
+## Licensing 
 
 © 2017-18 Willy McAllister, © 2016 Khan Academy, Inc., © 2012 EdX,  © 2011 MIT EECS
 
@@ -209,7 +212,7 @@ This circuit simulator is part of the EdX Platform, licensed under the
 [GNU AFFERO GENERAL PUBLIC LICENSE](https://github.com/edx/edx-platform/blob/master/LICENSE)
 Version 3, 19 November 2007. More information at [EdX licensing](https://open.edx.org/open-edx-licensing).
 
-#### Libraries
+## Libraries
 
 The simulator uses two open-source libraries,  
 
