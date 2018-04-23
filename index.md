@@ -9,7 +9,7 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering,
 
 ### [Circuit sandbox <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Circuit sandbox is a simulator. Run it [in English](http://spinningnumbers.org/circuit-sandbox/index.html), [o en español](http://spinningnumbers.org/circuit-sandbox/index-es.html), [或简体中文](http://spinningnumbers.org/circuit-sandbox/index-zh.html).  
+Circuit sandbox is a simulator. Run it [in English](http://spinningnumbers.org/circuit-sandbox/index.html), [o en español](http://spinningnumbers.org/circuit-sandbox/index-es.html).  
 Help translate Circuit Sandbox into other languages. [It's easy!](a/circuit-sandbox.html#translation)
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
@@ -39,19 +39,12 @@ The operational amplifier is the building block of analog electronics.
 ### [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) 
 Using a diode in a circuit.
 
-### [Electrostatics]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}) 
-Discover the force between charged objects.
-
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
 A list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? [<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) 
 
 ----
-
-These videos and articles began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. In the time since completing my fellowship, I reviewed and significantly improved all the articles, and have written several more. Many articles bring the ideas to life with simulation models based on the Circuit Sandbox. 
-
-I hope this site helps you learn about electronics and electrical engineering.  
-
+These videos and articles began as my contribution to Khan Academy where I was the Electrical Engineering Content Fellow in 2016. Since then all the articles have been significantly improved. The addition of simulation models brings the ideas to life. I hope this material helps you in your quest become an electrical engineer.  
    \- Willy McAllister
 
