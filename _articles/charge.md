@@ -48,7 +48,7 @@ Written by Willy McAllister.
 Let's start 5000 years ago. For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). This very first practical application of electricity was in medicine.
 
 
-![Electric eel]({{ site.baseurl }}{% link i/0-5Electric-Eel-03.jpg %}){: .centered :}{: height="200px"}
+![Electric eel]({{ site.baseurl }}{% link i/0-5Electric-Eel-03.jpg %}){: .centered :}{: height="200px" :}
 
 Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes when this goopy stuff drips from the tree it turns into a solid (fossilizes) and gets the name amber. Amber is basically a natural version of plastic.
 
@@ -140,7 +140,7 @@ Coulomb demonstrated that the electric force is proportional to the amount of ch
 
 $F \propto \dfrac{q_1\,q_2}{r^2}$
 
-The $\propto$ symbol means "proportional to". Later we will replace it with an $=$ sign by including a constant of proportionality in the equation. We go into a lot more detail in [this article](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-force). 
+The $\propto$ symbol means "proportional to". We will replace it with an $=$ sign by including a constant of proportionality in the equation in this article on [electric force](electric-force). 
 
 Check out this marvelous 1959 educational video with Professor Eric Rogers from Princeton University demonstrating electric force. You can see Professor Rogers transfer charge from his "charging arrangement" machine to one balloon and then sharing that charge with another.
 
@@ -150,7 +150,7 @@ Check out this marvelous 1959 educational video with Professor Eric Rogers from 
 
 Early electrical scientists needed a way to talk about amounts of charge. Since they didn't know about electrons and protons they couldn't define amounts of charge based on those particles. So charge was first defined based on a certain current flowing in a circuit. 
 
-The first definition of charge was:
+The first definition of charge was,
 
 >$1\,\text{coulomb}$ is the amount of charge that flows in $1\,\text{second}$ when the current is $1\,\text{ampere}$.
 
@@ -163,13 +163,15 @@ An example circuit you could build would be a $1\,\text{volt}$ battery connected
 You can think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We actually use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
 
 <details>
-<summary>The definition of a coulomb assumes you know what an ampere is.</summary>
-<p>The ampere is defined as the current you get when $1\,\text{coulomb}$ of charge is passing by every second. These are circular definitions. To break the circle the ampere was also defined with specific conditions for an experiment. One of the original definitions of the ampere was based the current required to electroplate silver onto a surface and seeing how the weight changed over time:</p>
+<summary>The definition of a coulomb assumes you know what an ampere is, and vice versa.</summary>
+<p>One ampere is the current you get when $1\,\text{coulomb}$ of charge is passing by every second. One coulomb is how much charge passes by in a second when the current is one ampere. These are circular definitions. To break the circle the ampere is also defined with specific conditions for an experiment you can do in a laboratory. There have been several different definitions of that experiment over time. One of the original definitions of the ampere was based the current it takes to electroplate a certain weight of silver onto a surface,</p>
 
 <blockquote>The ampère is represented by that quantity of current which is capable of depositing 4.025 grammes (62.10 grains) of silver per hour or 0.001118 grammes per second.</blockquote>
 
 <p>This was known as the <em>silver ampere</em>.</p>
 </details>
+
+It's amazing, but the classical fields of electrostatics (what we are studying here) and electrodynamics developed in the mid-to-late 1800's did not predict or depend on the existence of the electron. 
 
 ## Electron
 
@@ -179,19 +181,21 @@ The electron gets the $-$ sign and the proton the $+$ sign because of the way Fr
 
 The variable name we use for the charge of an electron is $e^-$, with the $^-$ written after the $e$. If you want to express the charge of a proton it can be written as $e^+$.
 
-We use the expression $e^-$ for the charge on an electron, and sometimes to indicate an electron itself. The context of the discussion will tell you which.
+We use the expression $e^-$ for the charge on an electron. Sometimes you will see $e^-$ to indicate an electron itself. The context of the discussion will tell you which.
 
 ## Measuring charge with $e^-$ 
 
-Now that we know about electrons, we have a second way to think about an amount of charge. In addition to coulombs, we can measure charge in terms of number of electron charges. Think of charge as a bucket of sand, where each grain of sand is an electron charge, $e^-$. This is a useful way to talk about charge at the atomic level, where there are not so many grains of sand and each one matters. 
+Now that we know about electrons, we have a second way to think about an amount of charge. In addition to coulombs, we can measure charge in terms of number of electron charges. Think of a coulomb of charge as a bucket full of sand, where each grain of sand is an electron charge, $e^-$. Electron charge is a useful way to talk about charge at the atomic level. Down at the level of atoms there are not so many grains of sand and each one matters. 
 
-So what is the relationship between the coulomb unit and an individual electron charge? How many grains of sand $(e^-)$ are there in a bucket filled with one coulomb?
+So what is the relationship between the coulomb unit and an individual electron charge? How many grains of sand $(e^-)$ are there in a bucket of one coulomb?
 
 Electrons are *really* small, and one coulomb of charge is a *ton* of electron charges. 
 
-In terms of electron charges, $e^-$, one coulomb is the combined charge of $6.242 \times 10^{18}$ electrons. That's $6.242$ billion billion electrons. 
+In terms of electron charges, 
 
-That is a *lot* of electrons moving in a one ampere current. So it's no wonder when we deal with everyday currents we don't count the grains of sand, but instead talk about current in amperes and charge in coulombs.
+$1$ coulomb $= 6.242 \times 10^{18} \,e^-$  
+
+This number is measured by experiment. That's $6.242$ billion billion electrons! That is a *lot* of electrons moving in one ampere of current. So it's no wonder when we deal with everyday currents we don't count the electrons of sand, but instead talk about current in more convenient every-day number of amperes (coulombs/second).
 
 If we take the reciprocal we derive the charge on an electron in terms of coulombs.
 
