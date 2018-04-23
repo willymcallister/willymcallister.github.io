@@ -153,11 +153,11 @@ That's an intuitive description of voltage in a nutshell.
 
 $1 \,\text{watt} = 1\,\text{joule}/\text{second}$
 
-$\text{power} = \dfrac{\text dU}{\text dt}$
+$\text{power} = \dfrac{dU}{dt}$
 
 An electric circuit is capable of transferring power. That's the warmth you feel when you put your hand near a light bulb. Current is the rate of flow of charge, and voltage measures the energy transferred per unit of charge. We can insert these definitions into the equation for power:
 
-$\text{power} = \dfrac{\text dU}{\text dt} = \dfrac{\text dU}{\text dq} \cdot \dfrac{\text dq}{\text dt} = v \,i $
+$\text{power} = \dfrac{dU}{dt} = \dfrac{dU}{dq} \cdot \dfrac{dq}{dt} = v \,i $
 
 Electrical power is the product of voltage times current. in units of watts.
 
