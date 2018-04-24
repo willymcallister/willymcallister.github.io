@@ -50,6 +50,8 @@ The lines of force coming out from a point charge spread out exactly the same as
 
 The Fable of the Butter Gun was inspired by this marvelous 3-minute video clip by Professor Eric Rogers, Princeton University Department of Physics, in 1959.
 
-<a href="https://www.youtube.com/embed/HpipBkRMm8U?start=101&amp;end=179&amp;rel=0">The Fable of the Butter Gun</a>
+The Fable of the Butter Gun
+
+{% include embed-video.html start="101" end="180" %}
 
 <small>(In addition to this YouTube version, this video can also be found [here](https://archive.org/details/coulombs_law/v2).)</small>

@@ -37,7 +37,7 @@ If you fiddle around with static electricity you will reason out there are two t
 
 **Conductors** are made of atoms whose outer, or valence, electrons have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other, creating a "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move. Copper, gold, silver, and aluminum are  good conductors. So is saltwater.
 
-![Copper atom]({{ site.baseurl }}{% link i/2copper_atom.svg %}){:height="160px" width="245px"}
+![Copper atom]({{ site.baseurl }}{% link i/2copper_atom.svg %}){:height="160px" width="245px" :}
 
 There are also poor conductors. Tungsten — a metal used for the filament in an incandescent light bulb — is a relatively poor conductor compared to copper. Carbon in graphite form used in pencils is also a relatively poor conductor. The electrons in these materials are less prone to escape from an atom. (An exotic form of carbon called graphene is a superb conductor).
 
@@ -110,7 +110,7 @@ A ball at the top of the hill rolls down. When it is halfway down, it has given 
 
 An electron at the top of a voltage "hill" travels "downhill" through wires and elements of a circuit. It gives up its potential energy, doing work along the way. When the electron is halfway down the hill, it has given up or "dropped" half of its potential energy. 
 
-![Voltage analogy]({{ site.baseurl }}{% link i/2voltage_analogy.svg %}){:height="219px" width="823px"}
+![Voltage analogy]({{ site.baseurl }}{% link i/2voltage_analogy.svg %}){:height="219px" width="823px" :}
 
 For both the ball and the electron, the trip down the hill happens spontaneously. The ball and electron move towards a lower energy state all by themselves. On the trip down, there can be things in the way of the ball, like trees or bears to bounce off. For electrons, we guide electrons using wires and allow them to flow through electronic components, doing interesting things along the way. We call this circuit design.
 
