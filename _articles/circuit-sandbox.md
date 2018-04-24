@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-A simulator for experimenting with circuits.
+![Circuit Sandbox logo]({{ site.baseurl }}{% link i/circuit-sandbox.png %}){: height="100px" :} $\quad$ A simulator for experimenting with circuits.
 
-Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/index.html) on a laptop screen, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
+Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/index.html) on a laptop, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
@@ -29,7 +29,7 @@ Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.h
 
 To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
 
-![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %})
+![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: height="340px" :}
 
 Sample output: A *transient* analysis is a plot of voltage vs. time.
 
@@ -180,7 +180,7 @@ to
 
 Then compress the file and email it to me at the address in the footer. 
 
-The Circuit Sandbox has been translated into
+The Circuit Sandbox has been translated into,
 
 * English, en-US.js
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
