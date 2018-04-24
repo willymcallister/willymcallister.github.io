@@ -11,7 +11,7 @@ Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/inde
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
-执行 [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文 (simplified Chinese).
+运行 [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).
 
 >Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
@@ -184,7 +184,7 @@ The Circuit Sandbox has been translated into
 
 * English, en-US.js
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
-* Simplified Chinese, xh-ch.js (courtesy of GitHub user [Hao Zhu](https://github.com/greedyhao))
+* Simplified Chinese, zh-cn.js (courtesy of GitHub user [Zhu Hao](https://github.com/greedyhao))
 
 ## The circuit sandbox was created at MIT
 
