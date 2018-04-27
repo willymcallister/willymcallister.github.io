@@ -7,7 +7,7 @@ comments: true
 
 ![Circuit Sandbox logo]({{ site.baseurl }}{% link i/circuit-sandbox.png %}){: height="100px" :} $\quad$ A simulator for experimenting with circuits.
 
-Run Circuit sandbox [in English](http://spinningnumbers.org/circuit-sandbox/index.html) on a laptop, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
+Run [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
 
 Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
@@ -42,9 +42,9 @@ Drag components from the parts bin onto the main screen.
 
 Add wires by dragging between components connection points (small circles).
 
-Tap on the Rotate R&#x2935;  icon or type  **"r"** on the keyboard to rotate a component.
+Tap on the <i class="fa fa-redo"></i> Rotate icon or type  **"r"** on the keyboard to rotate a component.
 
-Tap on $\large \times$ or type BACKSPACE to delete a component.
+Tap on <i class="fa fa-times" style="font-size:22px;"></i> or type BACKSPACE to delete a component.
 
 Double-tap on a component to change its properties, like resistance value.
 
@@ -95,9 +95,23 @@ If you have a touch device (tablet or smart phone):
 
 **Move**: Touch and drag to a new location.
 
-**Delete**: Tap to select, then tap the $\large \times$ icon or hit BACKSPACE on the keyboard.
+**Delete**: Tap to select, then tap the <i class="fa fa-times"></i> icon or hit BACKSPACE on the keyboard.
+var help_icon   = 'fa fa-fw fa-question';
+    var cut_icon    = 'fa fa-fw fa-cut';
+    var copy_icon   = 'fa fa-fw fa-copy';
+    var paste_icon  = 'fa fa-fw fa-paste';
+    var close_icon  = 'fa fa-fw fa-times';
+    //var grid_icon   = 'fa fa-fw fa-table';
+    var grid_icon   = 'data:image/png;
+    var delete_icon = 'fa fa-fw fa-times';      
+    var rotate_icon = 'fa fa-fw fa-redo';
+    var save_icon   = 'fa fa-fw fa-save';
+    var open_icon   = 'fa fa-fw fa-folder-open';
+    var link_icon   = 'fa fa-fw fa-link';
 
-**Rotate/Reflect**: Tap to select, then tap on the Rotate icon or type the letter "**r**" to rotate 90. Repeat for more rotations and reflections (8 total).
+**Rotate/Reflect**: Tap to select, then tap on the 
+<i class="fa fa-redo"></i> 
+Rotate icon or type the letter "**r**" to rotate 90. Repeat for more rotations and reflections (8 total).
 
 **Properties**: Double-tap on a component to change its properties like resistance or voltage.
 
@@ -113,30 +127,29 @@ example: $1000$ can be entered as $1\text k$
 
 ## On-screen controls 
 
-|:-------------|:----------------------------------------------------------:|
-| Scroll/Pan   | ![Scroll/pan]({{ site.baseurl }}{% link i/42scroll_controls.png %}){:height="40px"}| 
-| Zoom         | ![Zoom]({{ site.baseurl }}{% link i/42zoom_controls.png %}){:height="80px"}  |
-| Rotate       | ![Rotate]({{ site.baseurl }}{% link i/42rotate_control.png %}){:height="40px"} | 
-| Delete       | ![Delete]({{ site.baseurl }}{% link i/42delete_control.png %}){:height="40px"} |
+![Scroll/pan]({{ site.baseurl }}{% link i/42scroll_controls.png %}){:height="40px"}  Scroll/Pan     
+![Zoom]({{ site.baseurl }}{% link i/42zoom_controls.png %}){:height="80px"}  Zoom          
+![Rotate]({{ site.baseurl }}{% link i/42rotate_control1.png %}){:height="40px"}  Rotate          
+![Delete]({{ site.baseurl }}{% link i/42delete_control.png %}){:height="40px"} Delete        
 
 ## Menu
 
-**Help**: Display the Actions information shown above. 
+**Help**: <i class="fa fa-question"></i> List the Actions information shown above. 
 
-**Grid**: Toggle the background grid on and off.
+**Grid**: ![grid icon]({{ site.baseurl }}{% link i/grid.png %}){: height="20px" :} Toggle the background grid on and off.
 
-**Open netlist**: Open a saved netlist.
+**Open netlist**: <i class="fa fa-folder-open"></i> Open a saved netlist.
 
-**Shared link**: Displays a link you can copy for sharing your circuit with others.
+**Shared link**: <i class="fa fa-link"></i> Displays a link you can copy for sharing your circuit with others.
 
-**Save netlist**: Save the current netlist. See System information below for how this works on different platforms.
+**Save netlist**: <i class="fa fa-save"></i> Save the current netlist. See System information below for where the circuit gets saved on different platforms.
 
-**Cut/Copy/Paste** The usual edit functions.  
+**Cut/Copy/Paste:** <i class="fa fa-cut"></i> <i class="fa fa-copy"></i> <i class="fa fa-paste"></i> The usual edit functions.  
 
 > Mac shortcuts: &#8984;-X, &#8984;-C, &#8984;-V  
 > PC shortcuts: ctl-X, ctl-C, ctl-V
 
-**Delete**: Delete the selected components.
+**Delete**: <i class="fa fa-times" style="font-size:22px;"></i> Delete the selected components.
 
 **DC**:  Find the DC voltages and currents, also called the *operating point*.
 
@@ -226,3 +239,4 @@ This version of the circuit sandbox simulator includes additions by Willy McAlli
 * Touch sensitivity for tablets and smart phone
 * Language extensions
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
