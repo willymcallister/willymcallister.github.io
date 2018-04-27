@@ -85,23 +85,23 @@ http://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin"
 
 ## Help 
 
-**Add a component**: Tap on a part in the parts bin, then tap on the schematic.
+Add a component: Tap on a part in the parts bin, then tap on the schematic.
 
-**Add a wire**: Touch on a connection (open circle) to start a wire. Drag. Release.
+Add a wire: Touch on a connection (open circle) to start a wire. Drag. Release.
 
-**Select**: Drag a rectangle to select components. Shift-click to include another component (desktop only).
+Select: Drag a rectangle to select components. Shift-click to include another component (desktop only).
 
-**Move**: Touch and drag to a new location.
+Move: Touch and drag to a new location.
 
-**Delete**: Tap to select, then tap the <i class="fa fa-times"></i> icon or hit BACKSPACE on the keyboard.
+Delete: Tap to select, then tap the <i class="fa fa-times"></i> icon or hit BACKSPACE on the keyboard.
 
-**Rotate/Reflect**: Tap to select, then tap on the 
+Rotate/Reflect: Tap to select, then tap on the 
 <i class="fa fa-redo"></i> 
 Rotate icon or type the letter "**r**" to rotate 90. Repeat for more rotations and reflections (8 total).
 
-**Properties**: Double-tap on a component to change its properties like resistance or voltage.
+Properties: Double-tap on a component to change its properties like resistance or voltage.
 
-**Numeric suffixes**: Numbers may be entered using engineering notation:
+Numeric suffixes: Numbers may be entered using engineering notation:
 
     T    10^12          m   10^-3 
     G    10^9           u   10^-6 
@@ -118,7 +118,7 @@ example: $1000$ can be entered as $1\text k$
 ![Rotate]({{ site.baseurl }}{% link i/circuit_sandbox_rotate_control.png %}){:height="40px"}  Rotate          
 ![Delete]({{ site.baseurl }}{% link i/circuit_sandbox_delete_control.png %}){:height="40px"} Delete        
 
-## Menu
+## Menu bar
 
 <i class="fa fa-question"></i> Help: List the Help information shown above. 
 
@@ -154,16 +154,19 @@ The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14} \t
 The circuit sandbox works best on a desktop or laptop computer where you have plenty of viewing area. You can also use it on a tablet. (It works on smart phone, too, but the experience is a bit awkward because the screen is so small.) It should work seamlessly in most modern browsers under Windows, Mac, and Linux. If you experience problems, please let me know.
 
 ### Desktop/laptop
+{:.no_toc}
 
 The save function saves a circuit text file (JSON format) to the Download folder on your computer.  The open function retrieves a circuit text file from anywhere you choose in your computer's file system. If you want to keep your work, be sure to save your circuit before leaving the web page. Your circuit is never transferred from your computer to a web server.
 
 The downloaded netlist file is named *ckt.txt*. (text file, JSON, JavaScript Object Notation).
 
 ### Tablet 
+{:.no_toc}
 
 The simulator has a touch interface. On a tablet you can save *one* circuit file. When you save a circuit, it is tucked into a memory area inside your browser. When you open the saved circuit, the circuit file is retrieved from browser memory. If you want to keep your work, be sure to save before leaving the web page.
 
 ### Other mobile devices
+{:.no_toc}
 
 The simulator works on a smart phone, but the display is a bit small for drawing schematics. You can pan the screen by touching down two fingers at once and dragging the window. You can save and load a single circuit file, the same as for a tablet.
 
