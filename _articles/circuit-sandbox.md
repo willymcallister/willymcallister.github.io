@@ -29,11 +29,11 @@ Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.h
 
 To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
 
-![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/42screenshot.png %}){: height="340px" :}
+![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_screenshot.png %}){: height="340px" :}
 
 Sample output: A *transient* analysis is a plot of voltage vs. time.
 
-![Transient analysis screenshot]({{ site.baseurl }}{% link i/42transient_analysis.png %})
+![Transient analysis screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_transient_analysis.png %})
 
 
 ## Getting started
@@ -75,39 +75,25 @@ If you have a touch device (tablet or smart phone):
 <li> Select an analysis to perform. For this example, let's do a transient analysis. Click TRAN in the menu. Set the stop time to $10$m. The m stands for $10^{-3}$ so we will simulate for $10$ milliseconds.</li>
 <li> Click OK. The simulation is performed and a plot should appear.</li>
 </ul>
-
-<p>Here is a complete RC circuit schematic. Copy and paste this entire URL into a browser. </p>
-
-<div class="highlighter-rouge">
-<pre class="highlight">
-<code>http://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]</code>
-</pre>
-</div>
 </details>
 
-## Actions 
+Here is a complete RC circuit schematic. Copy and paste this entire URL into a browser,
 
-**Add a component**: Tap on a part in the parts bin, then tap on the schematic to add.
+```
+http://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]
+```
 
-**Add a wire**: Wires start at connection points (open circles). Touch on a connection to start a wire, drag, and release.
+## Help 
+
+**Add a component**: Tap on a part in the parts bin, then tap on the schematic.
+
+**Add a wire**: Touch on a connection (open circle) to start a wire. Drag. Release.
 
 **Select**: Drag a rectangle to select components. Shift-click to include another component (desktop only).
 
 **Move**: Touch and drag to a new location.
 
 **Delete**: Tap to select, then tap the <i class="fa fa-times"></i> icon or hit BACKSPACE on the keyboard.
-var help_icon   = 'fa fa-fw fa-question';
-    var cut_icon    = 'fa fa-fw fa-cut';
-    var copy_icon   = 'fa fa-fw fa-copy';
-    var paste_icon  = 'fa fa-fw fa-paste';
-    var close_icon  = 'fa fa-fw fa-times';
-    //var grid_icon   = 'fa fa-fw fa-table';
-    var grid_icon   = 'data:image/png;
-    var delete_icon = 'fa fa-fw fa-times';      
-    var rotate_icon = 'fa fa-fw fa-redo';
-    var save_icon   = 'fa fa-fw fa-save';
-    var open_icon   = 'fa fa-fw fa-folder-open';
-    var link_icon   = 'fa fa-fw fa-link';
 
 **Rotate/Reflect**: Tap to select, then tap on the 
 <i class="fa fa-redo"></i> 
@@ -127,29 +113,29 @@ example: $1000$ can be entered as $1\text k$
 
 ## On-screen controls 
 
-![Scroll/pan]({{ site.baseurl }}{% link i/42scroll_controls.png %}){:height="40px"}  Scroll/Pan     
-![Zoom]({{ site.baseurl }}{% link i/42zoom_controls.png %}){:height="80px"}  Zoom          
-![Rotate]({{ site.baseurl }}{% link i/42rotate_control1.png %}){:height="40px"}  Rotate          
-![Delete]({{ site.baseurl }}{% link i/42delete_control.png %}){:height="40px"} Delete        
+![Scroll/pan]({{ site.baseurl }}{% link i/circuit_sandbox_scroll_controls.png %}){:height="40px"}  Scroll/Pan     
+![Zoom]({{ site.baseurl }}{% link i/circuit_sandbox_zoom_controls.png %}){:height="80px"}  Zoom in, out, fit          
+![Rotate]({{ site.baseurl }}{% link i/circuit_sandbox_rotate_control.png %}){:height="40px"}  Rotate          
+![Delete]({{ site.baseurl }}{% link i/circuit_sandbox_delete_control.png %}){:height="40px"} Delete        
 
 ## Menu
 
-**Help**: <i class="fa fa-question"></i> List the Actions information shown above. 
+<i class="fa fa-question"></i> Help: List the Help information shown above. 
 
-**Grid**: ![grid icon]({{ site.baseurl }}{% link i/grid.png %}){: height="20px" :} Toggle the background grid on and off.
+![grid icon]({{ site.baseurl }}{% link i/circuit_sandbox_grid.png %}){: height="20px" :} Grid: Toggle the background grid on and off.
 
-**Open netlist**: <i class="fa fa-folder-open"></i> Open a saved netlist.
+<i class="fa fa-folder-open"></i> Open netlist: Open a saved netlist.
 
-**Shared link**: <i class="fa fa-link"></i> Displays a link you can copy for sharing your circuit with others.
+<i class="fa fa-link"></i> Shared link: Displays a link you can copy for sharing your circuit.
 
-**Save netlist**: <i class="fa fa-save"></i> Save the current netlist. See System information below for where the circuit gets saved on different platforms.
+<i class="fa fa-save"></i> Save netlist: Save the current netlist. See System information below for where the circuit gets saved on different platforms.
 
-**Cut/Copy/Paste:** <i class="fa fa-cut"></i> <i class="fa fa-copy"></i> <i class="fa fa-paste"></i> The usual edit functions.  
+<i class="fa fa-cut"></i> <i class="fa fa-copy"></i> <i class="fa fa-paste"></i> Cut/Copy/Paste: The usual edit functions.  
 
 > Mac shortcuts: &#8984;-X, &#8984;-C, &#8984;-V  
 > PC shortcuts: ctl-X, ctl-C, ctl-V
 
-**Delete**: <i class="fa fa-times" style="font-size:22px;"></i> Delete the selected components.
+<i class="fa fa-times" style="font-size:22px;"></i> Delete: Delete the selected components.
 
 **DC**:  Find the DC voltages and currents, also called the *operating point*.
 
