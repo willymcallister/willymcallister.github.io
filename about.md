@@ -10,11 +10,11 @@ Welcome to Spinning Numbers. The topics covered here are what you will find in a
 
 I got interested electricity when I was about eight years old. My first sense of wonder came from a tube radio. This glowing little box played music sent on invisible waves from miles away. Are you kidding me! How great is that! Electricity is invisible, and yet people understand it, and can invent radios and other great stuff. I wanted to understand, too.
 
-In college my major was electrical engineering. After graduating I started my career designing integrated circuits and computers. For each new project I would go back to my textbooks to re-study the fundamentals I needed. There were moments where I would slap my head and say, "So *that's* what my teacher meant!" I hope these videos and articles help you to have similar head-slapping *Aha!* moments, but without the long years inbetween.
+In college my major was electrical engineering. After graduating I started my career designing integrated circuits and computers. For each new project I would go back to my textbooks to re-study the fundamentals I needed. There were moments where I would slap my head and say, "So *that's* what my teacher meant!" I hope these videos and articles help you to have similar head-slapping *Aha!* moments, but without the long years in between.
 
 The videos and articles you find here started life when I was at [Khan Academy](https://www.khanacademy.org/science/electrical-engineering) in 2015-16. I was the Content Fellow for Electrical Engineering. Sal and the other content creators taught me how to approach teaching in the KA style.
 
-I have been adding new material and improving the articles I wrote for KA based on questions from  learners, and writting new articles as well. The video links go to the same videos you see on the KA EE site. It's is all a labor of love.
+I have been adding new material and improving the articles I wrote for KA based on questions from  learners, and writing new articles as well. The video links go to the same videos you see on the KA EE site. It's is all a labor of love.
 
 ### Circuit sandbox
 
@@ -40,7 +40,7 @@ Comments are implemented with [Staticman](https://staticman.net/), with protecti
 
 If you contribute a question, comment, or reply, you can optionally enter your email address to be notified of new comments. The notification email is sent by Staticman using a secure private email service provider, [MailGun](https://www.mailgun.com/). Your address will only be used for notifications. You may unsubscribe at any time.  
 
-### Acknowledgements
+### Acknowledgments
 
 I'm grateful to Sal Khan and everyone at Khan Academy for the inspiring vision of a free world-class education for anyone, anywhere.
 
