@@ -1,15 +1,15 @@
 ---
 layout: article
-title:  "Line of charge - worked example"
+title:  "Force from a line of charge - charge off the end"
 author: Willy McAllister
 comments: true
 ---
 
-We use Coulomb's Law to compute the force from a line of charge on a test charge positioned off the end of the line.
+We use Coulomb's Law to compute the force from a line of charge $Q$ on a test charge $q$ positioned off the end of the line.
 
-![](https://ka-perseus-images.s3.amazonaws.com/67bc44cdd0ce9647fa4e5eeb70e7516164e3d9c8.svg){: .centered :}
+![Line of charge with a test charge off the end]({{ site.baseurl }}{% link i/line_of_charge1c.svg %}){: .centered :}
 
-This is an example of how to use Coulomb's Law where we don't have a point charge, but rather a distributed charge structure, in this case, a line.
+This is an example of how to use Coulomb's Law where we have a distributed charge structure instead of point charges. In this case, we have a line of charge.
 
 Written by Willy McAllister. 
 
@@ -23,17 +23,32 @@ Written by Willy McAllister.
 
 ----
 
-## Force from a line of charge
+## Make a prediction
 
-A line of charge $L$ meters long has a total charge of $Q$. Assume $Q$ is spread out uniformly along the line. The charge is stuck where it is and does not move around. A test charge $q$ is positioned $a$ meters away from one end of the line. 
+The first thing I would like you to do is predict the answer to some questions. Write your predictions down somewhere. Then, when you have gone through this derivation, check your predictions.
+
+P1. What direction is $q$ being pushed or pulled by the line of charge? \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+P2. For two point charges the force goes down as $1/r^2$ as the point charges move apart. As point charge $q$ moves away from the line, how will the force go down? \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+P3. Coulomb's Law applies to point charges. What is a way you might think about the line of charge that let's you apply Coulomb's Law? \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+## Force from a line of charge
 
 **Find the total force on test charge $q$.**
 
+The first thing to do is make up some names for distances so we can talk about them,
+
 ![Line of charge with test charge off the end]({{ site.baseurl }}{% link i/line_of_charge1a.svg %}){: .centered :}
+
+A line of charge $L$ meters long has a total charge of $Q$.  
+Assume $Q$ is spread out uniformly along the line.  
+Assume the charge in the line is stuck where it is and does not move around.  
+A test charge $q$ is positioned $a$ meters away from one end of the line. 
 
 ### Model the problem
 
-We approach this problem by modeling the line as a bunch of individual point charges, sitting shoulder to shoulder along the line. To compute the total force on $q$ we add up (integrate) the force from each individual point charge in the line. 
+When you have charge as two or three-dimensional shape... We approach this problem by modeling the line as a bunch of individual point charges, sitting shoulder to shoulder along the line. To compute the total force on $q$ we add up (integrate) the force from each individual point charge in the line. 
 
 Let's add a distance variable to the diagram. $x$ is the distance from the test charge $q$ to some point on the line, and $dx$ is a tiny section of the line,
 
