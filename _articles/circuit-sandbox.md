@@ -101,7 +101,7 @@ Rotate icon or type the letter "**r**" to rotate 90. Repeat for more rotations a
 
 Properties: Double-tap on a component to change its properties like resistance or voltage.
 
-Numeric suffixes: Numbers may be entered using engineering notation:
+Numbers may be entered using engineering notation,
 
     T    10^12          m   10^-3 
     G    10^9           u   10^-6 
