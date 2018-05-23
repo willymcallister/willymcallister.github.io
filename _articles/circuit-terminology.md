@@ -32,7 +32,7 @@ Definitions and concept checks for important features of a circuit, including,
 ## Circuit terms
 
 #### Circuit
-comes from the word *circle*. A circuit is a collection of real components, power sources, and signal sources, all connected so current can flow in a complete circle. 
+comes from the word *circle*. A circuit is a collection of real components, power sources, and signal sources, all connected so current can flow in a complete circle. You can also call a circuit a *network*.
 
 #### Closed circuit
 A circuit is *closed* if the circle is complete, if all currents have a path back to where they came from.  
@@ -41,7 +41,7 @@ A circuit is *closed* if the circle is complete, if all currents have a path bac
 A circuit is *open* if the circle is not complete, if there is a gap or opening in the path.  
 
 #### Short circuit
-A *short* happens when a path of low resistance is connected (usually by mistake) to a component. The resistor shown below is the intended path for current, and the curved wire going around it is the short. Current is diverted away from its intended path, sometimes with damaging results. The wire *shorts out* the resistor by providing a low-resistance path for current (probably not what the designer intended). 
+A *short* is a path of low resistance. It is usually by mistake. The resistor shown below is the intended path for current, and the curved wire going around it is the short. Current is diverted away from its intended path, sometimes with damaging results. The wire *shorts out* the resistor by providing a low-resistance path for current (probably not what the designer intended). 
 
 ![Short circuit](https://ka-perseus-images.s3.amazonaws.com/0902a64f5e31852afbfdb7f93898c79f3dd877ae.svg){: height="200px"}{: .centered }
 
@@ -50,7 +50,7 @@ You *make* a circuit by closing the current path, such as when you close a switc
 
 ![Make and Break](https://ka-perseus-images.s3.amazonaws.com/6e48667b899e34acf82eb4e75f6318c6533a27bb.svg){: height="200px"}{: .centered }
 
-The phrase, "This is a make or break situation." means the situation is definitely going in one of two directions. 
+The phrase "make or break situation" means whatever happens, the outcome is definitely going in one of two directions. 
 
 ## Schematic terms
 
@@ -58,7 +58,7 @@ The phrase, "This is a make or break situation." means the situation is definite
 A *schematic* is a drawing of a circuit. A schematic represents circuit elements with symbols and connections as lines.  
 
 #### Elements and components
-The term *element* means a component or a source. The term *component* refers to resistors, capacitors, inductors, transistors, etc. Typically we don't include sources when we say component. (This isn't a hard and fast rule.)
+The term *element* means a component or a source. The term *component* refers to resistors, capacitors, inductors, transistors, etc. I typically don't include sources when I say component.
 
 #### Symbols
 Elements are represented in schematics by *symbols*. Here are the symbols for the common 2-terminal elements. 
@@ -110,7 +110,7 @@ Here is a realistic-looking schematic with the distributed nodes labeled:
 Pick from: 3 nodes, 4 nodes, 5 nodes, 6 nodes, 8 nodes
 
 <details>
-<summary>Show answer</summary>
+<summary>show answer</summary>
 <p>There are $4$ nodes in the circuit.</p>
 <p><img src="https://ka-perseus-images.s3.amazonaws.com/5b93c5a076290304bb0cca81330e6996bc7f4361.svg" alt="circuit with 4 nodes"></p>
 <p>$\goldC{\text{Node}\,1}$ is the junction between the voltage source, $\text V0$, and the bottom of $\text R3, \text R4$, and $\text R5$. <br> 
@@ -119,24 +119,19 @@ $\red{\text{Node} \, 3}$ is the junction between resistors $\text R1, \text R2$,
 $\green{\text{Node}\,4}$ is the junction between resistors $\text R2, \text R4$, and $\text R5$.</p>
 </details>
 
-
 <details>
-<summary>Other definitions of <em>node</em></summary>
-<p>Depending on your circuit analysis textbook or web resource, you may come across different definitions for the term <em>node</em>. Authors choose slightly different ways to teach circuit analysis. The goal is to come up with an organized approach for generating a system of independent simultaneous equations (we will do this in an upcoming article). There are a few ways to do this, and they all achieve the same goal, with slight variations in jargon.</p>
+<summary>other definitions of <em>node</em></summary>
+<p>Depending on your textbook or web resource, you may come across other definitions of <em>node</em>. In some texts, a <em>node</em> is defined to be the junction between $3$ or more elements.</p>
 
-<p>In some texts, a <em>node</em> is defined to be the junction between $3$ or more elements. In this teaching style, all nodes are included in a full circuit analysis.</p> 
+<p>Another term you may come across is <em>essential node</em>. This also means a node with $3$ or more connected elements. In this teaching style, <em>nodes</em> have $2$ or more connections, and <em>essential nodes</em> have $3$ or more.</p>
 
-<p>Another term you may come across is <em>essential node</em>. This also means a node with $3$ or more connected elements. So in this teaching style, nodes have $2$ or more connections, and essential nodes have $3$ or more. Essential nodes *must* be included in a full circuit analysis.</p>
+<p>Here at Spinning Numbers, I use the definition where a node is the junction between $2$ or more elements. This $2$-element definition is used by circuit simulation programs like SPICE because every junction has to have a unique name.</p>
 
-<p>Here at Spinning Numbers, we use the definition where a node is the junction between $2$ or more elements. With this definition, some nodes may be redundant (i.e. not independent).</p>
-
-<p>The $2$-element definition is used by circuit simulation programs like SPICE, which require every junction to have a unique name. That's one reason to use the term <em>node</em> for all junctions.</p>
-
-<p>All these shades of meaning have the same objective. There's no need to worry about which way is "right". If you use another reference alongside Spinning Numbers, check the specific definition of <em>node</em> to see if it's the same as the one we use here.</p>
+<p>All these shades of meaning have the same objective. There's no need to worry about which way is right. If you use another reference alongside Spinning Numbers, check the definition of <em>node</em> to see if it's the same as we use here.</p>
 </details>
 
 #### Branch
-A *branch* is a connection between nodes. A branch contains an element (resistor, capacitor, source, etc.). The number of branches in a circuit is equal to the number of elements.
+A *branch* is a connection between nodes. A branch contains an element (resistor, capacitor, source, etc.). The number of branches in a circuit is the same as the number of elements.
 
 **Problem 2: How many branches are in this circuit?**
 
@@ -145,11 +140,18 @@ A *branch* is a connection between nodes. A branch contains an element (resistor
 Pick from: 3 branches, 4 branches, 5 branches, 6 branches
 
 <details>
-    <summary>Show answer</summary>
+    <summary>show answer</summary>
     <p>There are 6 branches in this circuit, one for each element,
 </p>
 <p><img src="https://ka-perseus-images.s3.amazonaws.com/a87212162972863301799cc76bea8d8c25db1d51.svg" alt="Schematic with branches highlighted"></p>
 </details>
+
+{% capture summary %}other definitions of *branch*{% endcapture %}  
+{% capture details %}  
+A *branch* is a path between two nodes. Some texts oriented towards mathematical graph theory define a node as a junction of $3$ elements. In that case, a branch between two nodes may be a single element or may include two or more elements in series (since they don't count a 2-element junction as a node). If that's the case, the number of elements and number of branches is not necessarily the same. 
+
+This alternate definition doesn't cause problems because we don't do anything with branch counts that makes a difference to circuit analysis. Just be aware that someone you are talking to may have a slightly different vocabulary than you.   
+{% endcapture %}{% include details.html %} 
 
 #### Loop
 A *loop* is any closed path going through circuit elements. To draw a loop, select any node as a starting point and draw a path through elements and nodes until the path comes back to the node where you started. There is only one rule: a loop can visit (pass through) a node only *one time*. It is ok if loops overlap or contain other loops. Some of the loops in our circuit are shown here. (You can find others, too. If I counted right, there are six.) 
@@ -157,7 +159,7 @@ A *loop* is any closed path going through circuit elements. To draw a loop, sele
 ![Three loops](https://ka-perseus-images.s3.amazonaws.com/678eee017eff9f24e6e0064a6c6f49c679e7a941.svg){: .centered }
 
 <details>
-<summary>Show all the loops</summary>
+<summary>show all the loops</summary>
 <p>Six loops.</p>
 <p><img src="https://ka-perseus-images.s3.amazonaws.com/8bc7594b2ce2f1e36827cc37fae7e4578da48463.svg" alt="All loops"></p>
 
@@ -175,7 +177,7 @@ A *mesh* is a loop that has no other loops inside it. You can think of this as o
 Pick from: 1 mesh, 2 meshes, 3 meshes, 4 meshes
 
 <details>
-<summary>Show answer</summary>
+<summary>show answer</summary>
 <p>There are 3 meshes in the circuit, one for each "open window" in the circuit,</p>
 <p><img src="https://ka-perseus-images.s3.amazonaws.com/e9acafcaa612af370dd958a45c27fd0c2daa89cb.svg" alt="Three meshes"></p>
 </details>
@@ -202,7 +204,7 @@ Ground is
 * a direct physical connection to the Earth, for safety.
  
 <details>
-    <summary>Safety ground</summary>
+    <summary>safety ground</summary>
     <p>Any electric device plugged into the wall has very high voltages inside. If the device somehow fails the high internal voltage accidentally touches the metal case, there is a chance of someone getting a very dangerous shock. To avoid this, equipment is designed with a safety feature to direct the potentially large current into the Earth rather than through you. The metal enclosure of the appliance is connected to a safety ground wire (that's the third wire in the power cord). The safety ground goes through the home's electrical system and out to Earth, like in the photo above. Dangerous current is guided to a safe place, into the Earth and away from people. When the appliance or device is working properly, no current flows in the safety ground wire.</p>
 </details>
 
