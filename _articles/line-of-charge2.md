@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Electric field near a line of charge - charge to the side"
+title:  "Line of charge - test charge to the side"
 author: Willy McAllister
 comments: true
 ---

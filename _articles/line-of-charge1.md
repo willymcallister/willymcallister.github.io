@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Force from a line of charge - charge off the end"
+title:  "Line of charge - test charge off the end"
 author: Willy McAllister
 comments: true
 ---

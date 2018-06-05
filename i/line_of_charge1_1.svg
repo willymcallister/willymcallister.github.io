@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="246.8403pt"
-   height="75.257767pt"
-   viewBox="0 0 246.8403 75.257766"
+   height="62.733406pt"
+   viewBox="0 0 246.8403 62.733405"
    version="1.1"
    id="svg4290"
    inkscape:version="0.91 r13725"
@@ -40,8 +40,8 @@
      id="namedview4349"
      showgrid="false"
      inkscape:zoom="2.0839385"
-     inkscape:cx="154.27519"
-     inkscape:cy="47.036104"
+     inkscape:cx="154.27517"
+     inkscape:cy="48.175773"
      inkscape:window-x="20"
      inkscape:window-y="43"
      inkscape:window-maximized="0"
@@ -119,40 +119,35 @@
   <path
      inkscape:connector-curvature="0"
      id="path4315"
-     d="m 11.000002,47.257762 151.000068,0 0,4.000002 -151.000068,0 z m 0,0"
+     d="m 10.999989,33.821665 151.000071,0 0,4.000002 -151.000071,0 z m 0,0"
      style="fill:#57c2dc;fill-opacity:1;fill-rule:nonzero;stroke:#26a3bf;stroke-width:2.00000119;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
   <path
      inkscape:connector-curvature="0"
-     id="path4343"
-     d="m 33.902346,26.460887 1.9375,2.601563 1.890625,2.367187 1.769531,1.871094 1.601562,1.175781 0.570313,0.132812 0.519531,-0.140624 1.296875,-0.929688 1.417969,-0.851562 c 0.07813,-0.04297 0.164062,-0.07031 0.257812,-0.07031 l 0.746094,0 c 0.08594,0 0.171875,0.01953 0.246094,0.0625 l 0.8125,0.460937 c 0.05078,0.02734 0.09375,0.0625 0.128906,0.105469 l 0.988282,1.132813 1.222656,1.808594 1.300781,2.167968 1.289063,2.304688 0.28125,0.542968 1.339843,-0.691406 0.980469,6.246091 -4.535156,-4.410156 1.328125,-0.6875 -0.269531,-0.511719 -1.273438,-2.277344 -1.269531,-2.125 -1.148438,-1.710937 -0.929687,-1.066406 -0.621094,-0.351563 -0.480469,0 -1.226562,0.734375 -1.371094,0.984375 c -0.05078,0.03516 -0.105469,0.05859 -0.160156,0.07422 l -0.734375,0.199218 c -0.07813,0.01953 -0.164063,0.02344 -0.246094,0.0039 l -0.789062,-0.1875 c -0.06641,-0.01563 -0.125,-0.04297 -0.179688,-0.08203 l -1.71875,-1.261714 c -0.02734,-0.01953 -0.04687,-0.03906 -0.07031,-0.0625 L 36.949223,32.054637 35.039066,29.660106 33.09766,27.054637 Z m 0,0"
-     style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-  <path
-     inkscape:connector-curvature="0"
      id="path4345"
-     d="m 210,49.169499 c 0,-3.312502 2.6875,-6.000003 6,-6.000003 3.31251,0 6.00001,2.687501 6.00001,6.000003 0,3.312502 -2.6875,6.000003 -6.00001,6.000003 -3.3125,0 -6,-2.687501 -6,-6.000003 z m 0,0"
+     d="m 209.99999,35.733402 c 0,-3.312502 2.6875,-6.000003 6,-6.000003 3.31251,0 6.00001,2.687501 6.00001,6.000003 0,3.312502 -2.6875,6.000003 -6.00001,6.000003 -3.3125,0 -6,-2.687501 -6,-6.000003 z m 0,0"
      style="fill:#4fc2de;fill-opacity:1;fill-rule:nonzero;stroke:#26a3bf;stroke-width:2.00000119;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="18.886467"
+     x="25.028669"
      y="22.672001"
      id="text6647"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan6649"
-       x="18.886467"
+       x="25.028669"
        y="22.672001"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Q</tspan></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="228.56032"
-     y="50.664799"
+     x="228.5603"
+     y="37.228703"
      id="text6647-8"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan6649-8"
-       x="228.56032"
-       y="50.664799"
+       x="228.5603"
+       y="37.228703"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">q</tspan></text>
 </svg>

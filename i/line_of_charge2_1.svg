@@ -9,8 +9,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="194.146pt"
-   height="136.07242pt"
-   viewBox="0 0 194.146 136.07242"
+   height="124.73385pt"
+   viewBox="0 0 194.146 124.73385"
    version="1.1"
    id="svg4155"
    inkscape:version="0.91 r13725"
@@ -41,8 +41,8 @@
      id="namedview4212"
      showgrid="false"
      inkscape:zoom="2.6495525"
-     inkscape:cx="121.34125"
-     inkscape:cy="85.045261"
+     inkscape:cx="121.34124"
+     inkscape:cy="85.045274"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -120,16 +120,16 @@
   <path
      inkscape:connector-curvature="0"
      id="path4180"
-     d="m 10.5,35.891601 151.00007,0 0,4.000002 -151.00007,0 z m 0,0"
+     d="m 10.5,24.553015 151.00007,0 0,4.000002 -151.00007,0 z m 0,0"
      style="fill:#4fc2de;fill-opacity:1;fill-rule:nonzero;stroke:#26a3bf;stroke-width:1.0000006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-opacity:1" />
   <g
      id="g4194"
      style="fill:#000000;fill-opacity:1"
-     transform="translate(-3.9999997,-26.608399)" />
+     transform="translate(-3.9999991,-37.946985)" />
   <g
      id="g4198"
      style="fill:#000000;fill-opacity:1"
-     transform="translate(-1.165354,-26.608399)">
+     transform="translate(-1.1653534,-37.946985)">
     <use
        height="100%"
        width="100%"
@@ -141,7 +141,7 @@
   <g
      id="g4202"
      style="fill:#000000;fill-opacity:1"
-     transform="translate(35.68504,-49.285567)">
+     transform="translate(35.68504,-60.624153)">
     <use
        height="100%"
        width="100%"
@@ -153,6 +153,6 @@
   <path
      inkscape:connector-curvature="0"
      id="path4208"
-     d="m 80.499999,107.8916 c 0,-3.3125 2.460939,-6 5.500003,-6 3.039064,0 5.500003,2.6875 5.500003,6 0,3.31251 -2.460939,6.00001 -5.500003,6.00001 -3.039064,0 -5.500003,-2.6875 -5.500003,-6.00001 z m 0,0"
+     d="m 80.499999,96.553014 c 0,-3.3125 2.460939,-6 5.500003,-6 3.039064,0 5.500003,2.6875 5.500003,6 0,3.31251 -2.460939,6.000006 -5.500003,6.000006 -3.039064,0 -5.500003,-2.687496 -5.500003,-6.000006 z m 0,0"
      style="fill:#4fc2de;fill-opacity:1;fill-rule:nonzero;stroke:#26a3bf;stroke-width:1.0000006;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-opacity:1" />
 </svg>
