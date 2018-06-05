@@ -13,7 +13,7 @@
    version="1.1"
    id="svg4155"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="line_of_charge1b.svg">
+   sodipodi:docname="line_of_charge1_3.svg">
   <metadata
      id="metadata4250">
     <rdf:RDF>
@@ -39,9 +39,9 @@
      inkscape:window-height="756"
      id="namedview4248"
      showgrid="false"
-     inkscape:zoom="1.919403"
-     inkscape:cx="156.25"
-     inkscape:cy="74.274597"
+     inkscape:zoom="8.2392573"
+     inkscape:cx="272.59739"
+     inkscape:cy="71.364689"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -204,7 +204,7 @@
   <path
      inkscape:connector-curvature="0"
      id="path4244"
-     d="m 210,50.263827 c 0,-3.312502 2.6875,-6.000003 6,-6.000003 3.31251,0 6.00001,2.687501 6.00001,6.000003 0,3.312502 -2.6875,6.000003 -6.00001,6.000003 -3.3125,0 -6,-2.687501 -6,-6.000003 z m 0,0"
+     d="m 210,51.156553 c 0,-3.312502 2.6875,-6.000003 6,-6.000003 3.31251,0 6.00001,2.687501 6.00001,6.000003 0,3.312502 -2.6875,6.000003 -6.00001,6.000003 -3.3125,0 -6,-2.687501 -6,-6.000003 z m 0,0"
      style="fill:#4fc2de;fill-opacity:1;fill-rule:nonzero;stroke:#26a3bf;stroke-width:2.00000119;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1" />
   <text
      xml:space="preserve"
