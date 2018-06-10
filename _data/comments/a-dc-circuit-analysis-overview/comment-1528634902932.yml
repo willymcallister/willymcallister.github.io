@@ -1,0 +1,10 @@
+_id: 8effe5b0-6cac-11e8-a340-0b3e32e47a80
+_parent: 'http://spinningnumbers.org/a/circuit-analysis-overview.html'
+replying_to: ''
+message: >-
+  Above, under Basic Terms and Laws, Element i-v Equations aren't the left side
+  of the 2nd and 3rd equations swapped? I.e., shouldn't it be i=C(dv/dt) and
+  v=L(di/dt)?
+name: Philip Fentress
+email: 79a187d8cc1bbbaff0316bb9c2b9ba85
+date: '2018-06-10T12:48:22.931Z'
