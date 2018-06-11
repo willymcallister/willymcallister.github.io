@@ -25,16 +25,22 @@ The basic tools you know for analyzing a circuit are,
 
 * [Circuit terminology]({{ site.baseurl }}{% link _articles/circuit-terminology.md %})
     - wires, nodes, branches, meshes, loops, reference node (ground)
+    
+
 * Element i-v equations
     - [$v = i\,\text R$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#ohms-law)
-    - [$i = \text C\,dv/dt$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#capacitor)
-    - [$v = \text L\,di/dt$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#inductor)
+    
+    - [$i = \text C\,\dfrac{dv}{dt}$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#capacitor)
+    
+    - [$v = \text L\,\dfrac{di}{dt}$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#inductor)
 * Series and parallel resistors
     - [$\text R_{\text{series}} = \text{R1} + \text{R2} + \ldots + \text{R}_\text N$
 ]({{ site.baseurl }}{% link _articles/series-resistors.md %})
-    - [$1/\text R_{\text{parallel}} = \dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} + \ldots + \dfrac{1}{\text{R}_\text N}$]({{ site.baseurl }}{% link _articles/parallel-resistors.md %})
-* and Kirchhoff's Laws
+
+    - [$\dfrac{1}{\text R_{\text{parallel}}} = \dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} + \ldots + \dfrac{1}{\text{R}_\text N}$]({{ site.baseurl }}{% link _articles/parallel-resistors.md %})
+* Kirchhoff's Laws
     - [Kirchhoff's Current Law $\quad\displaystyle \sum i_{node} = 0$]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
+
     - [Kirchhoff's Voltage Law $\quad\displaystyle \sum v_{loop} = 0$]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
 
 ## General strategy
