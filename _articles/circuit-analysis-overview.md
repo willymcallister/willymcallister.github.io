@@ -27,8 +27,8 @@ The basic tools you know for analyzing a circuit are,
     - wires, nodes, branches, meshes, loops, reference node (ground)
 * Element i-v equations
     - [$v = i\,\text R$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#ohms-law)
-    - [$v = \text C\,dv/dt$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#capacitor)
-    - [$i = \text L\,di/dt$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#inductor)
+    - [$i = \text C\,dv/dt$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#capacitor)
+    - [$v = \text L\,di/dt$]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#inductor)
 * Series and parallel resistors
     - [$\text R_{\text{series}} = \text{R1} + \text{R2} + \ldots + \text{R}_\text N$
 ]({{ site.baseurl }}{% link _articles/series-resistors.md %})
