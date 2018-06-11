@@ -34,8 +34,8 @@ The basic tools you know for analyzing a circuit are,
 ]({{ site.baseurl }}{% link _articles/series-resistors.md %})
     - [$1/\text R_{\text{parallel}} = \dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} + \ldots + \dfrac{1}{\text{R}_\text N}$]({{ site.baseurl }}{% link _articles/parallel-resistors.md %})
 * and Kirchhoff's Laws
-    - [Kirchhoff's Current Law $\displaystyle \sum i_{node} = 0$]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
-    - [Kirchhoff's Voltage Law $\displaystyle \sum v_{loop} = 0$]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
+    - [Kirchhoff's Current Law $\quad\displaystyle \sum i_{node} = 0$]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
+    - [Kirchhoff's Voltage Law $\quad\displaystyle \sum v_{loop} = 0$]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
 
 ## General strategy
 
