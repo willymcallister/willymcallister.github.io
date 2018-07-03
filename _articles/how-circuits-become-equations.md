@@ -308,4 +308,5 @@ Keep selecting loops and writing equations until you have $E - (N-1)$ equations.
 ## Reference
 This brief paper presents a compact inductive proof (starts simple, adds complexity) that the number of linearly independent KCL node equations of a b-branch n-node connected circuits is n - 1 and the number of independent KVL loop equations is b - n + 1. 
 
+
 Feldmann, Peter & A. Rohrer, Ronald. (1991). "Proof of the Number of Independent Kirchhoff Equations in an Electrical Circuit." Circuits and Systems, IEEE Transactions on. 38. 681 - 684. [10.1109/31.135739](https://ieeexplore.ieee.org/document/135739/).
