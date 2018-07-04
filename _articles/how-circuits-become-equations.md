@@ -55,7 +55,7 @@ How many unknowns does a circuit have? Every two-terminal element contributes on
 
 >A circuit with $E$ elements requires a system of $2E$ independent equations.
 
-## Circuit terminology concept check
+## Concept check: circuit terminology 
 
 As we discuss this idea in abstract terms, we will also use this real circuit example. If you want to review your understanding of circuit terminology, check [here]({{ site.baseurl }}{% link _videos/circuit-terminology.md %}).
 
@@ -146,14 +146,7 @@ These $i$-$v$ relations represent $E$ independent equations. That's half the req
 
 The remaining $E$ equations come from the constraints caused by the connections between elements. Circuit connections constrain the voltages and currents of individual elements to be certain values. An example of a constraint would be, "these two elements are in series, so their currents have to be the same." We can develop $E$ connectivity equations using Kirchhoff's Current Law (KCL) and Kirchhoff's Voltage Law (KVL). 
 
-Let's say a circuit has  $E$ elements and $N$ nodes. 
-
-<details>
-<summary>Elements and branches are the same thing.</summary>
-<p><em>Element</em> and <em>branch</em> mean just about the same thing in circuit analysis. Every element (resistor, capacitor, inductor, source, or other $2$-terminal component) contributes one branch to a circuit. <em>Branch</em> is the graph theory term for a path connecting two nodes. When talking about a circuit as a graph, it is common to use the terms <em>node</em> and <em>branch</em> to describe the junctions and paths in the graph. In this article, I will stick with $E$ as the name for the number of elements/branches.</p>
-</details>
-
-Our example circuit has $E = 5$ elements (branches) and $N = 3$ nodes. We also know the circuit has $6$ loops, $3$ of which are meshes. 
+Let's say a circuit has  $E$ elements and $N$ nodes. Our example circuit has $E = 5$ elements and $N = 3$ nodes. We also know the circuit has $6$ loops, and $3$ of those loops are meshes. 
 
 ![](https://ka-perseus-images.s3.amazonaws.com/8309b48b32c77e0e946ace775000ed6f7dcd4986.svg){: .centered :}
 
@@ -239,7 +232,7 @@ The simplest guideline: *Write KVL equations for the meshes.* The meshes are gua
 
 If for some reason you want to (or have to) include other non-mesh loop equations, there's another guideline. You will get independent equations if *every loop includes one element not in any other loop.* That will usually be enough to give you the equations you need (there's an interesting exception, described below).
 
-### Picking meshes and loops
+### Selecting meshes and loops
 
 Our example circuit has $6$ available loops. From that set of choices, we need to come up with $3$ independent KVL equations.
 
@@ -306,7 +299,8 @@ If you write KVL equations for non-mesh loops, a loop with at least one element 
 Keep selecting loops and writing equations until you have $E - (N-1)$ equations. 
 
 ## Reference
-This brief paper presents a compact inductive proof (starts simple, adds complexity) that the number of linearly independent KCL node equations of a b-branch n-node connected circuits is n - 1 and the number of independent KVL loop equations is b - n + 1. 
+{:.no_toc}
 
+This short paper presents an inductive proof showing, for a circuit with $b$ branches and $n$ nodes, the number of linearly independent KCL node equations is $n - 1$ and the number of independent KVL loop equations of is $b - n + 1$. (An inductive proof starts super simple and adds complexity.) 
 
-Feldmann, Peter & A. Rohrer, Ronald. (1991). "Proof of the Number of Independent Kirchhoff Equations in an Electrical Circuit." Circuits and Systems, IEEE Transactions on. 38. 681 - 684. [10.1109/31.135739](https://ieeexplore.ieee.org/document/135739/).
+Feldmann, Peter & A. Rohrer, Ronald. (1991). "Proof of the Number of Independent Kirchhoff Equations in an Electrical Circuit." Circuits and Systems, IEEE Transactions on. 38. 681 - 684. [10.1109/31.135739](https://ieeexplore.ieee.org/document/135739/). Also try [here](https://www.researchgate.net/publication/3184434_Proof_of_the_Number_of_Independent_Kirchhoff_Equations_in_an_Electrical_Circuit).
