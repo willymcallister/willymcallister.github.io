@@ -51,9 +51,9 @@ This definition means you can do an experiement in your laboratory to generate a
 
 To create a standard $1$ ampere, you perform some version of the following experiment. Set up  two $1$-meter-long wires in parallel, $1$ meter apart, and arrange for a way to measure the force on the wires (some kind of strain gauge). 
 
-![Ampere unit experiment]({{ site.baseurl }}{% link i/4ampere_unit.svg %}){:height="234px" width="420px"}{: .centered }
+![Ampere unit experiment]({{ site.baseurl }}{% link i/standard_ampere_unit.svg %}){: .centered :}
 
-Apply the same current to both wires, flowing in the same direction, using adjustable current sources. Each current creates a magnetic field around the two wires. The magnetic fields interact with the moving charged particles (electrons) in the other wire. This generates a mechanical force pulling the wires together. Adjust the currents up or down while measuring the force on a wire. When the force is $2 \times 10^{-7}$ newtons, the current is $1$ ampere, by definition. 
+Apply the same current to both wires, flowing in the same direction, using adjustable current sources. Each current creates a magnetic field around the two wires. The magnetic fields interact with the moving charged particles (electrons) in the other wire. This generates a mechanical force pulling the wires together. Adjust the currents up or down while measuring the force on a wire. When the force is $2 \times 10^{-7}$ newtons, the current is $1$ ampere, by definition. (This is a conceptual experiment. In [modern standards laboratories](https://www.youtube.com/watch?v=2M_WT92Kq_s) a standard ampere is created by other means.)
 
 <details>
 <summary>Why the unusual value for force?</summary>
