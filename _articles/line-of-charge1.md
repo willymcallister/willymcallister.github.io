@@ -93,27 +93,29 @@ We can figure out the direction of the force right away. The tiny bit of force $
 
 #### Magnitude of the force
 
-We have the direction. Now we find the magnitude of the force. Coulomb's Law tells us the force $dF$ pushing on $q$ due to charge $dQ$ is,
+We have the direction. Now we find the magnitude of the force. Coulomb's Law tells us the force $dF$ pushing on $q$ caused by charge $dQ$ is,
 
 $dF = \dfrac{1}{4\pi\epsilon_0}\dfrac{q \,dQ}{x^2}$
 
-The numerator multiples the two charges, $q$ and $dQ$; the denominator $x$ is the distance between the two charges, squared.
+The numerator has the product of the two charges, $q$ and $dQ$. The denominator is the distance between the two charges, squared.
 
-To find the total force, we add up all the forces from all the little $dQ$'s by integrating from the near end of the line ($a$), to the far end ($a + L$).
+To find the total force, $F$, we want to add up (integrate) all the tiny $dF$ forces from all the tiny $dQ$'s, from one end of the line to the other. Our equation for $dF$ is in terms of differential charge $dQ$. We wish it was in terms of a differential distance $dx$ so we can integrate over distance.
 
-$\displaystyle F = \int_a^{a+L} \dfrac{1}{4\pi\epsilon_0}\dfrac{q}{x^2}\, dQ$
+$dQ$ can be expressed in terms of distance if we use the charge density expression. The general expression for $Q$ in terms of linear charge density and distance is,
 
-This equation includes both $x$ and $dQ$. We can replace $dQ$ with something based on distance if we use the charge density expression from above,
+$Q = \lambda \, L$
+
+Tiny charge $dQ$ can be expressed in terms of the tiny distance it occupies, the total charge on the line, and the total length of the line,
 
 $dQ = \lambda\,dx = \dfrac{Q}{L}\,dx$
 
-Now we have $dx$ as the independent variable,
+We can replace $dQ$ with this expression and integrate by sweeping the distance from the near end of the line ($a$), to the far end ($a + L$).
 
-$\displaystyle F = \int_a^{a+L} \dfrac{1}{4\pi\epsilon_0}  \dfrac{qQ}{L} \dfrac{1}{x^2} \text{d}x$
+$\displaystyle F = \int_a^{a+L} \dfrac{1}{4\pi\epsilon_0}  \dfrac{q\,Q}{L} \dfrac{1}{x^2} \text{d}x$
 
 Move everything that does not depend on $x$ outside the integral,
 
-$\displaystyle F = \dfrac{1}{4\pi\epsilon_0} \dfrac{qQ}{L} \int_a^{a+L}\dfrac{1}{x^2} \text{d}x$
+$\displaystyle F = \dfrac{1}{4\pi\epsilon_0} \dfrac{q\,Q}{L} \int_a^{a+L}\dfrac{1}{x^2} \text{d}x$
 
 Now we are ready to solve the integral, (see if you can do it on your own before peeking)
 
@@ -152,7 +154,7 @@ Things to notice about the solution,
 
 * The numerator is the product of two charges, the test charge and the total charge on the line. 
 * The denominator is distance$^2$, a combination of distance to the near end and far end of the line. The $a(a+L)$ form of the denominator comes from the particular geometry of this example.
-* If the test charge $q$ moves far away from the line, $L$ eventually becomes insignificant compared to $a$, and the denominator approaches $a^2$. So when they are really far apart, the line resembles a far-off point charge. The equation approaches Coulomb's Law for two point charges.
+* If the test charge $q$ moves really far away from the line, $L$ eventually becomes insignificant compared to $a$, and the denominator approaches $a^2$. So when they are far apart, the line resembles a far-off point charge. The equation approaches Coulomb's Law for two point charges.
 
 This is a good time to go back and review your predictions. Did you get some parts right? Did you get close? If not, that's okay. You have more chances to refine your intuition.
 
@@ -163,14 +165,17 @@ The force on a text charge off the end of a line of charge is,
 
 $F = \dfrac{1}{4\pi\epsilon_0} \dfrac{q\,Q}{a(a+L)}$
 
-This is one of a handful of relatively simple charge configurations we work out. It shows you a few strategies for solving electrostatics problems. This isn't a particularly important result and you don't need to memorize it. The main point of doing this calculation is to learn how to work with a distributed charge shape.
+This is one of a handful of relatively simple charge configurations we study in beginning electrostatics. 
 
-Coulomb's Law works with pairwise forces between point charges. When faced with a distributed charge, like the line, 
+The point of doing this problem is to learn some strategies for solving electrostatics problems. It isn't a particularly important result and you don't need to memorize it. The main point of doing this calculation is to learn how to work with a distributed charge shape.
 
-1. Invent a $dQ$ variable from the distributed charge, something you can use as a point charge in Coulomb's Law.
-2. Write out the force between each pair of charges. 
-3. The geometry was very symmetric so we didn't have to do any fancy vector addition. The direction of the force was obvious.
-4. Add up the forces with an integral to get the total force.
+Coulomb's Law works for forces between point charges. When you are faced with a distributed charge, like a line of charge, the strategy is, 
+
+1. Invent a $dQ$ variable, something you can use as a point charge in Coulomb's Law.
+2. Write an equation for the force between each pair of charges. 
+3. The geometry of this problem was very simple and symmetric so we didn't have to do any fancy vector addition. The direction of the force was obvious.
+4. Figure out a way to express $dQ$ in terms of distance.
+5. Add up the forces with an integral to get the total force.
 
 ## References
 
