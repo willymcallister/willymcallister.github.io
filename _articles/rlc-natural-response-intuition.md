@@ -83,7 +83,7 @@ Meanwhile, over at the inductor, current is still flowing. How can there be curr
 
 ![RLC circuit intuition 2]({{ site.baseurl }}{% link i/rlc_natural_response_intuition2.svg %}){: .centered :}
 
-<p class="caption">The voltage falls to $0$ when the top and bottom plate have the same charge. The current in the inductor reaches a peak value and continues to pump charge onto the bottom plate of the capacitor.</p>
+<p class="caption">The capacitor voltage falls to $0$ when the top and bottom plate have the same charge. The current reaches a peak value at about the same time and continues to pump charge onto the bottom plate of the capacitor.</p>
 
 As the voltage falls below $0$ the current continues to pump charge from the top plate to the bottom. Now the bottom plate has more charge than the top, so the voltage goes negative.
 
