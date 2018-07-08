@@ -13,6 +13,8 @@ Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.h
 
 运行 [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).
 
+ラン [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese).
+
 >Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
 ----
@@ -187,6 +189,7 @@ The Circuit Sandbox has been translated into,
 * English, en-US.js
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
 * Simplified Chinese, zh-cn.js (courtesy of GitHub user [Zhu Hao](https://github.com/greedyhao))
+* Japanese, ja.js (courtesy of dear friend Leslie Shiozaki)
 
 ## The circuit sandbox was created at MIT
 
