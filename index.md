@@ -52,7 +52,8 @@ A list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Sp
 ### [Printing]({{ site.baseurl }}{% link printing.md %})  
 Some tips on the best way to [print]({{ site.baseurl }}{% link printing.md %}) articles from Spinning Numbers.
 
-Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? [<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) 
+### [The name <img class="sn-logo" src="/i/sn_logo2.svg">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})     
+Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from?
 
 ----
 
