@@ -25,10 +25,8 @@
             {% if my_page.title  == 'About' %}
               <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {% endif %} 
-            {% if my_page.title  == 'Printing' %}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {% endif %}
           {% endfor %}
+          {% include expand.html %}
         </div>
       </nav>
     {% endif %}

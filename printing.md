@@ -5,32 +5,33 @@ author: Willy McAllister
 comments: true
 ---
 
-Here are some tips on how to print an article .pdf file.
-
-Articles print nicely straight out of your browser. 
+Here are some tips on how to print an article. Articles print nicely straight out of the browser window. 
 
 <details>
-<summary>Do you want to print hints like this one?</summary>
-<p>Before you print, decide if you want all the hidden hints to print. Open each one by clicking the blue triangle. Then go ahead with printing.</p>
+<summary>Do you want to include hidden comments, like this one?</summary>
+<p>Before you print, decide if you want all the hidden comments to appear. Open all comments by clicking on Expand in the title banner. Collapse closes all comments.</p>
 </details>
 
-You probably want to reduce the print scale down to around 80% of full size to get a nice result. Start by setting the scale to 80%. You do this in your browser's File: Print dialog box.
+Scale: You probably want to reduce the scale of the paper printout. I suggest you try a setting of 80% and adjust it as you wish. Set the scale in your browser's File: Print dialog box.
 
-### Example: Mac running the Chrome browser
+### Example: Mac running Chrome
 
-This is what the Print dialog box looks like on my Mac running the Chrome browser. Your browser will have something similar.
+This is what the Print dialog box looks like on my Mac running the Chrome browser. Your browser should have something similar.
 
-Open the Print dialog. The default scale is 100%. At 100% the article prints a little too big and takes more paper than it needs to.
+Open the Print.. dialog from the File menu. The Scale setting is under the "$+$ More settings" link.
 
 ![]({{ site.baseurl }}{% link i/printing-1.png %})
 
-Open the "$+$ More settings" link so you can see the Scale setting.
+The scale starts out at 100%. The article prints a little too big and takes more paper than it needs to.
 
 ![]({{ site.baseurl }}{% link i/printing-2.png %})
 
-Set the scale down to 80%, or whatever suits your fancy. Choose which pages you want to print. You may want to print just the article and not the comment section. Print the article to paper. 
+Turn the scale down to 80%, or whatever suits your fancy. Choose which pages you wish to print. (You may not want to print the comment section.) Then Print the article to paper. 
 
 ![]({{ site.baseurl }}{% link i/printing-3.png %})
 
-If you want a .pdf file, change the print destination to "pdf file". Continue on with Save and pick a file name for your .pdf file.
+If you want a .pdf file, click on Change... and set the destination to "Save as PDF".
+
 ![]({{ site.baseurl }}{% link i/printing-4.png %})
+
+Pro tip: If you change the scale setting, it stays that way for all browser windows. It's a good idea to set it back to 100% before you leave. 

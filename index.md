@@ -10,7 +10,7 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 ### [Circuit sandbox simulator <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
 * [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English
-* [Caja de arena del circuito](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español
+* [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español
 * [电路沙箱](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 或简体中文 (simplified Chinese).
 * [回路サンドボックス](http://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese)
  
@@ -48,6 +48,9 @@ The force between charged objects is described by Coulomb's Law.
 
 ### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
 A list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
+
+### [Printing]({{ site.baseurl }}{% link printing.md %})  
+Some tips on the best way to [print]({{ site.baseurl }}{% link printing.md %}) articles from Spinning Numbers.
 
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from? [<img class="sn-logo" src="/i/sn_logo2.svg" alt="logo">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) 
 

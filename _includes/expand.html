@@ -1,0 +1,37 @@
+<style>
+.mybutton {
+    border: none; 
+    padding:0 10px 0 10px;
+    border-radius: 4px;
+    width: 5em;
+}
+
+.mybutton:hover {
+    background-color: #5599ff;
+}
+</style>
+
+<button id="expand" class="mybutton" title="Open up all &#9654; comments" onclick="openAll()">Expand</button>
+
+<script>
+function openAll() {
+  var elems = document.getElementsByTagName("details");
+
+  for (var i = 0; i <= elems.length-1; i++){
+    elems[i].setAttribute("open", "true");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
+  document.getElementById("expand").innerHTML = "Collapse";
+}
+
+function closeAll() {
+  var elems = document.getElementsByTagName("details");
+
+  for (var i = 0; i <= elems.length-1; i++){
+    elems[i].removeAttribute("open");
+  }
+  document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
+  document.getElementById("expand").innerHTML = "Expand";
+}
+</script>
+<!-- source: https://stackoverflow.com/questions/43008609/expanding-all-details-tags -->

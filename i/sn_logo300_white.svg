@@ -28,8 +28,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.3066667"
-     inkscape:cx="81.502891"
+     inkscape:zoom="1.8466667"
+     inkscape:cx="150"
      inkscape:cy="150"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -84,19 +84,17 @@
        d="m 164.16933,-79.968116 79.64418,-80.403334"
        id="path6190"
        inkscape:connector-curvature="0" />
-    <ellipse
-       style="fill:#f6e49a;fill-opacity:1;stroke:#a3eebf;stroke-width:16.58320045;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+    <circle
+       style="fill:#f6e49a;fill-opacity:1;stroke:#a3eebf;stroke-width:16.63196754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path6192-5"
-       cx="259.75995"
-       cy="-136.43666"
-       rx="27.351126"
-       ry="25.880732" />
-    <ellipse
-       style="fill:#f4d345;fill-opacity:1;stroke:#1fab54;stroke-width:16.58320045;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       cx="259.11722"
+       cy="-137.26433"
+       r="26.684015" />
+    <circle
+       style="fill:#f4d345;fill-opacity:1;stroke:#1fab54;stroke-width:16.63196945;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path6192"
-       cx="242.49344"
-       cy="-160.79466"
-       rx="27.351122"
-       ry="25.88073" />
+       cx="241.85072"
+       cy="-161.62233"
+       r="26.684015" />
   </g>
 </svg>
