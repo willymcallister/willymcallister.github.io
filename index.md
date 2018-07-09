@@ -5,11 +5,15 @@ author: Willy McAllister
 comments: false
 ---
 
-Welcome to Spinning Numbers! Learn about electricity and electrical engineering, explained at the level of an undergraduate EE student.  
+Welcome to Spinning Numbers! Learn about electricity and electrical engineering.  
 
-### [Circuit sandbox <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
+### [Circuit sandbox simulator <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Circuit sandbox is a simulator. Run it [in English](http://spinningnumbers.org/circuit-sandbox/index.html), [o en español](http://spinningnumbers.org/circuit-sandbox/index-es.html), [或简体中文](http://spinningnumbers.org/circuit-sandbox/index-zh.html) (Chinese).  
+* [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English
+* [Caja de arena del circuito](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español
+* [电路沙箱](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 或简体中文 (simplified Chinese).
+* [回路サンドボックス](http://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese)
+ 
 Help translate Circuit Sandbox into other languages. [It's easy!](a/circuit-sandbox.html#translation)
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
@@ -49,9 +53,11 @@ Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats
 
 ----
 
-These videos and articles began at Khan Academy where I was the Electrical Engineering Content Fellow in 2016. Since completing my fellowship, I set up this web site and so far have reviewed and significantly improved all the articles. There are several new articles as well. A nice new feature of Spinning Numbers is the circuit simulator. Most articles include simulation models of the circuits to bring the concepts to life. 
+These videos and articles began at Khan Academy where I had the honor of being the Electrical Engineering Content Fellow in 2016. The concepts are explained at the level of an undergraduate EE student. Motivated middle school and high school students can get a lot from the course. 
 
-I hope this site helps you learn about electronics and electrical engineering. 
+I set up this Spinning Numbers web site after completing my KA fellowship. I've reviewed and significantly improved all the articles, and added several new articles. A nice new feature is the Circuit Sandbox simulator. You will find simulation models included in most articles, to let you try your hand and bring the concepts to life. 
+
+Good luck as you learn about electronics and electrical engineering. Please leave a comment if you enjoy your visit, and ask questions. I'm here to help.
 
    \- Willy McAllister
 

@@ -13,7 +13,7 @@ Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.h
 
 运行 [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).
 
-ラン [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese).
+[Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
 
 >Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
