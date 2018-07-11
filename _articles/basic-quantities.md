@@ -27,7 +27,7 @@ Current is the flow of charge. It is similar to the flow of water in a river or 
 
 Voltage is the honorary name of *electric potential difference*. Voltage is similar to the change of potential energy that happens to a mass when it's lifted or lowered. 
 
-Electrical power is the product of voltage and current, $P = I \times V$, in units of watts.
+Electrical power is the product of voltage and current, $p = i \times v$, in units of watts.
 
 ----
 
@@ -64,11 +64,16 @@ When we give a number for current, it is reported as the number of charges per u
 
 ![Current flow]({{ site.baseurl }}{% link i/2current_flow.svg %}){: .centered :}
 
-This definition of current direction often causes confusion. It is opposite the direction electrons move. There are some training programs (for example the U.S. Navy NEETS program) that use the convention where current flow is defined as electron motion, but we don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).
+{% capture summary %}Current direction and NEETS{% endcapture %}  
+{% capture details %}  
+This definition of current direction often causes confusion. It is opposite the direction electrons move. There are some training programs (for example the U.S. Navy NEETS program) that use the convention where current flow is defined as electron motion, but we don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).  
+{% endcapture %}{% include details.html %} 
 
 Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in general terms using this notation from calculus,
 
 $i = \dfrac{dq}{dt}$
+
+The term "electric current" was first used by André-Marie Ampère. The symbol for current is '$i$'. It comes from the first letter of the French phrase *intensité du courant électrique*.
 
 <details>
 <summary>What does the $d$ mean?</summary>
