@@ -5,7 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-Charge is the stuff electricity is made of. Voltage and current are the cornerstone concepts in electricity. We create our first mental pictures of current and voltage. Power is what happens when voltage and current act together.
+Charge is the stuff electricity is made of. Voltage and current are the cornerstone concepts in electricity. 
+
+We create our first mental pictures of current and voltage. 
+
+Power happens when voltage and current act together.
 
 ----
 
@@ -29,21 +33,21 @@ Electrical power is the product of voltage and current, $P = I \times V$, in uni
 
 ## Charge
 
-Our awareness of electric charge comes from observing nature. We observe an invisible force between objects, that, like gravity, seems to act at a distance. We made up a name for where this force comes from. We call it *charge*. 
+Our awareness of electric charge comes from carefully observing nature. We observe a force between objects that, like gravity, seems to act at a distance. Even though the force is invisible, we know it is there. We made up a name for what causes this force. We call it *charge*. 
 
-If you fiddle around with static electricity you will reason out there are two types of electric charge. Opposite types attract, and like types repel. On the other hand, there is only one type of gravity: it only attracts, never repels.
+If you fiddle around with static electricity you will eventually conclude there are two types of electric charge. Opposite charges attract, and like charges repel. That is the most basic rule of electricity. Compare this to gravity. There is only one type of gravity: it only attracts. Gravity never repels. Compared to our daily experience with gravity, electricity can seem kind of weird. 
 
 ## Conductors, insulators, semiconductors
 
-**Conductors** are made of atoms whose outer, or valence, electrons have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other, creating a "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move. Copper, gold, silver, and aluminum are  good conductors. So is saltwater.
+**Conductors** are atoms whose outer electrons (valence electrons) have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other. Metals have a cloud or "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move around in a current. Copper, gold, silver, and aluminum are good conductors.
 
-![Copper atom]({{ site.baseurl }}{% link i/2copper_atom.svg %}){:height="160px" width="245px" :}
+![Copper atom]({{ site.baseurl }}{% link i/2copper_atom.svg %}){: .centered :}{:height="160px" width="245px" :}
 
-There are also poor conductors. Tungsten — a metal used for the filament in an incandescent light bulb — is a relatively poor conductor compared to copper. Carbon in graphite form used in pencils is also a relatively poor conductor. The electrons in these materials are less prone to escape from an atom. (An exotic form of carbon called graphene is a superb conductor).
+There are also relatively poor conductors. Tungsten — a metal used for the filament in an incandescent light bulb — is a relatively poor conductor compared to copper. When you put a voltage on a tungsten filament it resists the flow of current and gets really hot. Carbon in graphite form used in pencils is a relatively poor conductor. The electrons in these materials are less likely to escape from an atom. (An exotic form of carbon called graphene turns out to be a superb conductor).
 
-**Insulators** are materials whose outer electrons are tightly bound to their nuclei. Modest electric forces are not able to pull these electrons free. When an electric force is applied, the electron clouds around the atom stretch and deform in response to the force, but the electrons do not depart. Glass, plastic, stone, and air are insulators. Even for insulators, though, electric force can always be turned up high enough to rip electrons away—this is called breakdown. That's what is happening to air molecules when you see a spark.
+**Insulators** are materials whose outer electrons are tightly bound to their nuclei. Modest voltages can't pull electrons free. When a voltage is applied to an insulator the electron clouds around the atoms stretch and deform, but the electrons do not depart. Glass, plastic, stone, and air are insulators. Even for insulators, though, electric force can always be turned up high enough to rip electrons away—we call this breakdown. That's what happens to air molecules when you see a spark.
 
-**Semiconductors** materials have conduction properties falling between insulators and conductors. Semiconductors usually act like insulators, but we can make them act like conductors in certain circumstances. The most well-known semiconductor material is Silicon (atomic number $14$, right below Carbon). We have figured out how to finely control the insulating and conducting properties of silicon, allowing us to invent modern marvels like computers and mobile phones. The atomic-level details of how semiconductor devices work is governed by the theories of quantum mechanics.
+**Semiconductor** materials have conduction properties falling between insulators and conductors. Pure semiconductors act like insulators. We can make them act like conductors by adding faint amounts of impurity atoms, and applying voltage. The most well-known semiconductor material is Silicon (atomic number $14$, right below Carbon). We know how to finely control the insulating and conducting properties of silicon, enabling the invention of modern marvels like computers and mobile phones. The atomic-level details of how semiconductor devices work is governed by the theories of quantum mechanics.
 
 ## Current
 
@@ -58,9 +62,9 @@ Charge flows in a current.
 
 When we give a number for current, it is reported as the number of charges per unit time passing through a boundary. To visualize current, imagine placing a boundary all the way across a wire. Station yourself near the boundary and count the number of charges passing by. Count how much charge passed through the boundary in one second, and report that as the current. We say the direction of current is the direction a *positive* charge would be moving. 
 
-![Current flow]({{ site.baseurl }}{% link i/2current_flow.svg %})
+![Current flow]({{ site.baseurl }}{% link i/2current_flow.svg %}){: .centered :}
 
-This definition of current direction often causes confusion. It is opposite the direction electrons move. There are some training programs (for example the U.S. Navy NEETS program) that use the opposite convention where current flow is defined as electron motion, but we don't use that here at Spinning Numbers. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).
+This definition of current direction often causes confusion. It is opposite the direction electrons move. There are some training programs (for example the U.S. Navy NEETS program) that use the convention where current flow is defined as electron motion, but we don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).
 
 Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in general terms using this notation from calculus,
 
@@ -79,22 +83,22 @@ $i = \dfrac{dq}{dt}$
 
 That's current in a nutshell.
 
-### A few remarks on current
+### A few remarks about current
 {:.no_toc}
 
-**What carries current in metal?** Since electrons are free to move about in metals, moving electrons are what makes up the current in metals. The positive nuclei in metal atoms are fixed in place and do not contribute to current. Even though electrons have a negative charge and do almost all the work in most electric circuits, we still define a positive current as the direction a *positive* charge would move. This is a very old historical convention.
+**What carries current in metal?** Since electrons are free to move about in metals, moving electrons are the current in metal. The positive nuclei in metal atoms are fixed in place and do not contribute to current. Even though electrons do almost all the work in most electric circuits, we still say a positive current as the direction a *positive* charge would move. This is a very old historical convention. It takes some getting used to, but you can do it.
 
-**Can current be carried by positive charges?** Yes. There are lots of examples. Current is carried by both positive and negative charges in saltwater: If we put ordinary table salt in water, it becomes a good conductor. Table salt is sodium chloride, NaCl. The salt dissolves in water, into free-floating Na$^+$ and Cl$^-$ ions. Both ions respond to electric force and move through the saltwater solution, in opposite directions. In this case, the current is composed of moving atoms, both positive and negative ions, not just loose electrons. Inside our bodies, electrical currents are moving ions, both positive and negative. The same definition of current works: count the number of charges passing by in a fixed amount of time.
+**Can current be made of positive charges?** Yes. There are lots of examples. Current is carried by both positive and negative charges in saltwater: If we put ordinary table salt in water, it becomes a good conductor. Table salt is sodium chloride, NaCl. The salt dissolves in water into free-floating Na$^+$ and Cl$^-$ ions. Both ions respond to electric force and move through the saltwater solution in opposite directions. In this case, the current is composed of moving atoms, both positive and negative ions, not just free electrons. The electrical currents inside our bodies are moving ions. The same definition of current works: count the number of charges passing by in a fixed amount of time.
 
 **What causes current?** Charged objects move in response to electric and magnetic forces. These forces come from electric and magnetic fields, which in turn come from other nearby charges.
 
-**What is the speed of current?** We don't talk very often about the *speed* of current. Answering the question, "How fast is the current flowing?" is really complicated and rarely relevant. Current isn't about meters per second, it's about charge per second. We want to know, "How *much* current is flowing?", not "how fast". When we talk about how fast something moves in electricity, we are thinking how a *disturbance* moves through a wire or the air, not actual electrons. Disturbances travel near the speed of light.
+**What is the speed of current?** We don't talk very often about the *speed* of current. Answering the question, "How fast is the current flowing?" is really complicated and rarely relevant. Current isn't about meters per second, it's about charge per second. We want to know, "How *much* current is flowing?", not "how fast". When we talk about how fast something moves in electricity, we are thinking how fast a *disturbance* moves through a wire or the air, not how fast the electrons themselves are moving. Disturbances travel near the speed of light. It's like when you see a ripple moving across a pond. The ripple disturbance moves fast, but the water hardly moves at all. 
 
-**How *should* we talk about current?** When discussing current, terms like *through* and *in* make sense. Current flows *through* a resistor; current flows *in* a wire. If you hear, "the current across ...", it should sound funny/odd. Through and across are words used with voltage, not current. If you hear, "the speed of the current", that should sound funny, too.
+**How *should* we talk about current?** When discussing current, terms like *through* and *in* make sense. Current flows *through* a resistor; current flows *in* a wire. If you hear, "the current across ...", it should sound funny/odd. We use the words through and across with voltage, not current. If you hear, "the speed of the current", that should sound funny, too.
 
 ## Voltage 
 
-To get our initial toehold on the concept of voltage, let's create an analogy: 
+To get our initial toehold on the concept of voltage, we create an analogy, 
 
 **Voltage resembles gravity.**
 
@@ -110,9 +114,9 @@ A ball at the top of the hill rolls down. When it is halfway down, it has given 
 
 An electron at the top of a voltage "hill" travels "downhill" through wires and elements of a circuit. It gives up its potential energy, doing work along the way. When the electron is halfway down the hill, it has given up or "dropped" half of its potential energy. 
 
-![Voltage analogy]({{ site.baseurl }}{% link i/2voltage_analogy.svg %}){:height="219px" width="823px" :}
+![Voltage analogy]({{ site.baseurl }}{% link i/2voltage_analogy.svg %}){: .centered :}{:height="219px" width="823px" :}
 
-For both the ball and the electron, the trip down the hill happens spontaneously. The ball and electron move towards a lower energy state all by themselves. On the trip down, there can be things in the way of the ball, like trees or bears to bounce off. For electrons, we guide electrons using wires and allow them to flow through electronic components, doing interesting things along the way. We call this circuit design.
+For both the ball and the electron the trip down the hill happens spontaneously. The ball and electron move to a lower energy state all by themselves. On the trip down there can be things in the way of the ball, like trees or bears to bounce off. We guide electrons using wires and allow them to flow through electronic components, doing interesting things along the way. We call this circuit design.
 
 <details>
 <summary>Why use an analogy?</summary>
@@ -126,7 +130,9 @@ For both the ball and the electron, the trip down the hill happens spontaneously
 
 <details>
 <summary>Limits of this analogy</summary>
-<p>Analogies can be become strained. The gravity analogy becomes strained because charged particles are not the same as rolling balls in one very important way. The balls do not repel each other, whereas electrons strongly repel each other. A bunch of balls rolling down a hill does not behave exactly the same as a dense crowd of electrons. Once you get deeper into electronics, a good plan is to start thinking about how charges act in terms of the laws of electricity instead of by analogy to gravity. A complete derivation of voltage is developed in the tutorial on Electrostatics.</p>
+<p>Analogies can be become strained. The gravity analogy becomes strained because charged particles are not the same as rolling balls in one very important way. The rolling balls do not repel each other, but electrons strongly repel each other. Balls rolling down a hill do not behave exactly the same as a crowd of electrons.</p> 
+
+<p>As you get deeper into electronics, you will begin thinking about voltage in terms of the laws of electricity instead of an analogy to gravity. A complete derivation of voltage is is pretty hard. We talk about it at the end of the [Electrostatics]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}) section.</p>
 
 <p>If you come across an analogy that improves your understanding, by all means, embrace it. But don't love it too much, or too long.</p>
 </details>
@@ -141,29 +147,39 @@ For both the ball and the electron, the trip down the hill happens spontaneously
 
 </details>
 
-We can express the voltage between two points mathematically as the change of potential energy experienced by a charge:
+The voltage between two points is mathematically expressed as the change of potential energy of a charge,
 
 $V = \dfrac{\Delta U}{q}$
+
+The $\Delta$ symbol stands for "a change of" some quantity.
 
 That's an intuitive description of voltage in a nutshell.
 
 ## Power
 
-*Power* is defined as the rate energy is transformed or transferred over time, measured in joules/second. Joules/second is also known as *watts*. 
+*Power* is defined as the rate energy is transformed or transferred over time. Power is measured in joules/second. A joule/second is also known as a *watt*. 
 
 $1 \,\text{watt} = 1\,\text{joule}/\text{second}$
 
+In calculus notation, power is written like this<
+
 $\text{power} = \dfrac{dU}{dt}$
 
-An electric circuit is capable of transferring power. That's the warmth you feel when you put your hand near a light bulb. Current is the rate of flow of charge, and voltage measures the energy transferred per unit of charge. We can insert these definitions into the equation for power:
+where $U$ is energy and $t$ is time.
 
-$\text{power} = \dfrac{dU}{dt} = \dfrac{dU}{dq} \cdot \dfrac{dq}{dt} = v \,i $
+An electric circuit is capable of transferring power from one place to another. Power is the warmth you feel when you put your hand near a light bulb or your mobile phone gets warm. 
 
-Electrical power is the product of voltage times current. in units of watts.
+Voltage measures the energy transferred per unit of charge, $dU/dq$. Current is the rate of movement of charge, $dq/dt$. If we insert these definitions into the equation for power we get,
+
+$p = \dfrac{dU}{dt} = \dfrac{dU}{dq} \cdot \dfrac{dq}{dt} = v \,i$
+
+Electrical power is the product of voltage times current, in units of watts.
+
+$p = v\,i$
 
 ## Summary
 {:.no_toc}
 
-These mental images for current and voltage will serve you well and gets us started on all sorts of interesting circuits.
+These mental images for current and voltage are good enough to get you started in your study of electricity. Over time these ideas will mature and evolve.
 
-If you want to reach beyond the intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the Spinning Numbers [Electrostatics sequence]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}).
+If you want to reach beyond the intuitive description of voltage you can read a more formal mathematical description of electric potential and voltage in the [Electrostatics sequence]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}).
