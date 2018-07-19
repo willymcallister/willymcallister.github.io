@@ -32,68 +32,60 @@ Good question! Here is a summary of the math and science preparation that will h
 ## Trigonometry
 
 * Definitions of sine, cosine, and tangent from the sides of a triangle.  
-There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometry).
 
-<details>
-<summary><strong>SOH CAH TOA</strong></summary>
+{% capture summary %}SOH CAH TOA{% endcapture %}  
+{% capture details %} 
+![SOHCAHTOA triangle]({{ site.baseurl }}{% link i/sohcahtoa.svg%}){: .centered :}
 
-<p>Here's a way to remember the definitions of $\sin$, $\cos$, and $\tan$.
-</p>
+Here's a way to remember the definitions of $\sin$, $\cos$, and $\tan$.
 
-<p>$\sin \theta = \dfrac{\text{opposite}}{\text{hypotenuse}}\qquad \textbf S\text{ine is } \textbf O\text{pposite over } \textbf H\text{ypotenuse}$
-</p>
-<p>$\cos \theta = \dfrac{\text{adjacent}}{\text{hypotenuse}}\qquad \textbf C\text{osine is } \textbf A\text{djacent over } \textbf H\text{ypotenuse}$
-</p>
+$\sin \theta = \dfrac{\text{opposite}}{\text{hypotenuse}}\qquad \textbf S\text{ine is } \textbf O\text{pposite over } \textbf H\text{ypotenuse}$
+
+$\cos \theta = \dfrac{\text{adjacent}}{\text{hypotenuse}}\qquad \textbf C\text{osine is } \textbf A\text{djacent over } \textbf H\text{ypotenuse}$
   
-<p>$\tan \theta = \dfrac{\text{opposite}}{\text{adjacent}}\quad\qquad \textbf T\text{angent is } \textbf O\text{pposite over } \textbf A\text{djacent}$
-</p>
-</details>
+<p>$\tan \theta = \dfrac{\text{opposite}}{\text{adjacent}}\quad\qquad \textbf T\text{angent is } \textbf O\text{pposite over } \textbf A\text{djacent}$  
+{% endcapture %}{% include details.html %}
 
-![SOHCAHTOA triangle]({{ site.baseurl }}{% link i/1sohcahtoa.svg%}){:height="150px" width="252px"}
+* There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometry).
 
 ## A few beginning concepts from calculus
 
-It really helps to get to know these two ideas from the start of calculus. You don't have to become an expert, but check out these links to get a basic idea of a what a derivative is.
+It really helps to get to know the meaning of *derivative* from calculus. You don't have to be an expert, but check out these links to get a basic idea of a what a derivative is,
 
 * [Limits](https://www.khanacademy.org/math/differential-calculus/limits-topic)
 * [Derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives)
 
-<p>
-<details>
-<summary>Notation for derivatives</summary>
-<h4>d notation</h4>
-<p>A popular derivative notation developed by Gottfried Leibniz is $\bold{d}$ <strong>notation</strong>. If $y$ is some function of the variable $x$, meaning $y = f(x)$, then the derivative of $y$ with respect to variable $x$ is</p>
+{% capture summary %}Notation for derivatives{% endcapture %}  
+{% capture details %} 
+There are three popular ways to write derivatives.
 
-<p>$\dfrac{dy}{dx}$</p>
+**$d$ notation**  
+The derivative notation developed by Gottfried Leibniz is $\textit d$ **notation**. If $y$ is some function of the variable $x$, meaning $y = f(x)$, the derivative of $y$ with respect to $x$ is,
 
-<p>When you say it out loud, say it like this, "$dy\:dx$", not "$dy$ over $dx$".</p>
+$\dfrac{dy}{dx}$
 
-<p>The style of Leibniz's notation gives us a hint that derivatives can be treated like fractions. This comes up when you study the <a href="https://www.khanacademy.org/math/ap-calculus-ab/product-quotient-chain-rules-ab/chain-rule-ab/v/chain-rule-introduction">**chain rule**</a>. You will also hear this called **differential notation**, where the individual terms $dy$ and $dx$ are called **differentials**.</p>
+When you say it out loud, say it like this, "$dy \, dx$", not "$dy$ over $dx$".
 
-<p>You can write Leibniz's notation to make $\dfrac{d}{dx}$ look like an operator, like this $\dfrac{d}{dx} \,y$.</p>
+The style of Leibniz's notation gives us a hint that derivatives can be treated like fractions. This comes up when you study the [chain rule](https://www.khanacademy.org/math/ap-calculus-ab/product-quotient-chain-rules-ab/chain-rule-ab/v/chain-rule-introduction). You will also hear this called *differential* notation, where the individual terms $dy$ and $dx$ are called *differentials*.
 
-<p>Second-order and higher derivatives using Leibniz notation will remind you of exponent notation:</p>
+Second-order derivatives are two derivatives in a row. They use a notation like exponents,
 
-<p>The second derivative $\left( \dfrac{d}{dx}\right )^2 y\quad$ is the same as $\quad \dfrac{d^2 y}{dx^2}$ </p>
+The second derivative $\dfrac{d}{dx} \left (\dfrac{dy}{dx}\right )$ is the same as $\dfrac{d^2 y}{dx^2}$
 
-<p>Fun fact: Leibnitz also invented the elongaged $\int$ we use for the integral symbol.</p>
+Leibnitz also invented the elongaged "s" character $\displaystyle \int$ we use for the integral symbol.
 
-<h4>prime notation</h4>
-<p>The <strong>prime notation</strong> was introduced by Joseph-Louis Lagrange. The function $f^\prime(x)$ stands for the first derivative of $f(x)$ with respect to $x$. Say this as "f prime of $x$." If $y = f(x)$, then $y^\prime = f^\prime(x)$.</p>
+**Prime notation**  
+The **prime notation** was introduced by Joseph-Louis Lagrange. The function $f^\prime(x)$ stands for the first derivative of $f(x)$ with respect to the independent variable $x$. Say this as "$f$ prime of $x$."
 
-<p>To indicate second-order and higher derivatives you just add prime symbols. For example, the second derivative of $y$ with respect to $x$ is written as</p>
+To indicate second-order and higher derivatives you add prime symbols. For example, the second derivative of $f(x)$ with respect to $x$ is,
 
-<p>$y^{\prime\prime}(x)$</p>
+$f^{\prime\prime}(x)\qquad$ "$f$ double-prime of $x$"
 
-<h4>dot notation</h4>
-<p>Isaac Newton gave us <strong>dot notation</strong> where the derivative of $x$ is written as $\dot{x}$.</p>
+**Dot notation**  
+Isaac Newton contributed **dot notation** where the derivative of $x$ is written as $\dot{x}$. Say this as "$x$ dot." The independent variable is $t$ or something else, as understood from the context.
+{% endcapture %}{% include details.html %} 
 
-<p>Say this as "$x$ dot."</p>
-
-</details>
-</p>
-
-These math fundamentals, plus this little bit of terminology from  calculus will get you all the way through the sections on DC circuits and circuit analysis methods.
+These calculus basics will get you all the way through DC circuits and Circuit analysis methods.
 
 ## Calculus
 
