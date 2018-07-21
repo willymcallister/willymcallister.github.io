@@ -22,3 +22,7 @@ Amplifiers make signals bigger. Amplification is one of the basic operations of 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Virtual ground - examples]({{ site.baseurl }}{% link _videos/opamp-virtual-ground-examples.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Summing op-amp]({{ site.baseurl }}{% link _videos/opamp-summing.md %})
+
+**Further study**
+
+One of the best sources of information about analog circuit design and operational amplifiers is the design library at [Analog Devices](http://www.analog.com/en/education/education-library/tutorials/analog-electronics.html). This company is one of the leaders in analog integrated circuits. Over the years their design engineers have written great tutorials and detailed guides about their product line and, more importantly, about the fundamentals of analog design and signal sensing. This is a highly trusted source. 
