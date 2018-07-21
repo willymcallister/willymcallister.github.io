@@ -255,7 +255,9 @@ Symmetry summary: By exploiting symmetry we discovered every $dE_x$ cancels out,
 
 #### Integration
 
-At last we are ready to add up (integrate) all the contributions from each $dQ$ to get the total electric field. The limits of the integral sweep between $\pm\theta$. You stand at location $q$. $\theta$ is the angle you turn your head to look at either end of the line.
+At last we are ready to add up (integrate) all the contributions from each $dQ$ to get the total electric field. The limits of the integral sweep between $\pm\theta$. If you stand at location $q$, $\theta$ is the angle you turn your head to look at either end of the line.
+
+![Theta is the limit of integration]({{ site.baseurl }}{% link i/line_of_charge2_7.svg %}){: .centered :}
 
 $\displaystyle E_y = \int_{-\theta}^{+\theta} \dfrac{1}{4\pi\epsilon_0} \lambda\,\dfrac{\cos \theta \,d\theta}{a}$
 
@@ -296,15 +298,21 @@ Predictions: Take a moment now to go back to the predictions you made at the beg
 ## Summary
 {:.no_toc}
 
-The general solution for the electric field near the mid-point of a line of charge,
+The general solution for the electric field near the mid-point of a line of charge is,
 
 $\displaystyle E_y = \dfrac{\lambda}{2\pi\epsilon_0} \dfrac{\sin \theta}{a}$
+
+$a$ is the distance away from the midpoint of the line.
+
+$\theta$ is the angle from the point of interest to either end of the line.
+
+$\lambda$ is the linear charge density of the line, $\lambda = \dfrac{Q}{L}$ coulombs/meter.
+
 
 If the line of charge is very long the solution is,
 
 $E_y = \dfrac{\lambda}{2\pi\epsilon_0} \dfrac{1}{a}$
 
-Where $\lambda$ is the linear charge density, $\lambda = \dfrac{Q}{L}$ coulombs/meter
 
  The electric field to the side of a long line falls of as $\dfrac{1}{a}$.
 
