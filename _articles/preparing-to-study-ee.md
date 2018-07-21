@@ -130,7 +130,7 @@ Engineering equations make more sense if you recognize the Greek alphabet.
 <details>
 <summary>alpha, beta, gamma, ...</summary>
 <p>
-<img src="/i/1greek_alphabet.svg" alt="Greek alphabet" style="width:192px;height:696px;">
+<img src="/i/greek_alphabet.svg" alt="Greek alphabet" style="width:192px;height:696px;">
 </p>
 </details>
 </p>
