@@ -16,14 +16,15 @@
 title: Spinning Numbers
 email: willy@spinningnumbers.org
 author: 'Willy McAllister'
+
 description: > # this means to ignore newlines until "baseurl:"
-  Learn the concepts of electrical engineering.  
+  Learn electrical engineering.  
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://spinningnumbers.org" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jekyllrb
 github_username:  willymcallister
 youtube_username: channel/UCCpZqoONJn-JcSRl-Y3_KXw
+facebook_username: spinningnumbers
 
 # Build settings
 markdown: kramdown
