@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Here's a template for inserting a \<details\> tag into markdown. It allows you to use markdown syntax inside the summary and the body of a \<details\> tag. This works with Jekyll kramdown, served by GitHub Pages.
+Here's a template for inserting an html \<details\> tag into markdown. It allows markdown syntax inside the summary and the body of a \<details\> tag. This works with Jekyll's kramdown dialect of markdown, served by GitHub Pages.
 
 {% capture summary %}SUMMARY{% endcapture %}  
 {% capture details %}  
