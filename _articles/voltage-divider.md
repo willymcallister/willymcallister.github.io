@@ -9,7 +9,7 @@ A very common and useful resistor circuit goes by the nickname *voltage divider*
 
 ![Voltage divider](https://ka-perseus-images.s3.amazonaws.com/be63ffad46329086809b588c919bd785a275e138.svg){: .centered }
 
-The voltage divider is really quite simple, and if you wanted, you could analyze it from scratch every time you came across one. But it is *so* common it is a good idea to prepare ahead of time so you can pop out the answer on the spot. 
+The voltage divider is really quite simple, and you could analyze it from scratch every time you come across one. But it is *so* common it is a good idea to prepare ahead of time so you can pop out the answer on the spot. 
 
 Written by Willy McAllister.
 
@@ -26,11 +26,9 @@ Written by Willy McAllister.
 ### Where we're headed 
 {:.no_toc}
 
-A "voltage divider" is the pattern of resistors shown in the schematic above, with an input voltage applied to both ends, and an output voltage measured across one of the resistors.
+A "voltage divider" is the pattern of two resistor in series, with an input voltage applied to both ends and an output voltage measured across one of the resistors.
 
-The output voltage is a function of 
-* the input voltage, 
-* this ratio of resistor values,
+The output voltage is a function of the input voltage and the ratio of resistor values,
 
 $v_{out}  = v_{in}\,\dfrac{\text R2}{\text R1 + \text R2}$ 
 
@@ -74,7 +72,7 @@ Here's the one tricky step in analyzing the voltage divider: Based on the assump
 
 $i_{\text{1}} = i_{\text{2}}\qquad$ and for now let's just call this $i$.
 
-Let's write an equation using Ohm's Law, $v = i\,\text{R}$, and what we know about resistors in series: resistors in series add.
+Let's write an equation using Ohm's Law, $v = i\,\text{R}$, and what we know about resistors in series: [resistors in series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) add.
 
 $v_{in} = i \,(\text R1 + \text R2)$
 
@@ -271,7 +269,7 @@ $\text R2 = \quad$ \_\_\_\_\_\_ $\Omega$
 
 ## Review the assumption about current (advanced) 
 
->This last half of the article is an advanced look at some of the way things go wrong with a voltage divider. You can skip these sections if this is the first time you've studied the voltage divider. 
+>The last half of this article looks at how things can go wrong with a voltage divider.  
 
 A voltage divider doesn't do anything useful unless its output is connected to something. You need to keep in mind what happens when a voltage divider is connected to a load.
 
