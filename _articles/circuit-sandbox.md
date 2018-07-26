@@ -174,7 +174,7 @@ The simulator works on a smart phone, but the display is a bit small for drawing
 
 ## Translation
 
-If you would like to help translate the Circuit Sandbox into other languages, that would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/master/Translation-table.docx) for you to translate.
+If you would like to help translate the Circuit Sandbox into other languages, that would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/gh-pages/Translation-table.docx) for you to translate.
 
 So far, Circuit Sandbox is available in,
 
