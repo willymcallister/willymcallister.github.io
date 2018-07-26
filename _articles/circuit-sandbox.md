@@ -174,17 +174,9 @@ The simulator works on a smart phone, but the display is a bit small for drawing
 
 ## Translation
 
-If you would like to help translate the Circuit Sandbox into other languages, that would be great! Translate about 170 terms and short phrases in [this text file](https://github.com/willymcallister/circuit-sandbox/blob/master/js/en-US.js) from English to the new language. Here is an example of the translation to [Spanish](https://github.com/willymcallister/circuit-sandbox/blob/master/js/es.js). 
+If you would like to help translate the Circuit Sandbox into other languages, that would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/master/Translation-table.docx) for you to translate.
 
-If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Translate the file, test it with a modified version of this [index.html](https://github.com/willymcallister/circuit-sandbox/blob/master/index.html). Modify this line: 
-
-`<script type="text/javascript" src="js/en-US.js"></script>`  
-to   
-`<script type="text/javascript" src="js/YOURLANG.js"></script>` 
-
-Then compress the file and email it to me at the address in the footer. 
-
-The Circuit Sandbox has been translated into,
+So far, Circuit Sandbox is available in,
 
 * English, en-US.js
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
