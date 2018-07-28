@@ -137,7 +137,9 @@ Two charges with opposite signs near each other is called a *dipole* (two poles)
 
 [[source](https://commons.wikimedia.org/wiki/File:VFPt_dipole_electric.svg)]
 
-In your imagination, hold a small positive test charge on the end of a stick in various places around the dipole. Feel in your hand how the test charge is pushed and pulled by the two dipole charges. The force your hand senses should point in the direction of the arrows.
+In a diagram like this the electric field arrows run together into continuous *lines of force*. The direction of the force is clear, but you have to imagine the magnitude (the length of the arrows) getting shorter as you move away from the source of the field.
+
+In your imagination, hold a small positive test charge on the end of a stick in various places around the dipole. Feel in your hand how the test charge is pushed and pulled by the two dipole charges. The force you feel should point in the direction of the arrows.
 
 If you center the test charge directly between the dipole charges, which way does the electric field point?
 
