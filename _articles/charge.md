@@ -33,11 +33,11 @@ Written by Willy McAllister.
 
 * The smallest charged objects we know of are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. They have the same charge, with opposite signs. 
 
-* You can specify a specific amount of charge two ways, in units of *coulombs* or as some number of *electron charges*, $e^-$. 
+* You can specify a specific amount of charge two ways, in units of *coulombs* or by counting some number of *electron charges*, $e^-$. 
 
-* The definition of $1 \,\text{coulomb}$ is the amount of charge that moves past a point in a wire in $1\,\text{second}$ when the current is $1\,\text{ampere}$. 
+* $1 \,\text{coulomb}$ is the amount of charge that moves past a point in a wire in $1\,\text{second}$ when the current is $1\,\text{ampere}$. 
 
-* One coulomb is equivalent to the combined charge of $6.242 \times 10^{18}$ electrons.  
+* $1 \,\text{coulomb}$ is equivalent to the total charge of $6.242 \times 10^{18}$ electrons.  
   The charge on an electron is $e^- = 1.602 \times 10^{-19}$ coulombs. 
 
 
@@ -45,16 +45,16 @@ Written by Willy McAllister.
 
 ## Eels and amber
 
-Let's start 5000 years ago. For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). This very first practical application of electricity was in medicine.
+For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). The very first practical application of electricity was in medicine.
 
 
 ![Electric eel]({{ site.baseurl }}{% link i/0-5Electric-Eel-03.jpg %}){: .centered :}{: height="200px" :}
 
-Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes when this goopy stuff drips from the tree it turns into a solid (fossilizes) and gets the name amber. Amber is basically a natural version of plastic.
+Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes this goopy resin drips from the tree, turns into a solid (fossilizes), and gets the name amber. Amber is basically a natural version of plastic.
 
 ![ant in amber]({{ site.baseurl }}{% link i/0-5ant_in_amber.jpg %}){: .centered :}
 
-So Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats. They noticed light things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" in Greek means "rub", so you can call it the "rubbing-electric" effect if you want.
+Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. Then they noticed things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so you can call it the "rubbing-electric" effect if you want.
 
 You create the same effect by passing a plastic comb through your dry hair, or rubbing a balloon on your sweater. The comb makes your hair stand up, and the balloon sticks to things and repels other rubbed balloons.
 
@@ -148,11 +148,11 @@ Check out this marvelous 1959 educational video with Professor Eric Rogers from 
 
 ## Coulomb - the unit of charge
 
-Early electrical scientists needed a way to talk about amounts of charge. Since they didn't know about electrons and protons they couldn't define amounts of charge based on those particles. So charge was first defined based on a certain current flowing in a circuit. 
+Early electrical scientists needed a way to talk about amounts of charge. Since they didn't know about electrons and protons they couldn't define an amount of charge based on those particles. Instead, the unit of charge (the coulomb) was defined based on a certain current flowing in a circuit. 
 
 The first definition of charge was,
 
->$1\,\text{coulomb}$ is the amount of charge that flows in $1\,\text{second}$ when the current is $1\,\text{ampere}$.
+$1\,\text{coulomb}$ is the amount of charge that flows in $1\,\text{second}$ when the current is $1\,\text{ampere}$.
 
 The unit of charge was named the coulomb, in honor of guess who. 
 
@@ -160,10 +160,10 @@ An example circuit you could build would be a $1\,\text{volt}$ battery connected
 
 ![Coulomb per second]({{ site.baseurl }}{% link i/0-5coulomb_per_second.svg %}){: .centered :}
 
-You can think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We actually use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
+Think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
 
 <details>
-<summary>The definition of a coulomb assumes you know what an ampere is, and vice versa.</summary>
+<summary>The definition of a coulomb assumes you know what an ampere is.</summary>
 <p>One ampere is the current you get when $1\,\text{coulomb}$ of charge is passing by every second. One coulomb is how much charge passes by in a second when the current is one ampere. These are circular definitions. To break the circle the ampere is also defined with specific conditions for an experiment you can do in a laboratory. There have been several different definitions of that experiment over time. One of the original definitions of the ampere was based the current it takes to electroplate a certain weight of silver onto a surface,</p>
 
 <blockquote>The ampère is represented by that quantity of current which is capable of depositing 4.025 grammes (62.10 grains) of silver per hour or 0.001118 grammes per second.</blockquote>
@@ -171,7 +171,7 @@ You can think of a coulomb as a bucket of charge, like a bucket of water. You ca
 <p>This was known as the <em>silver ampere</em>.</p>
 </details>
 
-It's amazing, but the classical fields of electrostatics (what we are studying here) and electrodynamics developed in the mid-to-late 1800's did not predict or depend on the existence of the electron. 
+It's amazing, but the classical fields of electrostatics (what we are studying here) and electrodynamics developed in the late 1800's did not predict or depend on knowing about the existence of the electron. 
 
 ## Electron
 
@@ -181,7 +181,7 @@ The electron gets the $-$ sign and the proton the $+$ sign because of the way Fr
 
 The variable name we use for the charge of an electron is $e^-$, with the $^-$ written after the $e$. If you want to express the charge of a proton it can be written as $e^+$.
 
-We use the expression $e^-$ for the charge on an electron. Sometimes you will see $e^-$ to indicate an electron itself. The context of the discussion will tell you which.
+The expression $e^-$ is the charge on an electron. Sometimes people use $e^-$ for an electron itself. The context of the discussion will tell you which.
 
 ## Measuring charge with $e^-$ 
 
@@ -208,7 +208,9 @@ The concept of *charge* explains why there is electric force.
 
 There are two types of charge. Like charges repel, and unlike charges attract.
 
-Franklin and Coulomb gave us the terminology and equation that describes the effect of charge.
+Franklin gave us the names of charge, positive and negative.
+
+Coulomb worked out the equation that describes the effect of charge.
 
 You can talk about charge either in units of coulombs or by counting electron charges. Pick whichever way suits the discussion best. 
 

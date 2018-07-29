@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="86.947021mm"
-   height="58.003071mm"
-   viewBox="0 0 308.08 205.52269"
+   width="79.129646mm"
+   height="57.453667mm"
+   viewBox="0 0 280.38064 203.57598"
    id="svg3510"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -72,9 +72,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="69.65991"
-     inkscape:cy="101.09941"
+     inkscape:zoom="2.1923856"
+     inkscape:cx="138.41866"
+     inkscape:cy="101.788"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -84,15 +84,15 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0">
+     fit-margin-top="5"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="5">
     <inkscape:grid
        type="xygrid"
        id="grid3554"
-       originx="-29.745302"
-       originy="-722.5459" />
+       originx="-27.971323"
+       originy="-728.55411" />
   </sodipodi:namedview>
   <metadata
      id="metadata3515">
@@ -110,7 +110,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-29.745301,-124.29362)">
+     transform="translate(-27.971325,-120.23209)">
     <g
        transform="matrix(1.25,0,0,-1.25,4e-6,665.36221)"
        id="g8061">
@@ -197,27 +197,27 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="249.97969"
-       y="260.95865"
+       x="246.43639"
+       y="253.87204"
        id="text3596"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3604"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-         x="249.97969"
-         y="260.95865">1Ω</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         x="246.43639"
+         y="253.87204">1Ω</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="47.363663"
-       y="259.53006"
+       x="61.536896"
+       y="252.44345"
        id="text3606"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3608"
-         x="47.363663"
-         y="259.53006"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">1V</tspan></text>
+         x="61.536896"
+         y="252.44345"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">1V</tspan></text>
     <path
        style="fill:#00aad4;fill-opacity:1;fill-rule:evenodd;stroke:#00aad4;stroke-width:1.35000002;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
        d="m 153,197.3622 27,0"
@@ -226,26 +226,26 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="132.92857"
+       x="143.55849"
        y="152.93362"
        id="text5034"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5036"
-         x="132.92857"
+         x="143.55849"
          y="152.93362"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00aad4">1 amp</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00aad4">1 amp</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="64.28244"
+       x="85.542282"
        y="180.07651"
        id="text5038"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5040"
-         x="64.28244"
+         x="85.542282"
          y="180.07651"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00aad4">1 coulomb/second</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#00aad4">1 coulomb/second</tspan></text>
   </g>
 </svg>
