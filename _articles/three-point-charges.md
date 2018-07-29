@@ -1,11 +1,13 @@
 ---
 layout: article
-title:  "Three point charges - worked examples"
+title:  "Three point charges"
 author: Willy McAllister
 comments: true
 ---
 
-We use Coulomb's Law to compute the force on a charge from two nearby charges. 
+Under construction.
+
+Use Coulomb's Law to find the force on a charge from two nearby charges. 
 
 Written by Willy McAllister. 
 
@@ -19,23 +21,36 @@ Written by Willy McAllister.
 
 ----
 
-----
-
 ### Where we're headed 
 {:.no_toc}
 
+With more than two point charges pushing and pulling on each other, use Coulomb's Law to find the force between pairs of charges. Then combine the forces with vector addition.
 
 ----
 
-When you have more than two point charges pushing and pulling on each other, you figure out the force between pairs of charges, and add them up with vector addition. If you have three charges, you may think the presence of the third charge in the neighborhood might modify or disturb the the force between the other two. Nope, that does not happen. All the forces are independent, and they combine together by superposition.
+## Coulomb's Law
 
-If you have $N$ different point charges surrounding a test charge $q_0$, you add up all the force vectors,
+[Coulomb's Law]({{ site.baseurl }}{% link _articles/electric-force.md %}) predicts the force between a pair of charges, $q_0$ and $q_1$,
 
-$\displaystyle \bold{\vec F_N} = \sum_{n=1}^N \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_n}{r_{0n}}\,\bold{\hat r_n}$
+$\vec F = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_1}{r^2}\,\bold{\hat r_{01}}$
 
-$\epsilon_0 = 8.85 \times 10^{-12}$ coulomb$^2/$newton-meter$^2$
+$r$ is the distance between the charges.
 
-$\dfrac{1}{4\pi\epsilon_0} = 9 \times 10^{9}$ newton-meter$^2$/coulomb$^2$
+$\bold{\hat r_{01}}$ is a vector with length $1$ pointing from one charge to the other. We include this to make the right side of the equation a vector. $\bold{\hat r}$ is pronounced "r hat."
+
+$\epsilon_0$ is a [constant]({{ site.baseurl }}{% link _articles/electric-force.md %}#epsilon_0-permittivity-of-free-space) equal to $8.85 \times 10^{-12}$ coulomb$^2/$newton-meter$^2$.
+
+$\dfrac{1}{4\pi\epsilon_0} = 9\times 10^9$ newton-meter$^2/$coulomb$^2$.
+
+## Multiple charges
+
+Suppose you have more than two charges. How do you find the force on one of the charges from all the others?
+
+If you have multiple point charges tugging and pushing on each other, you might think the forces tangle and change each other. Nope, that is not what happens. It is simpler than that. The pair-wise forces are independent. Each pair-wise force obeys Coulomb's Law, and combines with the others by superposition.
+
+Suppose you have $N$ different point charges surrounding one charge you've picked to be your favorite, $q_0$. You find the force on $q_0$ from each individual charge, $q_1 \ldots q_N$. Then you add up all the force vectors using vector addition. In algebraic notation we write this as,
+
+$\displaystyle \vec F_N = \sum_{n=1}^N \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_n}{r_{0n}}\,\bold{\hat r_n}$
 
 The first example has three charges arranged in a simple geometry. We'll do this simple one first to show how forces add. Then we'll do a second example with a more challenging geometry.
 
