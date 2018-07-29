@@ -196,5 +196,5 @@ We finish up with this astonishing image of an air-core inductor. This large cop
 <a href="https://commons.wikimedia.org/wiki/File:MLCC-Construction.png">SMT capacitor construction</a><br>  
 <a href="https://www.indiamart.com/proddetail/air-core-inductors-4126873333.html">Air-core inductor</a><br>  
 <a href="https://en.wikipedia.org/wiki/Electrical_resonance#/media/File:RLC_series.png">Toroidal inductor wound on ferrite core</a><br>  
-<a href="http://howtotestelectroniccomponents.com/wp-content/uploads/2013/08/inductor-300x201.jpg">Inductor wound on form</a><br>  
+<a href="https://howtotestelectroniccomponents.com/wp-content/uploads/2013/08/inductor-300x201.jpg">Inductor wound on form</a><br>  
 <a href="https://commons.wikimedia.org/wiki/File:Large_antenna_loading_coil.jpg">Humongous air-core coil</a><br>

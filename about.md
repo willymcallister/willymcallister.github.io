@@ -30,9 +30,9 @@ Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-f
 
 Drawings of circuits and other images come from Adobe Illustrator and [Inkscape](https://inkscape.org/). 
 
-Animated images and computed graphs are created with [D3.js](http://d3js.org). The source code for animations and graphs are in the [/assets/d3 folder](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3).
+Animated images and computed graphs are created with [D3.js](https://d3js.org). The source code for animations and graphs are in the [/assets/d3 folder](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3).
 
-Videos are drawn in [Sketchbook Pro](https://www.sketchbook.com/). The screen and audio are captured and edited in [Camtasia](https://www.techsmith.com/video-editor.html). I use a Wacom Bamboo tablet, and a [Sampson USB microphone](http://www.samsontech.com/samson/products/microphones/usb-microphones/c03u/). 
+Videos are drawn in [Sketchbook Pro](https://www.sketchbook.com/). The screen and audio are captured and edited in [Camtasia](https://www.techsmith.com/video-editor.html). I use a Wacom Bamboo tablet, and a [Sampson USB microphone](https://www.samsontech.com/samson/products/microphones/usb-microphones/c03u/). 
 
 Comments are implemented with [Staticman](https://staticman.net/), with protection from robots provided by [reCAPTCHA](https://www.google.com/recaptcha/intro/). 
 

@@ -30,7 +30,7 @@ In the following image, $\text{R1}$, $\text{R2}$, and $\text{R3}$ are in paralle
 
 <details>
 <summary>Review the definition of a node.</summary>
-<p>Review the definitions of <em>node</em> and a <em>distributed node</em> in this <a href="http://spinningnumbers.org/a/circuit-terminology.html#node">article</a>.</p>
+<p>Review the definitions of <em>node</em> and a <em>distributed node</em> in this <a href="https://spinningnumbers.org/a/circuit-terminology.html#node">article</a>.</p>
 </details>
 
 ![](https://ka-perseus-images.s3.amazonaws.com/eaeda62a7f435309cf990882930fe31827119e3c.svg){: .centered }

@@ -45,7 +45,7 @@ The term "conventional current" sounds like it may be a new type of current. It 
 
 ## The opposite current convention
 
-Veterans: Some military electronic training programs (for example the U.S. Navy [NEETS](http://www.hnsa.org/resources/manuals-documents/2575-2/) program in the 1960s) use the opposite convention, defining current to flow in the direction of electron motion, but we don't use that here at Spinning Numbers. We follow the SI convention for current direction.
+Veterans: Some military electronic training programs (for example the U.S. Navy [NEETS](https://www.hnsa.org/resources/manuals-documents/2575-2/) program in the 1960's) use the opposite convention, defining current to flow in the direction of electron motion, but we don't use that here at Spinning Numbers. We follow the SI convention for current direction.
 
 ## Other conventions for direction
 

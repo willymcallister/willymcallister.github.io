@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "What is a point charge?"
+title:  "Point charge"
 author: Willy McAllister
 comments: true
 ---
 
-tbd
+Under construction.
 
 Written by Willy McAllister.
 
@@ -34,4 +34,4 @@ So for Coulomb's Law we say there is such a thing as a point charge. We end up w
 
 There are a number of classic electrostatic problems where we analyze charge that is not concentrated at a point. The math is pretty clever. https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-fields-potential-voltage/a/ee-electric-field-near-a-line-of-charge
 
-On my own web site I wrote an article about Charge that may help you get the idea. http://spinningnumbers.org/a/charge.html
+On my own web site I wrote an article about Charge that may help you get the idea. https://spinningnumbers.org/a/charge.html

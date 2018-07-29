@@ -291,7 +291,7 @@ $v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text 
 </ol>
 
 <p>The expression for two parallel resistors is fully worked out in this article about 
-<a href="http://spinningnumbers.org/a/parallel-resistors.html">parallel resistors</a> where it says Special Case - Two Resistors In Parallel. It's a good one to memorize.</p>
+<a href="https://spinningnumbers.org/a/parallel-resistors.html">parallel resistors</a> where it says Special Case - Two Resistors In Parallel. It's a good one to memorize.</p>
 </details>
 
 ### Solution using superposition
@@ -368,5 +368,5 @@ To suppress a current source, replace it with an open circuit,
 
 <details>
 <summary>Attribution</summary>
-<p>This article expands on <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/lecture-notes/linear_crct_ana.pdf">lecture notes</a> from MIT's 6.071 OpenCourseWare class: Introduction to Electronics, Signals, and Measurement, taught by Prof. David Cory, Prof. Ian Hutchinson (Lecturer), and Prof. Manos Chaniotakis in Spring 2006. Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+<p>This article expands on <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/lecture-notes/linear_crct_ana.pdf">lecture notes</a> from MIT's 6.071 OpenCourseWare class: Introduction to Electronics, Signals, and Measurement, taught by Prof. David Cory, Prof. Ian Hutchinson (Lecturer), and Prof. Manos Chaniotakis in Spring 2006. Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
 </details>

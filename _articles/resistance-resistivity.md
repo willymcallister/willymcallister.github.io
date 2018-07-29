@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Let's define some of the terms used around resistors. You may have heard the words resistance and resistivity. They sound alike but mean slightly different things. There are two more words related to resistors you should know about: conductance and conductivity. We'll define these four terms and show how they are related. You will use resistance all the time, but the other terms not so much. However, it helps if you've heard of them and can tell them apart. Before reading this article, you should be familiar with [Ohm's Law](http://spinningnumbers.org/a/ideal-elements-and-sources.html#ohms-law), $v = i\,\text R$.
+Let's define some of the terms used around resistors. You may have heard the words resistance and resistivity. They sound alike but mean slightly different things. There are two more words related to resistors you should know about: conductance and conductivity. We'll define these four terms and show how they are related. You will use resistance all the time, but the other terms not so much. However, it helps if you've heard of them and can tell them apart. Before reading this article, you should be familiar with [Ohm's Law](https://spinningnumbers.org/a/ideal-elements-and-sources.html#ohms-law), $v = i\,\text R$.
 
 Written by Willy McAllister.
 
@@ -81,7 +81,7 @@ See how this has an expression for area over length, $\text A / l$? These two ge
 
 <details>
 <summary>image credit</summary>
-<p>Resistor image by <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">User:Omegatron</a> - Created by <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">User:Omegatron</a> using the <a href="https://en.wikipedia.org/wiki/GIMP" class="extiw" title="w:GIMP">GIMP</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1699802">Link</a></p>
+<p>Resistor image by <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">User:Omegatron</a> - Created by <a href="//commons.wikimedia.org/wiki/User:Omegatron" title="User:Omegatron">User:Omegatron</a> using the <a href="https://en.wikipedia.org/wiki/GIMP" class="extiw" title="w:GIMP">GIMP</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1699802">Link</a></p>
 
 <p>This <a href="https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity">Wikipedia article</a> has the equation for how to figure out resistance if you know resistivity and shape.</p>
 </details>

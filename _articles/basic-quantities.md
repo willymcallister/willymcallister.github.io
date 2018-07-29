@@ -148,7 +148,7 @@ For both the ball and the electron the trip down the hill happens spontaneously.
 
 <p>I love how Professor Richard Feynman, the great physicist and educator from Cal Tech, describes electricity in this <a href="https://www.youtube.com/embed/kS25vitrZ6g?rel=0">9-minute clip</a> from a 1983 interview with the British Broadcasting Corporation (BBC). Enjoy it when you have free time.</p>
 
-<!-- (This video appears to have a home at the BBC: ) \n[//]: (http://www.bbc.co.uk/archive/feynman/10702.shtml) (However, it seems to not want to play if you are outside of the U.K.) -->
+<!-- (This video appears to have a home at the BBC: ) \n[//]: (https://www.bbc.co.uk/archive/feynman/10702.shtml) (However, it seems to not want to play if you are outside of the U.K.) -->
 
 </details>
 

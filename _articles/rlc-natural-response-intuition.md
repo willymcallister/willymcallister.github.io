@@ -34,7 +34,7 @@ The mechanical analog of the $\text{RLC}$ is a swinging pendulum with friction.
 
 ## Setup
 
-This prediction is similar what we did for the [LC natural response](http://spinningnumbers.org/a/lc-natural-response-intuition.html). This time we include a small resistor (a few ohms) to make it more representative of real life circuits.
+This prediction is similar what we did for the [LC natural response](https://spinningnumbers.org/a/lc-natural-response-intuition.html). This time we include a small resistor (a few ohms) to make it more representative of real life circuits.
 
 ![RLC circuit initial setup]({{ site.baseurl }}{% link i/rlc_natural_response_intuition0.svg %}){: .centered :}
 

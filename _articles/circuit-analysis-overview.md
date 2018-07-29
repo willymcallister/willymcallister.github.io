@@ -76,7 +76,7 @@ Circuit analysis can be an involved process for big circuits. As you work with c
 The circuit simulator $\text{SPICE}$ and many similar simulation programs are available for professional and student engineers, and anyone else interested in the subject. (search term: circuit simulator) Computer simulation is often used when solving even modestly complex circuits. 
 
 Here at Spinning Numbers we have our own circuit simulator, the [Circuit sandbox]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}).
-Run the [Circuit sandbox in English](http://spinningnumbers.org/circuit-sandbox/index.html) or [Circuit sandbox en Español](http://spinningnumbers.org/circuit-sandbox/index-es.html). 
+It is available in a number of languages. 
 
 **If I can solve a circuit with a simulation, why do I need to learn  circuit analysis?**
 

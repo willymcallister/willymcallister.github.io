@@ -7,13 +7,13 @@ comments: true
 
 ![Circuit Sandbox logo]({{ site.baseurl }}{% link i/circuit-sandbox.png %}){: height="100px" :} $\quad$ A simulator for experimenting with circuits.
 
-Run [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index.html) in English, or with a smaller screen for [mobile](http://spinningnumbers.org/circuit-sandbox/index-mobile.html).
+Run [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) in English, or with a smaller screen for [mobile](https://spinningnumbers.org/circuit-sandbox/index-mobile.html).
 
-Ejecutar [Circuit sandbox](http://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
+Ejecutar [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) en español.
 
-运行 [Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).
+运行 [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).
 
-[Circuit Sandbox](http://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
+[Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
 
 >Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
@@ -82,7 +82,7 @@ If you have a touch device (tablet or smart phone):
 Here is a complete RC circuit schematic. Copy and paste this entire URL into a browser,
 
 ```
-http://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]
+https://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]
 ```
 
 ## Help 
@@ -197,7 +197,7 @@ The input to SPICE is a plain-text circuit description (the SPICE netlist). SPIC
 
 Many people have written front-end interfaces to SPICE that allow designers to create SPICE netlists by drawing schematics. The SPICE netlist is submitted to SPICE for simulation. The results are retrieved from SPICE and plotted.  Many of these packages can be found by searching the web for "circuit simulator." 
 
-An excellent version of SPICE is available from [Linear Technology](http://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTSpice](http://www.linear.com/designtools/software/#LTspice) or [LTSpice](http://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html). LTSpice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use." Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The web sites have been merged together.
+An excellent version of SPICE is available from [Linear Technology](https://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is called [LTSpice](https://www.linear.com/designtools/software/#LTspice) or [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html). LTSpice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use." Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The web sites have been merged together.
 
 ## Licensing
 
@@ -213,9 +213,9 @@ Version 3, 19 November 2007. More information at [EdX licensing](https://open.ed
 
 The simulator uses two open-source libraries,  
 
-[Download.js](http://danml.com/download.html) is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/), attributed to "dandavis". No changes were made. Download.js allows to circuit files to be downloaded to the client computer.
+[Download.js](https://danml.com/download.html) is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/), attributed to "dandavis". No changes were made. Download.js allows to circuit files to be downloaded to the client computer.
 
-[Hammer.js](http://hammerjs.github.io/) is available under the [MIT License](https://github.com/hammerjs/hammer.js/blob/master/LICENSE.md). No changes were made. Hammer.js provides touch functionality, in particular, the double-tap function for touch interfaces.
+[Hammer.js](https://hammerjs.github.io/) is available under the [MIT License](https://github.com/hammerjs/hammer.js/blob/master/LICENSE.md). No changes were made. Hammer.js provides touch functionality, in particular, the double-tap function for touch interfaces.
 
 This version of the circuit sandbox simulator includes additions by Willy McAllister, EE Content Fellow at Khan Academy during 2016,
 

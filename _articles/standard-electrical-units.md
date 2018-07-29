@@ -28,7 +28,7 @@ The *ampere* is defined first. In the SI, the ampere is an SI *base unit*, which
 <p><strong>SI</strong> is the <a href="https://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a>, in French "<strong>S</strong>ystème <strong>I</strong>nternational d'Unités". It is the modern form of the metric system.</p>
 
 <p><em>The International System of Units (SI)</em>. Organisation Intergouvernementale De La Convention Du Mètre. 8th ed. Paris, France, 2006.
-<a href="http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf">http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf</a></p>
+<a href="https://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf">https://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf</a></p>
 </details>
 
 ## All the rest are derived units
@@ -126,7 +126,7 @@ The volt can also be expressed in terms of energy and charge as,
 
 $1\,\text{volt} = 1 \,\text{joule}/\text{coulomb}$
 
-You can find an intuitive description of voltage in the introductory article on [basic electrical quantities](http://spinningnumbers.org/a/basic-quantities.html). Also, there is a formal derivation of the meaning of voltage at the very end of the [electrostatics section](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics) on Khan Academy.
+You can find an intuitive description of voltage in the introductory article on [basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}). Also, there is a formal derivation of the meaning of voltage at the very end of the [electrostatics section](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics) on Khan Academy.
 
 ## Ohm
 The *ohm* is the electrical unit of resistance. One ohm is defined as the resistance between two points of a conductor when 1 volt is applied and a current of 1 ampere is flowing.
@@ -216,5 +216,5 @@ The remaining electrical units are SI *derived* units, formed by combinations of
 <p>"Magnetic Forces, Magnetic Fields, and Faraday's Law." Khan Academy. <a href="https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields">https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields</a></p>
 
 <p><em>The International System of Units (SI)</em>. Organisation Intergouvernementale De La Convention Du Mètre. 8th ed. Paris, France, 2006.
-<a href="http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf">http://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf</a></p>
+<a href="https://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf">https://www.bipm.org/utils/common/pdf/si_brochure_8_en.pdf</a></p>
 </details>

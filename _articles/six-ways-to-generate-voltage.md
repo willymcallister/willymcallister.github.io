@@ -20,5 +20,5 @@ There are six ways to create voltage. Some methods are more widely used than oth
 6. MAGNETISM — Voltage produced when the wire moves through a
 magnetic field, or a magnetic field moves past a conductor. This is how AC electricity is created in large-scale power plants, hydroelectric dams, and portable/emergency generators.
 
-Reference: [Navy Electricity and Electronics Training Series](http://www.hnsa.org/wp-content/uploads/2014/04/mod01.pdf), NEETS, module 1, page 1-28.
+Reference: [Navy Electricity and Electronics Training Series](https://www.hnsa.org/wp-content/uploads/2014/04/mod01.pdf), NEETS, module 1, page 1-28.
 

@@ -35,6 +35,6 @@ For now, don't worry about this fancy math notation, there's plenty of time to s
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/eulers-sine.md %})
 
-The animated image is created in [D3.js](http://d3js.org). The source code is [here](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3).
+The animated image is created in [D3.js](https://d3js.org). The source code is [here](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3).
 
 If you want to know more right now and you can't stand to wait, jump to [AC analysis introduction]({{ site.baseurl }}{% link _videos/ac-analysis-intro1.md %}). This is where the theory of spinning numbers is developed and applied.

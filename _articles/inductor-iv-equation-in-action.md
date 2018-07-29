@@ -99,7 +99,7 @@ If current is constant in an inductor, then $v = \text L\,di/dt = 0$. Zero volts
 
 ### Simulation model
 
-Here's a [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[192,120,0],{"_json_":0},["0"]],["w",[168,120,192,120]],["w",[216,120,192,120]],["l",[216,72,0],{"name":"","l":"5u","_json_":3},["1","0"]],["s",[216,72,0],{"color":"cyan","offset":"0","_json_":4},["1"]],["i",[168,120,2],{"name":"","value":"dc(2)","_json_":5},["0","1"]],["w",[168,72,216,72]],["view",94.6424,32.20688,3.814697265625,"50","10","1G",null,"100",".0009","1000"]]) of a $5\,\mu\text H$ inductor with constant $2\,\text{mA}$ current source. Open the link and click on TRANS in the top menu bar to run a transient simulation. The result is pretty boring. The voltage across the inductor is $0$. Change the inductor or current to anything you want, the answer is always $0$. 
+Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[192,120,0],{"_json_":0},["0"]],["w",[168,120,192,120]],["w",[216,120,192,120]],["l",[216,72,0],{"name":"","l":"5u","_json_":3},["1","0"]],["s",[216,72,0],{"color":"cyan","offset":"0","_json_":4},["1"]],["i",[168,120,2],{"name":"","value":"dc(2)","_json_":5},["0","1"]],["w",[168,72,216,72]],["view",94.6424,32.20688,3.814697265625,"50","10","1G",null,"100",".0009","1000"]]) of a $5\,\mu\text H$ inductor with constant $2\,\text{mA}$ current source. Open the link and click on TRANS in the top menu bar to run a transient simulation. The result is pretty boring. The voltage across the inductor is $0$. Change the inductor or current to anything you want, the answer is always $0$. 
 
 ### Sometimes an inductor "looks like" a short
 
@@ -133,7 +133,7 @@ That is kind of amazing, but that's what the equation predicts. Needless to say,
 
 ### Simulation model
 
-Here's a [simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[168,72,4],{"name":"","value":"dc(3)","_json_":0},["2","0"]],["g",[192,120,0],{"_json_":1},["0"]],["w",[168,120,192,120]],["w",[216,120,192,120]],["l",[216,72,0],{"name":"","l":"10m","_json_":4},["1","0"]],["s",[216,72,0],{"color":"cyan","offset":"0","_json_":5},["1"]],["a",[184,72,0],{"color":"magenta","offset":"0","_json_":6},["2","1"]],["w",[168,72,184,72]],["w",[216,72,200,72]],["view",94.6424,32.20688,3.814697265625,"50","10","1G",null,"100","5","1000"]]) of the inductor with voltage source circuit. Open the link and click on TRANS in the top menu to run a transient simulation.
+Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[168,72,4],{"name":"","value":"dc(3)","_json_":0},["2","0"]],["g",[192,120,0],{"_json_":1},["0"]],["w",[168,120,192,120]],["w",[216,120,192,120]],["l",[216,72,0],{"name":"","l":"10m","_json_":4},["1","0"]],["s",[216,72,0],{"color":"cyan","offset":"0","_json_":5},["1"]],["a",[184,72,0],{"color":"magenta","offset":"0","_json_":6},["2","1"]],["w",[168,72,184,72]],["w",[216,72,200,72]],["view",94.6424,32.20688,3.814697265625,"50","10","1G",null,"100","5","1000"]]) of the inductor with voltage source circuit. Open the link and click on TRANS in the top menu to run a transient simulation.
 
 ## Example
 
@@ -180,7 +180,7 @@ Hint: Work out $di/dt$ for the two different states of the input voltage.
 
 ### Simulation model
 
-[Simulation model](http://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[152,72,4],{"name":"","value":"square(-1,1,1M,50)","_json_":0},["2","0"]],["l",[248,72,0],{"name":"","l":"5u","_json_":1},["1","0"]],["a",[192,72,0],{"color":"cyan","offset":"0","_json_":2},["2","1"]],["w",[152,72,192,72]],["w",[248,72,208,72]],["s",[248,72,0],{"color":"red","offset":"0","_json_":5},["1"]],["g",[200,120,0],{"_json_":6},["0"]],["w",[152,120,200,120]],["w",[248,120,200,120]],["view",0,0,2,"50","10","1G",null,"100","3u","1000"]]) of the pulsed voltage source circuit. Open the link and click on TRANS to run a transient simulation. 
+[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[152,72,4],{"name":"","value":"square(-1,1,1M,50)","_json_":0},["2","0"]],["l",[248,72,0],{"name":"","l":"5u","_json_":1},["1","0"]],["a",[192,72,0],{"color":"cyan","offset":"0","_json_":2},["2","1"]],["w",[152,72,192,72]],["w",[248,72,208,72]],["s",[248,72,0],{"color":"red","offset":"0","_json_":5},["1"]],["g",[200,120,0],{"_json_":6},["0"]],["w",[152,120,200,120]],["w",[248,120,200,120]],["view",0,0,2,"50","10","1G",null,"100","3u","1000"]]) of the pulsed voltage source circuit. Open the link and click on TRANS to run a transient simulation. 
 
 The inductor is "integrating" the voltage over time, as indictated by the value of the current at any moment. This is an exact "dual" of a [capacitor integrating current]({{ site.baseurl }}{% link _articles/capacitor-iv-equation-in-action.md %}).
 

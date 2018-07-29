@@ -36,9 +36,9 @@ At this point, have a go at answering the problem posed above. After you give it
 <summary>Review series and parallel resistors</summary>
 <p>If you would like to refresh your understanding of series and parallel resistors, see,</p>
 
-<p><a href="http://spinningnumbers.org/a/series-resistors.html">Resistors in series</a></p>
+<p><a href="https://spinningnumbers.org/a/series-resistors.html">Resistors in series</a></p>
 
-<p><a href="http://spinningnumbers.org/a/parallel-resistors.html">Resistors in parallel</a></p>
+<p><a href="https://spinningnumbers.org/a/parallel-resistors.html">Resistors in parallel</a></p>
 </details>
 
 ## Strategy for simplifying a resistor network

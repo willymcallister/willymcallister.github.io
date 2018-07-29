@@ -17,6 +17,8 @@ The examples collected here are the classic electrostatic configurations. Point 
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Inverse square law - The Fable of the Butter Gun]({{ site.baseurl }}{% link _articles/inverse-square-law.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Three point charges]({{ site.baseurl }}{% link _articles/three-point-charges.md %})
+
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Line of charge - test charge off the end]({{ site.baseurl }}{% link _articles/line-of-charge1.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Electric field]({{ site.baseurl }}{% link _articles/electric-field.md %})

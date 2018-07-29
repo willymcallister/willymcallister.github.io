@@ -22,7 +22,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 
 ## Resources
 
-[Staticman](http://staticman.org). I don't run my own Staticman server, I use the public instance of Staticman. 
+[Staticman](https://staticman.org). I don't run my own Staticman server, I use the public instance of Staticman. 
 [Staticman on github](https://github.com/eduardoboucas/staticman). Watch this repository to follow along with Staticman's development and issues.   
 
 [Eduardo's personal site on github](https://github.com/eduardoboucas/eduardoboucas.github.io) is a good resource for Staticman news and developments.  
@@ -35,7 +35,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 
 [GitHub Pages](https://pages.github.com/) is the hosting service for spinningnumbers.org.
 
-[Popcorn](http://popcorn.staticman.net/). Staticman's demo site (based on Staticman v1).    
+[Popcorn](https://popcorn.staticman.net/). Staticman's demo site (based on Staticman v1).    
 [Popcorn's repository on github](https://github.com/eduardoboucas/popcorn)  
 
 ## Encryption
@@ -54,7 +54,7 @@ The articles are written in Jekyll's [Kramdown](https://kramdown.gettalong.org/d
 
 Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-fast math typesetting library from Khan Academy. The KaTeX equation renderer runs after the page loads. See the line in _layouts/default.html where it includes katex.html.
 
-Animated images are created with [D3.js](http://d3js.org). The source code for animations is [here](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3).
+Animated images are created with [D3.js](https://d3js.org). The source code for animations is [here](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3).
 
 Graphs and calculated waveforms are also created in D3.js. The source code for static graphs is on github under [/assets/d3](https://github.com/willymcallister/willymcallister.github.io/tree/master/assets/d3). 
 

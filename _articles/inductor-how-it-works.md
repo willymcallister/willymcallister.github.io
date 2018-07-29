@@ -4,8 +4,11 @@ title:  Inductor - how it works - under construction
 author: Willy McAllister
 comments: true
 ---
+
+UNDER CONSTRUCTION
+
 When this article is ready to publish, add this line back to Ideal or Real World elements:  
-Refer to [Inductor - how it works](http://spinningnumbers.org/a/inductor-how-it-works.html) for an informal description of how an inductor does its thing. 
+Refer to [Inductor - how it works](https://spinningnumbers.org/a/inductor-how-it-works.html) for an informal description of how an inductor does its thing. 
 
 When you make an inductor the goal is to create a component that behaves like the ideal inductor equation, 
 

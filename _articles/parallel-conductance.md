@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-In a previous article we studied [parallel resistors](http://spinningnumbers.org/a/parallel-resistors.html). 
+In a previous article we studied [resistors in parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}). 
 
 ![](https://ka-perseus-images.s3.amazonaws.com/f84dc8f7aa0ad09db6897028cfe43d93615e3070.svg){: .centered }
 
@@ -71,12 +71,12 @@ When we use the word *conductance* instead of *resistance* to describe the same 
 
 <details>
 <summary>resistivity and conductivity</summary>
-<p>You may have heard the terms <em>resistivity</em> and <em>conductivity</em>. These sound a lot like <em>resistance</em> and <em>conductance</em>, but resistivity and conductivity are a little different. They are properties of the bulk materials used to fabricate individual resistors. For more information, see <a href="http://spinningnumbers.org/a/resistance-resistivity.html">Resistance and resistivity</a> or this Wikipedia page on <a href="https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance">Electrical Resistance and Conductance</a>.</p>
+<p>You may have heard the terms <em>resistivity</em> and <em>conductivity</em>. These sound a lot like <em>resistance</em> and <em>conductance</em>, but resistivity and conductivity are a little different. They are properties of the bulk materials used to fabricate individual resistors. For more information, see <a href="https://spinningnumbers.org/a/resistance-resistivity.html">Resistance and resistivity</a> or this Wikipedia page on <a href="https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance">Electrical Resistance and Conductance</a>.</p>
 </details>
 
 ## Parallel conductance
 
-Now we'll repeat the analysis of parallel resistors, but this time, instead of calling each component a resistor, we will call it a conductance. Notice how the similar this analysis is to when we figure out [series resistors](http://spinningnumbers.org/a/series-resistors.html#resistors-in-series).  
+Now we'll repeat the analysis of parallel resistors, but this time, instead of calling each component a resistor, we will call it a conductance. Notice how the similar this analysis is to when we figure out [series resistors]({{ site.baseurl }}{% link _articles/series-resistors.md %}#resistors-in-series). 
 
 <details>
     <summary>terminology</summary>
@@ -118,11 +118,11 @@ $i = v\,\, (\text{G1} + \text{G2} + \text{G3})$
 
 This looks just like Ohm's Law for a single conductance, except the parallel conductances appear together as a sum.  
 
-We conclude: 
+We conclude, 
 
->When conductances are in parallel, the overall conductance is the sum of the individual conductances.
+For conductances in parallel, the overall conductance is the sum of the individual conductances.
 
-Notice how much this looks like the formula for resistors in series. Conductances in parallel are like resistances in series, they add.
+Notice how much this sounds like the formula for resistors in series. Conductances in parallel add, just like resistances in series.
 
 ## Equivalent parallel conductance
 
@@ -136,7 +136,7 @@ $\text G_{\text{parallel}}$ is equivalent in the sense that the same voltage app
 
 ## Example
 
-Let's solve the [same circuit](http://spinningnumbers.org/a/parallel-resistors.html#concept-check) we did for parallel resistors, but using our new conductance representation. 
+Let's solve the [same circuit](https://spinningnumbers.org/a/parallel-resistors.html#concept-check) we did for parallel resistors, but using our new conductance representation. 
 
 This is the circuit with conductances, $\text G = \dfrac{1}{\text R}$
 
