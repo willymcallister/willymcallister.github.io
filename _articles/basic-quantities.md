@@ -27,7 +27,7 @@ Current is the flow of charge. It is similar to the flow of water in a river or 
 
 Voltage is the honorary name of *electric potential difference*. Voltage is similar to the change of potential energy that happens to a mass when it's lifted or lowered. 
 
-Electrical power is the product of voltage and current, $p = i \times v$, in units of watts.
+Electrical power is the product of voltage and current, $p = i \, v$, in units of watts.
 
 ----
 
