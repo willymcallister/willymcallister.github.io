@@ -48,11 +48,11 @@ Written by Willy McAllister.
 For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). The very first practical application of electricity was in medicine.
 
 
-![Electric eel]({{ site.baseurl }}{% link i/0-5Electric-Eel-03.jpg %}){: .centered :}{: height="200px" :}
+![Electric eel]({{ site.baseurl }}{% link i/charge_electric-eel.jpg %}){: .centered :}{: height="200px" :}
 
 Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes this goopy resin drips from the tree, turns into a solid (fossilizes), and gets the name amber. Amber is basically a natural version of plastic.
 
-![ant in amber]({{ site.baseurl }}{% link i/0-5ant_in_amber.jpg %}){: .centered :}
+![ant in amber]({{ site.baseurl }}{% link i/charge_ant_in_amber.jpg %}){: .centered :}
 
 Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. Then they noticed things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so you can call it the "rubbing-electric" effect if you want.
 
@@ -126,7 +126,7 @@ Coulomb invented a very sensitive instrument to measure electric force, the *tor
 <summary>Coulomb's torsion balance (optional)</summary>
 <p>The torsion balance is based on twisting a fine wire. It works the same as if you tie a rope to a car tire and hang it from a tree. If you sit quietly in the tire, it takes only a very small nudge to make you twist back and forth. Coulomb drew this illustration of his torsion balance for a publication.</p>
 <p>
-<img class="centered" src="/i/0-5torsion_balance3.png" alt="Coulomb's torsion balance" width="500px">
+<img class="centered" src="/i/charge_torsion_balance3.png" alt="Coulomb's torsion balance" width="500px">
 </p>
 <p> Two spheres are placed inside a chamber (Figure 1). The sphere on the left (b) sits still while the sphere on the right (a) is mounted on an arm (P and Figure 3) hanging from the thin torsion wire. If electric force is present, the sphere on the right twists as it hangs from the torsion wire. The chamber is sealed to prevent breezes from messing up the measurement. It is made of glass so you can see inside. A charge is placed on the twisting sphere. The fixed sphere starts out uncharged. You let the twisting sphere swing back and forth until it comes to rest at some position. Then some charge is placed on the fixed sphere by touching the post holding it in place (m and Figure 5) by the clamp that looks like chopsticks. This causes the twisting sphere to rotate either towards or away from the fixed sphere, depending on the sign of both charges. The amount of twist is measured on the scale (Q) going around the chamber. The other figures are close-up views of the important bits and pieces of the main instrument.</p>
 </details>
@@ -158,7 +158,7 @@ The unit of charge was named the coulomb, in honor of guess who.
 
 An example circuit you could build would be a $1\,\text{volt}$ battery connected to a $1\,\Omega$ resistor. Ohm's Law tells us the current will be $\text I = \text V/\text R = 1/1 = 1 \,\text{ampere}$. When that is happening, there is $1 \,\text{coulomb}$ of charge passing by every second at every point in the circuit, by definition.
 
-![Coulomb per second]({{ site.baseurl }}{% link i/0-5coulomb_per_second.svg %}){: .centered :}
+![Coulomb per second]({{ site.baseurl }}{% link i/charge_coulomb_per_second.svg %}){: .centered :}
 
 Think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
 
