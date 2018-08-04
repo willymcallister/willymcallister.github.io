@@ -179,15 +179,15 @@ The electron was discovered in 1892 ([J.J. Thomson](https://en.wikipedia.org/wik
 
 The electron gets the $-$ sign and the proton the $+$ sign because of the way Franklin stated his "one fluid" theory of electricity so long ago. The material he though was lacking electric fluid had picked up extra electrons from the other material used to rub it. There was no way to know this at the time. The important point to remember is the signs/names we use for charge are arbitrary. There is nothing naturally "negative" about the electron's charge; its only true property is that it is unlike the charge of the proton. It's just a name.
 
-The variable name we use for the charge of an electron is $e^-$, with the $^-$ written after the $e$. If you want to express the charge of a proton it can be written as $e^+$.
+The variable we use for the charge of an electron is $-e$ or $e^-$. The charge of a proton can be written as $+e$ or $e^+$.
 
-The expression $e^-$ is the charge on an electron. Sometimes people use $e^-$ for an electron itself. The context of the discussion will tell you which.
+## Measuring charge by counting electrons$ 
 
-## Measuring charge with $e^-$ 
+A coulomb of charge is like a big bucket of sand, where each grain of sand is an electron charge, $e^-$. When dealing with everyday currents there are lots of electrons moving around. So we measure charge in buckets (coulombs).
 
-Now that we know about electrons, we have a second way to think about an amount of charge. In addition to coulombs, we can measure charge in terms of number of electron charges. Think of a coulomb of charge as a bucket full of sand, where each grain of sand is an electron charge, $e^-$. Electron charge is a useful way to talk about charge at the atomic level. Down at the level of atoms there are not so many grains of sand and each one matters. 
+Now that we know about electrons, we can also measure charge by counting electrons. Down at the atomic level we often count electrons rather than coulombs, because each electron matters. 
 
-So what is the relationship between the coulomb unit and an individual electron charge? How many grains of sand $(e^-)$ are there in a bucket of one coulomb?
+So what is the relationship between the coulomb unit and the charge of an individual electron? How many grains of sand $(e^-)$ are there in a bucket of one coulomb?
 
 Electrons are *really* small, and one coulomb of charge is a *ton* of electron charges. 
 
