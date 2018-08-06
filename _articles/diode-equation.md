@@ -69,7 +69,7 @@ There are many parameters in the diode equation. Let's go through them carefully
 
 Look for $v$, the voltage across the diode. It's up in the exponent. This explains why current $i$ has an exponential dependence on voltage $v$. 
 
-Now lets look at all that other stuff up in the exponent of $e^{\,qv/k\text T}$. We know exponents have no dimensions. That means the other terms in the exponent $(q/k\text T)$ have to combine together to end up with units of $1/\text{volts}$. 
+Now let's look at all that other stuff up in the exponent of $e^{\,qv/k\text T}$. We know exponents have no dimensions. That means the other terms in the exponent $(q/k\text T)$ have to combine together to end up with units of $1/\text{volts}$. 
 
 * $q$ is the charge on an electron, in coulombs: $q = 1.602 \times 10^{-19} \,\text C$.
 
