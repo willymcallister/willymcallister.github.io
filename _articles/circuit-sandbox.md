@@ -29,11 +29,11 @@ Ejecutar [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.
 
 ## Playing in the sandbox
 
-To create a circuit, drag components from the parts bin on the right, onto the schematic diagram.
+To create a circuit, you drag components from the part bin on the right onto the schematic.
 
-![Circuit sandbox screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_screenshot.png %}){: height="340px" :}
+[![Run circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox_screenshot.png %}){: height="340px" :}](https://spinningnumbers.org/circuit-sandbox/?value=[["v",[152,80,0],{"name":"vin","value":"step(0,1,0,1n)","_json_":0},["2","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":1},["1","2"]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":2},["1","0"]],["w",[152,80,152,64]],["w",[152,64,184,64]],["w",[232,64,264,64]],["w",[264,64,264,80]],["g",[208,128,0],{"_json_":7},["0"]],["w",[152,128,208,128]],["w",[264,128,208,128]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["view",110.6424,32.20688,3.814697265625,"50","10","1G",null,"100","10m","1000"]]).
 
-Sample output: A *transient* analysis is a plot of voltage vs. time.
+Sample output: Click on **TRAN** to perform a *transient* analysis, a plot of voltage vs. time.
 
 ![Transient analysis screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_transient_analysis.png %})
 
