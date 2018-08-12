@@ -26,3 +26,6 @@ The examples collected here are the classic electrostatic configurations. Point 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Line of charge - test charge to the side]({{ site.baseurl }}{% link _articles/line-of-charge2.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Plane of charge]({{ site.baseurl }}{% link _articles/plane-of-charge.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Electric potential and voltage]({{ site.baseurl }}{% link _articles/electric-potential.md %})
+
