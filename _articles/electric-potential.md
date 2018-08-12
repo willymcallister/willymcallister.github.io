@@ -5,11 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-We explore what happens when charges move around (slowly) in an electric field. We learn about the electric form of potential energy, and what it means to *do work* on a charge. Some new similar-sounding terms are defined --- electric potential energy, electric potential, and electric potential difference.
+We explore what happens when charges move around (slowly) in an electric field. We learn about the electric form of potential energy, and what it means to *do work* on a charge. 
 
-We end up with a formal definition of *voltage*.
+Some new similar-sounding terms are defined --- electric potential energy, electric potential, and electric potential difference. We end with a formal definition of *voltage*.
 
-This is a highly technical article. If you are new to voltage and just getting started, check out this voltage [video]({{ site.baseurl }}{% link _videos/voltage.md %}) and [article]({{ site.baseurl }}{% link _articles/basic-quantities.md %}#voltage).
+This is a highly technical article. If you are new to voltage or just getting started, check out this [video]({{ site.baseurl }}{% link _videos/voltage.md %}) and [article]({{ site.baseurl }}{% link _articles/basic-quantities.md %}#voltage) for an introduction to voltage.
 
 Written by Willy McAllister. 
 
@@ -80,13 +80,13 @@ As you do work on an object by moving it with a force, potential energy is store
 
 It's hard to figure out the potential energy of something if it's just sitting in one spot. If we move the object (do work on it), that allows us to discover its potential energy. 
 
-## Find electric potential energy
+## What is electric potential energy?
 
 An electric charge located in an electric field has *electric potential energy*. Here is our strategy for discovering what that is,
 
 * We put a charged object in an electric field.
 * We do some work to make it move. 
-* That changes the object's potential energy by an equal amount. (The joules of work we do becomes joules of potential energy in the object.)
+* That changes the object's potential energy by an equal amount. (The joules of work become joules of potential energy in the object.)
 * The difference in potential energy provides the hint we need to figure out the potential energy of the object when it is standing still.
 
 Let's set up a simple charge arrangement and ask a few questions. 
@@ -94,8 +94,6 @@ Let's set up a simple charge arrangement and ask a few questions.
 Begin with two positive charges, separated by some distance $a$.  
 
 ![Two positive charges]({{ site.baseurl }}{% link i/electric_potential1.svg %}){: .centered :}
-
-Assume big $Q$ is glued to the page, or held in place by a thumbtack so it can't move. Little $q$ is our test charge. We slowly move $q$ around within the electric field of $Q$ and think about its electric potential energy.
 
 $Q$ and $q$ are positive, so they repel $q$ with a force described by Coulomb's Law,  
 
@@ -121,7 +119,9 @@ $\vec E_{Qa} = \dfrac{1}{4\pi\epsilon_0}\dfrac{Q}{a^2}\hat r$
 
 ### Doing work in an electric field
 
-What does it mean to do work in an electric field? You are doing work when you push one charge towards another repelling charge, or pull it away from an attracting charge.
+Assume big $Q$ is glued to the page, or held in place by a thumbtack so it can't move. Little $q$ is our test charge. We <u>slowly</u> push $q$ towards $Q$ and think about its electric potential energy.
+
+What does it mean to do work in an electric field? You are doing work when you push one charge towards another repelling charge, (or pull it away from an attracting charge).
 
 We recruit a little dude to emphasize something has to hold $q$ in place so it doesn't move off to the left. The little dude pushes back on $q$ with exactly the repelling force from $Q$. 
 
@@ -133,16 +133,17 @@ If the little dude pushes just slightly harder, $q$ will move closer to $Q$. Tha
 
 ![Charge q moves from a to b]({{ site.baseurl }}{% link i/electric_potential4.svg %}){: .centered :}
 
-{% capture summary %}how hard is slightly harder?{% endcapture %}  
-{% capture details %}  
-For electrostatics problems we want movement to be *quasi-static*. That way we don't have to worry about the kinetic energy of a mass or a magnetic field coming from a moving charge. 
+#### How hard is slightly harder?
 
-The force is just barely greater than $q \vec E$, making sure $\vec F - q \vec E$ is vanishingly small. 
+For electrostatics problems we want *quasi-static motion*. That way we don't have to worry about the kinetic energy of a mass or the magnetic field from a moving charge. 
 
-The movement of $q$ happens without speeding it up, so there is no acceleration and no kinetic energy term. Going this slow means moving $q$ to a new spot will take infinite time. This doesn't bother us because we are just talking about it, not waiting for it to actually happen.  
-{% endcapture %}{% include details.html %} 
+The force is just barely greater than $q \vec E$, making sure $\vec F_{ext} - q \vec E$ is vanishingly small. 
 
-We want to know what happens in detail.
+![External force = -q E]({{ site.baseurl }}{% link i/electric_potential6.svg %}){: .centered :}
+
+$q$ moves without speeding it up, so there is no acceleration and no kinetic energy term. Going this slow means moving $q$ to a new spot will take infinite time. This doesn't bother us because we are just talking about it, not waiting for it to actually happen.  
+
+Let's find out what happens in detail.
 
 **How much work is done moving $q$ from point $a$ to point $b$ in an electric field?**
  
@@ -154,7 +155,7 @@ The electric field from $Q$ provides the force, $\vec F = q \,\vec E$.
 
 $W = q \vec E \cdot \vec d$ 
 
-If we expand the dot product it becomes 
+If we expand the [dot product](https://www.khanacademy.org/science/physics/magnetic-forces-and-magnetic-fields/electric-motors/v/the-dot-product) it becomes 
 
 $W = q\,\|\vec E\|\, \|\vec d\|\, \cos \theta$
 
@@ -164,9 +165,9 @@ $W = q\,\|\vec E\|\,\|\vec d\|$
 
 The distance moved is $\|\vec d\| = \|\,a - b\,\|$.
 
-What is the electric field strength? This is a bit trickier, because the field is different at every point along the path. The closer $q$ gets to $Q$, the greater the repulsion and the harder the little dude has to push to make $q$ move. 
+What is the electric field strength? This is a bit trickier, because the field strength is different at every point along the path. The closer $q$ gets to $Q$, the greater the repulsion and the harder the little dude has to push to make $q$ move. 
 
-We have to find out how much work is required at every point along the path and add it all up with an integral. 
+We find out how much work is required at every point along the path and add it all up with an integral. 
 
 Let's create two new variables, $r$ and $dr$, to talk about the trip from $a$ to $b$.
 
@@ -183,33 +184,35 @@ The little dude applies an external force in the opposite direction of the elect
 
 ![External force = -q E]({{ site.baseurl }}{% link i/electric_potential6.svg %}){: .centered :}
 
-So the external force required to move $q$ is,
+The external force required to hold $q$ perfectly still is,
 
 $\vec F_{ext} = -q\,\vec E = -q \, \dfrac{1}{4\pi\epsilon_0}\dfrac{Q}{r^2}\hat r$ 
 
-The force is different for every value of $r$. Which means the amount of work needed to move $q$ changes at every $r$. Let's take it one small step at a time. Consider the trip from $a$ to $b$ as a sequence of tiny steps of size $dr$. 
+This is also the force required to move $q$ in [*quasi-static motion*](#how-hard-is-slightly-harder). (Actually the little dude pushes with a tiny bit more force, but the added push is practically zero.)
 
-Over a tiny distance $dr$ the force changes hardly at all. In fact, $dr$ can be so small we can consider the force to be constant over that interval. 
+The force is different for every value of $r$, which means the work needed to move $q$ changes at every $r$. Let's take it one step at a time. Consider the trip from $a$ to $b$ as a sequence of tiny steps of size $dr$. 
 
-**What is the tiny bit of work needed to move $q$ a distance $dr$?** 
+Over a tiny distance $dr$ the force changes hardly at all. In fact, $dr$ is so small we consider the force to be constant from the beginning to the end of the movement. 
+
+**What is the tiny bit of work $dW$ needed to move a distance $dr$?** 
 
 From the definition of work,
 
 $dW = -q\,\vec E \cdot \vec{dr}$
 
-Distance $dr$ is so small that we're going to say $\vec E$ is a constant value determined by the radius $r$,
+Distance $dr$ is so small we assume $\vec E$ doesn't change while the work is being done. We plug in a single value for $\vec E$ at radius $r$,
 
-$dW = -q \,\dfrac{1}{4\pi\epsilon_0}\dfrac{Q}{r^2}\,\vec{dr}$
+$dW = -q \,\dfrac{1}{4\pi\epsilon_0}\dfrac{Q}{r^2}\cdot\vec{dr}$
 
-This is the amount of work needed to move $q$ a distance $dr$. And it is also the amount of potential energy $q$ gains from that work. (The little dude does the work, $q$ gets the potential energy.)
+This is the amount of work needed to move $q$ a distance $dr$. And it is also the amount of potential energy $q$ gains from that work. The little dude does the work, $q$ gets the potential energy.
 
-**What is the amount of work needed to move $q$ from $a$ to $b$?**
+**What is the amount of work needed to move from $a$ to $b$?**
 
-To get the total work going from $a$ to $b$ we add up the tiny work amounts using an integral,
+To get the total work going from $a$ to $b$ we set up an integral to add the tiny work amounts,
 
-$\displaystyle W_{ab} = \int_a^b -qE \cdot dr$
+$\displaystyle W_{ab} = \int_a^b -q\vec E \cdot \vec{dr}$
 
-$\displaystyle W_{ab} = -\dfrac{q\,Q}{4\pi\epsilon_0} \int_a^b \dfrac{1}{r^2} dr$
+$\displaystyle W_{ab} = -\dfrac{q\,Q}{4\pi\epsilon_0} \int_a^b \dfrac{1}{r^2} \,dr$
 
 (I've dropped the vector notation because we know everything is in a straight line.)
 
@@ -222,8 +225,6 @@ The integral of $x^n$ is,
 $\displaystyle \int x^n dx = \dfrac{x^{n+1}}{n+1}$, for any $n \ne -1$ 
 
 In our example $n$ is $-2$.
-
-$\displaystyle \int_a^b r^{-2} dr = \dfrac{r^{-2+1}}{-2+1}\,\bigg \|\_a^b = -\dfrac{1}{r}\,\bigg \|_a^b$
 
 $\displaystyle \int_a^b r^{-2} dr = \dfrac{r^{-2+1}}{-2+1}\,\bigg \|\_a^b = \dfrac{r^{-1}}{-1}\,\bigg \|\_a^b = -\dfrac{1}{r}\,\bigg \|_a^b$  
 
@@ -248,9 +249,7 @@ $\displaystyle \text{electric potential energy change}\_{ab} = \int_a^b -q \vec 
 
 $\displaystyle \text{electric potential energy change}\_{ab} = \dfrac{q\,Q}{4\pi\epsilon_0} \left ( \frac{1}{b} - \frac{1}{a}\right )$
 
-Like work, electric potential energy is a scalar quantity. 
-
-We can fiddle with how this expression is written and something special emerges.
+We can fiddle with this expression and something special emerges.
 
 Multiply out the terms,
 
@@ -258,11 +257,11 @@ $\displaystyle \text{electric potential energy change}_{ab} =  \left (\dfrac{q\,
 
 If the whole equation is the change of potential energy, then the two individual terms represent the total potential energy of $q$ when sitting still at each location.
 
-$\dfrac{q\,Q}{4\pi\epsilon_0} \dfrac{1}{a}$ is the potential energy of $q$ when it is at location $a$.
+$\dfrac{q\,Q}{4\pi\epsilon_0} \dfrac{1}{a}$ is the starting potential energy of $q$ when it is at location $a$.
 
-$\dfrac{q\,Q}{4\pi\epsilon_0} \dfrac{1}{b}$ is the potential energy of $q$ when it is at location $b$.
+$\dfrac{q\,Q}{4\pi\epsilon_0} \dfrac{1}{b}$ is the ending potential energy of $q$ when it is at location $b$.
 
-Give the two terms a name so we can talk about them. Let,
+Give the two terms a variable name so we can talk about them. Let,
 
 $U_r =  \dfrac{q\,Q}{4\pi\epsilon_0} \dfrac{1}{r}$
 
@@ -270,16 +269,16 @@ And we write a change in potential energy as,
 
 $\text{electric potential energy change}_{ab} =  U_b - U_a$
 
-$U_r$ is the *electric potential energy* of charge $q$ when it is distance $r$ away from $Q$. This sleight-of-hand with the algebra revealed the definition of electric potential energy near a point charge.
+$U_r$ is the *electric potential energy* of charge $q$ when it is distance $r$ away from $Q$.
 
 #### Something to notice
 {:.no_toc}
 
-The expression for potential energy change only mentions the end points. It doesn't matter what route you take from  $a$ to $b$. The change of potential energy only depends on where you start and where you end. This is just like taking a hike on a mountainside. Your total change of elevation depends only on where you started and where you ended.
+The expression for potential energy change only mentions the end points. It doesn't matter what route you take from  $a$ to $b$. The change of potential energy only depends on where you start and where you end. This is just like taking a hike on a mountainside. Your overall change of elevation depends only on where you started and where you ended.
 
 ## Electric potential
 
-Remember when we defined electric field by ["normalizing"]({{ site.baseurl }}{% link _articles/electric-field.md %}#electric-field-defined) electric force? 
+Remember how we defined electric field by ["normalizing"]({{ site.baseurl }}{% link _articles/electric-field.md %}#electric-field-defined) electric force? 
 
 $\vec E = \dfrac{\vec F}{q}$
 
@@ -302,38 +301,35 @@ We've taken the word "potential" and made it into a noun, instead of an adjectiv
 Electric <u>potential energy</u> has units of joules.  
 Electric <u>potential</u> has units of joules/coulomb.
 
-Electric potential is a property of space. Even if you take away the unit charge, the potential still exists at that location. Electric potential is a scalar field surrounding $Q$. 
+Electric potential can be viewed as a property of space. Even if you take away $q$, the potential still exists at that location. Electric potential is a scalar field surrounding $Q$. 
 
 ## Electric potential near a point charge
 
-Let's work out the electric potential near a point charge. 
+What is the electric potential near a point charge? 
 
-Up above we found the potential energy near a point charge,
+Earlier we defined potential energy near a point charge,
 
 $U_r =  \dfrac{q\,Q}{4\pi\epsilon_0} \dfrac{1}{r}$
 
-To find the potential we simply normalize by dividing by $q$. This is the definition of electric potential near a point charge,
+To find the potential we normalize by dividing both sides by $q$, 
 
-$\text{electric potential} = \dfrac{U_r}{q} =  \dfrac{Q}{4\pi\epsilon_0} \dfrac{1}{r}$
+$\dfrac{U_r}{q} =  \dfrac{Q}{4\pi\epsilon_0} \dfrac{1}{r}$
 
-Potential $U/q$ is associated with a single location in space. That is, $U_b/q$ only depends on location $b$, and $U_a/q$ only depends on location $a$. This suggests potential $U/q$ can be viewed as a property of the location. We can think of electric potential as a *field* existing in the space surrounding $Q$. Potential is a scalar, so a potential field is a scalar field. It has a magnitude everywhere in space, but does not have direction. 
-
+This is the definition of electric potential near a point charge. The potential only depends on $Q$, (there is no $q$ on the right side). You can think of potential as a property of the space surrounding $Q$. 
 
 ### Visualize electric potential
 
-Let's visualize what the potential looks like. Potential is a scalar, so we are not drawing arrows in this visualization. At any given radius away from $Q$ the potential is the same. It doesn't matter what the direction is. Picture in your mind a sphere with $Q$ at the center. Everywhere on the sphere has the same potential. The sphere is an "equipotential" contour (*equi* = equal, *potential* = potential). On a flat page we draw equipotential contours as circles.
+Let's visualize what the potential looks like. Potential is a scalar, so there are no vector arrows in this visualization. At any given radius away from $Q$ the potential is the same. It doesn't matter what the direction is. Picture in your mind a sphere with $Q$ at the center. Everywhere on the sphere has the same potential. The sphere is an "equipotential" contour (*equi* = equal, *potential* = potential). On a flat page we draw equipotential contours as circles.
 
 ![Equipotential circles around point charge Q]({{ site.baseurl }}{% link i/electric_potential7.svg %}){: .centered :}
 
-<p class="caption">The charge in the center is $Q$. Test charge $q$ is shown at two different distances, $a$ and $b$. The circles are "equipotential contours". </p>
-
-Every point on a circle has the same potential. 
+<p class="caption">The charge in the center is $Q$. The circles are "equipotential contours". Test charge $q$ is shown at two different distances, $a$ and $b$. If $q$ isn't there, the potential still exists. </p>
 
 Images like this don't do a great job showing the magnitude falling off as $1/r$. You have to imagine that in your head.
 
 ## Electric potential difference
 
-As we did before, we move a test charge from $a$ to $b$, but this time we make $q$ a *unit* text charge and we measure the difference in *potential* instead of of potential energy. 
+As we did before, we move a test charge from $a$ to $b$, but this time we make $q$ a *unit* test charge and we measure the difference in *potential* instead of potential energy. 
 
 Compute the potential at the starting point and the ending point. Then subtract start from the end,
 
@@ -349,7 +345,9 @@ The voltage between points $a$ and $b$ is,
 
 $V\_{ab} = \text{electric potential difference}_{ab} =\dfrac{U_b}{q} - \dfrac{U_a}{q}$
 
-This is the formal definition of voltage. Voltage is measured it in units of *volts*, in honor the inventor of the battery. 
+This is the formal definition of voltage. 
+
+Voltage is measured it in units of *volts*, to honor the inventor of the battery. 
 
 ### Voltage near a point charge
 
@@ -361,11 +359,15 @@ $V\_{ab} = \dfrac{Q}{4\pi\epsilon_0} \dfrac{1}{b} - \dfrac{Q}{4\pi\epsilon_0} \d
 
 $V\_{ab} = \dfrac{Q}{4\pi\epsilon_0} \left (\dfrac{1}{b} - \dfrac{1}{a} \right )$
 
+These are the same equations as potential energy, but $q$ doesn't appear on the right side.
+
 ## Concept check
 #### Problem 1: Voltage near a point charge
 {:.no_toc}
 
-Let point charge $Q = 1\,\text{nC}$
+Let point charge $Q = 1\,\text{nC}$. 
+
+This is about how much charge you accumulate if you rub your feet on carpet on a dry day.
 
 **What is the voltage (the potential difference) between a point $1\,\text{cm}$ away and $3\,\text{cm}$ away from $Q$?**
 
@@ -377,8 +379,6 @@ The point farther away is at a lower potential, so we'll call that $a$.
 
 $a = 0.03\,\text m$, $b = 0.01\,\text m$
 
-$\dfrac{1}{4\pi\epsilon_0} = 9\times 10^9 \,\text{n\-m}^2/\text C^2$
-
 $V\_{ab} = \dfrac{Q}{4\pi\epsilon_0} \left (\dfrac{1}{b} - \dfrac{1}{a} \right )$
 
 $V\_{ab} = (1\times 10^{-9}\,\text{C}) \cdot (9 \times 10^9\,\text{n\-m}^2/\text C^2) \cdot \left (\dfrac{1}{0.01\,\text m} - \dfrac{1}{0.03\,\text m} \right )$  
@@ -389,6 +389,8 @@ $V\_{ab} = (9) \cdot (66.6)$
 
 $V\_{ab} = 600\,\text V$
 {% endcapture %}{% include details.html %} 
+
+The voltage is quite high. Imagine how high it gets as you reach to touch a door knob. Redo the calculation as your finger gets closer to the metal knob.
 
 #### Problem 2: Dimensional analysis
 {:.no_toc}
@@ -463,21 +465,21 @@ Kip, A. H. (1969), *Fundamentals of Electricity and Magnetism* (2nd edition, McG
 
 ### Absolute voltage
 
-We defined voltage in terms of the difference in electric potential at two locations, the potential difference between here and there. Voltage is based on the difference in potential between two points. Is there a notion of an *absolute* potential difference (an absolute voltage)? Is there an answer to, "Tell me the voltage <u>here</u> without reference to some other point."? Yes, there is, in a sense. 
+We defined voltage in terms of the difference in electric potential at two locations, the potential difference between here and there. Voltage is the difference in potential between two points. 
 
-The convention is to define $v=0$ at infinity. With this convention, a meaning for absolute voltage emerges. If you make the starting location $a = \infty$, the voltage at a location $r$ away from a point charge becomes,
+Is there a notion of an *absolute* potential difference (an absolute voltage)? Is there an answer to, "Tell me the voltage <u>here</u> without reference to some other point."? Yes there is, in a sense. 
+
+The convention is to say $v=0$ at infinity. With this convention a meaning for absolute voltage emerges. Starting at location $a = \infty$, the voltage at a location $r$ away from a point charge becomes,
 
 $\text{V}_{r} = \left (\dfrac{Q}{4\pi\epsilon_0} \dfrac{1}{r} \right ) - \cancel{\left (\dfrac{Q}{4\pi\epsilon_0} \dfrac{1}{\infty} \right )}$
 
-The term with $1/\infty$ goes to zero. 
-
-The absolute voltage at a location is the external work required to bring a unit test charge from infinity up to some location $r$. 
+The second term goes to zero. This make the absolute voltage at a location the external work required to bring a unit test charge "up from" infinity to location $r$, 
 
 $\text{V}_{r}  = \dfrac{Q}{4\pi\epsilon_0} \dfrac{1}{r}$
 
 This isn't magic. It's just a turn of phrase or verbal sleight-of-hand. Absolute voltage is the same as saying the voltage at location $r$ is the potential difference between $r$ and infinity. It works as long as everyone in the conversation shares the assumption that the reference point for zero voltage is out at infinity. It is always safe to stick with the definition: voltage is a potential difference.
 
-Note: The concept of absolute voltage is rarely used. It's best to have two points in mind when talking about voltage.
+Caution: The concept of absolute voltage is rarely used. You measure voltages with your voltmeter. It probably didn't come with a black probe cable that reaches to infinity. It's best to have two points in mind when talking about voltage. 
 
 ### How much is a volt?
 
