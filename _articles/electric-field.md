@@ -28,9 +28,9 @@ We introduce electric fields starting with static charges. Even though the elect
 
 {% capture summary %}What is a field?{% endcapture %}  
 {% capture details %}  
-A *field* is a physical quantity that has a value everywhere in space. As an example, temperature is a field. Every point in space has a temperature. Since temperature is a scalar quantity (has magnitude but does not have direction) it is called a *scalar field*. Water pressure at different depths in the ocean is another example of a scalar field. 
+A *field* is a physical quantity that has a value everywhere in space. As an example, temperature is a field. Every point in space has a temperature. Since temperature is a scalar quantity (has magnitude but does not have direction) it is called a *scalar field*. 
 
-Wind is another type of field. At every point in the atmosphere the air is moving at some speed in some direction. That means each point in space is associated with a vector quantity. That makes wind a *vector field*. Gravity is another example of a vector field. 
+Wind is another type of field. At every point in the atmosphere the air is moving at some speed in some direction. That means each point in space is associated with a vector quantity. That makes wind a *vector field*. Gravity and magnetism are other examples of a vector field. 
 {% endcapture %}{% include details.html %}
 
 ## Coulomb's Law
