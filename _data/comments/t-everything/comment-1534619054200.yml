@@ -1,0 +1,7 @@
+_id: 7f2f0d20-a319-11e8-be2c-8d65cf80d10f
+_parent: 'https://spinningnumbers.org/t/everything.html'
+replying_to: '2'
+message: "Simulators turn a \"natural device\" into a collection of basic elements (resistors, capacitors, diodes, and dependent voltage or current sources). See for example the Ebers-Moll model (https://en.wikipedia.org/wiki/Bipolar_junction_transistor#Ebers%E2%80%93Moll_model).\r\n\r\nThe simulator builds a matrix with these device models plus the resistors and capacitors you add yourself. The matrix is solved to get the node voltages and element currents. The method is a lot like the Node Voltage Method https://spinningnumbers.org/a/node-voltage.html."
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2018-08-18T19:04:14.200Z'
