@@ -13,12 +13,12 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   viewBox="0 0 513.5462 164.04023"
+   viewBox="0 0 513.5462 130.62651"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
    sodipodi:docname="thevenin0.svg"
    width="513.54614"
-   height="164.04022"><metadata
+   height="130.62651"><metadata
      id="metadata4923"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -75,10 +75,10 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.1975555"
-     inkscape:cx="255.93804"
-     inkscape:cy="71.111807"
-     inkscape:window-x="0"
+     inkscape:zoom="1.2520783"
+     inkscape:cx="256.77307"
+     inkscape:cy="37.698109"
+     inkscape:window-x="13"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="Layer_1" /><style
@@ -426,7 +426,7 @@
      class="st23 st24"
      id="text4877-99"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="119.91573"
+     x="125.91573"
      y="52.074295"
      sodipodi:linespacing="125%"><tspan
        style="font-size:22.5px"
@@ -458,7 +458,11 @@
        style="font-size:16.25px"
        id="tspan8423"
        dy="6">N</tspan></text>
-<text
+<path
+     style="opacity:1;fill:#666666;fill-rule:evenodd;stroke:#666666;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
+     d="m 234.50338,65.130197 49.67933,0"
+     id="path7491"
+     inkscape:connector-curvature="0" /><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="63.545742"
@@ -469,28 +473,4 @@
        id="tspan7759"
        x="63.545742"
        y="162.58655" /></text>
-<text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:138.99999857%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="81.185829"
-     y="153.7326"
-     id="text7477-9"
-     sodipodi:linespacing="139%"><tspan
-       sodipodi:role="line"
-       x="81.185829"
-       y="153.7326"
-       id="tspan7481-2"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:138.99999857%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Thévenin</tspan></text>
-<text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:138.99999857%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="377.06949"
-     y="153.7326"
-     id="text7477-6"
-     sodipodi:linespacing="139%"><tspan
-       sodipodi:role="line"
-       x="377.06949"
-       y="153.7326"
-       id="tspan7481-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:138.99999857%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Norton</tspan></text>
 </svg>

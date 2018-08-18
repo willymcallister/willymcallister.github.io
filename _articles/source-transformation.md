@@ -12,9 +12,10 @@ The *Norton* form is a current source in parallel with a resistor.
 
 ![Thévenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
 
-You can convert between Thévenin and Norton forms. This is called *source transformation*. 
+You can convert between Thévenin and Norton forms.  
+This is called *source transformation*. 
 
-Explained by Willy McAllister.
+Written by Willy McAllister.
 
 (These names are used in the United States. If you learned other names, please let me know.)
 
@@ -133,43 +134,39 @@ The result resembles the tilted $i$-$v$ line of a resistor, but shifted away fro
 #### EE cleverness
 {:.no_toc}
 
-Let's see if we can get the circuit to tell us its $i$-$v$ graph. 
+We expect the $i$-$v$ curve to be a straight line, since it's made from the sum of two lines. If we know two points we can create the equation of a line. Can we get the circuit to tell us two points? 
 
-We expect it to be a line, since it's made from the sum of two lines. If we know two points on the line, we can form the equation. Can we get the circuit to tell us two points? 
+Two easy points are where the line crosses the voltage axis and where it crosses the current axis. For this we need some equipment: a voltmeter, an ammeter, and a short length of wire. 
 
-Two easy points are where the line crosses the voltage axis and where it crosses the current axis. For this we need some equipment: a voltmeter, an ammeter, and a short wire. 
-
-**What could you do to find the point where the line crosses the Voltage axis?**
+**Where does the $i$-$v$ line cross the voltage axis?**
 
 <details>
 <summary>show answer</summary>
 <p>The line crosses the voltage axis when $i = 0$. How might we force $i$ to be $0$?</p> 
 <p>We could connect nothing across the port to create an open circuit,</p>
 <p><img src="/i/thevenin4.svg"></p>
-<p>With $i = 0$, measure the voltage. You can use a voltmeter or do this in your head. </p>
+<p>With $i = 0$, measure the voltage with a voltmeter or do it in your head. </p>
 <p>$v_{oc} = \text V_{\text T} = 5\,\text V$ </p>
-<p>$v_{oc}$ stands for "open circuit voltage". One point on the line, one more to go.</p>
+<p>$v_{oc}$ stands for "open circuit voltage".</p>
 <p>The open circuit voltage is the same as the voltage supply, $\text V_\text T$.</p>
 </details>
 
-**What could you do to find the point where the line crosses the Current axis?**
+**Where does the $i$-$v$ line cross the current axis?**
 
 <details>
 <summary>show answer</summary>
 <p>The line crosses the current axis when $v = 0$. How might we force $v$ to be $0$? </p>
 <p>We could connect a wire across the port to short it out,</p>
 <p><img src="/i/thevenin5.svg"></p>
-<p>With $v = 0$, you can measure the current in the wire. Insert an ammeter into the wire, or do it in your head.</p>
+<p>With $v = 0$, measure the current in the shorting wire. Insert an ammeter into the wire, or do it in your head.</p>
 <p>$-i_{sc} = \dfrac{\text V_{\text T}}{\text R_{\text T}}\quad$ (minus sign since $i$ points to the left.)</p>
 <p>$-i_{sc} = \dfrac{5\,\text V}{2000\,\Omega}$</p>
 <p>$i_{sc} = -2.5\,\text{mA}$</p>
-
-<p>$i_{sc}$ stands for "short circuit current". We have a second point on the line.</p>
-
-<p>[Caution: DO NOT short a real circuit unless you already know it can survive the abuse.]</p>
+<p>$i_{sc}$ stands for "short circuit current."</p>
+<p>[Caution: DO NOT put a short across a real circuit unless you <em>already know</em> it can survive the abuse.]</p>
 </details>
 
-**Create an equation for the line based on the two points.**
+**Create an $i$-$v$ equation based on the two points.**
 
 <details>
 <summary>show answer</summary>
@@ -280,7 +277,7 @@ Notice the current in the Norton resistor. Current in $\text R_\text N$ isn't av
 
 ## Source transformation challenge 1
 
-Both circuits generate tilted lines on the $i$-$v$ plot.
+Both circuit forms generate tilted lines on the $i$-$v$ plot.
 
 **1. Make the two circuits produce the same line.**
 
@@ -300,14 +297,14 @@ $\text V_\text T = $ \_\_\_\_\_\_\_\_
 
 <details>
 <summary>show answer</summary>
-<p>Two lines are the same if they have the same slope and the same y-intercept. Look at the two equation. Match the things that need to match.</p>
-<p>To get the slopes to match, $\text R_\text N = \text R_\text T$. The resistors have to be the same.</p>
-<p>To get the y-intercepts to match, $\text I_\text N = \text V_\text T / \text R_\text T$.</p>
-<p>This is the same as $\text V_\text T = \text I_\text N\,\text R_\text N$.</p>
-<p>If you are given one of these forms you can instantly changed it into the other with these relationships. Both circuits produce identical $i$-$v$ characteristics.</p>
+<p>Two lines are the same if they have the same slope and the same y-intercept. Look at the two equations and match the things that need to match.</p>
+<p>The slopes match if $\text R_\text N = \text R_\text T$. The resistors have to be the same.</p>
+<p>The y-intercepts match if $\text I_\text N = \text V_\text T / \text R_\text T$.</p>
+<p>This is the same as saying $\text V_\text T = \text I_\text N\,\text R_\text N$.</p>
+<p>If you are given one form you instantly changed it into the other with these relationships. Both circuits produce identical $i$-$v$ characteristics.</p>
 </details>
 
-**2. Use the component values from the Thévenin example to produce an equivalent Norton circuit.**
+**2. Use the component values from the Thévenin example above to create an equivalent Norton circuit.**
 
 $\text V_{\text T} = 5\,\text V$, $\text R_{\text T} = 2\,\text k\Omega$
 
@@ -322,7 +319,7 @@ $\text R_{\text N} =$ \_\_\_\_\_\_\_\_
 <p><img src="/i/thevenin11.svg"></p>
 </details> 
 
-**3. Now go in reverse. Use the component values from the Norton example to create an equivalent Thévenin circuit.**
+**3. Use the component values from the Norton example above to create an equivalent Thévenin circuit.**
 
 $\text I_{\text N} = 2\,\text{mA}$, $\text R_{\text N} = 500\,\Omega$
 
@@ -333,17 +330,17 @@ $\text R_{\text T} =$ \_\_\_\_\_\_\_\_
 <details>
 <summary>show answer</summary>
 <p>$\text R_\text T = \text R_\text N = 500\,\Omega$</p>
-<p>$\text V_{\text T} = \text V_{\text T} \, \text R_{\text N} = 0.002 \cdot 500 = 1\,\text V$</p>
+<p>$\text V_{\text T} = \text I_{\text N} \, \text R_{\text N} = 0.002 \cdot 500 = 1\,\text V$</p>
 <p><img src="/i/thevenin12.svg"></p>
 </details> 
 
 Notice how the conversion process resembles Ohm's Law.
 
-When you "look into" these circuits from the port you can't tell them apart. (You "look" with a voltmeter or ammeter.) They produce identical behavior for any $v$ or any $i$. This means they are equivalent and therefore interchangeable. We will take advantage of this when we put Thévenin's theorem to work in the next article.
+When you "look into" these circuits from the port you can't tell them apart. (You "look" with a voltmeter or ammeter.) They produce identical behavior for any $v$ or any $i$. This means they are equivalent and therefore interchangeable. We will take advantage of this in the next article.
 
 ## Source transformation challenge 2
 
-You can use this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[88,80,0],{"name":"Vt","value":"dc(0)","_json_":0},["4","0"]],["r",[240,80,4],{"name":"RL1","r":"","_json_":1},["7","6"]],["r",[176,64,1],{"name":"Rt","r":"","_json_":2},["5","4"]],["g",[152,144,0],{"_json_":3},["0"]],["w",[88,128,88,144]],["w",[88,144,152,144]],["w",[88,80,88,64]],["w",[88,64,128,64]],["w",[176,64,200,64]],["w",[152,144,200,144]],["w",[240,128,240,144]],["w",[240,144,224,144]],["w",[240,80,240,64]],["w",[240,64,224,64]],["r",[240,208,4],{"name":"RL2","r":"","_json_":14},["3","2"]],["r",[152,256,2],{"name":"Rn","r":"","_json_":15},["0","1"]],["g",[152,272,0],{"_json_":16},["0"]],["w",[240,256,240,272]],["w",[240,272,224,272]],["w",[240,208,240,192]],["w",[240,192,224,192]],["i",[88,256,6],{"name":"In","value":"dc(0)","_json_":21},["0","1"]],["w",[192,192,152,192]],["w",[152,256,152,272]],["w",[192,272,152,272]],["w",[88,208,88,192]],["w",[152,208,152,192]],["w",[152,192,88,192]],["w",[152,272,88,272]],["w",[88,272,88,256]],["view",-95.5,25.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) to help you with this design challenge. Open the link in another tab. Follow the steps of the challenge. To change a component value, double-click on it. At the appropriate step, click **DC** in the top menu bar to tell you the voltage and current.
+You can use this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[88,80,0],{"name":"Vt","value":"dc(0)","_json_":0},["4","0"]],["r",[240,80,4],{"name":"RL1","r":"","_json_":1},["7","6"]],["r",[176,64,1],{"name":"Rt","r":"","_json_":2},["5","4"]],["g",[152,144,0],{"_json_":3},["0"]],["w",[88,128,88,144]],["w",[88,144,152,144]],["w",[88,80,88,64]],["w",[88,64,128,64]],["w",[176,64,200,64]],["w",[152,144,200,144]],["w",[240,128,240,144]],["w",[240,144,224,144]],["w",[240,80,240,64]],["w",[240,64,224,64]],["r",[240,208,4],{"name":"RL2","r":"","_json_":14},["3","2"]],["r",[152,256,2],{"name":"Rn","r":"","_json_":15},["0","1"]],["g",[152,272,0],{"_json_":16},["0"]],["w",[240,256,240,272]],["w",[240,272,224,272]],["w",[240,208,240,192]],["w",[240,192,224,192]],["i",[88,256,6],{"name":"In","value":"dc(0)","_json_":21},["0","1"]],["w",[192,192,152,192]],["w",[152,256,152,272]],["w",[192,272,152,272]],["w",[88,208,88,192]],["w",[152,208,152,192]],["w",[152,192,88,192]],["w",[152,272,88,272]],["w",[88,272,88,256]],["view",-95.5,25.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]) to help you with this design challenge (open the link in another tab). Double-click on a component to change its value. At the appropriate step, click **DC** in the top menu bar to find the voltage and current.
 
 **1. Design your own Thévenin form. Pick any values for $\text V_\text T$ and $\text R_\text T$.**
 
@@ -380,9 +377,9 @@ $v_\text{RLTh} = $ \_\_\_\_\_\_\_\_\_ $\quad i_\text{RLTh} = $ \_\_\_\_\_\_\_\_\
 $v_\text{RLN} = $ \_\_\_\_\_\_\_\_\_ $\quad i_\text{RLN} = $ \_\_\_\_\_\_\_\_\_
 
 {:start="7"}
-**7. Plot this point on your $i$-$v$ graph.** It's not the same point as $v_{oc}$ or $i_{sc}$, but it should fall on the $i$-$v$ line you plotted.
+**7. Plot this point on your $i$-$v$ graph.** It's not the same point as $v_{oc}$ or $i_{sc}$, but it should fall somewhere on the $i$-$v$ line.
 
-If you used the simulation model to help you with this design challenge, notice the simulator didn't tell you the answer. You had to figure out the Norton equivalent on your own. However, the simulator did confirm if your answer was right or wrong. 
+If you used the simulation model notice the simulator didn't tell you the right answer. You had to figure out the Norton equivalent on your own. However, the simulator did help in the process because you could confirm if your answer was right or wrong. 
 
 ## Summary
 {:.no_toc}
