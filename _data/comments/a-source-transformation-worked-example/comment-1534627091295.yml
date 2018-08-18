@@ -1,0 +1,10 @@
+_id: 359fbe30-a32c-11e8-be2c-8d65cf80d10f
+_parent: 'http://localhost:4000/a/source-transformation-example.html'
+replying_to: '1'
+message: >-
+  Thanks for alerting me to the flaws. I changed the original example circuit
+  schematic to R2=330 to match the existing solution and the simulation models.
+  I appreciate the correction.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2018-08-18T21:18:11.294Z'
