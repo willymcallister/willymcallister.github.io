@@ -1,0 +1,10 @@
+_id: e04c5d80-a312-11e8-be2c-8d65cf80d10f
+_parent: 'https://spinningnumbers.org/a/source-transformation-example.html'
+replying_to: ''
+message: >-
+  Example circuit corrections: R2=220 and V2=0.44V.  The remainder of the
+  calculations following are incorrect also.  The final current should show
+  I=4.14mA.
+name: tblong
+email: f089720750cb4773305edcfabf12fbbf
+date: '2018-08-18T18:16:50.651Z'
