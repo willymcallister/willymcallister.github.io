@@ -1,0 +1,7 @@
+_id: 7b46cfd0-a3b0-11e8-96e5-c7f3a34e5ec1
+_parent: 'https://spinningnumbers.org/a/source-transformation.html'
+replying_to: ''
+message: "On \"Traditional circuit analysis: Write Kirchhoff’s Current Law for the top node; add up currents flowing into the node\", we see the equation:\r\n\r\nI_N - vR_N + i = 0\r\n\r\nShouldn't the second term be \"voltage divided by resistance\", i. e. \"v / R_N\"?\r\n\r\nAlso, this sentence:\r\n\r\n\"Put open and *sort* circuits across the port and \r\nmeasure with your mental multimeter.\"\r\n\r\nI think you meant:\r\n\r\n\"Put open and *short* circuits across the port and measure with your mental multimeter.\""
+name: GS
+email: e4942719ac9eeb2c44cdf9a5cefc6986
+date: '2018-08-19T13:05:01.805Z'
