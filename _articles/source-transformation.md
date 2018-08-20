@@ -212,7 +212,7 @@ Now that you've had a chance to plot the function, I will go ahead and derive th
 
 Write Kirchhoff's Current Law for the top node; add up currents flowing *into* the node,
 
-$\text I_{\text N} - {v}{\text R_{\text N}} + i = 0$
+$\text I_{\text N} - \dfrac{v}{\text R_{\text N}} + i = 0$
 
 Solve for $i$ in terms of $v,\text R_{\text N}$, and $\text I_{\text N}$,
 
@@ -237,7 +237,7 @@ Let's identify two points again, with the same open-circuit/short-circuit thing 
 
 **Find the two points where the line crosses the $v$ axis and $i$ axis.**
 
-Put open and sort circuits across the port and measure with your mental multimeter.
+Put open and short circuits across the port and measure with your mental multimeter.
 
 $(v_{oc}, 0) = ($ \_\_\_\_\_\_\_\_, $0)$   
 
