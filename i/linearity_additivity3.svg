@@ -13,9 +13,9 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   width="558.46899"
+   width="491.47714"
    height="103.26221"
-   viewBox="0 0 558.469 103.26222"
+   viewBox="0 0 491.47715 103.26222"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
    sodipodi:docname="linearity_additivity3.svg"><metadata
@@ -131,7 +131,7 @@
 <text
      class="st18 st19"
      id="text4666"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000268px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr;text-anchor:start;"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="228.24878"
      y="59.270981"
      sodipodi:linespacing="125%">amp</text>
@@ -155,7 +155,7 @@
      x="9.1423779"
      y="24.872499"
      sodipodi:linespacing="125%"><tspan
-       style="-inkscape-font-specification:'KaTeX_Main, Normal';font-family:KaTeX_Main;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22.50000268px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan77007">singer</tspan></text>
 <g
      id="g4626-9"
@@ -214,11 +214,12 @@
        id="tspan77128"
        x="62.371937"
        y="94.626091"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000268px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr;text-anchor:start">0</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">0</tspan></text>
 <flowRoot
      xml:space="preserve"
      id="flowRoot79128"
-     style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:KaTeX_Main;font-style:normal;font-weight:normal;font-size:40px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:'KaTeX_Main, Normal';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"><flowRegion
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-3.0517582e-5,0)"><flowRegion
        id="flowRegion79130"><rect
          id="rect79132"
          width="261.96228"

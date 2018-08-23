@@ -13,9 +13,9 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   width="491.47717"
+   width="491.47714"
    height="107.15224"
-   viewBox="0 0 491.47718 107.15226"
+   viewBox="0 0 491.47715 107.15226"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
    sodipodi:docname="linearity_additivity5.svg"><metadata
@@ -72,8 +72,8 @@
      id="namedview4694"
      showgrid="false"
      inkscape:zoom="1.0421348"
-     inkscape:cx="273.68218"
-     inkscape:cy="56.965341"
+     inkscape:cx="273.68215"
+     inkscape:cy="56.965337"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -113,8 +113,8 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      sodipodi:linespacing="125%" />
 <rect
-     x="210.8983"
-     y="15.734855"
+     x="210.89827"
+     y="15.734857"
      class="st17"
      width="65.55555"
      height="71.889854"
@@ -123,12 +123,12 @@
      class="st18 st19"
      id="text4666"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="222.69646"
-     y="57.826778"
+     x="222.69643"
+     y="57.826782"
      sodipodi:linespacing="125%">amp</text>
 <g
      id="g5371"
-     transform="translate(47.344645,-188.17335)"><circle
+     transform="translate(47.344615,-188.17335)"><circle
        r="19.862068"
        cy="240.34483"
        cx="61.235195"
@@ -143,14 +143,14 @@
      class="st18 st19"
      id="text4656-8"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="9.3474712"
+     x="9.3474417"
      y="92.517258"
      sodipodi:linespacing="125%"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan77007">guitar</tspan></text>
 <g
      id="g4626-9"
-     transform="matrix(0.77795789,-0.62831642,0.62831642,0.77795789,-124.21137,-69.695369)"
+     transform="matrix(0.77795789,-0.62831642,0.62831642,0.77795789,-124.2114,-69.695367)"
      inkscape:transform-center-x="1.2488349"
      inkscape:transform-center-y="-11.030809"><g
        id="g4628-7"><line
@@ -166,7 +166,7 @@
            id="path4634-1"
            inkscape:connector-curvature="0" /></g></g></g><g
      id="g4626-97"
-     transform="matrix(0.75286796,0.65817159,-0.65817159,0.75286796,186.05079,-194.82064)"><g
+     transform="matrix(0.75286796,0.65817159,-0.65817159,0.75286796,186.05076,-194.82064)"><g
        id="g4628-5"><line
          class="st5"
          x1="60"
@@ -180,7 +180,7 @@
            id="path4634-0"
            inkscape:connector-curvature="0" /></g></g></g><g
      id="g75568"
-     transform="translate(47.527164,-187.97141)"><line
+     transform="translate(47.527134,-187.97141)"><line
        style="opacity:0.9;fill:none;stroke:#000000;stroke-width:2.11360645;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="line4596-4"
        y2="240.49872"
@@ -196,7 +196,7 @@
          id="path4600-9"
          d="m 84,144 c -2.8,1.1 -6.4,2.9 -8.5,4.8 l 1.7,-4.8 -1.7,-4.8 c 2.1,1.9 5.7,3.7 8.5,4.8 z" /></g></g><g
      id="g79073"
-     transform="translate(-5.55232,-1.4442016)"><path
+     transform="translate(-5.5523496,-1.4441995)"><path
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
        id="path77004"
@@ -212,21 +212,21 @@
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></g><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="9.2574711"
-     y="25.052502"
+     x="9.2574415"
+     y="25.052504"
      id="text77126"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan77128"
-       x="9.2574711"
-       y="25.052502"
+       x="9.2574415"
+       y="25.052504"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">singer</tspan></text>
 <text
      class="st18 st19"
      id="text4656-1"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="132.86313"
-     y="42.163357"
+     x="132.8631"
+     y="42.163361"
      sodipodi:linespacing="125%">x<tspan
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan75405">1</tspan>+x<tspan
@@ -236,7 +236,7 @@
      class="st18 st19"
      id="text4668-6"
      x="391.58487"
-     y="58.163425"
+     y="58.163429"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      sodipodi:linespacing="125%">f(x<tspan
    style="font-size:64.99999762%;baseline-shift:sub"
@@ -245,6 +245,6 @@
    id="tspan75407">2</tspan>)</text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 275.60128,52.88 61.90702,0"
+     d="m 275.60125,52.880002 61.90702,0"
      id="path79067"
      inkscape:connector-curvature="0" /></svg>
