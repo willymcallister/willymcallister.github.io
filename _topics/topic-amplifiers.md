@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Amplifiers make signals bigger. Amplification is one of the basic operations of an electronic circuit. There are many kinds of amplifier designs. This section describes the *operational amplifier*, the building block of most analog electronics.
+The *operational amplifier* is the building block of analog electronics. 
 
 ----
 
