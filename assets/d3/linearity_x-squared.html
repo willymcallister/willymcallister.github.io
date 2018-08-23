@@ -110,7 +110,7 @@
     .append("text")
       .attr("dx", 6)
       .attr("dy", -6)
-      .text("y")
+      .text("f(x)")
       .style("text-anchor", "start")
       .style("fill", "black");
 
@@ -128,25 +128,7 @@
     .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Linearity article y = f(x) = x^2/16 plot
-  svgContainer
-    .append("line")
-      .style("stroke", "#11ACCD")
-      .style("stroke-width", "3px")
-      .attr("x1", xScale(ymin/2))
-      .attr("y1", yScale(ymin))
-      .attr("x2", xScale(-ymin/2))
-      .attr("y2", yScale(-ymin));
-  svgContainer
-    .append("text")
-      .attr("x", xScale(3.5))
-      .attr("y", yScale(5))
-      .text("y = 2x")
-      .style("text-anchor", "start")
-      .style("font-size", "20px")
-      .style('fill', "#11ACCD");
-
-  // Waveform - parabola
+  // Linearity article f(x) = x^2/16 parabola
   var nPoints = 100;
   var samples = d3.range(0, nPoints + 1)
   var xData = samples.map(function (i) 
@@ -172,30 +154,36 @@
       .attr("r", 5);
   svgContainer
     .append("circle")
-      .style("fill", "#1FAB54")
+      .style("fill", "orange")
       .attr("cx", xScale(8))
       .attr("cy", yScale(4))
       .attr("r", 5);
   svgContainer
+    .append("circle")
+      .style("fill", "orange")
+      .attr("cx", xScale(8))
+      .attr("cy", yScale(2))
+      .attr("r", 5);
+  svgContainer
     .append("text")
-      .attr("x", xScale(-8))
-      .attr("y", yScale(5))
-      .text("y = x")
+      .attr("x", xScale(-9))
+      .attr("y", yScale(7))
+      .text("f(x) = x")
       .style("text-anchor", "start")
       .style("font-size", "20px")
       .style('fill', "#1FAB54");
     svgContainer
     .append("text")
-      .attr("x", xScale(-4.3))
-      .attr("y", yScale(5))
+      .attr("x", xScale(-4.2))
+      .attr("y", yScale(6.7))
       .text("/16")
       .style("text-anchor", "start")
       .style("font-size", "20px")
       .style('fill', "#1FAB54");
     svgContainer
     .append("text")
-      .attr("x", xScale(-5))
-      .attr("y", yScale(5.7))
+      .attr("x", xScale(-4.6))
+      .attr("y", yScale(7.8))
       .text("2")
       .style("text-anchor", "start")
       .style("font-size", "16px")

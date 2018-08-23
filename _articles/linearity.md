@@ -7,6 +7,8 @@ comments: true
 
 The mathematical concept of *linearity* has a profound impact on electronic design. The idea itself is quite simple, but the implications have great meaning for our field. We talk about the mathematical meaning of *linear*. 
 
+Written by Willy McAllister.
+
 ----
 
 ### Contents
@@ -17,149 +19,286 @@ The mathematical concept of *linearity* has a profound impact on electronic desi
 
 ----
 
-### Where we're headed 
-{:.no_toc}
+## Preparation
 
-A function is linear in the mathematical sense if it has these properties,
+### Function notation
+
+Understanding linearity is an exercise in using function notation $f(x)$.
+
+![Function notation]({{ site.baseurl }}{% link i/linearity_fofx.svg %}){: .centered :}
+
+Whatever the input is, it is stuffed into the argument of the function. The output is $f($input$)$.
+
+If you feel rusty on function notation you can review [here](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-functions-and-function-notation/v/what-is-a-function).
+
+### Variables
+
+Three variables and a function are involved in studying linearity: $x, m, a,$ and $f(x)$.
+
+$x$ represents the input signal. It can take on any value from moment to moment.  
+
+$m$ is the slope in the line equation, $f(x) = mx + b$.  
+
+$a$ is the scaling multiplier. We use it to test $f(x)$ for the scaling property.  
+
+$f(x)$ is a function based on $x$ and other internal built-in constants like $m$.  
+
+For linear functions, $m$ is constant (has the same for every value of $x$ for all time). In math lingo $m$ is a *time-invariant constant coefficient*. If $m$ depends on $x$ then $f(x)$ is a *non-linear* function. If $m$ changes with time it is a *time-variant coefficient* and the math becomes a royal pain. We don't cover that here.
+
+## Linearity
+
+Linearity defined in the mathematical sense: A function $f$ is linear if it has these properties,
 
 Homogeneity (scaling): $f(ax) = af(x)$  
 
 Additivity: $f(x_1+x_2) = f(x_1) + f(x_2)$ 
 
-The additivity property is also referred to as *superposition*.
+The homogeneity and additivity together are called the *principle of superposition*.
 
-----
+You probably already have a sense of what *scaling* means. Consider two related physical concepts, like speed and distance. Let's say you run for $10$ minutes. Your speed and the distance you travel are related. If you run twice as fast (double your speed), then you double the distance run in $10$ minutes. If you triple your speed, you triple your distance. Distance *scales* with speed. 
 
-## Linear
+Likewise with Ohm's Law, $v = i\,\text R$. If $\text R$ is constant then voltage $v$ scales with current $i$.
 
-When something is *linear* it has the property of *scaling*. You probably already know the meaning of scaling. Suppose you think about two related physical concepts, like speed and distance. Let's say you run around outside for $10$ minutes. How are speed and distance related? If you run twice as fast (double your speed), then you double the distance you run in $10$ minutes. If you triple your speed, you triple your distance. This is called a *linear* relationship because speed and distance *scale* together. 
+{% capture summary %}Other meanings of linear{% endcapture %}  
+{% capture details %}  
+The word "linear" in everyday language describes something that is "line-ish," resembling a line. A row of trees along the street has a linear arrangement. A linear argument is one that goes straight to the point. In high school algebra, you might use the word linear to describe a straight line, $y = a\,x+b$.
 
-Another linear relationship is the cost of something. If a thing costs $\\$1$, then ten of those things cost $\\$10$. The relationship between number of things and total cost is linear.
+This terms are *not* exactly the same as what we are talking about here. All linear functions can be graphed as lines, but not all lines are linear functions. It turns out the y-intercept $b$ has to equal $0$ for a line to meet the definition of linear. (We talk about this more down below.)  
+{% endcapture %}{% include details.html %} 
 
-In the next article we will learn that some electronic devices also have linear relationships.
+{% capture summary %}Some functions are not linear{% endcapture %}  
+{% capture details %}  
+Two quantities might have a *non-linear* relationship. What does that look like? Let's say you change your run a little. This time you run a fixed distance instead of a fixed time. If you run twice as fast, the total time it takes to reach the finish line is cut in half. Speed doubled, time halved. Time does not scale with speed. In fact, they go in opposite directions. Therefore, time and speed do not have a linear relationship when the running problem is stated this way.
 
-<details>
-<summary>Other meanings of linear</summary>
-<p>The word "linear" in everyday language describes something that is "line-ish," resembling a line. A row of trees along the street has a linear arrangement. A linear argument is one that goes straight to the point.</p>
-
-<p>In high school mathematics, the word linear describes a straight line, $y = a\,x+b$. This use of the term linear is <em>not</em> what we are talking about here. It turns out $b$ has to equal $0$ for the line to meet the definition of linear. (We talk about this more down below.)</p>
-</details>
-
-<details>
-<summary>Things that are not linear</summary>
-<p>Two quantities might have a <em>non-linear</em> relationship. What does a non-linear relationship look like? Let's say you change your run a little. This time you run a fixed distance instead of a fixed time. If you run twice as fast, the total time it takes to get to the finish line is cut in half. Speed doubled, but time halved. They don't scale with each other. In fact, they go in opposite directions. So the relationship between speed and time is not linear when the running problem is stated this way. </p>
-<p>Sometimes you can dig a little deeper to find a linear relationship. In the case of running for a fixed time, there's a linear relationship is between speed and the reciprocal of time, $1/t$. Speed and $1/t$ scale up and down together.</p>
-</details>
+Sometimes you can dig a little deeper to find a linear relationship. In the case of running for a fixed time, there's a linear relationship is between speed and the reciprocal of time, $1/t$. Speed and $1/t$ scale up and down together in a linear relationship.  
+{% endcapture %}{% include details.html %} 
 
 ## Scaling (homogeneity)
 
-We can express the scaling property in mathematical notation.
-"Doubling the input doubles the output" can be written as $f(2x) = 2f(x)$. Similarly, "tripling the input triples the output" can be written as $f(3x) = 3f(x)$. And in general, 
+We can express the idea of scaling in mathematical notation, 
 
-$f(ax) = af(x)$
+"Doubling the input doubles the output"  
+- Doubling the input is expressed as $f(2x)$.  
+- Doubling the output is expressed as $2f(x)$.
 
-This is the *scaling* property. 
+If $2f(x) = 2f(x)$ for any value of $x$ that means "doubling" has the scaling property.
 
-Do you recognize it as the equation of a line? That's what it is. The line goes through the origin and has a slope of $a$. Slope and scale factor mean the same thing. The fancy mathematical word for the scaling property is *homogeneity*. 
+In general the test for scaling is,
 
-Any function that looks like a line through the origin has the scaling property. Here's a specific example, 
-Let $y = f(x) = 2x$. The scale factor is $a = 2$.
+$f(ax) \stackrel{?}{=} af(x)$
 
-![y = f(x) = 2x]({{ site.baseurl }}{% link i/linearity_2x_slope.svg %}){: .centered :}
+where $a$ is some number called the *scale factor*. This is the test for the *scaling* property. The fancy mathematical name is *homogeneity*. 
 
-If $x=2$, then $y = f(2) = 2 \cdot 2 = 4$, (blue dot).
+When you check a function for the scaling property, see if the two sides of the equation are equal. If the test passes for all values of $x$ and all values of $a$, then $f(x)$ is a linear function.
 
-If we double $x$ from $2$ to $4$, then $y = f(4) = 2\cdot 4 = 8$, (orange dot).
+The scaling property can be drawn like this,
 
-So doubling $x$ $(2 \rightarrow 4)$ exactly doubles $y$ $(4 \rightarrow 8)$. This is the scaling property in action.
+![Scaling test]({{ site.baseurl }}{% link i/linearity_scaling.svg %}){: .centered :}
+<p class="caption">If the two outputs are equal then function $f$ has the scaling property and it is a linear function.</p>
 
-Because $f(x)$ is a straight line, the scale factor, $a = 2$ *does not depend on the value of $x$*. The scale factor is the same for any $x$.
-
-If you want, pick out some points along the negative $x$-axis and verify the scaling property holds on that side of the origin.
-
-#### What if f(x) is not a line?
+#### Tripler
 {:.no_toc}
 
-If $f(x)$ is any other shape besides a line, like $f(x)=x^2$ or $1/x$ or $2^x$, the scale factor *is not* the same for every $x$, it depends on the value of $x$. Let's show an example. Let $y = f(x) = x^2/16$, the green parabola shown here,
+As a specific example, let's invent a "tripler" and ask the question, **"Is a tripler linear?"** 
 
-![y = f(x) = x^2 / 16]({{ site.baseurl }}{% link i/linearity_parabola.svg %}){: .centered :}
+A tripler is described in functional notation like this, 
 
-At $x=4$, the $y$ value is $y=4^2/16 = 1$. So the scale factor is $y/x = 1/4$. 
+$f(x) = 3x$ 
 
-At $x=8$, the $y$ value is $y=8^2/16=4$. So the scale factor is $y/x = 4/8 = 1/2$. 
+We recognize this as the equation of a line, with slope $= 3$ and a y-intercept of $0$. To prove $f(x)$ meets the definition of linear we apply the scaling test. We do this first with plain old algebra, and again by graphing.
 
-For this non-linear function, the scale factor isn't constant. It depends on where you are along the $x$-axis. This non-linear function does not have the scaling property.
+Pick an input value, say $x=4$, and perform the scaling test with a scale factor of $a = 2$. 
 
-## Adding (additivity)
+$f(x) = 3x$
 
-When a relationship is linear, we can derive an adding property. 
+$f(ax) \stackrel{?}{=} af(x)\qquad$ scaling test
 
-Let's say we have an input that happens to be the sum of two things, $(x_1 + x_2)$. The scaling equation becomes,
+$f(2x) \stackrel{?}{=} 2f(x)\qquad$ scaling test with $a = 2$
 
-$f(x_1 + x_2) = a(x_1 + x_2)$ 
+Right side: $\quad af(x) = 2f(4) = 2\,(3 \cdot 4) = \underline{24}$
 
-Using the distributive property we can multiply out the right side of the equation,
+Left side: $\quad f(ax) = f(2 \cdot 4) = 3 \cdot 8 = \underline{24}$
 
-$f(x_1 + x_2) = ax_1 + ax_2$
+Both sides produce the same result, $24$, so the scaling test passes. 
 
-Here's a nice trick: Notice $ax_1$ is the output we get if we put just $x_1$ into the function, $f(x_1) = ax_1$. If we want, we could replace $ax_1$ with $f(x_1)$ in the previous equation. Likewise, we can replace $ax_2$ with $f(x_2)$. 
+#### Graphical interpretation
+{:.no_toc}
 
-This means we can rewrite the equation this way, with both $ax$ outputs replaced with function notation,
+Here's $f(x) = 3x$ plotted as the blue line,
+
+![f(x) = 3x]({{ site.baseurl }}{% link i/linearity_3x_slope.svg %}){: .centered :}
+
+$f(x)$ looks pretty "line-ish," but does it pass the scaling test? We demonstrate the scaling test graphically by plotting some points. We start by plotting an arbitrary first point, $[x, f(x)]$. Then we scale $x$ by $a$ and generate two new points, $[ax, f(ax)]$ and $[ax, af(x)]$. If the new points land on the same spot, the scaling test passes. We use $x=4$ and $a=2$ again.
+
+$[x, f(x)] = [4, 3\cdot4] = [4, 12]$, the $\blueD{\bullet}$ blue dot on the $f(x)$ line.
+
+Apply a scale factor of $a=2$ to $x$ and generate the output two ways, 
+
+$[ax, af(x)] = [2\cdot4, 2\,(3\cdot4)] = [8, 24]$ is the $\goldC{\bullet}$ orange dot. 
+
+$[ax, f(ax)] = [2\cdot4, 3 \,(2\cdot4)] = [8, 24]$ is the same $\goldC{\bullet}$ orange dot. 
+
+Both orange dots fall on the line. This is not a coincidence. This is what the scaling property looks like in action.
+
+We did the scaling test with particular values of $a$ and $x$, but it should be clear from the math that the test passes for any value of $a$ and $x$. Any function that graphs as a line through the origin has the scaling property and is a linear function. 
+
+#### Explore
+{:.no_toc}
+
+If you want, pick out some points along the negative $x$-axis and do the scaling test again to see if it holds on that side of the origin.
+
+### What happens if f(x) is not a line?
+
+If $f(x)$ is any other shape besides a line, like $f(x)=x^2$ or $1/x$ or $\sin x$, the function does not pass the scaling test. 
+
+Let $y = f(x) = x^2/16$
+
+$f(ax) \stackrel{?}{=} af(x)\qquad$ scaling test
+
+$f(2x) \stackrel{?}{=} 2f(x)\qquad$ scaling test with scale factor $a = 2$
+
+Right side: $\quad af(x) = 2f(4) = 2\,(4^2/16) = \underline{2}$
+
+Left side: $\quad f(ax) = f(2 \cdot 4) = 8^2/16 = \underline{4}$
+
+The results, $2$ and $4$, are not the same, so the scaling test fails. We can illustrate this on the graph of the green parabola shown here,
+
+![f(x) = x^2 / 16]({{ site.baseurl }}{% link i/linearity_x_squared.svg %}){: .centered :}
+
+$[x, f(x)] = [4, 4^2/16] = [4, 1]$, the $\greenD{\bullet}$ green dot on the $f(x)$ parabola.
+
+Apply a scale factor of $a=2$ and generate the output two ways, 
+
+$[ax, af(x)] = [2\cdot4, 2\,(4^2/16)] = [8, 2]$ is the lower of the two $\goldC{\bullet}$ orange dots. 
+
+$[ax, f(ax)] = [2\cdot4, (2\cdot4)^2/16] = [8, 4]$ is the upper $\goldC{\bullet}$ orange dot. 
+
+The orange dots don't land in the same place. This is what a failed scaling test looks like.
+
+ This non-linear function does not have the scaling property.
+
+#### Explore
+{:.no_toc}
+
+Perform the scaling test on a line with a non-zero y-intercept. For example, do the scaling test on $f(x) = 3x + 1$. Is this function linear according to our definition?
+
+## Additivity
+
+When a function is linear we can derive an adding property. We showed above that linear functions have the form of a line with slope $m$ and no y-intercept,
+
+$f(x) = mx$
+
+Let's say we apply an input that happens to be the sum of two things, $(x_1 + x_2)$. The function equation becomes,
+
+$f(x_1 + x_2) = m(x_1 + x_2)$ 
+
+Multiply out the right side of the equation using the distributive property,
+
+$f(x_1 + x_2) = mx_1 + mx_2$
+
+Here's a nice trick: Notice $mx_1$ is the output of $f()$ if the input is just $x_1$, that is $f(x_1) = mx_1$. That means we can replace $mx_1$ with $f(x_1)$. Likewise, we can replace $mx_2$ with $f(x_2)$. We can rewrite the equation with both $mx$ terms replaced with function notation,
 
 $f(x_1 + x_2) = f(x_1) + f(x_2)$
 
-This is an adding property, called *additivity* in math talk. We will use this additivity property in a clever way. 
+This is the adding property, or *additivity* in math lingo. It says, the function of a sum equals the sum of the function applied to each term. 
 
-## Superposition
+![Additivity property]({{ site.baseurl }}{% link i/linearity_additivity1.svg %}){: .centered :}
+<p class="caption">The additivity property. Top: the sum of two signals applied to $f(x)$. Bottom: two signals applied individually to $f(x)$ and added together. The outputs are equal.</p>
 
-Setup: Suppose we have a signal made up of two parts, $x_1 + x_2$. Just for fun, $x_1$ could be the voice of a singer and $x_2$ could be guitar music. A microphone hears the singer's voice and the guitar at the same time, $x_1 + x_2$. The signal from the microphone goes through a *linear* amplifier to make it louder, and the song plays over loudspeakers so everyone can hear. 
+Additivity is the theoretical basis for circuit analysis. 
 
-**Question: Will the sound of the guitar change what the singer's voice sounds like?** 
+## Additivity example
 
-Let's find out with an experiment: In this experiment, $f(x)$ is the combination of microphone, linear amplifier, and speakers all together. Sound goes in, louder sound comes out. The input is (voice $+$ guitar), also known as $x_1 + x_2$. The output is the loud song, $y = f(x_1 + x_2)$.
+Suppose we have a signal made up of two parts, $x_1 + x_2$. Just for fun, $x_1$ could be the voice of a singer and $x_2$ could be guitar music. A microphone picks up the singer's voice. The sound of the strings are sensed by the guitar "pick ups." Both signals are wired to an amplifier box where they are first combined, $x_1 + x_2$, and then amplified by a *linear amplifier*. The music plays over a loudspeaker. 
+
+![Singer and guitar system]({{ site.baseurl }}{% link i/linearity_additivity2.svg %}){: .centered :}
+
+**Question: Does the guitar change what the singer's voice sounds like?** 
+
+Let's find out with an experiment: In this experiment, $f(x)$ is the linear amplifier. $f(x) = mx$. $m$ is the volume setting on the amp. Sound goes in, louder sound comes out. 
+
+The input is (voice $+$ guitar), also known as $x_1 + x_2$.  
+The output is the loud song, $y = f(x_1 + x_2)$.
 
 To tell if the guitar makes the singer sound different, we make three recordings. 
 
-1. First we ask the singer to belt out the song while the guitar player just sits there, $x_1$. The the output is, of course, the singer's amplified voice, $f(x_1)$, (top box), which we record. 
-2. Second, the singer goes on a break and the guitar player wails on his guitar, $x_2$. We record the amplified guitar by itself, $f(x_2)$, (middle box).
-3. Third, we have the singer and guitar play together at the same time and record the ampilfied sound of the full band, $f(x_1 + x_2)$, (bottom box)   
+1. We ask the singer to belt out the song $(x_1)$ while the guitar player goes off in the corner of the studio and does his math homework. The recorded output is the singer's amplified voice, $f(x_1)$. 
 
-![Demonstration of additivity]({{ site.baseurl }}{% link i/linearity_additivity2.svg %}){: .centered :}
+![Just the singer]({{ site.baseurl }}{% link i/linearity_additivity3.svg %}){: .centered :}
 
-The question is, does $f(x_1 + x_2)$ sound the same or different than $f(x_1) + f(x_2)$? We ask our sound technician to play back the voice and guitar together and we listen to $f(x_1) + f(x_2)$. Then we listen to the full band recording, $f(x_1 + x_2)$. Can we tell them apart?
+{:start="2"}
+2. Then the singer goes on break and the guitar player wails on his guitar, $x_2$. Record the guitar by itself, $f(x_2)$.
 
-The answer is: It sounds the same **if** $f(x)$ is a *linear* function. That's what the additivity equation tells us. 
+![Just the guitar]({{ site.baseurl }}{% link i/linearity_additivity4.svg %}){: .centered :}
+
+{:start="3"}
+3. We have the singer and guitar play together and record the amplified sound, $f(x_1 + x_2)$.
+
+![Singer and guitar together]({{ site.baseurl }}{% link i/linearity_additivity5.svg %}){: .centered :}
+
+The question is, does $f(x_1 + x_2)$ sound the same or different than $f(x_1) + f(x_2)$? 
+
+{:start="4"}
+4. We play back the individual voice and guitar recordings and add them together, meaning we listen to $f(x_1) + f(x_2)$. 
+
+![Playback singer and guitar]({{ site.baseurl }}{% link i/linearity_additivity6.svg %}){: .centered :}
+
+As we listen to this recording can we tell it apart from $f(x_1 + x_2)$?
+
+The additivity property tells us they are equal, 
 
 $f(x_1 + x_2) = f(x_1) + f(x_2)$
 
-When the sound technician plays back the two individual recordings added together, it sounds exactly the same as if the signer and guitarist were playing at the same time.
+Playing the two individual recordings added together sounds exactly the same as if the signer and guitarist were playing at the same time.
 
-The additivity property of linear functions is called [*superposition*]({{ site.baseurl }}{% link _articles/superposition.md %}). Individual parts of a complicated input can be *superimposed* on each other (added) after they come out of the function. This is the basis of a circuit analysis technique with the same name. 
+Both recordings sound exactly the same as long as $f(x)$ is a *linear* amplifier. That means the guitar has no effect on the singer's voice coming through the system. Both signals pass through without regard for whatever else is playing.
 
-Superposition is put to brilliant use in the [Mesh current method]({{ site.baseurl }}{% link _articles/mesh-current.md %}) and in many other engineering areas. This might not seem like a big deal, but it is a huge deal for electronics systems, especially signal processing.
+{% capture summary %}Do non-linear functions have the additivity property?{% endcapture %}  
+{% capture details %}  
+Non-linear functions *do not* have the additivity property. 
 
-At it's heart, superposition tells us we can take a complex signal (the sum of many things) and break it up into as many simple pieces as we want. We put the simple inputs through the function, and add up the outputs on the output side. We avoid the gnarly math that might be forced on us by the original complex signal, and we still get the right answer. 
+If the amplifier was *non-linear* the singing voice *would* be modified by the guitar. Depending on the nature of the non-linearity the effect could be, for example, the singer's voice sounds louder when the guitar is loud. That's not something you want in a hit recording
 
-<details>
-<summary>Do non-linear functions have the additivity property?</summary>
-<p>No. If $f(x)$ is not linear, and we put $x_1+x_2$ into the input, the output does not come out as the sum of $f(x_1)+f(x_2)$. Instead, the output can be a complicated mash-up of the two inputs.</p>
+$f(x_1 + x_2)\stackrel{?}{=} f(x_1) + f(x_2)\qquad$ additivity test
 
-<p>Imagine we can build a non-linear function that squares its input, a "squarer."</p>
+If $f(x)$ is not linear and we put $x_1+x_2$ into the input, the output does not come out as the sum of $f(x_1)+f(x_2)$. Instead, the output can be a complicated mash-up of the two inputs. Imagine we build a non-linear function that squares its input, a "squarer."
 
-<img class="centered" src="https://ka-perseus-images.s3.amazonaws.com/0665980fd89073fabbe886565458e7c843f68c0c.svg" height="120px">
+![f(x) is a squarer function]({{ site.baseurl }}{% link i/linearity_squarer.svg %}){: .centered :}
 
-<p>$f(x) = x^2$.</p>
-<p>If $x = 3$, then $f(3) = 9.$</p>>
-<p>If $x = 0.5$, then $f(0.5) = 0.25.$</p>
+$f(x) = x^2$
 
-<p>Now imagine we have two separate inputs, $a$ and $b$, that we add together and put into our "squarer". What comes out?</p>
+If $x = 3$, then $f(3) = 9$. If $x = 0.5$, then $f(0.5) = 0.25$.
 
-<p>$f(a+b) = (a+b)^2$</p>
+Now imagine we have two separate inputs, $a = 2$ and $b = 3$. We add them together and put the sum into our "squarer". What comes out?
 
-<p>$(a+b)^2 = a^2+2ab+b^2$</p>
+$f(2+3) = (2+3)^2 = 25$
 
-<p>The $a^2$ and $b^2$ are the squarer function operating on the two inputs. But look at that middle term, $2ab$. It represents a mixture of the two input signals. To figure out the output, you have to know the moment-to-moment relationship between $a$ and $b$. The extra $2ab$ term means this squarer function does not have the additivity property.</p>
-</details>
+If we put in the two inputs individually, what comes out?
+
+$f(2) + f(3) = 2^2 + 3^2 = 4 + 9 = 13 \ne 25$
+
+With these values the squarer does not pass the additivity test.
+
+With symbols,
+
+$f(a+b) = (a+b)^2 = a^2+2ab+b^2$
+
+$f(a) + f(b) = a^2 + b^2$
+
+The $f(a+b)$ output includes that middle term, $2ab$. The $2ab$ term is a mixture of the input signals. The extra $2ab$ term is why this squarer function does not have the additivity property. 
+
+Let's do the numerical example again. See how the $2ab = 12$ term messes up the additivity property?
+
+$f(2+3) = 2^2 + 2(2\cdot 3) + 3^2 = 4 + 12 + 9 = 25$
+{% endcapture %}{% include details.html %} 
+
+## Superposition
+
+The scaling and additivity properties of linear functions together are called the *principle of superposition*. It is the basis of a [circuit analysis technique]({{ site.baseurl }}{% link _articles/superposition.md %}) with the same name. 
+
+Superposition is also put to brilliant use in the [Mesh current method]({{ site.baseurl }}{% link _articles/mesh-current.md %}). It is used in many other engineering areas. Superposition might not seem like a big deal, but it is a huge deal for electronics systems, especially signal processing.
+
+At it's heart, superposition tells us we can take a complex signal (the sum of many simple things) and break it up into its component pieces. We put the simple inputs through the function one by one and add up the outputs. It's a way to avoid the gnarly math of analyzing the original complex signal and still get the right answer. 
 
 In the next article, [Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %}), we test to see if our favorite electronic components, $\text{R, L, and C}$ are linear functions.
 
@@ -172,6 +311,6 @@ Homogeneity (scaling): $f(ax) = af(x)$
 
 Additivity: $f(x_1+x_2) = f(x_1) + f(x_2)$
 
-The additivity property gives rise to a new way to analyze circuits and systems called *superposition*.
+These properties together are called the *principle of superposition*.
 
     

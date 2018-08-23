@@ -18,7 +18,7 @@
    viewBox="0 0 558.469 103.26222"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="linearity_additivity2.svg"><metadata
+   sodipodi:docname="linearity_additivity4.svg"><metadata
      id="metadata4698"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -72,8 +72,8 @@
      id="namedview4694"
      showgrid="false"
      inkscape:zoom="1.0421348"
-     inkscape:cx="283.55256"
-     inkscape:cy="-25.134397"
+     inkscape:cx="279.23451"
+     inkscape:cy="51.631106"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -123,13 +123,11 @@
      class="st18 st19"
      id="text4656"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="143.16208"
+     x="175.05182"
      y="43.270943"
      sodipodi:linespacing="125%">x<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan75405">1</tspan>+x<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan75403">2</tspan></text>
+   style="font-size:65.00000954%;baseline-shift:sub"
+   id="tspan77149">2</tspan></text>
 <text
      class="st18 st19"
      id="text4666"
@@ -154,20 +152,11 @@
      class="st18 st19"
      id="text4656-8"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="9.1423779"
-     y="24.872499"
+     x="14.899791"
+     y="93.961456"
      sodipodi:linespacing="125%"><tspan
-       style="-inkscape-font-specification:'KaTeX_Main, Normal';font-family:KaTeX_Main;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22.50000268px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-       id="tspan77007">singer</tspan></text>
-<text
-     class="st18 st19"
-     id="text4662-3"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="9.7749996"
-     y="88.649712"
-     sodipodi:linespacing="125%"><tspan
-       style="-inkscape-font-specification:'KaTeX_Main, Normal';font-family:KaTeX_Main;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:22.50000268px;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
-       id="tspan77009">guitar</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan77007">guitar</tspan></text>
 <g
      id="g4626-9"
      transform="matrix(0.77795789,-0.62831642,0.62831642,0.77795789,-118.65905,-68.251167)"
@@ -214,9 +203,21 @@
          style="stroke-width:0.69588858;stroke-miterlimit:4;stroke-dasharray:none"
          inkscape:connector-curvature="0"
          id="path4600-9"
-         d="m 84,144 c -2.8,1.1 -6.4,2.9 -8.5,4.8 l 1.7,-4.8 -1.7,-4.8 c 2.1,1.9 5.7,3.7 8.5,4.8 z" /></g></g><g
+         d="m 84,144 c -2.8,1.1 -6.4,2.9 -8.5,4.8 l 1.7,-4.8 -1.7,-4.8 c 2.1,1.9 5.7,3.7 8.5,4.8 z" /></g></g><text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="57.574093"
+     y="26.496704"
+     id="text77126"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan77128"
+       x="57.574093"
+       y="26.496704"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000268px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr;text-anchor:start">0</tspan></text>
+<g
      id="g79073"
-     transform="translate(1.87356,-1.5772434)"><path
+     transform="translate(0.69368899,-0.61767454)"><path
        sodipodi:nodetypes="cccccc"
        inkscape:connector-curvature="0"
        id="path77004"
@@ -232,16 +233,14 @@
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></g><text
      class="st18 st19"
      id="text4668-6"
-     x="399.01077"
-     y="58.030388"
+     x="397.8309"
+     y="58.98996"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      sodipodi:linespacing="125%">f(x<tspan
    style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan75409">1</tspan> +x<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan75407">2</tspan> )</text>
+   id="tspan75407">2</tspan>)</text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.00000024;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 283.02719,52.746965 61.90703,0"
+     d="m 281.84733,53.706533 61.90703,0"
      id="path79067"
      inkscape:connector-curvature="0" /></svg>

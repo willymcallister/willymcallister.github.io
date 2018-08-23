@@ -44,11 +44,11 @@
   var padding = 50;                                       // padding inside border
 
   var 
-      xmin = -10,
-      xmax = +10,
-      ymin = -10,
-      ymax = +10,
-      scale = 15,
+      xmin = -30,
+      xmax = +30,
+      ymin = -30,
+      ymax = +30,
+      scale = 6,
       width  = (xmax - xmin) * scale,     // width of graph axes pixels
       height = (ymax - ymin) * scale,     // height of graph axes pixels
       xOrigin = -(xmin * scale);          // pixels
@@ -110,7 +110,7 @@
     .append("text")
       .attr("dx", 6)
       .attr("dy", -6)
-      .text("y")
+      .text("f(x)")
       .style("text-anchor", "start")
       .style("fill", "black");
 
@@ -128,32 +128,32 @@
     .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Linearity article y = f(x) = 2x plot
+  // Linearity article f(x) = 3x 
   svgContainer
     .append("line")
       .style("stroke", "#11ACCD")
       .style("stroke-width", "3px")
-      .attr("x1", xScale(ymin/2))
+      .attr("x1", xScale(ymin/3))
       .attr("y1", yScale(ymin))
-      .attr("x2", xScale(-ymin/2))
+      .attr("x2", xScale(-ymin/3))
       .attr("y2", yScale(-ymin));
   svgContainer
     .append("circle")
       .style("fill", "#11ACCD")
-      .attr("cx", xScale(2))
-      .attr("cy", yScale(4))
+      .attr("cx", xScale(4))
+      .attr("cy", yScale(12))
       .attr("r", 5);
   svgContainer
     .append("circle")
       .style("fill", "orange")
-      .attr("cx", xScale(4))
-      .attr("cy", yScale(8))
+      .attr("cx", xScale(8))
+      .attr("cy", yScale(24))
       .attr("r", 5);
   svgContainer
     .append("text")
-      .attr("x", xScale(4))
-      .attr("y", yScale(5))
-      .text("y = 2x")
+      .attr("x", xScale(-20))
+      .attr("y", yScale(-16))
+      .text("f(x) = 3x")
       .style("text-anchor", "start")
       .style("font-size", "20px")
       .style('fill', "#11ACCD");
