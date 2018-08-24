@@ -1,17 +1,17 @@
 ---
 layout: article
-title:  "Source transformation - worked example"
+title:  "Source transformation - example"
 author: Willy McAllister
 comments: true
 ---
 
-In this worked example we use  *source transformation* to simplify a circuit.
+In this worked example we use source transformation to simplify a circuit.
 
 ![Thévenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
 
 Source transformation is explained [here]({{ site.baseurl }}{% link _articles/source-transformation.md %}).
 
-Explained by Willy McAllister.
+Written by Willy McAllister.
 
 ----
 
@@ -27,11 +27,13 @@ Explained by Willy McAllister.
 
 Source transformation between Thévenin and Norton forms,
 
-The resistor value is the same for the Thévenin and Norton forms, $\text R_\text T = \text R_\text N$.
+![Thévenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
 
-Convert Thévenin to Norton: set $\text I_\text N = \text V_\text T / \text R_\text T$.  
+* The resistor value is the same for the Thévenin and Norton forms, $\text R_\text T = \text R_\text N$.
 
-Convert Norton to Thévenin: set $\text V_\text T = \text I_\text N \, \text R_\text N$. 
+* Convert Thévenin to Norton: set $\text I_\text N = \text V_\text T / \text R_\text T$.  
+
+* Convert Norton to Thévenin: set $\text V_\text T = \text I_\text N \, \text R_\text N$. 
 
 Thévenin and Norton forms are *equivalent* because they have the same $i$-$v$ behavior from the viewpoint of the output port.
 
@@ -39,9 +41,10 @@ Thévenin and Norton forms are *equivalent* because they have the same $i$-$v$ b
 
 Think about source transformation when the problem asks you about a single voltage or current for one specific component. Everything besides that one component is a candidate for source transformation.
 
-The **One Rule**: Don't include the component with the requested $i$ or $v$ in a source transformation. 
+The **One Rule** is,  
+Don't include the component with the requested $i$ or $v$ in a source transformation. 
 
-The general strategy,
+The strategy,
 * Read the problem carefully. Identify what is asked for.
 * Scan the circuit. Look for the familiar pattern of the two forms, 
   * Thévenin form is a voltage source in series with a resistor.
@@ -52,7 +55,7 @@ The general strategy,
 * Redraw the circuit and look for another chance to transform sources.
 * Solve for the asked-for variable in the simpler circuit.
 
-## Example circuit 
+## Example 
 
 **Find $\blueD i$.**
 

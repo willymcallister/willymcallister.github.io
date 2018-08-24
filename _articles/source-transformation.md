@@ -384,6 +384,8 @@ If you used the simulation model notice the simulator didn't tell you the right 
 ## Summary
 {:.no_toc}
 
+Consider source transformation when you see the pattern of a source and a resistor. 
+
 Thévenin's circuit is a voltage source in series with a resistor.
 
 Norton's circuit is a current source in parallel with a resistor.
@@ -398,24 +400,28 @@ When circuits produce the same $i$-$v$ curve from the viewpoint of a selected po
 
 You can swap a Norton for a Thévenin or the other way round any time you want.
 
-Source transformation stands on the shoulders of Ohm's Law and Kirchhoff's Laws. It is useful when you come across the pattern of a source and a resistor. 
+To find the Thévenin and Norton component values we left the port open and measured the open circuit voltage, $v_{oc}$. Then we placed a short across the port and measured the short circuit current, $i_{sc}$.
 
-Don't short out real electronic equipment to find $i_{sc}$. That is a recipe for smoke.
+Caution: Shorting out real electronic equipment to find $i_{sc}$ is a recipe for smoke.
 
-The next article shows how to apply [source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %}).
+The next article is an example of how to apply [source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %}).
 
-<details>
-<summary>Aren't there other circuits with one source and one resistor?</summary>
-<p>After so much talk about Thévenin and Norton circuits, it's an obvious question to ask about the other two possibilities. Consider,</p>
+{% capture summary %}Aren't there other circuits with one source and one resistor?{% endcapture %}  
+{% capture details %}  
+After so much talk about Thévenin and Norton circuits, it's an obvious question to ask about the other two possibilities. Consider,
 
-<ul>
-    <li>Voltage source in parallel with a resistor</li>
-    <li>Current source in series with a resistor</li>
-</ul>
+* Voltage source in parallel with a resistor
+* Current source in series with a resistor
 
-<p>Give this a little thought for a second or two. What does the resistor do in these alternatives?</p>
-<p>The resistors don't do anything in either circuit.</p>
-<p>If you put a resistor in parallel with a voltage source it has no effect on the voltage, and it doesn't influence $i$. All you do is pull some extra current out of the ideal voltage source, a current we can't observe from the port. Who cares if there's a resistor in parallel with the ideal voltage source? The resistor is useless.</p>
-<p>The same goes for the resistor in series with a current source. The source pushes its current through the resistor no matter what the resistor value is. The resistor just forces the ideal current source to create some extra voltage to drive the required current. We can't observe the source voltage from the port.</p>
-<p>So after some thought, these two variations don't make sense and therefore don't matter to us.</p>
-</details>
+![Other resistor and source circuits]({{ site.baseurl }}{% link i/thevenin50.svg %})
+
+Give this a little thought for a second or two. What does the resistor do?
+
+The resistors don't do anything in either circuit.
+
+If you put a resistor in parallel with a voltage source it has no effect on the voltage, and it doesn't influence $i$. All you do is pull some extra current out of the ideal voltage source, a current we can't observe from the port. Who cares if there's a resistor in parallel with the ideal voltage source?
+
+The same goes for the resistor in series with a current source. The source pushes its current through the resistor no matter what the resistor value is. The resistor just forces the ideal current source to create some extra voltage to drive the required current. We can't observe the voltage across the current source from the port.
+
+These two variations don't make sense and therefore don't matter to us.  
+{% endcapture %}{% include details.html %} 
