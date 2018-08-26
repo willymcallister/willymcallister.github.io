@@ -1,0 +1,7 @@
+_id: 267ef920-a930-11e8-a35f-f529256716de
+_parent: 'https://spinningnumbers.org/a/source-transformation.html'
+replying_to: ''
+message: "In one of my old high school textbooks, the current in the Thévenin circuit was drawn in a rightwards direction (from the resistor outwards, towards the upper right port), thus avoiding the need of correcting the equations with a minus sign, and mirror flipping the i-v plot over the v axis.\r\nIn fact, the equation of the line in this specific example would have been:\r\n\r\ni(v) = 5/2000 - (1/2000)v\r\n\r\n(Unfortunately, I cannot add a picture here for reference).\r\n\r\nDo you think the two methods are equivalent? Or maybe one has advantages over the other?"
+name: GS
+email: e4942719ac9eeb2c44cdf9a5cefc6986
+date: '2018-08-26T13:01:31.107Z'

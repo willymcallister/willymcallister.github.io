@@ -1,0 +1,7 @@
+_id: 4bcea120-a954-11e8-a35f-f529256716de
+_parent: 'https://spinningnumbers.org/a/source-transformation.html'
+replying_to: '3'
+message: "Both methods are equivalent. As long as you carry through consistently starting with the current arrow all the way through the equation you will get the right answer.\r\n\r\nI learned the \"arrow points in\" convention in my class on Network Theory. This is where you learn about frequency filters. In that class there are lots of boxes with ports hooked to each other, and if we weren't taught a convention for the current arrow on each network box it would have been chaos. (Voltage is easier, positive voltage is always up on the page.) My thought was to gently introduce that convention here in Source Transformation. It's a good flexibility exercise for your engineering mind to handle minus signs without fear."
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2018-08-26T17:20:15.415Z'
