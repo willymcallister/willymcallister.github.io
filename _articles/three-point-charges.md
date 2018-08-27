@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-Under construction.
-
 Use Coulomb's Law to find the force on a charge from two nearby charges. 
+
+![Three point charges]({{ site.baseurl }}{% link i/three_point_charges0.svg %}){: .centered :}
 
 Written by Willy McAllister. 
 
@@ -21,141 +21,216 @@ Written by Willy McAllister.
 
 ----
 
-### Where we're headed 
+### Where we are headed 
 {:.no_toc}
 
-With more than two point charges pushing and pulling on each other, use Coulomb's Law to find the force between pairs of charges. Then combine the forces with vector addition.
+When you have more than two point charges pushing and pulling on each other, use Coulomb's Law to find the force between pairs of charges. Then combine the forces with vector addition.
+
+We use the Law of Cosines and the Law of Sines to solve force triangles.
 
 ----
 
 ## Coulomb's Law
 
-[Coulomb's Law]({{ site.baseurl }}{% link _articles/electric-force.md %}) predicts the force between a pair of charges, $q_0$ and $q_1$,
+[Coulomb's Law]({{ site.baseurl }}{% link _articles/electric-force.md %}) predicts the force between pairs of charges,
 
 $\vec F = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_1}{r^2}\,\bold{\hat r_{01}}$
 
+$q_0$ and $q_1$ are the two point charges involved.  
 $r$ is the distance between the charges.
 
-$\bold{\hat r_{01}}$ is a vector with length $1$ pointing from one charge to the other. We include this to make the right side of the equation a vector. $\bold{\hat r}$ is pronounced "r hat."
+$\bold{\hat r_{01}}$ is a unit vector (length $1$) pointing from one charge to the other. We include this to make the right side of the equation a vector. $\bold{\hat r}$ is pronounced "r hat."
 
 $\epsilon_0$ is a [constant]({{ site.baseurl }}{% link _articles/electric-force.md %}#epsilon_0-permittivity-of-free-space) equal to $8.85 \times 10^{-12}$ coulomb$^2/$newton-meter$^2$.
 
-$\dfrac{1}{4\pi\epsilon_0} = 9\times 10^9$ newton-meter$^2/$coulomb$^2$.
+$K = \dfrac{1}{4\pi\epsilon_0} = 9\times 10^9$ newton-meter$^2/$coulomb$^2$
 
 ## Multiple charges
 
-Suppose you have more than two charges. How do you find the force on one of the charges from all the others?
+How do you find the force on one charge caused by several others?
 
-If you have multiple point charges tugging and pushing on each other, you might think the forces tangle and change each other. Nope, that is not what happens. It is simpler than that. The pair-wise forces are independent. Each pair-wise force obeys Coulomb's Law, and combines with the others by superposition.
+If you have multiple point charges tugging on each other you might wonder if the forces somehow get tangled and warp each other. Nope, that is not what happens. It is simpler than that. The pair-wise forces are independent. Each pair-wise force obeys Coulomb's Law, and combines with the other forces by vector addition. If charges $1$ and $2$ are near charge $0$, there is no sense in which charge $3$ "saps" or "absorbs" the ability of charge $2$ to generate an electric force on charge $0$.
 
-Suppose you have $N$ different point charges surrounding one charge you've picked to be your favorite, $q_0$. You find the force on $q_0$ from each individual charge, $q_1 \ldots q_N$. Then you add up all the force vectors using vector addition. In algebraic notation we write this as,
+Suppose you have $N$ point charges surrounding one charge. You've picked $q_0$ to be your favorite. Find the force on $q_0$ by adding up the pair-wise force vectors from charges $q_1 \ldots q_N$ using vector addition. In algebraic notation we write this as,
 
-$\displaystyle \vec F_N = \sum_{n=1}^N \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_n}{r_{0n}}\,\bold{\hat r_n}$
+$\displaystyle \vec F_0 = \sum_{n=1}^N \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_n}{r_{0n}}\,\bold{\hat r_n}$
 
-The first example has three charges arranged in a simple geometry. We'll do this simple one first to show how forces add. Then we'll do a second example with a more challenging geometry.
+We will work through an example with three charges, but before diving in let's review a little triangle theory.
 
-## Example 1 force between three point charges
+## Triangles
+
+Solving the force with three point charges is basically an exercise in solving triangles. There will be two triangles involved,
+
+* A physical triangle with three charges on the corners. 
+* A different triangle of force vectors pushing or pulling on the selected charge.
+
+Sometimes a test question is designed to give you a simple force triangle you can solve in your head, but usually the force triangle isn't that easy. We will cover a general method for solving any triangle based on the Law of Cosines and the Law of Sines.
+
+Here is an arbitrary triangle with its sides and angles labeled,
+
+![Arbitrary triangle]({{ site.baseurl }}{% link i/law_of_cosines_sines.svg %}){: .centered :}
+
+<p class="caption">The sides are $a$, $b$, and $c$. The angles are $\alpha$, $\beta$, and $\gamma$. Naming convention: The angles (Greek alphabet) are opposite their corresponding side (Latin alphabet). $\alpha$ is opposite $a$, etc.</p> 
+
+### Law of Cosines
+
+The [Law of Cosines](https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-law-of-cosines/v/law-of-cosines) has three forms. They all mean the same thing.
+
+$c^2 = a^2 + b^2 - 2ab \cos \gamma$  
+$b^2 = a^2 + c^2 - 2ac \cos \beta$  
+$a^2 = b^2 + c^2 - 2bc \cos \alpha$
+
+When you know two sides and the angle between them, the Law of Cosines gives you the third side. We use it to find the magnitude of the resultant force vector.
+
+### Law of Sines
+
+The [Law of Sines](https://www.khanacademy.org/math/geometry/hs-geo-trig/hs-geo-law-of-sines/v/law-of-sines) has one form,
+
+$\dfrac{a}{\sin \alpha} = \dfrac{b}{\sin \beta} = \dfrac{c}{\sin \gamma}$
+
+We use the Law of Sines to find the angle of the resultant force vector.
+
+If you have an electrostatics test coming up consider memorizing these trig laws.
+
+## Strategy
+
+A three-charge problem usually unfolds like this,
+
+* The charge triangle is given in the problem statement. You are asked to find the force on one of the charges. We'll call that one $q_0$.
+* The force triangle appears when you apply Coulomb's Law two times to $q_0$. Find the two pair-wise force vectors using Coulomb's Law, giving you two sides of a force triangle. 
+* The hard part is finding the magnitude and angle of the third side.
+
+## Three point charges
+
+**Given three charges at the corners of a $\mathbf{30\degree -- \,60\degree -- \,90\degree}$triangle, find the force on $q_0$.** 
+
+
+![Three point charges]({{ site.baseurl }}{% link i/three_point_charges1.svg %}){: .centered :}
+
+Let $q_0 = +1$, $q_1 = +2$, and $q_3 = -3$, all in units of coulombs $(\text C)$. The distance between $q_0$ and $q_1$ is $1\,\text m$. All three charges are static, meaning they don't move. Think of them as glued to the page or pinned down with a thumbtack.
+
+### Predict
+
+Before we do the math, use your intuition to predict the result. 
+* Draw the charge triangle on a piece of paper. 
+* Sketch your estimate of the two force vectors pushing/pulling on $q_0$. 
+* Sketch a vector with your prediction of the total force on $q_0$.
+
+### Charge triangle
+
+The first thing to do is complete the details of the charge triangle with all the angles and sides. (This should be a familiar triangle from geometry class.)
+
+![Charge triangle with sides labeled]({{ site.baseurl }}{% link i/three_point_charges2.svg %}){: .centered :}
+
+>For Coulomb's Law problems, we always manage direction separate from magnitude. Put the absolute value of the charges in the numerator of Coulomb's Law.
+
+Next, sketch the individual force vectors. There are two force vectors to think about, {$q_1$ to $q_0$}, and {$q_2$ to $q_0$}. We can sketch them on the triangle,
+
+![Charge triangle with force vector direction]({{ site.baseurl }}{% link i/three_point_charges3.svg %}){: .centered :}
+
+<p class="caption">Force vectors point along straight lines between charges. We don't know the length of the vectors, yet.</p> 
+
+Apply Coulomb's Law to find the magnitude of each force, 
+
+$\|\vec F\| = K \,\dfrac{q_0\, q_n}{r^2}$
+
+$\blueD{\|\vec F_{10}\|} = K \,\dfrac{1 \cdot 2}{1^2} =  2K\qquad\quad$ (repels)
+
+$\greenD{\|\vec F_{20}\|} = K \,\dfrac{1 \cdot 3}{2^2} = 0.75K\qquad$ (attracts)
+
+We have the magnitude and direction of the pairwise forces, 
+
+![Force triangle]({{ site.baseurl }}{% link i/three_point_charges4.svg %}){: .centered :}
+
+### Force triangle 
+
+The final step is to perform the vector sum of $\blueD{\vec F_{10}}$ and $\greenD{\vec F_{20}}$ to find the resultant force on $q_0$. 
+
+If you are new to vector addition, check [here](https://www.khanacademy.org/math/precalculus/vectors-precalc/vector-addition-subtraction/v/adding-and-subtracting-vectors).
+
+To set up the force triangle for vector addition, slide the green vector down so its tail touches the tip of the blue vector. We are looking for force $F_0$ shown in black, 
+
+![Force triangle set up for vector addition]({{ site.baseurl }}{% link i/three_point_charges5.svg %}){: .centered :}
+
+<p class="caption"> Force triangle. Translate $\greenD{\vec F_{20}}$ downward to the tip of $\blueD{\vec F_{10}}$ to set up the vector addition to find $F_0$.</p>
+
+We want to find the magnitude and angle of $\vec F_0$. This triangle is not a right triangle, so it's not so simple to find $\vec F_0$. This is where we use the Laws of Cosines and Sines.
+
+Label the force triangle with the notation we used for the general triangle [up above](#triangles),
+
+![Force triangle with labels]({{ site.baseurl }}{% link i/three_point_charges6.svg %}){: .centered :}
+
+We know two sides and the angle between them, $b$, $c$, and $\alpha$. We want to find the third side, $a$. This is a job for the [Law of Cosines](#law-of-cosines). Select the variation that solves for $a$,
+
+$a^2 = b^2 + c^2 - 2bc \cos \alpha$
+
+Plug in the known values and crank,
+
+$a^2 = (0.75K)^2 + (2K)^2 - 2\cdot 0.75K \cdot 2K \cos 60\degree$
+
+$a^2 = [\,0.75^2 + 2^2 - 2\cdot 0.75 \cdot 2 \cdot 0.5\,]K^2\qquad \cos 60\degree = 0.5$
+
+$a^2 = [\,0.5625 + 4 - 1.5\,]K^2$
+
+$a^2 = 3.0625\,K^2$
+
+$a = \sqrt{3.0625\,K^2}$
+
+$a = 1.75\,K$
+
+That's the magnitude of the $F_0$ vector. $(K = 9\times 10^9\,\text{N-m}^2/\text C^2)$
+
+Now find the angle of $F_0$ using the [Law of Sines](#law-of-sines). We know all three sides and angle $\alpha$. Two angles are missing, but we only need to find one of them, $\beta$. Pick the appropriate part of the Law of Sines that involves $\beta$ and three of our knowns,
+
+$\dfrac{a}{\sin \alpha} = \dfrac{b}{\sin \beta}$
+
+Fill in the known variables and isolate $\beta$,
+
+$\dfrac{1.75K}{\sin 60\degree} = \dfrac{0.75K}{\sin \beta}$
+
+$\sin \beta = \dfrac{0.75K}{1.75K}\sin 60\degree \qquad \sin 60\degree = \dfrac{\sqrt 3}{2}$
+
+$\beta = \sin^{-1} \left (\dfrac{0.75}{1.75}\dfrac{\sqrt 3}{2} \right )$
+
+$\beta = \sin^{-1} 0.37$
+
+$\beta = 21.8\degree$
+
+$\beta$ is the internal angle inside the triangle. The best answer is the angle down from horizontal, which is $-90\degree + 21.8\degree = -68.2\degree$
+
+![Force triangle solution]({{ site.baseurl }}{% link i/three_point_charges7.svg %}){: .centered :}
+
+$\boxed{F_0 = 1.75\,K \,\angle{-68.2\degree}}$
+
+Take a moment now to go back to your prediction drawing to check your initial intuition.
+
+{% capture summary %}Calculations with Google{% endcapture %}  
+{% capture details %}
+Computing arcsine in Google is straightforward. Copy/paste this computation into the Google search slot,
+
+```
+arcsin((0.75 * sqrt 3)/(1.75 * 2)) in degrees
+```
+
+Google understands the Law of Cosines and the Law of Sines. Copy/paste these calls to the special-purpose calculators,
+
+```
+law of cosines calc: find c a=2 b=0.75 gamma=60 degrees
+```
+
+```
+law of sines calc: find beta, a=1.75, alpha=60, b=0.75
+```
+{% endcapture %}{% include details.html %} 
+
+## Summary
+
+The force on a point charge from several neighboring point charges is the vector sum of the pair-wise forces,
+
+$\displaystyle \vec F_0 = \sum_{n=1}^N \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_n}{r_{0n}}\,\bold{\hat r_n}$
+
+An efficient way to solve an arbitrary force triangle is to use the [Law of Cosines](#law-of-cosines) and the [Law of Sines](#law-of-sines).
 
 
 
-## Example 2 force between three point charges
-
-We set up three charges on the vertices of a $30 ^{\circ}-60 ^{\circ}-90 ^{\circ}$ triangle. $q_2$, with the dark outline, is our test charge.
-
-![](https://ka-perseus-images.s3.amazonaws.com/f8c19c97810654848c2ef972b7acbb55b115a33c.svg){: .centered :}
-
-Now assign some values to the charges (coulombs) and spacing (meters),
-
-![](https://ka-perseus-images.s3.amazonaws.com/04dd09d7cb02f4fdeab0b998f5bb89c092eb1f5f.svg){: .centered :}
-
-#### Find the force (magnitude and direction) on $q_2$, the $+3 \,\text C$ charge.
-
-Compute the force between each pair of charges. In this example there are two force vectors to think about, {$q_0$ to $q_2$}, and {$q_1$ to $q_2$}. The individual force vectors are on a direct line between the charge pairs.
-
-![](https://ka-perseus-images.s3.amazonaws.com/5aa9b72d556aa9534d4798ecae70bf1ab6a701ba.svg){: .centered :}
-
-We'll use $K$ as the proportionality constant. Apply Coulomb's Law to compute the force. 
-
->When we do Coulomb's Law problems, it is a good idea to manage the magnitude of the force and its angle/direction separately. 
-
-The magnitudes of the forces are,
-
-$F = K \,\dfrac{q_0\, q_1}{r^2} $
-
-$\blueD{F_{02} = K \dfrac{4 \cdot 3}{(\sqrt{3})^2} =  K \cdot 4\qquad}$force on $q_2$ from $q_0$ (repels)
-
-$\greenD{F_{12} = K \dfrac{1 \cdot 3}{( \,\,1\,\, )^2} = K \cdot 3\qquad}$force on $q_2$ from $q_1$ (attracts)
-
-We have solved the magnitudes of the pairwise forces.  
-The final step is to perform a vector sum to get the magnitude and direction of the final force vector.
-
-![](https://ka-perseus-images.s3.amazonaws.com/485962c9850a31690a3f483af48c5a921991688e.svg){: .centered :}
-
-The force vectors form the sides of a 3-4-5 right triangle.  
-The magnitude of the resultant force is,
-
-$F_2 = K \cdot \sqrt{3^2 + 4^2} = K \cdot 5$
-
-Figure out angle $\angle \vec F_2$ by counting degrees from horizontal, starting at $q_0$ (the $4\,C$ charge),
-
-Interior angles of our two triangles,
-
-![](https://ka-perseus-images.s3.amazonaws.com/59e34fb546cc24ddcbc83c8d8a7fe42b7ee68df8.svg){: .centered :}
-
-The angles of the 3-4-5 triangle come from,  $\arcsin( 4 / 5 ) = 53.13 ^{\circ}$  and $\arcsin( 3 / 5 ) = 36.86 ^{\circ}$ 
-
-Merging the triangles together shows how the angles combine (blue arrows):
-
-![](https://ka-perseus-images.s3.amazonaws.com/d7308b3a9b8ef04fc061b1ef5ca674680c03ac00.svg){: .centered :}
-
-The $30^{\circ}$ angle gets a negative sign because it is rotating clockwise, while the $36.9^{\circ}$ angle adds with a positive sign because it is rotating counterclockwise.  
-
-$\angle \vec F_2 = -30 ^{\circ} + 36.9 ^{\circ} = +6.9  ^{\circ}$
-
-Combining the magnitude and angle, the force $\vec F_2$ on $q_2$ in newtons is, 
-
-$\vec{F_2} = K \cdot 5 \,\angle \,6.9^{\circ}$
-
-$\vec{F_2} = (9 \times 10^9) \cdot 5 \,\angle \,6.9^{\circ}$
-
-$\large \vec{F_2} = 4.5 \times 10^{10} \,\angle \,6.9^{\circ}\,\text{newtons}$
-
-The angles of the 3-4-5 triangle come from,  $\arcsin( 4 / 5 ) = 53.13 ^{\circ}$  and $\arcsin( 3 / 5 ) = 36.86 ^{\circ}$ 
-
-Merging the triangles together shows how the angles combine (blue arrows):
-
-The $30^{\circ}$ angle gets a negative sign because it is rotating clockwise, while the $36.9^{\circ}$ angle adds with a positive sign because it is rotating counterclockwise.
-
-![](https://ka-perseus-images.s3.amazonaws.com/fd76671ef942c357c79769fbfa43da97f0afff57.svg){: .centered :}
-
-Some things to notice about the solution: 
-
-* The numerator is the product of the test charge and the total charge on the line, which makes sense. 
-* The denominator has the form $\text{distance}^2$, created by a combination of distance to the near end and far end of the line. The $a(a+L)$ form of the denominator emerges from the particular geometry of this example.
-* If the point charge $q$ moves very far away from the line, $L$ becomes insignificant compared to $a$, and the denominator approaches $a^2$. So at great distance, the line starts to resemble a far-off point charge, and as one would hope, the equation approaches Coulomb's Law for two point charges.
-
-We'll do a few more electrostatics problems with simple charge geometries. After that, the math gets really involved, so the common strategy with complex geometries becomes: break down the geometry into simpler versions we already know how to do, then merge the answers.
-
-## Strategies for applying Coulomb's Law
-
-Coulomb's Law is a good choice for situations with point charges and/or simple symmetric geometries like lines or spheres of charge. 
-
-Since Coulomb's Law is based on pairwise forces between charges, when faced with multiple (more than two) point charges, 
-
-1. Work out the forces between each pair of charges. 
-2. Finish with a vector addition to merge the pairwise forces into a single resultant force.
-
-For a situation with distributed charge, creatively model the distributed charge as a collection of point charges,
-
-1. Invent a little $\text dQ$ representing an infinitesimal charge within the region of distributed charge. 
-2. Work out the forces pairwise between the point charge and each little $\text dQ$.
-3.  Sum up the forces with an integral. This is a vector sum to get the resultant force.
-
-### Related
-
-[Adding vectors](https://www.khanacademy.org/math/precalculus/vectors-precalc/vector-addition-subtraction/v/adding-vectors)
-
-### References
-
-Kip, A. H. (1969), *Fundamentals of Electricity and Magnetism* (2nd edition, McGraw-Hill)
 
