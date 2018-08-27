@@ -87,8 +87,8 @@ The resulting equivalent resistor is: \_\_\_\_\_\_ $\Omega$.
 
 <details>
 <summary>show answer</summary>
-<p>$10\,\Omega\, ||\,10\,\Omega = \dfrac{10\cdot 10}{10 + 10}=5\,\Omega$</p>
-<p>The $||$ notation means "in parallel with". </p>
+<p>$10\,\Omega \parallel 10\,\Omega = \dfrac{10\cdot 10}{10 + 10}=5\,\Omega$</p>
+<p>The $\parallel$ notation means "in parallel with". </p>
 </details>
 
 Again, looking into the shaded box from the left, the current and voltage with the equivalent resistor is still indistinguishable from the entire original. 

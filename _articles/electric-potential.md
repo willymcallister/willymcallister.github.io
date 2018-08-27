@@ -134,6 +134,7 @@ If the little dude pushes just slightly harder, $q$ will move closer to $Q$. Tha
 ![Charge q moves from a to b]({{ site.baseurl }}{% link i/electric_potential4.svg %}){: .centered :}
 
 #### How hard is slightly harder?
+{:.no_toc}
 
 For electrostatics problems we want *quasi-static motion*. That way we don't have to worry about the kinetic energy of a mass or the magnetic field from a moving charge. 
 

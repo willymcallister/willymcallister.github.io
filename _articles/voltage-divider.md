@@ -291,25 +291,11 @@ $\text{R}_{\text L} = 10\,\text{R2}$
 
 With this high-resistance load resistor, take a look at what happens to the output voltage. 
 
-$\text{R2}$ and $\text{R}\_{\text L}$ are in parallel. Combine the two parallel resistors using the parallel resistor formula,  
+$\text{R2}$ and $\text{R}\_{\text L}$ are in parallel. Combine the two parallel resistors using the [parallel resistor formula]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}#special-case---2-resistors-in-parallel),  
 
-$\text{R2} \,\|\|\, \text{R}\_{\text L} = \dfrac{\text{R2}\cdot\text{R}_{\text L}}{\text{R2}+\text{R}\_{\text L}}$
+$\text{R2} \parallel \text{R}\_{\text L} = \dfrac{\text{R2}\cdot\text{R}_{\text L}}{\text{R2}+\text{R}\_{\text L}}$
 
-<details>
-<summary>parallel resistor formula</summary>
-<p>Two resistors, $\text R_x$ and $\text R_y$ are in parallel if they share the same two nodes. Two parallel resistors can be combined to get an equivalent resistor like this, </p>
-
-<p>$\text{R}_{parallel} = \dfrac{\text{R}_x\cdot\text{R}_y}{\text{R}_x+\text{R}_y} $</p>
-
-<p>The ratio of the product over the sum.</p>
-</details>
-
-<details>
-<summary>vertical bars</summary>
-<p>The pair of vertical bars $||$ is just a shorthand notation for "in parallel with."</p>
-
-<p>$\text{R2} \,||\, \text{R}_{\text L}$ means "$\text{R2}$ in parallel with $\text{R}_{\text L}$."</p>
-</details>
+The pair of vertical bars $\parallel$ is shorthand notation for "in parallel with."
 
 $\dfrac{\text{R2}\cdot10\,\text{R2}}{\text{R2}+10\,\text{R2}} = \dfrac{10}{11}\,\text{R2} = 0.91\,\text{R2}$
 

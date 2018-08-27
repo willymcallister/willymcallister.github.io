@@ -25,7 +25,7 @@ Written by Willy McAllister.
 
 ## Objective
 
-The resistance between any pair of terminals has to be the same in both the $\Delta$ and $\text Y$ configurations. For example, in $\Delta$, the resistance across the top between terminals $x$ and $y$ is $Rc \,\|\|\, (Ra+Rb)$. In $\text Y$, the resistance between terminals $x$ and $y$ is $R1 + R2$.
+The resistance between any pair of terminals has to be the same in both the $\Delta$ and $\text Y$ configurations. For example, in $\Delta$, the resistance across the top between terminals $x$ and $y$ is $Rc \parallel (Ra+Rb)$. In $\text Y$, the resistance between terminals $x$ and $y$ is $R1 + R2$.
 
 ![Delta and Wye configuration](https://ka-perseus-images.s3.amazonaws.com/05cc24f20113bc6937dec9b8e85ee09e032d2a66.svg){: .centered }
 
@@ -35,14 +35,14 @@ Given the three resistor values on one side, we are going to derive the resistor
 
 This derivation was contributed by Khan Academy learner [_phidot_](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-delta-wye-resistor-networks?qa_expand_key=kaencrypted_ad2413cde556298b64a98d41d01fd684_cd6a16e8a8a657a21f768c0ff04804160d977a939ac691b3ecd6f7ee4a7f3b908c3a74bcab01337d6533d3b2cd73bf8f6ff245d796c6ba5cd4935e7434b49ff5a41f9fde6e3e3b40568f65d949ebef1c2069c478d967b52cc4b9a4782497244937b838cd8908e0ad3a3a524e87a524e6f816e4f6f1312d1554b5f5586074aab1f7d6c61e4d62263fecf53eb29522e61469af6deb96ff91ae7303c04481bb2de0). Let's figure out $R1$ in the $\text Y$ configuration in terms of $\Delta$ resistors $(Ra, Rb, Rc)$. We write a set of three simultaneous equations describing the resistance between each pair of terminals. 
 
-$R_{xy}: \quad R1 + R2 = Rc \,\|\| \,(Ra+Rb)$  
-$R_{yz}: \quad R2 + R3 = Ra \,\|\| \,(Rb+Rc)$  
-$R_{zx}: \quad R3 + R1 = Rb \,\|\| \,(Rc+Ra)$
+$R_{xy}: \quad R1 + R2 = Rc \parallel (Ra+Rb)$  
+$R_{yz}: \quad R2 + R3 = Ra \parallel (Rb+Rc)$  
+$R_{zx}: \quad R3 + R1 = Rb \parallel (Rc+Ra)$
 
 The left side is the resistance in the $\text Y$ configuration, the right side is the resistance in the $\Delta$ configuration. $R_{xy}$ stands for the resistance between terminals $x$ and $y$.
   
->The symbol $\|\|$ is shorthand notation for "in parallel with",  
-$R_i \,\|\|\, R_j = R_i \,R_j / (R_i + R_j)$
+>The symbol $\parallel$ is shorthand notation for "in parallel with",  
+$R_i \parallel R_j = R_i \,R_j / (R_i + R_j)$
 
 When we look at terminals $x$ and $y$, we assume terminal $z$ isn't connected to anything, so the current in $\text R3$ is $0$. 
 
@@ -63,9 +63,9 @@ $(R1+\,\cancel{R2}\,+\,\cancel{R3}+R1\,-\,\cancel{R2}\,-\,\cancel{R3})/2 = 2R1/2
 
 This verifies the operation isolates $R1$ on the left side. Now do the same operation on the right side,
 
-$R1 = ( \,Rc \|\| (Ra+Rb) + Rb \|\| (Rc+Ra) - Ra \|\| (Rb+Rc)\, ) / 2$
+$R1 = ( \,Rc \parallel (Ra+Rb) + Rb \parallel (Rc+Ra) - Ra \parallel (Rb+Rc)\, ) / 2$
 
-Replace the $\|\|$ symbol with the proper formula for two parallel resistors,
+Replace the $\parallel$ symbol with the proper formula for two parallel resistors,
 
 $R1 = ($  
 $\qquad\quad Rc(Ra+Rb)/(Rc+(Ra+Rb) \,+$  
@@ -182,7 +182,7 @@ In the $\Delta$ configuration, the conductance from $x$ to ground is $Gb$ in par
 
 In the $\text Y$ configuration, the conductance from $x$ to ground is $G1$ in series with the parallel combination of $G2$ and $G3$, or 
 
-$G_x = G1 \cdots G2\|\|G3 = \dfrac{G1 \, (G2+G3)}{G1+(G2+G3)}\quad(\cdots$ means series and $\|\|$ means parallel)
+$G_x = G1 \cdots G2 \parallel G3 = \dfrac{G1 \, (G2+G3)}{G1+(G2+G3)}\quad(\cdots$ means series and $\parallel$ means parallel)
 
 $G_x$ has to be the same for $\Delta$ and $\text Y$, so we set these equal,
 
