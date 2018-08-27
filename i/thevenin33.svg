@@ -85,7 +85,7 @@
      fit-margin-left="9.5"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.1708762"
+     inkscape:zoom="1.2281785"
      inkscape:cx="261.76978"
      inkscape:cy="75.348175"
      inkscape:window-x="0"
@@ -448,7 +448,6 @@
        style="font-size:22.50000191px"
        id="tspan12791-6"
        dy="0">v<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4553"
-   dy="6">2</tspan></tspan></text>
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan175267">x</tspan></tspan></text>
 </svg>

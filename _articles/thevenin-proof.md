@@ -37,9 +37,9 @@ Any combination of resistors and sources can be simplified down to a single volt
 
 One of the surprising concepts from linear circuit theory is the idea that two circuits can be *equivalent*. Two circuits are equivalent if they display the same $i$-$v$ behavior *at a selected port*. Thévenin's theorem says: If you have a complicated linear circuit, you can replace it with an equivalent Thévenin circuit made from one voltage source and one resistance. 
 
-In an earlier article, [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to simplify any resistor network down to a single resistor. Thévenin's theorem is the next step. It teaches us how to simplify networks of resistors *and* sources. 
+In an earlier article, [Simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to turn any resistor network into a single resistor. Thévenin's and Norton's theorems are the next step. They teach us how to simplify networks of resistors *and* sources. If you have a really complicated linear circuit the theorems provide the instructions for how to construct a very simple equivalent circuit. 
 
-In this article we prove Thévenin's theorem using the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). In the next article I will show practical steps to create a Thévenin equivalent from a given circuit. The proof and the practical design steps are separate ideas, often mixed together in many texts. 
+In this article we prove Thévenin's theorem using the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). The [next article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) shows practical steps to create a Thévenin equivalent from a given circuit. The proof and the practical design steps are separate ideas, often mixed together in many texts. 
 
 Norton's theorem is a companion to Thévenin's, 
 
@@ -84,7 +84,7 @@ We are interested in what's happening at the $2\,\text k\Omega$ resistor on the 
 
 To demonstrate Thévenin's theorem we need to show the voltage at the port can be written in the form $\goldC v = \text V_\text T - \blueD i\,\text R_\text T$, where $\text V_\text T$ and $\text R_\text T$ are to be discovered. 
 
-The demonstration is pretty clever. We use the the principle of superposition. The feature that triggers us to think about superposition is the multiple sources. Whenever you see lots of sources, superposition should pop into your head.
+The demonstration is pretty clever. We use the the principle of superposition. Whenever you see multiple sources, superposition should pop into your head.
 
 {% capture summary %}linearity and superposition{% endcapture %}  
 {% capture details %}  
@@ -117,7 +117,7 @@ This made-up current source may sound bogus, but please wait and see what happen
 
 {% capture summary %}alternatives to a current source{% endcapture %}  
 {% capture details %}  
-Plugging in a current source is the simplest way to get control of $i$. It's possible to connect other things, like perhaps a resistor. The problem with a resistor it it introduces a fiddly $i$-$v$ dependence. This makes the proof harder than it needs to be. In the end it doesn't matter what the external add-on is, as long as we end up with a clean $v = f(i)$.
+Plugging in a current source is the simplest way to get control of $i$. It's possible to connect other things, like perhaps a resistor. The problem with a resistor is it introduces a fiddly $i$-$v$ dependence. This makes the proof harder than it needs to be. In the end it doesn't matter what the external add-on is, as long as we end up with a clean $v = f(i)$.
 {% endcapture %}{% include details.html %} 
 
 ### Solve by superposition
@@ -142,11 +142,11 @@ $i = 0$
 
 Find a single $\text R_\text{equiv}$ to represent the resistor network, then apply the $2\,\text{mA}$ current,
 
-$\text R_\text{equiv} = 500 + 1000 \,\|\|\, 1000 = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000}$
+$\text R_\text{equiv} = 500 + 1000 \parallel 1000 = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000}$
 
 $\text R_\text{equiv} = 1000\,\Omega$
 
->The vertical bar symbol $\|\|$ is shorthand for "in parallel with."
+>The vertical bar symbol $\parallel$ is shorthand for "in parallel with."
 
 $v_{2\,\text{mA}} = 2\,\text{mA}\cdot \text R_\text{equiv} = 2\,\text{mA}\cdot 1000\Omega = 2\,\text V$
 
@@ -176,7 +176,7 @@ $v = 4.5 + 1000\,i$
 
 The values for the voltage source and resistor are pulled straight out of the equation. When $i = 0$ the voltage on the port is $4.5\,\text V$. When $i$ is not $0$ the port voltage is $4.5\,\text V$ plus whatever voltage is contributed by the resistor, $1000\,i$.
 
-We call this the *Thévenin equivalent*. $4.5\,\text V$ is the *Thévenin voltage* and $1000\Omega$ is the *Thévenin resistance*. 
+We call this the *Thévenin equivalent*. $4.5\,\text V$ is the *Thévenin voltage* and $1000\,\Omega$ is the *Thévenin resistance*. 
 
 $v = \text V_\text T + i \, \text R_\text T$
 
@@ -250,11 +250,11 @@ $\begin{aligned}
 \end{aligned}$
 </p>
 
-The first two terms are voltage values based on the internals of the circuit, with nothing connected to the port. For every one of these sub-circuits the external current source was suppressed. We combine these two terms and give them a special name, $v_{oc}$, which stands for *open-circuit voltage*, 
+The first two terms are voltage values based on the internals of the circuit, with nothing connected to the port. For every one of these sub-circuits the external current source was suppressed. We combine these two terms and give them a special name, $v_{oc}$, the *open-circuit voltage*, 
 
 $v_{oc} = \displaystyle \sum_{m=1}^M A_m \text V_m + \sum_{n=1}^{N-1} \text I_n \bold R_n$
 
-$v_{oc}$ is the voltage that appears at the port when the port is left open.
+$v_{oc}$ appears at the port when the port is left open.
 
 With this new variable name we rewrite the superposition equation,
 
@@ -266,9 +266,9 @@ Wow. The whole arbitrary circuit boils down to this equation. It's exactly what 
 
 |$\text V_\text T = v_{oc}$ |The Thévenin voltage is the voltage on the port of the original circuit when left open.|
 |$\text R_\text T = \bold R_N$ |The Thévenin resistance is the equivalent resistance of the original circuit when all internal sources are suppressed (turned off).|
-|$\blueD i = \text I_N$ |The current that flows into or out of the port.|
+|$\blueD i = \text I_N$ |The current into or out of the port.|
 |$\goldC v = \text V_\text T + \blueD i\,\text R_\text T$ | Solve for $v$, the voltage on the port from an unknown $i$.|
-|$\blue i = \dfrac{\goldC v}{\text R_\text T} - \dfrac{\text V_\text T}{\text R_\text T}\quad$|Solve for $i$, the current at the port from an unknown $v$.|
+|$\nobreak{\blue i = \dfrac{\goldC v}{\text R_\text T} - \dfrac{\text V_\text T}{\text R_\text T}\quad}$|Solve for $i$, the current at the port from an unknown $v$.|
 
 Both the original complex circuit and our little Thévenin equivalent obey the same $\blueD i$ and $\goldC v$ equations. Done! We proved any circuit composed of resistors, voltage sources, and current sources can be reduced to a single voltage source and a single resistor.
 
@@ -306,28 +306,27 @@ This means if you go back to the original circuit and put a short circuit across
 
 ## Observations
 
-What can we learn from the proof to give us a practical method for finding a Thévenin or Norton equivalent? Here are some observations about the proof we just did,
+What can we learn from the proof to give us a practical method for finding a Thévenin or Norton equivalent? Here are some observations about the proof,
 
 * The superposition strategy gave us three types of sub-circuit. Some had a single voltage source, some had a single current source, and one had no internal sources. 
 
 * The first two types combined to give us the Thévenin voltage, $\text V_\text T$, equal to the open-circuit voltage, $v_{oc}$. 
 
-* The third sub-circuit had all internal sources suppressed, leaving just the original resistor network. When we simplified the network it gave us $\text R_\text T$, the Thévenin resistance. 
+* The third sub-circuit, the one with all internal sources suppressed, left us with just the original resistor network. When we simplified the network it gave us the Thévenin resistance, $\text R_\text T$. 
 
 * If we want $\text I_\text N$ we can short across the port and measure $i_{sc}$ in the shorting wire.
 
-* If for some reason we know both $\text V_\text T$ and $\text I_\text N$ but not $\text R$, we can find $\text R$ with,  
-$\text R = v_{oc}/i_{sc}$.
+* If for some reason we know $\text V_\text T$ and $\text I_\text N$ but not $\text R$, we find $\text R$ with $\text R = v_{oc}/i_{sc}$.
 
 These observations are the basis for a step-by-step process to create a Thévenin or Norton equivalent. We'll demonstrate the steps in the next article, [Thévenin - how to]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}).
 
 ## Historical references (optional)
 
-Thévenin's theorem was independently derived in 1853 by German scientist Hermann von Helmholtz and thirty years later in 1883 by Léon Charles Thévenin, an electrical engineer with France's national phone company, Postes et Télégraphes Telecommunications (PTT). Thévenin's name is attached to the idea. Don't feel bad for Helmholtz. His name is on plenty of other great ideas in engineering and physics.</p>
+Thévenin's theorem was independently derived in 1853 by German scientist Hermann von Helmholtz and thirty years later in 1883 by Léon Charles Thévenin, an electrical engineer with France's national phone company, Postes et Télégraphes Telecommunications (PTT). Thévenin's name is attached to the idea. Don't feel bad for Helmholtz. His name is on plenty of other great ideas in engineering and physics.
 
-Norton's theorem was independently derived in 1926 by researcher Hans Ferdinand Mayer of Siemens & Halske and Bell Labs engineer Edward Lawry Norton. They published the same month. The theory can also be called the Mayer-Norton theorem.
+Norton's theorem was independently derived by researcher Hans Ferdinand Mayer of Siemens & Halske and by Bell Labs engineer Edward Lawry Norton. They published in the same month in 1926. The theory can also be called the Mayer-Norton theorem.
 
-The two theories have an interesting history and naming honors. The first publication by Helmholtz did not become widely known. Thirty years later, Thévenin thought he had invented something new. And, in the United States at least, we give Thévenin and Norton naming credit. It was hard for engineering discoveries to travel widely or rapidly. Now we have the Web, but these folks did not. If you use other names for these theories I would be interested to hear from you.
+The two theories have an interesting history and naming honors. The first publication by Helmholtz did not become widely known. Thirty years later, Thévenin thought he had invented something new. So, in the United States at least, we give Thévenin and Norton naming credit. It was hard for engineering discoveries to travel widely or rapidly. Now we have the Web but these folks did not. If you use other names for these theories I would be interested to hear from you.
 
 Johnson, D.H., ["Origins of the equivalent circuit concept: the voltage-source equivalent"](https://www.ece.rice.edu/~dhj/paper1.pdf) (PDF). Proceedings of the IEEE. 91 (4): 636–640. doi:[10.1109/JPROC.2003.811716](https://doi.org/10.1109%2FJPROC.2003.811716).
 
