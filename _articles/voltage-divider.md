@@ -7,7 +7,7 @@ comments: true
 
 A very common and useful resistor circuit goes by the nickname *voltage divider*. We will work out how this circuit works, and we'll see where the nickname comes from. 
 
-![Voltage divider](https://ka-perseus-images.s3.amazonaws.com/be63ffad46329086809b588c919bd785a275e138.svg){: .centered }
+![Voltage divider]({{ site.baseurl }}{% link i/voltage_divider0.svg %}){: .centered :}
 
 The voltage divider is really quite simple, and you could analyze it from scratch every time you come across one. But it is *so* common it is a good idea to prepare ahead of time so you can pop out the answer on the spot. 
 
@@ -38,7 +38,7 @@ $v_{out}  = v_{in}\,\dfrac{\text R2}{\text R1 + \text R2}$
 
 A voltage divider looks like this,
 
-![Voltage divider](https://ka-perseus-images.s3.amazonaws.com/04bfcddbc8a53a47703d54cb8b3a9e066ed04a64.svg){: .centered }
+![Voltage divider]({{ site.baseurl }}{% link i/voltage_divider1.svg %}){: .centered :}
 
 It is a simple circuit with two resistors in series. One voltage is connected to the top and bottom, and another voltage is measured across one of the resistors. We think of the voltage across the top and bottom as the input voltage, while the voltage across the single resistor is the output. 
 
@@ -50,25 +50,22 @@ Our goal is to come up with an expression that relates output $v_{out}$ to input
 
  $v_{out} = v_{in}\times(\text{something})$
 
-This is a very simple series circuit, so it won't take a lot of effort to figure that out. 
+This is a very simple series circuit so it won't take a lot of effort to figure out. 
 
-Before we start, we make this important assumption,
+Before we start, we make this important *Assumption*,
 
 **Assume the current flowing out of the divider from its center node is zero.**
 
-![](https://ka-perseus-images.s3.amazonaws.com/c14a9b27126f23e0ba9188500aab8a3fe3938aa0.svg){: .centered }
+![Voltage divider assumption]({{ site.baseurl }}{% link i/voltage_divider2.svg %}){: .centered :}
+<p class="caption">Assume the output current from the voltage divider is $0$. (We check what happens if this assumption isn't true in the [next article]({{ site.baseurl }}{% link _articles/voltage-divider-design.md %})).</p>
 
-(Before we are done we will check what happens if this zero-current assumption isn't true).
+This is a good place to pause. You understand Ohm's Law and series resistors. See if you can come up with an expression for $v_{out}$ in terms of $v_{in}$ on your own.
 
-----
-
-**On your own:** This is a good place to pause. Use your understanding of Ohm's Law and series resistors to come up with an expression for $v_{out}$ in terms of $v_{in}$ on your own. Then read on.
-
-----
+... ... Okay great. You've derived a voltage divider expression. Now I will have a try.
 
 A good place to start is to find the current through $\text{R1}$ and $\text{R2}$. 
 
-Here's the one tricky step in analyzing the voltage divider: Based on the assumption, we know $\text{R1}$ and $\text{R2}$ have the same current, so we can consider them to be in series. 
+Here's the one tricky step in analyzing a voltage divider: Based on the assumption, we know $\text{R1}$ and $\text{R2}$ have the same current, so we can consider them to be in series. 
 
 $i_{\text{1}} = i_{\text{2}}\qquad$ and for now let's just call this $i$.
 
@@ -106,7 +103,7 @@ Since the resistor ratio is less than $1$, that means $v_{out}$ is always less t
 
 **Find $v_{out}$ for this voltage divider**,
 
-![](https://ka-perseus-images.s3.amazonaws.com/5d860df1a6275a4013ffebb791ca2c003e77b53f.svg){: .centered }
+![Voltage divider 1k 3k 12V]({{ site.baseurl }}{% link i/voltage_divider3.svg %}){: .centered :}
 
 We insert the input voltage and resistor values into the voltage divider equation. Remember, the *bottom* resistor, $\text{R2}$, appears in the numerator. 
 
@@ -118,19 +115,21 @@ $v_{out}  = 12\,\text V\cdot\dfrac{3\,\text k\Omega}{4\,\text k\Omega}$
 
 $v_{out}  = 12\,\text V\cdot\dfrac{3}{4} = 9 \,\text V$
 
->[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"1k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc(12)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"3k","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]). Open the link and click on DC in the top menu to find the DC operating point.
+Open this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"1k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc(12)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"3k","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) and click on **DC** in the menu to confirm the DC operating point.
 
-We finish up with two optional steps: **Figure out the current and power.** 
+We finish up with two optional steps, 
+
+**Find the current and power.** 
+
+Use Ohm's Law to find the current,
 
 $i = \dfrac{v_{in}}{\text R1 + \text R2} = \dfrac{12\,\text V}{1\,\text k\Omega + 3\,\text k\Omega} = \dfrac{12\,\text V}{4\,\text k\Omega} = 3\,\text{mA}$ 
 
-Knowing the current, we can compute the power being dissipated by our voltage divider,
+Knowing the current, we compute the power dissipated by our voltage divider,
 
 $p = i\,v = 3\,\text{mA} \cdot 12\,\text V = 36\,\text{mW}$
 
-Summary: Our voltage divider takes an input voltage (in this case $12\,\text V$, but it could be any value) and scales it down to create an output voltage that's $3/4$ of its input voltage. The $3/4$ ratio is determined by our choice of the two resistors. 
-
-A current of $3\,\text{mA}$ flows down through the voltage divider, so it dissipates $12\,\text V \times 3\,\text{mA} = 36\,\text{mW}$.
+Summary: Our voltage divider takes an input voltage (in this case $12\,\text V$, but it could be any value) and divides it down to create an output voltage $v_{out}$ that's $3/4$ of its input voltage. The $3/4$ ratio is determined by our choice of the two resistor values. A $3\,\text{mA}$ current flows through the voltage divider, causing it to dissipate $36\,\text{mW}$.
 
 ## Voltage divider practice problems
 
@@ -142,9 +141,9 @@ Let $v_{in}= 6\,\text V$, $\text R1=50\,\text k\Omega$, and $\text R2=10\,\text 
 
 **Find $v_{out}$**
 
-![Problem 1](https://ka-perseus-images.s3.amazonaws.com/21caa5a9980ced50f52d88c24c6620b8c8afce5b.svg)
+![Problem 1 Voltage divider 50k 10k 6V]({{ site.baseurl }}{% link i/voltage_divider4.svg %})
 
-$v_{out} = \quad$ \_\_\_\_\_\_ $\,\text V$
+$v_{out} =$ \_\_\_\_\_\_\_\_\_ $\,\text V$
 
 <details>
 <summary>show answer</summary>
@@ -157,17 +156,17 @@ $v_{out} = \quad$ \_\_\_\_\_\_ $\,\text V$
 <p>$v_{out} = 1\,\text V$</p>
 </details>
 
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"50k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc(6)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 1. Click on DC in the top menu to find the DC operating point.
+[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"50k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc(6)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 1. Click on **DC** in the top menu to find the operating point.
 
 ### Problem 2
 
 Let $\text R1=90\,\text k\Omega$, $\text R2=10\,\text k\Omega$, and $v_{out}= 1.5\,\text V$. 
 
-**Find $v_{in}$**
+**Find $v_{in}$.**
 
-![Problem 2](https://ka-perseus-images.s3.amazonaws.com/3df9b43e3a500314dfe32d0d511951fe968aa127.svg)
+![Problem 2 Voltage divider 90k 10k 1.5Vout]({{ site.baseurl }}{% link i/voltage_divider5.svg %})
 
-$v_{in} = \quad$ \_\_\_\_\_\_ $\text V$
+$v_{in} =$ \_\_\_\_\_\_\_\_\_ $\text V$
 
 <details>
 <summary>show answer</summary>
@@ -182,17 +181,17 @@ $v_{in} = \quad$ \_\_\_\_\_\_ $\text V$
 <p>$v_{in} = 15\,\text V$</p>
 </details>
 
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"90k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc()","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 2. Double-click on the voltage source and enter a voltage value for $v_{in}$ to get the output voltage you want.
+[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"90k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc()","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 2. Double-click on the voltage source and enter a voltage value for $v_{in}$ to get the output voltage you want. Repeat the **DC** analysis to confirm your choice.
 
 ### Problem 3
 
 Let $v_{in}= 5\,\text V$, $v_{out}=2\,\text V$, and $\text R1=30\,\text k\Omega$.
 
-**Find $\text R2$**
+**Find $\text R2$.**
 
-![Problem 3](https://ka-perseus-images.s3.amazonaws.com/e02ca45c0125b430d0a3de7954e8c17f15f3a6b1.svg)
+![Problem 3 Voltage divider 30k 2Vin 1.5Vout]({{ site.baseurl }}{% link i/voltage_divider6.svg %})
 
-$\text R2 = \quad$ \_\_\_\_\_\_ $\Omega$
+$\text R2 =$ \_\_\_\_\_\_\_\_\_ $\Omega$
 
 <details>
 <summary>show answer</summary>
@@ -213,7 +212,7 @@ $\text R2 = \quad$ \_\_\_\_\_\_ $\Omega$
 <p>$v_{out} = 5 \,\text V \cdot \dfrac{20\,\text k\Omega}{30\,\text k\Omega +20\,\text k\Omega} = 5 \cdot \dfrac{20}{50} = 2\,\text V \qquad \checkmark$</p>
 </details>
 
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"30k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc(5)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 3. Double-click on $\text R2$ and enter a resistance value to get the desired output voltage.
+[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"30k","_json_":0},["2","1"]],["v",[112,80,0],{"name":"vin","value":"dc(5)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"","_json_":2},["1","0"]],["w",[112,40,200,40]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":6},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 3. Double-click on $\text R2$ and enter a resistance value to get the desired output voltage. Repeat the **DC** analysis to confirm your choice.
 
 ### Problem 4 - design challenge
 
@@ -221,10 +220,10 @@ Let $v_{in}= 1\,\text V$, $v_{out}=\dfrac{v_{in}}{2}$.
 
 **Design a voltage divider that dissipates $10 \,\mu\text{W}$.**
 
-![Problem 4](https://ka-perseus-images.s3.amazonaws.com/42e57a35d13efc179ef124f9446e850ed7f156d2.svg)
+![Problem 4 Design challenge 1Vin Vout=Vin/2]({{ site.baseurl }}{% link i/voltage_divider7.svg %})
 
-$\text R1 = \quad$ \_\_\_\_\_\_ $\Omega\qquad$   
-$\text R2 = \quad$ \_\_\_\_\_\_ $\Omega$
+$\text R1 =$ \_\_\_\_\_\_\_\_\_ $\Omega\qquad$   
+$\text R2 =$ \_\_\_\_\_\_\_\_\_ $\Omega$
 
 <details>
 <summary>show answer</summary>
@@ -265,177 +264,23 @@ $\text R2 = \quad$ \_\_\_\_\_\_ $\Omega$
 <p>$\text R1 = \text R2 = 50 \,\text k\Omega$</p>
 </details>
 
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"","_json_":0},["1","3"]],["v",[112,80,0],{"name":"vin","value":"dc(1)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"","_json_":2},["3","0"]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":5},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["a",[152,40,0],{"color":"magenta","offset":"0","_json_":12},["2","1"]],["w",[112,40,152,40]],["w",[200,40,168,40]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 4. Double-click on both resistors and give them resistance values to achieve the design specifications: $v_{out} = v_{in}/2$ and $p = 10 \,\mu\text{W}$.
-
-## Review the assumption about current (advanced) 
-
->The last half of this article looks at how things can go wrong with a voltage divider.  
-
-A voltage divider doesn't do anything useful unless its output is connected to something. You need to keep in mind what happens when a voltage divider is connected to a load.
-
-Remember way back at the start we made an assumption? We assumed the current flowing away from the node between the two resistors was $0$. That let us treat $\text{R1}$ and $\text{R2}$ as if they were in series, and we developed the voltage divider equation. Let's check what happens if that assumption is not true. 
-
-### Operating the voltage divider near mid-range
-
-To start this discussion, we set up a voltage divider with $\text{R1} = \text{R2}$. When the resistors are the same value the expected $v_{out}$ of the voltage divider is half the input voltage, $v_{out} = 0.5\,v_{in}$. 
-
-If we connect a load to the divider, represented by resistor $\text R_{\text L}$, this will cause some current $i_\text L$ to flow away from the center node, heading to the right through $R_\text L$. 
-
-![Voltage divider in mid-range]({{ site.baseurl }}{% link i/voltage-divider1.svg %}){: .centered :}
-
-Here's the question: Does the voltage divider still work, or does our voltage divider story collapse? 
-
-Resistor $\text R_\text L$ acts as a *load* on the output of the voltage divider, meaning it causes a current $i_\text L$ to flow. The presence of $\text R_\text L$ means $\text{R1}$ and $\text{R2}$ are no longer strictly in series. We don't want $i_\text L$ to be very large (we need it to be much smaller than $i_1$ or $i_2$), so let's make $\text{R}\_{\text L}$ fairly large. Let $\text R_\text L$ be ten times bigger than $\text{R2}$,
-
-$\text{R}_{\text L} = 10\,\text{R2}$
-
-With this high-resistance load resistor, take a look at what happens to the output voltage. 
-
-$\text{R2}$ and $\text{R}\_{\text L}$ are in parallel. Combine the two parallel resistors using the [parallel resistor formula]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}#special-case---2-resistors-in-parallel),  
-
-$\text{R2} \parallel \text{R}\_{\text L} = \dfrac{\text{R2}\cdot\text{R}_{\text L}}{\text{R2}+\text{R}\_{\text L}}$
-
-The pair of vertical bars $\parallel$ is shorthand notation for "in parallel with."
-
-$\dfrac{\text{R2}\cdot10\,\text{R2}}{\text{R2}+10\,\text{R2}} = \dfrac{10}{11}\,\text{R2} = 0.91\,\text{R2}$
-
-Here is a redrawn version of our loaded voltage divider, showing the equivalent resistance of $\text R2$ in parallel with $\text R_\text L$,
-
-![](https://ka-perseus-images.s3.amazonaws.com/63b5ae1b7a5a3f4723ba6ceb9935e3175cb22845.svg){: .centered }
-
-The $10{\times}$ load resistor reduces the resistance at the bottom of the divider by about $9\%$. 
-
-How does this additional load change the output voltage? Without the load, the expected output is $0.5\,v_{in}$. Now we figure out the output voltage in the presence of the load resistor. 
-
-$v_{out} = v_{in}\, \dfrac{0.91\, \text R2}{\text R1 + 0.91\, \text R2} $
-
-We designed our divider with $\text R1 = \text R2$, so all the $\text R$'s cancel out,
-
-$v_{out} = v_{in}\, \dfrac{0.91}{1 + 0.91}$
-
-$v_{out} = v_{in}\, \dfrac{0.91}{1 .91} = 0.48\,v_{in}$
-
-The output voltage drops from $50\%$ to $48\%$ of the input voltage. How big an error is this?
-
-$\dfrac{0.48}{0.50} = 0.96 = 96\%$
-
-The actual output of the voltage divider is low by $4\%$ compared to the designed voltage. Notice how the $4\%$ voltage error is significantly less than the $9\%$ resistance change. 
-
-Does a few $\%$ error matter? That is for you alone to decide. It depends on how accurate the voltage divider needs to be for your application. 
-
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"10k","_json_":0},["2","4"]],["v",[112,80,0],{"name":"vin","value":"dc(6)","_json_":1},["3","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["4","0"]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":5},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["a",[152,40,0],{"color":"magenta","offset":"0","_json_":8},["3","2"]],["w",[112,40,152,40]],["w",[200,40,168,40]],["r",[288,120,0],{"name":"RL","r":"100k","_json_":11},["1","0"]],["w",[200,168,288,168]],["w",[288,120,288,104]],["w",[312,104,288,104]],["w",[200,88,200,120]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of the loaded voltage divider. Run a DC operating point on the circuit as-is. Then connect a wire from the top of the load resistor to the center node of the voltage divider. Run the DC operating point simulation again. How much does the output voltage change. Explore: Change the value of $\text R_\text L$ and see how much the output voltage changes.
-
-The nugget to tuck away from this analysis:  
-If the effective load resistance is $10{\times}$ greater than the bottom resistor in the voltage divider, you get roughly "one hand" $\%$ error $(4-5\%)$ in the output voltage. This result is valid when the output voltage is near the center of its range (in the neighborhood of $v_{\text{in}}/2$).
-
-### Operating the voltage divider near extremes
-
-If the voltage divider operates near its extremes, with the output voltage close to either $v_{\text{in}}$ or $0$, the percentage error will be different. To find out how much different, we repeat the analysis with the output voltage set to $90\%$ and $10\%$ of the divider range. We keep the load resistor ten times the bottom resistor, so the parallel combination of $\text R2$ and $\text R_{\text L}$ is still $0.91\,\text R2$.
-
-#### Case 1: $v_{out} = 90\%$ of $v_{in}$
-
-Let the design target for $v_{out}$ be $90\%$ of $v_{in}$, so $v_{out}$ is really high in its range.
-
-First, we need to design a voltage divider to give us a $90\%$ output. We do this by figuring out $\text R2$ in terms of $\text R1$ for a $90\%$ voltage divider,
-
-$\dfrac{v_{out}}{v_{in}} = 0.90 = \dfrac{\text R2}{\text R1 + \text R2}$
-
-$0.90 \,(\text R1 + \text R2) = \text R2$
-
-$0.90 \,\text R1 = \text R2 - 0.90\,\text R2$
-
-$0.90 \,\text R1 = 0.10 \,\text R2$
-
-$\text R2 = \dfrac{0.90\,\text R1}{0.10} = 9\,\text R1$
-
-That means $\text R2$, the resistor on the bottom, is $9$ times bigger than $\text R1$. 
-
-Now we load the circuit with $\text R_\text L$ and see how the output voltage changes. The expression we derived above for the loaded voltage divider is, 
-
-$\dfrac{v_{out}}{v_{in}}  = \dfrac{0.91\, \text R2}{\text R1 + 0.91\, \text R2} $
-
-Last time we had $\text R2 =\text R1$, but this time $\text R2 = 9\,\text R1$,
-
-$\dfrac{v_{out}}{v_{in}} = \dfrac{0.91 \,(9\,\text R1)}{\text R1 + \text 0.91\,(9\,\text R1)}$
-
-All the $\text R1$'s cancel out, leaving,
-
-$\dfrac{v_{out}}{v_{in}} = \dfrac{0.91 \,(9)}{1 + 0.91\,(9)} = \dfrac{8.19}{9.19} = 0.89$
-
-The actual output voltage is $89\%$ of $v_{in}$ instead of the design goal of $90\%$. So the actual voltage is lower than the expected by only $1\%$.
-
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"1.111k","_json_":0},["2","4"]],["v",[112,80,0],{"name":"vin","value":"dc(10)","_json_":1},["3","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["4","0"]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":5},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["a",[152,40,0],{"color":"magenta","offset":"0","_json_":8},["3","2"]],["w",[112,40,152,40]],["w",[200,40,168,40]],["r",[288,120,0],{"name":"RL","r":"100k","_json_":11},["1","0"]],["w",[200,168,288,168]],["w",[288,120,288,104]],["w",[312,104,288,104]],["w",[200,88,200,120]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of  $v_\text{out} = 90\%$ of $v_\text{in}$. Perform a DC operating point simulation of the circuit as-is. Then connect a wire from the load resistor to the voltage divider. Perform another DC operating point. 
-
-#### Case 2: $v_{out} = 10\%$ of $v_{in}$
-
-Let $v_{out} = 10\%$ of $v_{in}$, so $v_{out}$ is really low in its range. 
-
-Express $\text R1$ in terms of $\text R2$ for a $10\%$ voltage divider,
-
-$\dfrac{v_{out}}{v_{in}} = 0.10 = \dfrac{\text R2}{\text R1 + \text R2}$
-
-$0.10 \,(\text R1 + \text R2) = \text R2$
-
-$0.10 \,\text R1 = \text R2 - 0.10\,\text R2$
-
-$0.10 \,\text R1 = 0.90 \,\text R2$
-
-$\text R1 = \dfrac{0.90\,\text R2}{0.10} = 9\,\text R2$
-
-$\text R1$, the resistor on the top, is $9$ times bigger than $\text R2$. 
-
-Now we load the circuit with $\text R_\text L$ and see what happens to the output voltage. The expression for the loaded voltage divider is still, 
-
-$\dfrac{v_{out}}{v_{in}}  = \dfrac{0.91\, \text R2}{\text R1 + 0.91\, \text R2} $
-
-We replace $\text R1$ with $9\,\text R2$,
-
-$\dfrac{v_{out}}{v_{in}} = \dfrac{0.91 \,\text R2}{9\,\text R2 + \text 0.91\,\text R2}$
-
-All the $\text R2$'s cancel out,
-
-$\dfrac{v_{out}}{v_{in}} = \dfrac{0.91}{9 + 1} = \dfrac{0.91}{10} = 0.091$
-
-The actual output voltage is $9.1\%$ of $v_{in}$ instead of the expected $10\%$. 
-
-So the actual voltage is lower than expected by about $\dfrac{10\% - 9.1\%}{10\%} = 9\%$. 
-
-This error is pretty big, twice as large as the error of the loaded mid-range divider.
-
-[Circuit sandbox model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"90k","_json_":0},["2","4"]],["v",[112,80,0],{"name":"vin","value":"dc(10)","_json_":1},["3","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["4","0"]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":5},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["a",[152,40,0],{"color":"magenta","offset":"0","_json_":8},["3","2"]],["w",[112,40,152,40]],["w",[200,40,168,40]],["r",[288,120,0],{"name":"RL","r":"100k","_json_":11},["1","0"]],["w",[200,168,288,168]],["w",[288,120,288,104]],["w",[312,104,288,104]],["w",[200,88,200,120]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of the voltage divider at $10\%$ of $v_\text{in}$. Run a DC operating point. Then add a wire to connect the load resistor to the divider. Run the DC operating point again. How much does the divider output change with the load?
-
-### Lessons from a loaded voltage divider
-
-If you have a $10\times$ $\text R2$ load resistor drawing current from a voltage divider,
-
-* Near mid-range, the output voltage is reduced by about $5\%$.
-
-* Near the top of its range, the error is much less, around $1\%$. 
-
-* Near the bottom of its range, the error roughly doubles compared to mid-range. The output voltage is $9\%$ lower than expected.
-
-
-### Controlling error in a voltage divider
-
-If your design requires the error to be significantly smaller, the load needs to be much larger than $10\times$ $\text{R2}$, like an additional $10{\times}$  or more. You can get an additional $10{\times}$ two ways. Increase the load resistance. Or, redesign the voltage divider to have smaller $\text{R1}$ and $\text{R2}$, (at the cost of more power dissipated by the voltage divider). 
-
-### Real-world resistor tolerance impacts accuracy 
-
-Real-world resistors always have a $\pm$ tolerance on their value. If the accuracy of the voltage divider is critical to your application, use resistors with tight tolerances. Check for acceptable performance by analyzing the voltage divider at the anticipated tolerance extremes.
+[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"","_json_":0},["1","3"]],["v",[112,80,0],{"name":"vin","value":"dc(1)","_json_":1},["2","0"]],["r",[200,120,0],{"name":"R2","r":"","_json_":2},["3","0"]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":5},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["w",[200,88,200,104]],["w",[200,120,200,104]],["w",[200,104,232,104]],["w",[232,104,232,104]],["a",[152,40,0],{"color":"magenta","offset":"0","_json_":12},["2","1"]],["w",[112,40,152,40]],["w",[200,40,168,40]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of Problem 4. Double-click on both resistors and give them resistance values to achieve the design specifications: $v_{out} = v_{in}/2$ and $p = 10 \,\mu\text{W}$.
 
 ## What's in a nickname?
 
-We mentioned the nickname of this circuit is a *voltage divider*. In many situations, that is exactly what it does. However, we showed that under certain conditions when there is a load on the divider, the actual output voltage is slightly lower than the value predicted by the voltage divider equation. The lesson: Call a circuit by its nickname; just remember that it's *only* a nickname. 
+We mentioned the nickname of this circuit is a *voltage divider*. In many situations, that is exactly what it does. However, remember back at the beginning we made an assumption, that the current leaving the divider is zero, or very close to zero? Under certain conditions (that we'll cover in the [next article]({{ site.baseurl }}{% link _articles/voltage-divider-design.md %})), the actual output voltage might be slightly lower than the value predicted by the voltage divider equation. The lesson: Call the circuit by its nickname, but remember, it's *only* a nickname. 
 
 ## Summary
 {:.no_toc}
 
 We give the name "voltage divider" to a pattern of resistors that looks like this, with an input voltage applied to both ends, and an output voltage measured across one of the resistors.
 
-![Voltage divider](https://ka-perseus-images.s3.amazonaws.com/be63ffad46329086809b588c919bd785a275e138.svg){: .centered }
+![Voltage divider]({{ site.baseurl }}{% link i/voltage_divider0.svg %}){: .centered :}
 
 The output voltage is a function of the input voltage and a ratio of resistor values,
 
 $v_{out}  = v_{in}\,\dfrac{\text{R2}}{\text{R1} + \text{R2}}$ 
 
 where $\text{R2}$ is the resistor on the bottom of the divider.
+
+The [next article]({{ site.baseurl }}{% link _articles/voltage-divider-design.md %}) covers some of the design subtleties of voltage dividers such as real-world resistor tolerance and non-zero output current.
