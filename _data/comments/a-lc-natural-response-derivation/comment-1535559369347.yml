@@ -1,0 +1,7 @@
+_id: d69acc30-aba6-11e8-b6e7-61e1106727d7
+_parent: 'https://spinningnumbers.org/a/lc-natural-response-derivation.html'
+replying_to: ''
+message: "We defined ω_0 as the natural frequency of the LC circuit. But this quantity actually has the dimensions of an angular velocity (radians per second): in fact, to determine the \"true\" frequency, we have to convert it via the formula f = ω/2π.\r\n\r\nIs it correct to say that the natural frequency of an LC circuit, when calculated as ω_0 = 1/sqrt(LC), is in fact an angular velocity?"
+name: GS
+email: e4942719ac9eeb2c44cdf9a5cefc6986
+date: '2018-08-29T16:16:09.346Z'
