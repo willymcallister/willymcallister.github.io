@@ -27,7 +27,7 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) - charge, current, voltage, power
+![]({{ site.baseurl }}{% link i/article.svg %}) [Basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) — charge, current, voltage, power
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Conventional current vs. electron current]({{ site.baseurl }}{% link _articles/conventional-vs-electron-current.md %})
 

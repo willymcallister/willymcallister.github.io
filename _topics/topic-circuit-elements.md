@@ -33,4 +33,4 @@ Finally, we learn about assigning labels to voltages and currents.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Labeling voltages]({{ site.baseurl }}{% link _videos/labeling-voltages.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor - how it works]({{ site.baseurl }}{% link _articles/inductor-how-it-works.md %}) 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor — how it works]({{ site.baseurl }}{% link _articles/inductor-how-it-works.md %}) 

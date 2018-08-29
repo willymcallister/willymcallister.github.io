@@ -17,4 +17,4 @@ Using semiconductor devices in circuits.
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Diode equation]({{ site.baseurl }}{% link _articles/diode-equation.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Diode circuit - worked example]({{ site.baseurl }}{% link _articles/diode-example.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Diode circuit — worked example]({{ site.baseurl }}{% link _articles/diode-example.md %})

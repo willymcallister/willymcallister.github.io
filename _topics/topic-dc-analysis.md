@@ -9,7 +9,7 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 
 ----
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [DC circuit analysis - overview]({{ site.baseurl }}{% link _articles/circuit-analysis-overview.md %}) 
+![]({{ site.baseurl }}{% link i/article.svg %}) [DC circuit analysis — overview]({{ site.baseurl }}{% link _articles/circuit-analysis-overview.md %}) 
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %})
 
