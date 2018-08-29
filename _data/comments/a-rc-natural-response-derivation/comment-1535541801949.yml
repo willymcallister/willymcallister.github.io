@@ -1,0 +1,7 @@
+_id: efb701d0-ab7d-11e8-b6e7-61e1106727d7
+_parent: 'https://spinningnumbers.org/a/rc-natural-response-derivation.html'
+replying_to: ''
+message: "I am a bit perplexed.\r\nTo determine the natural response of the RC circuit, we begin by using KCL to state: “the sum of currents flowing out of a node is zero”. So, considering the upper node, we have:\r\n\r\ni_C + i_R = 0\r\n\r\nBecause we imagine the two currents both flowing *out* of that node.\r\nSubstituting in the two i-v relationships:\r\n\r\nC dv/dt + v/R = 0\r\n\r\nI can solve this differential equation by separating the variables with no problems, and I get to the correct result.\r\n\r\nHowever, I have also tried a slightly different route to set up the differential equation, but I am making a conceptual mistake somewhere: my issue stems from a different line of reasoning.\r\nSince the RC circuit depicted above is a single, isolated loop, can’t we claim that the current flowing in it the same for both the capacitor and the resistor?\r\nIn other words:\r\n\r\ni_C = i_R\r\n\r\nThat means:\r\n\r\ni_C - i_R = 0\r\n\r\nSubstituting in the two i-v relationships:\r\n\r\nC dv/dt - v/R = 0\r\n\r\nBut this differential equation does not yield the correct result, since the sign on v/R needs to be positive, and the fault is clearly to be found in the initial reasoning about i_C = i_R.\r\nWhy is it incorrect to assume that the two currents i_C and i_R are in fact the same, single current i?"
+name: GS
+email: e4942719ac9eeb2c44cdf9a5cefc6986
+date: '2018-08-29T11:23:21.948Z'
