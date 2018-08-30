@@ -7,7 +7,7 @@ comments: true
 
 We derive the natural response  of the inductor-capacitor, $\text{LC}$, circuit. 
 
->This is where sine waves are born! 
+This is where sine waves are born! 
 
 ![LC natural response circuit]({{ site.baseurl }}{% link i/lc_natural_response0.svg %}){: .centered :}{: height="180px" :}
 
@@ -164,13 +164,16 @@ $s_1 = +j\,\sqrt{\dfrac{1}{\text{LC}}}$
 
 $s_2 = -j\,\sqrt{\dfrac{1}{\text{LC}}}$
 
->Electrical engineers use $j$ for the imaginary unit, $\sqrt{-1}$, since we already use $i$ for current. 
+{% capture summary %}j{% endcapture %}  
+{% capture details %}  
+Electrical engineers use $j$ for the imaginary unit, $\sqrt{-1}$, since we already use $i$ for current.  
+{% endcapture %}{% include details.html %} 
 
 As a shorthand, we give a name to the square root term,
 
 $\omega_\circ = \sqrt{\dfrac{1}{\text{LC}}}$
 
-{% capture summary %}What is the curvy w symbol?{% endcapture %}  
+{% capture summary %}$\omega_{\circ}${% endcapture %}  
 {% capture details %}  
 $\omega$ is the lowercase Greek letter omega. It is commonly used as the variable name for radian frequency (frequency measured in radians per second). 
 
@@ -231,7 +234,7 @@ $i = A_1\cos \omega_\circ t + A_2\sin \omega_\circ t$
 
 Notice how $A_2$, defined as $j(K_1-K_2)$, includes $j$. So $j$ no longer appears in the proposed solution.
 
-> This is the first time in electronics we see sine and cosine as a function of time. These are referred to as *sinusoidal waveforms*. 
+This is the first time in electronics we see sine and cosine as a function of time. These are referred to as *sinusoidal waveforms*. 
 
 ## Test the proposed solution
 
