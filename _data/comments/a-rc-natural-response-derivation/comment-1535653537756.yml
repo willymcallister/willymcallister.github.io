@@ -1,6 +1,6 @@
 _id: 175d5a40-ac82-11e8-ad57-d942879398b5
 _parent: 'https://spinningnumbers.org/a/rc-natural-response-derivation.html'
-replying_to: ''
+replying_to: '1'
 message: >-
   For such a simple circuit, the RC has an odd twist, and you found it. To get
   the sign right you have to respect the Sign Convention for Passive Components.
