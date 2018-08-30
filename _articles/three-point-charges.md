@@ -202,19 +202,23 @@ $\beta$ is the internal angle inside the triangle. The best answer is the angle 
 
 ![Force triangle solution]({{ site.baseurl }}{% link i/three_point_charges7.svg %}){: .centered :}
 
-$\boxed{F_0 = 1.75\,K \,\angle{-68.2\degree}}$
+$F_0 = 1.75\,K \,\angle{-68.2\degree}$
+
+$F_0 = 1.75\cdot 9 \times 10^9 \,\angle{-68.2\degree}$
+
+$F_0 = 15.7 \times 10^9\,\angle{-68.2\degree}\,\text N$
 
 Take a moment now to go back to your prediction drawing to check your initial intuition.
 
-{% capture summary %}Calculations with Google{% endcapture %}  
+{% capture summary %}Do calculations with Google{% endcapture %}  
 {% capture details %}
-Computing arcsine in Google is straightforward. Copy/paste this computation into the Google search slot,
+Compute arcsine in Google: Copy/paste this equation into Google search,
 
 ```
 arcsin((0.75 * sqrt 3)/(1.75 * 2)) in degrees
 ```
 
-Google understands the Law of Cosines and the Law of Sines. Copy/paste these calls to the special-purpose calculators,
+Google understands the Law of Cosines and the Law of Sines. Copy/paste these instructions into Google search to call these special-purpose calculators,
 
 ```
 law of cosines calc: find c a=2 b=0.75 gamma=60 degrees
