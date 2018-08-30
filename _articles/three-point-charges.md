@@ -122,7 +122,7 @@ The first thing to do is complete the details of the charge triangle with all th
 
 ![Charge triangle with sides labeled]({{ site.baseurl }}{% link i/three_point_charges2.svg %}){: .centered :}
 
->For Coulomb's Law problems, we always manage direction separate from magnitude. Put the absolute value of the charges in the numerator of Coulomb's Law.
+>For Coulomb's Law problems we manage direction separate from magnitude. 
 
 Next, sketch the individual force vectors. There are two force vectors to think about, {$q_1$ to $q_0$}, and {$q_2$ to $q_0$}. We can sketch them on the triangle,
 
@@ -131,6 +131,8 @@ Next, sketch the individual force vectors. There are two force vectors to think 
 <p class="caption">Force vectors point along straight lines between charges. We don't know the length of the vectors, yet.</p> 
 
 Apply Coulomb's Law to find the magnitude of each force, 
+
+>Use the absolute value of the charges in the numerator of Coulomb's Law.
 
 $\|\vec F\| = K \,\dfrac{q_0\, q_n}{r^2}$
 
