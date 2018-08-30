@@ -1,0 +1,17 @@
+_id: 175d5a40-ac82-11e8-ad57-d942879398b5
+_parent: 'https://spinningnumbers.org/a/rc-natural-response-derivation.html'
+replying_to: '1'
+message: >-
+  For such a simple circuit the RC has an odd twist, and you found it. To get
+  the sign right you have to respect the Sign Convention for Passive Components.
+  If we look at the second schematic, let's keep the definition of $v$ with $+$ at
+  the top, and the definition of $i$ flowing to the right, into the $+$ terminal
+  of the capacitor. The $i$-$v$ equation for the capacitor is the usual, $i =
+  Cdv/dt$. BUT, over at the resistor the current is flowing UP. When $i$ is
+  positive, the BOTTOM of the resistor will have a higher voltage than the top.
+  By the sign convention for passives, when you write the resistor
+  voltage in terms of the variable $v$ you have to include a minus sign. $-v = i
+  R$.  The rest of the derivation is the same.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2018-08-30T18:25:37.755Z'
