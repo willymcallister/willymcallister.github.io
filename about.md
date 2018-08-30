@@ -12,7 +12,7 @@ I got interested electricity when I was about eight years old. My first sense of
 
 In college my major was electrical engineering. I started my career designing integrated circuits and computers for TRW and Hewlett-Packard. Later on I got to work at Agilent Technologies, and then two exciting medical device startup companies. 
 
-I had a great year as a Content Fellow at [Khan Academy](https://www.khanacademy.org/science/electrical-engineering) where I got to share my EE knowledge. Sal and the other content creators taught me the approach to teaching in the KA style.
+I had a great year as a Content Fellow at [Khan Academy](https://www.khanacademy.org/science/electrical-engineering). Sal and the other content creators taught me the approach to teaching in the KA style.
 
 Here at Spinning Numbers I have been improving the articles I wrote for KA based on questions from learners, and writing new articles as well. The videos are the same videos you see on the KA EE site. 
 

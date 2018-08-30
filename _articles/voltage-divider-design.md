@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Voltage divider — design"
+title:  "Voltage divider — design considerations"
 author: Willy McAllister
 comments: true
 ---
@@ -71,7 +71,10 @@ $\text{R2}$ and $\text{R}\_{\text L}$ are in parallel. Combine the two parallel 
 
 $\text{R2} \parallel \text{R}\_{\text L} = \dfrac{\text{R2}\cdot\text{R}_{\text L}}{\text{R2}+\text{R}\_{\text L}}$
 
-The vertical bars $\parallel$ are shorthand notation for "in parallel with."
+{% capture summary %}$\parallel${% endcapture %}  
+{% capture details %}  
+The vertical bars $\parallel$ are shorthand notation for "in parallel with."  
+{% endcapture %}{% include details.html %} 
 
 $\dfrac{\text{R2}\cdot10\,\text{R2}}{\text{R2}+10\,\text{R2}} = \dfrac{10}{11}\,\text{R2} = 0.91\,\text{R2}$
 

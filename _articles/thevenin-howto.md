@@ -153,7 +153,10 @@ $\bold R = 500 + 1000 \parallel 1000 = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000
 
 $\bold R = 1000\,\Omega$
 
->The vertical bar symbol $\parallel$ is shorthand for "in parallel with."
+{% capture summary %}$\parallel${% endcapture %}  
+{% capture details %}  
+The vertical bars $\parallel$ are shorthand notation for "in parallel with."  
+{% endcapture %}{% include details.html %} 
 
 #### Thévenin voltage
 {:.no_toc}
