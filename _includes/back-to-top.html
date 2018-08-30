@@ -1,0 +1,77 @@
+<a href="#" class="sf-back-to-top"><span class="arrow"></span>Top</a>
+
+<script>
+// https://www.soundfocus.co.uk/squarespace/adding-a-floating-back-to-top-button
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+    if ( $(window).scrollTop() > amountScrolled ) {
+        $('a.sf-back-to-top').fadeIn('slow');
+    } else {
+        $('a.sf-back-to-top').fadeOut('slow');
+    }
+});
+
+$('a.sf-back-to-top').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 700);
+    return false;
+});
+</script>
+
+<style>
+/* Style the back-to-top floating button */
+.sf-back-to-top {
+    background-color: #50A1CB; /* button color */
+    color: white; /* text/arrow color */ 
+    display: none;
+    z-index: 999;
+    /* float in bottom right corner */
+    /* 20 pixels from edge */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    /* size of button is 50 pixels*/
+    width: 50px;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    /* round button */
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+a.sf-back-to-top {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    padding-left: 2px;
+    padding-top: 4px;    
+}
+
+a.sf-back-to-top .arrow:before {
+    content: "\e02d";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    content: "⇾";
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    cursor: pointer;
+    margin-left: -4px;
+}
+</style>

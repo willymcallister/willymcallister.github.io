@@ -87,6 +87,7 @@ textarea {
     border: 1px solid rgba(0,0,0,.12);
     padding: 4px 5px;
     width: 100%;
+    font-size: $comment-font-size; 
 }
 .notify-me, .g-recaptcha {
     padding: 0.5rem 0;
@@ -127,16 +128,16 @@ a.youtube_link:link, a.youtube_link:visited {
     padding: 0px 0px 14px 0px;
 }
 .comment__author {
-//    text-align: right;
     color: $grey-color;
-//    font-size: $small-font-size;
 }
 .comment__date {
-//    color: $grey-color;
     font-size: $small-font-size; 
 }
+.comment__body {
+    font-size: $comment-font-size; 
+}
 .comment__meta {
-    text-align: right;
+    text-align: left;
     color: $grey-color;
     font-size: $small-font-size;
 }
@@ -145,7 +146,7 @@ a.youtube_link:link, a.youtube_link:visited {
 }
 .comment {  
     border-top: 0px solid $grey-color-light;
-    padding: 5px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
     margin-bottom: 1em;
 }
 .comment.child {

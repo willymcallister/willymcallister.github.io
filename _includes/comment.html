@@ -22,7 +22,7 @@
 
   {% unless include.replying_to != 0 %}
     <div class="comment__meta">
-      <a rel="nofollow" class="comment__reply-link" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ post_slug }}')">Reply to {{ include.name }}</a>
+      <a rel="nofollow" class="comment__reply-link" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ post_slug }}')">↪&#xFE0E; Reply to {{ include.name }}</a>
     </div>
   {% endunless %}  
 </article>
