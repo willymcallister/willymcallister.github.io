@@ -1,0 +1,13 @@
+_id: dd80a1f0-abe7-11e8-b6e7-61e1106727d7
+_parent: 'https://spinningnumbers.org/a/lc-natural-response-derivation.html'
+replying_to: '1'
+message: >-
+  There are two units for measuring frequency: radians/sec and cycles/sec (Hz).
+  Both are valid, and one is not truer than the other. The simplest expression
+  for the natural frequency of LC and RLC circuits is units of rad/sec.
+  (Simplest because you don’t have to carry along a 2pi term.) In physics class
+  where you have objects zooming around in circles they have angular velocity,
+  and the units are also rad/sec.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2018-08-30T00:01:38.281Z'
