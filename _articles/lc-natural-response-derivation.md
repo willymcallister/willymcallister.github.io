@@ -90,13 +90,15 @@ As with every circuit analysis, we begin by writing one of Kirchhoff's Laws. In 
 
 $v_{\text{L}}+v_{\text{}C} = 0$
 
-$\text L\,\dfrac{di}{dt} + \dfrac{1}{\text C}\displaystyle\int i \,dt = 0$
+$\left (\text L\,\dfrac{di}{dt}\right ) + \left (\dfrac{1}{\text C}\displaystyle\int i \,dt + K \right ) = 0$
 
-This KVL equation has an integral, which is awkward to deal with. The way to get rid of an integral (also known as an anti-derivative) is to take its derivative.  We take the derivative of every term in the equation. 
+$K$ is the constant of integration for the $v_\text C$ term.
 
-$\dfrac{d}{dt} \left ( \,\text L\,\dfrac{di}{dt} + \dfrac{1}{\text C}\,\displaystyle\int i \,dt\, \right ) = \dfrac{d}{dt}\,0$
+This equation has an integral and it's kind of awkward to deal with. The way to get rid of an integral (an anti-derivative) is to take its derivative.  We take the derivative of each term in the equation, 
 
-This gives us the  second derivative of the $\text L$ term, gets rid of the integral in the $1/\text C$ term, and still leaves us with $0$ on the right side.
+$\dfrac{d}{dt} \left ( \,\text L\,\dfrac{di}{dt} + \dfrac{1}{\text C}\,\displaystyle\int i \,dt + K\, \right ) = \dfrac{d}{dt}\,0$
+
+The $\text L$ term becomes a second derivative. The integral of $i\,dt$ becomes just $i$. The derivative of $K$ is zero so it vanishes. The right side is still $0$.
 
 $\text L \,\dfrac{d^2i}{dt^2} + \dfrac{1}{\text C}\,i = 0$
 
