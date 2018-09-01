@@ -47,7 +47,7 @@ Second-order systems are the simplest systems that rock back and forth in time, 
 
 Let's say the capacitor has an initial voltage, which means it is storing some charge, $q = \text C\,\text V_0$. Think of $q$ as positive charge sitting on the top plate of the capacitor. We are going to reason through this by tracking what happens to $q$. 
 
-There is no initial current in the inductor, and therefore no current in the capacitor, either. The charge is just sitting there on the capacitor. What happens when the switch closes and we let the circuit "do whatever it wants"? (It's natural response.)
+There is no initial current in the inductor, and therefore no current in the capacitor, either. The charge is just sitting there on the capacitor. What happens when the switch closes and we let the circuit "do whatever it wants"? (Its natural response.)
 
 The inductor starts with $0$ current. All of a sudden the initial voltage, $v = \text V_0$ shows up when the switch closes. This voltage generates a current in the inductor, and it starts storing energy in its surrounding magnetic field. Where does that current (flowing charge) come from? It comes from the capacitor, of course. 
 

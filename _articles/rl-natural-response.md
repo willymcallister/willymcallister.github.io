@@ -28,7 +28,7 @@ Written by Willy McAllister.
 ### Where we're headed 
 {:.no_toc}
 
-For an resistor-inductor $(\text{RL})$ circuit with an initial current $\text I_0$, the current diminishes exponentially, 
+For a resistor-inductor $(\text{RL})$ circuit with an initial current $\text I_0$, the current diminishes exponentially, 
 
 $i(t) = \text I_0\,e^{-\text Rt/\text L}$
 
@@ -302,7 +302,7 @@ I always like to see what the equations look like,
 
 ![RL natural response current]({{ site.baseurl }}{% link i/rl_natural_response_current_nolabel.svg %}) | ![RL natural response voltage]({{ site.baseurl }}{% link i/rl_natural_response_voltage_nolabel.svg %})
 
-Before the switch closes the current is flat at $\text I_0$. The switch closes at $t=0$ and the current falls on an exponential curve until it fades $0$.
+Before the switch closes the current is flat at $\text I_0$. The switch closes at $t=0$ and the current falls on an exponential curve until it fades to $0$.
 
 The voltage across the inductor is $0$ before the switch closes. It makes a sharp jump at $t=0$ as soon as the current starts to change. The peak voltage depends on the initial current $\text I_0$ and the resistance, $\text R$. Voltage follows a similar exponential curve until it fades to $0$.
 

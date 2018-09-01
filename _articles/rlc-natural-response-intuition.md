@@ -115,7 +115,7 @@ At the end of one cycle we are back where we started, but with some energy remov
 
 The $\text{RLC}$ circuit has mechanical analog, a pendulum with friction. The addition of the resistor to the $\text{RLC}$ is equivalent to adding friction. Friction causes the pendulum to dissipate energy and slowly come to a halt.
 
-As a pendulum swings back and forth, friction from both air resistance and the pivot point dissipates energy. Each swing gets shorter and shorter until the pendulum finally stops moving. If friction low, the pendulum swings for a long time before it stops (under damped). If friction is very high, the pendulum makes just one slow drop to the bottom center and stops (over damped). At one precise value, the pendulum will fall to the bottom center as fast as possible, without overshooting and coming back (critically damped). 
+As a pendulum swings back and forth, friction from both air resistance and the pivot point dissipates energy. Each swing gets shorter and shorter until the pendulum finally stops moving. If friction is low, the pendulum swings for a long time before it stops (under damped). If friction is very high, the pendulum makes just one slow drop to the bottom center and stops (over damped). At one precise value, the pendulum will fall to the bottom center as fast as possible, without overshooting and coming back (critically damped). 
 
 ![](https://ka-perseus-images.s3.amazonaws.com/7096c1bfc06a0eeab18dab76b5240aa8218721c9.svg){: .centered :}
 

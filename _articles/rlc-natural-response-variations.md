@@ -87,7 +87,7 @@ $s = -\alpha \pm \sqrt{\alpha^2 - \omega_o^2}$
 Depending on the relative size of $\alpha$ compared to $\omega_o$ the expression $\alpha^2 - \omega_o^2$ under the square root will be positive, zero, or negative,
 
 |-------------------+---------------------+------------------------------|
-| relation |sign of $\alpha^2 - \omega_o^2$ | $\sqrt{\alpha^2 - \omega^2}$ |
+| relation |sign of $\alpha^2 - \omega_o^2$ | $\sqrt{\alpha^2 - \omega_o^2}$ |
 |-------------------|:-------------------:|------------------------------|
 | $\alpha>\omega_o$ | $+$                 | positive real number         |
 |-------------------+---------------------+------------------------------|
@@ -226,9 +226,9 @@ Quick review:
 
 {% capture summary %}$j\omega$ and $\omega t${% endcapture %}  
 {% capture details %}  
-One of the side effects of using Euler's formula is it gets $\omega$ away from $j$ and brings it into the "real" world. 
+Whenever we talk about complex exponentials it's always "$j\omega$ this, $j\omega$ that." Then later on we seem to talk about "$\sin \omega t$ and $\cos \omega t$." When did $\omega$ escape from $j$? It happens right here when we apply Euler's formula. 
 
-Whenever we talk about complex exponentials it's always "$j\omega$ this, $j\omega$ that." Then later on we seem to talk about "$\sin \omega t$ and $\cos \omega t$." I always forget, when did $\omega$ escape and and away from $j$? It happens right here when you apply Euler's formula.  
+One of the side effects of Euler's formula $\omega$ gets separated from $j$ and come out into the "real" (not imaginary) world.  
 {% endcapture %}{% include details.html %} 
 
 Now we want to find the amplitude constants, $A_1$ and $A_2$. We use the initial conditions, once we figure out what they are.
@@ -368,7 +368,7 @@ $s_{1,2} = -\alpha \pm \sqrt{\alpha^2 - \omega_o^2}\quad$ or $\quad s_{1,2} = -\
 
 What does an under damped $i$ look like? Let's do a real example,
 
-Let $\text R = 4 \,\Omega, \text L = 1\,\text H$, and $\text C = 1/4\,\text F$.
+Let $\text R = 2 \,\Omega, \text L = 1\,\text H$, and $\text C = 1/5\,\text F$.
 
 Let $v_c(0) = 10\,\text V$ and $i_\text L(0) = 0$.
 
@@ -682,7 +682,7 @@ $i = \dfrac{\text V_0}{(s_1 - s_2) \, \text L} \left ( e^{s_1 t} - e^{s_2 t} \ri
 
 $i = \dfrac{10}{(-1 - (-9)) \cdot 1} \left ( e^{-t} - e^{-9t} \right )$
 
-$i = \dfrac{10}{8) \cdot 1} \left ( e^{-t} - e^{-9t} \right )$
+$i = \dfrac{10}{8 \cdot 1} \left ( e^{-t} - e^{-9t} \right )$
 
 $i = 1.25 \left ( e^{-t} - e^{-9t} \right )$
 
@@ -929,7 +929,7 @@ $\dfrac{di}{dt} = \dfrac{d}{dt}\left ( \text I_0 \,e^{-\alpha t} + K_2\,t\,e^{-\
 
 This is the derivative of a sum, and one of the terms is a product.
 
->Derivative [sum rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-basic-diff-rules/v/basic-differentiation-rules), start at 3:15. We did the same product rule derivative [just above]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#critically-damped-with-an-initial-voltage).
+>Derivative [sum rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-basic-diff-rules/v/basic-differentiation-rules) (start at 3:15). We did the same product rule [just above]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#critically-damped-with-an-initial-voltage).
 
 $\dfrac{di}{dt} = -\alpha I_0 e^{-\alpha t} + K_2 e^{-\alpha t}(1 - \alpha t)$
 

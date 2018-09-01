@@ -90,7 +90,7 @@ As with every circuit analysis, we begin by writing one of Kirchhoff's Laws. In 
 
 $v_{\text{L}}+v_{\text{}C} = 0$
 
-$\text L\,\dfrac{di}{dt} + \dfrac{1}{\text C}\,\displaystyle\int i \,dt = 0$
+$\text L\,\dfrac{di}{dt} + \dfrac{1}{\text C}\displaystyle\int i \,dt = 0$
 
 This KVL equation has an integral, which is awkward to deal with. The way to get rid of an integral (also known as an anti-derivative) is to take its derivative.  We take the derivative of every term in the equation. 
 

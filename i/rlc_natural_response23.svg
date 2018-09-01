@@ -482,10 +482,10 @@
        id="flowPara4628" /></flowRoot><text
      class="st29 st30"
      id="text4441-1"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;letter-spacing:2px;"
      sodipodi:linespacing="125%"
-     x="86.840584"
-     y="133.38803">1 H</text>
+     x="83.297279"
+     y="133.38803">1H</text>
 <text
      class="st29 st30"
      id="text4441-8"
@@ -514,14 +514,14 @@
      inkscape:connector-curvature="0" /><text
      class="st29 st30"
      id="text4443-9"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;word-spacing:0px;letter-spacing:2px;"
      sodipodi:linespacing="125%"
      x="216.42064"
      y="25.84"><tspan
        sodipodi:role="line"
        id="tspan5473-3"
        x="216.42064"
-       y="25.84">2 Ω</tspan></text>
+       y="25.84">2Ω</tspan></text>
 <g
      id="g4507"
      transform="translate(-28.78795,-4.713745)"><g
