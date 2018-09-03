@@ -1,0 +1,7 @@
+_id: 4089f7a0-afc2-11e8-8da0-ff3fea61d47c
+_parent: 'https://spinningnumbers.org/a/whats-with-the-name.html'
+replying_to: ''
+message: "Thanks. That was a math error. The equation for sine should look like this:\r\n\r\n$\\sin (\\omega t) = \\dfrac{1}{2j} (e^{+j\\omega t} - e^{-j\\omega t})$"
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2018-09-03T21:42:28.104Z'
