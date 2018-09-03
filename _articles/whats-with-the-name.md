@@ -47,4 +47,3 @@ For now, don't worry about this fancy math notation, there's plenty of time to s
 If you want to know more and you can't stand to wait, jump to [AC analysis introduction]({{ site.baseurl }}{% link _videos/ac-analysis-intro1.md %}) where the theory of spinning numbers is developed and applied.
 
 The animated image is created in [D3.js](https://d3js.org). The source code is [logo-d3.html](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3a).
-
