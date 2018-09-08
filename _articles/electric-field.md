@@ -49,21 +49,21 @@ $q_i$ and $q$ are the two charges pushing or pulling on each other. We give $q$ 
 
 The force acts along the line between the two charges, as indicated by the $\hat{r_i}$ symbol (pronounced "r-hat"). $\hat{r_i}$ is a vector with magnitude $1$ that points from $q$ to $q_i$. It tells you which way the force vector points.
 
-Do not get hung up on which way $\hat r$ points, toward $q$ or toward $q_i$. It is so easy to mess up this vector notation that we always figure out direction in our head, separate from the calculation of magnitude. 
+Do not get hung up on which way $\hat r_i$ points, toward $q$ or toward $q_i$. It is so easy to mess up this vector notation that we always figure out direction in our head, separate from the calculation of magnitude. 
 
 ## Electric field defined
 
-To find the force on $q$ with Coulomb's Law you need to know three things: the distance to $q_i$, the value of $q_i$, and the value of $q$. Suppose, just for convenience, we assume $q = 1$. Then we would just have to know two things to find the force: $q_i$ and the distance. This is how electric field is defined. One charge is assigned to be a "test charge" with a value $q = 1$. The electric field tells you the force on the test charge caused by the other charge, $q_i$. 
+To find the force on $q$ you need to know three things: the value of $q$, the value of $q_i$, and the distance between them. Suppose, just for convenience, we assume $q = 1$. Then we would just have to know two things to find the force: $q_i$ and the distance. This is how electric field is defined. One charge is assigned to be a "test charge" with a value $q = 1$. The electric field tells you the force on the test charge caused by the other charge, $q_i$. 
 
-If your $q$ happens to be $1$, the electric field tells you the force on $q$. If $q$ is a different value, you find the force by multiplying the electric field by $q$,
+If $q$ happens to be $1$, the electric field tells you the force on $q$. If $q$ is a different value, find the force by multiplying the electric field by $q$,
 
 $\vec F = q \,\vec E$
 
-Another way to say the same thing is the electric field is the "normalized" electric force, or force per coulomb,
+Another way to say the same thing is the electric field is the "normalized" electric force, or the force per coulomb,
 
 $\vec E = \dfrac{\vec F}{q}$
 
-From this equation you can see the dimensions of electric field are newtons/coulomb. This definition of electric field works for any number of charges $q_i$, in any shape. 
+From this equation you can see the dimensions of electric field are newtons/coulomb. This definition of electric field works for any number of charges $q_i$, in any arrangement. 
 
 ## Electric field near an isolated point charge
 
@@ -147,7 +147,7 @@ If you center the test charge directly between the dipole charges, which way doe
 
 If there are multiple point charges scattered about, the electric field is the vector sum of the fields from each individual $q_i$,
 
-$\displaystyle \vec E = \dfrac{1}{4\pi\epsilon_0}\sum_i\dfrac{\text q_i}{r^2} \,\hat{r_i}$
+$\displaystyle \vec E = \dfrac{1}{4\pi\epsilon_0}\sum_i\dfrac{\text q_i}{r_i^2} \,\hat{r}_i$
 
 You solve multiple-charge electric field problems just like [electric force problems with multiple charges]({{ site.baseurl }}{% link _articles/three-point-charges.md %}).
 
@@ -155,7 +155,7 @@ You solve multiple-charge electric field problems just like [electric force prob
 
 If charge is spread out in a continuous distribution like a line or sphere or plane, the summation turns into an integral,
 
-$\displaystyle \vec E = \dfrac{1}{4\pi\epsilon_0}\int\dfrac{dq}{r^2} \,\hat{r}$
+$\displaystyle \vec E = \dfrac{1}{4\pi\epsilon_0}\int\dfrac{dq}{r^2} \,\hat r$
 
 We will find the electric field of distributed charge in upcoming articles.
 
@@ -254,7 +254,7 @@ $\text{Coulomb's Law: }\qquad\vec F = \dfrac{1}{4\pi\epsilon_0}\,\dfrac{q\, q_i}
 
 $\text{Electric field: }\,\,\,\,\vec E = \dfrac{\vec F}{q} = \dfrac{1}{4\pi\epsilon_0}\,\,\,\,\dfrac{q_i}{r^2}\,\hat r_i \qquad\text{newtons/coulomb}$
 
-Where $ \,\hat{r_i}$ are unit vectors indicating the line between each $q_i$ and $q$.
+Where $\hat r_i$ are unit vectors indicating the line between each $q_i$ and $q$.
 
 The value of the electric field at a point only depends on the value of the source charge creating the field, not on the value of the test charge. 
 

@@ -64,7 +64,7 @@ $i = -\dfrac{1}{120\,\Omega}\,v_{\text D} + 27.5\,\text{mA}$
 
 The $i$-intercept is $27.5\,\text{mA}$. The slope of the line is $-\dfrac{1}{120}$. 
 
-When resistor has its upper terminal connected to a fixed voltage it produces a line with this distinctive negative slope. This line has the nickname *load line*. Load lines also come up when we study transistors.
+When a resistor has its upper terminal connected to a fixed voltage it produces a line with this distinctive negative slope. This line has the nickname *load line*. The other place load lines come up when we study transistors.
 
 Now we set the two equations equal to get one equation in one unknown, $v_{\text D}$,  
 

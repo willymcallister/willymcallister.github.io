@@ -97,14 +97,14 @@ When the diode voltage is greater than $26\,\text{mV}$ the exponent term grows r
     <summary>Boltzmann's constant</summary>
     <p>The Boltzmann constant is a very important number in physics. It connects the world we see and sense with the atomic-scale world of atoms and electrons. Suppose you have a chamber filled with gas molecules. You can measure the temperature of the chamber (a macro-world measurement). If the chamber gets warmer, down at the atomic level the gas molecules have higher kinetic energy. If you know the temperature of the gas, the Boltzmann constant $k$ relates the temperature to the average kinetic energy of a molecule. $k$ shows up wherever behavior at the atomic level is related to what happens in the macro world. Diodes conducting current is one such case. There are tons of others.</p>
     <p>The units of Boltzmann's constant are joules (of kinetic energy) per kelvin. Physicists write Boltzmann's constant as $k_B$.</p>
-    <p>David dos Santos, KA's physics fellow tells you more about <a href="https://www.khanacademy.org/science/in-in-class11th-physics/in-in-phy-kinetic-theory/in-in-kinetic-molecular-theory-of-gas/v/boltzmanns-constant">Boltzmann's constant</a></p>
+    <p>David Santo Pietro, KA's physics fellow tells you more about <a href="https://www.khanacademy.org/science/in-in-class11th-physics/in-in-phy-kinetic-theory/in-in-kinetic-molecular-theory-of-gas/v/boltzmanns-constant">Boltzmann's constant</a></p>
 </details>
 
 <details>
     <summary>"per kelvin" sounds funny</summary>
     <p>Temperature can be measured in "degrees Celsius", or "degrees  Fahrenheit", or "kelvin". We write temperatures as $23\,^\circ\text C$ or $73\,^\circ\text F$, with the little circle $^\circ$ degree symbol. </p>
     <p>The units of absolute temperature are kelvin. Kelvin are defined to already <em>be</em> degrees. So we say "kelvin" instead of "degrees Kelvin", since that would be redundant. The temperature in kelvin is written without the little degree circle, like this: $-273\,^{\circ}\text C\ = 0\,\text K$.</p>
-    <p>The size of a kelvin is the same as a degree Celcius. The only difference is the kelvin scale starts at absolute $0$ and the Celcius scale starts at the freezing point of water. A temperature of absolute zero, or $0\,\text K$ is $-273\,^{\circ}\text C\,\text {(celsius)}$. </p>
+    <p>The size of a kelvin is the same as a degree Celsius. The only difference is the kelvin scale starts at absolute $0$ and the Celsius scale starts at the freezing point of water. A temperature of absolute zero, or $0\,\text K$ is $-273\,^{\circ}\text C\,\text {(celcius)}$. </p>
     <p>Try not to confuse big $\text K$ the unit for kelvin with little $k$ for Boltzmann's constant.</p>
 </details>
 

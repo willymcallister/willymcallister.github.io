@@ -102,37 +102,35 @@ The force is predicted by Coulomb's Law. We always do these sorts of problems in
 * First, figure out the *direction* of the force. 
 * Second, figure out the *magnitude* of the force.
 
-### Direction of the force
+### Direction
 
-The direction of the force can be found by inspection. The electric force always acts along the line between the two point charges. For this problem, the charges have opposite signs, so we know they attract. We can add the force vectors to the diagram,
+The direction of the force can be found by inspection. The electric force always acts along the line between the two point charges. For this problem, the charges have opposite signs, so we know they attract. We add force vectors to the diagram,
 
 ![Two point charges with attractive force]({{ site.baseurl }}{% link i/electric_force2.svg %}){: .centered :}
 
-### Magnitude of the force
+### Magnitude
 
 The magnitude of the force comes from Coulomb's Law. We use the absolute value of the charges (since we already figured out the direction), 
 
-$\|F\| = 9 \times 10^9 \,\dfrac{\|q_0\|\, \|q_1\|}{r^2}$
+$\|\vec F\| = 9 \times 10^9 \,\dfrac{\|q_0\|\, \|q_1\|}{r^2}$
 
 We don't have to use vector notation since we already know the direction. And for the same reason we use the absolute value of the charges. Fill in the values we know and crank the arithmetic,
 
-$\|F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\,\mu\text C\cdot 50\,\text{nC}}{(2\,\text{cm})^2}$
+$\|\vec F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\,\mu\text C\cdot 50\,\text{nC}}{(2\,\text{cm})^2}$
 
 Expanding the numbers to scientific notation,
 
-$\|F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\times 10^{-6}\text C\cdot 50\times 10^{-9}\text{C}}{(0.02\,\text m)^2}$
+$\|\vec F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\times 10^{-6}\text C\cdot 50\times 10^{-9}\text{C}}{(0.02\,\text m)^2}$
 
 Cancel the units and compute the force,
 
-$\|F\| = 9 \times 10^{9} \,\dfrac{\text N\cancel\text m^2}{\cancel{\text C^2}} \,\,\dfrac{150\times 10^{-15}\,\cancel\text C^2}{4\times 10^{-4}\cancel{\text m^2}}$
+$\|\vec F\| = 9 \times 10^{9} \,\dfrac{\text N\cancel\text m^2}{\cancel{\text C^2}} \,\,\dfrac{150\times 10^{-15}\,\cancel\text C^2}{4\times 10^{-4}\,\cancel{\text m^2}}$
 
-$\|F\| = 3.375\,\,\text N$
+$\|\vec F\| = 3.37\times 10^{-3}\,\text N$
 
-And we assemble the answer by combining the direction and magnitude of the force. The two charges are being pulled together with a force of $3.375\,\,\text N$,
+And we assemble the answer by combining the direction and magnitude of the force. The two charges are being pulled together with a force of $3.37\times 10^{-3}\,\text N$,
 
 ![Two point charges with attractive force shown]({{ site.baseurl }}{% link i/electric_force3.svg %}){: .centered :}
-
-This is quite a bit of force for such tiny charge numbers, microcoulombs and nanocoulombs. $3+$ newtons is the weight of 3 big apples. A Coulomb is a  really large amount of charge, and the electric force is quite strong. <small>(An apple weighs about $1$ newton.)</small>
 
 ## Summary
 {:.no_toc}

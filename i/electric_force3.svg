@@ -40,9 +40,9 @@
      inkscape:window-height="756"
      id="namedview4962"
      showgrid="false"
-     inkscape:zoom="1.6774495"
-     inkscape:cx="161.8026"
-     inkscape:cy="82.356613"
+     inkscape:zoom="2.0015855"
+     inkscape:cx="167.11752"
+     inkscape:cy="78.10451"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -327,13 +327,23 @@
        y="114.57124"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">33.7mN</tspan></text>
   <path
-     style="fill:none;fill-rule:evenodd;stroke:#5ccfb3;stroke-width:0.97412419;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-rule:evenodd;stroke:#5ccfb3;stroke-width:0.97440023;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="M 144.22745,93.311365 C 158.255,81.53216 169.307,63.021989 169.307,63.021989"
      id="path9281"
      inkscape:connector-curvature="0" />
   <path
-     style="fill:none;fill-rule:evenodd;stroke:#57c2dc;stroke-width:0.92996591px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:none;fill-rule:evenodd;stroke:#57c2dc;stroke-width:0.92996591px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
      d="M 112.97136,93.425595 C 100.05575,81.765864 89.879826,63.443437 89.879826,63.443437"
      id="path9281-3"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#57c2dc;stroke-width:1.0729171px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+     d="m 89.168991,67.901754 0.217017,-4.991246 5.136126,2.117499"
+     id="path5908"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#5ccfb3;stroke-width:0.9162761px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+     d="m 164.67512,64.669343 4.91281,-2.274001 0.55269,5.522575"
+     id="path5910"
      inkscape:connector-curvature="0" />
 </svg>

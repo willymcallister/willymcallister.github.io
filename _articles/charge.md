@@ -181,7 +181,7 @@ The electron gets the $-$ sign and the proton the $+$ sign because of the way Fr
 
 The variable we use for the charge of an electron is $-e$ or $e^-$. The charge of a proton can be written as $+e$ or $e^+$.
 
-## Measuring charge by counting electrons$ 
+## Measuring charge by counting electrons 
 
 A coulomb of charge is like a big bucket of sand, where each grain of sand is an electron charge, $e^-$. When dealing with everyday currents there are lots of electrons moving around. So we measure charge in buckets (coulombs).
 

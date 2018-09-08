@@ -231,7 +231,7 @@ The next diagram show how point charge $dQ$ generates an electric field vector $
 * $dE_x$ is the horizontal part of $dE$, parallel to the line of charge.
 * $dE_y$ is the vertical part of $dE$, pointing straight away from the line.
 
-Now consider another $dQ$, the same distance $x$ away from the mid-point but on the left side. The angles and distances are the same, just flipped over. We break $dE$ into it's two components just like before,
+Now consider another $dQ$, the same distance $x$ away from the mid-point but on the left side. The angles and distances are the same, just flipped over. We break $dE$ into its two components just like before,
 
 ![dE on the left side of the line, E-field x and y components]({{ site.baseurl }}{% link i/line_of_charge2_5a.svg %}){: .centered :}
 
