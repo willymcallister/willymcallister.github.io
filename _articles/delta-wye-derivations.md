@@ -170,11 +170,11 @@ The rule for two conductances in series is similar to two resistors in parallel,
 
 $G_{\text{series}} = \dfrac{G_i\,G_j}{G_i + G_j}$
 
-![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta-wye1.svg %}){: .centered :}
+![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta_wye1.svg %}){: .centered :}
 
 Our strategy is to short circuit the conductance opposite the terminal in question and figure out the conductance. For example, suppose we are looking at terminal $x$. We short out $Ga$ on the opposite side by connecting a wire between $y$ and $z$. You can think of it as connecting both $y$ and $z$ to ground. Then we compute the conductance between terminal $x$ and ground and call this $G_x$. Shorting out the $Ga$ is the dual of leaving resistor $R1$ resistor open while figuring out $R_{yz}$ up above.
 
-![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta-wye2.svg %}){: .centered :}
+![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta_wye2.svg %}){: .centered :}
 
 In the $\Delta$ configuration, the conductance from $x$ to ground is $Gb$ in parallel with $Gc$, or,
 

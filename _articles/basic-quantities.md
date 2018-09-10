@@ -41,7 +41,7 @@ If you fiddle around with static electricity you will eventually conclude there 
 
 **Conductors** are atoms whose outer electrons (valence electrons) have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other. Metals have a cloud or "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move around in a current. Copper, gold, silver, and aluminum are good conductors.
 
-![Copper atom]({{ site.baseurl }}{% link i/2copper_atom.svg %}){: .centered :}{:height="160px" width="245px" :}
+![Copper atom]({{ site.baseurl }}{% link i/copper_atom.svg %}){: .centered :}{:height="160px" width="245px" :}
 
 There are also relatively poor conductors. Tungsten — a metal used for the filament in an incandescent light bulb — is a relatively poor conductor compared to copper. When you put a voltage on a tungsten filament it resists the flow of current and gets really hot. Carbon in graphite form used in pencils is a relatively poor conductor. The electrons in these materials are less likely to escape from an atom. (An exotic form of carbon called graphene turns out to be a superb conductor).
 
@@ -62,7 +62,7 @@ Charge flows in a current.
 
 When we give a number for current, it is reported as the number of charges per unit time passing through a boundary. To visualize current, imagine placing a boundary all the way across a wire. Station yourself near the boundary and count the number of charges passing by. Count how much charge passed through the boundary in one second, and report that as the current. We say the direction of current is the direction a *positive* charge would be moving. 
 
-![Current flow]({{ site.baseurl }}{% link i/2current_flow.svg %}){: .centered :}
+![Current flow]({{ site.baseurl }}{% link i/current_flow.svg %}){: .centered :}
 
 {% capture summary %}Current direction and NEETS{% endcapture %}  
 {% capture details %}  
@@ -117,11 +117,11 @@ Voltage in an electric circuit is analogous to the product of $g\cdot \Delta h$.
 
 A ball at the top of the hill rolls down. When it is halfway down, it has given up half of its potential energy.
 
-An electron at the top of a voltage "hill" travels "downhill" through wires and elements of a circuit. It gives up its potential energy, doing work along the way. When the electron is halfway down the hill, it has given up or "dropped" half of its potential energy. 
+An electron at the top of a voltage "hill" travels "downhill" through wires and elements of a circuit. It gives up its potential energy, doing work along the way. When the electron is halfway down the hill, it has given up or "dropped" half of its potential energy.  
 
-![Voltage analogy]({{ site.baseurl }}{% link i/2voltage_analogy.svg %}){: .centered :}{:height="219px" width="823px" :}
+![Voltage analogy]({{ site.baseurl }}{% link i/voltage_analogy.svg %}){: .centered :}{:height="219px" width="823px" :}
 
-For both the ball and the electron the trip down the hill happens spontaneously. The ball and electron move to a lower energy state all by themselves. On the trip down there can be things in the way of the ball, like trees or bears to bounce off. We guide electrons using wires and allow them to flow through electronic components, doing interesting things along the way. We call this circuit design.
+For both the ball and the electron the trip down the hill happens spontaneously. The ball and electron move to a lower energy state all by themselves. On the trip down there can be things in the way of the ball, like trees or bears to bounce off. We guide electrons using wires and allow them to flow through electronic components, doing interesting things along the way. We call this circuit design. 
 
 <details>
 <summary>Why use an analogy?</summary>
