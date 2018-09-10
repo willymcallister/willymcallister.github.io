@@ -1,6 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Web Font Sample</title>
+	<link rel="stylesheet" href="https://spinningnumbers.org/assets/katex.min.css"">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"></script>
+	<script>
+	    document.addEventListener("DOMContentLoaded", function() {
+	        renderMathInElement(document.body, {
+	            // ...options...
+	            delimiters:
+	            [{left: "\\$\\$", right: "\\$\\$", display: true},
+	            {left: "\\(", right: "\\)", display: false},
+	            {left: "\\[", right: "\\]", display: true},
+	            {left: "$", right: "$", display: false} ]
+	        });
+	    });
+	</script>
+	<link href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css">
+	<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/copy-tex.min.js" integrity="sha384-C6+I57LTtRxci6ohCckeDBUvozd3Zm2ThSCEQCHq+d2rw+RtSlWxylHmWiFq9Okv" crossorigin="anonymous"></script>
+
+  <title>KaTeX Fonts for SVG images</title>
   <style type="text/css" media="screen, print">
     @font-face {
       font-family: "Bitstream Vera Serif Bold";
@@ -16,6 +35,6 @@
 </head>
 <body>
  <p>This is KaTeX_Main-Italic.</p>
- <p><img src="http://spinningnumbers.org/i/linearity_scaling.svg"></p>
+ <p><img src="https://spinningnumbers.org/i/linearity_scaling.svg"></p>
 </body>
 </html>
