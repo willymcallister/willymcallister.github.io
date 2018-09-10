@@ -265,6 +265,9 @@ If $f(x)$ is not linear and we put $x_1+x_2$ into the input, the output does not
 
 ![f(x) is a squarer function]({{ site.baseurl }}{% link i/linearity_squarer.svg %}){: .centered :}
 
+![f(x) is a squarer function]({{ site.baseurl }}{% link i/linearity_squarer_p.svg %}){: .centered :}
+
+
 $f(x) = x^2$
 
 If $x = 3$, then $f(3) = 9$. If $x = 0.5$, then $f(0.5) = 0.25$.
