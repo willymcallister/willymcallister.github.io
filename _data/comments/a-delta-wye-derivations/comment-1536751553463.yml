@@ -1,0 +1,7 @@
+_id: 9bc51880-b67e-11e8-a524-7dde27d5fbc0
+_parent: 'https://spinningnumbers.org/a/delta-wye-derivations.html'
+replying_to: ''
+message: "Small typo/mistake under \"Delta to Y derivation\"\r\nMultiply everything out and search for cancellations,\r\n\r\n$R1 = \\dfrac{\\cancel{RaRc} \\,+ RcRb + RbRc + \\,\\cancel{RbRa} \\,- \\,\\cancel{RaRb} \\,+\\, \\cancel{RaRc}}{2(Ra+Rb+Rc)}$\r\n\r\nlast term should be minus instead of plus"
+name: Hch
+email: ''
+date: '2018-09-12T11:25:53.462Z'
