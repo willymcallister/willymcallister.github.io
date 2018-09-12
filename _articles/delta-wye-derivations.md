@@ -79,7 +79,7 @@ $R1 = \dfrac{Rc(Ra+Rb) + Rb(Rc+Ra) - Ra(Rb+Rc)}{2(Ra+Rb+Rc)}$
 
 Multiply everything out and search for cancellations,
 
-$R1 = \dfrac{\cancel{RaRc} \,+ RcRb + RbRc + \,\cancel{RbRa} \,- \,\cancel{RaRb} \,+\, \cancel{RaRc}}{2(Ra+Rb+Rc)}$
+$R1 = \dfrac{\cancel{RaRc} \,+ RcRb + RbRc + \,\cancel{RbRa} \,- \,\cancel{RaRb} \,-\, \cancel{RaRc}}{2(Ra+Rb+Rc)}$
 
 $R1 = \dfrac{\cancel{2}\,RbRc}{\cancel{2}( Ra+Rb+Rc )}$
 
