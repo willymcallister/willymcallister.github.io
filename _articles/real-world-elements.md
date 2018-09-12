@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-![](/i/6resistor_assortment.jpg){: .centered }
+![](/i/resistor_assortment.jpg){: .centered }
 
 The circuit elements discussed in the previous article are *ideal circuit elements*. Real-world circuit elements come close to the ideal mathematical models, but inevitably will be imperfect. Being a good engineer means being aware of the limitations of real-world components compared to their the ideal abstractions.
 
@@ -57,7 +57,7 @@ $v = i\,\text R$
 
 The two symbols for a resistor look like this:
 
-![Resistor symbols]({{ site.baseurl }}{% link i/5resistor_symbols.svg %}){: .centered }
+![Resistor symbols]({{ site.baseurl }}{% link i/element_resistor_symbols.svg %}){: .centered }
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -85,7 +85,7 @@ The color bands tell you the value of the resistor and its tolerance. The bands 
 
 <details>
 <summary>resistor color code chart</summary>
-     <img src="/i/6resistor_color_code.svg">
+     <img src="/i/resistor_color_code.svg">
 </details>
 
 This precision resistor has 5 color bands:
@@ -102,7 +102,7 @@ The resistance value is encoded in the $3$-digit code: $102$, meaning $10 \times
 
 Here's how a surface mount resistor is made. The resistor itself is a single layer of material screened on top of a little chunk of ceramic insulator, and covered with a protective layer.
 
-![Surface mount resistor cross section]({{ site.baseurl }}{% link i/6surface-mount-resistor-construction.svg %}){: .centered }
+![Surface mount resistor cross section]({{ site.baseurl }}{% link i/resistor_smt_construction.svg %}){: .centered }
 
 Example of a resistor that's part of an integrated circuit:
 
@@ -118,7 +118,7 @@ $i = \text C \,\dfrac{dv}{dt}$
 
 The some symbols for a capacitor look like this:
 
-![Capacitor symbols]({{ site.baseurl }}{% link i/5capacitor_symbols.svg %}){: .centered }
+![Capacitor symbols]({{ site.baseurl }}{% link i/element_capacitor_symbols.svg %}){: .centered }
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -164,13 +164,13 @@ $v = \text L \,\dfrac{di}{dt}$
 
 The symbol for an inductor looks like this:
 
-![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered }
+![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
 Real-world inductors come in lots of shapes and sizes.
 
-![Air-core inductor](/i/6air-core-inductor.jpg) ![Toroidal ferrite-core inductor](/i/6ferrite_core_inductor.png){:height="160px"} ![Inductor on form](/i/6inductor_on_form.jpg){:height="160px"}
+![Air-core inductor](/i/inductor_air_core.jpg) ![Toroidal ferrite-core inductor](/i/inductor_ferrite_core.png){:height="160px"} ![Inductor on form](/i/inductor_on_form.jpg){:height="160px"}
 
 ### Parasitics
 

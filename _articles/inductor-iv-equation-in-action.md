@@ -139,7 +139,7 @@ Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.ht
 
 We can actually come up with something more useful than an infinitely-rising current ramp. If we change the voltage source so it reverses direction every once in a while, we get a more interesting and potentially useful circuit. 
 
-![Inductor voltage squarewave]({{ site.baseurl }}{% link i/inductor_in_action_triangle.svg %}){: .centered :}{: height="160px"}
+![Inductor voltage square wave]({{ site.baseurl }}{% link i/inductor_in_action_triangle.svg %}){: .centered :}{: height="160px"}
 
 Here's a challenge for you: Assume the square wave amplitude is $\pm1\,\text V$ and the frequency is $1\,\text{MHz}$ $($has a period of $1\,\mu\text{sec})$.
 

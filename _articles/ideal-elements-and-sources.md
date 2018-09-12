@@ -48,7 +48,7 @@ Later on we will learn about components (transistors) that have more than two te
 
 The two common symbols for constant voltage sources look like this,
 
-![Voltage source symbols]({{ site.baseurl }}{% link i/5voltage_source_symbols.svg %}){: .centered :}
+![Voltage source symbols]({{ site.baseurl }}{% link i/source_voltage_symbols.svg %}){: .centered :}
 
 The symbol on the left is a battery. The long horizontal line represents the positive terminal of the battery, and the short horizontal line is the negative terminal. Sometimes the battery is not marked with $+$ and +-$ signs, so this long-line short-line thing is to memorize. 
 
@@ -56,7 +56,7 @@ The circle symbol represents some other kind of voltage source, a power supply o
 
 An ideal constant voltage source has a fixed output voltage, independent of the current drawn by the components connected to its terminals, as shown in this *current versus voltage* plot,
 
-![Voltage source i-v plot]({{ site.baseurl }}{% link i/5constant_voltage_source.svg %}){: .centered :}
+![Voltage source i-v plot]({{ site.baseurl }}{% link i/source_constant_voltage_i-v.svg %}){: .centered :}
 
 The equation for a constant voltage source is, $v = \text V$, where $\text V$ is some constant voltage, like $v=3\,\text V$.
 
@@ -71,7 +71,7 @@ You often see the variable name $e$ associated with voltage, derived from the te
 
 An ideal variable voltage source generates a known voltage as a function of time, independent of the current drawn by the components connected to its terminals, as shown in this $voltage$ versus $time$ plot,
 
-![Variable voltage source]({{ site.baseurl }}{% link i/5variable_voltage_source.svg %}){: .centered :}
+![Variable voltage source]({{ site.baseurl }}{% link i/source_variable_voltage_v-t.svg %}){: .centered :}
 
 
 The equation for a variable voltage source is, $v = v(t)$, where $v(t)$ can be a sine wave or any other time-varying voltage, for example, a single voltage step, or a repeating square wave.
@@ -79,18 +79,18 @@ The equation for a variable voltage source is, $v = v(t)$, where $v(t)$ can be a
 <details>
 <summary>More examples of time-varying voltage sources</summary>
 
-<p>Step voltage<img src="/i/5step_voltage_source.svg" alt="Step voltage source" /></p>
+<p>Step voltage<img src="/i/source_step_voltage.svg" alt="Step voltage source" /></p>
 
-<p>Square wave<img src="/i/5square_voltage_source.svg" alt="Square wave voltage source" /></p>
+<p>Square wave<img src="/i/source_square_voltage.svg" alt="Square wave voltage source" /></p>
 
-<p>Triangle wave<img src="/i/5triangle_voltage_source.svg" alt="Triangle wave voltage source" /></p>
+<p>Triangle wave<img src="/i/source_triangle_voltage.svg" alt="Triangle wave voltage source" /></p>
 
-<p>Sawtooth wave<img src="/i/5sawtooth_voltage_source.svg" alt="Sawtooth wave voltage source" /></p>
+<p>Sawtooth wave<img src="/i/source_sawtooth_voltage.svg" alt="Sawtooth wave voltage source" /></p>
 </details>
 
 The symbol for a variable voltage source looks like this, or some variation,
 
-![Variable voltage source symbol]({{ site.baseurl }}{% link i/5variable_voltage_source_symbol.svg %}){: .centered :}
+![Variable voltage source symbol]({{ site.baseurl }}{% link i/source_variable_voltage_symbol.svg %}){: .centered :}
 
 The squiggle inside the circle suggests a sine wave generator. You will come across different versions of this symbol for other waveform shapes.
 
@@ -100,7 +100,7 @@ The ideal mathematical model of a voltage source can produce an arbitrarily huge
 
 The symbol for a constant current source looks like this,
 
-![Constant current source symbol]({{ site.baseurl }}{% link i/5constant_current_source_symbol.svg %}){: .centered :}
+![Constant current source symbol]({{ site.baseurl }}{% link i/source_constant_current_symbol.svg %}){: .centered :}
 
 The arrow indicates the direction of positive current flow.
 
@@ -108,7 +108,7 @@ The voltage at the terminals of an ideal current source becomes whatever is requ
 
 An ideal constant current source has a fixed output current, independent of the voltage connected to its terminals, as shown in this $current$ versus $voltage$ plot,
 
-![Current source i-v plot]({{ site.baseurl }}{% link i/5constant_current_source.svg %}){: .centered :}
+![Current source i-v plot]({{ site.baseurl }}{% link i/source_constant_current_i-v.svg %}){: .centered :}
 
 The equation for a constant current source is, $i = \text I$
 
@@ -118,7 +118,7 @@ where $\text I$ is a constant output current, like $i=2\,\text{mA}$. The current
 
 The two symbols for a resistor look like this,
 
-![Resistor symbols]({{ site.baseurl }}{% link i/5resistor_symbols.svg %}){: .centered :}
+![Resistor symbols]({{ site.baseurl }}{% link i/element_resistor_symbols.svg %}){: .centered :}
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -134,7 +134,7 @@ $\text R$ is a constant of proportionality, representing the *resistance* of the
 
 The $i$-$v$ plot for a resistor is shown below. The equation is Ohm's Law solved for $i=v/\text R$. The slope of the resistor line is $1/\text R$.
 
-![Resistor i vs. v plot]({{ site.baseurl }}{% link i/5resistor_i-v_plot.svg %}){: .centered :}  
+![Resistor i-v plot]({{ site.baseurl }}{% link i/element_resistor_i-v.svg %}){: .centered :}  
 
 <details>
 <summary>What is the resistance of this resistor?</summary>
@@ -163,7 +163,7 @@ Ohm's Law is worth committing to memory.
 
 <p>This graphic is another way to remember Ohm's Law,</p>
 
-<img src="/i/5ohms_law_circle.svg">
+<img src="/i/ohms_law_circle.svg">
 
 <p>Put your finger or thumb over the variable you want $(v$, $i$, or $\text R)$, and read the equation. For example, to find $\text R$, cover up $\text R$ and read $v/i$. To find $v$, cover $v$ and read  $i\,\text R$.</p>
 
@@ -260,7 +260,7 @@ This equation captures the $i$-$v$ relationship for capacitors. It also tells us
 
 The some symbols for a capacitor look like this,
 
-![Capacitor symbols]({{ site.baseurl }}{% link i/5capacitor_symbols.svg %}){: .centered :}
+![Capacitor symbols]({{ site.baseurl }}{% link i/element_capacitor_symbols.svg %}){: .centered :}
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -318,7 +318,7 @@ The constant of proportionality $\text L$ is the called the *inductance*. The un
 
 The symbol for an inductor looks like this,
 
-![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered :}
+![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered :}
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 

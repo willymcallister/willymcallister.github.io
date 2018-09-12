@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  Inductor - how it works - under construction
+title:  Inductor - how it works
 author: Willy McAllister
 comments: true
 ---
 
-UNDER CONSTRUCTION
+STILL UNDER CONSTRUCTION
 
 When this article is ready to publish, add this line back to Ideal or Real World elements:  
 Refer to [Inductor - how it works](https://spinningnumbers.org/a/inductor-how-it-works.html) for an informal description of how an inductor does its thing. 
@@ -44,7 +44,7 @@ The red lines in these images represent the magnetic field. Here's a single stra
 By using a magnetic field sensor, of course.<br>  
 You already know what that is, it's called a compass.</p>
 
-<p><img class="centered" src="/i/6-3compass_align.jpg" alt="Compass" height="160px" /></p>
+<p><img class="centered" src="/i/compass_align.jpg" alt="Compass" height="160px" /></p>
 
 <p>If there is no nearby magnetic field, the needle of the compass lines up with the magnetic field of the Earth, and points towards magnetic north. If you create a magnetic field, the compass needle swings around and lines up with the new field. The magnetic field from the wire is stronger than the earth's field, so it overpowers it and tips the compass needle.</p>
 
@@ -125,7 +125,7 @@ See if you can use the Right Hand Rule to confirm that the magnetic field line a
 
 The symbol for an inductor looks like this:
 
-![Inductor symbol]({{ site.baseurl }}{% link i/5inductor_symbol.svg %}){: .centered }
+![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 

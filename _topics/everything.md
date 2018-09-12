@@ -34,6 +34,8 @@ comments: true
 
 ### Images
 
+Note: The text in these .svg images is flattened down to paths. Images with the original text are available [here](https://github.com/willymcallister/willymcallister.github.io/tree/master/images).
+
 <ul>
 {% assign image_files = site.static_files | where: "image", true %}
 {% for myimage in image_files %}

@@ -108,14 +108,16 @@ $\text C\,\dfrac{dv}{dt} + \dfrac 1 {\text R} \, {v} = 0$
 
 The previous equation has a fancy name. It is called a *first-order ordinary differential equation* (ODE). 
 
-<details>
-<summary>What do these terms mean?</summary>
-<p>It is a *differential* equation because it contains derivatives $dv/dt$.</p>
-<p>It is *first-order* because the highest derivative is a first derivative $dv/dt$.</p>
-<p>It is *ordinary* because there is just one independent variable $t$, (as opposed to partial derivatives of multiple independent variables).</p> 
+{% capture summary %}What do these terms mean?{% endcapture %}  
+{% capture details %}  
+It is a *differential* equation because it contains derivatives $dv/dt$.
 
-<p>It amazes me how schematic symbols turn into bits and pieces of differential equations. Simple symbols, sophisticated ideas.</p>
-</details>
+It is *first-order* because the highest derivative is a first derivative $dv/dt$.
+
+It is *ordinary* because there is just one independent variable $t$, (as opposed to partial derivatives of multiple independent variables).
+
+It amazes me how schematic symbols turn into bits and pieces of differential equations. Simple symbols, sophisticated ideas.  
+{% endcapture %}{% include details.html %}
 
 We are going to solve this equation together step-by-step,
 
