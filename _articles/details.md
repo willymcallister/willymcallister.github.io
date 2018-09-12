@@ -14,7 +14,7 @@ DETAILS
 
 ## Markdown template
 
-Copy and paste these four lines into your markdown document. 
+Copy and paste these four lines into your markdown document.  
 
 ```
 {% raw %}
