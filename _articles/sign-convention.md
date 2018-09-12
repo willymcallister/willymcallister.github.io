@@ -29,7 +29,7 @@ This rule allows us to directly apply Ohm's Law $(v = i\,\text R)$ to a resistor
 ----
 
 >This article is based on conventional current direction, *not* electron current direction.
-
+>
 >Veterans: Some military electronic training programs (for example the U.S. Navy NEETS program from the 1960's) use the opposite sign convention, defining current to flow in the direction of electron motion. We don't use that convention here at Spinning Numbers. We follow the SI convention for current direction.
 
 -----
@@ -40,7 +40,7 @@ Here's a resistor,
 
 ![100 ohm resistor]({{ site.baseurl }}{% link i/sign_convention_resistor100.svg %}){: .centered :}
 
-For now it is just sitting here all by itself. The only thing we know about is its resistance, $\text R$. For discussion, let's say $\text R = 100 \,\Omega$. The other thing we know is Ohm's Law, $v = i\,\text R$. We don't know specific values for $i$ or $v$ because it's not in a circuit, yet.
+For now it is just sitting here all by itself. The only thing we know about is its resistance, $\text R = 100 \,\Omega$. The other thing we know is Ohm's Law, $v = i\,\text R$. We don't know specific values for $i$ or $v$ because it's not in a circuit, yet.
 
 One of the first things we might do is add symbolic labels on our resistor to represent voltage and current. That will let us talk about them and include them in equations.
 
