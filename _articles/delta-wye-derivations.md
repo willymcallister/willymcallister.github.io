@@ -5,11 +5,13 @@ author: Willy McAllister
 comments: true
 ---
 
-This article presents derivations of the $\Delta - \text Y$ transformation equations. The first one is for the three equations going from $\Delta$ to $\text Y$. Going in the opposite direction, $\text Y$ to $\Delta$, the algebra is harder, and there are two versions of this derivation. One does it with strictly algebraic manipulation. It works, but seems a bit convoluted. The second derivation is based on viewing the resistors as conductances before diving into the math. This one is a nice demonstration of *duality* and symmetry. 
+We derive the $\Delta \leftrightarrow \text Y$ transformation equations. 
 
-There is no need to memorize the transformation equations. If the need arises, you can look them up. And no engineer ever needs to produce the following derivations on the spot. They are presented here for your amusement.
+The first derivation is from $\Delta$ to $\text Y$. 
 
-You can find a full introduction to the Delta-Wye transform equations in this [article]({{ site.baseurl }}{% link _articles/delta-wye-resistor-networks.md %}).
+The second derivation goes the opposite direction, from $\text Y$ to $\Delta$. The algebra for this one is harder and there are two versions presented. The first version does it strictly by algebraic manipulation. It works, but it seems a bit convoluted. The second version casts the resistors as conductances before diving into the math. The result is pleasingly symmetric.
+
+Find a full introduction to the Delta-Wye transformation in this [article]({{ site.baseurl }}{% link _articles/delta-wye-resistor-networks.md %}).
 
 Written by Willy McAllister.
 
@@ -23,13 +25,15 @@ Written by Willy McAllister.
 
 ----
 
+There is no need to memorize these transformation equations. If the need arises, you can look them up. No engineer ever needs to produce the following derivations on the spot. They are presented here for your amusement.
+
 ## Objective
 
 The resistance between any pair of terminals has to be the same in both the $\Delta$ and $\text Y$ configurations. For example, in $\Delta$, the resistance across the top between terminals $x$ and $y$ is $Rc \parallel (Ra+Rb)$. In $\text Y$, the resistance between terminals $x$ and $y$ is $R1 + R2$.
 
-![Delta and Wye configuration](https://ka-perseus-images.s3.amazonaws.com/05cc24f20113bc6937dec9b8e85ee09e032d2a66.svg){: .centered }
+![Delta and Wye configurations with labeled nodes and resistors.]({{ site.baseurl }}{% link i/delta_wye3.svg %}){: .centered :} 
 
-Given the three resistor values on one side, we are going to derive the resistor values on the other side, going both ways.
+Given the three resistor values of one configuration we are going to derive the resistor values for the other, going both ways.
 
 ## $\Delta$ to $\text Y$ derivation
 
@@ -41,7 +45,7 @@ $R_{zx}: \quad R3 + R1 = Rb \parallel (Rc+Ra)$
 
 The left side is the resistance in the $\text Y$ configuration, the right side is the resistance in the $\Delta$ configuration. $R_{xy}$ stands for the resistance between terminals $x$ and $y$.
   
->The symbol $\parallel$ is shorthand notation for "in parallel with",  
+>The symbol $\parallel$ is shorthand notation for "in parallel with."  
 $R_i \parallel R_j = R_i \,R_j / (R_i + R_j)$
 
 When we look at terminals $x$ and $y$, we assume terminal $z$ isn't connected to anything, so the current in $\text R3$ is $0$. 
@@ -100,7 +104,7 @@ Going in this direction the algebra is trickier. I found two derivations I admir
 
 This first derivation is based on a video by [Mohiuddin Jewel](https://youtu.be/4DS3q2Ao2FM?t=14m26s).
 
-![Delta and Wye configuration](https://ka-perseus-images.s3.amazonaws.com/05cc24f20113bc6937dec9b8e85ee09e032d2a66.svg){: .centered }
+![Delta and Wye configurations with labeled nodes and resistors.]({{ site.baseurl }}{% link i/delta_wye3.svg %}){: .centered :} 
 
 We're going to start with the three equations from the $\Delta$ to $\text Y$ transformation and solve for the lettered resistors $(Ra, Rb, Rc)$. To review,
 
@@ -158,11 +162,13 @@ Done! This expression tells us how to compute $\Delta$ resistor $Rc$ from the gi
 
 ### $\text Y$ to $\Delta$ derivation using conductance
 
-This second derivation involves transforming the resistors into conductances. After changing to conductance, the derivation follows exactly the steps we did in the first derivation in this article, $\Delta$ to $\text Y$. The resistance model and conductance model are called *duals* of each other. 
+This second derivation involves treating the resistors as conductances. After changing to conductance, the derivation follows exactly the steps we did in the first derivation in this article, $\Delta$ to $\text Y$. The resistance model and conductance model are *duals* of each other. 
 
-Every resistor is replaced with its equivalent conductance, $G = \dfrac{1}{R}.$
+Each resistor is replaced with its equivalent conductance, $G = \dfrac{1}{R}.$
 
-The rule for conductance in parallel is the sum of the conductances,
+![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta_wye20.svg %}){: .centered :}
+
+The rule for conductances in parallel is the sum of the conductances,
 
 $G_{\text{parallel}} = G_i + G_j$
 
@@ -170,33 +176,31 @@ The rule for two conductances in series is similar to two resistors in parallel,
 
 $G_{\text{series}} = \dfrac{G_i\,G_j}{G_i + G_j}$
 
-![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta_wye1.svg %}){: .centered :}
+Our strategy is to short circuit the conductance opposite the terminal in question and figure out the equivalent conductance. For example, suppose we are looking at terminal $x$. We short out $Ga$ on the opposite side by connecting a wire between $y$ and $z$. You can think of it as connecting both $y$ and $z$ to ground. Shorting out $Ga$ is the dual of leaving resistor $R1$ open while figuring out $R_{yz}$ up above. Then we compute the conductance between terminal $x$ and ground and call this $G_x$.
 
-Our strategy is to short circuit the conductance opposite the terminal in question and figure out the conductance. For example, suppose we are looking at terminal $x$. We short out $Ga$ on the opposite side by connecting a wire between $y$ and $z$. You can think of it as connecting both $y$ and $z$ to ground. Then we compute the conductance between terminal $x$ and ground and call this $G_x$. Shorting out the $Ga$ is the dual of leaving resistor $R1$ resistor open while figuring out $R_{yz}$ up above.
+![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta_wye21.svg %}){: .centered :}
 
-![Delta-Wye with conductances]({{ site.baseurl }}{% link i/delta_wye2.svg %}){: .centered :}
+In the $\Delta$ configuration, the conductance from $x$ to ground is $Gb$ in parallel with $Gc$,
 
-In the $\Delta$ configuration, the conductance from $x$ to ground is $Gb$ in parallel with $Gc$, or,
-
- $G_x = Gb + Gc$ 
+$G_x = Gb + Gc$ 
 
 In the $\text Y$ configuration, the conductance from $x$ to ground is $G1$ in series with the parallel combination of $G2$ and $G3$, or 
 
-$G_x = G1 \cdots G2 \parallel G3 = \dfrac{G1 \, (G2+G3)}{G1+(G2+G3)}\quad(\cdots$ means series and $\parallel$ means parallel)
+$G_x = G1 + (G2 \parallel G3) = \dfrac{G1 \, (G2+G3)}{G1+(G2+G3)}$
 
-$G_x$ has to be the same for $\Delta$ and $\text Y$, so we set these equal,
+$G_x$ has to be the same for $\Delta$ and $\text Y$, so we set them equal,
 
 $G_x: Gb + Gc = G1(G2+G3)/(G1+G2+G3)$  
 
-and construct two more equations to describe all three terminals,
+Now construct two more equations to describe all three terminals,
 
 $G_y: Ga + Gc = G2(G1+G3)/(G1+G2+G3)$  
 
 $G_z: Ga + Gb = G3(G1+G2)/(G1+G2+G3)$  
 
-Notice how these three equations are nearly identical to their duals, $G_{xy}, G_{yz}, G_{zx}$, shown at the beginning of the first derivation. 
+Notice how these three equations are nearly identical to their duals shown at the beginning of the $\Delta$ to $\text Y$ derivation, $R_{xy}, R_{yz}, R_{zx}$.
 
-Let's isolate $Gb$. We combine the equations with this operation, 
+Let's use the three equations to isolate $Gb$. We combine the equations with this operation, 
 
 $(\quad[G_x]\quad + \quad [G_z]\quad - \quad [G_y]\quad)\,/2$
 
@@ -206,9 +210,9 @@ $([Gb + Gc] + [Ga + Gb] - [Ga + Gc])\,/2$
 
 We get a bunch of cancellation,
 
-$((Gb+\,\cancel{Gc}\,+\,\cancel{Ga}\,+\,Gb\,-\,\cancel{Ga}\,-\,\cancel{Gc})\,/2 = \dfrac{2Gb}{2} = Gb$
+$(Gb+\,\cancel{Gc}\,+\,\cancel{Ga}\,+\,Gb\,-\,\cancel{Ga}\,-\,\cancel{Gc})\,/2 = \dfrac{2Gb}{2} = Gb$
 
-This verifies that the operation isolates $Gb$. Now apply the same operation to the right hand side,
+This verifies that the operation isolates $Gb$. Now apply the same operation to the right side,
 
 $Gb = ($  
 $\qquad\quad G1(G2+G3)/(G1+G2+G3) \,+$  
@@ -228,9 +232,11 @@ $Gb = \dfrac{\cancel{2}\,G1\,G3}{\cancel{2}(G1+G2+G3)}$
 
 $Gb = \dfrac{G1\,G3}{G1+G2+G3}$
 
-This expression tells us how to compute $\Delta$ conductance $Gb$ from the given $\text Y$ conductances. The procedure for finding $Ga$ and $Gc$ is the same. You get to come up with the combining operation to apply to the simultaneous equations.
+This tells us how to compute $\Delta$ conductance $Gb$ from the given $\text Y$ conductances. 
 
-If you want to convert $Gb$ to resistance, here's how. Replace $Gb$ with $\dfrac{1}{Rb}$, etc.
+The procedure for finding $Ga$ and $Gc$ is the same. You get to come up with the combining operation to apply to the simultaneous equations.
+
+If you want to convert $Gb$ to resistance replace $G$ with $\dfrac{1}{R}$, etc.
 
 $\dfrac{1}{Rb}=\dfrac{\dfrac{1}{R1\,R3}}{\dfrac{1}{R1}+\dfrac{1}{R2}+\dfrac{1}{R3}}$
 
@@ -240,7 +246,7 @@ $\dfrac{1}{Rb}=\dfrac{\dfrac{1}{R1\,R3}}{\dfrac{R2\,R3}{R1\,R2\,R3}+\dfrac{R1\,R
 
 $\dfrac{1}{Rb}=\dfrac{\dfrac{1}{R1\,R3}}{\dfrac{R2\,R3+R1\,R3+R1\,R2}{R1\,R2\,R3}}$
 
-Now we turn a summersault to simplify the expression,
+Now we turn a somersault to simplify the expression,
 
 $\dfrac{1}{Rb}=\dfrac{\dfrac{1}{\cancel{R1}\,\cancel{R3}}\,(\cancel{R1}\,R2\,\cancel{R3})}{R2\,R3+R1\,R3+R1\,R2}$
 
@@ -252,9 +258,6 @@ One more flip to get the expression for $Rb$ we've been looking for,
 
 $Rb=\dfrac{R2\,R3+R1\,R3+R1\,R2}{R2}$
 
-$Ra$ and $Rc$ go through the same process. 
-
-
-
+This matches the result from the algebraic derivation we did for $\text Y$ to $\Delta$. Derive the equations for $Ra$ and $Rc$ with the same process. 
 
 
