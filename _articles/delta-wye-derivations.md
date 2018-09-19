@@ -116,7 +116,7 @@ $R3 = \dfrac{Ra\,Rb}{Ra + Rb + Rc}$
 
 These steps may seem a bit goofy, but they work. First, divide the $R3$ equation by the $R1$ equation,
 
-$\dfrac{R3}{R1} = \dfrac{\dfrac{Ra\,Rb}{Ra + Rb + Rc}}{\dfrac{Rb\,Rc}{Ra + Rb + Rc}}$
+$\dfrac{R3}{R1} = \cfrac{\cfrac{Ra\,Rb}{Ra + Rb + Rc}}{\cfrac{Rb\,Rc}{Ra + Rb + Rc}}$
 
 The $Ra + Rb + Rc$ terms are common to the top and bottom, so they cancel, leaving,
 
@@ -136,21 +136,21 @@ $Rb = \dfrac{R3\,Rc}{R2}$
 
 Now we plug in our expressions for $Ra$ and $Rb$ into the equation for $R2$, 
 
-$R2 = \dfrac{\dfrac{R3\,Rc}{R1}\,Rc}{\dfrac{R3\,Rc}{R1} + \dfrac{R3\,Rc}{R2} + Rc}$
+$R2 = \cfrac{\cfrac{R3\,Rc}{R1}\,Rc}{\cfrac{R3\,Rc}{R1} + \cfrac{R3\,Rc}{R2} + Rc}$
 
 A bunch of common $Rc$ terms cancel out, leaving,
 
-$R2 = \dfrac{\dfrac{R3\,Rc}{R1}}{\dfrac{R3}{R1} + \dfrac{R3}{R2} + 1}$
+$R2 = \cfrac{\cfrac{R3\,Rc}{R1}}{\dfrac{R3}{R1} + \cfrac{R3}{R2} + 1}$
 
-Now we work on the denominator. The LCM of the three terms in the denominator is $R1\,R2$. Perform the addition by multiplying each term by the approprite form of $1$,
+Now we work on the denominator. The LCM of the terms in the denominator is $R1\,R2$. Perform the addition by multiplying each term by the appropriate form of $1$,
 
-$R2 = \dfrac{\dfrac{R3\,Rc}{R1}}{\dfrac{R3}{R1}\dfrac{R2}{R2} + \dfrac{R3}{R2}\dfrac{R1}{R1} + 1\dfrac{R1\,R2}{R1\,R2}}$
+$R2 = \cfrac{\dfrac{R3\,Rc}{R1}}{\cfrac{R3}{R1}\cfrac{R2}{R2} + \cfrac{R3}{R2}\cfrac{R1}{R1} + 1\cfrac{R1}{R1}\cfrac{R2}{R2}}$
 
-$R2 = \dfrac{\dfrac{R3\,Rc}{R1}}{\dfrac{R3\,R2 + R3\,R1 + R1\,R2}{R1\,R2}}$
+$R2 = \dfrac{\dfrac{R3\,Rc}{R1}}{\cfrac{R3\,R2 + R3\,R1 + R1\,R2}{R1\,R2}}$
 
 Two $R1$ terms and two $R1$ terms cancel, 
 
-$\cancel{R2} \rightarrow 1 = \dfrac{\dfrac{R3\,Rc}{\cancel{R1}}}{\dfrac{R3\,R2 + R3\,R1 + R1\,R2}{\cancel{R1}\,\cancel{R2}}}$
+$\cancel{R2} \rightarrow 1 = \cfrac{\cfrac{R3\,Rc}{\cancel{R1}}}{\cfrac{R3\,R2 + R3\,R1 + R1\,R2}{\cancel{R1}\,\cancel{R2}}}$
 
 $1 = \dfrac{R3\,Rc}{R3\,R2 + R3\,R1 + R1\,R2}$
 
@@ -238,13 +238,13 @@ The procedure for finding $Ga$ and $Gc$ is the same. You get to come up with the
 
 If you want to convert $Gb$ to resistance replace $G$ with $\dfrac{1}{R}$, etc.
 
-$\dfrac{1}{Rb}=\dfrac{\dfrac{1}{R1\,R3}}{\dfrac{1}{R1}+\dfrac{1}{R2}+\dfrac{1}{R3}}$
+$\dfrac{1}{Rb}=\cfrac{\cfrac{1}{R1\,R3}}{\cfrac{1}{R1}+\cfrac{1}{R2}+\cfrac{1}{R3}}$
 
 Go to work on the denominator. The LCM of the three fractions is $R1\,R2\,R3$. Multiply each term by an appropriate form of $1$ and add fractions.
 
-$\dfrac{1}{Rb}=\dfrac{\dfrac{1}{R1\,R3}}{\dfrac{R2\,R3}{R1\,R2\,R3}+\dfrac{R1\,R3}{R1\,R2\,R3}+\dfrac{R1\,R2}{R1\,R2\,R3}}$
+$\dfrac{1}{Rb}=\cfrac{\cfrac{1}{R1\,R3}}{\cfrac{R2\,R3}{R1\,R2\,R3}+\cfrac{R1\,R3}{R1\,R2\,R3}+\cfrac{R1\,R2}{R1\,R2\,R3}}$
 
-$\dfrac{1}{Rb}=\dfrac{\dfrac{1}{R1\,R3}}{\dfrac{R2\,R3+R1\,R3+R1\,R2}{R1\,R2\,R3}}$
+$\dfrac{1}{Rb}=\cfrac{\cfrac{1}{R1\,R3}}{\cfrac{R2\,R3+R1\,R3+R1\,R2}{R1\,R2\,R3}}$
 
 Now we turn a somersault to simplify the expression,
 
