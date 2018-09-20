@@ -1,8 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="474px" height="264px" viewBox="0 0 474 264" style="enable-background:new 0 0 474 264;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="474px"
+   height="264px"
+   viewBox="0 0 474 264"
+   style="enable-background:new 0 0 474 264;"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="diode_voltmeters.svg"><metadata
+     id="metadata105"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs103" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview101"
+     showgrid="false"
+     inkscape:zoom="1.4156118"
+     inkscape:cx="237"
+     inkscape:cy="132"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style3">
 	.st0{fill:url(#SVGID_1_);}
 	.st1{fill:none;}
 	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -56,71 +95,231 @@
 	.st50{fill:none;stroke:#11ACCD;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
 	.st51{fill:#63D9EA;stroke:#11ACCD;stroke-width:2;stroke-miterlimit:10;}
 	.st52{fill:#01D1C1;stroke:#01A995;stroke-width:2;stroke-miterlimit:10;}
-</style>
-<g>
-	<polygon class="st1" points="318.2,242.3 299.1,253.5 263.8,179.2 282.9,168 	"/>
-	<line class="st2" x1="273.4" y1="173.6" x2="308.6" y2="247.9"/>
-	<polyline class="st2" points="280.3,207.5 287.5,203.3 294.6,199.1 	"/>
-	<polygon class="st3" points="285.6,218.7 287.5,203.3 299.9,210.3 	"/>
-</g>
-<g>
-	<rect x="30" y="168" transform="matrix(-0.9104 0.4138 -0.4138 -0.9104 167.134 383.7972)" class="st1" width="24" height="84"/>
-	<line class="st2" x1="59.4" y1="248.2" x2="24.6" y2="171.8"/>
-	<polyline class="st2" points="53.7,213.9 45.5,217.6 37.3,221.4 	"/>
-	<polygon class="st3" points="48.5,202.5 45.5,217.6 32.1,209.9 	"/>
-</g>
-<text transform="matrix(1 0 0 1 24.0001 156.0001)" class="st19 st32 st33">+</text>
-<text transform="matrix(1 0 0 1 78 258)" class="st19 st32 st33">−</text>
-<path class="st34" d="M210.5,24h-85c-3,0-5.5,2.5-5.5,5.5V193c0,3,2.5,5.5,5.5,5.5h85c3,0,5.5-2.5,5.5-5.5V29.5
-	C216,26.5,213.5,24,210.5,24z"/>
-<path class="st35" d="M202,34.3H134c-1.8,0-3.3,1.5-3.3,3.3v44.7c0,1.8,1.5,3.3,3.3,3.3H202c1.8,0,3.3-1.5,3.3-3.3V37.6
-	C205.3,35.8,203.8,34.3,202,34.3z"/>
-<ellipse class="st36" cx="141.3" cy="178" rx="10.7" ry="10.3"/>
-<ellipse class="st37" cx="194.7" cy="178" rx="10.7" ry="10.3"/>
-<ellipse class="st38" cx="168" cy="131.8" rx="37.3" ry="35.9"/>
-<polygon class="st39" points="161.2,119.9 154,127.4 183.1,157.6 190.3,150 "/>
-<polygon class="st39" points="146.4,112.1 163.6,116.9 151,129.9 "/>
-<text transform="matrix(0.583 3.964400e-04 -3.964400e-04 0.583 161.9242 65.8956)" class="st40 st41 st42">MΩ</text>
-<path class="st43" d="M108,228c9.5-3.8,18.2-15.1,24-18c3.2-1.6,7.1-2.4,15.4,1.9c10.6,5.6,19.1,12,24.2,11.6
-	c6.2-0.5,13.8-10,20.7-42.9"/>
-<g>
-	<polygon class="st44" points="58.1,245.8 64.6,237.7 68.4,247.4 	"/>
-	
-		<rect x="65.8" y="226.6" transform="matrix(0.9334 -0.3587 0.3587 0.9334 -77.2786 48.7854)" class="st44" width="54" height="12"/>
-</g>
-<path class="st45" d="M138,180.8c-1.5,0.9-10.6,6.6-23.2,5.6c-12.2-1-25-7.6-24-14.7c1-7.5,11.6-9.7,17.5-25.6
-	c3.3-8.7-3.3-19.5-12-20c-8.4-0.5-21.4,8.3-24.7,10"/>
-<g>
-	
-		<rect x="27.7" y="147.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -92.8095 83.7293)" class="st36" width="54" height="12"/>
-	<polygon class="st36" points="28.3,180 31,170 38.3,177.3 	"/>
-</g>
-<text transform="matrix(1 0 0 1 270.0001 150.0001)" class="st19 st32 st33">+</text>
-<text transform="matrix(1 0 0 1 330 258)" class="st19 st32 st33">−</text>
-<path class="st34" d="M456.5,24h-85c-3,0-5.5,2.5-5.5,5.5V193c0,3,2.5,5.5,5.5,5.5h85c3,0,5.5-2.5,5.5-5.5V29.5
-	C462,26.5,459.5,24,456.5,24z"/>
-<path class="st35" d="M448,34.3H380c-1.8,0-3.3,1.5-3.3,3.3v44.7c0,1.8,1.5,3.3,3.3,3.3H448c1.8,0,3.3-1.5,3.3-3.3V37.6
-	C451.3,35.8,449.8,34.3,448,34.3z"/>
-<ellipse class="st36" cx="387.3" cy="178" rx="10.7" ry="10.3"/>
-<ellipse class="st37" cx="440.7" cy="178" rx="10.7" ry="10.3"/>
-<ellipse class="st38" cx="414" cy="131.8" rx="37.3" ry="35.9"/>
-<polygon class="st39" points="407.2,119.9 400,127.4 429.1,157.6 436.3,150 "/>
-<polygon class="st39" points="392.4,112.1 409.6,116.9 397,129.9 "/>
-<text transform="matrix(0.583 0 0 0.583 432 65.9878)" class="st40 st41 st42">Ω</text>
-<path class="st43" d="M354,228c9.5-3.8,18.2-15.1,24-18c3.2-1.6,7.1-2.4,15.4,1.9c10.6,5.6,19.1,12,24.2,11.6
-	c6.2-0.5,13.8-10,20.7-42.9"/>
-<g>
-	<polygon class="st44" points="304.1,245.8 310.6,237.7 314.4,247.4 	"/>
-	
-		<rect x="311.8" y="226.6" transform="matrix(0.9334 -0.3587 0.3587 0.9334 -60.9037 137.037)" class="st44" width="54" height="12"/>
-</g>
-<path class="st45" d="M384,180.8c-1.5,0.9-10.6,6.6-23.2,5.6c-12.2-1-25-7.6-24-14.7c1-7.5,11.6-9.7,17.5-25.6
-	c3.3-8.7-3.3-19.5-12-20c-8.4-0.5-21.4,8.3-24.7,10"/>
-<g>
-	
-		<rect x="273.7" y="147.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -20.7577 257.6776)" class="st36" width="54" height="12"/>
-	<polygon class="st36" points="274.3,180 277,170 284.3,177.3 	"/>
-</g>
-<text transform="matrix(0.583 0 0 0.583 132 65.9878)" class="st40 st46 st42">1.6</text>
-<text transform="matrix(0.583 0 0 0.583 384 65.9878)" class="st40 st46 st42">O.L</text>
-</svg>
+</style><g
+     id="g5"><polygon
+       class="st1"
+       points="318.2,242.3 299.1,253.5 263.8,179.2 282.9,168  "
+       id="polygon7" /><line
+       class="st2"
+       x1="273.4"
+       y1="173.6"
+       x2="308.6"
+       y2="247.9"
+       id="line9" /><polyline
+       class="st2"
+       points="280.3,207.5 287.5,203.3 294.6,199.1  "
+       id="polyline11" /><polygon
+       class="st3"
+       points="285.6,218.7 287.5,203.3 299.9,210.3  "
+       id="polygon13" /></g><g
+     id="g15"><rect
+       x="30"
+       y="168"
+       transform="matrix(-0.9104 0.4138 -0.4138 -0.9104 167.134 383.7972)"
+       class="st1"
+       width="24"
+       height="84"
+       id="rect17" /><line
+       class="st2"
+       x1="59.4"
+       y1="248.2"
+       x2="24.6"
+       y2="171.8"
+       id="line19" /><polyline
+       class="st2"
+       points="53.7,213.9 45.5,217.6 37.3,221.4  "
+       id="polyline21" /><polygon
+       class="st3"
+       points="48.5,202.5 45.5,217.6 32.1,209.9  "
+       id="polygon23" /></g><g
+     transform="matrix(1 0 0 1 24.0001 156.0001)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     id="text25"><path
+       d="M 1.575,-5.175 Q 1.26,-5.3325 1.26,-5.625 q 0,-0.2925 0.315,-0.45 l 6.7275,0 0,-3.375 0.0225,-3.375 q 0.225,-0.2925 0.4275,-0.2925 0.2925,0 0.45,0.3375 l 0,6.705 6.705,0 q 0.3375,0.18 0.3375,0.45 0,0.27 -0.3375,0.45 l -6.705,0 0,6.705 Q 9.045,1.845 8.7525,1.845 8.46,1.845 8.3025,1.53 l 0,-6.705 -6.7275,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+       id="path4227" /></g><g
+     transform="matrix(1 0 0 1 78 258)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     id="text27"><path
+       d="M 2.205,-5.175 Q 1.89,-5.3325 1.89,-5.625 q 0,-0.2925 0.315,-0.45 l 13.0725,0 q 0.3375,0.18 0.3375,0.45 0,0.27 -0.3375,0.45 l -13.0725,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+       id="path4224" /></g><path
+     class="st34"
+     d="M210.5,24h-85c-3,0-5.5,2.5-5.5,5.5V193c0,3,2.5,5.5,5.5,5.5h85c3,0,5.5-2.5,5.5-5.5V29.5  C216,26.5,213.5,24,210.5,24z"
+     id="path29" /><path
+     class="st35"
+     d="M202,34.3H134c-1.8,0-3.3,1.5-3.3,3.3v44.7c0,1.8,1.5,3.3,3.3,3.3H202c1.8,0,3.3-1.5,3.3-3.3V37.6  C205.3,35.8,203.8,34.3,202,34.3z"
+     id="path31" /><ellipse
+     class="st36"
+     cx="141.3"
+     cy="178"
+     rx="10.7"
+     ry="10.3"
+     id="ellipse33" /><ellipse
+     class="st37"
+     cx="194.7"
+     cy="178"
+     rx="10.7"
+     ry="10.3"
+     id="ellipse35" /><ellipse
+     class="st38"
+     cx="168"
+     cy="131.8"
+     rx="37.3"
+     ry="35.9"
+     id="ellipse37" /><polygon
+     class="st39"
+     points="161.2,119.9 154,127.4 183.1,157.6 190.3,150 "
+     id="polygon39" /><polygon
+     class="st39"
+     points="146.4,112.1 163.6,116.9 151,129.9 "
+     id="polygon41" /><g
+     transform="matrix(0.99999977,6.7999984e-4,-6.7999984e-4,0.99999977,0,0)"
+     style="font-size:20.98800468px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+     id="text43"><path
+       d="m 134.81274,64.063557 3.38185,0 0,-11.672528 -3.67905,0.737859 0,-1.885641 3.65856,-0.737859 2.0701,0 0,13.558169 3.38186,0 0,1.742168 -8.81332,0 0,-1.742168 z"
+       style="font-size:20.98800468px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4213" /><path
+       d="m 147.81751,63.202721 2.16234,0 0,2.603004 -2.16234,0 0,-2.603004 z"
+       style="font-size:20.98800468px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4215" /><path
+       d="m 159.1826,57.330588 q -1.39374,0 -2.21358,0.953069 -0.8096,0.953069 -0.8096,2.613253 0,1.649935 0.8096,2.613252 0.81984,0.953069 2.21358,0.953069 1.39373,0 2.20333,-0.953069 0.81984,-0.963317 0.81984,-2.613252 0,-1.660184 -0.81984,-2.613253 -0.8096,-0.953069 -2.20333,-0.953069 z m 4.10946,-6.487015 0,1.885641 q -0.77885,-0.368929 -1.5782,-0.563642 -0.7891,-0.194713 -1.56795,-0.194713 -2.04961,0 -3.1359,1.383486 -1.07605,1.383487 -1.22977,4.181204 0.60464,-0.89158 1.51672,-1.36299 0.91207,-0.481658 2.00861,-0.481658 2.30581,0 3.63806,1.403982 1.34249,1.393735 1.34249,3.802027 0,2.357051 -1.39373,3.78153 -1.39373,1.424479 -3.70979,1.424479 -2.65425,0 -4.05823,-2.029114 -1.40398,-2.039362 -1.40398,-5.902877 0,-3.627809 1.72167,-5.779899 1.72167,-2.162339 4.62187,-2.162339 0.77885,0 1.56795,0.153721 0.79935,0.153721 1.66018,0.461162 z"
+       style="font-size:20.98800468px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4217" /><path
+       d="m 170.67823,50.505388 3.08466,0 3.90451,10.412018 3.925,-10.412018 3.08466,0 0,15.300337 -2.01886,0 0,-13.435192 -3.9455,10.494002 -2.08036,0 -3.94549,-10.494002 0,13.435192 -2.00862,0 0,-15.300337 z"
+       style="font-size:20.98800468px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4219" /><path
+       d="m 202.76487,65.805725 -5.90287,0 0,-3.965995 q 0.61488,-0.389426 1.21951,-0.84034 0.61489,-0.450914 1.0658,-1.035053 0.46116,-0.604635 0.72761,-1.414231 0.26645,-0.819844 0.26645,-1.906137 0,-2.111098 -1.3015,-3.381856 -1.3015,-1.281006 -3.55607,-1.281006 -2.25458,0 -3.55608,1.281006 -1.3015,1.270758 -1.3015,3.381856 0,1.086293 0.26645,1.906137 0.26645,0.809596 0.72761,1.414231 0.46116,0.584139 1.0658,1.035053 0.60463,0.450914 1.21952,0.84034 l 0,3.965995 -5.90288,0 0,-1.78316 4.2017,0 0,-1.270759 q -1.60894,-0.922324 -2.65424,-2.52102 -1.03506,-1.598695 -1.03506,-3.586817 0,-2.828461 1.91639,-4.62187 1.92663,-1.793409 5.05229,-1.793409 3.12565,0 5.04204,1.793409 1.92663,1.793409 1.92663,4.62187 0,1.988122 -1.0453,3.586817 -1.03505,1.598696 -2.644,2.52102 l 0,1.270759 4.2017,0 0,1.78316 z"
+       style="font-size:20.98800468px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4221" /></g><path
+     class="st43"
+     d="M108,228c9.5-3.8,18.2-15.1,24-18c3.2-1.6,7.1-2.4,15.4,1.9c10.6,5.6,19.1,12,24.2,11.6  c6.2-0.5,13.8-10,20.7-42.9"
+     id="path45" /><g
+     id="g47"><polygon
+       class="st44"
+       points="58.1,245.8 64.6,237.7 68.4,247.4  "
+       id="polygon49" /><rect
+       x="65.8"
+       y="226.6"
+       transform="matrix(0.9334 -0.3587 0.3587 0.9334 -77.2786 48.7854)"
+       class="st44"
+       width="54"
+       height="12"
+       id="rect51" /></g><path
+     class="st45"
+     d="M138,180.8c-1.5,0.9-10.6,6.6-23.2,5.6c-12.2-1-25-7.6-24-14.7c1-7.5,11.6-9.7,17.5-25.6  c3.3-8.7-3.3-19.5-12-20c-8.4-0.5-21.4,8.3-24.7,10"
+     id="path53" /><g
+     id="g55"><rect
+       x="27.7"
+       y="147.9"
+       transform="matrix(0.7071 -0.7071 0.7071 0.7071 -92.8095 83.7293)"
+       class="st36"
+       width="54"
+       height="12"
+       id="rect57" /><polygon
+       class="st36"
+       points="28.3,180 31,170 38.3,177.3  "
+       id="polygon59" /></g><g
+     transform="matrix(1 0 0 1 270.0001 150.0001)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     id="text61"><path
+       d="M 1.575,-5.175 Q 1.26,-5.3325 1.26,-5.625 q 0,-0.2925 0.315,-0.45 l 6.7275,0 0,-3.375 0.0225,-3.375 q 0.225,-0.2925 0.4275,-0.2925 0.2925,0 0.45,0.3375 l 0,6.705 6.705,0 q 0.3375,0.18 0.3375,0.45 0,0.27 -0.3375,0.45 l -6.705,0 0,6.705 Q 9.045,1.845 8.7525,1.845 8.46,1.845 8.3025,1.53 l 0,-6.705 -6.7275,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+       id="path4210" /></g><g
+     transform="matrix(1 0 0 1 330 258)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     id="text63"><path
+       d="M 2.205,-5.175 Q 1.89,-5.3325 1.89,-5.625 q 0,-0.2925 0.315,-0.45 l 13.0725,0 q 0.3375,0.18 0.3375,0.45 0,0.27 -0.3375,0.45 l -13.0725,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+       id="path4207" /></g><path
+     class="st34"
+     d="M456.5,24h-85c-3,0-5.5,2.5-5.5,5.5V193c0,3,2.5,5.5,5.5,5.5h85c3,0,5.5-2.5,5.5-5.5V29.5  C462,26.5,459.5,24,456.5,24z"
+     id="path65" /><path
+     class="st35"
+     d="M448,34.3H380c-1.8,0-3.3,1.5-3.3,3.3v44.7c0,1.8,1.5,3.3,3.3,3.3H448c1.8,0,3.3-1.5,3.3-3.3V37.6  C451.3,35.8,449.8,34.3,448,34.3z"
+     id="path67" /><ellipse
+     class="st36"
+     cx="387.3"
+     cy="178"
+     rx="10.7"
+     ry="10.3"
+     id="ellipse69" /><ellipse
+     class="st37"
+     cx="440.7"
+     cy="178"
+     rx="10.7"
+     ry="10.3"
+     id="ellipse71" /><ellipse
+     class="st38"
+     cx="414"
+     cy="131.8"
+     rx="37.3"
+     ry="35.9"
+     id="ellipse73" /><polygon
+     class="st39"
+     points="407.2,119.9 400,127.4 429.1,157.6 436.3,150 "
+     id="polygon75" /><polygon
+     class="st39"
+     points="392.4,112.1 409.6,116.9 397,129.9 "
+     id="polygon77" /><g
+     style="font-size:20.98800087px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+     id="text79"><path
+       d="m 390.66391,52.091448 q -2.25457,0 -3.58681,1.68068 -1.322,1.68068 -1.322,4.580877 0,2.88995 1.322,4.570629 1.33224,1.68068 3.58681,1.68068 2.25457,0 3.56632,-1.68068 1.322,-1.680679 1.322,-4.570629 0,-2.900197 -1.322,-4.580877 -1.31175,-1.68068 -3.56632,-1.68068 z m 0,-1.680679 q 3.21789,0 5.14452,2.162338 1.92663,2.15209 1.92663,5.779898 0,3.617561 -1.92663,5.779899 -1.92663,2.15209 -5.14452,2.15209 -3.22813,0 -5.16501,-2.15209 -1.92664,-2.15209 -1.92664,-5.779899 0,-3.627808 1.92664,-5.779898 1.93688,-2.162338 5.16501,-2.162338 z"
+       style="font-size:20.98800087px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4196" /><path
+       d="m 400.31757,63.384797 2.16234,0 0,2.603004 -2.16234,0 0,-2.603004 z"
+       style="font-size:20.98800087px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4198" /><path
+       d="m 406.83533,50.687466 2.07011,0 0,13.558167 7.45033,0 0,1.742168 -9.52044,0 0,-15.300335 z"
+       style="font-size:20.98800087px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4200" /><path
+       d="m 418.70257,63.384797 2.16233,0 0,2.603004 -2.16233,0 0,-2.603004 z"
+       style="font-size:20.98800087px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4202" /><path
+       d="m 445.89064,65.987801 -5.90288,0 0,-3.965995 q 0.61489,-0.389426 1.21952,-0.84034 0.61488,-0.450914 1.0658,-1.035052 0.46116,-0.604635 0.72761,-1.414231 0.26645,-0.819844 0.26645,-1.906137 0,-2.111097 -1.3015,-3.381855 -1.3015,-1.281006 -3.55608,-1.281006 -2.25457,0 -3.55607,1.281006 -1.3015,1.270758 -1.3015,3.381855 0,1.086293 0.26645,1.906137 0.26645,0.809596 0.72761,1.414231 0.46116,0.584138 1.0658,1.035052 0.60463,0.450914 1.21952,0.84034 l 0,3.965995 -5.90288,0 0,-1.783161 4.2017,0 0,-1.270757 q -1.60894,-0.922325 -2.65424,-2.52102 -1.03506,-1.598696 -1.03506,-3.586817 0,-2.828461 1.91639,-4.621869 1.92663,-1.793408 5.05228,-1.793408 3.12566,0 5.04204,1.793408 1.92664,1.793408 1.92664,4.621869 0,1.988121 -1.0453,3.586817 -1.03506,1.598695 -2.644,2.52102 l 0,1.270757 4.2017,0 0,1.783161 z"
+       style="font-size:20.98800087px;font-family:KaTeX_Main-Bold;fill:#3b3e40"
+       id="path4204" /></g><path
+     class="st43"
+     d="M354,228c9.5-3.8,18.2-15.1,24-18c3.2-1.6,7.1-2.4,15.4,1.9c10.6,5.6,19.1,12,24.2,11.6  c6.2-0.5,13.8-10,20.7-42.9"
+     id="path81" /><g
+     id="g83"><polygon
+       class="st44"
+       points="304.1,245.8 310.6,237.7 314.4,247.4  "
+       id="polygon85" /><rect
+       x="311.8"
+       y="226.6"
+       transform="matrix(0.9334 -0.3587 0.3587 0.9334 -60.9037 137.037)"
+       class="st44"
+       width="54"
+       height="12"
+       id="rect87" /></g><path
+     class="st45"
+     d="M384,180.8c-1.5,0.9-10.6,6.6-23.2,5.6c-12.2-1-25-7.6-24-14.7c1-7.5,11.6-9.7,17.5-25.6  c3.3-8.7-3.3-19.5-12-20c-8.4-0.5-21.4,8.3-24.7,10"
+     id="path89" /><g
+     id="g91"><rect
+       x="273.7"
+       y="147.9"
+       transform="matrix(0.7071 -0.7071 0.7071 0.7071 -20.7577 257.6776)"
+       class="st36"
+       width="54"
+       height="12"
+       id="rect93" /><polygon
+       class="st36"
+       points="274.3,180 277,170 284.3,177.3  "
+       id="polygon95" /></g><g
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text4233"><path
+       d="m 40.904644,47.68063 q -0.3375,0.36 -0.855,0.36 -0.5175,0 -0.855,-0.36 -0.3375,-0.36 -0.3375,-0.855 0,-0.315 0.18,-0.72 0.2925,-0.6075 1.17,-0.945 0.8775,-0.3375 2.1375,-0.3375 1.485,0 2.565,0.675 1.1025,0.675 1.44,1.755 0.1125,0.315 0.1125,0.72 0.0225,0.3825 0.0225,2.565 0,2.205 0,2.5875 0.0225,0.36 0.135,0.5625 0.135,0.315 0.45,0.315 0.2925,0 0.4275,-0.315 0.135,-0.27 0.135,-1.2375 l 0,-0.81 0.9,0 0,0.8775 q -0.0225,0.9 -0.0675,1.0575 -0.2025,0.63 -0.7425,1.0575 -0.54,0.405 -1.2825,0.405 -0.5625,0 -1.0125,-0.3825 -0.4275,-0.405 -0.585,-0.9675 l 0,-0.09 q -0.0675,0.0675 -0.27,0.315 -0.2025,0.225 -0.2925,0.315 -1.1025,0.9225 -2.565,0.9225 -1.17,0 -2.0925,-0.495 -0.9225,-0.495 -1.2375,-1.305 -0.18,-0.4275 -0.18,-0.855 0,-1.0575 0.8775,-1.935 0.5175,-0.5175 1.2825,-0.855 1.53,-0.6975 3.915,-0.8325 l 0.315,0 0,-0.495 q 0,-0.765 -0.135,-1.125 -0.225,-0.7425 -0.7875,-1.17 -0.5625,-0.4275 -1.395,-0.4275 -1.5075,0 -1.5075,0.18 0.495,0.3375 0.495,0.99 0,0.495 -0.36,0.855 z m 3.69,3.285 q 0,-1.305 -0.0225,-1.305 -0.0675,0 -0.1125,0.0225 -3.0825,0.2025 -3.9375,1.8225 -0.2475,0.45 -0.2475,1.0125 0,0.765 0.54,1.2825 0.54,0.5175 1.3275,0.5175 0.9,0 1.53,-0.54 0.6525,-0.54 0.855,-1.3275 0.045,-0.1575 0.0675,-1.485 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="path4191" /><path
+       d="m 50.444644,53.55313 q 0,-0.585 0.3825,-0.9675 0.3825,-0.3825 0.9675,-0.3825 0.585,0 0.9675,0.405 0.405,0.3825 0.405,0.9225 0,0.585 -0.405,0.99 -0.405,0.3825 -0.945,0.3825 -0.585,0 -0.99,-0.405 -0.3825,-0.405 -0.3825,-0.945 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="path4193" /></g><g
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     id="text4237"><path
+       d="m 284.76835,39.42313 q 0.3825,-0.0225 0.8325,-0.045 0.45,-0.045 0.675,-0.0675 0.225,-0.0225 0.2475,-0.0225 l 0.0675,0 0,3.3975 q 0,3.42 0.0225,3.42 0.0675,-0.045 0.135,-0.1125 1.2375,-1.035 3.0825,-1.035 0.405,0 0.7425,0.0675 1.5975,0.315 2.655,1.6875 1.08,1.35 1.08,3.33 0,0.4275 -0.045,0.7875 -0.2925,1.8225 -1.5975,3.0825 -1.2825,1.2375 -3.195,1.2375 -1.7325,0 -2.97,-1.3275 l -0.1575,-0.1575 -0.225,0.405 q -0.045,0.0675 -0.135,0.225 -0.0675,0.135 -0.135,0.2475 -0.045,0.09 -0.0675,0.135 l -0.1125,0.2025 -0.45,0.0225 -0.45,0 0,-6.705 q 0,-6.7725 -0.0225,-6.8625 -0.0675,-0.4275 -0.3375,-0.5625 -0.2475,-0.1575 -0.99,-0.2025 l -0.405,0 0,-0.5175 q 0,-0.5175 0.045,-0.5175 l 0.225,-0.0225 q 0.225,-0.0225 0.6525,-0.045 0.4275,-0.0225 0.8325,-0.045 z m 5.2425,6.435 q -0.54,-0.0675 -0.6975,-0.0675 -1.575,0 -2.52,1.305 l -0.135,0.18 0,5.4225 0.1125,0.1575 q 0.675,1.08 1.7325,1.3725 0.2925,0.09 0.6975,0.09 1.44,0 2.2725,-1.215 0.18,-0.2475 0.36,-0.7425 0.27,-0.7875 0.27,-2.2275 0,-1.665 -0.27,-2.4975 -0.4725,-1.4175 -1.8225,-1.7775 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="path4186" /><path
+       d="m 296.84277,53.55313 q 0,-0.585 0.3825,-0.9675 0.3825,-0.3825 0.9675,-0.3825 0.585,0 0.9675,0.405 0.405,0.3825 0.405,0.9225 0,0.585 -0.405,0.99 -0.405,0.3825 -0.945,0.3825 -0.585,0 -0.99,-0.405 -0.3825,-0.405 -0.3825,-0.945 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="path4188" /></g></svg>
