@@ -56,7 +56,7 @@ Let's modify this a little to get $i$ in terms of $v_{\text D}$ instead of $v_{\
 <p>$i = \dfrac{3.3\,\text V - v_{\text{D}}}{120\,\Omega}$</p>
 </details>
 
-I'll rearrange the equation to make it look like a line in the slope-intercept form. (The reason will be revealed in a moment.)
+I'll rearrange the resistor equation to make it look like a line in the slope-intercept form,
 
 $i = -\dfrac{1}{120\,\Omega}\,v_{\text D} + \dfrac{3.3\,\text V}{120\,\Omega}$
 
@@ -64,27 +64,27 @@ $i = -\dfrac{1}{120\,\Omega}\,v_{\text D} + 27.5\,\text{mA}$
 
 The $i$-intercept is $27.5\,\text{mA}$. The slope of the line is $-\dfrac{1}{120}$. 
 
-When a resistor has its upper terminal connected to a fixed voltage it produces a line with this distinctive negative slope. This line has the nickname *load line*. The other place load lines come up when we study transistors.
-
-Now we set the two equations equal to get one equation in one unknown, $v_{\text D}$,  
+Now we set the diode current equal to the resistor current,  
 
 $\text I_\text S \left ( e^{\,v_{\text D}/26\text{mV}} -1  \right ) = -\dfrac{1}{120}\,v_{\text D} + 27.5$
 
-This non-linear equation is hard to solve. You will probably never be asked to find an analytical solution when the diode equation is involved. The usual approach with diodes is to go for an approximate answer with a graphical solution. 
+This non-linear equation is hard to solve. You will probably never be asked to find an analytical solution when the diode equation is involved. The usual approach with diodes is to find an approximate answer with a graphical solution. 
 
 ## Graphical solution
 
-Let's go back to the two equations with two unknowns, $i$ and $v_\text D$,
+Let's go back to the two equations,
 
 $i = \text I_\text S \left ( e^{\,v_{\text D}/26\text{mV}} -1  \right )$
 
 $i = -\dfrac{1}{120\,\Omega}\,v_{\text D} + 27.5\,\text{mA}$   
 
-We can try to solve these two equations analytically, but it's a pain in the neck. Instead, it's okay to be practical about it and go for an approximate answer using graphical methods. What you do is plot the two functions on the same graph and find where they cross. At the point of intersection, the current in the resistor is the same as the current in the diode.
+We can try to solve these two equations analytically, but it's a pain in the neck. Instead, it's okay to be practical about it and go for an approximate answer using graphical methods. 
 
-![LED diode curve with resistor load line]({{ site.baseurl }}{% link i/diode5.svg %}){: .centered :}
+What you do is plot the two equations on the same graph and find where they cross. At the intersection the current in the resistor is the same as the current in the diode.
 
-<p class="caption">Graphical solution to the resistor-LED circuit. The blue line is a plot of the diode equation for an LED. The green line is a plot of the resistor "load line" equation. The red point where the two graphs intersect is where the current in the diode and resistor are the same.</p>
+![LED diode curve with load line]({{ site.baseurl }}{% link i/diode5.svg %}){: .centered :}
+
+<p class="caption">Graphical solution to the resistor-LED circuit. The blue line is a plot of the diode equation for an LED. The green line is a plot of the resistor equation. The red point where the two graphs intersect is where the current in the diode and resistor are the same.</p>
 
 We get a fairly accurate answer by reading the intersection point from the graph,
 
@@ -92,8 +92,10 @@ $v_{\text D} = 1.7\,\text V \qquad i =  13\,\text{mA}$
 
 Reading the graph is usually all the accuracy you need. $13\,\text{mA}$ will turn on the LED. 
 
+Jargon: Whenever you have a resistor with its upper terminal connected to a fixed voltage it produces a line with this distinctive negative slope. This line has the nickname *load line*. It's the green line in the graphical solution. The other place load lines come up when we study transistors.
+
 <details>
-<summary>Tell me more about this LED diode curve</summary>
+<summary>Tell me more about the LED curve</summary>
 <p>LED's are made of elements on either side of Si in the periodic table. For example, one way to make a red LED is with Gallium Arsenide Phosphide (GaAsP). With these alternate materials, the forward voltage of an LED diode is different (higher) than silicon's $0.65\,\text V$ forward voltage. </p>
 
 <p>The diode equation gets a small tweak to allow the equation to achieve a better fit to real LED's. As shown here, a new factor $\text N$ appears in the exponent. </p>
@@ -101,15 +103,17 @@ Reading the graph is usually all the accuracy you need. $13\,\text{mA}$ will tur
 <p>$i = \text I_\text S \left ( e^{\,qv/\text N k\text T} -1  \right )$
 </p>
 
-<p>For silicon, $\text N = 1$. $\text N$ falls between $1$ and $2$ for other materials. $\text N > 1$ causes the LED curve to move the right relative to silicon. For the LED diode graphed here, $\text I_\text S = 2.38\times 10^{-18}\text A$ and $\text N = 1.85$. This results in a forward voltage of about $1.7\,\text V$.</p>
+<p>For silicon, $\text N$ is $1$. It's between $1$ and $2$ for other materials. $\text N > 1$ causes the LED curve to move the right relative to silicon. For the LED diode graphed here, $\text I_\text S = 2.38\times 10^{-18}\text A$ and $\text N = 1.85$. This results in a forward voltage of about $1.7\,\text V$.</p>
 
-<p>$\text N$ has the fancy name <em>emission coefficient</em>. It basically acts as a <a href="https://en.wikipedia.org/wiki/Fudge_factor">fudge factor</a> to get the math to fit the real world.</p>
+<p>$\text N$ has the fancy name <em>emission coefficient</em>. It basically a <a href="https://en.wikipedia.org/wiki/Fudge_factor">fudge factor</a> to get the math to fit the real world.</p>
 </details>
 
 ## Concept check
 
+Explore the load line. Answer these question using both the load line equation *and* the graphical solution.
+
 problem 1  
-**What is the current when the diode voltage $v_\text D$ is $0$?**
+**Where does the load line cross the current axis?**
 
 $i = $ \_\_\_\_\_\_ $\,\text{mA}$
 
@@ -117,51 +121,50 @@ $i = $ \_\_\_\_\_\_ $\,\text{mA}$
 <summary>show answer</summary>
 <p>In the equation of the load line, let $v_\text D = 0$ and solve for $i$.</p>
 <p>$i = -\dfrac{1}{120\,\Omega}\,0 + 27.5\,\text{mA} = 27.5\,\text{mA}$</p>   
-<p>Or just look at the graph and see where the resistor line crosses the $i$ axis: $27.5\,\text{mA}$.</p>
+<p>Or just look at the graph and see where the load line crosses the $i$ axis, $27.5\,\text{mA}$.</p>
 </details>
 
 problem 2  
-**What is the voltage when the resistor load line touches the $v$-axis?**
+**Where does the load line cross the voltage axis?**
 
 $v = $ \_\_\_\_\_\_ $\text V$
 
 <details>
 <summary>show answer</summary>
-<p>You can use the equation of the resistor load line: Let $i=0$ and solve for $v$.</p>
+<p>The $v$-axis corresponds to $i=0$. Use the equation for the load line and solve for $v_\text D$,</p>
 
 <p>$0 = -\dfrac{1}{120\,\Omega}\,v_{\text D} + 27.5\,\text{mA}$</p>
 
 <p>$v_{\text D} = 27.5\,\text{mA}\cdot 120\,\Omega = 3.3\,\text V$</p>
 
-<p>Or, look at the graph to see where the resistor load line crosses the voltage axis: $v = 3.3\,\text V$.</p>
+<p>Or look to see where the load line crosses the voltage axis, $3.3\,\text V$.</p>
 </details>
 
 problem 3  
-**Does the $i$-axis intercept of the resistor load line depend on the value of $\text R$?**
+**Does the point where the load line crosses the current axis depend on the value of $\text R$?**
 
-Yes or No.
+yes / no
 
 <details>
 <summary>show answer</summary>
-<p>The general form of the resistor load line is,</p>
+<p>The general form of the load line is,</p>
 <p>$i = -\dfrac{1}{\text R}\,v_{\text D} + \dfrac{\text V_{\text{BAT}}}{\text R}$
 </p>
 <p>The load line touches the $i$-axis at $v_{\text D} = 0$,</p>
 
 <p>$i = -\dfrac{1}{\text R}\,0 + \dfrac{\text V_{\text{BAT}}}{\text R} = \dfrac{\text V_{\text{BAT}}}{\text R}$</p>
 
-<p>So, yes, if the value of $\text R$ changes the point where the load line touches the $i$-axis will move up or down.</p>
+<p>So <em>yes</em>, the value of $\text R$ changes the point where the load line touches the $i$-axis. Higher resistance moves the crossing point down. Lower resistance moves it up.</p>
 </details>
 
-
 problem 4  
-**Does the $v$-axis intercept of the resistor load line depend on the value of $\text R$?**
+**Does the point where the load line crosses the voltage axis depend on the value of $\text R$?**
 
-Yes or No.
+yes / no
 
 <details>
 <summary>show answer</summary>
-<p>The general form of the resistor load line is,</p>
+<p>The general form of the load line is,</p>
 <p>$i = -\dfrac{1}{\text R}\,v_{\text D} + \dfrac{\text V_{\text{BAT}}}{\text R}$</p>
 <p>The load line touches the $v_{\text D}$-axis at $i = 0$,</p>
 
@@ -171,7 +174,7 @@ Yes or No.
 
 <p>$v_{\text D} = \text V_{\text{BAT}}$</p>
 
-<p>So, no, the value of $\text R$ has no effect on where the load line touches the $v$-axis. It crosses the $v$-axis at $\text V_{\text{BAT}}$ for any value of $\text R$.</p>
+<p>So <em>no</em>, $\text R$ has no effect on where the load line touches the $v$-axis. It crosses the $v$-axis at $\text V_{\text{BAT}}$ for any value of $\text R$.</p>
 </details>
 
 ## Brighter
@@ -184,32 +187,32 @@ Then sketch a new graphical solution.
 
 <details>
     <summary>brighter LED</summary>
-    <p>One way to get more diode current is to reduce the series resistance. Lower resistance makes the resistor load line steeper. If we reduce the resistor from $200\,\Omega$ down to $100\,\Omega$ and replot the load line, we get a new solution,</p>
+    <p>One way to get more diode current is to reduce the series resistance. Lower resistance makes the load line tip upward, making it steeper. If we reduce the resistor from $200\,\Omega$ down to $100\,\Omega$ and plot a new load line we get this solution,</p>
 
 <p><img class="centered" src="/i/diode6.svg" /></p>
 
-<p>Reducing the resistor to $100\,\Omega$ tips the load line up and raises the $i$-axis intercept up to $3.3\,\text V / 100\,\Omega = 33\,\text{mA}$. At the point where the two graphs intersect the LED current increases from $13\,\text{mA}$ to a bit more than $15\,\text{mA}$, making it brighter. The voltage on the diode increases, too, but only by a little bit.</p> 
+<p>Reducing the resistor to $100\,\Omega$ tips the load line up and raises the $i$-axis intercept up to $3.3\,\text V / 100\,\Omega = 33\,\text{mA}$. At the point where the two graphs intersect the LED current increases from $13\,\text{mA}$ to a bit more than $15\,\text{mA}$, making it brighter. The voltage on the diode increases, too, but only a little bit.</p> 
 
 <p>You could also see what happens if you increase the supply voltage. The resistor line moves in a different way when the voltage is adjusted. Go ahead give that a try on your own.</p>
 </details>
 
-### Why have a resistor?
+## Why have a resistor?
 
 Suppose we want maximum brightness and the simplest circuit. How about leaving out the resistor altogether? 
 
-**Think this through: Is this a good idea or a bad idea?**
+**Think it through: Is no resistor a good idea or a bad idea?**
 
-Hint: Imagine what happens to the resistor load line as the resistor transitions gradually from $100\,\Omega$ to $0\,\Omega$.
+Hint: Imagine what happens to the load line as the resistor transitions from $100\,\Omega$ to $0\,\Omega$.
 
 <details>
 <summary>show answer</summary>
-<p>If we make the resistor smaller and smaller, the resistor load line gets steeper and steeper. The bottom of the load line is anchored at the power supply value, $3.3\,\text V$, and the intersection with the diode curve goes up and up and up. When the resistor value becomes $0\,\Omega$ the load line is vertical.</p>
+<p>If we make the resistor smaller and smaller, the load line gets steeper and steeper. The bottom of the load line is anchored at the power supply value, $3.3\,\text V$. The load line intersects with the diode curve at higher and higher currents. When the resistor value becomes $0\,\Omega$ the load line is vertical.</p>
 
 <p><img class="centered" src="/i/diode7.svg"></p>
 
 <p>When $\text R = 0\,\Omega$, the load line points straight up and does not intersect the diode curve until way way up there at some very high current. Two things can happen at this point. The diode burns out from the excess heat, or, assuming the diode survives this abuse, the battery runs down in just a little while. </p>
 
-<p>It turns out to be a bad idea to leave out the resistor. You always want to put a resistor in there to limit the current and "absorb" the difference in voltage between the diode's forward voltage and the power supply.</p>
+<p>It turns out to be a bad idea to leave out the resistor. You need to include a resistor to limit the current.</p>
 </details>
 
 ## Summary
