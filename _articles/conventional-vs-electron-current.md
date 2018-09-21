@@ -101,7 +101,7 @@ In the end, electrons happen to be negative and electrons are what moves in most
 
 This little quirk only bugs two groups of people: new learners for about a week, and crabby engineers who like to complain about everything.
 
-I think Franklin's "mistake" is no mistake at all. It's actually a gift to every engineer and student. It means we really get to---have to--- understand and appreciate charge and current.  
+I think Franklin's "mistake" is no mistake at all. It's actually a gift to every engineer and student. It means we really get to---have to---understand and appreciate charge and current.  
 
 ## Advice
 
