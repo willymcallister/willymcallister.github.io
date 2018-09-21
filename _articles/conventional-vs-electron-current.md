@@ -23,11 +23,11 @@ Written by Willy McAllister.
 
 ## Typical question from a motivated learner
 
->Early on in class it was explained that there are two theories for current: conventional theory and electron theory. Conventional theory is the original belief that electricity flows from the positive side to the negative side of a battery. 
+>"Early on in class it was explained that there are two theories for current: conventional theory and electron theory. Conventional theory is the original belief that electricity flows from the positive side to the negative side of a battery. 
 >
 >Electron theory is the opposite of that and what is explained in this video ([Current]({{ site.baseurl }}{% link _videos/current.md %})). I was also told that electron theory was proved the correct out of the two; however, conventional theory is still the one used because "it works". 
 >
->I don't understand though why when conventional theory was proved incorrect, it is still being used. It's a source of great confusion for me. Is it because the engineering world is just too lazy to make the transition from a false theory to a correct one? 
+>I don't understand though why when conventional theory was proved incorrect, it is still being used. It's a source of great confusion for me. Is it because the engineering world is just too lazy to make the transition from a false theory to a correct one?"
 
 ## Current
 
@@ -91,7 +91,7 @@ This quirky situation comes from some historical coincidences.
 
 How did the electron get its negative sign? This is Ben Franklin's contribution. Around the time of his kite/key/lightning experiment the main theory was that electricity was a mixture of two invisible fluids (since there are two types of charge). Franklin published a theory saying electricity was a single invisible fluid. His reasoning was if you rubbed a glass rod with fur, one of them gained electric fluid and the other lost or lacked fluid. Gaining and lacking led him to name the two charges $+$ and $-$. The electron was discovered $150$ years later. Folks eventually figured out the electric fluid-lacking material wasn't actually lacking anything, it had gained electrons. That's how the electron got its minus sign.
 
-Buried within the electron's minus sign is another coincidence. Franklin gave the names "plus" and "minus" to the two types of charge. Those names make it seem like arithmetic is going on. It's not a bad idea. Using names from arithmetic serves us well when we see how charges combine. Opposite charges come together to give you something neutral (something that seems like it has "zero" charge). That seems arithmeticky. 
+Buried within the electron's minus sign is another coincidence. Franklin gave the names "plus" and "minus" to the two types of charge. Those names make it seem like arithmetic is going on. It's not a bad idea. Using names from arithmetic serves us well when we see how charges combine. Opposite charges come together to give you something neutral (something that seems like it has "zero" charge). That seems "arithmeticky." 
 
 But it didn't have to be that way. There lots of opposites not based on arithmetic signs. On/off, up/down, North/South (like magnets), red/green (for stop/go), left/right, or even vitreous (glass-like) versus resinous (amber-like). By naming charge $+$ and $-$ and jumbling that up with the $+$ and $-$ directions in a wire there are lots of signs flying around. No wonder it's confusing.
 
