@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-One of the most confusing ideas for beginning electrical engineers is *conventional current*. This topic gets the greatest number of questions and it causes the most frustration when starting to learn about circuits. To new students this idea seems to be either a cruel practical joke or some kind of colossal mistake caused by engineering laziness. It's not. 
+One of the most confusing ideas for beginning electrical engineers is *conventional current*. This topic gets the greatest number of questions and it causes the most frustration when starting to learn about circuits. To new students this idea might seem like a practical joke or some kind of colossal mistake caused by engineering laziness. It's not. 
 
 ![Current flow]({{ site.baseurl }}{% link i/conventional_current1.svg %}){: .centered :}
 
