@@ -1,0 +1,7 @@
+_id: c5a6acf0-c1e0-11e8-9259-3970a6205b11
+_parent: 'https://spinningnumbers.org/'
+replying_to: '1'
+message: "Robert - I think your circuit is okay. You described a circuit with a 3V source in series with 1k, 3k, and 2k resistors. You are getting mixed up between \"node voltage\" with \"element voltage\". An element voltage is what appears across a single resistor. A node voltage is different---it is measured between a node and ground. Here is the definition of node voltage: https://spinningnumbers.org/a/node-voltage.html#definition-node-voltage.\r\n\r\nThe current in the circuit is 0.5mA. The *element voltage* appears across a resistor. The 1k resistor has an element voltage of v = i R = 0.5mA 1k = 0.5V. One end of the 1k resistor is at 3V with respect to ground (because it is connected to the source). The node at the other end of the 1k resistor is at 2.5V with respect to ground. That's the *node voltage* at that point in the circuit. Simulators work with node voltages."
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2018-09-26T23:06:17.308Z'
