@@ -90,7 +90,7 @@ The exchange of charge between top and bottom plates continues forever. The rate
 
 The $\text{LC}$ circuit is analogous to a mechanical oscillator, the frictionless [swinging pendulum](https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/harmonic-motion/v/pendulum).  
 
-![](https://ka-perseus-images.s3.amazonaws.com/2ba6d9e0b647d88fd3ee97b5b60af4051110e382.svg){: .centered :}{: height="300px" :}
+![LC natural response pendulum analogy]({{ site.baseurl }}{% link i/lc_natural_response_intuition6.svg %}){: .centered :}
 
 * Voltage $v(t)$ is the analog of position. We measure position of the pendulum as it swings away from the center point. The distance is $0$ $(v=0)$ when the pendulum hangs straight down. It swings to $v=+\text V_0$ or $-\text V_0$ at either extreme position. 
 

@@ -60,7 +60,6 @@ The loopy $\int$ is another symbol from calculus. It is the <a href="https://www
 In the capacitor equation, the integral sign means you add up a sequence of products $(i \times dt)$ or (current $\times$ a tiny interval of time). When you see upper and lower limits on the integral symbol that makes it a *definite* integral. It means to integrate over a specific range of $t$. You start at time $t=0$ and stop at time $t=T$.  
 {% endcapture %}{% include details.html %} 
 
-
 ## Voltage response to a current pulse
 
 In this article we'll work with the integral form of the capacitor equation. 
@@ -98,7 +97,7 @@ $i$ is constant (the top of the pulse is flat) during this time so we can take i
 
 $\displaystyle v(T) = \dfrac{i}{\text C}\, \int_{\,0}^{\,T} dt$
 
-$\displaystyle v(T) = \dfrac{i}{\text C}\,\, t\bigg  \|_{\,0}^{\,T}$
+$\displaystyle v(T) = \dfrac{i}{\text C}\,\, t\,\bigg  \|_{\,0}^{\,T}$
 
 $v(T) = \dfrac{i}{\text C} \,T\qquad\text{volts}$ 
 

@@ -36,7 +36,7 @@ Any wire carrying a current generates a magnetic field in the surrounding region
 
 The red lines in these images represent the magnetic field. Here's a single straight wire carrying a current, $i$. Whenever there is a current, there are magnetic field lines flowing in circles in the space around the wire. 
 
-![](/i/6inductor_straight_wire.svg){: .centered }
+![Inductor straight wire]({{ site.baseurl }}{% link i/inductor_straight_wire.svg %}){: .centered :}
 
 <details>
 <summary>How do we know the magnetic field is there?</summary>
@@ -55,7 +55,8 @@ You already know what that is, it's called a compass.</p>
 <summary>Magnetic lines and the Right Hand Rule</summary>
 <p>You may notice that both current and the magnetic lines have arrowheads. The direction of these arrows is not arbitrary; it is a property of nature. If you know one of the arrows, you can figure out the other by using the Right Hand Rule. </p>
 
-<p><img class="centered" src="/i/6right_hand_rule.svg" alt="Right Hand Rule"></p>
+<p><img class="centered" src="/i/inductor_right_hand_rule.svg" alt="Right Hand Rule"></p>
+
 <p>Using your RIGHT hand, wrap your fingers around the wire with your thumb pointing in the direction of current (conventional current flow, not electron flow). The magnetic field line arrows will be flowing out of your fingertips.
 </p>
 
@@ -115,17 +116,17 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 
 The next step in building a useful inductor is to wrap the wire into a coil shape. Now we have much more wire in a small space, and get many more magnetic lines. The coil shape causes the magnetic field to become concentrated on the inside of the coil. This is how we get large values of inductance $\text L$. Adding more turns to the coil crams more magnetic lines into the core, and $\text L$ gets bigger.
 
-![](/i/6inductor_coil.svg){: .centered }
+![](/i/inductor_coil.svg){: .centered :}
 
 Each individual little section of wire still has the same field lines as in the straight wire example. In the center of the coil, all the field lines from all the neighboring loops point in the same direction. 
 
-![](/i/6inductor_coil2.svg){: .centered }
+![](/i/inductor_coil2.svg){: .centered :}
 
 See if you can use the Right Hand Rule to confirm that the magnetic field line arrows in the coil images are correct.
 
 The symbol for an inductor looks like this:
 
-![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered }
+![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered :}
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
@@ -133,7 +134,7 @@ It looks like a wire wrapped around in a coil, since that is the usual way to ma
 
 You can get even higher inductance (higher $\text{L}$) by putting magnetic material inside the coil to intensify the magnetic field even more. This toroidal inductor (*toroid* means donut-shaped) is wound around a core of iron/ceramic material called *ferrite*. (You can't see the ferrite core, it is covered by the copper wire.)
 
-![](https://ka-perseus-images.s3.amazonaws.com/f4a0082fa2acce037c5c146a1e5dcfb3b74a65f0.png){: .centered }
+![Inductor symbol]({{ site.baseurl }}{% link i/inductor_ferrite_core.png %}){: .centered :}
 
 The ferrite core concentrates and intensifies the magnetic field more than just an air core, which increases the value of inductance, $\text{L}$.
 
