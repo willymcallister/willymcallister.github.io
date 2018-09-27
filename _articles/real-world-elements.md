@@ -55,7 +55,7 @@ When making real resistors, the goal is to create a component that comes as clos
 
 $v = i\,\text R$
 
-The two symbols for a resistor look like this:
+The two symbols for a resistor look like this,
 
 ![Resistor symbols]({{ site.baseurl }}{% link i/element_resistor_symbols.svg %}){: .centered }
 
@@ -67,7 +67,7 @@ The resistance value of a resistor depends on two things: *what it is made of*, 
 
 After selecting a bulk material with a certain resistivity, the resistance of the resistor is determined by its shape, typically a cylinder, or long rectangle, or ribbon. A longer resistor has higher resistance than a shorter resistor. Electrons suffer more collisions as they pass through the jungle of atoms in the material. A resistor with a bigger cross-section (a fatter cylinder) has lower resistance than a resistor with smaller cross-section, because electrons have a greater number of available paths to follow. 
 
-There are lots of "R" words. A quick summary:
+There are lots of "R" words. A quick summary,
 
 * A **Resistor** is a circuit element, a physical object with a controlled shape.
 * **Resistivity** is a property of a bulk material. The unit of resistivity is ohm meters, $\Omega \cdot \text m$.
@@ -75,26 +75,30 @@ There are lots of "R" words. A quick summary:
 
 A real resistor breaks down (it burns up and is destroyed) if the heat dissipated by the resistor is greater than what its construction materials can stand. Resistors come with a power rating that you should not exceed in your design. If you try to dissipate $1$ watt in a $1/8$ watt resistor, you may end up with a burned chunk of something that is no longer a resistor.
 
-### Resistor shapes and color code
+### Axial resistors
 
-Example of a conventional *axial* resistor:
+Example of a conventional *axial* resistor,
 
 ![](https://ka-perseus-images.s3.amazonaws.com/779f0952f353edf27ca9c9eb8978f7741ef1ef9f.jpg){: .centered }
 
 The color bands tell you the value of the resistor and its tolerance. The bands on this resistor are Orange Orange Brown Gold. From the resistor color code chart, the first two bands corresponds to the *digits* of the value, $3\, 3$. The third band is the *multiplier*, brown stands for $\times 10^1$. The fourth (last) band indicates the tolerance, gold is $\pm 5\%$. The resistor value is $330 \,\Omega\,\pm5\%$.
 
-<details>
-<summary>resistor color code chart</summary>
-     <img src="/i/resistor_color_code.svg">
-</details>
+{% capture summary %}resistor color code{% endcapture %}  
+{% capture details %}  
+![Resistor color code]({{ site.baseurl }}{% link i/resistor_color_code.svg %}){: .centered :}  
+{% endcapture %}{% include details.html %}
 
-This precision resistor has 5 color bands:
+This is a precision resistor with 5 color bands,
 
 ![](https://ka-perseus-images.s3.amazonaws.com/b1f771301e3da7ada6e3603ad31ed55cb97704b6.jpg){: .centered }
 
-Read the bands from left to right:  Red Red Blue Brown Brown $= 2 \,2 \,6 \,1 \,1$. The first three bands $(2\,2\,6)$ are the value. The fourth band is the multiplier $(\times 10^1)$. The fifth (last) band indicates the tolerance, brown is $1\%$ (a red band stands for a tolerance of $2\%$). The resistor value is $2260 \,\Omega\,\pm 1\%$. If you look very closely, the gap between the two brown bands is slightly larger than the other gaps. That tells you the last brown band is the tolerance.
+Read the bands from left to right:  Red Red Blue Brown Brown $= 2 \,2 \,6 \,1 \,1$. The first three bands $(2\,2\,6)$ are the value. The fourth band is the multiplier $(\times 10^1)$. The fifth (last) band indicates the tolerance. A brown band is $1\%$. (If you ever come across a red band it stands for a tolerance of $2\%$). The resistor value is $2260 \,\Omega\,\pm 1\%$. 
 
-This is a  *surface mount* resistor:
+Reading this resistor value is pretty tricky. It is hard to tell which end you start at. If you look very closely, the gap between the two brown bands is slightly larger than the other gaps. That tells you the last brown band is the tolerance. When in doubt, use an ohmmeter. 
+
+### Surface mount resistors
+
+This is a  *surface mount* resistor,
 
 ![](https://ka-perseus-images.s3.amazonaws.com/cccc66df53843a97cc948b246a0a6f343329b2ab.jpg){: .centered }
 
@@ -104,7 +108,7 @@ Here's how a surface mount resistor is made. The resistor itself is a single lay
 
 ![Surface mount resistor cross section]({{ site.baseurl }}{% link i/resistor_smt_construction.svg %}){: .centered }
 
-Example of a resistor that's part of an integrated circuit:
+Example of a resistor that's part of an integrated circuit,
 
 ![](https://ka-perseus-images.s3.amazonaws.com/f754369c927f3e89a88a18898a4ed745b5846e49.svg){: .centered }
 
@@ -116,7 +120,7 @@ When making real capacitors, the goal is to create a component that comes as clo
 
 $i = \text C \,\dfrac{dv}{dt}$
 
-The some symbols for a capacitor look like this:
+The some symbols for a capacitor look like this,
 
 ![Capacitor symbols]({{ site.baseurl }}{% link i/element_capacitor_symbols.svg %}){: .centered }
 
@@ -126,7 +130,7 @@ We make capacitors from two metal surfaces placed close to each other but not to
 
 Learn more about capacitors and how they work in the [capacitors and capacitance](https://www.khanacademy.org/science/physics/circuits-topic/circuits-with-capacitors/v/capacitors-and-capacitance) section in Khan Academy Physics.  
 
-Real capacitors come in lots of different shapes:
+Real capacitors come in lots of different shapes,
 
 ![](https://ka-perseus-images.s3.amazonaws.com/abaf98dabaf79e6d8b8a129f3d558ca2dd0d92b0.jpg){: .centered }
 
@@ -144,7 +148,7 @@ Since a capacitor has connection wires, it inevitably has a small parasitic resi
 
 The material separating the capacitor plates is supposed to be insulating (allow zero current). But not all insulators are perfect, so tiny currents can seep through. These *leakage* currents flow straight through the capacitor, even if the voltage is not changing (when $\text dv/\text dt = 0)$. It seems like there's a large-value resistor in parallel with the capacitor. Leakage paths also happen if the circuit is not clean. Leakage current can flow around the capacitor, along the surface of the component.
 
-A *surface mount* capacitor is shown here:
+A *surface mount* capacitor is shown here,
 
 ![](https://ka-perseus-images.s3.amazonaws.com/83cbc8772fd80929d2c4b1aedca437c3184bc44e.jpg){: .centered }
 
@@ -162,7 +166,7 @@ When you make an inductor the goal is to come as close as possible to the ideal 
 
 $v = \text L \,\dfrac{di}{dt}$
 
-The symbol for an inductor looks like this:
+The symbol for an inductor looks like this,
 
 ![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered }
 
