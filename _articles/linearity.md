@@ -99,7 +99,9 @@ The scaling property can be drawn like this,
 #### Tripler
 {:.no_toc}
 
-As a specific example, let's invent a "tripler" and ask the question, **"Is a tripler linear?"** 
+As a specific example, let's invent a "tripler" and ask, 
+
+**Is a tripler linear?** 
 
 A tripler is described in functional notation like this, 
 
@@ -209,49 +211,45 @@ Additivity is the theoretical basis for circuit analysis.
 
 ## Additivity example
 
-Suppose we have a signal made up of two parts, $x_1 + x_2$. Just for fun, $x_1$ could be the voice of a singer and $x_2$ could be guitar music. A microphone picks up the singer's voice. The sound of the strings are sensed by the guitar "pick ups." Both signals are wired to an amplifier box where they are first combined, $x_1 + x_2$, and then amplified by a *linear amplifier*. The music plays over a loudspeaker. 
+Suppose we have a signal made up of two parts, $x_1 + x_2$. Just for fun, $x_1$ could be the voice of a singer and $x_2$ could be guitar music. A microphone picks up the singer's voice. The sound of the strings are sensed by the guitar "pick ups." Both signals connect to a *mixer* (the circle with the plus sign) where they are combined, $x_1 + x_2$. The output of the mixer goes to a *linear amplifier*. The music plays over a loudspeaker. 
 
-![Singer and guitar system]({{ site.baseurl }}{% link i/linearity_additivity2.svg %}){: .centered :}
+![Singer and guitar system]({{ site.baseurl }}{% link i/linearity_additivity2.svg %})
 
-**Question: Does the guitar change what the singer's voice sounds like?** 
+**Does the guitar change what the singer's voice sounds like?** 
 
-Let's find out with an experiment: In this experiment, $f(x)$ is the linear amplifier. $f(x) = mx$. $m$ is the volume setting on the amp. Sound goes in, louder sound comes out. 
+Let's do an experiment to find out: $f(x)$ is the linear amplifier. We model the amplifier as $f(x) = mx$ where $m$ is the volume setting on the amp. Sound goes in, louder sound comes out. $m$ ranges between $1$ and $11$ on the cool amps. We want the singer and guitar sound good no matter how loud or soft each one is, at all volume settings. 
 
 The input is (voice $+$ guitar), also known as $x_1 + x_2$.  
 The output is the loud song, $y = f(x_1 + x_2)$.
 
-To tell if the guitar makes the singer sound different, we make three recordings. 
+To tell if the guitar changes the singer's voice we make three recordings. 
 
-1. We ask the singer to belt out the song $(x_1)$ while the guitar player goes off in the corner of the studio and does his math homework. The recorded output is the singer's amplified voice, $f(x_1)$. 
+1. The singer belts out the song $(x_1)$ while the guitar player goes off in the corner and does his math homework. We record the singer's amplified voice and call it $f(x_1)$, 
 
-![Just the singer]({{ site.baseurl }}{% link i/linearity_additivity3.svg %}){: .centered :}
+![Just the singer]({{ site.baseurl }}{% link i/linearity_additivity3.svg %})
 
 {:start="2"}
-2. Then the singer goes on break and the guitar player wails on his guitar, $x_2$. Record the guitar by itself, $f(x_2)$.
+2. The singer goes on break and the guitar player wails on his guitar, $x_2$. We record the guitar by itself and call it $f(x_2)$,
 
-![Just the guitar]({{ site.baseurl }}{% link i/linearity_additivity4.svg %}){: .centered :}
+![Just the guitar]({{ site.baseurl }}{% link i/linearity_additivity4.svg %})
 
 {:start="3"}
-3. We have the singer and guitar play together and record the amplified sound, $f(x_1 + x_2)$.
+3. The singer and guitar play together and record the amplified sound as $f(x_1 + x_2)$,
 
-![Singer and guitar together]({{ site.baseurl }}{% link i/linearity_additivity5.svg %}){: .centered :}
+![Singer and guitar together]({{ site.baseurl }}{% link i/linearity_additivity5.svg %})
 
 The question is, does $f(x_1 + x_2)$ sound the same or different than $f(x_1) + f(x_2)$? 
 
 {:start="4"}
-4. We play back the individual voice and guitar recordings and add them together, meaning we listen to $f(x_1) + f(x_2)$. 
+4. To find out we play back the individual voice and guitar recordings and add them together, meaning we listen to $f(x_1) + f(x_2)$. 
 
-![Playback singer and guitar]({{ site.baseurl }}{% link i/linearity_additivity6.svg %}){: .centered :}
+![Playback singer and guitar]({{ site.baseurl }}{% link i/linearity_additivity6.svg %})
 
-As we listen to this recording can we tell it apart from $f(x_1 + x_2)$?
-
-The additivity property tells us they are equal, 
+As we listen to this recording can we tell it apart from $f(x_1 + x_2)$? We were told the amplifier is linear, so it has the additivity property. The additivity property tells us, 
 
 $f(x_1 + x_2) = f(x_1) + f(x_2)$
 
-Playing the two individual recordings added together sounds exactly the same as if the signer and guitarist were playing at the same time.
-
-Both recordings sound exactly the same as long as $f(x)$ is a *linear* amplifier. That means the guitar has no effect on the singer's voice coming through the system. Both signals pass through without regard for whatever else is playing.
+The two individual recordings added together should sound exactly the same as if the signer and guitarist were playing at the same time. That means the guitar has no effect on the singer's voice coming through the system. Both signals pass through without regard for whatever else is playing.
 
 {% capture summary %}Do non-linear functions have the additivity property?{% endcapture %}  
 {% capture details %}  
@@ -264,9 +262,6 @@ $f(x_1 + x_2)\stackrel{?}{=} f(x_1) + f(x_2)\qquad$ additivity test
 If $f(x)$ is not linear and we put $x_1+x_2$ into the input, the output does not come out as the sum of $f(x_1)+f(x_2)$. Instead, the output can be a complicated mash-up of the two inputs. Imagine we build a non-linear function that squares its input, a "squarer."
 
 ![f(x) is a squarer function]({{ site.baseurl }}{% link i/linearity_squarer.svg %}){: .centered :}
-
-![f(x) is a squarer function]({{ site.baseurl }}{% link i/linearity_squarer_p.svg %}){: .centered :}
-
 
 $f(x) = x^2$
 
