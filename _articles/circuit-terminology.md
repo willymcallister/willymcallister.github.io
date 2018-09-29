@@ -43,14 +43,14 @@ A circuit is *open* if the circle is not complete, if there is a gap or opening 
 #### Short circuit
 A *short* is a path of low resistance. It is usually by mistake. The resistor shown below is the intended path for current, and the curved wire going around it is the short. Current is diverted away from its intended path, sometimes with damaging results. The wire *shorts out* the resistor by providing a low-resistance path for current (probably not what the designer intended). 
 
-![Short circuit](https://ka-perseus-images.s3.amazonaws.com/0902a64f5e31852afbfdb7f93898c79f3dd877ae.svg){: height="200px"}{: .centered }
+![short circuit]({{ site.baseurl }}{% link i/circuit_terminology_short.svg %}){: .centered :}
 
 #### Make or break
 You *make* a circuit by closing the current path, such as when you close a switch. *Breaking* a circuit is the opposite. Opening a switch *breaks* the circuit.  
 
-![Make and Break](https://ka-perseus-images.s3.amazonaws.com/6e48667b899e34acf82eb4e75f6318c6533a27bb.svg){: height="200px"}{: .centered }
+![make and break]({{ site.baseurl }}{% link i/circuit_terminology_make_break.svg %}){: .centered :}
 
-The phrase "make or break situation" means whatever happens, the outcome is definitely going in one of two directions. 
+The phrase "make or break situation" means whatever happens the outcome is definitely going in one of two directions. 
 
 ## Schematic terms
 
@@ -63,7 +63,7 @@ The term *element* means a component or a source. The term *component* refers to
 #### Symbols
 Elements are represented in schematics by *symbols*. Here are the symbols for the common 2-terminal elements. 
 
-![2-terminal component symbols](https://ka-perseus-images.s3.amazonaws.com/dcb543f400f58dd8a635fe8366c6d27d0133ca96.svg){: height="180px"}{: .centered }
+![circuit component symbols]({{ site.baseurl }}{% link i/circuit_terminology_symbols.svg %}){: .centered :}
 
 #### Lines
 Connections between elements are drawn as lines, which we often think of as "wires." When drawn on a schematic, lines represent *perfect* conductors with zero resistance. Every component or source terminal touched by a line has the same voltage. 
@@ -71,7 +71,7 @@ Connections between elements are drawn as lines, which we often think of as "wir
 #### Dots
 Connections between lines can be indicated by *dots.* Dots are an unambiguous indication that lines are connected. If the connection is obvious, you don't have to use a dot. 
 
-![Dots connect wires](https://ka-perseus-images.s3.amazonaws.com/93d01f9853d3485f57740178c083b39cb9e13e84.svg){: height="180px"}{: .centered }
+![dots connect wires]({{ site.baseurl }}{% link i/circuit_terminology_dots.svg %}){: height="140px"}{: .centered :}
 
 <p class="caption">
 (a) and (b) are both good. (c) no dot indicates no connection. <br>   
@@ -83,45 +83,47 @@ For crossing connected lines,  (e) is acceptable, but risks looking too much lik
 #### Reference Designator
 When you place an element in a schematic you often give it a unique name, known as a *reference designator*. Examples of reference designators are $\text{R1}$, $\text{C6}$, and $\text{V}_\text{BAT}$. The $1$ in $\text{R1}$ is part of the name, and does not indicate the resistance value. Reference designators are by definition unique for each schematic. They let you identify components by name even if some of them have the same value. It is okay to use reference designators in equations. $\text{R1}$ can be assigned a resistance value, $\text{R1} = 4.7\,\text k\Omega$, and it can be used as a variable in expressions, as in $\text{R2} \cdot \text{C6} = 4.7\,\text k\Omega \cdot 2\,\mu\text F$.
 
-![Reference designators](https://ka-perseus-images.s3.amazonaws.com/d202dca9043bd87fc3089bb5aebfd37853115bbe.svg){: .centered }
+![reference designator]({{ site.baseurl }}{% link i/circuit_terminology_refdes.svg %}){: .centered :}
 
-<p class="caption">Reference designators give elements unique names, even if their values are the same.</p>
+<p class="caption">Reference designators give elements unique names—even if their values are the same.</p>
 
 #### Node
 A junction where $2$ *or more* elements connect is called a *node*. The schematic below shows a single node (the black dot) formed by the junction of five elements (abstractly represented by orange rectangles). 
 
-![Nodes](https://ka-perseus-images.s3.amazonaws.com/834c6bf16be529083ca2178535de623148d6a296.svg){: .centered }
+![abstract node]({{ site.baseurl }}{% link i/circuit_terminology_node1.svg %}){: .centered :}
 
 #### Distributed node 
 Since lines on a schematic represent perfect zero-resistance conductors, there is no rule that says lines from multiple elements are required to meet in a single point junction. We can draw the same node as a *distributed* node like the one in the schematic below. These two representations of the node mean exactly the same thing. 
 
-![Distributed node](https://ka-perseus-images.s3.amazonaws.com/fce6b5553187998b22b00b2111941f01f85ff268.svg){: .centered }
+![distributed node]({{ site.baseurl }}{% link i/circuit_terminology_node2.svg %}){: .centered :}
 
 A distributed node might be all spread out, with lots of line segments, elbows, and dots. Don't be distracted, it is all just one single node. Connecting schematic elements with perfect conductors means the voltage everywhere on a distributed node is the same.
 
-Here is a realistic-looking schematic with the distributed nodes labeled:
+Here is a realistic-looking schematic with the distributed nodes highlighted,
 
-![Real circuit with nodes labeled](https://ka-perseus-images.s3.amazonaws.com/5ac296f425776f84cb95df03dd8faa839ed1f738.svg){: .centered }
+![circuit with nodes identified]({{ site.baseurl }}{% link i/circuit_terminology_node3.svg %}){: .centered :}
 
 **Problem 1: How many nodes are in this schematic?**
 
-![How many nodes in this circuit?](https://ka-perseus-images.s3.amazonaws.com/94edd21fc7d451329bb6662469e8b4a65fd1c632.svg){: .centered }
+![How many nodes in this circuit?]({{ site.baseurl }}{% link i/circuit_terminology_node4.svg %}){: .centered :}
 
-Pick from: 3 nodes, 4 nodes, 5 nodes, 6 nodes, 8 nodes
+3 nodes, 4 nodes, 5 nodes, 6 nodes, 8 nodes
 
-<details>
-<summary>show answer</summary>
-<p>There are $4$ nodes in the circuit.</p>
-<p><img src="https://ka-perseus-images.s3.amazonaws.com/5b93c5a076290304bb0cca81330e6996bc7f4361.svg" alt="circuit with 4 nodes"></p>
-<p>$\goldC{\text{Node}\,1}$ is the junction between the voltage source, $\text V0$, and the bottom of $\text R3, \text R4$, and $\text R5$. <br> 
-$\purple{\text{Node}\, 2}$ is the junction between the voltage source, $\text V0$, and resistor $\text R1$.  <br>
-$\red{\text{Node} \, 3}$ is the junction between resistors $\text R1, \text R2$, and $\text R3$.  <br>
-$\green{\text{Node}\,4}$ is the junction between resistors $\text R2, \text R4$, and $\text R5$.</p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+There are $4$ nodes in the circuit.
+
+![circuit with 4 nodes]({{ site.baseurl }}{% link i/circuit_terminology_node5.svg %}){: .centered :} 
+
+ $\goldC{\text{Node}\,1}$ is the junction between $\text V0$, and the bottom of $\text R3, \text R4$, and $\text R5$.   
+$\purple{\text{Node}\, 2}$ is the junction between the voltage source, $\text V0$, and resistor $\text R1$.  
+$\red{\text{Node} \, 3}$ is the junction between resistors $\text R1, \text R2$, and $\text R3$.  
+$\green{\text{Node}\,4}$ is the junction between resistors $\text R2, \text R4$, and $\text R5$.
+{% endcapture %}{% include details.html %}
 
 <details>
 <summary>other definitions of <em>node</em></summary>
-<p>Depending on your textbook or web resource, you may come across other definitions of <em>node</em>. In some texts, a <em>node</em> is defined to be the junction between $3$ or more elements.</p>
+<p>Depending on your textbook or web resource, you may come across other definitions of <em>node</em>. In some texts a <em>node</em> is defined as the junction between $3$ or more elements.</p>
 
 <p>Another term you may come across is <em>essential node</em>. This also means a node with $3$ or more connected elements. In this teaching style, <em>nodes</em> have $2$ or more connections, and <em>essential nodes</em> have $3$ or more.</p>
 
@@ -131,20 +133,21 @@ $\green{\text{Node}\,4}$ is the junction between resistors $\text R2, \text R4$,
 </details>
 
 #### Branch
+
 A *branch* is a connection between nodes. A branch contains an element (resistor, capacitor, source, etc.). The number of branches in a circuit is the same as the number of elements.
 
 **Problem 2: How many branches are in this circuit?**
 
-![How many branches in this schematic?](https://ka-perseus-images.s3.amazonaws.com/94edd21fc7d451329bb6662469e8b4a65fd1c632.svg){: .centered }
+![How many branches in this circuit?]({{ site.baseurl }}{% link i/circuit_terminology_node4.svg %}){: .centered :}
 
-Pick from: 3 branches, 4 branches, 5 branches, 6 branches
+3 branches, 4 branches, 5 branches, 6 branches
 
-<details>
-    <summary>show answer</summary>
-    <p>There are 6 branches in this circuit, one for each element,
-</p>
-<p><img src="https://ka-perseus-images.s3.amazonaws.com/a87212162972863301799cc76bea8d8c25db1d51.svg" alt="Schematic with branches highlighted"></p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+There are 6 branches in this circuit, one for each element,
+
+![circuit with 6 branches highlighted]({{ site.baseurl }}{% link i/circuit_terminology_branches.svg %}){: .centered :} 
+{% endcapture %}{% include details.html %}
 
 {% capture summary %}other definitions of *branch*{% endcapture %}  
 {% capture details %}  
@@ -154,17 +157,19 @@ This alternate definition doesn't cause problems because we don't do anything wi
 {% endcapture %}{% include details.html %} 
 
 #### Loop
+
 A *loop* is any closed path going through circuit elements. To draw a loop, select any node as a starting point and draw a path through elements and nodes until the path comes back to the node where you started. There is only one rule: a loop can visit (pass through) a node only *one time*. It is ok if loops overlap or contain other loops. Some of the loops in our circuit are shown here. (You can find others, too. If I counted right, there are six.) 
 
-![Three loops](https://ka-perseus-images.s3.amazonaws.com/678eee017eff9f24e6e0064a6c6f49c679e7a941.svg){: .centered }
+![circuit with 3 loops highlighted]({{ site.baseurl }}{% link i/circuit_terminology_loop1.svg %}){: .centered :} 
 
-<details>
-<summary>show all the loops</summary>
-<p>Six loops.</p>
-<p><img src="https://ka-perseus-images.s3.amazonaws.com/8bc7594b2ce2f1e36827cc37fae7e4578da48463.svg" alt="All loops"></p>
+{% capture summary %}show all the loops{% endcapture %}  
+{% capture details %}  
+Six loops,
 
-<p>Just from this simple example you can see the number of loops in a circuit can become quite large. Loop analysis can be quite a burden, so we put a lot of effort going into figuring out simpler methods.</p>
-</details>
+![circuit with 6 loops highlighted]({{ site.baseurl }}{% link i/circuit_terminology_loop2.svg %}){: .centered :} 
+
+Just from this simple example you can see the number of loops in a circuit can become quite large. Loop analysis can be difficult---we put a lot of effort into figuring out simpler methods.
+{% endcapture %}{% include details.html %}
 
 #### Mesh 
 
@@ -172,15 +177,16 @@ A *mesh* is a loop that has no other loops inside it. You can think of this as o
 
 **Problem 3: How many meshes are in this circuit?**
 
-![How many meshes in this schematic?](https://ka-perseus-images.s3.amazonaws.com/94edd21fc7d451329bb6662469e8b4a65fd1c632.svg){: .centered }
+![How many meshes in this circuit?]({{ site.baseurl }}{% link i/circuit_terminology_node4.svg %}){: .centered :}
 
-Pick from: 1 mesh, 2 meshes, 3 meshes, 4 meshes
+1 mesh, 2 meshes, 3 meshes, 4 meshes
 
-<details>
-<summary>show answer</summary>
-<p>There are 3 meshes in the circuit, one for each "open window" in the circuit,</p>
-<p><img src="https://ka-perseus-images.s3.amazonaws.com/e9acafcaa612af370dd958a45c27fd0c2daa89cb.svg" alt="Three meshes"></p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+There are 3 meshes in the circuit, one for each "open window" in the circuit,
+
+![circuit with 3 meshes highlighted]({{ site.baseurl }}{% link i/circuit_terminology_mesh.svg %}){: .centered :}  
+{% endcapture %}{% include details.html %} 
 
 #### Reference Node
 
@@ -194,7 +200,8 @@ You can pick any node to be the reference node, but two common choices that simp
 #### Ground
 The reference node is often referred to as *ground*. The concept of *ground* has three important meanings. 
 
-![Ground stake next to a home](https://fastly.kastatic.org/ka-perseus-images/92a80780c3bef5128a186d4c5bbc30fe4cf24feb.jpg){: .centered }
+![ground stake next to a home]({{ site.baseurl }}{% link i/circuit_terminology_ground_stake.jpg %}){: .centered :} 
+
 <p class="caption">A metal stake driven into the ground next to a home. The wire clamped to the stake curves up to the right to provide the safety ground reference for the home's electrical system. Sometimes the grounding wire is clamped to a water pipe where the pipe disappears into the Earth.</p>
 
 Ground is
@@ -202,22 +209,30 @@ Ground is
 * the reference point from which voltages are measured,
 * the return path carrying electric current back to its source,
 * a direct physical connection to the Earth, for safety.
- 
-<details>
-    <summary>safety ground</summary>
-    <p>Any electric device plugged into the wall has very high voltages inside. If the device somehow fails the high internal voltage accidentally touches the metal case, there is a chance of someone getting a very dangerous shock. To avoid this, equipment is designed with a safety feature to direct the potentially large current into the Earth rather than through you. The metal enclosure of the appliance is connected to a safety ground wire (that's the third wire in the power cord). The safety ground goes through the home's electrical system and out to Earth, like in the photo above. Dangerous current is guided to a safe place, into the Earth and away from people. When the appliance or device is working properly, no current flows in the safety ground wire.</p>
-</details>
 
-The ground node gets its name from the third meaning. But all three roles are equally important.
+{% capture summary %}safety ground{% endcapture %}  
+{% capture details %}  
+Any electric device plugged into the wall has very high voltages inside $(110\,\text V$ or $220\,\text V)$. If something inside the device fails the high voltage might touch the metal case. If you touch the device you will get a very dangerous shock.
+    
+For safety, devices have a feature to direct the dangerous current into the Earth rather than through you. A grounding wire connects the metal enclosure to a safety ground wire in the power cord. That's why there's a third prong on a power plug. 
+
+![plug with 3rd prong safety ground - US]({{ site.baseurl }}{% link i/circuit_terminology_plug1.jpg %}){: height="160px"} 
+![plug with 3rd prong safety ground - India]({{ site.baseurl }}{% link i/circuit_terminology_plug2.jpeg %}){: height="160px"} 
+![plug with 3rd prong safety ground - England]({{ site.baseurl }}{% link i/circuit_terminology_plug3.jpg %}){: height="160px"} 
+
+The safety ground wire goes through the home's electrical system and out to Earth, as shown in the leafy photograph above.
+
+The moment a fault happens the dangerous current is guided to Earth and away from people. The high current is sensed by the circuit breaker or fuse, which opens up to remove power from the faulty device. When the device is working properly, no current flows in the safety ground wire.  
+{% endcapture %}{% include details.html %}
+
+Ground gets its name from the third meaning, but all three roles are equally important.
 
 You will come across various symbols for ground. They all indicate which node is the reference node.
 
-![Ground symbols](https://ka-perseus-images.s3.amazonaws.com/7d5a24819a48db48fb13ad9ec71f9952389e8a4d.svg){: height="100px"}{: .centered }
+![ground symbols]({{ site.baseurl }}{% link i/circuit_terminology_ground.svg %}){: height="80px"}{: .centered }
 
 ## Summary
 {:.no_toc}
 
-We now have a full vocabulary for talking about circuits and their sub-parts.   
-We will use our new words all the time.
-
+We now have a full vocabulary for talking about circuits and their sub-parts.
 
