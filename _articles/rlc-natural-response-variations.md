@@ -7,7 +7,7 @@ comments: true
 
 We dive into variations of the series resistor-inductor-capacitor $(\text{RLC)}$ natural response. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/7bf2a85a2432376373d66e4a86fe015fdb5f5570.svg){: .centered :}
+![RLC circuit]({{ site.baseurl }}{% link i/rlc_natural_response18.svg %}){: .centered :}
 
 The previous article [RLC natural response - derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}) set up the differential equation and derived the characteristic equation. You should study that article before this one. Our story picks up at the point where we solve for $s$, the roots of the characteristic equation.
 
@@ -246,6 +246,7 @@ Finding the initial conditions is a two-step process,
 2. Do whatever math and circuit wizardry it takes to find the initial conditions we need, in this case, $i(0^+)$ and $di/dt(0^+)$.
 
 #### Get through the switch closing
+{:.no_toc}
 
 Closing a switch is a pretty disruptive event. Fortunately, we know some properties of inductors and capacitors that tell us what happens,
 
@@ -268,6 +269,7 @@ Now advance time to $t=0^+$, the moment *after* the switch closes. For our given
 We successfully made it through the switch closing. 
 
 #### Now find the initial conditions
+{:.no_toc}
 
 Notice we have an initial condition for $i$ but not for $di/dt$. Instead, we have the starting voltage on the capacitor. This makes us do a little extra work, but it's not too bad. We still need to find $di/dt(0^+)$. Let's do it.
 
@@ -397,6 +399,7 @@ $s_{1,2} = -1 \pm j2$
 $($Or, you could have just used $s_{1,2} = -\alpha \pm j\omega_d = -1 \pm j2 )$
 
 #### Current
+{:.no_toc}
 
 The two natural frequencies are complex conjugates, which puts us in the under damped case. We insert them into the under damped solution, 
 
@@ -420,6 +423,7 @@ Talk it through,
 This example is called an *under damped* solution because the current swings above and below zero, at least a few times.
 
 #### Voltages
+{:.no_toc}
 
 Before we move on we should take a look at the natural response of the three voltages.
 
@@ -658,7 +662,7 @@ Let $\text R = 10 \,\Omega, \text L = 1\,\text H$, and $\text C = 1/9\,\text F$.
 
 Let $v_c(0) = 10\,\text V$ and $i_\text L(0) = 0$.
 
-![image 2](https://ka-perseus-images.s3.amazonaws.com/23831dd59c92b7835cf628947ee13377f7c9e5c9.svg)
+![image 2]({{ site.baseurl }}{% link i/rlc_natural_response20a.svg %}){: .centered :}
 
 **Find $i(t)$.**
 
