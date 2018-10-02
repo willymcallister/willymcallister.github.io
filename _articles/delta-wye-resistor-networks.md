@@ -101,7 +101,11 @@ $Rb = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R2}  = \dfrac{1\cdot1 + 1\cdot1 + 1\cdot1
 
 $Rc = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R3}  = \dfrac{1\cdot1 + 1\cdot1 + 1\cdot1}{1} = 3\,\Omega$
 
-This $3\,\Omega : 1\,\Omega$ resistor ratio is the classic Delta-Wye test case.
+This $3:1$ resistor ratio is the classic Delta-Wye test case.
+
+Look like a wizard: If you come across a *balanced* $\Delta$ or $\text Y$ (all the resistors are the same value) you can instantly do the transformation if you remember this $3:1$ property.  
+* For the $\Delta \rightarrow \text Y$ direction divide the resistors by $3$. 
+* For the $\text Y \rightarrow \Delta$ direction multiply the resistors by $3$. 
 
 ## Example 2 - less tidy
 
