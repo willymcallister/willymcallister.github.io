@@ -1,0 +1,7 @@
+_id: 55b25cc0-c661-11e8-a3e5-1590186c2f0d
+_parent: 'https://spinningnumbers.org/a/circuit-sandbox.html'
+replying_to: ''
+message: "Dear Willy McAllister,\r\nGreat to see this excellent tool outside of edX. I thought it was brilliant for 6.002x. I hope you don't mind, but I was just doing a diode i-v plot and noticed that the y-axis scaling is using 'K' for kilo. I have to constantly remind students that 'K' = Kelvin and 'k' =1000 in SI units (ignoring the CS folk who use 'K' for 1024!). Great website, fantastic learning resource for would-be electrical engineers. Best wishes."
+name: Ryan Montague
+email: 560ce1940d518a463598640b2458f363
+date: '2018-10-02T16:36:39.189Z'
