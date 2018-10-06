@@ -15,7 +15,11 @@ Ejecutar [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.
 
 [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
 
->Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
+>Want to help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
+
+----
+
+DON'T READ THE REST OF THIS UNLESS YOU GET STUCK. You will do fine.
 
 ----
 
@@ -169,12 +173,57 @@ If you have a touch device (tablet or smart phone),
 * Two fingers pan the schematic window
 
 #### Tablet 
+{:.no_toc}
 
 On a tablet you can save *one* circuit file. When you save a circuit, it is tucked into a memory area inside your browser. When you open the saved circuit, the circuit file is retrieved from browser memory. If you want to keep your work, be sure to save before leaving the web page.
 
 #### Mobile devices
+{:.no_toc}
 
 The simulator works on a smart phone, but the display is a bit small for drawing schematics. You can save and load one circuit file, the same as for a tablet.
+
+## Configure
+
+Circuit Sandbox accepts a few extra parameters to customize the parts bin and analysis choices. You can do this with either the URL or the html \<input\> statement. Here is an example of a URL with a limited parts bin and analysis choices,
+
+```
+https://spinningnumbers.org/circuit-sandbox/index.html?parts=g,v,r,s&analyses=dc,tran
+```
+
+A URL parameter list starts with a ? question mark. Each parameter is separated by an & ampersand character. Notice there are no quote marks.
+
+You can also provide an initial schematic. Draw up a circuit and grab the URL with the <i class="fa fa-link"></i> link. The circuit JSON is captured in the value parameter. Append the part and analysis options like this with ampersands,
+
+```
+https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",0.5,36.5,4,"50",null,null,null,"100","0.01","1000"]]&parts=g,v,r,s&analyses=dc,tran
+```
+
+You can do the same thing if you call Circuit Sandbox from an html \<input\> statement---this time with quotes,
+
+```
+<input type="hidden" class="schematic" height="400" width="600" parts="g,v,r,s" analyses="dc,tran" value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",25.5,44,4,null,null,null,null,"100","0.01","1000"]]>
+```
+
+Your choices for analyses are dc, ac, and tran.
+
+Here are your part choices,
+```'''```
+   var parts_map = {
+    'g': [Ground],
+    'L': [Label],
+    'v': [VSource],
+    'i': [ISource],
+    'r': [Resistor],
+    'c': [Capacitor],
+    'l': [Inductor],
+    'o': [OpAmp],
+    'd': [Diode],
+    'n': [NFet],
+    'p': [PFet],
+    's': [Probe],
+    'a': [Ammeter]
+   };
+```
 
 ## Translation
 
@@ -204,6 +253,8 @@ Many people have wrapped front-end interfaces around SPICE to allow designers to
 An excellent version of SPICE is available from [Linear Technology](https://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is [LTSpice (from linear.com)](https://www.linear.com/designtools/software/#LTspice) or [LTSpice (from analog.com)](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html). LTSpice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use. 
 
 Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The web sites have been merged together.
+
+Another simulator is [JADE](http://computationstructures.org/exercises/sandboxes/jade.html). This is also a creation of Chris Terman at MIT. It's a follow-on to Circuit Sandbox with improved features for digital design and logic simulation. Here's an [intro video](http://computationstructures.org/exercises/tool_docs/jade.html).
 
 ## Licensing
 
