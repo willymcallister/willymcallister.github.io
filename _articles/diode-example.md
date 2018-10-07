@@ -31,7 +31,7 @@ Written by Willy McAllister.
 
 Let's build a circuit with a green light-emitting diode (LED).
 
-![LED and resistor circuit]({{ site.baseurl }}{% link i/diode_LED_circuit.svg %})  $\quad$ ![](https://ka-perseus-images.s3.amazonaws.com/d461a0e645ba757934bb811cd07e8ede7122c3f1.jpg) 
+![LED and resistor circuit]({{ site.baseurl }}{% link i/diode_LED_circuit.svg %})  $\quad$ ![green LED]({{ site.baseurl }}{% link i/diode_LED_green.jpg %}) 
 
 We begin with the usual analytical approach, but it gets very hard very soon.
 
