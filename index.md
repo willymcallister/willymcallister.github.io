@@ -7,14 +7,14 @@ comments: true
 
 Welcome to Spinning Numbers! Learn about electricity and electrical engineering.  
 
-### [Circuit sandbox simulator <img class="sn-logo" src="/i/circuit_sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
+### [Circuit sandbox simulator]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) [![circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox.png %}){: height="80px" :}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
 * [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) in English
 * [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) en español
 * [电路沙箱](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 或简体中文 (simplified Chinese).
 * [回路サンドボックス](https://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese)
  
-Help translate Circuit Sandbox into other languages. [It's easy!](a/circuit-sandbox.html#translation)
+<small>Help translate Circuit Sandbox into other languages. [It's easy!](a/circuit-sandbox.html#translation)</small>
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
