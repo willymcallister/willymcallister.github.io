@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers! Learn about electricity and electrical engineering.  
 
-### [Circuit sandbox simulator <img class="sn-logo" src="/i/circuit-sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
+### [Circuit sandbox simulator <img class="sn-logo" src="/i/circuit_sandbox.png" alt="circuit sandbox" height="80px">]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
 * [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) in English
 * [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) en español
