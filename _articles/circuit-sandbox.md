@@ -37,7 +37,7 @@ To create a circuit, drag components from the part bin on the right onto the sch
 
 Sample output: Click on **TRAN** to perform a *transient* analysis, a plot of voltage vs. time.
 
-![Transient analysis screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_transient.png %}){: height="340px" :}{: .centered :}
+![Transient analysis screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_transient_analysis.png %}){: height="340px" :}{: .centered :}
 
 
 ## Getting started
@@ -135,11 +135,15 @@ You can add text annotation to the circuit with the node label part (the short s
 
 <i class="fa fa-times" style="font-size:22px;"></i> Delete: Delete the selected components.
 
+### Simulations
+
 **DC**:  Find the DC voltages and currents, also called the *operating point*.
 
 **AC**: Sweep the AC frequency, plot voltage or current vs. frequency.
 
 **TRAN**: Transient response. Find the time response, plot voltage or current vs. time.
+
+<i class="fa fa-download"></i> Download: Saves the TRAN or AC data as a .csv file (comma-separated variables) called data.csv in your Downloads folder. This type of file can be opened in Excel or MatLab.
 
 ## Device models
 
