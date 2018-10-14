@@ -25,6 +25,8 @@ The *operational amplifier* is the building block of analog electronics.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Virtual ground — examples]({{ site.baseurl }}{% link _videos/opamp-virtual-ground-examples.md %})
 
+>![]({{ site.baseurl }}{% link i/article.svg %}) [Exercise - unity gain buffer]({{ site.baseurl }}{% link _articles/virtual-ground-exercise.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Summing op-amp]({{ site.baseurl }}{% link _videos/opamp-summing.md %})
 
 **Further study**
