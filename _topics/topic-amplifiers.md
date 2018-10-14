@@ -13,9 +13,13 @@ The *operational amplifier* is the building block of analog electronics.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Non-inverting op-amp]({{ site.baseurl }}{% link _videos/opamp-non-inverting.md %})
 
+>![]({{ site.baseurl }}{% link i/article.svg %}) [Exercise]({{ site.baseurl }}{% link _articles/opamp-non-inverting-exercise.md %})
+
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Feedback]({{ site.baseurl }}{% link _videos/opamp-feedback.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Inverting op-amp]({{ site.baseurl }}{% link _videos/opamp-inverting.md %})
+
+>![]({{ site.baseurl }}{% link i/article.svg %}) [Exercise]({{ site.baseurl }}{% link _articles/opamp-inverting-exercise.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Virtual ground]({{ site.baseurl }}{% link _videos/opamp-virtual-ground.md %})
 
