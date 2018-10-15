@@ -1,6 +1,6 @@
 ---
 layout: video
-title:  "Virtual ground - examples"
+title:  "Virtual ground — examples"
 author: Willy McAllister
 youtubeID: aD6l5bNnJgE
 comments: true

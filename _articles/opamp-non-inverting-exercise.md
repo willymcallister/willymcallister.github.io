@@ -42,4 +42,3 @@ Verify your new amplifier has the gain you expect.
 
 [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html)
 
->Note: This video is an updated version of the same [video](https://www.youtube.com/watch?v=_Ut-nQ535iE) on Khan Academy. A reference to an extra $v_{in}$ variable is removed.

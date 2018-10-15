@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Non-inverting op-amp exercise"
+title:  "Unity-gain buffer exercise"
 author: Willy McAllister
 comments: true
 ---
