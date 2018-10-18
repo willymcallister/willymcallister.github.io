@@ -39,7 +39,6 @@ Sample output: Click on **TRAN** to perform a *transient* analysis, a plot of vo
 
 ![Transient analysis screenshot]({{ site.baseurl }}{% link i/circuit_sandbox_transient_analysis.png %}){: height="340px" :}{: .centered :}
 
-
 ## Getting started
 
 Drag components from the parts bin onto the main screen.
@@ -105,9 +104,11 @@ Numbers may be entered using engineering notation,
 
 example: $1000$ can be entered as $1\text k$
 
-## Annotation
+## Labeling and annotation
 
-You can add text annotation to the circuit with the node label part (the short straight line underneath the ground symbol). Drag a node label anywhere on the schematic. Double-click and enter your text. It does not have to be connected to anything.
+You can give a node a name by attaching the label part---the short straight line under the ground symbol. Double-click on the label and enter a node name.
+
+You can add unattached text annotation to the circuit with the same label part. Place a node label anywhere on the schematic. It does not have to be connected to anything.
 
 ## On-screen controls 
 
@@ -124,7 +125,7 @@ You can add text annotation to the circuit with the node label part (the short s
 
 <i class="fa fa-folder-open"></i> Open netlist: Open a saved netlist.
 
-<i class="fa fa-link"></i> Shared link: Displays a link you can copy for sharing your circuit.
+<i class="fa fa-link"></i> Shared link: Displays a link you can copy for sharing your circuit. The link is [*uriencoded*](https://en.wikipedia.org/wiki/Percent-encoding), also known as *percent encoded*. This lets you use these text characters , / ? : @ & = + $ # in signal and component names. The decoded link is echoed to your browser's javascript console.
 
 <i class="fa fa-save"></i> Save netlist: Save the current netlist. See System information below for where the circuit gets saved on different platforms.
 
