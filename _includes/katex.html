@@ -1,21 +1,11 @@
-<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.css" integrity="sha384-L/SNYu0HM7XECWBeshTGLluQO9uVI1tvkCtunuoUbCHHoTH76cDyXty69Bb9I0qZ" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.js" integrity="sha384-ad+n9lzhJjYgO67lARKETJH6WuQVDDlRfj81AJJSswMyMkXTD49wBj5EP004WOY6" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/contrib/auto-render.min.js" integrity="sha384-EkJr57fExjeMKAZnlVBuoBoX0EJ4BiDPiAd/JyTzIA65ORu4hna7V6aaq4zsUvJ2" crossorigin="anonymous"></script>
- 
-<script>
-    renderMathInElement(document.body, {delimiters: [ 
-         {left: "$", right: "$", display: false},
-     ]});
-</script-->
+<link rel="stylesheet" href="{{ site.baseurl }}{% link assets/katex/katex.min.css %}">
 
-<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous"-->
-<link rel="stylesheet" href="https://spinningnumbers.org/assets/katex.min.css"">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"></script>
+<script defer src="{{ site.baseurl }}{% link assets/katex/katex.min.js %}"></script>
+<script defer src="{{ site.baseurl }}{% link assets/katex/contrib/auto-render.min.js %}"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
-            // ...options...
             delimiters:
             [{left: "\\$\\$", right: "\\$\\$", display: true},
             {left: "\\(", right: "\\)", display: false},
@@ -24,6 +14,6 @@
         });
     });
 </script>
-<link href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css">
-<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/copy-tex.min.js" integrity="sha384-C6+I57LTtRxci6ohCckeDBUvozd3Zm2ThSCEQCHq+d2rw+RtSlWxylHmWiFq9Okv" crossorigin="anonymous"></script>
 
+<link href="{{ site.baseurl }}{% link assets/katex/contrib/copy-tex.css %}" rel="stylesheet" type="text/css">
+<script src="{{ site.baseurl }}{% link assets/katex/contrib/copy-tex.min.js %}"></script>
