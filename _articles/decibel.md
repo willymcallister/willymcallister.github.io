@@ -36,7 +36,7 @@ A negative $\text{dB}$ value corresponds to gain less than $1$.
 
 ----
 
-## Background
+## Back story
 
 To understand the decibel it helps to know where it came from. Why is there a $\log$? why is there a $10$? If you want, hop over this part and go to the [definition](#definition) section.
 
