@@ -58,7 +58,7 @@ A current source plots as a horizontal straight line. It's the same current for 
 
 A resistor appears as a line, $i = \dfrac{v}{\text R_{\text T}}$, where the slope (rise over run) is $\dfrac{1}{\text R_{\text T}}$.
 
-{% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_1" %} 
+![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :}
 
 <details>
 <summary>show answer</summary>
@@ -98,7 +98,7 @@ $i(v) = f(v,\text R_\text T,\text V_\text T) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ![Thévenin schematic with 5 V and 2 kohms]({{ site.baseurl }}{% link i/thevenin2b.svg %}){: .centered :}
 
-{% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_2" %} 
+![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :}
 
 Now that you've had a try, it's my turn. I want to derive an $i$-$v$ expression by traditional circuit analysis, and then again with some EE cleverness. 
 
@@ -203,7 +203,7 @@ $i(v) = f(v,\text R_{\text N},\text I_{\text N}) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ![Norton circuit: 2 ma and 500 ohms]({{ site.baseurl }}{% link i/thevenin7a.svg %}){: .centered :}
 
-{% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_3" %} 
+![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :}
 
 Now that you've had a chance to plot the function, I will go ahead and derive the Norton $i$-$v$ expression by traditional circuit analysis, and then again use the EE cleverness we learned above. 
 
@@ -361,7 +361,7 @@ $v_{oc} =$ \_\_\_\_\_\_\_\_\_ $\quad i_{sc} =$ \_\_\_\_\_\_\_\_\_
 
 $i(v) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-{% include_relative d3s/thevenin_blank_graph.html imageID="blank_graph_4" %}  
+![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :} 
 (Adjust the scales so your particular graph look nice.) 
 
 {:start="5"}
