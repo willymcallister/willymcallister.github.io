@@ -5,19 +5,17 @@ author: Willy McAllister
 comments: true
 ---
 
-Spinning Numbers has a few animations created with the Javascript library [D3.js](https://d3js.org). 
+The animations for Spinning Numbers are created with the Javascript library [D3.js](https://d3js.org). The source code for animations is [here](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3a).
 
-Animated images are created with [D3.js](https://d3js.org). The source code for animations is [here](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3).
+I also use D3.js to create static graphs and calculated waveforms. The source code for static graphs is [here](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3). I open each d3 html file on my own machine and save the resulting svg image to the [i/ folder](https://github.com/willymcallister/willymcallister.github.io/tree/master/i). 
 
-Graphs and calcluated waveforms are also created in D3.js. The source code for static graphs is [here](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3). 
+A handy Chrome-specific bookmarklet is [SVG Crowbar](https://nytimes.github.io/svg-crowbar/). It extracts the svg images from a web page and presents it in a form that can be saved. 
 
-## Animations
-
-### Euler's sinewave  
+### Euler's sine wave  
 
 {% include_relative d3a/eulers-sinewave-d3.html %}
 
-### Euler's cosine <br> 
+### Euler's cosine wave
 
 {% include_relative d3a/eulers-cosine-d3.html %}
 
