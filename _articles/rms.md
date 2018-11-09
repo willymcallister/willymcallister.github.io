@@ -36,7 +36,7 @@ This is a story of power and warmth.
 
 Let's say we have a DC voltage source driving direct current through a resistor and an AC voltage source driving alternating current through the same resistor. 
 
-![Resistor driven by DC and AC source]({{ site.baseurl }}{% link images/rms1.svg %}){: .centered :}
+![Resistor driven by DC and AC source]({{ site.baseurl }}{% link i/rms1.svg %}){: .centered :}
 
 Both resistors dissipate power so they both get warm. The question we want to explore is,
 
