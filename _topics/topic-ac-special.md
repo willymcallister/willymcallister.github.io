@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-When signals are sine waves we introduce new units suited to the task of understanding they move through systems.  
+When signals are sine waves we introduce new units suited to the task of understanding how they move through systems.  
 
 ----
 
