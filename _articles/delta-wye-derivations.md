@@ -71,11 +71,10 @@ $R1 = ( \,Rc \parallel (Ra+Rb) + Rb \parallel (Rc+Ra) - Ra \parallel (Rb+Rc)\, )
 
 Replace the $\parallel$ symbol with the proper formula for two parallel resistors,
 
-$R1 = ($  
-$\qquad\quad Rc(Ra+Rb)/(Rc+(Ra+Rb) \,+$  
+$R1 = (Rc(Ra+Rb)/(Rc+(Ra+Rb) \,+$  
 $\qquad\quad Rb(Rc+Ra)/(Rb+(Rc+Ra) \,-$  
 $\qquad\quad Ra(Rb+Rc)/(Ra+(Rb+Rc)$  
-$\qquad ) \,/ 2$
+$\qquad \quad ) \,/ 2$
 
 Notice the denominator is the same in all three terms,
 
@@ -240,19 +239,19 @@ If you want to convert $Gb$ to resistance replace $G$ with $\dfrac{1}{R}$, etc.
 
 $\dfrac{1}{Rb}=\cfrac{\cfrac{1}{R1\,R3}}{\cfrac{1}{R1}+\cfrac{1}{R2}+\cfrac{1}{R3}}$
 
-Go to work on the denominator. The LCM of the three fractions is $R1\,R2\,R3$. Multiply each term by an appropriate form of $1$ and add fractions.
+Go to work on the denominator. The least common multiple of the three fractions is $R1\,R2\,R3$. Multiply each term by an appropriate form of $1$ and add fractions.
 
 $\dfrac{1}{Rb}=\cfrac{\cfrac{1}{R1\,R3}}{\cfrac{R2\,R3}{R1\,R2\,R3}+\cfrac{R1\,R3}{R1\,R2\,R3}+\cfrac{R1\,R2}{R1\,R2\,R3}}$
 
 $\dfrac{1}{Rb}=\cfrac{\cfrac{1}{R1\,R3}}{\cfrac{R2\,R3+R1\,R3+R1\,R2}{R1\,R2\,R3}}$
 
-Now we turn a somersault to simplify the expression,
+Now we turn a somersault to bring $R1\,R2\,R3$ to the numerator,
 
 $\dfrac{1}{Rb}=\dfrac{\dfrac{1}{\cancel{R1}\,\cancel{R3}}\,(\cancel{R1}\,R2\,\cancel{R3})}{R2\,R3+R1\,R3+R1\,R2}$
 
 And a bit more cancellation gives us,
 
-$\dfrac{1}{Rb}=\dfrac{R2}{R2\,R3+R1\,R3+R1}$
+$\dfrac{1}{Rb}=\dfrac{R2}{R2\,R3+R1\,R3+R1\,R2}$
 
 One more flip to get the expression for $Rb$ we've been looking for,
 
