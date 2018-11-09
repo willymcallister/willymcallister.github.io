@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<!-- http://bl.ocks.org/veltman/7295691 4-quadrant plot with grid -->
 <head>
-<meta charset="utf-8">
-<style>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
 
-svg .grid {
-  stroke-width: 0.5px;
-  stroke: #BBB;
-  opacity: 0.5;
-}
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
 
-svg .domain {
-  stroke-width: 3px;
-  stroke: black;
-}
+    svg {
+      border: none;
+    }
 
-svg {
-  border: none;
-}
+    svg .path {
+      stroke-width: 3px;
+      stroke: #11ACCD;      /* KA math1     */
+      fill: none;
+    }
 
-svg .path {
-  stroke-width: 4px;
-  stroke: #FF9C39;        /* KA econ2     */
-  stroke-linecap: round;
-  fill: none;
-}
+    svg text {
+      font: 18px katex_math;
+    }
 
-svg text {
-  font: 12px katex_math;
-}
-
-</style>
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
 </head>
 
 <body>
@@ -39,30 +39,29 @@ svg text {
 <script>
 // http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
   var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
-  var padding = { top:40, right:80, bottom:40, left:40 };  // padding inside border
+  var padding = 40;                                       // padding inside border
 
   var 
-      xmin = -8,
-      xmax = +8,
-      ymin = -8,
-      ymax = +8,
-      hScale = 20,
-      vScale = 20,
-      width  = (xmax - xmin) * hScale,     // width of graph axes pixels
-      height = (ymax - ymin) * vScale,     // height of graph axes pixels
-      xOrigin = (-xmin * hScale);          // pixels
-      yOrigin = height + (ymin * vScale);  // pixels
+      xmin = -1,
+      xmax = +7,
+      ymin = -4,
+      ymax = +4,
+      scale = 30,
+      width  = (xmax - xmin) * scale,     // width of graph axes pixels
+      height = (ymax - ymin) * scale,     // height of graph axes pixels
+      xOrigin = -(xmin * scale);          // pixels
+      yOrigin = height + (ymin * scale);  // pixels
 
   // main container
   var svgContainer = d3.select("body")
     .append("svg")
-      .attr("width",  width  + padding.left + padding.right)  //width of image
-      .attr("height", height + padding.top + padding.bottom)  //height of image
+      .attr("width",  width  + 2 * padding)  //width of image
+      .attr("height", height + 2 * padding)  //height of image
       .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")")
     .append("g")  //group to build image inside of, offset by padding from border
       .attr("transform",
-        "translate(" + padding.left + "," + padding.top + ")");
+        "translate(" + padding + "," + padding + ")");
 
   // scales
   var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
@@ -82,9 +81,9 @@ svg text {
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("v (volts)")
+      .text("t")
       .style("text-anchor", "start")
-      .style("font-size", "16px")
+      .style("font-size", "18px")
       .style('fill', 'black');
   
   // vertical grid lines
@@ -108,10 +107,11 @@ svg text {
       })
       .call(yAxis)
     .append("text")
-      .attr("dy", "-12px")
-      .text("i (mA)")
-      .style("text-anchor", "start")
-      .style("font-size", "16px")
+      .attr("dx", 0)
+      .attr("dy", -8)
+      .text("v, i, p")
+      .style("text-anchor", "middle")
+      .style("font-size", "18px")
       .style("fill", "black");
 
   // horizontal grid lines
@@ -123,19 +123,36 @@ svg text {
       .attr("x2", width - xOrigin)
       .attr("y2", 0);
 
-  // remove  -1 tick labels
   svgContainer.selectAll(".tick text")
-    .filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - norton line for current source and resistor
-  var voltage = 5;
-  var current = 2;
-  var resistor = 0.5;
+  // Waveforms - Sine waves
+  var vAmplitude = 2.0;
+  var resistor = 1333;
+  var iAmplitude = vAmplitude / resistor * 1000;
+  var pAmplitude = vAmplitude * vAmplitude / resistor * 1000;
+  var frequency = 2;
+  var nPoints = 300;
+  var samples = d3.range(0, nPoints + 1)
+  var xData = samples.map(function (i) 
+    { return ((i / nPoints) * (xmax-xmin)) + xmin;
+    });
 
-  var resistorIV = [  
-    { "x": (ymax + current) * resistor, "y": ymax}, 
-    { "x": (ymin + current) * resistor, "y": ymin}];
+  var pSine = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(pAmplitude * Math.pow(Math.sin(frequency * d),2)); 
+    });
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', pSine(xData))
+      .style("fill", "none")
+      .style("stroke", "#000")
+      .style("stroke-width", "3px");
+
+  var avgPow = [  
+      { "x": xmin, "y": pAmplitude / 2}, 
+      { "x": xmax, "y": pAmplitude / 2}];
 
   var lineFunction = d3.line()
     .x(function (d) { return xScale(d.x); })
@@ -143,17 +160,16 @@ svg text {
 
   svgContainer.append('svg:path')
       .classed("path", true)
-      .style("stroke", "#74CF70")      /* KA cs2       */
-      .attr('d', lineFunction(resistorIV));
+      .style("stroke", "#000")
+      .attr('d', lineFunction(avgPow));
 
   svgContainer.append("text")
-      .attr("x", xScale(0))
-      .attr("y", yScale(0))
+      .attr("x", xScale(7.1))
+      .attr("y", yScale(1.5))
       .text("p_average")
       .style("text-anchor", "start")
       .style("font-size", "16px")
       .style('fill', 'black');
-
 </script>
 </body>
 </html>

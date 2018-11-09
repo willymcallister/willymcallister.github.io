@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: none;
+    }
+
+    svg .path {
+      stroke-width: 3px;
+      stroke: #11ACCD;      /* KA math1     */
+      fill: none;
+    }
+
+    svg text {
+      font: 18px katex_math;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+<script>
+// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
+  var padding = 40;                                       // padding inside border
+
+  var 
+      xmin = -1,
+      xmax = +7,
+      ymin = -4,
+      ymax = +4,
+      scale = 30,
+      width  = (xmax - xmin) * scale,     // width of graph axes pixels
+      height = (ymax - ymin) * scale,     // height of graph axes pixels
+      xOrigin = -(xmin * scale);          // pixels
+      yOrigin = height + (ymin * scale);  // pixels
+
+  // main container
+  var svgContainer = d3.select("body")
+    .append("svg")
+      .attr("width",  width  + 2 * padding)  //width of image
+      .attr("height", height + 2 * padding)  //height of image
+      .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")")
+    .append("g")  //group to build image inside of, offset by padding from border
+      .attr("transform",
+        "translate(" + padding + "," + padding + ")");
+
+  // scales
+  var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+  var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+  
+  // x axis
+  var xAxis = d3.axisBottom(xScale)
+    .ticks(8)
+    .tickSizeOuter(0);
+
+  svgContainer.append("g")
+      .classed("x-axis", true)
+      .attr("transform", function() {
+        return "translate(" + 0 + "," + yOrigin + ")";
+      })
+      .call(xAxis)
+    .append("text")
+      .attr("x", width)
+      .attr("dx", ".71em")
+      .text("t")
+      .style("text-anchor", "start")
+      .style("font-size", "18px")
+      .style('fill', 'black');
+  
+  // vertical grid lines
+  svgContainer.selectAll("g.x-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", 0)
+      .attr("y1", -yOrigin)
+      .attr("x2", 0)
+      .attr("y2", height - yOrigin);
+  
+  // y axis
+  var yAxis = d3.axisLeft(yScale)
+      .ticks(8)
+      .tickSizeOuter(0);
+
+  var ya = svgContainer.append("g")
+      .classed("y-axis", true)
+      .attr("transform", function() {
+        return "translate(" + xOrigin + "," + 0 + ")";
+      })
+      .call(yAxis)
+    .append("text")
+      .attr("dx", 0)
+      .attr("dy", -8)
+      .text("v, i, p")
+      .style("text-anchor", "middle")
+      .style("font-size", "18px")
+      .style("fill", "black");
+
+  // horizontal grid lines
+  svgContainer.selectAll("g.y-axis g.tick")
+    .append("line")
+      .classed("grid", true)
+      .attr("x1", -xOrigin)
+      .attr("y1", 0)
+      .attr("x2", width - xOrigin)
+      .attr("y2", 0);
+
+  svgContainer.selectAll(".tick text")
+    .remove();
+
+  // Waveforms - Sine waves
+  var vAmplitude = 2.0;
+  var resistor = 1333;
+  var iAmplitude = vAmplitude / resistor * 1000;
+  var pAmplitude = vAmplitude * vAmplitude / resistor * 1000;
+  var frequency = 2;
+  var nPoints = 300;
+  var samples = d3.range(0, nPoints + 1)
+  var xData = samples.map(function (i) 
+    { return ((i / nPoints) * (xmax-xmin)) + xmin;
+    });
+
+  var vSine = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(vAmplitude * Math.sin(frequency * d)); 
+    });
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', vSine(xData))
+      .style("fill", "none")
+      .style("stroke", "#FF9C39")     /* KA econ2     */
+      .style("stroke-width", "3px");
+
+  var iSine = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(iAmplitude * Math.sin(frequency * d)); 
+    });
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', iSine(xData))
+      .style("fill", "none")
+      .style("stroke", "#11ACCD")
+      .style("stroke-width", "3px");
+
+
+  var pSine = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale(pAmplitude * Math.pow(Math.sin(frequency * d),2)); 
+    });
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', pSine(xData))
+      .style("fill", "none")
+      .style("stroke", "#000")
+      .style("stroke-width", "3px");
+</script>
+</body>
+</html>
