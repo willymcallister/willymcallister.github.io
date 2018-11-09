@@ -75,7 +75,7 @@ Let's figure out the average power caused by an AC voltage.
 
 Let $\text V_\text P = 2\,\text V$ and $\text R = 1.33\,\text k\Omega$. The radian frequency $\omega$ can be anything.
 
-![2VAC source driving 1.33 kohm resistor]({{ site.baseurl }}{% link images/rms1a.svg %}){: .centered :}
+![2VAC source driving 1.33 kohm resistor]({{ site.baseurl }}{% link i/rms1a.svg %}){: .centered :}
 
 The voltage and current look like this,
 
@@ -250,12 +250,12 @@ For voltage in the shape of a sine wave the RMS voltage is,
 
 $\text V_\text{RMS} = \dfrac{\text V_{peak}}{\sqrt 2}$
 
-![RMS voltage on a sine]({{ site.baseurl }}{% link images/rms7.svg %}){: .centered :}
+![RMS voltage on a sine]({{ site.baseurl }}{% link i/rms7.svg %}){: .centered :}
 <p class="caption">The RMS voltage of a unit sine wave. This gives you a visual impression of the proportions of a sine and its corresponding RMS value.</p>
 
 An AC voltage is almost always identified by its RMS voltage. It is rare to use peak voltage. The input voltage to this power adaptor is rated at $120\,\text{VAC}$, which is an RMS voltage value,
 
-![Power adaptor with AC rating]({{ site.baseurl }}{% link images/rms8.jpg %}){: height="180px" :}{: .centered :}
+![Power adaptor with AC rating]({{ site.baseurl }}{% link i/rms8.jpg %}){: height="180px" :}{: .centered :}
 
 ## Concept check
 
