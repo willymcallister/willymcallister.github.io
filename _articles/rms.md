@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-In electronics RMS is how we compare the power of an AC wave form to the power of a DC waveform (a steady level). Usually RMS is used for sine waves, but the idea works for any repetitive wave form.
+In electronics, RMS is how we compare the power of an AC wave form to the power of a DC waveform (a steady level). Usually RMS is used for sine waves, but the idea works for any repetitive wave form.
 
-RMS is short for *root mean square*, which is short for "square root of the average (mean) of some quantity (like voltage) squared". (Whew! We'll stick with the name RMS.) 
+RMS is short for *root mean square*, which is short for "the square root of the average (mean) of some quantity squared". (Whew! We'll stick with the name RMS.) 
 
 Written by Willy McAllister. 
 
