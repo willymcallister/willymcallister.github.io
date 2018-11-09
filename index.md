@@ -37,6 +37,10 @@ Natural response is what a circuit does with its own internal stored energy.
 ### [AC circuit analysis]({{ site.baseurl }}{% link _topics/topic-ac-analysis.md %})
 If we limit signals to only sine waves, we get AC analysis based on complex exponentials. 
 
+### [Special topics in AC analysis]({{ site.baseurl }}{% link _topics/topic-ac-special.md %})
+
+Decibels and RMS (root-mean-square).
+
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
 The operational amplifier is the building block of analog electronics.
 

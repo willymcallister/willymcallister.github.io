@@ -50,7 +50,3 @@ Solving circuits with differential equations is a pain. If we impose a disciplin
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Impedance of simple networks]({{ site.baseurl }}{% link _videos/ac-analysis-impedance-simple-networks.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [KVL in the frequency domain]({{ site.baseurl }}{% link _videos/ac-analysis-kvl-frequency-domain.md %})
-
-![]({{ site.baseurl }}{% link i/article.svg %}) [Decibel]({{ site.baseurl }}{% link _articles/decibel.md %})
-
-![]({{ site.baseurl }}{% link i/article.svg %}) [RMS]({{ site.baseurl }}{% link _articles/rms.md %})
