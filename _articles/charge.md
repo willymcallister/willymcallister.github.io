@@ -212,11 +212,7 @@ Franklin gave us the names of charge, positive and negative.
 
 Coulomb worked out the equation that describes the effect of charge.
 
-You can talk about charge either in units of coulombs or by counting electron charges. Pick whichever way suits the discussion best. 
-
-
-
----- 
+You can talk about charge either in units of coulombs or by counting electron charges. Pick whichever way suits the discussion best.  
 
 <details>
 <summary>Photo credits</summary>
