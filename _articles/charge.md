@@ -47,12 +47,11 @@ Written by Willy McAllister.
 
 For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). The very first practical application of electricity was in medicine.
 
-
-![Electric eel]({{ site.baseurl }}{% link i/charge_electric-eel.jpg %}){: .centered :}{: height="200px" :}
+{% include img.html img="charge_electric-eel.jpg" alt="Electric eel" %}{: height="200px" :}
 
 Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes this goopy resin drips from the tree, turns into a solid (fossilizes), and gets the name amber. Amber is basically a natural version of plastic.
 
-![ant in amber]({{ site.baseurl }}{% link i/charge_ant_in_amber.jpg %}){: .centered :}
+{% include img.html img="charge_ant_in_amber.jpg" alt="Ant in amber" %}
 
 Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. Then they noticed things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so you can call it the "rubbing-electric" effect if you want.
 
@@ -70,7 +69,7 @@ I bet you can guess what we use this word for.
 
 ## Making sense of electric force
 
-So we have these observations of nature: rubbing cats or balloons. We observe this invisible "amber force," sometimes attraction, sometimes repulsion, depending on what was rubbed. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Stranger yet, the force acts at a distance. The two objects don't have to be touching, yet we see this obvious pushing or pulling force between them. This is super weird (and super fascinating!).  
+So we have these observations of nature: rubbing cats or balloons. We observe this invisible "amber force," sometimes attraction, sometimes repulsion, depending on what was rubbed. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Stranger yet, the force acts at a distance. The two objects don't have to be touching, yet we see this obvious pushing or pulling force between them. This is super weird (and super fascinating).  
 
 <details>
 <summary>Maybe amber force is the same as magnetism?</summary>
@@ -93,7 +92,7 @@ The best explanation anyone has come up with (so far) to make sense of electric 
 
 ## Making sense of charge
 
-Great! Now we know why there is electric force. It's because objects have charge! 
+Now we know why there is electric force---it's because objects have charge. 
 
 So what is charge? Uhh...
 
@@ -122,19 +121,31 @@ Even if we can't explain *why* there is electric force, we can describe what it 
 
 Coulomb invented a very sensitive instrument to measure electric force, the *torsion balance*. He did experiments putting different amounts of charge on spheres (two little cannonballs) and measuring the electric force between them with his sensitive torsion balance. Then he worked out an equation that gave the same result as his data.
 
-<details>
-<summary>Coulomb's torsion balance (optional)</summary>
-<p>The torsion balance is based on twisting a fine wire. It works the same as if you tie a rope to a car tire and hang it from a tree. If you sit quietly in the tire, it takes only a very small nudge to make you twist back and forth. Coulomb drew this illustration of his torsion balance for a publication.</p>
-<p>
-<img class="centered" src="/i/charge_torsion_balance3.png" alt="Coulomb's torsion balance" width="500px">
-</p>
-<p> Two spheres are placed inside a chamber (Figure 1). The sphere on the left (b) sits still while the sphere on the right (a) is mounted on an arm (P and Figure 3) hanging from the thin torsion wire. If electric force is present, the sphere on the right twists as it hangs from the torsion wire. The chamber is sealed to prevent breezes from messing up the measurement. It is made of glass so you can see inside. A charge is placed on the twisting sphere. The fixed sphere starts out uncharged. You let the twisting sphere swing back and forth until it comes to rest at some position. Then some charge is placed on the fixed sphere by touching the post holding it in place (m and Figure 5) by the clamp that looks like chopsticks. This causes the twisting sphere to rotate either towards or away from the fixed sphere, depending on the sign of both charges. The amount of twist is measured on the scale (Q) going around the chamber. The other figures are close-up views of the important bits and pieces of the main instrument.</p>
-</details>
+{% capture summary %}Coulomb's torsion balance{% endcapture %}  
+{% capture details %}  
+The torsion balance is based on twisting a fine wire. It works like a car tire hanging from a tree branch by a rope. If you sit quietly in the tire, a small nudge makes you twist back and forth. Eventually you stop twisting and come to a stand-still at some angle where the rope feels most relaxed (no twist). 
 
-<details>
-<summary>How did Coulomb himself measure charge? (optional)</summary>
-<p>Coulomb did not have very good control over exactly how much charge was applied to the spheres, but he did have good control of ratios of charge. One sphere had "some charge" and was attracted to the other sphere that had "some charge". He was quite smart about how he applied the charge. For example, start with no charge on the two spheres. You can tell they are uncharged because they don't attract or repel anything. Now put some charge on one sphere. It now has some amount of charge, let's call it $q$. ($Q$ or $q$ are the variable names Coulomb used for charge, and we still use them today.) If you touch the charged sphere to the uncharged sphere, they will share $q$ evenly between them. You don't know what the charge is precisely, but you know they are both charged the same, both with a charge of $q/2$. Can you think of a way to charge a sphere with $q/4$?</p>
-</details>
+Coulomb drew this illustration of his torsion balance,
+
+{% include img.html img="charge_torsion_balance3.png" alt="Coulomb's torsion balance" %}{: width="460px" :}
+
+Two spheres are placed inside a chamber (Figure 1). The fixed sphere on the left (b) sits still while the twisting sphere on the right (a) hangs by a thin torsion wire and an arm (P and Figure 3). If electric force is present between the two spheres they are attracted or repelled. The sphere (a) twists towards or away from sphere (b). 
+
+The fixed sphere (b) starts out uncharged. You put a charge on the twisting sphere (a) and it swing sideways back and forth until it comes to rest at some position. The position is measured on the scale (Q) marked on the outside of the chamber. 
+
+Then you put some charge on the fixed sphere by touching the post holding it in place (m and Figure 5)---near the clamp that looks like chopsticks. This changes the electric force between the spheres and causes the twisting sphere to rotate either towards or away from the fixed sphere, depending on the sign of both charges. The electric force is opposed by the the thin wire trying to untwist itself. Wait for the twisting to stop and read the new position. 
+
+The big cylindrical chamber is sealed to prevent breezes from messing up the measurement. It is made of glass so you can see inside. The other figures are close-up views of the important bits and pieces of the main instrument.  
+{% endcapture %}{% include details.html %}
+
+{% capture summary %}How did Coulomb himself measure charge?{% endcapture %}  
+{% capture details %}  
+Coulomb did not have very good control over how much charge was applied to the spheres. One sphere had "some charge" and was attracted to the other sphere that had "some charge". But, he did have good control of ratios of charge.  He was quite smart about how he applied the charge. 
+
+For example, start with no charge on the two spheres. You can tell they are uncharged because they don't attract or repel. Now put some charge on one sphere, let's call it $q$. ($Q$ or $q$ are the variable names Coulomb used for charge, and we still use them today.) If you touch the charged sphere to the uncharged sphere, they will share $q$ evenly between them. You don't know what the charge is precisely, but you know they are both charged the same, both with a charge of $q/2$. 
+
+Can you think of a way to charge a sphere with $q/4$?  
+{% endcapture %}{% include details.html %}
 
 Coulomb demonstrated that the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law). 
 
@@ -158,7 +169,7 @@ The unit of charge was named the coulomb, in honor of guess who.
 
 An example circuit you could build would be a $1\,\text{volt}$ battery connected to a $1\,\Omega$ resistor. Ohm's Law tells us the current will be $\text I = \text V/\text R = 1/1 = 1 \,\text{ampere}$. When that is happening, there is $1 \,\text{coulomb}$ of charge passing by every second at every point in the circuit, by definition.
 
-![Coulomb per second]({{ site.baseurl }}{% link i/charge_coulomb_per_second.svg %}){: .centered :}
+{% include img.html img="charge_coulomb_per_second.svg" alt="A coulomb per second is an ampere" %}
 
 Think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
 
