@@ -1,6 +1,7 @@
 <section class="comments">
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
+    <hr>
     <div class="comments__existing">
     <h2>Questions</h2>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
@@ -22,7 +23,6 @@
 
   <!-- New comment form -->
   <div id="respond" class="comment__new">
-    <h2>Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2>
     {% include comment_form.html %}
   </div>
 </section>

@@ -50,7 +50,9 @@ $grey-color-zebra: lighten($grey-color, 45%) !default;
 }
 hr {
     margin: 1em 0;
-    border-top: $grey-color;
+    //border-top: $grey-color;
+    border-top: 1px solid $grey-color-light;
+
 }
 .footer-heading {
   letter-spacing: -0.25px;
@@ -121,8 +123,8 @@ a.youtube_link:link, a.youtube_link:visited {
 ////// existing comments //////
 
 .comments {
-    border-top: 1px solid $grey-color-light;
-    padding: 20px 0px 0px 0px;
+    //border-top: 1px solid $grey-color-light; //WMc replaced by <hr>
+    //padding: 20px 0px 0px 0px;
 }
 .comment__new {
     padding: 0px 0px 14px 0px;

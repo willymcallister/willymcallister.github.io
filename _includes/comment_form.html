@@ -8,25 +8,31 @@
 
   <fieldset>
   <div class="textfield">
-    <textarea class="textfield__input" name="fields[message]" type="text" ></textarea>
+    <label for="comment-form-message"><h2>Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2>
+      <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message"></textarea>
+    </label>
   </div>
   </fieldset>
 
   <fieldset>
     <div class="textfield">
-      <input class="textfield__input" name="fields[name]" type="text" placeholder="Your name"/>
+      <label for="comment-form-name">Name
+        <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="Your name"/>
+      </label>
     </div>
   </fieldset>
 
   <fieldset>
     <div class="textfield">
-      <input class="textfield__input" type="email" name="fields[email]"  placeholder="Your email (optional, used only to send comments.)"/>
+      <label for="comment-form-email">E-mail
+        <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional, used only to send comments.)"/>
     </div>
   </fieldset>
 
   <fieldset>
     <div class="notify-me">
-      <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
+      <label for="comment-form-reply">
+        <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
       Send me an email when someone comments.
     </div>
   </fieldset>
