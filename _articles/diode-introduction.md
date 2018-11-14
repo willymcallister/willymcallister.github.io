@@ -5,7 +5,8 @@ author: Willy McAllister
 comments: true
 ---
 
-![Diodes in axial glass package]({{ site.baseurl }}{% link i/diode_glass1.jpg %}){: .centered :}
+{% include img.html img="diode_glass1.jpg" alt="Diodes in axial glass pagkage" %}
+
 <p class="caption">These small glass packages have silicon diodes inside. The black band at one end is the cathode, the side where current flows out of the diode.</p>
 
 The diode is our first semiconductor device. A diode's distinctive feature is that it conducts current in one direction but not in the other. We won't go into the details of how a diode does this or how it's made. Fortunately, you don't have to know how to make a diode before you can use it in a circuit.

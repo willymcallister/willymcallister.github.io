@@ -20,18 +20,18 @@ This is what the Print dialog box looks like on my Mac running the Chrome browse
 
 Open the Print.. dialog from the File menu. The Scale setting is under the "$+$ More settings" link.
 
-![]({{ site.baseurl }}{% link i/printing-1.png %})
+{% include img.html img="printing-1.png" alt="Printing dialog box - scale setting" %}
 
 The scale starts out at 100%. The article prints a little too big and takes more paper than it needs to.
 
-![]({{ site.baseurl }}{% link i/printing-2.png %})
+{% include img.html img="printing-2.png" alt="Printing dialog box - scale starts at 100%" %}
 
 Turn the scale down to 80%, or whatever suits your fancy. Choose which pages you wish to print. (You may not want to print the comment section.) Then Print the article to paper. 
 
-![]({{ site.baseurl }}{% link i/printing-3.png %})
+{% include img.html img="printing-3.png" alt="Set the scale down to 80%" %}
 
 If you want a .pdf file, click on Change... and set the destination to "Save as PDF".
 
-![]({{ site.baseurl }}{% link i/printing-4.png %})
+{% include img.html img="printing-4.png" alt="Printing to a pdf file" %}
 
 Pro tip: If you change the scale setting, it stays that way for all browser windows. It's a good idea to set it back to 100% before you leave. 

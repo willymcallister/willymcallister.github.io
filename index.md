@@ -11,10 +11,9 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 
 * [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) in English
 * [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) en español
-* [电路沙箱](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 或简体中文 (simplified Chinese).
-* [回路サンドボックス](https://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese)
- 
-<small>Help translate Circuit Sandbox into other languages. [It's easy!](a/circuit-sandbox.html#translation)</small>
+* [电路沙箱](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 或简体中文 (simplified Chinese)
+* [回路サンドボックス](https://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese)  
+<small>Want to help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation)</small>
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
@@ -39,7 +38,7 @@ If we limit signals to only sine waves, we get AC analysis based on complex expo
 
 ### [Special topics in AC analysis]({{ site.baseurl }}{% link _topics/topic-ac-special.md %})
 
-Decibels and RMS (root-mean-square).
+Decibels and RMS.
 
 ### [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %})
 The operational amplifier is the building block of analog electronics.
@@ -48,16 +47,16 @@ The operational amplifier is the building block of analog electronics.
 Using a diode in a circuit.
 
 ### [Electrostatics]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %})  
-The force between charged objects is described by Coulomb's Law.
-
-### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
-A list of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
-
-### [Printing]({{ site.baseurl }}{% link printing.md %})  
-Some tips on the best way to [print]({{ site.baseurl }}{% link printing.md %}) articles from Spinning Numbers.
+Electric force is described by Coulomb's Law. Electric field. Formal definition of voltage.
 
 ### [The name <img class="sn-logo" src="/i/sn_logo2.svg">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})     
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from?
+
+#### [Printing]({{ site.baseurl }}{% link printing.md %})  
+Tips on the best way to [print]({{ site.baseurl }}{% link printing.md %}) articles from Spinning Numbers.
+
+#### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
+List of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
 
 ----
 
