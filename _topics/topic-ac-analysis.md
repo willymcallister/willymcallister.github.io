@@ -25,7 +25,7 @@ Solving circuits with differential equations is a pain. If we impose a disciplin
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Complex numbers]({{ site.baseurl }}{% link _videos/ac-analysis-complex-numbers.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Multiplying by j is rotation]({{ site.baseurl }}{% link _videos/ac-analysis-multiply-by-j-rotation.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [Multiply by j is rotation]({{ site.baseurl }}{% link _videos/ac-analysis-multiply-by-j-rotation.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Complex rotation]({{ site.baseurl }}{% link _videos/ac-analysis-complex-rotation.md %})
 
