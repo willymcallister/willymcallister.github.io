@@ -45,17 +45,17 @@ Written by Willy McAllister.
 
 ## Eels and amber
 
-For the moment, pretend you never heard of charge or electricity, and forget you know anything about atoms. Around 5000 years ago, the Egyptians knew if you touched an eel it could give you a shock. They didn't know why it happened, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). The very first practical application of electricity was in medicine.
+For the moment, pretend you never heard of electricity, and forget you know anything about atoms. Egyptians knew if you touched an eel it could give you a shock. 5000 year old Egyptian texts refer to eels as "Thunderer of the Nile." They didn't know what was happening, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). So the very first practical application of electricity was in medicine.
 
 {% include img.html img="charge_electric-eel.jpg" alt="Electric eel" %}{: height="200px" :}
 
-Back in those days, the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds when a branch gets broken. Sometimes this goopy resin drips from the tree, turns into a solid (fossilizes), and gets the name amber. Amber is basically a natural version of plastic.
+2600 years ago the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds (broken branches). Sometimes this goopy resin drips from the tree, turns into a solid (fossilizes), and gets the name amber. Amber is basically a natural version of plastic.
 
 {% include img.html img="charge_ant_in_amber.jpg" alt="Ant in amber" %}
 
-Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. Then they noticed things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so you can call it the "rubbing-electric" effect if you want.
+Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. Then they noticed things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so it means the "rubbing-electric" effect.
 
-You create the same effect by passing a plastic comb through your dry hair, or rubbing a balloon on your sweater. The comb makes your hair stand up, and the balloon sticks to things and repels other rubbed balloons.
+You get the same effect passing a plastic comb through your dry hair, or rubbing a balloon on your sweater. The comb makes your hair stand up. The balloon attracts things but repels other rubbed balloons.
 
 The Greek word for amber is ἤ λ ε κ τ ρ ο ν. 
 

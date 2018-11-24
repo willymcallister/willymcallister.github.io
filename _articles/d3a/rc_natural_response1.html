@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
   <style>
+    #exponential1 {
+      margin: auto
+    }
     svg .grid {
       stroke-width: 0.5px;
       stroke: #BBB;
@@ -24,7 +26,7 @@
     }
 
     svg text {
-      font: 16px katex_main;
+      font: 18px katex_main;
     }
 
     svg .tick text {
@@ -34,17 +36,16 @@
 </head>
 
 <body>
-<script src="http://d3js.org/d3.v4.min.js"></script>
-
-<script>
-// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
-
-// An animated version of this image is in _articles/d3a. 
-
+  <button id="start1" class="button">Start</button>
+  <div id="exponential1"></div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script>
+(function () {
   var margin = { top:0, right:0, bottom:0, left:0 };        // margin outside border
   var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
 
   var 
+      time,
       xmin = -4,
       xmax = +20,
       ymin = -.4,
@@ -53,11 +54,11 @@
       vScale = 120,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
-      xOrigin = -(xmin * hScale);          // pixels
+      xOrigin = -(xmin * hScale),          // pixels
       yOrigin = height + (ymin * vScale);  // pixels
 
   // main container
-  var svgContainer = d3.select("body")
+  var svgContainer = d3.select("#exponential1")
     .append("svg")
       .attr("width",  width  + padding.left + padding.right)  //width of image
       .attr("height", height + padding.top + padding.bottom)  //height of image
@@ -66,6 +67,8 @@
     .append("g")  //group to build image inside of, offset by padding from border
       .attr("transform",
         "translate(" + padding.left + "," + padding.top + ")");
+
+  d3.select("#exponential1").attr("align","center");
 
   // scales
   var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
@@ -87,7 +90,8 @@
       .attr("dx", ".71em")
       .text("t (msec)")
       .style("text-anchor", "start")
-      .style("font-size", "16px")
+      .style("font-size", "20px")
+      .style("font-family", "katex_math")
       .style('fill', 'black');
   
   // vertical grid lines
@@ -114,7 +118,8 @@
       .attr("dy", "-12px")
       .text("v (volts)")
       .style("text-anchor", "middle")
-      .style("font-size", "16px")
+      .style("font-size", "20px")
+      .style("font-family", "katex_math")
       .style("fill", "black");
 
   // horizontal grid lines
@@ -141,17 +146,18 @@
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
   var fromX = 0;
   var toX = xmax;
+
   var xData = samples.map(function (i) 
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var diode = d3.line()
+  var response = d3.line()
     .x(function (d) { return xScale(d); })
     .y(function (d) { return yScale(Vo * (Math.exp(-d/(R*C)/1000))); });
 
   svgContainer.append('svg:path')
     .classed("path", true)
-    .attr('d', diode(xData))
+    .attr('d', response(xData))
     .style("fill", "none")
     .style("stroke-width", "3px");
 
@@ -167,10 +173,28 @@
       .classed("path", true)
       .attr('d', lineFunction(lineData));
 
-  // Circle
-  svgContainer.append("circle")
-    .attr("cx", xScale(3))
-    .attr("cy", yScale(0.515))
+  svgContainer.append("line")
+      .attr("x1", xScale(0))
+      .attr("y1", yScale(0.515))
+      .attr("x2", xScale(3))
+      .attr("y2", yScale(0.515))
+      .attr("stroke-width", 1)
+      .style("stroke-dasharray", ("3, 3"))
+      .attr("stroke", "black");
+
+  svgContainer.append("line")
+      .attr("x1", xScale(3))
+      .attr("y1", yScale(0.515))
+      .attr("x2", xScale(3))
+      .attr("y2", yScale(0))
+      .attr("stroke-width", 1)
+      .style("stroke-dasharray", ("3, 3"))
+      .attr("stroke", "black");
+
+  // Moving dot
+  var dot = svgContainer.append('svg:circle')
+    .attr("cx", xScale(-4))
+    .attr("cy", yScale(Vo))
     .attr("r",5)
     .style("fill", "#F9685D");  // KA HUM2
 
@@ -198,7 +222,36 @@
     .style("font-size", "20px")
     .style('fill', 'black');
 
+  function draw() {
+    var x;
+    var y;
+    
+    x = xScale(time);
+    if(time < 0) {
+      y = yScale(Vo);
+    }
+    else {
+      y = yScale(Vo * (Math.exp(-time/(R*C)/1000)));
+    }
 
+    dot
+      .attr('cx', x)
+      .attr('cy', y);
+
+    time += .1;
+
+    setTimeout(draw, 35, 30);
+  }
+  
+  d3.select("#start1").on("click", function() {
+    dot
+      .attr("cx", xScale(-4))
+      .attr("cy", yScale(Vo));
+    time = -4;
+    draw();
+  });
+
+})();
 </script>
 </body>
 </html>

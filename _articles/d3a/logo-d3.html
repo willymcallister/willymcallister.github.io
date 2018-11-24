@@ -35,14 +35,13 @@
 		    Y2      = 'y2';
 
 		  var
-		    data    = [],
 		    width   = 200,
 		    height  = 200,
 		    xmin    = -2,
 		    xmax    = +2,
 		    ymin    = -height * (xmax - xmin) / width / 2,
 		    ymax    = -ymin,
-		    xScale  = d3.scaleLinear(),   //constructs a linear scale with the default domain [0,1] and range [0,1], which produces a mapping of 1:1.
+		    xScale  = d3.scaleLinear(),   //constructs a linear scale with the default domain [0,1] and range [0,1].
 		    yScale  = d3.scaleLinear(),
 		    vis     = d3.select('#spin-d3').append('svg:svg'),
 		    decor   = vis.append('svg:g'),

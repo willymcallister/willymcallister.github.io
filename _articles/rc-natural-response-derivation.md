@@ -277,13 +277,16 @@ $v(3\,\text{ms}) = 1.4\,\large e^{-1}$
 
 $v(3\,\text{ms}) = 1.4 \cdot 0.368$
 
-$v(3\,\text{ms}) = 0.515 \,\text{volts}\qquad$ (circled in the plot below)
+$v(3\,\text{ms}) = 0.515 \,\text{volts}$
 
 **c. Plot $v(t)$**
 
-![RC natural response example 1 plot]({{ site.baseurl }}{% link i/rc_natural_response_ex1.svg %}){: .centered :}
+{% include_relative d3a/rc_natural_response1.html %}
+<p class="caption">Click Start to trace the time response. </p>
 
-The $\redB{\text{circle}}$ shows the answer from part **b**: $v(t) = 0.515 \,\text V$ when $t=\text{RC} = 3 \,\text{ms}$. 
+The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} = 3 \,\text{ms}$. 
+
+The animation gives you a mental image of the speed of an exponential step function. The dot moves at a constant rate from left to right. Notice how it moves rapidly downward at the beginning. After a short while the rate of change slows down. After $3$ time constants---$9\,\text{ms}$---the step is pretty much over. Hardly anything is happening and it becomes quite boring.
 
 ### Simulation model
 
@@ -324,11 +327,12 @@ With a time constant of $1\,\text{nanosecond}$, this is a pretty quick circuit.
 
 **c. Plot $v(t)$.**
 
-![RC natural response example 2 plot]({{ site.baseurl }}{% link i/rc_natural_response_ex2.svg %}){: .centered :}
+{% include_relative d3a/rc_natural_response2.html %}
+<p class="caption">Click Start to trace the time response. </p>
 
 **d. How many times constants does it take for the voltage to drop below $95\%$ of its initial value?**  
 
-$95\%$ below $\text V_0$ is $1.0 - (0.95 \times 1.0) = 0.05$ volts. Looking at the graph we see that happens at around $3\,\text{nsec}$. This corresponds to $3$ time constants. This point is marked by the $\redB{\text{circle}}$ just above in part **c.**
+$95\%$ below $\text V_0$ is $1.0 - (0.95 \times 1.0) = 0.05$ volts. Looking at the graph we see that happens at around $3\,\text{nsec}$. This corresponds to $3$ time constants. This point is marked by the black dotted lines on the plot in part **c.**
 
 ### Another rule of thumb - $3$ time constants
 
