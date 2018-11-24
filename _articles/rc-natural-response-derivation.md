@@ -282,7 +282,7 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}$
 **c. Plot $v(t)$**
 
 {% include_relative d3a/rc_natural_response1.html %}
-<p class="caption">Click Start to trace the time response. </p>
+<p class="caption">Click Start to trace the time response. The dot moves forward in time at a constant rate.</p>
 
 The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} = 3 \,\text{ms}$. 
 
