@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create and analyze. Understanding the behavior of this circuit is essential to understanding electronic systems. 
+The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create. Understanding how this circuit works is essential to understanding electronic systems. 
 
-![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0c.svg %}){: .centered :}{: height="160px"}
+![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0c.svg %}){: .centered :}
 
 To develop a precise understanding of the $\text{RC}$ requires methods from calculus. We use [derivatives](https://www.khanacademy.org/math/calculus-home/taking-derivatives-calc) to describe how the $\text{RC}$ circuit behaves.
 
@@ -40,7 +40,7 @@ $v(t) = \text V_0\,e^{-t/\tau}$
 
 We derive a precise equation for the *natural response* of this circuit. 
 
-![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0.svg %}){: .centered :}{: height="180px"}
+![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0.svg %}){: .centered :}
 
 We give the circuit some energy by placing an initial charge $q$ on the capacitor. This causes a voltage to appear according to $q = \text C\,v$. Then we step back and watch what the voltage does 'naturally.' Whatever happens is called the *natural response*. The natural response is what the circuit does when it has some initial energy, but nothing else is driving the circuit.
 
@@ -59,7 +59,7 @@ Here is the strategy we will use to turn this circuit into a differential equati
   * Gather like factors and identify the *characteristic equation*
   * Find the root, $s$, of the characteristic equation
   * Find the amplitude constant, $K$, using the initial condition, $\text V_0$
-  * The guess is confirmed if a $K$ is found and is in fact constant (does not change with time)
+  * The guess is confirmed if you can find a $K$ and is in fact constant (does not change with time)
   * Assemble the result 
 
 ## Model the components
@@ -94,7 +94,7 @@ $i_{\text C} = \text C\,\dfrac{dv}{dt}$
 
 Next we write an equation using Kirchhoff's Current Law (KCL).
 
-![RC natural response circuit with labeled current arrows]({{ site.baseurl }}{% link i/rc_natural_response0b.svg %}){: .centered :}{: height="180px"}
+![RC natural response circuit with labeled current arrows]({{ site.baseurl }}{% link i/rc_natural_response0b.svg %}){: .centered :}
 
 Using the form of KCL that says, "the sum of currents flowing out of a node is $0$",
 
@@ -242,7 +242,7 @@ The time constant determines how fast the exponential curve comes down to zero. 
 
 ## Example 1
 
-![RC natural response example 1]({{ site.baseurl }}{% link i/rc_natural_response4.svg %}){: .centered :}{: height="180px"}
+![RC natural response example 1]({{ site.baseurl }}{% link i/rc_natural_response4.svg %}){: .centered :}
 
 For the natural response circuit,  
 let $\text R = 3 \,\text k\Omega$, $\text C = 1 \,\mu\text F$, and $v(0) = 1.4 \,\text V$.  
@@ -284,21 +284,19 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}$
 {% include_relative d3a/rc_natural_response1.html %}
 <p class="caption">Click Start to trace the time response. The dot moves forward in time at a constant rate.</p>
 
-The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} = 3 \,\text{ms}$. 
-
-The animation gives you a mental image of the speed of an exponential step function. The dot moves at a constant rate from left to right. Notice how it moves rapidly downward at the beginning. After a short while the rate of change slows down. After $3$ time constants---$9\,\text{ms}$---the step is pretty much over. Hardly anything is happening and it becomes quite boring.
-
-### Simulation model
-
-[Simulation model of Example 1](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[272,136,0],{"_json_":0},["0"]],["s",[208,24,0],{"color":"cyan","offset":"0","_json_":1},["1"]],["w",[320,48,320,160]],["w",[392,112,392,96]],["w",[136,136,136,96]],["w",[272,136,272,96]],["w",[296,24,272,24]],["w",[272,48,272,24]],["g",[200,208,0],{"_json_":8},["0"]],["v",[200,160,4],{"name":"SW1-ctl","value":"step(0,20,20u,1n)","_json_":9},["3","0"]],["w",[392,24,344,24]],["p",[296,24,3],{"name":"SW2","WL":"10000","_json_":11},["1","4","5"]],["g",[392,112,0],{"_json_":12},["0"]],["w",[392,48,392,24]],["v",[392,48,0],{"name":"V0","value":"dc(1.4)","_json_":14},["5","0"]],["g",[320,208,0],{"_json_":15},["0"]],["v",[320,160,0],{"name":"SW2-ctl","value":"step(0,20,5u,1n)","_json_":16},["4","0"]],["w",[224,136,272,136]],["w",[136,136,176,136]],["n",[176,136,3],{"name":"SW1","WL":"10000","_json_":19},["2","3","0"]],["c",[272,48,0],{"name":"C","c":"1u","_json_":20},["1","0"]],["r",[136,96,6],{"name":"R","r":"3k","_json_":21},["2","1"]],["w",[136,24,208,24]],["w",[272,24,208,24]],["w",[136,24,136,48]],["view",12,-34.69999999999999,1.5625,"50","10","1G",null,"100","20m","1000"]]). Click on **TRAN** to perform a transient analysis. The MOS transistor at the bottom acts as a switch.
+The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} =$ one time constant $= 3 \,\text{ms}$. 
 
 ### A useful rule of thumb - $37\%$
 
-When time equals the time constant, $\text{RC}$, the voltage is down from its initial value by a factor of $1/e$, or down to roughly $37\%$ of its starting value. This is true for any initial voltage and any $\text{RC}$ product.
+When time equals the time constant, $\text{RC}$, the voltage is down from its initial value by a factor of $1/e = 1/2.71828... = 0.36787...$, or down to roughly $37\%$ of its starting value. This is true for any initial voltage and any $\text{RC}$ product.
+
+### Simulation model
+
+[Simulation model of Example 1](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[272,136,0],{"_json_":0},["0"]],["s",[208,24,0],{"color":"cyan","offset":"0","_json_":1},["1"]],["w",[320,48,320,160]],["w",[392,112,392,96]],["w",[136,136,136,96]],["w",[272,136,272,96]],["w",[296,24,272,24]],["w",[272,48,272,24]],["g",[200,208,0],{"_json_":8},["0"]],["v",[200,160,4],{"name":"SW1-ctl","value":"step(0,20,20u,1n)","_json_":9},["3","0"]],["w",[392,24,344,24]],["p",[296,24,3],{"name":"SW2","WL":"10000","_json_":11},["1","4","5"]],["g",[392,112,0],{"_json_":12},["0"]],["w",[392,48,392,24]],["v",[392,48,0],{"name":"V0","value":"dc(1.4)","_json_":14},["5","0"]],["g",[320,208,0],{"_json_":15},["0"]],["v",[320,160,0],{"name":"SW2-ctl","value":"step(0,20,5u,1n)","_json_":16},["4","0"]],["w",[224,136,272,136]],["w",[136,136,176,136]],["n",[176,136,3],{"name":"SW1","WL":"10000","_json_":19},["2","3","0"]],["c",[272,48,0],{"name":"C","c":"1u","_json_":20},["1","0"]],["r",[136,96,6],{"name":"R","r":"3k","_json_":21},["2","1"]],["w",[136,24,208,24]],["w",[272,24,208,24]],["w",[136,24,136,48]],["view",12,-34.69999999999999,1.5625,"50","10","1G",null,"100","20m","1000"]]). Click on **TRAN** to perform a transient analysis. The MOS transistor act as a switches. They are very wide $(\text W = 10{,}000)$, so their resistance is very low when their gate voltage is high.
 
 ## Example 2
 
-![RC natural response example 2]({{ site.baseurl }}{% link i/rc_natural_response5.svg %}){: .centered :}{: height="180px"}
+![RC natural response example 2]({{ site.baseurl }}{% link i/rc_natural_response5.svg %}){: .centered :}
 
 Let $\text R = 1\,\text{k}\Omega$, $\text C = 1\,\text{pF}$, and $\text V_0 = 1.0\,\text V$.
 
@@ -334,19 +332,21 @@ With a time constant of $1\,\text{nanosecond}$, this is a pretty quick circuit.
 
 $95\%$ below $\text V_0$ is $1.0 - (0.95 \times 1.0) = 0.05$ volts. Looking at the graph we see that happens at around $3\,\text{nsec}$. This corresponds to $3$ time constants. This point is marked by the black dotted lines on the plot in part **c.**
 
+The animation gives you a mental image of the speed of an exponential step function. The dot moves at a constant rate from left to right. Notice how the voltage moves rapidly downward during the first time constant. After a short while the rate of change of voltage slows down. After $3$ time constants---$3\,\text{nsec}$---the step is pretty much over. Hardly anything is happening and it becomes quite boring.
+
 ### Another rule of thumb - $3$ time constants
 
-Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazingly, this is true for any initial voltage and any $\text{RC}$ product.
+Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazingly, this is true for any initial voltage $\text V_0$ and any $\text{RC}$ time constant.
 
 ## Epilogue
 
-### Is there another way to solve this ODE?
+### Another way to solve this ODE
 
 The ODE we solved here is a *separable* differential equation. We used a guessing method. Another method for solving separable differential equations is included as an appendix at the end of [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). The math is more sophisticated, but there is no guessing involved. 
 
 Sal has a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving a second-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}).
 
-### $e$ is special
+### $e$ is a special number
 
 The function $e^x$ either grows ($x>0$) or decays ($x<0$) at some rate, depending on $x$. There are plenty of other functions with this same general shape. Any function that looks like $y^x$ has a similar curve. If we can get the same shape with different values of the base $y$, like $2^x$ or $10^x$, what's the big deal about this irrational number $e = 2.71828...$? 
 
@@ -358,9 +358,9 @@ No muss, no fuss, exactly the same thing. This is worth memorizing.
 
 [//]: # (The \phantom in the previous equation is a trick to typeset the denominator nicely aligned with the numerator. Purely optional.)
 
-### Exponentials occur in nature
+### Exponentials happen in nature
 
-The problem we just solved, the natural response of an RC circuit, is representative of things that occur often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
+The problem we just solved, the natural response of an RC circuit, is representative of things that happen quite often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
 
 In the broadest terms: **Exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
 
