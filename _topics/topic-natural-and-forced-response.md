@@ -5,9 +5,17 @@ author: Willy McAllister
 comments: true
 ---
 
-Capacitors and inductors store energy. The *natural response* of a circuit is what it does "naturally" as its internal energy moves around. We track what happens to voltage and current.
+Capacitors and inductors store energy. The *natural response* of a circuit is what it does "naturally" as its internal energy moves around. As the energy sloshes around we track what happens to voltage and current.
 
 If you connect an external energy source to a circuit its behavior changes. The circuit displays a natural response and a *forced response*. The $\text{RC}$ step response is an example of natural plus forced response.
+
+----
+
+### Contents
+{:.no_toc}
+
+* Will be replaced with the ToC
+{:toc}
 
 ----
 
