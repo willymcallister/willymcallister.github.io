@@ -23,7 +23,7 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Current direction]({{ site.baseurl }}{% link _videos/current-direction.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Conventional current]({{ site.baseurl }}{% link _videos/conventional-current.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [Conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
 
