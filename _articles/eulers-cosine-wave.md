@@ -11,13 +11,15 @@ comments: true
 
 ### Euler's formula for cosine
 
-A cosine wave emerges from two spinning numbers in Euler's Formula, 
-
 $\cos \omega t = \dfrac{1}{2} (e^{+j\omega t} + e^{-j\omega t})$
 
-The green vector is $\dfrac{1}{2} e^{+j\omega t}\qquad$ The red vector $= +\dfrac{1}{2} e^{-j\omega t}$  
+A cosine wave emerges from two spinning numbers in Euler's Formula, 
 
-The yellow dot is the vector sum of green and red.
+The green vector is $\dfrac{1}{2} e^{+j\omega t}$ 
+
+The red vector is $+\dfrac{1}{2} e^{-j\omega t}$  
+
+The orange dot is the vector sum of green and red.
 
 Just music, no narration. The background music is *NirvanaVEVO* by Chris Zabriskie. 
 

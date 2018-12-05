@@ -11,11 +11,13 @@ comments: true
 
 ### Euler's formula for sine
 
-A sine wave emerges from the two spinning numbers in Euler's Formula,
-
 $\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
 
-The green vector is $\dfrac{1}{2} e^{+j\omega t}\qquad$  The red vector $= -\dfrac{1}{2} e^{-j\omega t}$  
+A sine wave emerges from the two spinning numbers in Euler's Formula,
+
+The green vector is $\dfrac{1}{2} e^{+j\omega t}$
+
+The red vector is $-\dfrac{1}{2} e^{-j\omega t}$  
 
 The yellow dot is the vector sum of green and red.
 
