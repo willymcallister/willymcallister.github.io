@@ -23,8 +23,8 @@
 
   var
     data    = [],
-    height   = 760,
-    width  = 460,
+    height  = 500,
+    width   = 300,
     ymin    = -2,
     ymax    = 7,
     domainH = ymax - ymin,
@@ -150,11 +150,13 @@
   // Triangle
   c
     .attr('x1', xScale(0))    // rotating hypotenuse +
-    .attr('y1', yScale(0));
+    .attr('y1', yScale(0))
+    .attr('stroke-linecap', "round");
 
   cc
     .attr('x1', xScale(0))    // rotating hypotenuse -
-    .attr('y1', yScale(0));
+    .attr('y1', yScale(0))
+    .attr('stroke-linecap', "round");
 
   function draw() {
 

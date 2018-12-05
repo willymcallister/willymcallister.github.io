@@ -142,14 +142,15 @@
   c   // rotating hypotenuse +
     .attr(X1, xScale(0))
     .attr(Y1, yScale(0))
-    .style('stroke-width', '4px');
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
 
   cc   // rotating hypotenuse -
     .attr(X1, xScale(0))
     .attr(Y1, yScale(0))
     .style('stroke', 'salmon')
-    .style('stroke-width', '4px');
-
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
 
   function draw() {
 

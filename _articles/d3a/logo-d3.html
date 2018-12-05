@@ -105,14 +105,14 @@
 		    .style("stroke", "silver")
 		    .style("fill", "none");
 
-		  // Dot
 		  dot                                         // spinning number
 		    .attr('class', 'dot')
 		    .attr('r', 4)
 
 		  c                                           // spinning vector origin
 		    .attr(X1, xScale(0))
-		    .attr(Y1, yScale(0));
+		    .attr(Y1, yScale(0))
+		    .attr('stroke-linecap', "round");
 
 		  function draw() {
 		    var
