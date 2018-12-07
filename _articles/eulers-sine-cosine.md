@@ -31,6 +31,6 @@ Notice the $90\degree$ phase shift between sine and cosine created by the simula
 
 Just music, no narration. The background music is *Sunday Stroll* by Huma Huma. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
-Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3a/eulers-cosine-d3.html).
+Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3a/eulers-cosine-d3.html). The image is not a video. It's being computed on the fly by your device.
 
 Created by Willy McAllister.
