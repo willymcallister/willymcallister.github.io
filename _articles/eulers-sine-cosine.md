@@ -11,7 +11,8 @@ comments: true
 
 ### Euler's formulas for sine and cosine
 
-$\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})\qquad$
+$\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
+
 $\cos \omega t = \dfrac{1}{2} (e^{+j\omega t} + e^{-j\omega t})$
 
 Sine and cosine emerge from vector sum of three spinning numbers in Euler's Formula, 
