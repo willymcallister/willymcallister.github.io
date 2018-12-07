@@ -2,7 +2,7 @@
 <head>
   <style>
     #trig{margin:20px}
-    .trig path{stroke:gold;stroke-width:4px;fill:none}
+    .trig path{stroke:orange;stroke-width:4px;fill:none}
     .trig circle,
     .trig line{stroke:lime;stroke-width:2px;fill:none}
     .trig .axis{stroke:silver}
@@ -33,7 +33,7 @@
     domainW = domainH * (rangeW / rangeH),
     xmax    = domainW / 2,
     xmin    = -xmax,
-    xScale  = d3.scaleLinear(),   //constructs a new linear scale with the default domain [0,1] to range [0,1] which produces a mapping of 1:1.
+    xScale  = d3.scaleLinear(),
     yScale  = d3.scaleLinear(),
     vis     = d3.select(ID_TRIG).append('svg:svg'),
     decor   = vis.append('svg:g'),
@@ -63,6 +63,7 @@
     .range([0, height]);
 
   vis
+    .attr('class', 'trig')
     .attr('width', width)
     .attr('height', height);
    
@@ -99,7 +100,7 @@
     .style('font-family', 'sans-serif')
     .style('font-size', '18px');
 
-    decor.append('svg:line')
+  decor.append('svg:line')
     .attr('y1', yScale(2*Math.PI))
     .attr('x1', xScale(0))
     .attr('y2', yScale(2*Math.PI))
@@ -123,15 +124,7 @@
     .attr('y2', yScale(ymax))
     .style("stroke", "silver");
 
-  // Time
-  label
-    .attr("x", 2)
-    .attr("y", 24)
-    .style("fill", "silver")
-    .style('font-family', 'sans-serif')
-    .style('font-size', '18px');
-
-  // Circle
+  // Unit circle
   circle
     .attr('cx', xScale(0))
     .attr('cy', yScale(0))
@@ -140,7 +133,7 @@
     .style('stroke-width', '2px')
     .style("fill", "none");
 
-  // Dot
+  // Cosine dot
   dot
     .attr('cy', yScale(0))
     .attr('r', 4)
@@ -148,18 +141,31 @@
     .style('stroke', 'orange');
 
   // Triangle
-  c
-    .attr('x1', xScale(0))    // rotating hypotenuse +
+  c     // rotating hypotenuse +
+    .attr('x1', xScale(0))
     .attr('y1', yScale(0))
+    .style('stroke', 'lime')
+    .style('stroke-width', '4px')
     .attr('stroke-linecap', "round");
 
-  cc
-    .attr('x1', xScale(0))    // rotating hypotenuse -
+  cc    // rotating hypotenuse for cosine +e^-jwt
+    .attr('x1', xScale(0))
     .attr('y1', yScale(0))
+    .style('stroke', 'tomato')
+    .style('stroke-width', '4px')
     .attr('stroke-linecap', "round");
+
+  b     // vector add line
+    .style('stroke', 'tomato')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  bb    // vector add line
+    .style('stroke', 'lime')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
 
   function draw() {
-
     var
       x = xScale(Math.cos(time)/2),
       y = yScale(-Math.sin(time)/2);
@@ -168,42 +174,27 @@
       ym = yScale(Math.sin(time)/2);
 
     path
-      .attr('d', cosine(data))
-      .style('fill', 'none')
-      .style('stroke', 'orange')
-      .style('stroke-width', '4px');
-
-    //label
-    //  .text('t = '+ Math.floor(time / Math.PI));
+      .attr('d', cosine(data));
 
     c
-      .attr('x2', x)          // rotating hypotenuse
-      .attr('y2', y)
-      .style('stroke', 'lime')
-      .style('stroke-width', '4px');
+      .attr('x2', x)          // +rotating hypotenuse e^+jwt
+      .attr('y2', y);
 
     cc
-      .attr('x2', x)          // rotating hypotenuse -
-      .attr('y2', ym)
-      .style('stroke', 'salmon')
-      .style('stroke-width', '4px');
+      .attr('x2', x)          // +rotating hypotenuse e^-jwt
+      .attr('y2', ym);
 
     b
-      .attr('x1', xd)          // vertical line of triangle
+      .attr('x1', xd)          // vector add line (tomato)
       .attr('y1', yScale(0))
       .attr('x2', x)
-      .attr('y2', y)
-      .style('stroke', 'lime')
-      .style('stroke-width', '2px')
-      .style("stroke-dasharray", ("3, 3"));
+      .attr('y2', y);
+
     bb
-      .attr('x1', xd)          // vertical line of triangle
+      .attr('x1', xd)          // vector add line (lime)
       .attr('y1', yScale(0))
       .attr('x2', x)
-      .attr('y2', ym)
-      .style('stroke', 'salmon')
-      .style('stroke-width', '2px')
-      .style("stroke-dasharray", ("3, 3"));
+      .attr('y2', ym);
 
     dot
       .attr('cx', xd);

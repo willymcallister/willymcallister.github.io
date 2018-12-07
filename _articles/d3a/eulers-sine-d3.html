@@ -32,7 +32,7 @@
     xmax    = 7,
     ymin    = -height * (xmax - xmin) / width / 2,
     ymax    = -ymin,
-    xScale  = d3.scaleLinear(),   //constructs a new linear scale with the default domain [0,1] to range [0,1] which produces a mapping of 1:1.
+    xScale  = d3.scaleLinear(),
     yScale  = d3.scaleLinear(),
     vis     = d3.select(ID_TRIG).append('svg:svg'),
     decor   = vis.append('svg:g'),
@@ -148,7 +148,7 @@
   cc   // rotating hypotenuse -
     .attr(X1, xScale(0))
     .attr(Y1, yScale(0))
-    .style('stroke', 'salmon')
+    .style('stroke', 'hotpink')
     .style('stroke-width', '4px')
     .attr('stroke-linecap', "round");
 
@@ -188,7 +188,7 @@
       .attr(Y1, yd)
       .attr(X2, xm)
       .attr(Y2, y)
-      .style('stroke', 'salmon')
+      .style('stroke', 'hotpink')
       .style('stroke-width', '2px')
       .style("stroke-dasharray", ("3, 3"));
 

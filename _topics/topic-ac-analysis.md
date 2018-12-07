@@ -35,9 +35,11 @@ Solving circuits with differential equations is a pain. If we impose a disciplin
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Complex exponentials spin]({{ site.baseurl }}{% link _videos/ac-analysis-complex-exponentials-spin.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-sine-wave.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Euler's sine]({{ site.baseurl }}{% link _articles/eulers-sine.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's cosine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-cosine-wave.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Euler's cosine]({{ site.baseurl }}{% link _articles/eulers-cosine.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Euler's sine and cosine]({{ site.baseurl }}{% link _articles/eulers-sine-cosine.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [AC superposition]({{ site.baseurl }}{% link _videos/ac-analysis-superposition.md %})
 
