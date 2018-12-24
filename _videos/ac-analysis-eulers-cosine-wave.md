@@ -5,6 +5,7 @@ author: Willy McAllister
 youtubeID: zGTzWgSDFR0
 comments: true
 --- 
+OBSOLETE - replaced by _article/eulers-cosine.md.
 
 A cosine wave emerges from Euler's Formula. 
 

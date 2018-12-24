@@ -6,6 +6,8 @@ youtubeID: 1tSrRYU6LKM
 comments: true
 --- 
 
+OBSOLETE - replaced by _article/eulers-sine.md.
+
 A sine wave emerges from Euler's Formula. 
 
 Just music, with no narration. 
