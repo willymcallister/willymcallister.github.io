@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-I get a questions about electrical engineering that are interesting but don't have a natural place to live. So they camp out here.
+I get a questions about electrical engineering that are interesting but don't have a natural place to live. So they camp out here for now.
 
 ----
 
@@ -13,6 +13,6 @@ I get a questions about electrical engineering that are interesting but don't ha
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Inductor - how it works]({{ site.baseurl }}{% link _articles/inductor-how-it-works.md %}) 
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [6 ways to generate voltage]({{ site.baseurl }}{% link _articles/six-ways-to-generate-voltage.md %}) 
+![]({{ site.baseurl }}{% link i/article.svg %}) [6 ways to generate electricity]({{ site.baseurl }}{% link _articles/six-ways-to-generate-electricity.md %}) 
 
 
