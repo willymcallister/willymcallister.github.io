@@ -15,9 +15,9 @@ PRESSURE (piezoelectricity) — Voltage produced by squeezing crystals of certai
 
 {% include img.html img="piezoelectricity.gif" alt="piezoelectricity" %}
 
-HEAT (thermoelectricity) — Voltage is produced by heating the junction between two different metals. This device is called a *thermistor* and it is used to sense temperature.
+HEAT (thermoelectricity) — Voltage is produced by heating the junction between two different metals that have been welded together. This device is called a *thermocouple*. It is used to sense temperature. The schematic symbol looks like this,
 
-{% include img.html img="thermistor.jpg" alt="thermistor" %}{: height="200px" :}
+{% include img.html img="thermocouple-symbol.svg" alt="thermocouple schematic symbol" %}{: height="100px" :}
 
 LIGHT (photoelectricity) — Voltage is produced when light hits a photosensitive (light sensitive) substance. Semiconductor materials like silicon are light sensitive. A *photodiode* is in a package with a window on top to allow light to hit the diode. The amount of light changes the conductivity of the diode.
 
@@ -39,7 +39,6 @@ magnetic field, or a magnetic field moves past a conductor. This is how AC elect
 Images
 * [Van de Graaff generator---Institute Archives and Special Collections, MIT Libraries](https://libraries.mit.edu/archives/exhibits/van-de-graaff/)
 * [Piezoelectric concept](https://upload.wikimedia.org/wikipedia/commons/c/c4/SchemaPiezo.gif)
-* [Thermistor](https://www.amazon.com/Thermistor-SL22-5R012-SCK-0512-Current-Limiting/dp/B01G7ECQX6)
 * [Photodiode](https://www.rapidonline.com/osram-bpw21-silicon-photodiode-58-0138)
 * [Battery](https://duracell.com)
 * [Generator](https://commons.wikimedia.org/wiki/File:Hoover_Dam%27s_generators2.jpg)
