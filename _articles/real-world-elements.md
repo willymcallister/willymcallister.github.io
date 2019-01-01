@@ -172,9 +172,9 @@ The symbol for an inductor looks like this,
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
-Real-world inductors come in lots of shapes and sizes.
+Real-world inductors come in lots of shapes.
 
-![Air-core inductor](/i/inductor_air_core.jpg) ![Toroidal ferrite-core inductor](/i/inductor_ferrite_core.png){:height="160px"} ![Inductor on form](/i/inductor_on_form.jpg){:height="160px"}
+![Air-core inductor](/i/inductor_air_core.jpg) ![Toroidal ferrite-core inductor](/i/inductor_ferrite_core.png) ![Inductor on form](/i/inductor_on_form.jpg)
 
 ### Parasitics
 
@@ -188,17 +188,17 @@ We finish up with this astonishing image of an air-core inductor. This large cop
 
 ----
 
-<details>
-<summary>Photo credits</summary>
-
-<p><a href="https://pixabay.com/en/electronics-components-resistors-759228/">Resistor assortment photo</a><br>
-<a href="https://commons.wikimedia.org/wiki/File:Resistor.jpg">330 ohm resistor</a><br>  
-<a href="https://en.wikipedia.org/wiki/Electronic_color_code#/media/File:2.26_kilo-ohm_precision_resistor.jpg">2260 ohm precision resistor</a><br>  
-<a href="https://commons.wikimedia.org/wiki/File:1_kiloohm_SMD_0603_resistor.jpg">SMT resistor</a>  <br>
-<a href="https://en.wikipedia.org/wiki/Capacitor">Capacitor</a><br> 
-<a href="https://commons.wikimedia.org/wiki/File:SMD_capacitor.jpg">SMT capacitor</a><br>  
-<a href="https://commons.wikimedia.org/wiki/File:MLCC-Construction.png">SMT capacitor construction</a><br>  
-<a href="https://www.indiamart.com/proddetail/air-core-inductors-4126873333.html">Air-core inductor</a><br>  
-<a href="https://en.wikipedia.org/wiki/Electrical_resonance#/media/File:RLC_series.png">Toroidal inductor wound on ferrite core</a><br>  
-<a href="https://howtotestelectroniccomponents.com/wp-content/uploads/2013/08/inductor-300x201.jpg">Inductor wound on form</a><br>  
-<a href="https://commons.wikimedia.org/wiki/File:Large_antenna_loading_coil.jpg">Humongous air-core coil</a><br>
+{% capture summary %}Photo credits{% endcapture %}  
+{% capture details %}
+* <a href="https://pixabay.com/en/electronics-components-resistors-759228/">Resistor assortment photo</a>
+* <a href="https://commons.wikimedia.org/wiki/File:Resistor.jpg">330 ohm resistor</a>
+* <a href="https://en.wikipedia.org/wiki/Electronic_color_code#/media/File:2.26_kilo-ohm_precision_resistor.jpg">2260 ohm precision resistor</a>
+* <a href="https://commons.wikimedia.org/wiki/File:1_kiloohm_SMD_0603_resistor.jpg">SMT resistor</a>
+* <a href="https://en.wikipedia.org/wiki/Capacitor">Capacitor</a>
+* <a href="https://commons.wikimedia.org/wiki/File:SMD_capacitor.jpg">SMT capacitor</a> 
+* <a href="https://commons.wikimedia.org/wiki/File:MLCC-Construction.png">SMT capacitor construction</a>  
+* <a href="https://www.indiamart.com/proddetail/air-core-inductors-4126873333.html">Air-core inductor</a>
+* <a href="https://en.wikipedia.org/wiki/Electrical_resonance#/media/File:RLC_series.png">Toroidal inductor wound on ferrite core</a>
+* <a href="https://howtotestelectroniccomponents.com/wp-content/uploads/2013/08/inductor-300x201.jpg">Inductor wound on form</a>
+* <a href="https://commons.wikimedia.org/wiki/File:Large_antenna_loading_coil.jpg">Humongous air-core coil
+{% endcapture %}{% include details.html %}
