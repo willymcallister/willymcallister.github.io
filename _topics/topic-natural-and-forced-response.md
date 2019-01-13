@@ -112,3 +112,5 @@ If you connect an external energy source to a circuit its behavior changes. The 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response — derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [RLC natural response — variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %})
+
+---
