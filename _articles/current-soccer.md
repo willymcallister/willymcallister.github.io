@@ -27,11 +27,11 @@ Before the second half starts, each team gathers near the goal they defended in 
 
 You stand at the side of the field next at the half line. As you look down the half line you see blue players moving one way and red players moving the other way. You observe all the players crossing the half line. That is a *current* of players. You count players as they cross the line. A blue player crossing the line counts 1, and a red player counts 1, even though the red player is moving the other way. All players count when figuring out current. 
 
-By the time the teams have taken their new side, all 22 players have changed sides. Suppose it took 10 seconds for all the players to cross the half line. During the time they are crossing over the current would be 22 players per 10 seconds or 2.2 players per second. After all 22 players cross the line the current you are able to measure is 0. 
+By the time the teams have taken their new side, all 22 players have changed sides. Suppose it took 10 seconds for all the players to cross the half line. During the time they are crossing over the current would be 22 players per 10 seconds or 2.2 players per second. After all 22 players cross the line the current you measure at the half line is 0. 
 
-## Unit of soccer current - the collina
+## Unit of soccer current --- the collina
 
-Let's create a new unit for soccer current. We'll call it a *collina* in honor of referee [Pierluigi Collina](https://en.wikipedia.org/wiki/Pierluigi_Collina). We define 1 collina as 1 soccer team / minute flowing past an arbitrary point. 
+Let's create a new unit for soccer current. We'll call it a *collina* in honor of referee [Pierluigi Collina](https://en.wikipedia.org/wiki/Pierluigi_Collina). We define 1 collina to be 1 soccer team / minute flowing past an arbitrary point. 
 
 What was our soccer current measured in collinas?
 
