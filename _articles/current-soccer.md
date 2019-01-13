@@ -25,7 +25,7 @@ Two soccer teams are playing a match. One wears red, one wears blue. At the begi
 
 Before the second half starts, each team gathers near the goal they defended in the first half. Then the referee blows his whistle and directs them to change ends of the field to get ready for the second half. 
 
-You stand at the side of the field next at the half line. As you look down the half line you see blue players moving one way and red players moving the other way. You observe all the players crossing the half line. That is a *current* of players. You count players as they cross the line. A blue player crossing the line counts 1, and a red player counts 1, even though the red player is moving the other way. All players count when figuring out current. 
+You stand at the side of the field next to the half line. As you look down the half line you see blue players moving one way and red players moving the other way. You observe all the players crossing the half line. That is a *current* of players. You count players as they cross the line. A blue player crossing the line counts 1, and a red player counts 1, even though the red player is moving the other way. All players count when figuring out current. 
 
 By the time the teams have taken their new side, all 22 players have changed sides. Suppose it took 10 seconds for all the players to cross the half line. During the time they are crossing over the current would be 22 players per 10 seconds or 2.2 players per second. After all 22 players cross the line the current you measure at the half line is 0. 
 
