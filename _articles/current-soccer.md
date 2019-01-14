@@ -33,17 +33,19 @@ By the time the teams have taken their new side, all 22 players have changed sid
 
 Let's create a new unit for soccer current. We'll call it a *collina* in honor of referee [Pierluigi Collina](https://en.wikipedia.org/wiki/Pierluigi_Collina). We define 1 collina to be 1 soccer team / minute flowing past an arbitrary point. 
 
-What was our soccer current measured in collinas?
+What was our soccer current measured in collinas? 
 
-1 collina = 1 team/minute = 11 players/minute
+$1\,\text{collina} = 1 \,\text{team/minute} = 11 \,\text{players/minute}$
 
-If we have 22 players in 10 seconds what's that in collinas? 
+We have $22$ players in $10$ seconds. What's that in $\text{collinas}$? First, convert seconds to minutes,
 
-22 players / 10 seconds * 60 seconds/minute = 132 players/minute
+$22 \,\dfrac{\text{players}}{10 \,\text{seconds}} \times 60 \,\dfrac{\text{seconds}}{\text{minute}} = 132 \,\dfrac{\text{players}}{\text{minute}}$
 
-132 players/minute / 11 players/minute/collina = 12 collina
+Then convert to collinas,
 
-The soccer current in our example is 12 collina.
+$132\,\dfrac{\text{players}}{\text{minute}} \raisebox{-0.25em}{\Large \,/ }\normalsize \,\dfrac{11\,\text{players/minute}}{\text{collina}} = 12 \,\text{collina}$
+
+The soccer current in our example is $12 \,\text{collina}$.
 
 This analogy is a pretty silly but it illustrates how to measure unlike players/charges moving in opposite directions.
 
@@ -65,7 +67,7 @@ Second, put both teams on the field. If there is no referee to boss them around 
 When the referee has had enough of this he blows his whistle and shouts, "I mean it! Go to your respective ends!" The referee is the voltage in this analogy. He's the pressure that makes charges move. The players end their chit-chat and move off in the right direction. Along the way a red player might come near a blue player and they have a little interaction, but the referee expects players to keep moving, so they separate and keep going. 
 
 ![Manchester (red) vs. Chelsea (Blue)]({{ site.baseurl }}{% link i/manchester-chelsea.jpg %}){: .centered }
-<p class="caption">FA Cup Final 2007 - Manchester United's Wayne Rooney (r) and Chelsea's Didier Drogba have a chat. (Photo by Neal Simpson - EMPICS/PA Images via Getty Images)
+<p class="caption">Manchester United's Wayne Rooney and Chelsea's Didier Drogba have a chat. (FA Cup Final 2007 - Photo by Neal Simpson - EMPICS/PA Images via Getty Images)
 </p>
 
 If you can envision this movement in your head then you have a good idea of what current looks like in a wire at the atomic level.
@@ -74,7 +76,7 @@ If you can envision this movement in your head then you have a good idea of what
 
 Why does something move? Why does anything move? When you think about it from an energy standpoint, things move because they spontaneously go to a state of lower energy. 
 
-If you plot energy on a vertical axis, a particle moves "downhill" on the plot, that is, toward a state of lower energy. That's why it is easier for you to walk down a real hill compared to walking up. And it takes less effort to drop a book compared to picking one up. Chemists make plots like this to describe chemical reactions. When something bursts into flames that is a rapid move downhill.
+If you plot energy on a vertical axis, a particle moves "downhill" on the plot, that is, toward a state of lower energy. That's why it is easier for you to walk down a real hill compared to walking up. And it takes less effort to drop a book compared to picking one up. Chemists make plots like this to describe chemical reactions. When something bursts into flames that is a chemical reaction that moves rapidly downhill.
 
 When we see charges move, they do so because they "want" to move to a state of lower energy. If you place an electron near a positive charge and let it go, it moves toward the plus charge. That direction is "downhill" from the viewpoint of the electron. If you hold the electron still and let go of the plus charge, it moves toward the electron. Moving in that direction is downhill from the perspective of the plus charge. 
 
@@ -82,8 +84,8 @@ So which way is downhill for electric charge? It's downhill both ways! Electrons
 
 ## Energy diagrams
 
-We don't often draw energy diagrams in beginning electronics because it's hard to draw opposite downhills on a single graph. On an energy graph if positive charge rolls down the page then electrons roll up the page (up is down for an electron). Too weird. 
+We don't often draw energy diagrams in beginning electronics because it's hard to draw two downhills on a single graph. On an energy graph if positive charge rolls down the page then electrons roll up the page (up is downhill for an electron). Too weird. 
 
-In the article on [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I drew a mountain as an energy diagram. I was careful to only talk about electrons rolling down the mountain and made no mention of positive charge rolling uphill. That is something the analogy to gravity cannot represent.
+In the article on [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I drew a mountain as an energy diagram. I was careful to only talk about electrons rolling down the mountain and made no mention of positive charge spontaneously rolling up. That is something the gravity analogy cannot represent.
 
 When you study semiconductors we explain how they work with energy diagrams. By that time you will be deep enough into electronics that you can deal with two downhills. 
