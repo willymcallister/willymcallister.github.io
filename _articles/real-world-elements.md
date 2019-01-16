@@ -47,7 +47,7 @@ Most of the time we can ignore these parasitic effects, until we can't. That's a
 
 The properties of real-world components are sensitive to their environment. Most components show some degree of temperature sensitivity; parameters drift high or low depending on how hot or cold the component is. If your circuit has to work over a wide temperature range, you will want to know the temperature behavior of the components you use. 
 
-Resistors have some degree of temperature sensitivity. Sometimes we build thermometers based on a resistor's sensitivity to temperature. Inductors and capacitors are relatively insensitive to temperature. The components with the greatest sensitivity are semiconductor devices: transistors and diodes. These actually include temperature, $T$ in their $i$-$v$ equations. 
+Resistors have some degree of temperature sensitivity. Sometimes we build thermometers based on a resistor's sensitivity to temperature. Inductors and capacitors are relatively insensitive to temperature. The components with the greatest sensitivity are semiconductor devices: transistors and diodes. These actually include temperature, $T$ in their $i$-$v$ equations.  
 
 ## Real-world resistors
 
