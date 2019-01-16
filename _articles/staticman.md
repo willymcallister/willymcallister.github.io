@@ -21,7 +21,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 
 ## Resources
 
-* [Staticman](https://staticman.net/) web site   
+* [Staticman](https://staticman.net/) web site    
 * [Staticman](https://github.com/eduardoboucas/staticman) on GitHub   
 * [Staticman app](https://github.com/apps/staticman-net) on GitHub
 * [Eduardo's personal site on github](https://github.com/eduardoboucas/eduardoboucas.github.io) is a good source of Staticman news.  
@@ -32,7 +32,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 * [Popcorn](https://popcorn.staticman.net/). Staticman's demo site (based on Staticman v1).    
 * [Popcorn on github](https://github.com/eduardoboucas/popcorn)  
 
-## Setting up the Staticman app with v3
+## Setting up the Staticman app with Staticman v3
 
 I recently converted from the v2 public instance of Staticman over to the v3 GitHub app.  
 1. Remove staticmanapp as a collaborator (if it is left over from an earlier install).  
