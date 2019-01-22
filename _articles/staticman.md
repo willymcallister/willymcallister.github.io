@@ -19,7 +19,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 
 ----
 
-## Resources
+## Resources 
 
 * [Staticman](https://staticman.net/) web site    
 * [Staticman](https://github.com/eduardoboucas/staticman) on GitHub   
