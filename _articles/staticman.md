@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Staticman"
+title:  "Staticman and mailgun"
 author: Willy McAllister
 comments: true
 ---
