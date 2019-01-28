@@ -14,7 +14,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 ### Contents
 {:.no_toc}
 
-* Will be replaced with the ToC
+* Will be replaced with the ToC 
 {:toc}
 
 ----
