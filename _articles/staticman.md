@@ -1,13 +1,13 @@
 ---
 layout: article
-title:  "Staticman and Mailgun"
+title:  "Staticman"
 author: Willy McAllister
 comments: true
 ---
 
 Spinningnumbers.org is a static web site. I use [Staticman v3](https://staticman.net) as a service to make it seem like my static site is responsive to comments and discussion.
 
-Staticman allows users to enter their email address to subscribe to a post and be notified if new comments appear. 
+Staticman allows users to enter their email address to subscribe to a post and be notified if new comments appear.  
 
 ----
 
