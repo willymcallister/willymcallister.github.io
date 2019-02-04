@@ -29,6 +29,9 @@ blockquote {
     color: $grey-color;
     font-size: $small-font-size;
 }
+.oline {
+    text-decoration: overline;
+}
 table {
     border: 1px solid $grey-color-light;
     border-radius: 2px;
