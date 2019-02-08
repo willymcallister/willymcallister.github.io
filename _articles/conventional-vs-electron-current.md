@@ -69,7 +69,7 @@ The instrument we use to measure current---an ammeter---cannot tell the differen
 
 ## Military veterans
 
-We listed a second alternative for defining current direction. Some military electronic training programs (for example the U.S. Navy [NEETS](https://www.hnsa.org/resources/manuals-documents/2575-2/) program in the 1960's) define current as the direction of electron motion. If you participated in electronics training in the military you may have come across this convention. If that's the case, this article must be driving you crazy.
+Some military electronic training programs (for example the U.S. Navy [NEETS](https://www.hnsa.org/resources/manuals-documents/2575-2/) program in the 1960's) define current as the direction of electron motion. If you participated in electronics training in the military you may have come across this convention. If that's the case, this article must be driving you crazy.
 
 We don't use the electron current convention at Spinning Numbers. We follow the SI convention for current direction, which is defined in terms of positive charge.
 

@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-The Node Voltage Method is one of the well-organized methods for analyzing a circuit. It is based on [Kirchhoff's Current Law](electrical-engineering/ee-circuit-analysis/a/ee-kirchhoffs-laws). The Node Voltage Method is embedded inside the popular circuit simulator, $\small \text{SPICE}$.
+The Node Voltage Method is one of the well-organized methods for analyzing a circuit. It is based on [Kirchhoff's Current Law](electrical-engineering/ee-circuit-analysis/a/ee-kirchhoffs-laws). The Node Voltage Method is embedded inside the popular circuit simulator, SPICE$.
 
 Written by Willy McAllister.
 
@@ -417,7 +417,7 @@ This pair of constrained floating nodes is called a *supernode*. I could have us
 ## Summary
 {: .no_toc :}
 
-The Node Voltage Method is one of two efficient methods of solving a circuit. This method is embedded inside the popular circuit simulator, $\small \text{SPICE}$. The steps in the Node Voltage Method are,
+The Node Voltage Method is one of two efficient methods of solving a circuit. This method is embedded inside the popular circuit simulator, SPICE. The steps in the Node Voltage Method are,
 
 * Assign a reference node (ground).
 * Assign node voltage names to the remaining nodes.
