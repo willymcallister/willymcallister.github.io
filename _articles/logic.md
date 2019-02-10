@@ -5,7 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-Digital electronics is based on the ancient philosophy of *logic*. Logical variables are two-valued, or *binary*---either true or false. Logic values are combined with a short list of *operators*, AND, OR, and NOT. Logic is represented by equations, symbols, and truth tables.
+Digital electronics is based on the ancient philosophy of *logic*. Logical variables are two-valued, or *binary*---either true or false. 
+
+Logic values are combined with a short list of *operators*, AND, OR, and NOT. 
+
+We represent logic with equations, symbols, and truth tables.
 
 Written by Willy McAllister.
 
