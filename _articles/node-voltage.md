@@ -125,7 +125,7 @@ The challenging part of writing KCL equations is getting the signs right. Scribb
 >Essential skill - Do Ohm's Law in your head as you write KCL.    
 As you write each term of the KCL equation, do Ohm's Law in your head and immediately write the current in terms of node voltages divided by resistance. 
 
-Let's first work out the individual currents flowing in the three resistors connected to node $\greenD b$. Remember, scribbling is good.
+Let's work out the individual currents flowing in the three resistors connected to node $\greenD b$. Remember, scribbling is good.
 
 ![Individual currents]({{ site.baseurl }}{% link i/node_voltage4-1b.svg %}){: .centered :}{: height="260px"}
 
