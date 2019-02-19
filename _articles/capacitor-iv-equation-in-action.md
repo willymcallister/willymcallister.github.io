@@ -26,13 +26,13 @@ A constant current driven into a capacitor creates a voltage with a straight ram
 
 ----
 
-The capacitor $i$-$v$ equation can be written in terms of $i$ as a function of $v$ in this derivative form,
+The usual capacitor $i$-$v$ equation is $i$ as a function of $v$ in derivative form,
 
 $i = \text C \,\dfrac{dv}{dt}$
 
-$\text C$ is the *capacitance*, a physical property of the capacitor. $\text C$ acts as the scale factor between $i$ and $dv/dt$. It tells you how much $i$ you get for a given amount of $dv/dt$.
+$\text C$ is the *capacitance*, a physical property of the capacitor. $\text C$ is a scale factor, it tells you how much $i$ you get for a given amount of $dv/dt$.
 
-Or you can write the capacitor equation with $v$ as a function of $i$ with this definite integral,
+You can write the capacitor $i$-$v$ equation the other way around, with $v$ as a function of $i$. It turns into an equation with a definite integral,
 
 $\displaystyle v = \dfrac1{\text C}\, \int_{\,0}^{\,T} i\,dt + v_0$
 
@@ -40,22 +40,22 @@ $v_0$ is the voltage across the capacitor at the beginning of the integral, at $
 
 The notation for time is a bit tricky,
 
-Little $t$ is the time variable inside the integral. It runs continuously. 
+Little $t$ is the continuous time variable inside the integral. 
 
-Big $T$ is the upper limit of the integral. $T$ is the moment you want to know the voltage on the capacitor. 
+Big $T$ is the moment you want to know the voltage on the capacitor. $T$ is the upper limit of the integral.  
 
 {% capture summary %}calculus notation: $di/dt${% endcapture %}  
 {% capture details %} 
 $i = \text C\,\dfrac{dv}{dt}$
 
-$d$ is calculus notation for 'differential', or "a tiny change in ...". For example, $dt$ means 'a tiny change in time'. When you see it in a ratio, like $dv/dt$, that means, "a tiny change in $v$ (voltage) for each tiny change in time" An expression like $dv/dt$ is called a <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-intro/ab-defining-derivative/v/calculus-derivatives-1-new-hd-version">derivative</a>. The derivative is the slope of voltage as it changes with time.  
+$d$ is calculus notation for 'differential', or "a tiny change in ...". For example, $dt$ means 'a tiny change in time'. When you see it in a ratio, like $dv/dt$, that means, "a tiny change in $v$ (voltage) for each tiny change in $t$ (time)" An expression like $dv/dt$ is a <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-intro/ab-defining-derivative/v/calculus-derivatives-1-new-hd-version">derivative</a>. The derivative measures how fast voltage changes with time (the slope of voltage vs. time).  
 {% endcapture %}{% include details.html %} 
 
 {% capture summary %}calculus notation: $\int${% endcapture %}  
 {% capture details %}  
 $\displaystyle v = \dfrac{1}{\text C}\, \int_{\,0}^{\,T} i\,dt + v_0$
 
-The loopy $\int$ is another symbol from calculus. It is the <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-antiderivatives-ftc/ab-antiderivatives-intro/v/antiderivatives-and-indefinite-integrals">integral</a> sign. It's meaning is similar to the summation symbol Sigma $\Sigma$. Integration is the opposite of taking the derivative. 
+The loopy $\int$ is another symbol from calculus. It is the <a href="https://www.khanacademy.org/math/ap-calculus-ab/ab-antiderivatives-ftc/ab-antiderivatives-intro/v/antiderivatives-and-indefinite-integrals">integral</a> sign. It's meaning is similar to the summation symbol Sigma $\Sigma$. Integration is the opposite of taking a derivative. 
 
 In the capacitor equation, the integral sign means you add up a sequence of products $(i \times dt)$ or (current $\times$ a tiny interval of time). When you see upper and lower limits on the integral symbol that makes it a *definite* integral. It means to integrate over a specific range of $t$. You start at time $t=0$ and stop at time $t=T$.  
 {% endcapture %}{% include details.html %} 
@@ -63,7 +63,7 @@ In the capacitor equation, the integral sign means you add up a sequence of prod
 ## Voltage response to a current pulse
 
 In this article we'll work with the integral form of the capacitor equation. 
-Our example circuit is a current source connected to a $1\,\mu\text F$ capacitor.
+So we know $i$ and we want to find $v$. Our example circuit is a current source connected to a $1\,\mu\text F$ capacitor,
 
 ![Capacitor and current source]({{ site.baseurl }}{% link i/capacitor_in_action1.svg %}){: .centered :}{: height="160px" :}
 
@@ -87,23 +87,23 @@ Before the current pulse $(t < 0)$, no current is flowing, so no charge accumula
 
 ### During the pulse
 
-For any time $T$ during the current pulse $(0 \lt t \lt 3\,\text{ms})$, current flows and charge accumulates on $\text C$, and the voltage rises. We apply the capacitor equation to find what the voltage does, 
+For any time during the current pulse $(0 \lt t \lt 3\,\text{ms})$, current flows, charge accumulates on $\text C$, and the voltage rises. Apply the capacitor equation to find what happens to the voltage, 
 
 $\displaystyle v(T) = \dfrac1{\text C}\, \int_{\,0}^{\,T} i\,dt + v_0$
 
-The $t$ and $T$ notation is a little tricky. Little $t$ is time, the variable that gets integrated. Big $T$ is the amount of time we wait for charge to accumulate. The integral sweeps time $t$ from $0$ up to some accumulation time, big $T$. The biggest big $T$ can be is $3\,\text{msec}$ because that's the duration of the pulse. 
+Pay attention to the time variables. Little $t$ is continuous time, the variable that gets integrated. Big $T$ is the amount of time charge is allowed to accumulate. The definite integral sweeps time $t$ from $0$ up to some accumulation time, big $T$. To find the voltage at the end of the pulse we set big $T$ to $3\,\text{ms}$. 
 
-$i$ is constant (the top of the pulse is flat) during this time so we can take it outside the integral. Since $v_0$ is zero, we can leave it out. 
+$i$ is constant (the top of the pulse is flat) during this time so we can take it outside the integral. We said the capacitor started with $0$ charge, so $v_0$ is zero and we can leave it out. 
 
 $\displaystyle v(T) = \dfrac{i}{\text C}\, \int_{\,0}^{\,T} dt$
 
 $\displaystyle v(T) = \dfrac{i}{\text C}\,\, t\,\bigg  \|_{\,0}^{\,T}$
 
-$v(T) = \dfrac{i}{\text C} \,T\qquad\text{volts}$ 
+$v(T) = \dfrac{i}{\text C} \,T$ 
 
-This is an equation for $v$ as a function of pulse duration $T$, for a given pulse height $i$. The equation has the shape of a line, with slope $i/\text C$. The slope is,
+This tells us $v$ is a function of pulse duration $T$ and pulse height $i$. The equation has the shape of a line. The slope of the line is $i/\text C$,
 
- $\dfrac{i}{\text C} =\dfrac{2\times 10^{-3}\,\text A}{1 \times 10^{-6}\,\text F} = 2000\,\text{volts/second}$
+$\dfrac{i}{\text C} =\dfrac{2\times 10^{-3}\,\text A}{1 \times 10^{-6}\,\text F} = 2000\,\text{volts/second}$ 
 
 For any pulse width, the voltage is,
 
@@ -111,15 +111,17 @@ $v(T) =  2000 \,\text{volts/s} \,\cdot T$
 
 Our pulse width is $T = 3\,\text{ms}$, so the voltage across the capacitor rises to,
 
-$v_{(T=3\,\text{ms})} =  2000 \,\text{volts/s} \,\cdot \,0.003 \,\text s= 6\,\text{volts}$ 
+$v_{(T=3\,\text{ms})} =  2000 \,\text{volts/sec} \,\cdot \,0.003 \,\text{sec} = 6\,\text{volts}$ 
 
 With a constant current of $2\,\text{mA}$, the voltage on the capacitor rises in a straight line with a slope of $2000 \,\text{volts/sec}$. The voltage started at $0\,\text V$ and rises to $6\,\text{volts}$ after $3\,\text{ms}$.
 
 ### After the pulse
 
-This part is rather interesting if you haven't thought about it before. After the pulse the current falls to $0$. That means charge stops accumulating on the capacitor. Since no charge is moving, we should expect the voltage to stay the same. 
+This part is rather interesting if you haven't thought about it before. After the pulse the current falls to $0$. That means charge stops accumulating on the capacitor. This may seem weird but since no charge is moving the charge that's accumulated on the capacitor has no place to go, so it stays on the capacitor. That means we should expect the capacitor voltage to stay the same. $q = \text C\,v$. Constant $q$ implies constant $v$. 
 
-We can see how the math captures this by writing the capacitor equation at starting time $t=3\,\text{ms}$. We plug in the starting voltage at that time, $v_{3\,\text{ms}} = 6 \,\text V$.
+See how the math captures this by writing the capacitor equation after the pulse is over. 
+
+The starting time is $3\,\text{ms}$. The current is $i=0$ since the pulse is over. The starting voltage is $v_{3\,\text{ms}} = 6 \,\text V$.
 
 $\displaystyle v(T) = \dfrac1{\text C}\, \int_{\,3\,\text{ms}}^{\,T} 0\,dt + 6$
 
