@@ -17,9 +17,9 @@ Digital electronics is the heart of modern technical life.
 
 ----
 
-## Introduction
-
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Digital electronics introduction]({{ site.baseurl }}{% link _articles/digital-electronics.md %}) --- Simplicity, abstraction, discipline, intent
+
+### Logic
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Logic]({{ site.baseurl }}{% link _articles/logic.md %}) --- basic gates
 
@@ -29,7 +29,8 @@ DeMorgan's theorem
 
 ### Simplification
 
-Karnaugh map (Car'-naw)
+* Karnaugh map (Car'-naw)
+* Gray code - distance 1 code, solves the Tower of Hanoi puzzle
 
 ### Bits as commands
 
@@ -37,11 +38,12 @@ Assertion
 
 ### Bits as symbols
 
-$2^n$
+* $2^n$
+* distance
 
 ### Bits as numbers
 
-* Binary numbers
+* Binary numbers, octal hex
 * Addition
 * Subtraction
 
