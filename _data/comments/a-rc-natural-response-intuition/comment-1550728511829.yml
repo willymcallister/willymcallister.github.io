@@ -1,0 +1,15 @@
+_id: 403a9730-359d-11e9-8b1e-3f82196ede5f
+_parent: 'https://spinningnumbers.org/a/rc-natural-response-intuition.html'
+replying_to: '1'
+message: >-
+  We start out with charge on the capacitor and the switch in the down position
+  (for a long time). When there is charge on the capacitor that means a voltage
+  appears: q = Cv, or v = q/C. That voltage also appears across the resistor.
+  What does a resistor do when it has a voltage? It conducts, i = v/R. That
+  current is made of charge flowing out of the capacitor. If you leave the
+  switch in the down position a long time the charge eventually runs out, it
+  "drains" through the resistor. When the charge runs out then q = 0, which
+  means v = q/C = 0. This is why the assumed initial value of v is 0.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+date: '2019-02-21T05:55:11.827Z'
