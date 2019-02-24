@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create. Understanding how this circuit works is essential to understanding electronic systems. 
+The Resistor-Capacitor $(\text{RC})$ circuit is one of the first interesting circuits we can create. Understanding this circuit is essential to understanding electronic systems. 
 
 ![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0c.svg %}){: .centered :}
 
@@ -42,61 +42,63 @@ We derive a precise equation for the *natural response* of this circuit.
 
 ![RC natural response circuit]({{ site.baseurl }}{% link i/rc_natural_response0.svg %}){: .centered :}
 
-We give the circuit some energy by placing an initial charge $q$ on the capacitor. This causes a voltage to appear according to $q = \text C\,v$. Then we step back and watch what the voltage does 'naturally.' Whatever happens is called the *natural response*. The natural response is what the circuit does when it has some initial energy, but nothing else is driving the circuit.
+We give the circuit some initial energy by placing a charge $q$ on the capacitor. This causes a voltage to appear across the capacitor according to $q = \text C\,v$. Then we step back and watch what the voltage does 'naturally.' Whatever happens is called the *natural response*. The natural response is what the circuit does when it has some initial energy, but nothing external drives the circuit.
 
-By "find the response" we mean find $\goldD v$ and $\blueD i$ as a function of time.
+"Find the response" means find $\goldD v$ and $\blueD i$ as a function of time.
 
 ## Strategy
 
-Here is the strategy we will use to turn this circuit into a differential equation and solve it. If this is your first differential equation, don't be nervous, we'll go through every step,
+Here is the strategy we use to model the circuit with a differential equation and then solve it. If this is your first differential equation, don't be nervous, we'll go through every step.
 
 * Model the $\text R$ and $\text C$ components with their $i$-$v$ equations
 * Model the circuit using Kirchhoff's Current Law (KCL)
-* KCL gives us a differential equation
+  * KCL gives us a differential equation
 * Solve the differential equation step-by-step
   * Guess at a solution with adjustable constants
   * Plug the solution into the differential equation
   * Gather like factors and identify the *characteristic equation*
   * Find the root, $s$, of the characteristic equation
   * Find the amplitude constant, $K$, using the initial condition, $\text V_0$
-  * The guess is confirmed if you can find a $K$ and is in fact constant (does not change with time)
+  * The guess is confirmed if you can find a value for $K$ and it is in fact constant (does not change with time)
   * Assemble the result 
 
 ## Model the components
 
-$\text R$ and $\text C$ can be described by their voltage-current equations. 
+To start off we define two separate current arrows, $i_\text R$ and $i_\text C$. With two arrows we respect the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}) for both $\text R$ and $\text C$. 
 
-For the resistor, we pick a form of Ohm's Law, 
+![RC natural response circuit with labeled current arrows]({{ site.baseurl }}{% link i/rc_natural_response0b.svg %}){: .centered :}
+<p class="caption">$i_\text R$ flows into the positive voltage terminal of $\text R$. $i_\text C$ flows into the positive voltage terminal of $\text C$. This means the $i$-$v$ equations we write for $\text R$ and $\text C$ don't need a negative sign.</p>
+
+$\text R$ and $\text C$ are described by their voltage-current equations. 
+
+A resistor is described by Ohm's Law, 
 
 $i_{\text R} = \dfrac{v}{\text R}$
 
-The corresponding voltage-current relationship for the capacitor is,
+The corresponding $i$-$v$ relationship for the capacitor is,
 
 $i_{\text C} = \text C\,\dfrac{dv}{dt}$ 
 
 <details>
 <summary>Where does this equation come from?</summary>
-<p>This capacitor $i$-$v$ equation emerges from the capacitor charge-to-voltage relationship,</p>
+<p>We start with the capacitor's charge-to-voltage relationship,</p>
 
 <p>$q=\text C\,v$</p>
 
-<p>If we take the derivative with respect to time of both sides we get,</p>
+<p>Take the derivative with respect to time of both sides,</p>
 
 <p>$\dfrac {dq} {dt} = \text C \,\dfrac {dv} {dt}$</p>
 
-<p>The left side is ${dq}/{dt}$. This represents change of charge per change of time, or moving charge. Moving charge is an <em>electric current</em>! The term "electric current" was first used by André-Marie Ampère. The symbol we use for current is '$i$'. It comes from the first letter of the French phrase <em>intensité du courant électrique</em>.</p>
+<p>The left side is ${dq}/{dt}$. This represents change of charge per change of time, or moving charge. Moving charge is an <em>electric current</em>!</p>
+<p>The term "electric current" was first used by André-Marie Ampère. The symbol we use for current is '$i$'. It comes from the first letter of the French phrase <em>intensité du courant électrique</em>.</p>
 <p>If we replace ${dq}/{dt}$ with $i$ we derive the current-voltage relationship for a capacitor,</p>
 
-<p>$i = \text C \,\dfrac {dv} {dt}$</p>
+<p>$i = \text C \,\dfrac{dv}{dt}$</p>
 </details>
 
 ## Model the circuit
 
-Next we write an equation using Kirchhoff's Current Law (KCL).
-
-![RC natural response circuit with labeled current arrows]({{ site.baseurl }}{% link i/rc_natural_response0b.svg %}){: .centered :}
-
-Using the form of KCL that says, "the sum of currents flowing out of a node is $0$",
+Next we write an equation using Kirchhoff's Current Law (KCL) with the form of KCL that says, "currents flowing out of a node add up to $0$".
 
 $i_\text C + i_\text R = 0$
 
@@ -104,9 +106,7 @@ Substitute in the two $i$-$v$ relationships,
 
 $\text C\,\dfrac{dv}{dt} + \dfrac 1 {\text R} \, {v} = 0$
 
-## Solve the circuit
-
-The previous equation has a fancy name. It is called a *first-order ordinary differential equation* (ODE). 
+This equation has a fancy name. It is a *first-order ordinary differential equation* (ODE). 
 
 {% capture summary %}What do these terms mean?{% endcapture %}  
 {% capture details %}  
@@ -116,16 +116,18 @@ It is *first-order* because the highest derivative is a first derivative $dv/dt$
 
 It is *ordinary* because there is just one independent variable $t$, (as opposed to partial derivatives of multiple independent variables).
 
-It amazes me how schematic symbols turn into bits and pieces of differential equations. Simple symbols, sophisticated ideas.  
+It's amazing how schematic symbols represent bits and pieces of differential equations. Simple symbols, sophisticated ideas.  
 {% endcapture %}{% include details.html %}
 
-We are going to solve this equation together step-by-step,
+## Solve the circuit
+
+We will solve this equation together step-by-step,
 
 $\text C\,\dfrac{dv}{dt} + \dfrac 1 {\text R} \, {v} = 0\qquad$ (differential equation)
 
 When you solve a differential equation you have to find some sort of function, in our case, a function of voltage with respect to time, $v(t)$, where plugging $v(t)$ into the differential equation makes it come true. 
 
-Where do solutions come from? One way is to guess at a solution, and try it out. (Not any wild guess, but an informed guess.) If your text book says, "assume a solution of the form ...", that's the same as a guess.
+Where do solutions come from? One way is to guess at a solution, and try it out. (Not any wild guess, but an informed guess.) Whenever your text book says something like, "assume a solution of the form ...", that's the same as a guess.
 
 While gazing at the differential equation, consult the depths of your memory where you store what you know about functions. Relax your mind and follow along...
 
@@ -185,16 +187,16 @@ A more thought-provoking solution comes from the third choice,
 
 $s\text C + \dfrac 1 {\text R} = 0$
 
-This equation is true if:
+This equation is true if,
 
 $s = -\dfrac{1}{\text{RC}}$
 
 <details>
-<summary>magic moment</summary>
-<p>This is a magic moment worth remembering. This is the moment when $\text R$ and $\text C$ come together as a product for the first time. The $\text{RC}$ product plays an important role in nearly every electronic circuit, analog or digital.</p>
+<summary>This is a magic moment.</summary>
+<p>This is a moment worth remembering. $\text R$ and $\text C$ come together as a product for the first time. The $\text{RC}$ product plays an important role in every electronic circuit, analog or digital.</p>
 </details>
 
-So far, our proposed solution looks like:
+So far, our proposed solution looks like,
 
 $v(t) = Ke^{-t/\text{RC}}$
 
@@ -232,7 +234,7 @@ The product of $\text R$ and $\text C$ is called the *time constant* of this cir
 
 $\tau = \text{RC}$
 
-And we write the solution as:
+And we write the solution as,
 
 $v(t) = \text V_0\,e^{-t/\tau}$
 
@@ -286,7 +288,7 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}$
 
 The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} =$ one time constant $= 3 \,\text{ms}$. 
 
-### A useful rule of thumb - $37\%$
+### A rule of thumb - $37\%$
 
 When time equals the time constant, $\text{RC}$, the voltage is down from its initial value by a factor of $1/e = 1/2.71828... = 0.36787...$, or down to roughly $37\%$ of its starting value. This is true for any initial voltage and any $\text{RC}$ product.
 
@@ -362,7 +364,7 @@ No muss, no fuss, exactly the same thing. This is worth memorizing.
 
 The problem we just solved, the natural response of an RC circuit, is representative of things that happen quite often in nature. The exponential function is a very good mathematical model for describing how things grow or decay. Uranium decay, [population growth](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-exp-models/v/modeling-population-with-simple-differential-equation), mortgage payments, [heating and cooling](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/newtons-law-of-cooling), and other real-world processes. 
 
-In the broadest terms: **Exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
+In the broadest terms, **exponentials arise in situations where the *amount of change* is proportional to the *amount of stuff*.** For our RC circuit, the rate of change of voltage is proportional to the voltage. The curve is steep when the voltage is high, and shallows out as voltage drops.
 
 ## Summary
 {:.no_toc}
