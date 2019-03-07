@@ -1,0 +1,7 @@
+_id: d9c6bf20-4090-11e9-af51-e717ffcdcfbb
+_parent: 'https://spinningnumbers.org/v/rc-step-response-setup.html'
+replying_to: ''
+message: "I was doing the Coursera course in DC analysis from Georgia Tech, and they stated without showing the derivation, that K=tau.Vo (with tau=R.C the time constant, and Vo being the initiial voltage of the capacitor)\r\nI couldn't find the derivation for this equality, and the Khan academy video and others places actually says that the value of K is Vo, and not R.C.Vo.\r\nAnyone can help please?"
+name: Douglas
+email: b53b35cf7e80e22fe753bfa3f9f310e6
+date: '2019-03-07T04:24:08.724Z'
