@@ -80,35 +80,43 @@ The strategy for solving this circuit is as follows,
 
 ## Differential equation
 
-To get going on a precise answer for the natural response, let's set up the circuit with some initial energy. The components are labeled with careful attention to the [sign convention for passive components](w/a/ee-sign-convention).  The inductor has an initial current of $0\,\text A$ because the switch starts in the open position. We assume the capacitor has an initial voltage before the switch closes, $v_{\text C} =-\text V_0$. We let the switch close at $t = 0$.
+To get going on a precise answer for the natural response let's set up the circuit with some initial energy. The initial energy will take the form of a charge placed on the capacitor, which generates a voltage. (I could have chosen to start with an initial current in the inductor, but I didn't.)
+
+The components are labeled with careful attention to the [sign convention for passive components](w/a/ee-sign-convention). The capacitor voltage has its positive terminal at the bottom, so $i$ flows into the $+$ terminal as the sign convention requires.
 
 ![LC natural response circuit before switch]({{ site.baseurl }}{% link i/lc_natural_response1.svg %}){: .centered :}{: height="200px" :}
 
-<p class="caption">Notice how $v_\text C$ has its $+$ sign at the bottom. This means the current flows into its positive terminal.</p>
+The switch starts out open, so the initial inductor current is $0\,\text A$. The capacitor starts with an initial charge sufficient to generate a voltage $v_{\text C} =-\text V_0$. 
 
-As with every circuit analysis, we begin by writing one of Kirchhoff's Laws. In this case, we'll go with Kirchhoff's Voltage Law (KVL) around the loop, starting at the lower left, going clockwise. 
+We close the switch closes at $t = 0$. What happens? As with every circuit analysis, we begin by writing one of Kirchhoff's Laws. In this case, we'll use Kirchhoff's Voltage Law (KVL) around the loop, starting at the lower left corner, going clockwise. 
 
-$v_{\text{L}}+v_{\text{}C} = 0$
+$v_{\text{L}}+v_{\text C} = 0$
+
+Use the appropriate $i$-$v$ expression for each voltage. We use the derivative form of $i$-$v$ for the inductor, and the integral form for the capacitor,
 
 $\left (\text L\,\dfrac{di}{dt}\right ) + \left (\dfrac{1}{\text C}\displaystyle\int i \,dt + K \right ) = 0$
 
 $K$ is the constant of integration for the $v_\text C$ term.
 
-This equation has an integral and it's kind of awkward to deal with. The way to get rid of an integral (an anti-derivative) is to take its derivative.  We take the derivative of each term in the equation, 
+This equation has an integral and it's awkward to deal with. To get rid of an integral in an equation you take the derivative of the whole equation, one term at a time,
 
 $\dfrac{d}{dt} \left ( \,\text L\,\dfrac{di}{dt} + \dfrac{1}{\text C}\,\displaystyle\int i \,dt + K\, \right ) = \dfrac{d}{dt}\,0$
 
-The $\text L$ term becomes a second derivative. The integral of $i\,dt$ becomes just $i$. The derivative of $K$ is zero so it vanishes. The right side is still $0$.
+The $\text L$ term becomes a second derivative. In the capacitor term the derivative of the integral of $i\,dt$ is just $i$, and the derivative of $K$ is $0$ so it vanishes. On the right side the derivative of $0$ is $0$.
 
 $\text L \,\dfrac{d^2i}{dt^2} + \dfrac{1}{\text C}\,i = 0$
 
-The equation is tidier if the first term has no coefficient, so we divide through by $\text L$. This second-order differential equation models the essence of our circuit. 
+The equation is prettier if the first term has no coefficient, so we divide through by $\text L$,
 
 $\dfrac{d^2i}{dt^2} + \dfrac{1}{\text{LC}}\,i = 0$
 
+This second-order differential equation models our $\text{LC}$ circuit. 
+
 ## Propose a solution
 
-When we solved the first-order $\text{RC}$ and $\text{RL}$ circuits we guessed at an exponential solution. Guessing works with second-order equations, too. Our second-order equation has similar requirements: we want the function and its derivatives to look like each other so they can all add up to $0$ at all times. The exponential function fits this description. We propose an exponential function with some adjustable parameters,
+Now we have to solve the differential equation. When we solved the first-order $\text{RC}$ and $\text{RL}$ circuits we guessed at an exponential solution. Guessing works with second-order equations, too. Our second-order equation has similar requirements: we're looking for a function and its derivatives that look like each other, so they have a chance to add up to $0$ at all times. The function that fits this description is the *exponential*. 
+
+We propose an exponential function with some adjustable parameters. Let (guess) the current has this form,
 
 $i(t) = Ke^{st}$
 
@@ -138,7 +146,7 @@ $s^2Ke^{st} +  \dfrac{1}{\text{LC}}Ke^{st} = 0$
 
 And do some factoring to pull $Ke^{st}$ to the side,
 
-$Ke^{st}(s^2 +  \dfrac{1}{\text{LC}}) = 0$
+$Ke^{st} \left (s^2 +  \dfrac{1}{\text{LC}} \right ) = 0$
 
 ## Characteristic equation
 
@@ -240,13 +248,13 @@ This is the first time in electronics we see sine and cosine as a function of ti
 
 ## Test the proposed solution
 
-Next, we check our proposed solution by plugging it into the second-order differential equation. If we can come up with values for the constants that make the differential equation true, the proposed solution is a winner. 
+Next, we check our proposed solution by plugging it into the second-order differential equation. If we can come up with values for the constants that make the differential equation true then the proposed solution is a winner. 
 
-### Figure out the initial conditions
+### Find the initial conditions
 
 Initial conditions for a second-order circuit are more involved than for a first-order circuit.
 
-When we did this for first-order circuits, $\text{RC}$ or $\text{RL}$, we needed a single value, either a starting current or voltage. For a second-order $\text{LC}$ circuit, we need to know *two* things: the current *and* the derivative of the current right after the switch closes. 
+When we did this for first-order circuits, $\text{RC}$ or $\text{RL}$, we needed a single value, either a starting voltage or current. For a second-order $\text{LC}$ circuit, we need to know *two* things the moment after the switch closes: the current *and* the derivative of the current, $i(0^+)$ and $di/dt(0^+)$. 
 
 Here are the circuit conditions at $t = 0^-$, just before the switch closes,
 
@@ -258,9 +266,14 @@ Let's write down everything we know about $t=0^-$,
 
 * The starting capacitor voltage is specified: $v_\text C(0^-)=-\text V_0$. 
 
-The moment just after the switch closes is called $t=0^+$. The initial conditions we need to find are $i(0^+)$ and $di/dt(0^+)$. We have to carefully bridge across the infinitesimal time from $0^-$ to $0^+$. This is when the switch closes, a major event in the life of a circuit. Do current and voltage stay the same? Do they jump to a new value?
+The moment just after the switch closes is called $t=0^+$. We have to carefully bridge across the infinitesimal time from $t=0^-$ to $t=0^+$. This is a major event in the life of the circuit. 
 
-We know some properties of inductors and capacitors to help us figure this out,
+After the switch closes there is only one voltage, so we'll just call it $v$ from now on.
+
+![LC natural response circuit after switch]({{ site.baseurl }}{% link i/lc_natural_response2.svg %}){: .centered :}{: height="200px" :}
+<p class="caption">The switch is closed. There is now just one voltage, $v = v_\text L = -v_\text C$. The initial voltage on the capacitor is $v = \text V_0$.</p>
+
+What happens to current and voltage? Do they stay the same? Do they jump to new values? We know some properties of inductors and capacitors to help us figure this out,
 
 * Current in an inductor cannot change instantly, so  
 
@@ -270,13 +283,7 @@ $i(0^+)=i(0^-)=0$
 
 $v(0^+)=v(0^-)=\text V_0$
 
-(After the switch closes there is only one $v$, so we'll just call it $v$ from now on.)
-
-![LC natural response circuit after switch]({{ site.baseurl }}{% link i/lc_natural_response2.svg %}){: .centered :}{: height="200px" :}
-
-<p class="caption">Circuit conditions after the switch closes, at $t=0^+$. There is now just one voltage, $v = v_\text L = -v_\text C$. The initial voltage on the capacitor is $v = \text V_0$.</p>
-
-Now we have $i(0^+) = 0$, but we don't know $di/dt(0^+)$, yet. Where can we get this derivative? Hmmm, how about from the inductor's $i$-$v$ equation? 
+The initial conditions we need to find are $i(0^+)$ and $di/dt(0^+)$. This gives us $i(0^+) = 0$, but we don't know $di/dt(0^+)$, yet. Where can we get the derivative of current? Hmmm, how about from the inductor's $i$-$v$ equation? 
 
 $v = \text L\,\dfrac{di}{dt}$
 
@@ -508,7 +515,7 @@ We found a function that satisfied the differential equation,
 
 $i(t) = \sqrt{\dfrac{\text C}{\text L}}\,\text V_0 \sin \omega_\circ t$
 
-$\omega_\circ \equiv \sqrt{\dfrac{1}{\text{LC}}}$ is the *natural frequency* of the $\text{LC}$ circuit.
+$\omega_\circ = \sqrt{\dfrac{1}{\text{LC}}}$ is the *natural frequency* of the $\text{LC}$ circuit.
 
  $\text V_0$ is the starting voltage on the capacitor.
 
@@ -516,4 +523,4 @@ $\omega_\circ \equiv \sqrt{\dfrac{1}{\text{LC}}}$ is the *natural frequency* of 
 
  $v(t) = \text V_0 \cos \omega_\circ t$
  
-(This solution applies when the starting current in the inductor is assumed to be $0$.)
+This solution applies when the starting current in the inductor is assumed to be $0$.
