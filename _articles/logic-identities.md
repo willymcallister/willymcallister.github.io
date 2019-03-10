@@ -20,7 +20,13 @@ I encourage you to work through this on paper. Write out truth tables as you nee
 <span class="oline">0</span> =  
 <span class="oline">1</span> =  
 
-NOT(NOT A) =  
+NOT(NOT B) =  
+
+{% capture summary %}logic diagram{% endcapture %}  
+{% capture details %}  
+![B bar bar]({{ site.baseurl }}{% link i/logic27.svg %}){: .centered }
+{% endcapture %}{% include details.html %}
+
 
 A &middot; <span class="oline">A</span> =    
 A + <span class="oline">A</span> =  

@@ -132,14 +132,6 @@ We can draw the problem with the logic symbol for OR,
 
 ![A OR B equals C]({{ site.baseurl }}{% link i/logic2.svg %}){: .centered }
 
-{% capture summary %}drawing the OR symbol{% endcapture %}  
-{% capture details %}  
-The OR symbol is truly beautiful---it is made from three circles and two short lines,
-
-![How to draw an OR gate]({{ site.baseurl }}{% link i/logic_or_drawing.png %}){: .centered }{: height="300px" :}
-
-{% endcapture %}{% include details.html %} 
-
 #### The NOT operation
 {:.no_toc}
 
@@ -281,6 +273,12 @@ In digital they mean exactly the same as their regular English meanings.
 A truth table is a convenient way to list out the result of an operator.
 
 We haven't shown how to create these logic functions with electronic circuits, but that comes soon.
+
+## Appendix - Draw the OR symbol
+
+The OR symbol is beautiful---it is constructed from three circles and two short lines,
+
+![How to draw an OR gate]({{ site.baseurl }}{% link i/logic_or_drawing.png %}){: .centered }{: height="300px" :}
 
 ## References
 

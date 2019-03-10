@@ -32,6 +32,10 @@ blockquote {
 .oline {
     text-decoration: overline;
 }
+.ooline {
+    border-top: black 1px solid; 
+    padding: 2px 0 0 0;
+}
 table {
     border: 1px solid $grey-color-light;
     border-radius: 2px;

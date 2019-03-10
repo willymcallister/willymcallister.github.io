@@ -19,6 +19,8 @@ comments: true
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan.md %}) --- a logic superpower 
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Using DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan2.md %}) 
+
 ### Simplification
 
 * Karnaugh map (Car'-naw)
