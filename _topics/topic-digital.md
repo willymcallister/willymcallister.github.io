@@ -5,27 +5,19 @@ author: Willy McAllister
 comments: true
 ---
 
-Digital electronics is the heart of modern technical life.
-
-----
-
-### Contents
-{:.no_toc}
-
-* Will be replaced with the ToC
-{:toc}
-
-----
-
-![]({{ site.baseurl }}{% link i/article.svg %}) [Digital electronics introduction]({{ site.baseurl }}{% link _articles/digital-electronics.md %}) --- Simplicity, abstraction, discipline, intent
+![]({{ site.baseurl }}{% link i/article.svg %}) [Introduction]({{ site.baseurl }}{% link _articles/digital-electronics.md %}) --- Simplicity, abstraction, discipline, intent
 
 ### Logic
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Logic]({{ site.baseurl }}{% link _articles/logic.md %}) --- basic gates
+![]({{ site.baseurl }}{% link i/article.svg %}) [Logic]({{ site.baseurl }}{% link _articles/logic.md %}) --- basic gates AND OR NOT XOR
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [NAND and NOR gates]({{ site.baseurl }}{% link _articles/logic-nand-nor.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Universal gates]({{ site.baseurl }}{% link _articles/universal-gates.md %}) --- your first logic puzzle 
 
-DeMorgan's theorem
+![]({{ site.baseurl }}{% link i/article.svg %}) [Logic identities]({{ site.baseurl }}{% link _articles/logic-identities.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan.md %}) --- a logic superpower 
 
 ### Simplification
 
