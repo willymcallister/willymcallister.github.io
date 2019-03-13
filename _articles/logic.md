@@ -274,12 +274,6 @@ A truth table is a convenient way to list out the result of an operator.
 
 We haven't shown how to create these logic functions with electronic circuits, but that comes soon.
 
-## Appendix - Draw the OR symbol
-
-The OR symbol is beautiful---it is constructed from three circles and two short lines,
-
-![How to draw an OR gate]({{ site.baseurl }}{% link i/logic_or_drawing.png %}){: .centered }{: height="300px" :}
-
 ## References
 
 ["A Mind At Play --- How Claude Shannon Invented the Information Age"](https://www.amazon.com/Mind-Play-Shannon-Invented-Information/dp/1476766681), Jimmy Soni and Rob Goldman, 2017. This is a biography about one of the most influential engineers of the 20th century. You may not have heard of him, but I guarantee he has had an influence on your life.
@@ -287,3 +281,9 @@ The OR symbol is beautiful---it is constructed from three circles and two short 
 [A Mathematical Theory of Communication - original paper](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), Claude E. Shannon, *Bell Systems Technical Journal*, Vol. 27, pp. 379–423, 623–656, July and October, 1948. This groundbreaking paper created the field of Information Theory. The term *bit* appears in print for the very first time near the end of page 1.
 
 [A mathematical theory of communication - Khan Academy video](https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication) demonstrates the information redundancy in English.
+
+## Appendix - Draw the OR symbol
+
+The OR symbol is beautiful---it is constructed from three circles and two short lines,
+
+![How to draw an OR gate]({{ site.baseurl }}{% link i/logic_or_drawing.png %}){: .centered }{: height="300px" :}
