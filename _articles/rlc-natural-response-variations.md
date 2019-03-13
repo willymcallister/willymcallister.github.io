@@ -812,7 +812,7 @@ Let $\text R = 4\,\Omega$, $\text L = 1 \,\text H$,  and $\text C = 1/4\, \text 
 
 Let $i(0) = 0$ and $v_c(0) = 10\,\text V$.
 
-![RLC critically damped circuit with voltage]({{ site.baseurl }}{% link i/rlc_critically_damped_circuit1.svg %}){: .centered :}
+![RLC critically damped circuit with initial 10 volts on the capacitor]({{ site.baseurl }}{% link i/rlc_critically_damped_circuit1.svg %}){: .centered :}
 
 **Find $i(t)$.**
 
@@ -1007,8 +1007,18 @@ Explore: Go back to the definitions of $\alpha$ and $\omega_o$ and design a diff
 
 <details>
     <summary>Thank you!</summary>
-    <p>I would like to thank Khan Academy learner Jonathan B. Landham for discovering and reporting an error in the critically damped solution and providing the inspiration to fully work out the derivation with repeated roots.</p>
+    <p>I would like to thank Khan Academy learner Jonathan B. Landham for discovering and reporting an error in my critically damped solution and providing the inspiration to fully work out the derivation with repeated roots.</p>
 </details>
+
+## All three variants plotted together
+
+Compare the current waveforms from the three example circuits we solved. They all started with $10\,\text V$ on the capacitor. Here they are plotted together on the same scale, 
+
+![3 variants plotted together]({{ site.baseurl }}{% link i/rlc_3variations_current.svg %}){: .centered :}
+
+* $\alpha = 1, \omega_o = \sqrt 5\quad\,$ <span style="color:#63D9EA;">Under damped</span>
+* $\alpha = 2, \omega_o = 2\qquad$ <span style="color:#11ACCD;">Critically damped</span>
+* $\alpha = 5, \omega_o = 3\qquad$ <span style="color:#0C7F99;">Over damped</span>
 
 ## Summary
 {:.no_toc}
