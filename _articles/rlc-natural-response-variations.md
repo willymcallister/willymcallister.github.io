@@ -1016,9 +1016,14 @@ Compare the current waveforms from the three example circuits we solved. They al
 
 ![3 variants plotted together]({{ site.baseurl }}{% link i/rlc_3variations_current.svg %}){: .centered :}
 
-* $\alpha = 1, \omega_o = \sqrt 5\quad\,$ <span style="color:#63D9EA;">Under damped</span>
-* $\alpha = 2, \omega_o = 2\qquad$ <span style="color:#11ACCD;">Critically damped</span>
-* $\alpha = 5, \omega_o = 3\qquad$ <span style="color:#0C7F99;">Over damped</span>
+* $\alpha = 1\quad \omega_o = \sqrt 5\quad\,$ <span style="color:#63D9EA;">Under damped</span>
+* $\alpha = 2\quad \omega_o = 2\qquad$ <span style="color:#11ACCD;">Critically damped</span>
+* $\alpha = 5\quad \omega_o = 3\qquad$ <span style="color:#0C7F99;">Over damped</span>
+
+All three currents surge upwards when the switch is closed.  
+Under damped goes the highest and wiggles above and below the ending current.  
+Critically damped has a single hump. It is the quickest to get down to the final current.  
+Over damped also has a single hump. You can't see it in this image but it gets down to the final value a little slower than critically damped.
 
 ## Summary
 {:.no_toc}
