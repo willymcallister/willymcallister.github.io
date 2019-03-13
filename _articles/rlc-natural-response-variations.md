@@ -1025,7 +1025,7 @@ Under damped goes the highest and wiggles above and below the ending current.
 Critically damped has a single hump. It is the quickest to get down to the final current.  
 Over damped also has a single hump. You can't see it in this image but it gets down to the final value a little slower than critically damped.
 
-## Summary
+## Summary 
 {:.no_toc}
 
 The series $\text{RLC}$ circuit is modeled by this second-order linear differential equation,
