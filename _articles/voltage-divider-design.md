@@ -215,6 +215,15 @@ If you have a $(10\times$$\text R2)$ load resistor drawing current from a voltag
 
 If your design requires the voltage error to be significantly smaller, the load needs to be significantly larger than $(10\times$$\text R2)$, like an additional $10{\times}$  or more. You can get an additional $10{\times}$ two ways. Increase the load resistance. Or redesign the voltage divider to have smaller $\text{R1}$ and $\text{R2}$, at the cost of more power dissipated by the voltage divider. 
 
+{% capture summary %}example{% endcapture %}  
+{% capture details %}  
+Suppose you have a fixed load resistor $\text R_\text L = 10 \,\text k\Omega$, and you can't change it. You design a voltage divider to connect to the load. Your first design is to pick two resistors $10$ times smaller than the load resistor, or $\text R1 = \text R2 = 1\,\text k\Omega$. 
+
+You've paid attention to this article where you learned about the sources of error in a voltage divider when it has a load connected. You check how much the divider's output voltage "sags" due to the load and you are not happy with the result. You want the voltage to sag less and be closer to $\text V_{\text{in}}/2$. 
+
+Since you can't change the load resistor you have to change $\text R1$ and $\text R2$. For you second design you pick resistors $100$ times smaller than the load resistor, or $\text R1 = \text R2 = 100\,\Omega$. When you make $\text R1$ and $\text R2$ smaller, the load resistor has less effect on the divider voltage. We say the voltage divider is "stiffer". The cost for doing this is a $10$ times increase in the power dissipated by the voltage divider.
+{% endcapture %}{% include details.html %}
+
 ## Real-world resistor tolerance impacts accuracy 
 
 Real-world resistors always have a $\pm$ tolerance on their value. If accuracy is critical to your application, use resistors with tight tolerances. Check for acceptable performance by analyzing the voltage divider like we did here at the extremes of tolerance.
