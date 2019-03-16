@@ -115,6 +115,11 @@ Are there any easy nodes? There's a voltage source connected directly between no
 
 ![Easy node solved]({{ site.baseurl }}{% link i/node_voltage4.svg %}){: .centered :}
 
+{% capture summary %}Is node $b$ easy?{% endcapture %}  
+{% capture details %}  
+Node $b$ is connected to the reference node through a source, so you might think node $b$ is easy. It's not. That's because it is a current source, not a voltage source. A current source doesn't tell you its voltage---you have to figure that out from everything else in the circuit.   
+{% endcapture %}{% include details.html %}
+
 ### Write Kirchhoff's Current Law for the remaining node(s)
 
 The next step is to write KCL equations for the remaining nodes. For us, that's just node $\greenD b$.
