@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Voltage divider — design considerations"
+title:  "Voltage divider design considerations"
 author: Willy McAllister
 comments: true
 ---
