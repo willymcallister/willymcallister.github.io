@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage method, mesh and loop current methods.
+Find the currents and voltages of a DC circuit. Kirchhoff's Laws, node voltage method, mesh and loop current methods.
 
 ----
 
@@ -36,4 +36,6 @@ Find the currents and voltges of a DC circuit. Kirchhoff's Laws, node voltage me
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Mesh Current Method (steps 1 to 3)]({{ site.baseurl }}{% link _videos/mesh-current-steps1to3.md %})
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Mesh Current Method (step 4)]({{ site.baseurl }}{% link _videos/mesh-current-steps4and5.md %})
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %})
 
