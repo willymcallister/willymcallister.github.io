@@ -122,7 +122,7 @@ That's current in a nutshell.
 
 **What is the speed of current?** We don't talk very often about the *speed* of current. Answering the question, "How fast is the current flowing?" is really complicated and rarely relevant. Current isn't about meters per second, it's about amount of charge per second. We want to know, "How *much* current is flowing?", not how *fast*. When we talk about how fast something moves in electricity, we are thinking how quickly a *disturbance* moves through a wire or the air, not how fast the electrons are physically moving. Electric disturbances travel close to the speed of light. If you toss a pebble into a pond, you see a ripple moving across the surface. The ripple (a disturbance) moves fast, but the water molecules hardly move at all. 
 
-**How *should* we talk about current?** When discussing current, terms like *through* and *in* make sense. Current flows *through* a resistor; current flows *in* a wire. If you hear, "the current across ...", it should sound funny/odd. We use the words through and across with voltage, not current. If you hear, "the speed of the current", that should sound funny, too.
+**How *should* we talk about current?** When discussing current, terms like *through* and *in* make sense. Current flows *through* a resistor; current flows *in* a wire. If you hear, "the current across ...", it should sound funny (as in funny/odd). The words through and across are used for voltage, not current. If you hear, "the speed of the current", that should sound funny, too.
 
 ## Voltage 
 
