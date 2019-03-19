@@ -66,10 +66,12 @@ When we give a number for current, it is reported as the number of charges per u
 
 {% capture summary %}Current direction and NEETS{% endcapture %}  
 {% capture details %}  
-This definition of current direction often causes confusion. It is opposite the direction electrons move. There are some training programs (for example the U.S. Navy NEETS program) that use the convention where current flow is defined as electron motion, but we don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).  
+We point the current arrow in opposite the direction electrons move. This may seem jarring, but we will make it work. This definition often causes confusion for beginners and people who learned electricity in the military or some technician schools.. 
+
+For example the U.S. Navy NEETS program in the 1960's used the opposite convention where current flow is defined in the direction of electron motion. We don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).  
 {% endcapture %}{% include details.html %} 
 
-Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in general terms using this notation from calculus,
+Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in general terms with this notation from calculus,
 
 $i = \dfrac{dq}{dt}$
 
@@ -86,6 +88,29 @@ The term "electric current" was first used by André-Marie Ampère. The symbol f
 
 </details>
 
+{% capture summary %}$q$ models charge as a continuous substance{% endcapture %}  
+{% capture details %}
+You don't need to read this. It is way over-complicated for beginners.
+
+There is a small contradiction we have to accept when we model charge with a continuous variable $q$. In calculus notation $dq$ is an infinitesimal amount of charge. But, you know the smallest charged particle is an electron or proton. They are small, but not infinitely small. And current at the atomic level is these little chunks of charge, not a continuous substance that can be any value.
+
+When we model charge with mathematics $(q)$ there is no sense that charge exists as electrons. This is how people thought about charge before the discovery of the electron and proton. It was thought to be a continuous variable, not quantized to electrons or protons. When we define current with calculus notation as $dq/dt$ this models charge as a continuous number. 
+
+It's similar to the two ways we think about water. If you have a bucket of water you think of it as a continuous substance, not a collection of molecules. In buckets, you don't "count" water, you measure it in cups or liters. But if you go down to the atomic level, water is molecules you can count. If your bucket is full of sand the particles are bigger but you still treat sand as a continuous fluid. If it's a bucket of rocks you might treat it either way.
+
+In the Wikipedia article on [electric current](https://en.wikipedia.org/wiki/Electric_current) you see the definition $I = Q/t$, not $i = dq/dt$, (in the image on the right side). The author is going out of his/her way to avoid using calculus in a simple essay. In the same way, you can talk about the slope of a straight line without invoking calculus, rise/run. 
+
+But, you know when it comes to curvy functions that calculus does a better job of describing "instantaneous slope". EE's deal a lot with curvy sine waves and exponential waveforms, so we need calculus notation when it comes to $\text{RC}$ circuits and real-world signals.
+
+But let's recognize that current (in wires) is carried by electrons. Suppose you pick an extremely short time interval and measure current. If no charge passes through the boundary during that time, then technically the current is $0$ during that interval. 
+
+That's technically correct but not so useful. You could do the same thought experiment with a water hose. Place the imaginary boundary across the end of the hose. You could pick a time interval so short that $0$ water molecules crossed the boundary during that time. True, but not so useful. It is more useful to start with a larger time interval, count some water molecules to get a real current, and then squeeze the time interval down until it is as small as you need for your investigation. In calculus this is *taking a limit*. 
+
+The confusion happens when you model charge as a continuous value and take the limit $(\Delta Q$ reducing down to $dq$ and $\Delta T$ going down to $dt)$, which ignores the fact that at extremely small scale $q$ is actually quantized (electrons). 
+
+In everyday EE we treat charge and current as continuous quantities, like a bucket of water. We very rarely count individual electrons. There are zillions of electrons in most of our circuits, so this is a good model.
+{% endcapture %}{% include details.html %}
+
 That's current in a nutshell.
 
 ### A few remarks about current
@@ -95,7 +120,7 @@ That's current in a nutshell.
 
 **Can current be positive charge?** Yes. There are lots of examples. Current is carried by both positive and negative charges in saltwater: If we put ordinary table salt in water, the mixture becomes a good conductor. Table salt is sodium chloride, NaCl. When salt dissolves in water it becomes free-floating Na$^+$ and Cl$^-$ ions. Both ions respond to electric force and move through the saltwater in opposite directions. In saltwater the current is composed of moving atoms, both positive and negative ions, not free electrons. The electrical currents inside our bodies are moving ions. The same definition of current works: count the number of charges passing by in a fixed amount of time.
 
-**What is the speed of current?** We don't talk very often about the *speed* of current. Answering the question, "How fast is the current flowing?" is really complicated and rarely relevant. Current isn't about meters per second, it's about charge per second. We want to know, "How *much* current is flowing?", not "how fast". When we talk about how fast something moves in electricity, we are thinking how fast a *disturbance* moves through a wire or the air, not how fast the electrons themselves are moving. Electric disturbances travel close to the speed of light. When you toss a pebble in a pond, you see a ripple moving across the surface. The ripple (a disturbance) moves fast, but the water hardly moves at all. 
+**What is the speed of current?** We don't talk very often about the *speed* of current. Answering the question, "How fast is the current flowing?" is really complicated and rarely relevant. Current isn't about meters per second, it's about amount of charge per second. We want to know, "How *much* current is flowing?", not how *fast*. When we talk about how fast something moves in electricity, we are thinking how quickly a *disturbance* moves through a wire or the air, not how fast the electrons are physically moving. Electric disturbances travel close to the speed of light. If you toss a pebble into a pond, you see a ripple moving across the surface. The ripple (a disturbance) moves fast, but the water molecules hardly move at all. 
 
 **How *should* we talk about current?** When discussing current, terms like *through* and *in* make sense. Current flows *through* a resistor; current flows *in* a wire. If you hear, "the current across ...", it should sound funny/odd. We use the words through and across with voltage, not current. If you hear, "the speed of the current", that should sound funny, too.
 

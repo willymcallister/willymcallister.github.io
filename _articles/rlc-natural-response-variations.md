@@ -1074,4 +1074,4 @@ After you work out $\alpha$ and $\omega_o$, compute $\alpha^2 - \omega_o^2$. Bas
 | under damped   |$\text V_0$ | $0$ | $-$  | $i = \dfrac{\text V_0}{\omega_d \text L} e^{-\alpha t} \sin \omega_d t$     | 
 |----------------+------------+-----+------+----------------------------------|
 
-The $v_\text C, i_\text L$ columns indicate the voltage and current at $t = 0^-$.
+The $v_\text C$ and $i_\text L$ columns indicate the voltage and current at $t = 0^-$.

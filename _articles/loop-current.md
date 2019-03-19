@@ -45,7 +45,7 @@ If a circuit is non-planar we *must* use the Loop Current Method.
 
 ## Special case: shared current source
 
-A second special case comes up when you have a current source shared between two meshes. This is another time when you *may* want to include a non-mesh loop in the system of equations. 
+A second special case is when you come across a current source shared between two meshes. This is another time when you *may* want to include a non-mesh loop in the system of equations. 
 
 ![Current source shared between two nodes]({{ site.baseurl }}{% link i/loop2.svg %}){: .centered }
 
