@@ -25,33 +25,36 @@ comments: true
 
 ### Simplification
 
-* Karnaugh map (Car'-naw)
-* Gray code - distance 1 code, solves the Tower of Hanoi puzzle
+* Karnaugh map (Car'-naw) - graphical simplification
 
 ### Bits as commands
 
-Assertion
+Assertion, active high, active low
 
 ### Bits as symbols
 
 * $2^n$
+* bytes
 * distance
+* Gray code - distance 1 code, solves the Tower of Hanoi puzzle
 
 ### Bits as numbers
 
-* Binary numbers, octal hex
+* Binary numbers, octal, hexadecimal
 * Addition
 * Subtraction
 
 ### Bits as memory
 
-* Basic digital memory - cross-coupled inverters
+* Digital memory - cross-coupled inverters
 * SR flip-flop with NAND and NOR
 * Flip-flops --- D, T, JK
 
 ### Counting
 
+* Introduction
 * Shift register
 * Johnson counter
 * Binary counter
+* Carry chains
 * Linear-feedback shift register
