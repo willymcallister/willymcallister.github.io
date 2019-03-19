@@ -19,7 +19,9 @@ comments: true
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan.md %}) --- a logic superpower 
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Using DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan2.md %}) 
+![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem in action]({{ site.baseurl }}{% link _articles/demorgan2.md %}) 
+
+![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem for basic gates ]({{ site.baseurl }}{% link _articles/demorgan2.md %})
 
 ### Simplification
 
