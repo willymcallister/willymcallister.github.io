@@ -54,15 +54,17 @@ I picked node $\greenD c$ to be the reference node, as shown by the little trian
 
 ## Definition: node voltage
 
-To use the Node Voltage Method we need a new term: *node voltage*. A node voltage is a potential difference measured between the reference node and another node in the circuit. (Up to now, we've talked about the voltage across the terminals of a single element. This is called an *element voltage* (or *branch voltage*). The concepts are very similar but not identical.) 
+To use the Node Voltage Method we need a new term: *node voltage*. A node voltage is a potential difference measured between the reference node and another node in the circuit. Up to now, we've talked about the voltage across the terminals of a single element. This is called an *element voltage* (or a *branch voltage*). The concepts are similar but not identical.
 
 The example circuit has two node voltages, labeled $\goldD{v_a}$ and $\goldD{v_b}$.
 
 ![Node voltages labeled]({{ site.baseurl }}{% link i/node_voltage2.svg %}){: .centered :} 
 
-The node voltage arrows always start at the reference node. Each one arcs up to another circuit node, in this case to nodes $a$ and $b$. 
+The node voltage arrows always start at the reference node and then arcs up to a circuit node, in this case to nodes $a$ and $b$. 
 
-A node voltage can also be an element voltage. For example, $v_b$ is a node voltage and also the element voltage for the $5\,\Omega$ resistor, $6\,\Omega$ resistor, and the current source. But notice how the schematic shows no element voltage for the $20\,\Omega$ resistor. It can be derived from the difference of two node voltages, $v_a - v_b$. 
+You can use node voltages to derive an element voltage. For example, the $20\,\Omega$ resistor is connected between node $a$ and $b$. The element voltage for this resistor is the difference of two node voltages, $v_a - v_b$. 
+
+Whenever a circuit element is connected directly to the reference node the node voltage at its other end is also its element voltage. For example, the $6\,\Omega$ resistor, $5\,\Omega$ resistor, and current source are all connected to the reference node. The element voltage for all three is $v_b - 0$ or just $v_b$.  
 
 ## Control the current arrow
 
@@ -134,7 +136,7 @@ Let's work out the individual currents flowing in the three resistors connected 
 
 ![Individual currents]({{ site.baseurl }}{% link i/node_voltage4-1b.svg %}){: .centered :}{: height="260px"}
 
-I labeled the element voltage on the $20\,\Omega$ resistor with $v_a$ as the leading term, to get the current arrow to point towards the right, flowing into node $b$.  
+When you write a KCL equation remember that each term is an *element* voltage (not a node voltage). I labeled the element voltage on the $20\,\Omega$ resistor as $v_a - v_b$, with $v_a$ as the leading term. This means the current arrow to point to the right, flowing into node $b$.  
 
 The current flowing into node $b$ from the $20\,\Omega$ resistor is $+\dfrac{(v_a - v_b)}{20}$.
 
