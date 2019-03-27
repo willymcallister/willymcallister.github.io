@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Digital electronics is based on some fundamental concepts,
+Digital design is based these fundamental concepts,
 
 * Simplicity
 * Abstraction
@@ -13,6 +13,16 @@ Digital electronics is based on some fundamental concepts,
 * Intent
 
 Written by Willy McAllister.
+
+----
+
+### Contents
+{:.no_toc}
+
+* Will be replaced with the ToC
+{:toc}
+
+----
 
 ## Simplicity
 
@@ -77,15 +87,15 @@ Some of the ideas are simple,
 Some of the ideas are not so simple,
 
 * Create signal names that reflect your *intent*. 
-* Use DeMorgan equivalent symbols to reflect your *intent*. (We cover this soon. This is my all-time favorite digital discipline.)
+* Use DeMorgan equivalent symbols to reflect your *intent*. (This is my all-time favorite digital discipline.)
 
 We will come across several more principles as we go along.
 
-## Design intent
+## Intent
 
-The whole purpose of digital design is to communicate what you want your circuit to do. The goal is to capture your *design intent*. Your goal is to have your drawings or code clearly capture your design intent. 
+The whole purpose of digital design is to communicate what your circuit is supposed to do. The goal is to capture your *design intent*. Your want your drawings or code to clearly capture your design intent. 
 
-You may very well be able to create an obscure design that works perfectly, but if it is not clear to others how it works (or to yourself a few weeks from now), it is a poor design. A poor design is brittle, it breaks easily when changed. A poor design is nearly impossible to transfer to another person. A poor design is a crappy neighbor when included as part of a larger design.
+It is not hard to create an obscure design that works perfectly. But, if it is not clear how it works to others (or to yourself a few weeks from now), it is a poor design. A poor design is brittle, it breaks when changed. A poor design is almost impossible to transfer to another person and its very hard to include it in a larger design.
 
 You want your design intent to leap off the page. If it does not, keep redrawing or rewriting it until it does. In the process you will discover errors of logic and intent that were not apparent in the original.
 
@@ -100,5 +110,6 @@ The following articles describe digital ideas simply. It may seem terse, but I p
 When I studied digital electronics in college a wise person, my TA (teaching assistant), said the goal is to fill your head with a "trash bin" of digital ideas and pull them back out as you need them. We begin in the middle of the hierarchy with logic. Then we'll go back and figure out how to get electronics to do logic.
 
 ## Summary
+{:.no_toc}
 
 Simplicity and abstraction are pillars of digital design.

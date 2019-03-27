@@ -7,6 +7,8 @@ comments: true
 
 DeMorgan's theorem unleashes the full power of NAND and NOR gates. It is by far the most important theorem in digital design. DeMorgan lets you clearly reveal your *design intent*. Logic becomes easier to understand and get right.
 
+Using DeMorgan's theorem in your designs is an important aspect of *discipline* we talked about in the [introduction to digital electronics]({{ site.baseurl }}{% link _articles/digital-electronics.md %}).
+
 Written by Willy McAllister.
 
 ----

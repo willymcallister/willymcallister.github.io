@@ -23,13 +23,14 @@ comments: true
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem for basic gates ]({{ site.baseurl }}{% link _articles/demorgan2.md %})
 
+![]({{ site.baseurl }}{% link i/article.svg %}) [Assertion]({{ site.baseurl }}{% link _articles/assertion.md %}) --- high/low, on/off, active, asserted
+
 ### Simplification
 
 * Karnaugh map (Car'-naw) - graphical simplification
 
 ### Bits as commands
 
-Assertion, active high, active low
 
 ### Bits as symbols
 

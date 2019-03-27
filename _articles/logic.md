@@ -98,7 +98,7 @@ AB $\qquad$ A $\cdot$ B  $\qquad$ A & B  $\qquad$ A && B  $\qquad$ A $\land$ B
 
 We can also draw the AND function with a logic symbol,
 
-![A AND B equals C]({{ site.baseurl }}{% link i/logic1.svg %}){: .centered }
+![A AND B equals C]({{ site.baseurl }}{% link i/logic_AND.svg %}){: .centered }
 
 #### The OR operation
 {:.no_toc}
@@ -130,7 +130,7 @@ A $+$ B $\qquad$ A \|\| B  $\qquad$ A $\lor$ B
 
 We can draw the problem with the logic symbol for OR,
 
-![A OR B equals C]({{ site.baseurl }}{% link i/logic2.svg %}){: .centered }
+![A OR B equals C]({{ site.baseurl }}{% link i/logic_OR.svg %}){: .centered }
 
 #### The NOT operation
 {:.no_toc}
@@ -158,13 +158,13 @@ The last one is pronounced reset *bang!* just for fun.
 
 The symbol for an inverter introduces the *bubble* notation,
 
-![A NOT equals A-bar]({{ site.baseurl }}{% link i/logic3.svg %}){: .centered }
+![A NOT equals A-bar]({{ site.baseurl }}{% link i/logic_NOT.svg %}){: .centered }
 
 The triangle shape is there so the bubble has something to attach to. The triangle is not the logic function. All the action is in the bubble.
 
 If the input happens to be inverted, like <span class="oline">A</span>, you might want to draw the bubble on the input side of the triangle, so it is on the  same side as the inverted A signal,
 
-![NOT A-bar equals A]({{ site.baseurl }}{% link i/logic4.svg %}){: .centered }
+![NOT A-bar equals A]({{ site.baseurl }}{% link i/logic_NOT.svg %}){: .centered }
 
 Both variations of the inverter symbol mean exactly the same thing. The logic input variable is inverted going through the gate. You will see why this is a good idea when we study bubble matching and logical *assertion*. 
 
@@ -181,7 +181,7 @@ In textbooks or in writing the XOR function is a plus sign in a circle, $A \oplu
 
 The symbol for XOR is a variation on the OR symbol,
 
-![A XOR B equals C]({{ site.baseurl }}{% link i/logic5.svg %}){: .centered }
+![A XOR B equals C]({{ site.baseurl }}{% link i/logic_XOR.svg %}){: .centered }
 
 That's the four symbols for the basic gates. We will learn a bunch more soon.
 
