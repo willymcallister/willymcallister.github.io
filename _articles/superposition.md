@@ -90,9 +90,7 @@ $\text{Vs1} + \text{Vs2} - i \,\text R = 0$
 
 and solve for $i$,
 
-$i = f(\text{Vs1}+\text{Vs2}) = {\dfrac{\text{Vs1} +\text{Vs2}}{\text R}}$ 
-
-(Conventional solution)
+\\[\tag{conventional solution}i = f(\text{Vs1}+\text{Vs2}) = {\dfrac{\text{Vs1} +\text{Vs2}}{\text R}}\\] 
 
 ### Solve using the principle of superposition
 
@@ -171,9 +169,7 @@ $i = i_1 + i_2$
 
 $i = \dfrac{\text{Vs1}}{\text R} + \dfrac{\text{Vs2}}{\text R}$
 
-${i = \dfrac{\text{Vs1}+\text{Vs2}}{\text R}}$ 
-
-(Superposition solution)
+\\[\tag{superposition solution}{i = \dfrac{\text{Vs1}+\text{Vs2}}{\text R}}\\]
 
 Check it out! Compare this superposition solution to the conventional solution we got above. They're the same!
 
@@ -250,9 +246,7 @@ $+\dfrac{\text{Vs}-v}{\text{R1}} \quad - \dfrac{v}{\text{R2}} \qquad + \text{Is}
 
 We can rearrange this to get an expression for $v$ by gathering like terms together on the right side,
 
-$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text R2}{\text R1+\text R2}\,\text{Is} $
-
-(Conventional solution)
+\\[\tag{conventional solution}v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text R2}{\text R1+\text R2}\,\text{Is}\\]
 
 {% capture summary %}please show the algebra{% endcapture %}  
 {% capture details %}    
@@ -260,41 +254,41 @@ I took a shortcut I will share it with you.
 
 Starting from the KCL equation,
 
-$+\dfrac{\text{Vs}-v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$
+\\[\tag{1}+\dfrac{\text{Vs}-v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0\\]
 
 Separate the first fraction into separate numerators,
 
-$+\dfrac{\text{Vs}}{\text{R1}} - \dfrac{v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$
+\\[\tag{2}+\dfrac{\text{Vs}}{\text{R1}} - \dfrac{v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0\\]
 
 Group together the two fractions with $v$ in the numerator,
 
-$+\dfrac{\text{Vs}}{\text{R1}} - \left ( \dfrac{v}{\text{R1}} + \dfrac{v}{\text{R2}} \right ) + \text{Is}= 0$
+\\[\tag{3}+\dfrac{\text{Vs}}{\text{R1}} - \left ( \dfrac{v}{\text{R1}} + \dfrac{v}{\text{R2}} \right ) + \text{Is}= 0\\]
 
 Factor out $v$ from the group,
 
-$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( \dfrac{1}{\text{R1}} + \dfrac{1}{\text{R2}} \right ) + \text{Is}= 0$
+\\[\tag{4}+\dfrac{\text{Vs}}{\text{R1}} - v\left ( \dfrac{1}{\text{R1}} + \dfrac{1}{\text{R2}} \right ) + \text{Is}= 0\\]
 
 Now the trick: You should recognize the resistor expression in parentheses as two resistors in parallel. You can write this two ways, as the sum of reciprocals, or as the product over the sum,
 
-$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} \right )} = {\dfrac{\text{R1}\cdot\text{R2}} {\text{R1} + \text{R2}}}$
+\\[\tag{5}\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} \right )} = {\dfrac{\text{R1}\cdot\text{R2}} {\text{R1} + \text{R2}}}\\]
 
 Substitute the last term for the resistor reciprocals, flipping it over the right way,
 
-$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) + \text{Is}= 0$
+\\[\tag{6}+\dfrac{\text{Vs}}{\text{R1}} - v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) + \text{Is}= 0\\]
 
 Move some stuff over to the right side and keep the signs right,
 
-$ v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) = \dfrac{\text{Vs}}{\text{R1}} + \text{Is}$
+\\[\tag{7}v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) = \dfrac{\text{Vs}}{\text{R1}} + \text{Is}\\]
 
 Move and flip the parallel $\text R$ expression over to the right side to isolate $v$,
 
-$v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \left ( \dfrac{\text{Vs}}{\text{R1}} + \text{Is} \right )$
+\\[\tag{8}v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \left ( \dfrac{\text{Vs}}{\text{R1}} + \text{Is} \right )\\]
 
 Multiply through to get the form we want for later comparison to the superposition result,
 
-$v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \dfrac{\text{Vs}}{\text{R1}} + \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \text{Is}$
+\\[\tag{9}v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \dfrac{\text{Vs}}{\text{R1}} + \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \text{Is}\\]
 
-$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}$
+\\[\tag{10}v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}\\]
 
 The expression for two parallel resistors is fully worked out in this article on [parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}#special-case--2-resistors-in-parallel). It's a good one to memorize.
 {% endcapture %}{% include details.html %}
@@ -342,9 +336,7 @@ We complete the superposition analysis by adding the two voltage contributions.
 
 $v = v_{Vs} + v_{Is}$
 
-$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}$ 
-
-(Superposition solution)
+\\[\tag{superposition solution}v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}\\]
 
 As predicted, we get the same result as the conventional solution shown above. With superposition, there is no approximation involved. The solutions are exactly the same. The key thing to notice is that the two simpler circuits took less work to analyze.
 
