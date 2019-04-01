@@ -84,7 +84,7 @@ We now solve this circuit two ways: first by conventional analysis, and then usi
 
 ### Conventional solution
 
-To solve by conventional means we write the [KVL]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) equation around the loop,
+To solve by conventional means we write [Kirchhoff's voltage law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) (KVL) equation around the loop,
 
 $\text{Vs1} + \text{Vs2} - i \,\text R = 0$
 
@@ -240,7 +240,7 @@ For the following linear circuit let’s calculate the output voltage $v$.
 
 ### Conventional solution
 
-We will do it the conventional way first. We write [Kirchhoff's current law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) at output node $v$,
+We will do it the conventional way first. We write [Kirchhoff's current law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) (KCL) at output node $v$,
 
 ![Example 2 conventional solution]({{ site.baseurl }}{% link i/superposition11.svg %}){: .centered :}
 
@@ -254,45 +254,50 @@ $v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text 
 
 (Conventional solution)
 
-<details>
-<summary>please show the algebra</summary>
-<p>When I did this algebra I took a shortcut I will share it with you.</p>
-<ol>
-<li>Starting from,</li>
-<p>$+\dfrac{\text{Vs}-v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$</p>
+{% capture summary %}please show the algebra{% endcapture %}  
+{% capture details %}    
+I took a shortcut I will share it with you.
 
-<li>Separate the first fraction into separate numerators. </li>
+Starting from the KCL equation,
 
-<p>$+\dfrac{\text{Vs}}{\text{R1}} - \dfrac{v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$</p>
+$+\dfrac{\text{Vs}-v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$
 
-<li>Group together the two fractions with $v$ in the numerator.</li>
-<p>$+\dfrac{\text{Vs}}{\text{R1}} - \left ( \dfrac{v}{\text{R1}} + \dfrac{v}{\text{R2}} \right ) + \text{Is}= 0$</p>
+Separate the first fraction into separate numerators,
 
-<li>Factor out $v$ from the group.</li>
-<p>$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( \dfrac{1}{\text{R1}} + \dfrac{1}{\text{R2}} \right ) + \text{Is}= 0$</p>
+$+\dfrac{\text{Vs}}{\text{R1}} - \dfrac{v}{\text{R1}} - \dfrac{v}{\text{R2}} + \text{Is}= 0$
 
-<p>Now the trick: That resistor expression resembles two resistors in parallel,</p>
+Group together the two fractions with $v$ in the numerator,
 
-<p>$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} \right )} = {\dfrac{\text{R1}\cdot\text{R2}} {\text{R1} + \text{R2}}}$</p>
+$+\dfrac{\text{Vs}}{\text{R1}} - \left ( \dfrac{v}{\text{R1}} + \dfrac{v}{\text{R2}} \right ) + \text{Is}= 0$
 
-<li>Substitute the last term for the resistor reciprocals, flipping it over the right way,</li>
-<p>$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) + \text{Is}= 0$</p>
+Factor out $v$ from the group,
 
-<li>Move some stuff over to the right side and keep the signs right.</li>
-<p>$ v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) = \dfrac{\text{Vs}}{\text{R1}} + \text{Is}$</p>
+$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( \dfrac{1}{\text{R1}} + \dfrac{1}{\text{R2}} \right ) + \text{Is}= 0$
 
-<li>Move and flip the parallel $\text R$ expression over to the right side to isolate $v$,</li>
-<p>$ v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \left ( \dfrac{\text{Vs}}{\text{R1}} + \text{Is} \right ) $</p>
+Now the trick: You should recognize the resistor expression in parentheses as two resistors in parallel. You can write this two ways, as the sum of reciprocals, or as the product over the sum,
 
-<li>Multiply through to get the form we want for later comparison to the superposition result.</li>
-<p>$ v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \dfrac{\text{Vs}}{\text{R1}} + \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \text{Is} $</p>
+$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text{R1}} +\dfrac{1}{\text{R2}} \right )} = {\dfrac{\text{R1}\cdot\text{R2}} {\text{R1} + \text{R2}}}$
 
-<p>$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is} $</p>
-</ol>
+Substitute the last term for the resistor reciprocals, flipping it over the right way,
 
-<p>The expression for two parallel resistors is fully worked out in this article about 
-<a href="https://spinningnumbers.org/a/parallel-resistors.html">parallel resistors</a> where it says Special Case - Two Resistors In Parallel. It's a good one to memorize.</p>
-</details>
+$+\dfrac{\text{Vs}}{\text{R1}} - v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) + \text{Is}= 0$
+
+Move some stuff over to the right side and keep the signs right,
+
+$ v\left ( {\dfrac{\text{R1} + \text{R2}} {\text{R1} \cdot \text{R2}}} \right ) = \dfrac{\text{Vs}}{\text{R1}} + \text{Is}$
+
+Move and flip the parallel $\text R$ expression over to the right side to isolate $v$,
+
+$v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \left ( \dfrac{\text{Vs}}{\text{R1}} + \text{Is} \right )$
+
+Multiply through to get the form we want for later comparison to the superposition result,
+
+$v = \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \dfrac{\text{Vs}}{\text{R1}} + \left ( {\dfrac{\text{R1} \cdot \text{R2}} {\text{R1} + \text{R2}}} \right ) \text{Is}$
+
+$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}$
+
+The expression for two parallel resistors is fully worked out in this article on [parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}#special-case--2-resistors-in-parallel). It's a good one to memorize.
+{% endcapture %}{% include details.html %}
 
 ### Solution using superposition
 
