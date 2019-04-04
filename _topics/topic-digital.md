@@ -37,7 +37,7 @@ comments: true
 * $2^n$
 * bytes
 * distance
-* Gray code - distance 1 code, solves the Tower of Hanoi puzzle
+* Gray code - distance 1 code
 
 ### Bits as numbers
 
