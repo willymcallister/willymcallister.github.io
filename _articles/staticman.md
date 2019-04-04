@@ -38,7 +38,7 @@ Staticman allows users to enter their email address to subscribe to a post and b
 I recently converted from the v2 public instance of Staticman over to the v3 GitHub app.  
 1. Remove staticmanapp as a collaborator (if it is left over from an earlier install).  
 1. Go to https://github.com/apps/staticman-net and install the application on your repository. Just click on install. Don't change any settings. 
-1. Submit a comment to the new v3 endpoint, using dev.staticman.net as the base URL – i.e. https://dev.staticman.net/v3/entry/github/[USERNAME]/[REPOSITORY]/[BRANCH]. This line goes in _config.yml as the staticmanUrl variable.
+1. Submit a comment to the new v3 endpoint, https://api.staticman.net/v3/entry/github/[USERNAME]/[REPOSITORY]/[BRANCH]. This line goes in _config.yml as the staticmanUrl variable.
 
 ## Staticman implements comments and replies
 
