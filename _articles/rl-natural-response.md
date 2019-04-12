@@ -9,8 +9,6 @@ We investigate the *natural response* of a resistor inductor $(\text{RL})$ circu
 
 ![RL natural response circuit]({{ site.baseurl }}{% link i/rl_natural_response1.svg %}){: .centered :}
 
-This kind of $\text{RL}$ circuit appears any time a wire is involved in a circuit. The wire may be formed into a coil to form an inductor. Inductors are used in almost every power supply and in frequency filters. If you design with a mechanical relay, part of it is a coiled wire used as an electromagnet. Simple wires and traces on circuit boards always have a small inductance. This becomes important in very fast circuits. 
-
 To figure out this circuit we have to account for time, so we have to use some concepts from calculus. We use [derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives) to describe how the $\text{RL}$ circuit behaves.
 
 Written by Willy McAllister.
@@ -37,6 +35,8 @@ where $\text I_0$ is the current at time $t=0$. This is called the *natural resp
 The *time constant* for an $\text{RL}$ circuit is $\tau = \dfrac{\text L}{\text R}$.
 
 ----
+
+The $\text{RL}$ circuit appears any time a wire is involved in a circuit. Sometimes the wire is formed into a coil and we call it an inductor. Wires and traces on circuit boards always have a small inductance. The thin gold wires bonded to the pads on an integrated circuit have enough self-inductance to be important in very fast circuits. 
 
 The *natural response* of a circuit is what the circuit does when there are no external influences (it has internal energy, but no energy coming in from outside). It is the most basic behavior of a circuit. 
 
