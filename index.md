@@ -52,6 +52,9 @@ Electric force is described by Coulomb's Law. Electric field. Formal definition 
 ### [Digital electronics]({{ site.baseurl }}{% link _topics/topic-digital.md %})  
 Basic concepts underlying digital hardware design.
 
+### [Rarely asked questions]({{ site.baseurl }}{% link _articles/raq.md %})
+A collection of amusing, interesting, (and possibly useful), engineering questions.
+
 ### [The name <img class="sn-logo" src="/i/sn_logo2.svg">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})     
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from?
 
