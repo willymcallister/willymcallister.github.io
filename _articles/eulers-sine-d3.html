@@ -1,0 +1,208 @@
+<html>
+<head>
+  <style>
+    #trig{margin:20px}
+    .trig path{stroke:gold;stroke-width:4px;fill:none}
+    .trig circle,
+    .trig line{stroke:lime;stroke-width:2px;fill:none}
+    .trig .axis{stroke:silver}
+    .trig text{fill:silver;font-family:sans-serif;font-size:22}
+</style>
+</head>
+
+<body>
+<div id="eulers-sine"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+    
+<script> 
+(function () {
+
+  var
+    ID_TRIG = '#eulers-sine',
+    X1      = 'x1',
+    X2      = 'x2',
+    Y1      = 'y1',
+    Y2      = 'y2';
+
+  var
+    data    = [],
+    width   = 760,
+    height  = 460,
+    xmin    = -2,
+    xmax    = 7,
+    ymin    = -height * (xmax - xmin) / width / 2,
+    ymax    = -ymin,
+    xScale  = d3.scaleLinear(),
+    yScale  = d3.scaleLinear(),
+    vis     = d3.select(ID_TRIG).append('svg:svg'),
+    decor   = vis.append('svg:g'),
+    graph   = vis.append('svg:g'),
+    path    = graph.append('svg:path'),
+    b       = graph.append('svg:line'),
+    bb      = graph.append('svg:line'),
+    cc      = graph.append('svg:line'),
+    c       = graph.append('svg:line'),
+    circle  = graph.append('svg:circle'),
+    dot     = graph.append('svg:circle'),
+    label   = graph.append('svg:text'),
+    sine    = d3.line(),
+    time    = 0,
+    i;
+
+  for (i = 0; i < 84; i++) {
+    data.push(i * 10 / 84);   // data = 0  10/84  20/84  30/84 ...
+  }
+
+  xScale
+    .domain([xmin, xmax])
+    .range([0, width]);
+
+  yScale
+    .domain([ymin, ymax])
+    .range([0, height]);
+
+  vis
+    .attr('class', 'trig')
+    .attr('width', width)
+    .attr('height', height);
+
+   
+  sine
+    .x(function (d, i) { return xScale(d); })
+    .y(function (d, i) { return yScale(Math.sin(d - time)); });
+
+  decor.append("rect")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("fill", "black");
+
+  // X-Axis
+  decor.append('svg:line')
+    .attr('class', 'axis')
+    .attr(X1, xScale(xmin))
+    .attr(Y1, yScale(0))
+    .attr(X2, xScale(xmax))
+    .attr(Y2, yScale(0));
+
+  decor.append('svg:line')
+    .attr('class', 'axis')
+    .attr(X1, xScale(Math.PI))
+    .attr(Y1, yScale(0))
+    .attr(X2, xScale(Math.PI))
+    .attr(Y2, yScale(0) + 8);                 //tick mark
+
+  decor.append("svg:text")
+    .text(String.fromCharCode(960))           //pi character
+    .attr("x", Math.round(xScale(Math.PI)))
+    .attr("y", (yScale(0)) + 24)
+    .attr("text-anchor", "middle");
+
+    decor.append('svg:line')
+    .attr('class', 'axis')
+    .attr(X1, xScale(2*Math.PI))
+    .attr(Y1, yScale(0))
+    .attr(X2, xScale(2*Math.PI))
+    .attr(Y2, yScale(0) + 8);                 //tick mark
+
+  decor.append("svg:text")
+    .text("2" + String.fromCharCode(960))     //2pi character
+    .attr("x", Math.round(xScale(2*Math.PI)))
+    .attr("y", (yScale(0)) + 24)
+    .attr("text-anchor", "middle");
+
+  // Y-Axis
+  decor.append('svg:line')
+    .attr('class', 'axis')
+    .attr(X1, xScale(0))
+    .attr(Y1, yScale(ymin))
+    .attr(X2, xScale(0))
+    .attr(Y2, yScale(ymax));
+
+  // Time
+  label
+    .attr("x", 2)
+    .attr("y", 24);
+
+  // Circle
+  circle
+    .attr('cx', xScale(0))
+    .attr('cy', yScale(0))
+    .attr('r', xScale(1) - xScale(0))
+    .style("stroke", "silver")
+    .style("fill", "none");
+
+  // Dot
+  dot
+    .attr('cx', xScale(0))
+    .attr('r', 4)
+    .style('stroke', 'gold')
+    .style('fill', 'gold');
+
+  // Triangle
+  c   // rotating hypotenuse +
+    .attr(X1, xScale(0))
+    .attr(Y1, yScale(0))
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  cc   // rotating hypotenuse -
+    .attr(X1, xScale(0))
+    .attr(Y1, yScale(0))
+    .style('stroke', 'hotpink')
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  function draw() {
+
+    var
+      x  = xScale(Math.cos(time)/2),     // x and y are in output coordinates
+      y  = yScale(-Math.sin(time)/2),
+      xm = xScale(-Math.cos(time)/2),
+      ym = yScale(Math.sin(time)/2),
+      yd = yScale(-Math.sin(time));
+
+    path
+      .attr('d', sine(data));
+
+    //label
+    //  .text('t = '+ Math.floor(time / Math.PI));
+
+    c
+      .attr(X2, x)           // rotating hypotenuse +
+      .attr(Y2, y);
+    cc
+      .attr(X2, xm)           // rotating hypotenuse -
+      .attr(Y2, y);
+
+    b
+      .attr(X1, xScale(0))    // dashed side of triangle +
+      .attr(Y1, yd)
+      .attr(X2, x)
+      .attr(Y2, y)
+      .style('stroke', 'hotpink')
+      .style('stroke-width', '2px')
+      .style("stroke-dasharray", ("3, 3"));
+ 
+    bb
+      .attr(X1, xScale(0))    // dashed side of triangle -
+      .attr(Y1, yd)
+      .attr(X2, xm)
+      .attr(Y2, y)
+      .style('stroke', 'lime')
+      .style('stroke-width', '2px')
+      .style("stroke-dasharray", ("3, 3"));
+
+    dot
+      .attr('cy', yd);
+
+    time += .03;
+
+    setTimeout(draw, 35);
+  }
+  draw();
+
+})();
+</script>
+
+</body>
+</html>

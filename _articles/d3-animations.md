@@ -13,15 +13,15 @@ A handy Chrome-specific bookmarklet is [SVG Crowbar](https://nytimes.github.io/s
 
 ### Euler's sine wave  
 
-{% include_relative d3a/eulers-sine-d3.html %}
+{% include_relative eulers-sine-d3.html %}
 
 ### Euler's cosine wave
 
-{% include_relative d3a/eulers-cosine-d3.html %}
+{% include_relative eulers-cosine-d3.html %}
 
 ### Euler's sine and cosine  
 
-{% include_relative d3a/eulers-sine-cosine-d3.html %}
+{% include_relative eulers-sine-cosine-d3.html %}
 
 ### Spinningnumbers logo  
 

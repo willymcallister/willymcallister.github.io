@@ -1,0 +1,212 @@
+<html>
+<head>
+  <style>
+    #trig{margin:20px}
+    .trig path{stroke:orange;stroke-width:4px;fill:none}
+    .trig circle,
+    .trig line{stroke:lime;stroke-width:2px;fill:none}
+    .trig .axis{stroke:silver}
+    .trig text{fill:silver;font-family:sans-serif;font-size:22}
+</style>
+</head>
+
+<body>
+<div id="eulers-cosine"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+    
+<script> 
+
+(function () {
+
+  var
+    ID_TRIG = '#eulers-cosine';
+
+  var
+    data    = [],
+    height  = 580,
+    width   = 460,
+    ymin    = -2,
+    ymax    = 7,
+    domainH = ymax - ymin,
+    rangeH  = height,
+    rangeW  = width,
+    domainW = domainH * (rangeW / rangeH),
+    xmax    = domainW / 2,
+    xmin    = -xmax,
+    xScale  = d3.scaleLinear(),
+    yScale  = d3.scaleLinear(),
+    vis     = d3.select(ID_TRIG).append('svg:svg'),
+    decor   = vis.append('svg:g'),
+    graph   = vis.append('svg:g'),
+    b       = graph.append('svg:line'),
+    bb      = graph.append('svg:line'),
+    cc      = graph.append('svg:line'),
+    c       = graph.append('svg:line'),
+    circle  = graph.append('svg:circle'),
+    path    = graph.append('svg:path'),
+    dot     = graph.append('svg:circle'),
+    label   = graph.append('svg:text'),
+    cosine  = d3.line(),
+    time    = 0,
+    i;
+
+  for (i = 0; i < 84; i++) {
+    data.push(i * 10 / 84);   // data = 0  10/84  20/84  30/84 ... 83/84
+  }
+
+  xScale
+    .domain([xmin, xmax])
+    .range([0, width]);
+
+  yScale
+    .domain([ymin, ymax])
+    .range([0, height]);
+
+  vis
+    .attr('class', 'trig')
+    .attr('width', width)
+    .attr('height', height);
+   
+  cosine
+    .y(function (d, i) { return yScale(d); })
+    .x(function (d, i) { return xScale(Math.cos(d - time)); });
+
+  decor.append("rect")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("fill", "black");
+
+  // X-Axis
+  decor.append('svg:line')
+    .attr('x1', xScale(xmin))
+    .attr('y1', yScale(0))
+    .attr('x2', xScale(xmax))
+    .attr('y2', yScale(0))
+    .style("stroke", "silver");
+
+  decor.append('svg:line')
+    .attr('y1', yScale(Math.PI))
+    .attr('x1', xScale(0))
+    .attr('y2', yScale(Math.PI))
+    .attr('x2', xScale(0) + 8)
+    .style("stroke", "silver");                 //tick mark
+
+  decor.append("svg:text")
+    .text(String.fromCharCode(960))             //pi character
+    .attr("y", Math.round(yScale(Math.PI)))
+    .attr("x", (xScale(0)) + 24)
+    .attr("text-anchor", "middle")
+    .style("fill", "silver")
+    .style('font-family', 'sans-serif')
+    .style('font-size', '18px');
+
+  decor.append('svg:line')
+    .attr('y1', yScale(2*Math.PI))
+    .attr('x1', xScale(0))
+    .attr('y2', yScale(2*Math.PI))
+    .attr('x2', xScale(0) + 8)
+    .style("stroke", "silver");                 //tick mark
+
+  decor.append("svg:text")
+    .text("2" + String.fromCharCode(960))       //2pi character
+    .attr("y", Math.round(yScale(2*Math.PI)))
+    .attr("x", (xScale(0)) + 24)
+    .attr("text-anchor", "middle")
+    .style("fill", "silver")
+    .style('font-family', 'sans-serif')
+    .style('font-size', '18px');
+
+  // Y-Axis
+  decor.append('svg:line')
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(ymin))
+    .attr('x2', xScale(0))
+    .attr('y2', yScale(ymax))
+    .style("stroke", "silver");
+
+  // Unit circle
+  circle
+    .attr('cx', xScale(0))
+    .attr('cy', yScale(0))
+    .attr('r', xScale(1) - xScale(0))
+    .style("stroke", "silver")
+    .style('stroke-width', '2px')
+    .style("fill", "none");
+
+  // Cosine dot
+  dot
+    .attr('cy', yScale(0))
+    .attr('r', 4)
+    .style('fill', 'orange')
+    .style('stroke', 'orange');
+
+  // Triangle
+  c     // rotating hypotenuse +
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(0))
+    .style('stroke', 'lime')
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  cc    // rotating hypotenuse for cosine +e^-jwt
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(0))
+    .style('stroke', 'tomato')
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  b     // vector add line
+    .style('stroke', 'tomato')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  bb    // vector add line
+    .style('stroke', 'lime')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  function draw() {
+    var
+      x = xScale(Math.cos(time)/2),
+      y = yScale(-Math.sin(time)/2);
+      xm = xScale(-Math.cos(time)/2);
+      xd = xScale(Math.cos(time));
+      ym = yScale(Math.sin(time)/2);
+
+    path
+      .attr('d', cosine(data));
+
+    c
+      .attr('x2', x)          // +rotating hypotenuse e^+jwt
+      .attr('y2', y);
+
+    cc
+      .attr('x2', x)          // +rotating hypotenuse e^-jwt
+      .attr('y2', ym);
+
+    b
+      .attr('x1', xd)          // vector add line (tomato)
+      .attr('y1', yScale(0))
+      .attr('x2', x)
+      .attr('y2', y);
+
+    bb
+      .attr('x1', xd)          // vector add line (lime)
+      .attr('y1', yScale(0))
+      .attr('x2', x)
+      .attr('y2', ym);
+
+    dot
+      .attr('cx', xd);
+
+    time += .03;
+
+    setTimeout(draw, 35);
+  }
+  draw();
+
+})();
+</script>
+
+</body>
+</html>

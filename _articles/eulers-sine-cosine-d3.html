@@ -1,0 +1,231 @@
+<html>
+<head>
+  <style>
+    #trig{margin:20px}
+    .trig path{stroke:gold;stroke-width:4px;fill:none}
+    .trig circle,
+    .trig line{stroke:lime;stroke-width:2px;fill:none}
+    .trig .axis{stroke:silver}
+    .trig text{fill:silver;font-family:sans-serif;font-size:22}
+</style>
+</head>
+
+<body>
+<div id="eulers-sine-cosine"></div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+    
+<script> 
+(function () {
+
+  var
+    ID_TRIG = '#eulers-sine-cosine';
+
+  var
+    data    = [],
+    width   = 500,
+    height  = 500,
+    xmin    = -2,
+    xmax    = 6.5,
+    ymin    = -2,
+    ymax    = 6.5,
+    xScale  = d3.scaleLinear(),
+    yScale  = d3.scaleLinear(),
+    vis     = d3.select(ID_TRIG).append('svg:svg'),
+    decor   = vis.append('svg:g'),
+    graph   = vis.append('svg:g'),
+    pathS   = graph.append('svg:path'),     // sine curve
+    pathC   = graph.append('svg:path'),     // cosine curve
+    b       = graph.append('svg:line'),     // dashed lines
+    bb      = graph.append('svg:line'),
+    d       = graph.append('svg:line'),     // dashed lines
+    dd      = graph.append('svg:line'),
+    ccc     = graph.append('svg:line'),     // spinners
+    cc      = graph.append('svg:line'),
+    c       = graph.append('svg:line'),
+    circle  = graph.append('svg:circle'),   // unit circle
+    dotS    = graph.append('svg:circle'),   // sine dot
+    dotC    = graph.append('svg:circle'),   // cosine dot
+    label   = graph.append('svg:text'),
+    sine    = d3.line(),
+    cosine  = d3.line(),
+    time    = 0,
+    i;
+
+  for (i = 0; i < 84; i++) {
+    data.push(i * 10 / 84);   // data = 0  10/84  20/84  30/84 ...
+  }
+
+  xScale
+    .domain([xmin, xmax])
+    .range([0, width]);
+
+  yScale
+    .domain([ymin, ymax])
+    .range([0, height]);
+
+  vis
+    .attr('class', 'trig')
+    .attr('width', width)
+    .attr('height', height);
+
+  sine
+    .x(function (d, i) { return xScale(d); })
+    .y(function (d, i) { return yScale(Math.sin(d - time)); });
+
+  cosine
+    .y(function (d, i) { return yScale(d); })
+    .x(function (d, i) { return xScale(Math.cos(d - time)); });
+
+  decor.append("rect")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("fill", "black");
+
+  // X-Axis
+  decor.append('svg:line')
+    .attr('class', 'axis')
+    .attr('x1', xScale(xmin))
+    .attr('y1', yScale(0))
+    .attr('x2', xScale(xmax))
+    .attr('y2', yScale(0));
+
+  // Y-Axis
+  decor.append('svg:line')
+    .attr('class', 'axis')
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(ymin))
+    .attr('x2', xScale(0))
+    .attr('y2', yScale(ymax));
+
+  // Unit circle
+  circle
+    .attr('cx', xScale(0))
+    .attr('cy', yScale(0))
+    .attr('r',  xScale(1) - xScale(0))
+    .style("stroke", "silver")
+    .style("fill", "none");
+
+  // Sine dot
+  dotS
+    .attr('cx', xScale(0))
+    .attr('r', 4)
+    .style('stroke', 'gold')
+    .style('fill', 'gold');
+
+  // Cosine dot
+  dotC
+    .attr('cy', yScale(0))
+    .attr('r', 4)
+    .style('stroke', 'orange')
+    .style('fill', 'orange');
+
+  // Spinning vectors
+  c     // rotating e^+jwt for both
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(0))
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  cc   // -rotating -e^-jwt for sine
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(0))
+    .style('stroke', 'hotpink')
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  ccc   // +rotating +e^-jwt for cosine
+    .attr('x1', xScale(0))
+    .attr('y1', yScale(0))
+    .style('stroke', 'tomato')
+    .style('stroke-width', '4px')
+    .attr('stroke-linecap', "round");
+
+  b    // dashed sine vector add
+    .style('stroke', 'hotpink')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  bb    // dashed sine vector add
+    .style('stroke', 'lime')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  d    // dashed cosine vector add
+    .style('stroke', 'tomato')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  dd    // dashed cosine vector add
+    .style('stroke', 'lime')
+    .style('stroke-width', '2px')
+    .style("stroke-dasharray", ("3, 3"));
+
+  function draw() {
+    var
+      x  = xScale(Math.cos(time)/2),
+      y  = yScale(-Math.sin(time)/2),
+      xm = xScale(-Math.cos(time)/2),
+      xd = xScale(Math.cos(time));
+      ym = yScale(Math.sin(time)/2),
+      yd = yScale(-Math.sin(time));
+
+    pathS
+      .attr('d', sine(data));
+
+    pathC
+      .attr('d', cosine(data))
+      .style('stroke', 'orange');
+
+    c
+      .attr('x2', x)            // rotating e^+jwt for both
+      .attr('y2', y);
+
+    cc
+      .attr('x2', xm)           // rotating -e^-jwt for sine
+      .attr('y2', y);
+
+    ccc
+      .attr('x2', x)            // rotating +e^-jwt for cosine
+      .attr('y2', ym);
+
+    b
+      .attr('x1', xScale(0))    // dashed sine vector add
+      .attr('y1', yd)
+      .attr('x2', x)
+      .attr('y2', y);
+ 
+    bb
+      .attr('x1', xScale(0))    // dashed sine vector add
+      .attr('y1', yd)
+      .attr('x2', xm)
+      .attr('y2', y);
+
+    d
+      .attr('x1', xd)    // dashed cosine vector add
+      .attr('y1', yScale(0))
+      .attr('x2', x)
+      .attr('y2', y);
+ 
+    dd
+      .attr('x1', xd)    // dashed cosine vector add
+      .attr('y1', yScale(0))
+      .attr('x2', x)
+      .attr('y2', ym);
+
+    dotS
+      .attr('cy', yd);
+
+    dotC
+      .attr('cx', xd);
+
+    time += .03;
+
+    setTimeout(draw, 35);
+  }
+  draw();
+
+})();
+</script>
+
+</body>
+</html>

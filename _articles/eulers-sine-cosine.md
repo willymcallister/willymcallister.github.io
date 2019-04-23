@@ -4,8 +4,9 @@ title:  "Euler's sine and cosine"
 author: Willy McAllister
 comments: true
 ---
+<p>&nbsp;</p>
 
-{% include_relative d3a/eulers-sine-cosine-d3.html %}
+{% include_relative eulers-sine-cosine-d3.html %} 
 
 <audio src="https://www.youtube.com/audiolibrary_download?vid=78599bdd7a0a465e" controls loop></audio>
 
@@ -31,6 +32,6 @@ Notice the $90\degree$ phase shift between sine and cosine created by the simula
 
 Just music, no narration. The background music is *Sunday Stroll* by Huma Huma. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
-Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3a/eulers-cosine-d3.html). The image is not a video. It's being computed on the fly by your device.
+Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-cosine-d3.html). The image is not a video. It's being computed on the fly by your device.
 
 Created by Willy McAllister.
