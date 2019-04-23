@@ -5,7 +5,6 @@ author: Willy McAllister
 comments: true
 ---
 
-{% include_relative d3a/eulers-cosine-d3.html %}
 
 <audio src="https://www.youtube.com/audiolibrary_download?vid=4ce80a47a63a7fa1" controls loop></audio>
 
