@@ -8,7 +8,7 @@ comments: true
 
 {% include_relative eulers-cosine-d3.html %} 
 
-<audio src="https://www.youtube.com/audiolibrary_download?vid=4ce80a47a63a7fa1" controls loop></audio> 
+<audio src="https://www.youtube.com/audiolibrary_download?vid=4ce80a47a63a7fa1" controls loop></audio>  
 
 ### Euler's formula for cosine
 

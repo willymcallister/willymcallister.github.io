@@ -81,13 +81,13 @@ We can express the idea of scaling in mathematical notation,
 - Doubling the input is expressed as $f(2x)$.  
 - Doubling the output is expressed as $2f(x)$.
 
-If $2f(x) = 2f(x)$ for any value of $x$ that means "doubling" has the scaling property.
+If $f(2x) = 2f(x)$ for any value of $x$ that means "doubling" has the scaling property.
 
 In general the test for scaling is,
 
 $f(ax) \stackrel{?}{=} af(x)$
 
-where $a$ is some number called the *scale factor*. This is the test for the *scaling* property. The fancy mathematical name is *homogeneity*. 
+where $a$ is some number called the *scale factor*. This is the test for the scaling property. The fancy mathematical name for the scaling property is *homogeneity*. 
 
 When you check a function for the scaling property, see if the two sides of the equation are equal. If the test passes for all values of $x$ and all values of $a$, then $f(x)$ is a linear function.
 
