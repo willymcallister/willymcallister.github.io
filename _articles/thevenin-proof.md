@@ -9,12 +9,6 @@ Thévenin's theorem says a complicated network of resistors and sources, when vi
 
 We cover Thévenin's theorem in two steps. In this article we present the proof. In the [next article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) we use Thévenin's theorem to find equivalent circuits.
 
-Consider Thévenin's theorem when you want to focus on a specific part of a circuit and hide the rest. For example, suppose you care about what happens at the output port of a circuit. The theorem allows you to model the $i$-$v$ behavior at the output port and replace the whole circuit with a simple Thévenin equivalent. The Thévenin equivalent retains the exact behavior you care about while hiding the internal complexity. 
-
-Thévenin's theorem is another design tool to put in your toolbox. Use it is an alternative to [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) or [Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}). 
-
-Thévenin's theorem works for all *linear* circuits. In this article we cover circuits made of resistors and sources. The theorem extends to circuits with $\text R, \text L,$ and $\text C$ by talking in terms of [impedance]({{ site.baseurl }}{% link _videos/ac-analysis-impedance.md %}), $\text Z$ instead of $\text R$.
-
 Written by Willy McAllister.
 
 ----
@@ -37,7 +31,7 @@ Any combination of resistors and sources can be simplified down to a single volt
 
 One of the surprising concepts from linear circuit theory is the idea that two circuits can be *equivalent*. Two circuits are equivalent if they display the same $i$-$v$ behavior *at a selected port*. Thévenin's theorem says: If you have a complicated linear circuit, you can replace it with an equivalent Thévenin circuit made from one voltage source and one resistance. 
 
-In an earlier article, [Simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to turn any resistor network into a single resistor. Thévenin's and Norton's theorems are the next step. They teach us how to simplify networks of resistors *and* sources. If you have a really complicated linear circuit the theorems provide the instructions for how to construct a very simple equivalent circuit. 
+In an earlier article on [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}) we learned how to turn any resistor network into a single resistor. Thévenin's and Norton's theorems are the next step. They teach us how to simplify networks of resistors *and* sources. If you have a really complicated linear circuit the theorems show you how to construct a simple equivalent circuit. 
 
 In this article we prove Thévenin's theorem using the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). The [next article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) shows practical steps to create a Thévenin equivalent from a given circuit. The proof and the practical design steps are separate ideas, often mixed together in many texts. 
 
@@ -82,7 +76,9 @@ We are interested in what's happening at the $2\,\text k\Omega$ resistor on the 
 
 ![Example Thévenin circuit]({{ site.baseurl }}{% link i/thevenin21.svg %}){: .centered :}
 
-To demonstrate Thévenin's theorem we need to show the voltage at the port can be written in the form $\goldC v = \text V_\text T - \blueD i\,\text R_\text T$, where $\text V_\text T$ and $\text R_\text T$ are to be discovered. 
+To demonstrate Thévenin's theorem we need to show the voltage at the port can be written in the form $\goldC v = \text V_\text T + \blueD i\,\text R_\text T$, where $\text V_\text T$ and $\text R_\text T$ are to be discovered. 
+
+![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2a.svg %}){: .centered :}
 
 The demonstration is pretty clever. We use the the principle of superposition. Whenever you see multiple sources, superposition should pop into your head.
 
@@ -91,7 +87,7 @@ The demonstration is pretty clever. We use the the principle of superposition. W
 The proof relies on your understanding of linearity and the resulting circuit analysis method called superposition. If you want to refresh on these important theories, please take a break from this proof and visit <a href="/a/linearity.html">linearity</a> and <a href="/a/superposition.html">superposition</a>. Then come back and go through the proof.  
 {% endcapture %}{% include details.html %} 
 
-### Review - how to solve a circuit with superposition
+### Review - solve a circuit with superposition
 
 To solve a circuit using superposition, 
 
@@ -306,7 +302,7 @@ This means if you go back to the original circuit and put a short circuit across
 
 ## Observations
 
-What can we learn from the proof to give us a practical method for finding a Thévenin or Norton equivalent? Here are some observations about the proof,
+How does the proof help us come up with a practical way to find a Thévenin or Norton equivalent?
 
 * The superposition strategy gave us three types of sub-circuit. Some had a single voltage source, some had a single current source, and one had no internal sources. 
 
@@ -314,7 +310,7 @@ What can we learn from the proof to give us a practical method for finding a Th�
 
 * The third sub-circuit, the one with all internal sources suppressed, left us with just the original resistor network. When we simplified the network it gave us the Thévenin resistance, $\text R_\text T$. 
 
-* If we want $\text I_\text N$ we can short across the port and measure $i_{sc}$ in the shorting wire.
+* To find $\text I_\text N$ we can short across the port and measure $i_{sc}$ in the shorting wire.
 
 * If for some reason we know $\text V_\text T$ and $\text I_\text N$ but not $\text R$, we find $\text R$ with $\text R = v_{oc}/i_{sc}$.
 
@@ -344,5 +340,7 @@ We did the proof based on the principle of superposition.
 "A circuit made of any combination of resistors and sources can be simplified down to a single current source in parallel with a single resistor."
 
 This is a direct outcome of the transformation of Thévenin's circuit form to Norton's form.
+
+Thévenin's theorem works for all *linear* circuits. In this article we cover circuits made of resistors and sources. The theorem extends to circuits with $\text R, \text L,$ and $\text C$ by talking in terms of [impedance]({{ site.baseurl }}{% link _videos/ac-analysis-impedance.md %}), $\text Z$ instead of $\text R$.
 
 In the next article we will learn practical methods to find the Thévenin equivalent of a given circuit. You don't have to go through the superposition analysis each time. There are some nice shortcuts.

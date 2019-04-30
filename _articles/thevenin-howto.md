@@ -338,6 +338,8 @@ And the final step is to embed the Thévenin equivalent of the biasing network b
 ## Summary
 {:.no_toc}
 
+Thévenin's theorem is another design tool to put in your toolbox. Use it is an alternative to [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) or [Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}). 
+
 **Thévenin's theorem**
 "A circuit made of any combination of resistors and sources can be simplified down to a single voltage source in series with a single resistor."
 
@@ -358,3 +360,5 @@ To create a Thévenin or Norton equivalent,
     - $i_{sc} = v_{oc}/,\bold R$
 * The Thévenin equivalent is $\bold R$ in series with $v_{oc}$.
 * The Norton equivalent is $\bold R$ in parallel with $i_{sc}$.
+
+Consider Thévenin's theorem when you want to focus on a specific part of a circuit and hide the rest. For example, suppose you care about what happens at the output port of a circuit. The theorem allows you to model the $i$-$v$ behavior at the output port and replace the whole circuit with a simple Thévenin equivalent. The Thévenin equivalent retains the exact behavior you care about while hiding the internal complexity. 
