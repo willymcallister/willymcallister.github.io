@@ -2,7 +2,7 @@
 layout: video
 title:  "LC natural response - derivation 4"
 author: Willy McAllister
-youtubeID: v=51UHJnjUOSs
+youtubeID: 51UHJnjUOSs
 comments: true
 --- 
 
