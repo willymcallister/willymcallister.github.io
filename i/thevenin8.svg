@@ -12,8 +12,8 @@
    height="369.84775"
    version="1.1"
    id="svg2"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="thevenin8.svg">
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="thevenin8-1.svg">
   <metadata
      id="metadata164">
     <rdf:RDF>
@@ -45,9 +45,9 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      fit-margin-left="10"
-     inkscape:zoom="1.27"
-     inkscape:cx="226.07097"
-     inkscape:cy="174.3183"
+     inkscape:zoom="1.1573486"
+     inkscape:cx="216.44299"
+     inkscape:cy="184.92387"
      inkscape:current-layer="svg2" />
   <xhtml:defs>
     <xhtml:style
@@ -564,6 +564,6 @@ svg text { font-style: normal; font-variant: normal; font-weight: normal; font-s
      inkscape:connector-curvature="0"
      id="path158"
      style="stroke:#74cf70;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
-     d="m 274.5749,35.529446 -160,320.000004"
+     d="m 274.5749,355.52945 -160,-320.000004"
      class="path" />
 </svg>

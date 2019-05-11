@@ -133,9 +133,12 @@ svg text {
   var current = 6;
   var resistor = 2;
 
+  //var resistorIV = [  
+  //  { "x": xmax, "y": (xmax / resistor) - (voltage / resistor)}, 
+  //  { "x": xmin, "y": (xmin / resistor) - (voltage / resistor)}];
   var resistorIV = [  
-    { "x": xmax, "y": (xmax / resistor) - (voltage / resistor)}, 
-    { "x": xmin, "y": (xmin / resistor) - (voltage / resistor)}];
+    { "x": xmax, "y": (-xmax / resistor) + (voltage / resistor)}, 
+    { "x": xmin, "y": (-xmin / resistor) + (voltage / resistor)}];
 
   var lineFunction = d3.line()
     .x(function (d) { return xScale(d.x); })

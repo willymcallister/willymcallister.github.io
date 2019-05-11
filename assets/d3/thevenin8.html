@@ -134,8 +134,8 @@ svg text {
   var resistor = 0.5;
 
   var resistorIV = [  
-    { "x": (ymax + current) * resistor, "y": ymax}, 
-    { "x": (ymin + current) * resistor, "y": ymin}];
+    { "x": -(ymax - current) * resistor, "y": ymax}, 
+    { "x": -(ymin - current) * resistor, "y": ymin}];
 
   var lineFunction = d3.line()
     .x(function (d) { return xScale(d.x); })
@@ -145,15 +145,6 @@ svg text {
       .classed("path", true)
       .style("stroke", "#74CF70")      /* KA cs2       */
       .attr('d', lineFunction(resistorIV));
-
-  svgContainer.append("text")
-      .attr("x", xScale(0))
-      .attr("y", yScale(0))
-      .text("p_average")
-      .style("text-anchor", "start")
-      .style("font-size", "16px")
-      .style('fill', 'black');
-
 </script>
 </body>
 </html>

@@ -15,8 +15,8 @@
    y="0px"
    viewBox="0 0 295.99982 149.21489"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="thevenin4.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="thevenin4a.svg"
    width="295.99982"
    height="149.21489"><metadata
      id="metadata4923"><rdf:RDF><cc:Work
@@ -39,9 +39,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="2.2837852"
+     inkscape:zoom="1.6925686"
      inkscape:cx="147.99991"
-     inkscape:cy="57.949767"
+     inkscape:cy="74.607445"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -76,7 +76,7 @@
 	.st25{font-family:'KaTeX_Main-Italic';}
 	.st26{fill:none;stroke:#11ACCD;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
 </style><g
-     transform="matrix(-1,0,0,1,341.85521,-71.508661)"
+     transform="translate(91.008781,-71.508661)"
      id="g5760"><line
        style="font-family:KaTeX_Main-Regular;fill:none;stroke:#11accd;stroke-width:3.62247801;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        id="line4509"
