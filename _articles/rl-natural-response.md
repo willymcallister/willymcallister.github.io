@@ -329,7 +329,7 @@ The time constant determines how fast the exponential curve comes down to zero. 
 If you make the inductor bigger, the time constant gets longer.  
 If you make the resistor bigger, the time constant get shorter. 
 
-Contrast this with the $\text{RC}$ time constant, $\tau_{\text{RC}}=\text{RC}$, which gets longer with both larger $\text R$ and $\text C$. When the resistor is large the energy dissipation is high, the natural response is snuffed out rapidly. When the resistor is small the energy dissipates slowly and the current circulates round and round for a long time. 
+This is different than the $\text{RC}$ time constant, $\tau_{\text{RC}}=\text{RC}$, which gets longer with both larger $\text R$ and $\text C$. For the $\text{RL}$, when the resistor is large energy its dissipation is high and the natural response is snuffed out rapidly. When the resistor is small the inductor current passes more freely through the resistor so energy dissipates slowly and the current circulates round and round for a long time. 
 
 {% capture summary %}The RL time constant is *not* R times L.{% endcapture %}  
 {% capture details %}  
@@ -339,7 +339,7 @@ For the $\text{RC}$ circuit the time constant *is* $\text{RC}$.
 
 Do your best not to get trapped. 
 
-How do you remember the order of the quotient? Is $\text R$ on top, or is it $\text L$? I remember $\text L/\text R$ because "el over r" starts with *hello!* while "arr over el" sounds like a mean pirate.
+How do you remember the order of the quotient? Is $\text R$ on top, or is it $\text L$? I remember $\text L/\text R$ because "el over r" starts with *hello!* while "arr over el" sounds like a pirate.
 {% endcapture %}{% include details.html %} 
 
 ## Worked example
