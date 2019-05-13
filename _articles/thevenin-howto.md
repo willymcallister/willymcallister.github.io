@@ -126,7 +126,7 @@ Here is the circuit with the two internal sources suppressed---the voltage sourc
 
 With all the sources gone, what's left? A resistor network. So let's reduce the network to a single equivalent resistance,
 
-$\bold R = 500 + 1000 \parallel 1000 = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000}$
+$\bold R = 500 + (1000 \parallel 1000) = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000}$
 
 $\bold R = 1000\,\Omega$
 
