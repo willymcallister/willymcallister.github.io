@@ -115,7 +115,7 @@ If the effective load resistance is $10{\times}$ greater than the bottom resisto
 
 If the voltage divider operates near its extremes, with the output voltage close to either $v_{\text{in}}$ or $0$, the percentage error will be different. To find out how much different, we repeat the analysis with the output voltage set to $90\%$ and $10\%$ of the divider range. We keep the load resistor ten times the bottom resistor, so the parallel combination of $\text R2$ and $\text R_{\text L}$ is still $0.91\,\text R2$.
 
-### Case 1: $90\%$ of $v_{in}$
+### Case 1: 90% of $v_{in}$
 
 Let the design target for $v_{out}$ be $90\%$ of $v_{in}$, so $v_{out}$ is really high in its range.
 
@@ -156,7 +156,7 @@ The actual output voltage is $89\%$ of $v_{in}$ instead of the design goal of $9
 
 [Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["r",[200,40,0],{"name":"R1","r":"1.111k","_json_":0},["2","4"]],["v",[112,80,0],{"name":"vin","value":"dc(10)","_json_":1},["3","0"]],["r",[200,120,0],{"name":"R2","r":"10k","_json_":2},["4","0"]],["w",[112,168,112,128]],["w",[112,40,112,80]],["g",[160,168,0],{"_json_":5},["0"]],["w",[112,168,160,168]],["w",[200,168,160,168]],["a",[152,40,0],{"color":"magenta","offset":"0","_json_":8},["3","2"]],["w",[112,40,152,40]],["w",[200,40,168,40]],["r",[288,120,0],{"name":"RL","r":"100k","_json_":11},["1","0"]],["w",[200,168,288,168]],["w",[288,120,288,104]],["w",[312,104,288,104]],["w",[200,88,200,120]],["view",0,0,2,"50","10","1G",null,"100","0.01","1000"]]) of  $v_\text{out} = 90\%$ of $v_\text{in}$. Perform a **DC** operating point simulation of the circuit as-is. Then connect a wire from the load resistor to the voltage divider. Perform another **DC** operating point and see how the output voltage droops slightly. 
 
-### Case 2: $10\%$ of $v_{in}$
+### Case 2: 10% of $v_{in}$
 
 Let $v_{out} = 10\%$ of $v_{in}$, so $v_{out}$ is really low in its range. 
 

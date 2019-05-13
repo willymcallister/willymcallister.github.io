@@ -5,15 +5,15 @@ author: Willy McAllister
 comments: true
 ---
 
-We learn how to apply Thévenin's theorem and Norton's theorem. 
-
-The [previous article]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}) presented a proof of Thévenin's theorem and Norton's theorem. 
+We proved Thévenin's and Norton's theorems in the [previous article]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}). This article covers the practical steps to create a Thévenin or Norton equivalent for a linear circuit. 
 
 **Thévenin's theorem**  
 Any network of resistors and sources, when viewed from a port, can be simplified down to one voltage source in series with one resistor.
 
 **Norton's theorem**  
 Any network of resistors and sources, when viewed from a port, can be simplified down to one current source in parallel with one resistor. 
+
+The proof and the practical design method are separate ideas. You often find them mixed together in many texts. 
 
 Written by Willy McAllister.
 
@@ -54,10 +54,6 @@ One of the coolest ideas from linear circuit theory is the concept of an *equiva
 
 In an earlier article on [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to turn any resistor network into an equivalent single resistor. Thévenin's and Norton's theorems are the next step. They teach us how to simplify networks of resistors *and* sources. If you have a complicated linear circuit the theorems provide the instructions for how to construct a very simple equivalent circuit. 
 
-We proved Thévenin's and Norton's theorems in the [previous article]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}). This article covers the practical steps to create a Thévenin or Norton equivalent from a given circuit. 
-
-The proof and the practical design method are separate ideas. You often find them mixed together in many texts. 
-
 ## Using Thévenin's theorem
 
 Thévenin's theorem looks like this in schematic form,
@@ -91,7 +87,7 @@ To create a Thévenin equivalent,
 * If you know $i_{sc}$ and $\bold R$, compute $v_{oc} = \text V_\text T = i_{sc}\,\bold R$ for the Thévenin equivalent. 
 * If you know $v_{oc}$ and $\bold R$, compute $i_{sc} = \text I_\text N = v_{oc}/\bold R$ for the Norton equivalent.
 
-When you find $v_{oc}$ or $i_{sc}$ you have to do a circuit analysis. Choose either one based on how hard you think the analysis task will be.
+When you find $v_{oc}$ or $i_{sc}$ you have to do a circuit analysis. Choose either one based on how hard you think the analysis task will be. If you can't tell, flip a coin.
 
 ## Example 1
 
