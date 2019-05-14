@@ -304,7 +304,7 @@ $i(0^+) = 0$
 
 $\dfrac{di}{dt}(0^+) = \dfrac{\text V_0}{\text L}$
 
-### Find the $A$mplitude constants
+### Find the amplitude constants
 
 As a reminder, our proposed solution is,
 
@@ -743,12 +743,13 @@ $i = K_1 e^{-\alpha t} + K_2\, t \, e^{-\alpha t}$
 Notice there's a new factor $t$ included in the second term. It prevents the two terms from collapsing together. Now that we have a better proposed solution, we look for $K_1$ and $K_2$ using the initial conditions. 
 
 ### Critically damped response depends on the initial conditions 
+{:.no_toc}
 
-The critically damped case can turn out two ways. It depends on how the initial conditions are set up. We will do both versions.
-* First, we place an initial voltage $\text V_0$ on the capacitor and zero initial current. 
+The critically damped case can turn out two ways. It depends on how the initial energy is set up. We will do both versions.
+* First, we place an initial voltage $\text V_0$ on the capacitor, with zero initial current. 
 ![RLC with initial voltage Vo]({{ site.baseurl }}{% link i/rlc_natural_response20.svg %}){: .centered :}
 
-* Second, we start with an initial inductor current $\text I_0$ and zero voltage on the capacitor. 
+* Second, we start with an initial inductor current $\text I_0$, with zero voltage on the capacitor. 
 ![RLC with initial current Io]({{ site.baseurl }}{% link i/rlc_natural_response25.svg %}){: .centered :}
 
 ### Critically damped with an initial voltage
