@@ -428,6 +428,7 @@ Before we move on we should take a look at the natural response of the three vol
 ![Under damped example after switch closes]({{ site.baseurl }}{% link i/rlc_natural_response24.svg %}){: .centered :}
 
 #### Resistor voltage
+{:.no_toc}
 
 We know $i$ so Ohm's Law tells us the resistor voltage,
 
@@ -438,6 +439,7 @@ $v_\text R = -5 e^{-t} \sin 2 t \cdot 2\,\Omega$
 $v_\text R = -10 e^{-t} \sin 2 t$
 
 #### Inductor voltage
+{:.no_toc}
 
 The inductor voltage emerges from the inductor $i$-$v$ equation,
 
@@ -458,6 +460,7 @@ $\left (f \cdot g \right )^\prime = -5e^{-t} \sin 2t + 5\,e^{-t}\,2\cos 2t$
 $v_\text L = 5e^{-t} (2\cos 2t - \sin 2t)$
 
 #### Capacitor voltage
+{:.no_toc}
 
 How do you find the voltage on a capacitor if you know the current? We use the integral form of the capacitor $i$-$v$ equation $($with an extra $-$ sign because $i$ is backwards relative to $v_\text C)$,
 
@@ -534,6 +537,7 @@ $f = e^{-t} \qquad\,\,\,\,\, g^\prime = -4 \sin 2t$</p>
 </details>
 
 #### Plot the voltages
+{:.no_toc}
 
 I never fully understand a waveform until I see a picture of it. Here are all three voltages plotted together,
 
