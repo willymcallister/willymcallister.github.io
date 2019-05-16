@@ -330,7 +330,10 @@ This is the derivative of the product of two functions, so we use the [product r
 
 $\left (f \, g \right )^\prime = f^\prime \, g + f \, g^\prime$ 
 
->This is prime notation. $x^\prime$ means the same thing as $\dfrac{dx}{dt}$.
+{% capture summary %}prime notation{% endcapture %}  
+{% capture details %}  
+$x^\prime$ means the same thing as $\dfrac{dx}{dt}$.
+{% endcapture %}{% include details.html %} 
 
 Identify the two parts of the product and their derivatives,
 
@@ -780,8 +783,10 @@ This derivative includes a product, so we have to (get to!) use the [product rul
 
 $\left (f \, g \right )^\prime = f^\prime \, g + f \, g^\prime$
 
->This is prime notation. $x^\prime$ means the same thing as $\dfrac{dx}{dt}$.
-
+{% capture summary %}prime notation{% endcapture %}  
+{% capture details %}  
+$x^\prime$ means the same thing as $\dfrac{dx}{dt}$.
+{% endcapture %}{% include details.html %} 
 $f = t \qquad g =  e^{-\alpha t}$
 
 $f^\prime = 1\qquad g^\prime = -\alpha \, e^{-\alpha t}$
@@ -930,7 +935,10 @@ $\dfrac{di}{dt} = \dfrac{d}{dt}\left ( \text I_0 \,e^{-\alpha t} + K_2\,t\,e^{-\
 
 This is the derivative of a sum, and one of the terms is a product.
 
->Derivative [sum rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-basic-diff-rules/v/basic-differentiation-rules) (start at 3:15). We did the same product rule [just above]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#critically-damped-with-an-initial-voltage).
+{% capture summary %}derivative of a sum{% endcapture %}  
+{% capture details %}  
+Review the [sum rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-derivative-rules/ab-basic-diff-rules/v/basic-differentiation-rules) (jump to 3:15 in the video). We used the product rule [up above]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#critically-damped-with-an-initial-voltage).
+{% endcapture %}{% include details.html %} 
 
 $\dfrac{di}{dt} = -\alpha I_0 e^{-\alpha t} + K_2 e^{-\alpha t}(1 - \alpha t)$
 
