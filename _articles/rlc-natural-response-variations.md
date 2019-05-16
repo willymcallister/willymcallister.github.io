@@ -861,13 +861,11 @@ $i = 10\,t\,e^{-2 t}$
 The critically damped natural response with an initial voltage looks like this,
 
 ![RLC critically damped current with initial voltage]({{ site.baseurl }}{% link i/rlc_critically_damped_current_V.svg %}){: .centered :}
+<p class="caption">Critically damped series $\text{RLC}$ with an initial voltage. $\text R = 4$ ohms, $\text L = 1$ henry, $\text C = 1/4$ farad, with an initial $10$ volts on the capacitor. The curved gray line is $i = 10\,e^{-2t}$. The slanted straight gray line is $i = t$. The blue result is the product of the two gray lines, $i = 10\,t\,e^{-2 t}$.</p>
 
-<p class="caption">Critically damped series $\text{RLC}$ with an initial voltage. $\text R = 4$ ohms, $\text L = 1$ henry, and $\text C = 1/4$ farad, with an initial $10$ volts on the capacitor. The curved gray line is $\text V_0\, e^{-\alpha t}$. The straight gray line from the origin is $t$. Multiply these together to get the blue result.</p>
-
-Talk it through,
-* The current starts and ends at $i = 0\,\text A$. 
-* It surges upwards when the switch closes, and then decays back down to zero. 
-* With zero initial current, the critically damped response never crosses the voltage axis. 
+* The current starts and ends at $i = 0$. 
+* When the switch closes the current surges upwards and decays back down to zero. 
+* When there is an initial voltage, the critically damped response never swings negative. 
 
 ### Critically damped with an initial current
 
@@ -987,10 +985,9 @@ And here is the distinctive shape of a critically damped response with an initia
 
 <p class="caption">Critically damped series $\text{RLC}$ with an initial current. The gray lines are the two terms in the solution. The upper gray line is $\text I_0\,e^{-\alpha t}$. The lower gray line is $-\alpha \text I_0\,t\,e^{-\alpha t}$. Add them together to get the blue result.</p>
 
-Talk it through,
 * The current starts at $i = \text I_0 = 1.75\,\text A$. 
 * It goes negative at $0.5$ seconds, and then decays back up to zero. 
-* With an initial current, the critically damped response crosses the voltage axis one time. 
+* When there is an initial current, the critically damped response crosses the time axis one time and then decays to $0$. 
 
 ### Critically damped simulation models
 
@@ -1009,9 +1006,9 @@ Explore: Go back to the definitions of $\alpha$ and $\omega_o$ and design a diff
     <p>I would like to thank Khan Academy learner Jonathan B. Landham for discovering and reporting an error in my critically damped solution and providing the inspiration to fully work out the derivation with repeated roots.</p>
 </details>
 
-## All three variants plotted together
+## Three variants plotted together
 
-Compare the current waveforms from the three example circuits we solved. They all started with $10\,\text V$ on the capacitor. Here they are plotted together on the same scale, 
+Compare the waveforms from the three variants that started with $10\,\text V$ on the capacitor. Here they are plotted together on the same scale, 
 
 ![3 variants plotted together]({{ site.baseurl }}{% link i/rlc_3variations_current.svg %}){: .centered :}
 
@@ -1019,10 +1016,10 @@ Compare the current waveforms from the three example circuits we solved. They al
 * $\alpha = 2\quad \omega_o = 2\qquad$ <span style="color:#11ACCD;">Critically damped</span>
 * $\alpha = 5\quad \omega_o = 3\qquad$ <span style="color:#0C7F99;">Over damped</span>
 
-All three currents surge upwards when the switch is closed.  
-Under damped goes the highest and wiggles above and below the ending current.  
-Critically damped has a single hump. It is the quickest to get down to the final current.  
-Over damped also has a single hump. You can't see it in this image but it gets down to the final value a little slower than critically damped.
+* All three currents surge upwards when the switch closed.  
+* Under damped goes the highest and wiggles above and below the ending current.
+* Critically damped has a single hump that never goes negative. It is the quickest to get down to the final current.
+* Over damped also has a single hump. You can't see it in this image but it gets down to the final value a little slower than critically damped.
 
 ## Summary 
 {:.no_toc}
