@@ -19,6 +19,16 @@ Electrical units can be described in a formal manner. That's what we are going t
 
 The standard electrical units are defined in a specific order. 
 
+>As of May 20, 2019 the definition of the Ampere has been changed---it is now based on the charge of the electron rather than a force measurement.  
+>
+>2019 definition: The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge e to be 1.602176634×10−19 when expressed in the unit C, which is equal to A⋅s.
+>
+>Previous definition: The ampere is that constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed 1 m apart in vacuum, would produce between these conductors a force equal to 2×10−7 newton per metre of length.
+>
+>[Redefinition of SI base units](https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units#Ampere)
+>
+>This article will revised in the near future.
+
 ## Ampere is a base unit
 
 The *ampere* is defined first. In the SI, the ampere is an SI *base unit*, which means the ampere is the only electrical unit defined as the outcome of an experiment. 
