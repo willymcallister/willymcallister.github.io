@@ -1,0 +1,12 @@
+_id: feced250-88eb-11e9-a7b0-114ab89eb4fd
+_parent: 'https://spinningnumbers.org/a/circuit-sandbox.html'
+replying_to: '6'
+message: >-
+  Kevin - Recent versions of Chrome have become picky about some older
+  JavaScript syntax. Perhaps I have not yet discovered all the problem lines. If
+  you know how to work Chrome’s Inspector, see if you can tell me the offending
+  line number in the source code of schematic.js. Or, try any other browser in
+  the meantime while I fix this.
+name: Willy McAllister
+email: 5c912e501342508e174581b1a8965ff2
+date: '2019-06-07T06:17:59.364Z'
