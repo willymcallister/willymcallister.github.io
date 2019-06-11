@@ -60,7 +60,7 @@ Why do we bother creating NAND and NOR gates? Why not just string together AND, 
 * Simple is smaller. 
   * You want to use the fewest transistors and the fewest gates possible. On a gate array, semi-custom ASIC, or custom integrated circuit, a NAND gate is always smaller than an AND gate. A NOR gate is always smaller than an OR gate. 
 * Simple is faster. 
-  * The naturally inverting NAND gate is always faster than a NAND + NOT combination. 
+  * The naturally inverting NAND gate is always faster than a AND + NOT combination. 
 * Simple save power. 
   * Simple gates have fewer nodes that have to change every logic transition. Fewer moving nodes means less charge is sloshing around, which means less charge has to come from the power supply. That means your battery-powered digital gizmo lasts a lot longer. Wouldn't it be nice if your mobile phone stayed charged for a month instead of a day?
 

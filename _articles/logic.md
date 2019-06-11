@@ -162,9 +162,9 @@ The symbol for an inverter introduces the *bubble* notation,
 
 The triangle shape is there so the bubble has something to attach to. The triangle is not the logic function. All the action is in the bubble.
 
-If the input happens to be inverted, like <span class="oline">A</span>, you might want to draw the bubble on the input side of the triangle, so it is on the  same side as the inverted A signal,
+If the input happens to be inverted, like <span class="oline">A</span>, you might want to draw the bubble on the input side of the triangle, so the bubble is on the  same side as <span class="oline">A</span>,
 
-![NOT A-bar equals A]({{ site.baseurl }}{% link i/logic_NOT.svg %}){: .centered }
+![NOT A-bar equals A]({{ site.baseurl }}{% link i/logic_NOT_demorgan.svg %}){: .centered }
 
 Both variations of the inverter symbol mean exactly the same thing. The logic input variable is inverted going through the gate. You will see why this is a good idea when we study bubble matching and logical *assertion*. 
 
