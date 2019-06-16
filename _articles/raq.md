@@ -154,6 +154,8 @@ $1$ cubit is the distance from your elbow to the tip of your middle finger.
 (Noah's Ark was dimensioned in cubits.)    
 Your arm span is about the same as your height. ([Vitruvian man](https://en.wikipedia.org/wiki/Vitruvian_Man)) 
 
+A grape has a volume of about $1$ cubic centimeter $(\text{cc})$. $1\,\text{cc}$ of water weights $1$ gram, so use a grape to think about grams. A US five cent coin (nickel) weights $5$ grams or $5$ grapes. A US penny weights half as much as a nickel, about $2.5$ grapes.
+
 The fathom (six feet or 1.8 meters) is how sailors measure depth. It comes from your arm span. Sailors measured depth by throwing a weighted rope over the side. They pull the rope up arm over arm and count how many pulls to lift the weight to the surface. That's the depth in fathoms.
 
 ## Electronics

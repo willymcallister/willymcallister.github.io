@@ -1,17 +1,18 @@
 ---
 layout: article
-title:  "Inverting op-amp exercise"
+title:  "Inverting opamp exercise"
 author: Willy McAllister
 comments: true
 ---
+![Inverting opamp example circuit]({{ site.baseurl }}{% link i/opamp_inverting_example.png %}){: .centered }{: height="300px" :} 
 
-Open this simulation model of an [inverting amplifier](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["o",[184,88,0],{"A":"30000","_json_":0},["2","0","vout","0"]],["r",[152,88,1],{"name":"R1","r":"3.3k","_json_":1},["2","1"]],["r",[232,56,1],{"name":"R2","r":"33k","_json_":2},["vout","2"]],["w",[184,104,168,104]],["L",[256,96,0],{"label":"vout","_json_":4},["vout"]],["v",[72,104,0],{"name":"","value":"sin(0,1,1000,0,0)","_json_":5},["1","0"]],["w",[72,104,72,88]],["g",[72,152,0],{"_json_":7},["0"]],["g",[168,104,0],{"_json_":8},["0"]],["g",[208,104,0],{"_json_":9},["0"]],["s",[72,88,0],{"color":"cyan","offset":"0","_json_":10},["1"]],["s",[256,96,0],{"color":"green","offset":"0","_json_":11},["vout"]],["w",[104,88,72,88]],["w",[184,56,176,56]],["w",[176,56,176,88]],["w",[184,88,176,88]],["w",[152,88,176,88]],["w",[232,56,240,56]],["w",[240,56,240,96]],["w",[232,96,240,96]],["w",[256,96,240,96]],["view",7.659999999999997,14.292000000000002,2.44140625,"50","10","1G",null,"100","0.009","1000"]]) in another browser tab.
+Open this [simulation model of an inverting amplifier](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B256%2C96%2C240%2C96%5D%5D%2C%5B%22w%22%2C%5B232%2C96%2C240%2C96%5D%5D%2C%5B%22w%22%2C%5B240%2C56%2C240%2C96%5D%5D%2C%5B%22w%22%2C%5B232%2C56%2C240%2C56%5D%5D%2C%5B%22w%22%2C%5B152%2C88%2C176%2C88%5D%5D%2C%5B%22w%22%2C%5B184%2C88%2C176%2C88%5D%5D%2C%5B%22w%22%2C%5B176%2C56%2C176%2C88%5D%5D%2C%5B%22w%22%2C%5B184%2C56%2C176%2C56%5D%5D%2C%5B%22w%22%2C%5B104%2C88%2C72%2C88%5D%5D%2C%5B%22s%22%2C%5B256%2C96%2C0%5D%2C%7B%22color%22%3A%22green%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A9%7D%2C%5B%22vout%22%5D%5D%2C%5B%22s%22%2C%5B72%2C88%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A10%7D%2C%5B%222%22%5D%5D%2C%5B%22g%22%2C%5B208%2C104%2C0%5D%2C%7B%22_json_%22%3A11%7D%2C%5B%220%22%5D%5D%2C%5B%22g%22%2C%5B168%2C104%2C0%5D%2C%7B%22_json_%22%3A12%7D%2C%5B%220%22%5D%5D%2C%5B%22g%22%2C%5B72%2C152%2C0%5D%2C%7B%22_json_%22%3A13%7D%2C%5B%220%22%5D%5D%2C%5B%22w%22%2C%5B72%2C104%2C72%2C88%5D%5D%2C%5B%22v%22%2C%5B72%2C104%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22sin(0%2C1%2C1000%2C0%2C0)%22%2C%22_json_%22%3A15%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22L%22%2C%5B256%2C96%2C0%5D%2C%7B%22label%22%3A%22vout%22%2C%22_json_%22%3A16%7D%2C%5B%22vout%22%5D%5D%2C%5B%22w%22%2C%5B184%2C104%2C168%2C104%5D%5D%2C%5B%22r%22%2C%5B232%2C56%2C1%5D%2C%7B%22name%22%3A%22R2%22%2C%22r%22%3A%224.7k%22%2C%22_json_%22%3A18%7D%2C%5B%22vout%22%2C%221%22%5D%5D%2C%5B%22r%22%2C%5B152%2C88%2C1%5D%2C%7B%22name%22%3A%22R1%22%2C%22r%22%3A%223.3k%22%2C%22_json_%22%3A19%7D%2C%5B%221%22%2C%222%22%5D%5D%2C%5B%22o%22%2C%5B184%2C88%2C0%5D%2C%7B%22A%22%3A%2230000%22%2C%22_json_%22%3A20%7D%2C%5B%221%22%2C%220%22%2C%22vout%22%2C%220%22%5D%5D%2C%5B%22view%22%2C7.659999999999997%2C14.292000000000002%2C2.44140625%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.009%22%2C%221000%22%5D%5D) in a new browser tab.
 
 **What is the expected gain of this amplifier?**
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
-From the video, the gain expression for the non-inverting amplifier is,
+From the inverting opamp [video]({{ site.baseurl }}{% link _videos/opamp-inverting.md %}), the gain expression for the amplifier is,
 
 $v_o = -\dfrac{\text R2}{\text R1}\,v_{in}$  
 
@@ -23,7 +24,7 @@ $v_o = -\dfrac{4.7}{3.3}\,v_{in}$
 
 $v_o = -1.4\,v_{in}$
 
-The gain is $-1.4$. The output is $1.4$ times larger and inverted with respect to the input. 
+The gain is $-1.4$. The output is inverted with respect to the input and is $1.4$ times larger. 
 {% endcapture %}{% include details.html %}
 
 **Click on TRAN to run a transient simulation.** 
