@@ -22,11 +22,11 @@ The Mesh Current Method is one of two well-organized methods for solving a circu
 
 **Mesh Current Method**
 
-* Identify the meshes (the open windows of a circuit).
-* Assign a current variable to each mesh, using a consistent direction.
+* Identify the meshes (the open windows of a circuit). Draw and name mesh current arrows with consistent direction (all clockwise or all counterclockwise).
+* Solve the easy mesh currents, the ones that pass through a constant current source.
 * Write Kirchhoff's Voltage Law around each mesh. 
-* Solve the resulting system of equations.
-* Solve the individual element currents and voltages with Ohm's Law.
+* Solve the resulting system of equations to get the mesh currents.
+* Find the element currents and voltages with Ohm's Law.
 
 Exception: If the circuit is [*non-planar*](#exception-non-planar-circuits), or you have a current source shared by two meshes, use the [Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %}). The [Loop Current Method](w/a/ee-loop-current-method) is a small variation of the Mesh Current Method.
 
@@ -36,7 +36,7 @@ Exception: If the circuit is [*non-planar*](#exception-non-planar-circuits), or 
 
 We need to understand two special circuit terms: *loop* and *mesh*.
 
-![Loop and mesh definitions](https://ka-perseus-images.s3.amazonaws.com/1e11477a94abdb9c8b8768f103cdb598fe9b5583.svg){: .centered :}
+![Loop and mesh definitions]({{ site.baseurl }}{% link i/mesh_current8.svg %}){: .centered :}
 
 A *loop* is any closed path around a circuit. To trace a loop, start at any component terminal and trace a path through connected elements until you get back to where you started. There is only one rule: A loop is allowed to go through an element just one time (so you don't get loops that look like a figure-8). In the circuit above, there are three loops, two solid loops, $\text I$ and $\text{II}$, and one dashed loop, $\text{III}$, all the way around the outside.  
 
@@ -45,24 +45,23 @@ If we trace the loops in the clockwise direction, the three loops in our circuit
 <p>$\begin{aligned}
 &\text{Loop I:}  &&\text{V1 - R1 - R3} \\  
 &\text{Loop II:} &&\text{R3 - R2 - V2} \\  
-&\text{Loop III: (dashed loop)} &&\text{V1 - R1 - R2 - V2}
-\end{aligned}$</p>
+&\text{Loop III: (dashed)} &&\text{V1 - R1 - R2 - V2}
+\end{aligned}$
+</p>
 
 A *mesh* is a restricted kind of loop; a mesh is a loop that contains no other loops. In the circuit above, loops $\text I$ and $\text{II}$ are *meshes* because there are no smaller loops inside. The dashed loop around the outside is not a mesh, because it contains two other loops.
 
 In the Mesh Current Method, we use the meshes to generate KVL equations. This always gives us the right number of independent equations. 
 
-<details>
-<summary>What does the word <em>mesh</em> mean?</summary>
-<p>The everyday word <em>mesh</em> has two meanings, </p>
+{% capture summary %}What does the word <em>mesh</em> mean?{% endcapture %}  
+{% capture details %}  
+The everyday word <em>mesh</em> has two meanings,
 
-<ul>
-<li>Mesh describes the <em>material</em> making up a network of wire or thread, as in, "Our fishing nets are made of a mesh of strong cord."</li>
-<li>Mesh is also the <em>spaces</em> between the individual strands of a network of wire or thread, "If the mesh is too big, small fish can swim through the holes and escape."</li>
-</ul>
+* Mesh describes the <em>material</em> making up a network of wire or thread, as in, "Our fishing nets are made of a mesh of strong cord."
+* Mesh is also the *space* between the individual strands of a network of wire or thread, "If the mesh is too big, small fish can swim through the holes and escape."
 
-<p>In circuit analysis, when we say a mesh traces around an "open window" of a circuit, we are using the second meaning, where mesh refers to the open spaces between the branches of the network. Look for the open windows to quickly identify the meshes in a circuit.</p>
-</details>
+In circuit analysis a mesh current flows through the wires forming the boundary of each mesh. This is the first meaning. To quickly identify the meshes you look for the "open windows" of a circuit. This is the second meaning.  
+{% endcapture %}{% include details.html %} 
 
 ## Mesh current
 
@@ -70,93 +69,100 @@ We now define another new term, *mesh current*. Up to now current has usually re
 
 Mesh current a bit of an odd idea, but stick with me. In the following circuit, let us define *mesh currents* $i_{\text I}$ and $i_{\text{II}}$ flowing around meshes $\text I$ and $\text{II}$, with the positive direction of the currents indicated by the arrows.
 
-![](https://ka-perseus-images.s3.amazonaws.com/edc62ed8622fe041dacc34fdf690d346b7830687.svg){: .centered :}
+![Define two mesh currents, I and II]({{ site.baseurl }}{% link i/mesh_current9.svg %}){: .centered :}
 
 It is clear that $i_{\text I}$ is the current flowing in source $\text V1$ and resistor $\text R1$. Likewise, $i_{\text{II}}$ is the current flowing in resistor $\text R2$ and source $\text V2$. But what is going on with the current in $\text R3$?
 
 Let's take a close-up look at $\text R3$ in the middle branch of the circuit. What is the element current flowing through $\text R3$?
 
-![R3 mesh currents](https://ka-perseus-images.s3.amazonaws.com/29d8fda8ba2dc18baec3f7e8ea0711c8944c49d7.svg){: .centered :}
+![Mesh currents in R3]({{ site.baseurl }}{% link i/mesh_current10.svg %}){: .centered :}
 
 The way the mesh currents are drawn, it looks like both of them are going through $\text R3$, in opposite directions. Can this be true? Yes it can, because we can use a very important concept called *the principle of superposition*.
 
-### The principle of superposition
+### Superposition
 
-*Superposition* is a fancy word for *add*. In the case of $\text R3$, we are using the principle of superposition when we say the two mesh currents, $i_{\text I}$ and $i_{\text{II}}$ add up to the actual current in the resistor, $i_{\text R3}$. 
+[*Superposition*]({{ site.baseurl }}{% link _articles/superposition.md %}) is a fancy word for *add*. In the case of $\text R3$, when we say the two mesh currents, $i_{\text I}$ and $i_{\text{II}}$ add up to the actual current in the resistor, $i_{\text R3}$ we are using *the principle of superposition*. 
 
-$ +i_{\text R3} = +i_{\text I} - i_{\text{II}}$
+$i_{\text R3} = +i_{\text I} - i_{\text{II}}$
 
-The two mesh currents *superimpose* (add up) to form the actual element current in $\text R3$. The arrow for mesh current $i_{\text I}$ points in the same direction as branch current $i_{\text R3}$, giving it a $+$ sign in the superposition equation. The arrow for mesh current $i_{\text{II}}$ points in the opposite direction, so it gets a $-$ sign in the equation.
+The two mesh currents *superimpose* (add) to form the element current in $\text R3$. The arrow for mesh current $i_{\text I}$ points in the same direction as branch current $i_{\text R3}$, giving it a $+$ sign in the superposition equation. The arrow for mesh current $i_{\text{II}}$ points in the opposite direction, so it gets a $-$ sign in the equation.
 
 ### Linearity
 
-We get to use superposition with ideal resistors is because an ideal resistor has the property of *linearity*. Linearity means if we multiply the voltage by a constant $a$, then the current is multiplied by the same constant $a$.
+We get to use superposition with ideal resistors is because an ideal resistor has the property of [*Linearity*]({{ site.baseurl }}{% link _articles/linearity.md %}). Resistors are linear because if we multiply the voltage by a constant $a$, then the current is multiplied by the same constant $a$.
 
 $v = i\,\text R$
 
 $a\,v = a\,i\,\text R$
 
-For an ideal resistor, this works for any $a$, which means an ideal resistor is linear. (For a real-world resistor $a$ can get only so big before the resistor burns up.)
+Linearity is what allows us to use the principle of superposition. We are using superposition when we define two mesh currents flowing in a single circuit element. And that means we get to use the Mesh Current Method to solve circuits! 
 
-Linearity means we get to use the principle of superposition. Superposition means we are free to define multiple mesh currents flowing in a single circuit element. And that means we can use the Mesh Current Method to solve circuits! 
-
-If you want to learn more about linearity and superposition, check out [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %}) and [Superposition]({{ site.baseurl }}{% link _articles/superposition.md %}).
+To learn more about linearity and superposition check out [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %}) and [Superposition]({{ site.baseurl }}{% link _articles/superposition.md %}).
 
 ## Mesh current practice
 
-problem 1  
-**Find the element current $i_{\text{Rx}}$.**
+problem 1  **Find the element current $i_{\text{Rx}}$,**
 
-![Problem 1 resistor](https://ka-perseus-images.s3.amazonaws.com/2c5a472d2c8fc200c78136b7fd54dbbbe69db93f.svg)
+![Problem 1 resistor]({{ site.baseurl }}{% link i/mesh_current11.svg %})
 
 $\large i_{\text{Rx}} = $ \_\_\_\_\__ $\text{mA}$
 
-<details>
-<summary>show answer</summary>
-<p>$4\,\text{mA}$ is flowing down through $\text{Rx}$, the same direction as the element current arrow, $i_{\text{Rx}}$. </p> 
-<p>$3\,\text{mA}$ is flowing up through $\text{Rx}$, opposing the direction of the element current arrow, $i_{\text{Rx}}$. </p>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+$4\,\text{mA}$ is flowing down through $\text{Rx}$, the same direction as the element current arrow, $i_{\text{Rx}}$.
 
-<p>By superposition, $i_{\text{Rx}} = +4\,\text{mA} - 3\,\text{mA} = +1\,\text{mA}$</p>
-</details>
+$3\,\text{mA}$ is flowing up through $\text{Rx}$, opposing the direction of the element current arrow, $i_{\text{Rx}}$.
 
-problem 2  
-**Find the element current $i_{\text{Ry}}$.**
+By superposition, $i_{\text{Rx}} = +4\,\text{mA} - 3\,\text{mA} = +1\,\text{mA}$  
+{% endcapture %}{% include details.html %} 
 
-![Problem 2 resistor](https://ka-perseus-images.s3.amazonaws.com/3091979a6831a59b241114e131d07f7ceb77d9ce.svg)
+problem 2 **Find the element current $i_{\text{Ry}}$,**
+
+![Problem 2 resistor]({{ site.baseurl }}{% link i/mesh_current12.svg %})
 
 $\large i_{\text{Ry}} = $ \_\_\_\_\__ $\text{mA}$
 
-<details>
-<summary>show answer</summary>
-<p>Mesh $\text I$ has $2\,\text{mA}$ opposing the direction of the element current arrow, $i_{\text{Ry}}$. So it goes in with a minus sign.</p>  
-<p>Mesh $\text{II}$ has $-2\,\text{mA}$ flowing in the same direction as the element current arrow, $i_{\text{Rx}}$. So it also goes in with a minus sign.</p> 
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+Mesh $\text I$ has $2\,\text{mA}$ opposing the direction of the element current arrow, $i_{\text{Ry}}$. So it goes in with a minus sign.
 
-<p>By superposition, $i_{\text{Ry}} = -2\,\text{mA} - 2\,\text{mA} = -4\,\text{mA}$</p>
-</details>
+Mesh $\text{II}$ has $-2\,\text{mA}$ flowing in the same direction as the element current arrow, $i_{\text{Rx}}$. So it also goes in with a minus sign.
 
-The whole idea of mesh currents is a little weird. They exist and don't exist at the same time. That's why I really like to use this method whenever I can.
+By superposition, $i_{\text{Ry}} = -2\,\text{mA} - 2\,\text{mA} = -4\,\text{mA}$  
+{% endcapture %}{% include details.html %} 
+
+Mesh currents are a little weird. That's why I like to use this method whenever I can.
 
 ## Mesh Current Method
 
-The Mesh Current Method is this sequence of steps, 
+The Mesh Current Method follows this sequence of steps, 
 
-* Identify the meshes, (the open windows of the circuit).
-* Assign a mesh current variable to each mesh, using a consistent direction (all clockwise or all counterclockwise).
-* Write Kirchhoff's Voltage Law around each mesh. Do Ohm's Law in your head.
-* Solve the resulting system of equations for all mesh currents.
-* Solve for element currents and voltages by superimposing mesh currents and using Ohm's Law.
+* Identify the meshes (the open windows of a circuit). Draw and name mesh current arrows with consistent direction (all clockwise or all counterclockwise).
+* Solve the easy mesh currents, the ones that pass through a constant current source.
+* Write Kirchhoff's Voltage Law around each mesh. 
+* Solve the resulting system of equations to find the mesh currents.
+* Find the element currents and voltages with superposition and Ohm's Law.
 
-We will demonstrate the Mesh Current Method with this circuit,
+Let's demonstrate the Mesh Current Method with this circuit,
 
-![](https://ka-perseus-images.s3.amazonaws.com/2cfc66ef5aae1acc46b83c2801241ce9bb3f6b3d.svg){: .centered :}
+![Mesh current example circuit]({{ site.baseurl }}{% link i/mesh_current13.svg %}){: .centered :}
 
 ### Identify the meshes
 
-Our circuit has two meshes. We identify two mesh currents and call them $i_{\text I}$ and $i_{\text{II}}$. These are going to be the independent variables. Important: the current directions are the same. Both flow in a clockwise direction.
+Our circuit has two meshes. We identify two mesh currents and call them $i_{\text I}$ and $i_{\text{II}}$. These are going to be our independent variables. Important: the current directions are the same. Both flow in a clockwise direction.
 
-![](https://ka-perseus-images.s3.amazonaws.com/3df8436d90000da5d39dd3da851952c01778479c.svg){: .centered :}
+![Identify two mesh currents]({{ site.baseurl }}{% link i/mesh_current14.svg %}){: .centered :}
 
 By defining a current in every mesh, you are guaranteed to have enough independent equations to solve the circuit.
+
+### Solve the easy mesh currents
+
+Our circuit has no current sources, so there are no easy mesh currents. However, if you look at the example circuit in the [Node Voltage Method]({{ site.baseurl }}{% link _articles/node-voltage.md %}#assign-a-reference-node) article you see there is a current source. If you attack that circuit with the Mesh Current Method there is one mesh current going through the current source on the left, which makes it an "easy" one. That mesh current has the same value as the current source.
+
+{% capture summary %}example circuit from the node voltage article{% endcapture %}  
+{% capture details %}  
+![Node voltages example circuit]({{ site.baseurl }}{% link i/node_voltage3.svg %}){: .centered :}
+{% endcapture %}{% include details.html %} 
 
 ### Write Kirchhoff's Voltage Law around each mesh
 
@@ -176,6 +182,7 @@ Now write an equation for each mesh using Kirchhoff's Voltage Law. Each term in 
 * When you come to a voltage source, it simply goes in as its voltage value. 
 
 #### Equation for mesh $\text I$, step-by-step  
+{: .no_toc :}
 
 We start in the lower left corner of the schematic, and travel clockwise around mesh $\text I$. 
 
@@ -202,6 +209,7 @@ $\text{mesh I :}\quad+5\,\text V - 2000 \, i_{\text I} - 1000\, (i_{\text{I}} - 
 ![KVL equation for mesh I]({{ site.baseurl }}{% link i/mesh_current2.svg %}){: .centered :}
 
 #### Equation for mesh $\text{II}$, step-by-step  
+{: .no_toc :}
 
 We start at the bottom of the $1\,\text k\Omega$ resistor, and travel clockwise around the mesh. 
 
@@ -303,8 +311,7 @@ And finally we find the voltage at the node between the three resistors using Oh
 
 $v_{1\text k\Omega} = 1\,\text k\Omega \cdot 1.75\,\text{mA} = \goldD{1.75\,\text V}$
 
-![Complete solution]({{ site.baseurl }}{% link i/mesh_current5.svg %}){: .centered :}{: height="220px"}
-
+![Complete solution]({{ site.baseurl }}{% link i/mesh_current5.svg %}){: .centered :}
 
 Congratulations! We analyzed a circuit using the Mesh Current Method.
 
@@ -320,14 +327,14 @@ The Mesh Current Method described above works on *planar* circuits (circuits tha
 
 The steps of the Mesh Current Method are,
 
-* Identify the meshes (the open windows of a circuit).
-* Assign a current variable to each mesh, using a consistent direction  (clockwise or counterclockwise).
+* Identify the meshes (the open windows of a circuit). Assign a current variable to each mesh, using a consistent direction  (clockwise or counterclockwise).
+* Solve the easy meshes, the ones that pass through a constant current source.
 * Write Kirchhoff's Voltage Law around each mesh. 
   * If one mesh current flows in a resistor, the voltage term goes in as $\text R \, i_{mesh}$. 
-  * If two mesh currents flow in *opposite* directions, the voltage goes in as $\text R\,(i_{mesh 1} - i_{mesh 2})$. 
+  * If two mesh currents flow in *opposite* directions, the voltage term goes in as $\text R\,(i_{mesh 1} - i_{mesh 2})$. 
   * If two mesh currents flow in the *same* direction in a resistor, the voltage goes in as $\text R\,(i_{mesh 1} + i_{mesh 2})$.
-  * Voltage sources go in as voltages.
-* Solve the resulting system of equations.
-* Solve for individual element currents and voltages using Ohm's Law.
+  * Voltage sources go in as their voltage value.
+* Solve the system of equations.
+* Solve for element currents and voltages using Ohm's Law.
 
 If the circuit is non-planar, or there is a current source shared between two meshes, it's best to use the [Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %}).

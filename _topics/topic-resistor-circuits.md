@@ -37,6 +37,6 @@ Series and parallel resistors, and the voltage divider.
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Voltage divider]({{ site.baseurl }}{% link _videos/voltage-divider.md %})
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Analyzing a resistor circuit with two batteries]({{ site.baseurl }}{% link _videos/resistor-circuit-with-two-batteries.md %})
+![]({{ site.baseurl }}{% link i/video.svg %}) [Resistor circuit with two batteries]({{ site.baseurl }}{% link _videos/resistor-circuit-with-two-batteries.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Resistance and Resistivity]({{ site.baseurl }}{% link _articles/resistance-resistivity.md %})

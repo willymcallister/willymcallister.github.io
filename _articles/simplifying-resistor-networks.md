@@ -24,22 +24,15 @@ Here is the example circuit we will work through together,
 
 ![Example circuit]({{ site.baseurl }}{% link i/simplifying1.svg %})
 
-We see a voltage source connected to a resistor network. The two little circles near the left end represent the "ports" of the resistor network. 
+We see a voltage source connected to a resistor network. The two little circles near the left end represent the *ports* of the resistor network. 
 
-**Problem statement: Figure out how much current, $i$, the voltage source is required to supply to the resistor network.**
+**Figure out how much current $(i)$ the voltage source is required to supply to the resistor network.**
 
-The answer is not immediately obvious, but we have some tools at our disposal: We know how to compute the equivalent resistance of series and parallel resistors. With these tools we can simplify the resistor network until the problem becomes easy to solve.
+The answer is not immediately obvious. But, we have some tools at our disposal: We know how to compute the equivalent resistance of series resistors and parallel resistors. With these tools we can simplify the resistor network until the problem becomes easy to answer.
 
-At this point, have a go at answering the problem posed above. After you give it a try, continue reading to see the solution unfold.
+At this point, have a go at answering the problem yourself. After giving it a try, continue reading to see the solution unfold.
 
-<details>
-<summary>Review series and parallel resistors</summary>
-<p>If you would like to refresh your understanding of series and parallel resistors, see,</p>
-
-<p><a href="https://spinningnumbers.org/a/series-resistors.html">Resistors in series</a></p>
-
-<p><a href="https://spinningnumbers.org/a/parallel-resistors.html">Resistors in parallel</a></p>
-</details>
+Refresh your understanding of [Series resistors]({{ site.baseurl }}{% link _articles/series-resistors.md %}) or [Parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}).
 
 ## Strategy for simplifying a resistor network
 

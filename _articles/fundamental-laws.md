@@ -22,11 +22,11 @@ The fundamental laws are Ohm's Law (and the $i$-$v$ equations for capacitor and 
 
 Ohm's Law plus Kirchhoff's Laws (KCL and KVL) are powerful tools for solving simple circuits, using this strategy,
 
-1. Give names to voltages and currents. 
-2. Select the independent variable, either $i$ or $v$. 
-3. Write a set of independent KCL and KVL equations.
-4. Solve the system of equations.
-5. Solve for the other unknowns.   
+* Give names to voltages and currents. 
+* Select the independent variable, either $i$ or $v$. 
+* Write a set of independent KCL and KVL equations.
+* Solve the system of equations.
+* Solve for the other unknown currents or voltages.   
 
 ----
 
@@ -44,7 +44,7 @@ We will take these steps to work our way to a solution,
 1. Solve the system of equations for the independent variable.
 1. Solve the remaining unknowns. 
 
-## Step 1: Assign names and polarity 
+## Assign names and polarity 
 
 It helps to give names to voltages, currents, and nodes, and make a list of what we do and do not know.
 
@@ -77,13 +77,13 @@ This circuit has three nodes, redrawn here to highlight the junctions at nodes $
 
 (There is an obvious opportunity to simplify the two parallel resistors, $6\,\Omega$ with $5\,\Omega$. However, we will not do that, because we want to focus on the analysis procedure.)
 
-## Step 2. Select the independent variable
+## Select the independent variable
 
 At this point we have to choose the independent variable. Should it be $v$ or $i$? 
 
 A good way to make this choice is to compare the number of unknown voltages to unknown currents. There are $2$ unknown voltages, and $3$ unknown currents. If we select voltage as the independent variable, we will have equations with $2$ voltage terms as opposed to $3$ current terms. $2$ is less that $3$, so we choose voltage as our independent variable.
 
-## Step 3. Write independent equations
+## Write independent equations
 
 Since we have two unknowns, $v_1$ and $v_2$, we need to come up with two independent equations. Our choice will be, 
 
@@ -147,7 +147,7 @@ These two equations capture everything going on in our circuit.
 
 This is a good time to do a quick check. Did every circuit element get a chance to participate in at least one equation?  Are any left out? Account for all $5$ elements.
 
-## Steps 4 - Solve the system of equations
+## Solve the system of equations
 
 I encourage you to take the time to solve this problem yourself before looking at the answer. This system of equations can be solved as simultaneous equations---that's how I'll do it---or by linear algebra techniques like Cramer's Rule.
 
@@ -167,7 +167,7 @@ $v_1 =$ \_\_\_\_\_ $\text V$
 <p> $v_2 = 60\,\text V$</p>
 </details>
 
-## Steps 5 - Solve the other variables
+## Solve the other variables
 
 **Find unknown currents $i_1$, $i_2$, and $i_3$.**
 
@@ -194,7 +194,7 @@ $i_3 =$ \_\_\_\_\_ $\text A$
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
-## Step 4. Solve the system of equations
+## Solve the system of equations
 {:.no_toc}
 The system of equations is,
 
@@ -249,7 +249,7 @@ $v_1$ and $v_2$ are both solved.
 
 Now we can go after the unknown currents, using Ohm's Law.
 
-## Step 5. Solve for the other unknowns
+## Solve for the other unknowns
 {:.no_toc}
 
 $i = \dfrac{v}{\text R}\qquad$ Ohm's Law
