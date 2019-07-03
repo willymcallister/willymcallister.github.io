@@ -8,7 +8,7 @@ comments: true
 Welcome to Spinning Numbers! Learn about electricity and electrical engineering.  
 
 >Breaking News: May 20, 2019 --- The definition of the Ampere has changed! It is now based on the charge of the electron rather than a force measurement.  
-[Redefinition of the base SI units](https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units#Ampere)
+[Define the standard electrical units]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
 
 ### [Circuit sandbox simulator]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) [![circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox.png %}){: height="80px" :}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 

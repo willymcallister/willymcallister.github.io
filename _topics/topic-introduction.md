@@ -29,7 +29,7 @@ Check out the summary of the math and science preparation that will get you read
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [Numbers in electrical engineering]({{ site.baseurl }}{% link _articles/numbers-in-ee.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Defining the standard electrical units]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
+![]({{ site.baseurl }}{% link i/article.svg %}) [Define the standard electrical units]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
 
 ![]({{ site.baseurl }}{% link i/article.svg %}) [6 ways to generate electricity]({{ site.baseurl }}{% link _articles/six-ways-to-generate-electricity.md %})
 
