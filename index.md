@@ -12,11 +12,8 @@ Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 
 ### [Circuit sandbox simulator]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}) [![circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox.png %}){: height="80px" :}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-* [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) in English
-* [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) en español
-* [电路沙箱](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 或简体中文 (simplified Chinese)
-* [回路サンドボックス](https://spinningnumbers.org/circuit-sandbox/index-ja.html) 日本語で (Japanese)  
-<small>Want to help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation)</small>
+Circuit sandbox [in English](https://spinningnumbers.org/circuit-sandbox/index.html), [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html), [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html), [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html).  
+Want to help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation)
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
