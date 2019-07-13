@@ -32,7 +32,7 @@ The articles are written in Jekyll's [Kramdown](https://kramdown.gettalong.org/d
 
 Equations are rendered by [$\KaTeX$](https://khan.github.io/KaTeX/), the super-fast math typesetting library from Khan Academy.
 
-Drawings of circuits and other images come from Adobe Illustrator and [Inkscape](https://inkscape.org/). 
+Drawings of circuits and other images come from Adobe Illustrator and [Inkscape](https://inkscape.org/). Here are my home-grown [schematic symbols]({{ site.baseurl }}{% link /i/schematic_symbols.svg %}).
 
 Animated images and computed graphs are created with [D3.js](https://d3js.org). The source code for animations and graphs are in the [/assets/d3 folder](https://github.com/willymcallister/spinningnumbers/tree/master/assets/d3).
 
