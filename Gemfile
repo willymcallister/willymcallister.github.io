@@ -22,8 +22,8 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'github-pages'
+   gem "jekyll", git: "https://github.com/jekyll/jekyll.git", branch: "3.8-stable"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
