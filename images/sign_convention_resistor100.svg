@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="52.995041mm"
+   height="34.764496mm"
+   viewBox="0 0 187.77769 123.18129"
+   id="svg4434"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sign_convention_resistor100.svg">
+  <defs
+     id="defs4436">
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5028"
+         style="fill:#00aad4;fill-opacity:1;fill-rule:evenodd;stroke:#00aad4;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.6692322"
+     inkscape:cx="93.888852"
+     inkscape:cy="61.590642"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     inkscape:window-width="1280"
+     inkscape:window-height="755"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4439">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-187.87573,-287.31281)">
+    <g
+       transform="matrix(0.00280021,1.2499972,1.249997,-0.00280021,-136.46505,138.46088)"
+       id="g8061">
+      <g
+         transform="matrix(1,0,0,0.97848925,180,356.2001)"
+         id="g6745">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6747"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 0,18.6" />
+      </g>
+      <g
+         transform="translate(180,309.4)"
+         id="g6749">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6751"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 -9,3.9 9,11.7 -9,19.5 9,27.3 -9,35.1 9,42.9 0,46.8" />
+      </g>
+      <g
+         transform="matrix(1,0,0,1.1505376,180,288)"
+         id="g6753">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6755"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 0,18.6" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="238.71155"
+       y="338.58588"
+       id="text11491"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan11493"
+         x="238.71155"
+         y="338.58588">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="285.61285"
+       y="338.58588"
+       id="text17462"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17466"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         x="285.61285"
+         y="338.58588">100 Ω</tspan></text>
+  </g>
+</svg>

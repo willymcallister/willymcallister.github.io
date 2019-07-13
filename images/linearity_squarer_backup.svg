@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 176.43625 96"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="linearity_squarer.svg"
+   width="176.43625"
+   height="96"><metadata
+     id="metadata24389"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs24387" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1268"
+     inkscape:window-height="737"
+     id="namedview24385"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:zoom="3.4322917"
+     inkscape:cx="93.2129"
+     inkscape:cy="48.000001"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style24353">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:none;}
+	.st7{stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st9{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#000000;stroke-linejoin:round;}
+	.st12{fill:none;stroke:#11ACCD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st13{fill:#11ACCD;}
+	.st14{fill:#E07D10;}
+	.st15{fill:#FF9C39;}
+	.st16{fill:none;stroke:#E07D10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st18{font-family:'KaTeX_Main-Italic';}
+	.st19{font-size:21px;}
+</style><rect
+     x="57.212898"
+     y="12"
+     class="st17"
+     width="54"
+     height="72"
+     id="rect24355"
+     style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10" /><g
+     id="g24357"
+     transform="translate(-2.7870964,-9.428711e-7)"><g
+       id="g24359"><line
+         class="st5"
+         x1="36"
+         y1="48"
+         x2="54"
+         y2="48"
+         id="line24361"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10" /><g
+         id="g24363"><path
+           d="m 60,48 c -2.8,1.1 -6.4,2.9 -8.5,4.8 L 53.2,48 51.5,43.2 c 2.1,1.9 5.7,3.7 8.5,4.8 z"
+           id="path24365"
+           inkscape:connector-curvature="0" /></g></g></g><g
+     id="g24367"
+     transform="translate(-2.7870964,-9.428711e-7)"><g
+       id="g24369"><line
+         class="st5"
+         x1="114"
+         y1="48"
+         x2="132"
+         y2="48"
+         id="line24371"
+         style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10" /><g
+         id="g24373"><path
+           d="m 138,48 c -2.8,1.1 -6.4,2.9 -8.5,4.8 l 1.7,-4.8 -1.7,-4.8 c 2.1,1.9 5.7,3.7 8.5,4.8 z"
+           id="path24375"
+           inkscape:connector-curvature="0" /></g></g></g><text
+     class="st18 st19"
+     id="text24377"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="9.2124996"
+     y="54.000099"
+     sodipodi:linespacing="125%">x</text>
+<text
+     class="st18 st19"
+     id="text24379"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="145.71933"
+     y="54.000099"
+     sodipodi:linespacing="125%">x<tspan
+   style="font-size:14.62499976px;baseline-shift:super;-inkscape-font-specification:'KaTeX_Main, Normal';font-family:KaTeX_Main;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
+   id="tspan24931">2</tspan></text>
+<text
+     class="st18 st19"
+     id="text24383"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="64.004608"
+     y="54.582802"
+     sodipodi:linespacing="125%">f(x)</text>
+</svg>

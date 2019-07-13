@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="204.02486"
+   height="224"
+   viewBox="0 0 204.02486 224"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="voltage_divider0.svg"><metadata
+     id="metadata4523"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs4521" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1247"
+     inkscape:window-height="713"
+     id="namedview4519"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:zoom="2.2678571"
+     inkscape:cx="102.01243"
+     inkscape:cy="112"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style4349">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}
+	.st10{fill:none;}
+	.st11{stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st14{clip-path:url(#SVGID_2_);fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st15{clip-path:url(#SVGID_2_);fill:none;stroke:#ADADEB;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st16{clip-path:url(#SVGID_2_);}
+	.st17{stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st18{stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st19{fill:none;stroke:#000000;stroke-linejoin:round;}
+	.st20{fill:none;stroke:#E07D10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st21{fill:#E07D10;}
+	.st22{fill:#11ACCD;}
+	.st23{fill:none;stroke:#11ACCD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st24{font-family:'KaTeX_Main-Italic';}
+	.st25{font-size:18px;}
+	.st26{letter-spacing:1;}
+	.st27{font-family:'KaTeX_Main-Regular';}
+	.st28{font-size:21px;}
+	.st29{fill:#66AFE9;}
+	.st30{fill:none;stroke:#66AFE9;stroke-miterlimit:10;}
+</style><g
+     id="g4383"
+     transform="translate(0.22719985,4)"><circle
+       class="st11"
+       cx="108"
+       cy="204"
+       r="1.5"
+       id="circle4385"
+       style="stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><rect
+       x="102"
+       y="198"
+       class="st10"
+       width="12"
+       height="12"
+       id="rect4387"
+       style="fill:none" /></g><g
+     id="g4389"
+     transform="translate(0.22719985,4)"><circle
+       class="st11"
+       cx="108"
+       cy="108"
+       r="1.5"
+       id="circle4391"
+       style="stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><rect
+       x="102"
+       y="102"
+       class="st10"
+       width="12"
+       height="12"
+       id="rect4393"
+       style="fill:none" /></g><g
+     id="g4395"
+     transform="translate(0.22719985,4)"><line
+       class="st0"
+       x1="108"
+       y1="132.60001"
+       x2="108"
+       y2="114"
+       id="line4397"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st4"
+       points="108,179.4 99,175.5 117,167.7 99,159.9 117,152.1 99,144.3 117,136.5 108,132.6  "
+       id="polyline4399"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><line
+       class="st0"
+       x1="108"
+       y1="198"
+       x2="108"
+       y2="179.39999"
+       id="line4401"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><rect
+       x="96"
+       y="114"
+       class="st10"
+       width="24"
+       height="84"
+       id="rect4403"
+       style="fill:none" /></g><g
+     id="g4415"
+     transform="translate(0.22719985,4)"><line
+       class="st0"
+       x1="108"
+       y1="36.599998"
+       x2="108"
+       y2="18"
+       id="line4417"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st4"
+       points="108,83.4 99,79.5 117,71.7 99,63.9 117,56.1 99,48.3 117,40.5 108,36.6  "
+       id="polyline4419"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><line
+       class="st0"
+       x1="108"
+       y1="102"
+       x2="108"
+       y2="83.400002"
+       id="line4421"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><rect
+       x="96"
+       y="18"
+       class="st10"
+       width="24"
+       height="84"
+       id="rect4423"
+       style="fill:none" /></g><g
+     id="g4425"
+     transform="translate(0.22719985,4)"><g
+       id="g4427"><path
+         class="st20"
+         d="M 48.2,174 C 44.5,161.1 42,136.4 42,108 42,84.1 43.8,62.9 46.5,49"
+         id="path4429"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#e07d10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10" /><g
+         id="g4431"><path
+           class="st21"
+           d="m 48.2,42 c 0.5,3.6 1.6,8.2 3.3,11.3 l -5.1,-3.3 -6,0.7 c 2.7,-2 5.8,-5.7 7.8,-8.7 z"
+           id="path4433"
+           inkscape:connector-curvature="0"
+           style="fill:#e07d10" /></g></g></g><text
+     class="st21 st27 st28"
+     id="text4435"
+     style="font-size:22.5px;font-family:KaTeX_Main;fill:#e07d10;-inkscape-font-specification:'KaTeX_Main, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     x="34.058498"
+     y="34.000099"
+     sodipodi:linespacing="125%">+</text>
+<text
+     class="st21 st27 st28"
+     id="text4437"
+     style="font-size:12.24300003px;font-family:KaTeX_Main-Regular;fill:#e07d10"
+     x="42.227402"
+     y="184.99319" />
+<text
+     class="st21 st27 st28"
+     id="text4439"
+     style="font-size:22.5px;font-family:KaTeX_Main;fill:#e07d10;-inkscape-font-specification:'KaTeX_Main, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     x="34.058498"
+     y="202.00011"
+     sodipodi:linespacing="125%">−</text>
+<text
+     class="st21 st24 st25"
+     id="text4441"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
+     x="9.5275002"
+     y="112.0001"
+     sodipodi:linespacing="125%">v<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan4489">in</tspan></text>
+<text
+     transform="scale(1.0053358,0.99469252)"
+     class="st21 st27 st28"
+     id="text4445"
+     style="font-size:22.5px;font-family:KaTeX_Main;fill:#e07d10;-inkscape-font-specification:'KaTeX_Main, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     x="159.12196"
+     y="130.63666"
+     sodipodi:linespacing="125%">+</text>
+<text
+     transform="scale(1.0053033,0.99472468)"
+     class="st21 st27 st28"
+     id="text4447"
+     style="font-size:12.30792809px;font-family:KaTeX_Main-Regular;fill:#e07d10"
+     x="167.33984"
+     y="184.76781" />
+<text
+     transform="scale(1.0053358,0.99469252)"
+     class="st21 st27 st28"
+     id="text4449"
+     style="font-size:22.5px;font-family:KaTeX_Main;fill:#e07d10;-inkscape-font-specification:'KaTeX_Main, Normal';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%;"
+     x="159.12196"
+     y="206.64014"
+     sodipodi:linespacing="125%">−</text>
+<g
+     id="g4451"
+     transform="translate(0.22719985,7.5433071)"><g
+       id="g4453"><path
+         class="st20"
+         d="m 150,186 c 3.7,-6.4 6.2,-18.8 6.2,-33 0,-10.2 -1.3,-19.5 -3.4,-26.3"
+         id="path4455"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#e07d10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10" /><g
+         id="g4457"><path
+           class="st21"
+           d="m 150,120 c 2.4,2.7 6,5.8 9.1,7.4 l -6.1,0.2 -4.5,4 c 1.2,-3.2 1.6,-8 1.5,-11.6 z"
+           id="path4459"
+           inkscape:connector-curvature="0"
+           style="fill:#e07d10" /></g></g></g><text
+     class="st21 st24 st25"
+     id="text4461"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.24749947px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
+     x="162.8468"
+     y="160.0002"
+     sodipodi:linespacing="125%"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4491">v<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan4493">out</tspan></tspan></text>
+<text
+     class="st27 st25"
+     id="text4465"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="65.14109"
+     y="70"
+     sodipodi:linespacing="125%">R1</text>
+<text
+     class="st27 st25"
+     id="text4467"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="65.14109"
+     y="163.5433"
+     sodipodi:linespacing="125%">R2</text>
+<line
+     class="st6"
+     x1="108.2272"
+     y1="112"
+     x2="144.2272"
+     y2="112"
+     id="line4471"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" /><polyline
+     class="st6"
+     points="60,12 108,12 108,18 "
+     id="polyline4473"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10"
+     transform="translate(0.22719985,4)" /><line
+     class="st6"
+     x1="60.2272"
+     y1="208"
+     x2="144.2272"
+     y2="208"
+     id="line4475"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" /><line
+     class="st6"
+     x1="108.2272"
+     y1="106"
+     x2="108.2272"
+     y2="118"
+     id="line4477"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" /><g
+     id="g4479"
+     transform="translate(0.22719985,4)"><circle
+       class="st6"
+       cx="147"
+       cy="108"
+       r="3"
+       id="circle4481"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /><rect
+       x="144"
+       y="102"
+       class="st10"
+       width="6"
+       height="12"
+       id="rect4483"
+       style="fill:none" /></g><g
+     id="g4485"
+     transform="translate(0.22719985,4)"><circle
+       class="st6"
+       cx="147"
+       cy="204"
+       r="3"
+       id="circle4487"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /><rect
+       x="144"
+       y="198"
+       class="st10"
+       width="6"
+       height="12"
+       id="rect4489"
+       style="fill:none" /></g><g
+     id="g4491"
+     transform="translate(0.22719985,4)"><circle
+       class="st6"
+       cx="57"
+       cy="204"
+       r="3"
+       id="circle4493"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /><rect
+       x="54"
+       y="198"
+       class="st10"
+       width="6"
+       height="12"
+       id="rect4495"
+       style="fill:none" /></g><g
+     id="g4497"
+     transform="translate(0.22719985,4)"><circle
+       class="st6"
+       cx="57"
+       cy="12"
+       r="3"
+       id="circle4499"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /><rect
+       x="54"
+       y="6"
+       class="st10"
+       width="6"
+       height="12"
+       id="rect4501"
+       style="fill:none" /></g><line
+     class="st6"
+     x1="108.2272"
+     y1="202"
+     x2="108.2272"
+     y2="208"
+     id="line4503"
+     style="fill:none;stroke:#000000;stroke-miterlimit:10" /></svg>

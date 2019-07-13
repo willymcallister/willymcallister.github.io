@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 336.57648 165.60001"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="series_resistors8.svg"
+   width="336.57648"
+   height="165.60001"><metadata
+     id="metadata83"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs81" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1266"
+     inkscape:window-height="723"
+     id="namedview79"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:zoom="2.0054877"
+     inkscape:cx="168.28824"
+     inkscape:cy="82.800003"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style3">
+	.st0{fill:none;stroke:#E07D10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:#E07D10;}
+	.st2{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:#FF9C39;stroke:#E07D10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}
+	.st13{fill:none;}
+	.st14{stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#000000;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st16{fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st17{clip-path:url(#SVGID_2_);fill:none;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st18{clip-path:url(#SVGID_2_);fill:none;stroke:#ADADEB;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st19{stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st20{stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st21{stroke:#000000;stroke-miterlimit:10;}
+	.st22{fill:none;stroke:#000000;stroke-linejoin:round;}
+	.st23{fill:none;stroke:#11ACCD;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.st24{fill:#11ACCD;}
+	.st25{font-family:'KaTeX_Main-Regular';}
+	.st26{font-size:18px;}
+	.st27{letter-spacing:1;}
+	.st28{font-size:22px;}
+	.st29{fill:none;stroke:#E07D10;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+	.st30{fill:none;stroke:#11ACCD;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st31{fill:none;stroke:#11ACCD;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+	.st32{font-family:'KaTeX_Main-Italic';}
+	.st33{font-size:24px;}
+</style><text
+     class="st25 st26 st27"
+     id="text5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:1;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="263.34409"
+     y="77.099899">R</text>
+<text
+     class="st25 st28"
+     id="text7"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="281.48508"
+     y="84.425995">series</text>
+<g
+     id="g9"
+     transform="translate(23.343971,5.1)"><circle
+       class="st10"
+       cx="102"
+       cy="84"
+       r="18"
+       id="circle11"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10" /><polyline
+       class="st6"
+       points="102,66 102,42 102,12 222,12 222,42  "
+       id="polyline13"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10" /><polyline
+       class="st6"
+       points="102,102 102,126 102,150 222,150 222,126  "
+       id="polyline15"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10" /><line
+       class="st8"
+       x1="102"
+       y1="70.5"
+       x2="102"
+       y2="82.5"
+       id="line17"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10" /><line
+       class="st8"
+       x1="96"
+       y1="76.5"
+       x2="108"
+       y2="76.5"
+       id="line19"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10" /><line
+       class="st8"
+       x1="96"
+       y1="94.5"
+       x2="108"
+       y2="94.5"
+       id="line21"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10" /></g><g
+     id="g23"
+     transform="translate(23.343971,5.1)"><line
+       class="st2"
+       x1="222"
+       y1="60.599998"
+       x2="222"
+       y2="42"
+       id="line25"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st5"
+       points="222,107.4 213,103.5 231,95.7 213,87.9 231,80.1 213,72.3 231,64.5 222,60.6  "
+       id="polyline27"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><line
+       class="st2"
+       x1="222"
+       y1="126"
+       x2="222"
+       y2="107.4"
+       id="line29"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><rect
+       x="210"
+       y="42"
+       class="st13"
+       width="24"
+       height="84"
+       id="rect31"
+       style="fill:none" /></g><text
+     class="st25 st26 st27"
+     id="text33"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:1;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="149.34407"
+     y="95.099899">V</text>
+<text
+     class="st25 st26"
+     id="text35"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="164.19417"
+     y="101.094">S</text>
+<text
+     class="st24 st25 st26 st27"
+     id="text37"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:1;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     sodipodi:linespacing="125%"
+     x="136.25735"
+     y="44.643307">5mA</text>
+<g
+     id="g39"
+     transform="translate(23.343971,5.1)"><g
+       id="g41"><line
+         class="st31"
+         x1="114"
+         y1="12"
+         x2="128.89999"
+         y2="12"
+         id="line43"
+         style="fill:none;stroke:#11accd;stroke-width:3;stroke-linecap:round;stroke-linejoin:round" /><g
+         id="g45"><path
+           class="st24"
+           d="m 138,12 c -4.3,1.6 -9.5,4.3 -12.8,7.1 l 2.6,-7.1 -2.6,-7.1 c 3.3,2.8 8.5,5.5 12.8,7.1 z"
+           id="path47"
+           inkscape:connector-curvature="0"
+           style="fill:#11accd" /></g></g></g><text
+     class="st1 st25 st26"
+     id="text53"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
+     sodipodi:linespacing="125%"
+     x="9.5275002"
+     y="95.099899"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4211">v</tspan><tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan4213">S</tspan>=10V</text>
+<g
+     id="g55"
+     transform="translate(23.343971,5.1)"><g
+       id="g57"><path
+         class="st0"
+         d="m 78,126 c -3.7,-8.2 -6.2,-23.9 -6.2,-42 0,-13.9 1.5,-26.4 3.8,-35.2"
+         id="path59"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#e07d10;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10" /><g
+         id="g61"><path
+           class="st1"
+           d="m 78,42 c 0.1,3.6 0.8,8.3 2.1,11.5 l -4.7,-3.8 -6.1,0.1 c 3,-1.7 6.4,-5 8.7,-7.8 z"
+           id="path63"
+           inkscape:connector-curvature="0"
+           style="fill:#e07d10" /></g></g></g><text
+     class="st1 st25 st33"
+     id="text65"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
+     sodipodi:linespacing="125%"
+     x="74.008072"
+     y="53.100101">+</text>
+<text
+     class="st1 st25 st33"
+     id="text67"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
+     sodipodi:linespacing="125%"
+     x="83.343971"
+     y="118.6919" />
+<text
+     class="st1 st25 st33"
+     id="text69"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#e07d10"
+     sodipodi:linespacing="125%"
+     x="74.008072"
+     y="139.5005">−</text>
+<text
+     id="text71"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="263.34396"
+     y="107.1"><tspan
+       x="263.34396"
+       y="107.1"
+       class="st25 st26"
+       id="tspan73"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       dx="0 0 0 0 3">2000Ω</tspan></text>
+</svg>

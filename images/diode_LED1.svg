@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 281.70081 96.249191"
+   xml:space="preserve"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="diode_LED1.svg"
+   width="281.70081"
+   height="96.249191"><metadata
+     id="metadata99"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs97" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview95"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:zoom="2.3819598"
+     inkscape:cx="140.8504"
+     inkscape:cy="48.124596"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style3">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#FF9C39;stroke-width:5;stroke-miterlimit:10;}
+	.st4{fill:url(#SVGID_1_);}
+	.st5{fill:url(#SVGID_2_);}
+	.st6{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st11{fill:#B6FFB0;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st14{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#11ACCD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st16{fill:#11ACCD;}
+	.st17{fill:#FF9C39;}
+	.st18{fill:none;stroke:#FF9C39;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st19{fill:url(#SVGID_3_);}
+	.st20{font-family:'KaTeX_Main-Regular';}
+	.st21{font-size:24px;}
+	.st22{fill:url(#SVGID_4_);}
+	.st23{fill:url(#SVGID_5_);}
+	.st24{fill:url(#SVGID_6_);}
+	.st25{fill:url(#SVGID_7_);}
+	.st26{fill:none;stroke:#01A995;stroke-miterlimit:10;stroke-dasharray:1.9742,1.9742;}
+	.st27{fill:none;stroke:#01A995;stroke-width:2;stroke-miterlimit:10;}
+	.st28{fill:#01A995;}
+	.st29{fill:#FCE15B;stroke:#CEAB19;stroke-miterlimit:10;}
+	.st30{fill:#BABEC2;stroke:#626569;stroke-miterlimit:10;}
+	.st31{fill:#E84D39;stroke:#BE2612;stroke-miterlimit:10;}
+	.st32{fill:#3B3E40;stroke:#888D93;stroke-miterlimit:10;}
+	.st33{fill:#F4D345;stroke:#CEAB19;stroke-miterlimit:10;}
+	.st34{fill:#FFEA94;stroke:#CEAB19;stroke-miterlimit:10;}
+	.st35{fill:none;stroke:#3B3E40;stroke-width:4;stroke-miterlimit:10;}
+	.st36{fill:#626569;stroke:#000000;stroke-miterlimit:10;}
+	.st37{fill:none;stroke:#E84D39;stroke-width:4;stroke-miterlimit:10;}
+	.st38{stroke:#000000;stroke-miterlimit:10;}
+	.st39{fill:none;stroke:#8AF281;stroke-linecap:round;stroke-linejoin:round;}
+	.st40{fill:#8AF281;}
+</style><linearGradient
+     id="SVGID_1_"
+     gradientUnits="userSpaceOnUse"
+     x1="104.9897"
+     y1="47.283901"
+     x2="104.9894"
+     y2="43.604099"
+     gradientTransform="matrix(1.4,0,0,1.4,-6.45,-24.399786)"><stop
+       offset="0"
+       style="stop-color:#999999"
+       id="stop6" /><stop
+       offset="0.272"
+       style="stop-color:#9C9C9C"
+       id="stop8" /><stop
+       offset="0.4448"
+       style="stop-color:#A4A4A4"
+       id="stop10" /><stop
+       offset="0.59"
+       style="stop-color:#B3B3B3"
+       id="stop12" /><stop
+       offset="0.7192"
+       style="stop-color:#C8C8C8"
+       id="stop14" /><stop
+       offset="0.7413"
+       style="stop-color:#CCCCCC"
+       id="stop16" /><stop
+       offset="1"
+       style="stop-color:#4D4D4D"
+       id="stop18" /></linearGradient><rect
+     x="69.149994"
+     y="36.640209"
+     class="st4"
+     width="142.8"
+     height="5.1799998"
+     id="rect20"
+     style="fill:url(#SVGID_1_)" /><linearGradient
+     id="SVGID_2_"
+     gradientUnits="userSpaceOnUse"
+     x1="93.000099"
+     y1="63.689701"
+     x2="92.999802"
+     y2="60.011799"
+     gradientTransform="matrix(1.4,0,0,1.4,-6.45,-24.399786)"><stop
+       offset="0"
+       style="stop-color:#999999"
+       id="stop23" /><stop
+       offset="0.272"
+       style="stop-color:#9C9C9C"
+       id="stop25" /><stop
+       offset="0.4448"
+       style="stop-color:#A4A4A4"
+       id="stop27" /><stop
+       offset="0.59"
+       style="stop-color:#B3B3B3"
+       id="stop29" /><stop
+       offset="0.7192"
+       style="stop-color:#C8C8C8"
+       id="stop31" /><stop
+       offset="0.7413"
+       style="stop-color:#CCCCCC"
+       id="stop33" /><stop
+       offset="1"
+       style="stop-color:#4D4D4D"
+       id="stop35" /></linearGradient><rect
+     x="69.149994"
+     y="59.600212"
+     class="st5"
+     width="109.2"
+     height="5.1799998"
+     id="rect37"
+     style="fill:url(#SVGID_2_)" /><g
+     id="g39"
+     transform="matrix(1.68,0,0,1.68,-53.379204,-36.518239)"
+     style="opacity:0.86000001"><rect
+       x="169.5"
+       y="30"
+       class="st0"
+       width="24"
+       height="42"
+       id="rect41"
+       style="fill:none" /><line
+       class="st1"
+       x1="181.5"
+       y1="72"
+       x2="181.5"
+       y2="30"
+       id="line43"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st1"
+       points="190.5,56.4 181.5,56.4 172.5,56.4  "
+       id="polyline45"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polygon
+       class="st2"
+       points="190.5,43.8 181.5,56.4 172.5,43.8 "
+       id="polygon47"
+       style="stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><text
+     class="st20 st21"
+     id="text49"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="119.42252"
+     y="26.110001">Anode</text>
+<text
+     class="st20 st21"
+     id="text51"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     sodipodi:linespacing="125%"
+     x="118.88252"
+     y="85.776695">Cathode</text>
+<linearGradient
+     id="SVGID_3_"
+     gradientUnits="userSpaceOnUse"
+     x1="31.464399"
+     y1="69.412498"
+     x2="31.464399"
+     y2="36.778"
+     gradientTransform="matrix(1.4,0,0,1.4,-6.45,-24.399787)"><stop
+       offset="0"
+       style="stop-color:#C42420"
+       id="stop54" /><stop
+       offset="0.1933"
+       style="stop-color:#C52721"
+       id="stop56" /><stop
+       offset="0.3162"
+       style="stop-color:#C82F22"
+       id="stop58" /><stop
+       offset="0.4195"
+       style="stop-color:#CE3E25"
+       id="stop60" /><stop
+       offset="0.5119"
+       style="stop-color:#D65329"
+       id="stop62" /><stop
+       offset="0.597"
+       style="stop-color:#E16E2E"
+       id="stop64" /><stop
+       offset="0.6757"
+       style="stop-color:#EE8E35"
+       id="stop66" /><stop
+       offset="0.7413"
+       style="stop-color:#FBB03B"
+       id="stop68" /><stop
+       offset="1"
+       style="stop-color:#C42420"
+       id="stop70" /></linearGradient><path
+     class="st19"
+     d="m 64.81,27.260211 -34.02,0 c -11.2,0 -20.44,10.22 -20.44,22.68 l 0,0 c 0,12.46 9.24,22.68 20.44,22.68 l 34.02,0"
+     id="path72"
+     inkscape:connector-curvature="0"
+     style="fill:url(#SVGID_3_);stroke:#333333;stroke-width:0.69999999;stroke-miterlimit:4;stroke-dasharray:none" /><linearGradient
+     id="SVGID_4_"
+     gradientUnits="userSpaceOnUse"
+     x1="53.195999"
+     y1="67.657204"
+     x2="53.221199"
+     y2="35.874901"><stop
+       offset="0"
+       style="stop-color:#C42420"
+       id="stop75" /><stop
+       offset="0.1933"
+       style="stop-color:#C52721"
+       id="stop77" /><stop
+       offset="0.3162"
+       style="stop-color:#C82F22"
+       id="stop79" /><stop
+       offset="0.4195"
+       style="stop-color:#CE3E25"
+       id="stop81" /><stop
+       offset="0.5119"
+       style="stop-color:#D65329"
+       id="stop83" /><stop
+       offset="0.597"
+       style="stop-color:#E16E2E"
+       id="stop85" /><stop
+       offset="0.6757"
+       style="stop-color:#EE8E35"
+       id="stop87" /><stop
+       offset="0.7413"
+       style="stop-color:#FBB03B"
+       id="stop89" /><stop
+       offset="1"
+       style="stop-color:#C42420"
+       id="stop91" /></linearGradient><polygon
+     class="st22"
+     points="55.7,30 55.7,46.3 55.7,70.7 50.7,70.7 50.7,30 "
+     id="polygon93"
+     style="fill:url(#SVGID_4_);stroke:#4d4d4d;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+     transform="matrix(1.4,0,0,1.4,-6.45,-24.399786)" /></svg>

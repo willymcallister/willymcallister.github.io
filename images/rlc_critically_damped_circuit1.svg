@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="471.28568"
+   height="202.6152"
+   viewBox="0 0 471.28567 202.61521"
+   xml:space="preserve"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="rlc_critically_damped_circuit1.svg"><metadata
+     id="metadata4583"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs4581" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1272"
+     inkscape:window-height="714"
+     id="namedview4579"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10"
+     inkscape:zoom="1.0630495"
+     inkscape:cx="235.64284"
+     inkscape:cy="101.3076"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_1" /><style
+     type="text/css"
+     id="style4379">
+	.st0{fill:#BABEC2;}
+	.st1{fill:none;}
+	.st2{fill:none;stroke:#BABEC2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#BABEC2;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#BABEC2;stroke-miterlimit:10;stroke-dasharray:1,1;}
+	.st5{fill:none;stroke:#11ACCD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st6{fill:#11ACCD;}
+	.st7{fill:none;stroke:#BABEC2;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#FF9C39;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st9{fill:#FF9C39;}
+	.st10{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10;}
+	.st14{fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st16{stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st17{fill:none;stroke:#BABEC2;stroke-width:3;stroke-miterlimit:10;}
+	.st18{fill:none;stroke:#BABEC2;stroke-width:5;stroke-miterlimit:10;}
+	.st19{stroke:#BABEC2;stroke-miterlimit:10;}
+	.st20{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st21{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st22{fill:none;stroke:#FF9C39;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st23{fill:none;stroke:#1FAB54;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st24{fill:#1FAB54;}
+	.st25{fill:#11ACCD;stroke:#085566;stroke-width:3;stroke-miterlimit:10;}
+	.st26{fill:none;stroke:#085566;stroke-width:5;stroke-miterlimit:10;}
+	.st27{fill:#0C7F99;stroke:#085566;stroke-miterlimit:10;}
+	.st28{stroke:#085566;stroke-miterlimit:10;}
+	.st29{font-family:'KaTeX_Main-Regular';}
+	.st30{font-size:21px;}
+	.st31{font-family:'KaTeX_Main-Italic';}
+</style><text
+     class="st9 st29 st30"
+     id="text4381"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="283.57291"
+     y="85.615593">+</text>
+<text
+     class="st9 st29 st30"
+     id="text4383"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="283.5723"
+     y="145.6152">−</text>
+<text
+     class="st9 st31 st30"
+     id="text4385"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="265.57239"
+     y="109.6148"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+       id="tspan4629">v</tspan><tspan
+       style="font-size:16.25px"
+       id="tspan4631"
+       dy="6">C</tspan></text>
+<text
+     class="st9 st29 st30"
+     id="text4387"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="275.23199"
+     y="116.60799"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4607" /></text>
+<g
+     id="g4389"
+     transform="translate(7.572499,-4.3847973)"><line
+       class="st10"
+       x1="257.39999"
+       y1="48"
+       x2="276"
+       y2="48"
+       id="line4391"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st11"
+       points="210.6,48 214.5,39 222.3,57 230.1,39 237.9,57 245.7,39 253.5,57 257.4,48  "
+       id="polyline4393"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><line
+       class="st10"
+       x1="192"
+       y1="48"
+       x2="210.60001"
+       y2="48"
+       id="line4395"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><rect
+       x="192"
+       y="36"
+       class="st1"
+       width="84"
+       height="24"
+       id="rect4397"
+       style="fill:none" /></g><g
+     id="g4399"
+     transform="translate(7.572499,-4.3847973)"><polyline
+       class="st10"
+       points="216,180 162,179.6 162,155.6  "
+       id="polyline4401"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><line
+       class="st11"
+       x1="318"
+       y1="118.1"
+       x2="294"
+       y2="118.1"
+       id="line4403"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><line
+       class="st11"
+       x1="324"
+       y1="118.1"
+       x2="288"
+       y2="118.1"
+       id="line4405"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st11"
+       points="288,109.1 306,109.1 324,109.1  "
+       id="polyline4407"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st10"
+       points="276,48 306,48 306,71.6 306,109.1  "
+       id="polyline4409"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><polyline
+       class="st10"
+       points="162,71.6 162,47.6 192,48  "
+       id="polyline4411"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
+     id="g4413"
+     transform="translate(7.572499,-4.3847973)"><line
+       class="st13"
+       x1="162"
+       y1="143.60001"
+       x2="162"
+       y2="155.60001"
+       id="line4415"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10" /><path
+       class="st15"
+       d="m 162,129.8 c -5,0 -9,3.1 -9,6.9 0,3.8 4,6.9 9,6.9"
+       id="path4417"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,129.8 c 5,0 9,1 9,2.3 0,1.3 -4,2.3 -9,2.3"
+       id="path4419"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,120.6 c -5,0 -9,3.1 -9,6.9 0,3.8 4,6.9 9,6.9"
+       id="path4421"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,120.6 c 5,0 9,1 9,2.3 0,1.3 -4,2.3 -9,2.3"
+       id="path4423"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,111.3 c -5,0 -9,3.1 -9,6.9 0,3.8 4,6.9 9,6.9"
+       id="path4425"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,111.3 c 5,0 9,1 9,2.3 0,1.3 -4,2.3 -9,2.3"
+       id="path4427"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,102.1 c -5,0 -9,3.1 -9,6.9 0,3.8 4,6.9 9,6.9"
+       id="path4429"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,102.1 c 5,0 9,1 9,2.3 0,1.3 -4,2.3 -9,2.3"
+       id="path4431"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,92.9 c 5,0 9,1 9,2.3 0,1.3 -4,2.3 -9,2.3"
+       id="path4433"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,92.9 c -5,0 -9,3.1 -9,6.9 0,3.8 4,6.9 9,6.9"
+       id="path4435"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><path
+       class="st15"
+       d="m 162,83.6 c -5,0 -9,3.1 -9,6.9 0,3.8 4,6.9 9,6.9"
+       id="path4437"
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+       inkscape:connector-curvature="0" /><line
+       class="st13"
+       x1="162"
+       y1="71.599998"
+       x2="162"
+       y2="83.599998"
+       id="line4439"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10" /><rect
+       x="150"
+       y="71.599998"
+       class="st1"
+       width="24"
+       height="84"
+       id="rect4441"
+       style="fill:none" /></g><g
+     id="g4443"
+     transform="translate(7.572499,-4.3847973)"><g
+       id="g4445"><line
+         class="st5"
+         x1="162"
+         y1="68.900002"
+         x2="162"
+         y2="54"
+         id="line4447"
+         style="fill:none;stroke:#11accd;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10" /><g
+         id="g4449"><path
+           class="st6"
+           d="m 162,78 c 1.6,-4.3 4.3,-9.5 7.1,-12.8 l -7.1,2.6 -7.1,-2.6 c 2.8,3.3 5.5,8.5 7.1,12.8 z"
+           id="path4451"
+           style="fill:#11accd"
+           inkscape:connector-curvature="0" /></g></g></g><text
+     class="st29 st30"
+     id="text4453"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="135.57249"
+     y="103.6153"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4599">L</tspan></text>
+<text
+     class="st29 st30"
+     id="text4455"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="215.5726"
+     y="25.615198"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4601">R</tspan></text>
+<text
+     class="st29 st30"
+     id="text4457"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="337.57251"
+     y="101.6153"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4603">C</tspan></text>
+<text
+     class="st6 st31 st30"
+     id="text4459"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="149.5726"
+     y="67.615196"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4619">i</tspan></text>
+<text
+     class="st24 st31 st30"
+     id="text4461"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1fab54"
+     x="193.5726"
+     y="163.6153">t<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4257">=0</tspan></text>
+<polyline
+     class="st10"
+     points="252,180 306,179.6 306,118.1 "
+     id="polyline4463"
+     style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+     transform="translate(7.572499,-4.3847973)" /><g
+     id="g4465"
+     transform="translate(7.572499,-4.3847973)"><g
+       id="g4467"><path
+         class="st23"
+         d="m 240.3,190.2 c 0.6,-3.6 0.4,-7.8 -0.6,-12.1 -1.8,-7.5 -5.8,-13.5 -10.2,-16.1"
+         id="path4469"
+         style="fill:none;stroke:#1fab54;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10"
+         inkscape:connector-curvature="0" /><g
+         id="g4471"><path
+           class="st24"
+           d="m 237.9,197 c 2.3,-2.8 5.7,-6.1 8.7,-7.9 l -6.1,0.1 -4.8,-3.8 c 1.4,3.3 2.1,8 2.2,11.6 z"
+           id="path4473"
+           style="fill:#1fab54"
+           inkscape:connector-curvature="0" /></g></g></g><g
+     id="g4475"
+     transform="translate(7.572499,-4.3847973)"><g
+       id="g4477"><circle
+         class="st0"
+         cx="252"
+         cy="180"
+         r="3"
+         id="circle4479"
+         style="fill:#babec2" /><rect
+         x="246"
+         y="174"
+         class="st1"
+         width="12"
+         height="12"
+         id="rect4481"
+         style="fill:none" /></g><g
+       id="g4483"><circle
+         class="st0"
+         cx="216"
+         cy="180"
+         r="3"
+         id="circle4485"
+         style="fill:#babec2" /><rect
+         x="210"
+         y="174"
+         class="st1"
+         width="12"
+         height="12"
+         id="rect4487"
+         style="fill:none" /></g><line
+       class="st2"
+       x1="216"
+       y1="180"
+       x2="252"
+       y2="168.39999"
+       id="line4489"
+       style="fill:none;stroke:#babec2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
+     id="g4491"
+     transform="translate(7.572499,-4.3847973)"><line
+       class="st10"
+       x1="216"
+       y1="180"
+       x2="253.7"
+       y2="176.60001"
+       id="line4493"
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><g
+       id="g4495"><circle
+         cx="252"
+         cy="180"
+         r="3"
+         id="circle4497" /><rect
+         x="246"
+         y="174"
+         class="st1"
+         width="12"
+         height="12"
+         id="rect4499"
+         style="fill:none" /></g><g
+       id="g4501"><circle
+         cx="216"
+         cy="180"
+         r="3"
+         id="circle4503" /><rect
+         x="210"
+         y="174"
+         class="st1"
+         width="12"
+         height="12"
+         id="rect4505"
+         style="fill:none" /></g></g><text
+     class="st9 st29 st30"
+     id="text4507"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="202.0293"
+     y="67.615593">+</text>
+<text
+     class="st9 st31 st30"
+     id="text4509"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     dy="0 6"
+     x="232.0296"
+     y="73.614799"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+       id="tspan4621">v</tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4623">R</tspan></text>
+<text
+     class="st9 st29 st30"
+     id="text4513"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="187.57291"
+     y="85.614708">+</text>
+<text
+     class="st9 st29 st30"
+     id="text4515"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="187.5723"
+     y="145.6153">−</text>
+<text
+     class="st9 st29 st30"
+     id="text4517"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="265.5723"
+     y="67.615303">−</text>
+<text
+     class="st9 st31 st30"
+     id="text4519"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     dy="0 6"
+     x="187.5724"
+     y="109.98391"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+       id="tspan4625">v</tspan><tspan
+       style="font-size:16.25px"
+       id="tspan4627">L</tspan></text>
+<text
+     class="st29 st30"
+     id="text4523"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="119.14737"
+     y="133.61502"
+     dx="0 3">1H</text>
+<text
+     class="st29 st30"
+     id="text4527"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     x="354.79306"
+     y="137.39455"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4589">F</tspan></text>
+<g
+     id="g4529"
+     transform="translate(7.572499,-4.3847973)"><text
+       class="st29 st30"
+       id="text4531"
+       style="font-size:21px;line-height:0%;font-family:KaTeX_Main-Regular"
+       x="332.63501"
+       y="131.9998"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan4253">1</tspan></text>
+<text
+       class="st29 st30"
+       id="text4533"
+       style="font-size:21px;line-height:0%;font-family:KaTeX_Main-Regular"
+       x="330.89648"
+       y="151.9998"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan4255">4</tspan></text>
+<line
+       class="st20"
+       x1="330"
+       y1="134.3"
+       x2="345"
+       y2="134.3"
+       id="line4535"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><text
+     class="st9 st31 st30"
+     id="text4541"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="396.13211"
+     y="36.989811" />
+<text
+     class="st9 st31 st30"
+     id="text4549"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="370.93491"
+     y="62.189999"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+       id="tspan4639"
+       dy="0 0 -6">v<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main"
+   id="tspan4671"
+   dy="6">C</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4249"> = 10</tspan></tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4251">V</tspan></text>
+<text
+     class="st9 st31 st30"
+     id="text4555"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
+     x="405.4704"
+     y="62.189999" />
+<text
+     class="st6 st31 st30"
+     id="text4559"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     dy="0 0 0 0 0 -6"
+     x="9.5725002"
+     y="36.989811"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4613"
+       dy="0 0 0 0 0 -6 6"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4243">t</tspan> = 0+,</tspan></text>
+<text
+     class="st6 st29 st30"
+     id="text4561"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="37.794201"
+     y="36.989811" />
+<text
+     class="st6 st31 st30"
+     id="text4563"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="54.132099"
+     y="36.989811" />
+<text
+     class="st6 st29 st30"
+     id="text4565"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="59.382099"
+     y="36.989811" />
+<text
+     class="st6 st29 st30"
+     id="text4567"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="69.882095"
+     y="29.996607" />
+<text
+     class="st6 st31 st30"
+     id="text4571"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="9.5725002"
+     y="68.189995"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+       id="tspan4615"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan4635"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4245">i</tspan> = 0</tspan></tspan></text>
+<text
+     class="st6 st31 st30"
+     id="text4575"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.71875px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
+     x="53.607201"
+     y="62.189999" />
+<text
+     class="st6 st31 st30"
+     id="text4559-4"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39;fill-opacity:1"
+     dy="0 0 0 0 0 -6"
+     x="370.97992"
+     y="36.859798"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39;fill-opacity:1"
+       id="tspan4613-6"
+       dy="0 0 0 0 0 0 6 6"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4247">t</tspan>  = 0<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39;fill-opacity:1"
+   id="tspan4641-4"
+   dy="-6">+</tspan>,</tspan></text>
+<text
+     class="st29 st30"
+     id="text4443-9"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start"
+     x="251.0121"
+     y="25.615198"><tspan
+       sodipodi:role="line"
+       id="tspan5473-3"
+       x="251.0121"
+       y="25.615198"
+       dx="0 3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;line-height:1.25;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;word-spacing:0px;writing-mode:lr-tb;text-anchor:start">4Ω</tspan></text>
+</svg>

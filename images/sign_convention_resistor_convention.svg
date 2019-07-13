@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="73.988464mm"
+   height="34.310097mm"
+   viewBox="0 0 262.16384 121.57121"
+   id="svg4434"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sign_convention_resistor_convention.svg">
+  <defs
+     id="defs4436">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4181"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#00aad4;fill-opacity:1;fill-rule:evenodd;stroke:#00aad4;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5028"
+         style="fill:#00aad4;fill-opacity:1;fill-rule:evenodd;stroke:#00aad4;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.6281274"
+     inkscape:cx="131.08193"
+     inkscape:cy="60.785604"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     inkscape:window-width="1280"
+     inkscape:window-height="755"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4439">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-105.92737,-284.92288)">
+    <g
+       transform="matrix(0.00280021,1.2499972,1.249997,-0.00280021,-136.46505,134.46088)"
+       id="g8061">
+      <g
+         transform="matrix(1,0,0,0.97848925,180,356.2001)"
+         id="g6745">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6747"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 0,18.6" />
+      </g>
+      <g
+         transform="translate(180,309.4)"
+         id="g6749">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6751"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 -9,3.9 9,11.7 -9,19.5 9,27.3 -9,35.1 9,42.9 0,46.8" />
+      </g>
+      <g
+         transform="matrix(1,0,0,1.1505376,180,288)"
+         id="g6753">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6755"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 0,18.6" />
+      </g>
+    </g>
+    <path
+       style="fill:#00aad4;fill-rule:evenodd;stroke:#00aad4;stroke-width:2.11599994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 141.36043,358.38437 58.44143,0"
+       id="path5001"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="162.19676"
+       y="348.96274"
+       id="text6205"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6207"
+         x="162.19676"
+         y="348.96274"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#37abc8">i</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="238.45465"
+       y="333.47345"
+       id="text6069"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6075"
+         x="238.45465"
+         y="333.47345"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a"
+           id="tspan6077">+   </tspan><tspan
+           id="tspan6083"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a">v </tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff7f2a"
+           id="tspan6085">  −</tspan></tspan></text>
+  </g>
+</svg>

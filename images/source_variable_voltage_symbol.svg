@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="19.405556mm"
+   height="36.851166mm"
+   viewBox="0 0 68.759843 130.575"
+   id="svg4434"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="5variable_voltage_source_symbol.svg">
+  <defs
+     id="defs4436" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7756076"
+     inkscape:cx="-55.213855"
+     inkscape:cy="32.842933"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="3"
+     fit-margin-left="3"
+     fit-margin-right="3"
+     fit-margin-bottom="3"
+     inkscape:window-width="1280"
+     inkscape:window-height="751"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4439">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-243.06582,-283.84695)">
+    <g
+       transform="matrix(1.25,0,0,-1.25,187.44574,587.64247)"
+       id="g4425">
+      <g
+         transform="matrix(1,0,0,1.05,72,234)"
+         id="g6653-4">
+        <path
+           inkscape:connector-curvature="0"
+           id="path6655-8"
+           style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           d="M 0,0 0,-24" />
+      </g>
+      <path
+         d="m 72,172.8 0,-25.2"
+         style="fill:none;stroke:#000000;stroke-width:1.02469504;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path6659-5"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g4420">
+        <g
+           id="g6649-6"
+           transform="translate(90,190.8)">
+          <path
+             d="m 0,0 c 0,9.941 -8.059,18 -18,18 -9.941,0 -18,-8.059 -18,-18 0,-9.941 8.059,-18 18,-18 9.941,0 18,8.059 18,18 z"
+             style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path6651-2"
+             inkscape:connector-curvature="0" />
+        </g>
+        <path
+           style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.63199997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 63.882493,190.05579 c 0,0 3.14414,18.82315 6.28829,7.05868 2.67029,-9.22555 5.19099,-30.7206 9.43242,-7.05868"
+           id="path3600"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+      </g>
+    </g>
+  </g>
+</svg>

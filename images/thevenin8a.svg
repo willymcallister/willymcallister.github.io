@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="430.81277"
+   height="373.39105"
+   version="1.1"
+   id="svg6246"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="thevenin8a1.svg">
+  <metadata
+     id="metadata6412">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6410" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1246"
+     inkscape:window-height="739"
+     id="namedview6408"
+     showgrid="false"
+     inkscape:zoom="1.1629182"
+     inkscape:cx="215.40639"
+     inkscape:cy="186.69553"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6246"
+     fit-margin-top="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     fit-margin-left="10" />
+  <xhtml:defs>
+    <xhtml:style
+       type="text/css"><![CDATA[
+svg .grid { stroke-width: 0.5px; stroke: rgb(187, 187, 187); opacity: 0.5; }
+svg .domain { stroke-width: 3px; stroke: black; }
+svg { border: none; }
+svg .path { stroke-width: 4px; stroke: rgb(255, 156, 57); stroke-linecap: round; fill: none; }
+svg text { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: katex_math; }]]></xhtml:style>
+  </xhtml:defs>
+  <path
+     class="domain"
+     d="m 14.871907,199.07275 0,0.5 320.000003,0 0,-0.5"
+     id="path6252"
+     inkscape:connector-curvature="0"
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="14.871906"
+     y1="199.07275"
+     x1="14.871906"
+     id="line6256"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6258"
+     dy="0"
+     y="218.70267"
+     x="14.871906">-8</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6260"
+     y2="359.07275"
+     x2="14.871906"
+     y1="39.072754"
+     x1="14.871906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="54.871906"
+     y1="199.07275"
+     x1="54.871906"
+     id="line6264"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6266"
+     dy="0"
+     y="218.70267"
+     x="54.871906">-6</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6268"
+     y2="359.07275"
+     x2="54.871906"
+     y1="39.072754"
+     x1="54.871906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="94.87191"
+     y1="199.07275"
+     x1="94.87191"
+     id="line6272"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6274"
+     dy="0"
+     y="218.70267"
+     x="94.871918">-4</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6276"
+     y2="359.07275"
+     x2="94.87191"
+     y1="39.072754"
+     x1="94.87191"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="138.41521"
+     y1="191.98615"
+     x1="138.41521"
+     id="line6280"
+     y2="197.98615" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6282"
+     dy="0"
+     y="218.70267"
+     x="134.8719">-2</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6284"
+     y2="351.98615"
+     x2="138.41521"
+     y1="31.986137"
+     x1="138.41521"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="174.8719"
+     y1="199.07275"
+     x1="174.8719"
+     id="line6288"
+     y2="205.07275" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6290"
+     y2="359.07275"
+     x2="174.8719"
+     y1="39.072754"
+     x1="174.8719"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="214.8719"
+     y1="199.07275"
+     x1="214.8719"
+     id="line6294"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6296"
+     dy="0"
+     y="218.70267"
+     x="214.8719">2</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6298"
+     y2="359.07275"
+     x2="214.8719"
+     y1="39.072754"
+     x1="214.8719"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="254.8719"
+     y1="199.07275"
+     x1="254.8719"
+     id="line6302"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6304"
+     dy="0"
+     y="218.70267"
+     x="254.8719">4</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6306"
+     y2="359.07275"
+     x2="254.8719"
+     y1="39.072754"
+     x1="254.8719"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="294.87192"
+     y1="199.07275"
+     x1="294.87192"
+     id="line6310"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6312"
+     dy="0"
+     y="218.70267"
+     x="294.87192">6</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6314"
+     y2="359.07275"
+     x2="294.87192"
+     y1="39.072754"
+     x1="294.87192"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
+     x2="334.87192"
+     y1="199.07275"
+     x1="334.87192"
+     id="line6318"
+     y2="205.07275" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.00000095px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     id="text6320"
+     dy="0"
+     y="218.70267"
+     x="334.87192">8</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
+     id="line6322"
+     y2="359.07275"
+     x2="334.87192"
+     y1="39.072754"
+     x1="334.87192"
+     class="grid" />
+  <text
+     x="341.45853"
+     dx="0"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text6324"
+     y="202.61606">v (volts)</text>
+  <path
+     class="domain"
+     d="m 174.37191,359.57275 0.5,0 0,-319.999996 -0.5,0"
+     id="path6328"
+     inkscape:connector-curvature="0"
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="359.57275"
+     y1="359.57275"
+     x1="174.3719"
+     id="line6332"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6334"
+     dy="0"
+     x="161.8286"
+     y="363.11606">-8</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6336"
+     y2="359.57275"
+     x2="334.37192"
+     y1="359.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="319.57275"
+     y1="319.57275"
+     x1="174.3719"
+     id="line6340"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6342"
+     dy="0"
+     x="161.84109"
+     y="323.11606">-6</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6344"
+     y2="319.57275"
+     x2="334.37192"
+     y1="319.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="279.57275"
+     y1="279.57275"
+     x1="174.3719"
+     id="line6348"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6350"
+     dy="0"
+     x="161.65359"
+     y="283.11606">-4</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6352"
+     y2="279.57275"
+     x2="334.37192"
+     y1="279.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="239.57275"
+     y1="239.57275"
+     x1="174.3719"
+     id="line6356"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6358"
+     dy="0"
+     x="161.9286"
+     y="243.11606">-2</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6360"
+     y2="239.57275"
+     x2="334.37192"
+     y1="239.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="199.57275"
+     y1="199.57275"
+     x1="174.3719"
+     id="line6364"
+     x2="168.3719" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6366"
+     y2="199.57275"
+     x2="334.37192"
+     y1="199.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="159.57275"
+     y1="159.57275"
+     x1="174.3719"
+     id="line6370"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6372"
+     dy="0"
+     x="161.9286"
+     y="163.11606">2</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6374"
+     y2="159.57275"
+     x2="334.37192"
+     y1="159.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="119.57275"
+     y1="119.57275"
+     x1="174.3719"
+     id="line6378"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6380"
+     dy="0"
+     x="161.65359"
+     y="123.11605">4</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6382"
+     y2="119.57275"
+     x2="334.37192"
+     y1="119.57275"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="79.572754"
+     y1="79.572754"
+     x1="174.3719"
+     id="line6386"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6388"
+     dy="0"
+     x="161.84109"
+     y="83.116058">6</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6390"
+     y2="79.572754"
+     x2="334.37192"
+     y1="79.572754"
+     x1="14.371906"
+     class="grid" />
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
+     y2="39.572754"
+     y1="39.572754"
+     x1="174.3719"
+     id="line6394"
+     x2="168.3719" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000"
+     id="text6396"
+     dy="0"
+     x="161.8286"
+     y="43.116062">8</text>
+  <line
+     style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
+     id="line6398"
+     y2="39.572754"
+     x2="334.37192"
+     y1="39.572754"
+     x1="14.371906"
+     class="grid" />
+  <text
+     dy="-12"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text6400"
+     x="174.3719"
+     y="39.072754">i (mA)</text>
+  <path
+     inkscape:connector-curvature="0"
+     id="path6402"
+     style="stroke:#74cf70;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 274.37191,359.07275 -160,-319.999996"
+     class="path" />
+  <circle
+     id="circle6404"
+     style="fill:#f9685d"
+     r="5"
+     cy="159.70271"
+     cx="174.3719" />
+  <circle
+     id="circle6406"
+     style="fill:#f9685d"
+     r="5"
+     cy="199.07275"
+     cx="194.3719" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="183.17264"
+     y="150.21509"
+     id="text6954"><tspan
+       sodipodi:role="line"
+       id="tspan6956"
+       x="183.17264"
+       y="150.21509"
+       style="font-size:40px;line-height:1.25"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+         id="tspan6960"
+         dy="0 0 0 -6">i<tspan
+   style="font-size:16.25px"
+   id="tspan6992"
+   dy="6">sc</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main"
+   id="tspan6994"> =</tspan><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main"
+   id="tspan6990"> I</tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:KaTeX_Main;-inkscape-font-specification:KaTeX_Main"
+         id="tspan6958"
+         dy="6">N</tspan></tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="202.42355"
+     y="184.25484"
+     id="text6954-8"><tspan
+       sodipodi:role="line"
+       id="tspan6956-9"
+       x="202.42355"
+       y="184.25484"
+       style="font-size:40px;line-height:1.25"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+         id="tspan6958-5"
+         dy="0 6"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
+   id="tspan6986">v</tspan>oc</tspan></tspan></text>
+</svg>
