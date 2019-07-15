@@ -6,7 +6,7 @@ comments: true
 ---
 <p>&nbsp;</p>
 
-{% include_relative eulers-sine-d3.html %}
+{% include d3a/eulers-sine-d3.html %}
 
 <audio src="https://www.youtube.com/audiolibrary_download?vid=14c363704697d79b" controls loop></audio>
 

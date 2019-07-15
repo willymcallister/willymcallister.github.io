@@ -283,7 +283,7 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}$
 
 **c. Plot $v(t)$**
 
-{% include_relative d3a/rc_natural_response1.html %}
+{% include d3a/rc_natural_response1.html %}
 <p class="caption">Click Start to trace the time response. The dot moves forward in time at a constant rate.</p>
 
 The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} =$ one time constant $= 3 \,\text{ms}$. 
@@ -327,7 +327,7 @@ With a time constant of $1\,\text{nanosecond}$, this is a pretty quick circuit.
 
 **c. Plot $v(t)$.**
 
-{% include_relative d3a/rc_natural_response2.html %}
+{% include d3a/rc_natural_response2.html %}
 <p class="caption">Click Start to trace the time response. </p>
 
 **d. How many times constants does it take for the voltage to drop below $95\%$ of its initial value?**  

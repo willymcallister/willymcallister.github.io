@@ -7,7 +7,7 @@ comments: true
 
 Spinning Numbers refers to a special type of number engineers use to represent signals. Numbers that spin! The yellow dot is a spinning number.
 
-{% include_relative d3a/logo-d3.html %}
+{% include d3a/logo-d3.html %}
 
 ## Notation
 
@@ -43,7 +43,7 @@ For now, don't worry about this fancy math notation, there's plenty of time to s
 
 ![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-sine-wave.md %})$\qquad$![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's cosine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-cosine-wave.md %})
 
-
 If you want to know more and you can't stand to wait, jump to [AC analysis introduction]({{ site.baseurl }}{% link _videos/ac-analysis-intro1.md %}) where the theory of spinning numbers is developed and applied.
 
-The animated image is created in [D3.js](https://d3js.org). The source code is [logo-d3.html](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/d3a).
+The animated logo is created in [D3.js](https://d3js.org). The source code is [logo-d3.html](https://github.com/willymcallister/spinningnumbers/tree/master/_includes/d3a).
+
