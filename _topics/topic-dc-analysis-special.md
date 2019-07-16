@@ -10,19 +10,19 @@ Linearity and superposition. Transforming sources. Thévenin and Norton equivale
 
 ----
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [How circuits become equations]({{ site.baseurl }}{% link _articles/how-circuits-become-equations.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) How circuits become equations]({{ site.baseurl }}{% link _articles/how-circuits-become-equations.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity]({{ site.baseurl }}{% link _articles/linearity.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Linearity]({{ site.baseurl }}{% link _articles/linearity.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Superposition]({{ site.baseurl }}{% link _articles/superposition.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Superposition]({{ site.baseurl }}{% link _articles/superposition.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Source transformation — example]({{ site.baseurl }}{% link _articles/source-transformation-example.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Source transformation — example]({{ site.baseurl }}{% link _articles/source-transformation-example.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Thévenin's theorem — proof]({{ site.baseurl }}{% link _articles/thevenin-proof.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Thévenin's theorem — proof]({{ site.baseurl }}{% link _articles/thevenin-proof.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Thévenin's theorem — how to]({{ site.baseurl }}{% link _articles/thevenin-howto.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Thévenin's theorem — how to]({{ site.baseurl }}{% link _articles/thevenin-howto.md %})
 

@@ -5,25 +5,25 @@ author: Willy McAllister
 comments: true
 ---
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Introduction]({{ site.baseurl }}{% link _articles/digital-electronics.md %}) --- Simplicity, abstraction, discipline, intent
+[![]({{ site.baseurl }}{% link i/article.svg %}) Introduction]({{ site.baseurl }}{% link _articles/digital-electronics.md %}) --- Simplicity, abstraction, discipline, intent
 
 ### Logic
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Logic]({{ site.baseurl }}{% link _articles/logic.md %}) --- basic gates AND OR NOT XOR
+[![]({{ site.baseurl }}{% link i/article.svg %}) Logic]({{ site.baseurl }}{% link _articles/logic.md %}) --- basic gates AND OR NOT XOR
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [NAND and NOR gates]({{ site.baseurl }}{% link _articles/logic-nand-nor.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) NAND and NOR gates]({{ site.baseurl }}{% link _articles/logic-nand-nor.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Universal gates]({{ site.baseurl }}{% link _articles/universal-gates.md %}) --- your first logic puzzle 
+[![]({{ site.baseurl }}{% link i/article.svg %}) Universal gates]({{ site.baseurl }}{% link _articles/universal-gates.md %}) --- your first logic puzzle 
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Logic identities]({{ site.baseurl }}{% link _articles/logic-identities.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Logic identities]({{ site.baseurl }}{% link _articles/logic-identities.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan.md %}) --- a logic superpower 
+[![]({{ site.baseurl }}{% link i/article.svg %}) DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan.md %}) --- a logic superpower 
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem in action]({{ site.baseurl }}{% link _articles/demorgan2.md %}) 
+[![]({{ site.baseurl }}{% link i/article.svg %}) DeMorgan's theorem in action]({{ site.baseurl }}{% link _articles/demorgan2.md %}) 
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [DeMorgan's theorem for basic gates ]({{ site.baseurl }}{% link _articles/demorgan2.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) DeMorgan's theorem for basic gates ]({{ site.baseurl }}{% link _articles/demorgan2.md %})
 
-![]({{ site.baseurl }}{% link i/article.svg %}) [Assertion]({{ site.baseurl }}{% link _articles/assertion.md %}) --- high/low, on/off, active, asserted
+[![]({{ site.baseurl }}{% link i/article.svg %}) Assertion]({{ site.baseurl }}{% link _articles/assertion.md %}) --- high/low, on/off, active, asserted
 
 ### Simplification
 
