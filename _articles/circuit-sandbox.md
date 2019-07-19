@@ -13,11 +13,11 @@ Ejecutar [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.
 运行 [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).  
 [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
 
-<small>Want to help translate Circuit Sandbox into other languages? [It’s easy!](#translation)</small>
+Want to help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
 ----
 
-YOU DON'T NEED TO READ THE REST OF THIS UNLESS YOU GET STUCK. You will do fine.
+YOU DON'T NEED TO READ THE REST OF THIS UNLESS YOU GET STUCK.
 
 ----
 
@@ -45,9 +45,9 @@ Drag components from the parts bin onto the main screen.
 
 Add wires by dragging between components connection points (small circles).
 
-Tap on the <i class="fa fa-redo"></i> Rotate icon or type  **"r"** on the keyboard to rotate a component.
+Tap on the <i class="fas fa-redo"></i> Rotate icon or type  **"r"** on the keyboard to rotate a component.
 
-Tap on the <i class="fa fa-times" style="font-size:22px;"></i> Delete icon or type BACKSPACE to delete a component.
+Tap on the <i class="fas fa-times fa-lg"></i> Delete icon or type BACKSPACE to delete a component.
 
 Double-tap on a component to change its properties, like resistance value.
 
@@ -86,10 +86,10 @@ Select: Drag a rectangle to select components. Shift-click to include another co
 
 Move: Touch and drag to a new location.
 
-Delete: Tap to select, then tap the <i class="fa fa-times"></i> icon or hit BACKSPACE on the keyboard.
+Delete: Tap to select, then tap the <i class="fas fa-times fa-lg"></i> icon or hit BACKSPACE on the keyboard.
 
 Rotate/Reflect: Tap to select, then tap on the 
-<i class="fa fa-redo"></i> 
+<i class="fas fa-redo"></i> 
 Rotate icon or type the letter "**r**" to rotate 90. Repeat for more rotations and reflections (8 total).
 
 Properties: Double-tap on a component to change its properties like resistance or voltage.
@@ -119,22 +119,22 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 ## Menu bar
 
-<i class="fa fa-question"></i> Help: List the Help information shown above. 
+<i class="fas fa-question fa-lg"></i> Help: List the Help information shown above. 
 
-![grid icon]({{ site.baseurl }}{% link i/circuit_sandbox_grid.png %}){: height="20px" :} Grid: Toggle the background grid on and off.
+<i class="fas fa-border-all fa-lg"></i> Grid: Toggle the background grid on and off.
 
-<i class="fa fa-folder-open"></i> Open netlist: Open a saved netlist.
+<i class="fas fa-folder-open fa-lg"></i> Open netlist: Open a saved netlist.
 
-<i class="fa fa-link"></i> Shared link: Displays a link you can copy for sharing your circuit. The link is [*uriencoded*](https://en.wikipedia.org/wiki/Percent-encoding), also known as *percent encoded*. This lets you use these text characters , / ? : @ & = + $ # in signal and component names. The decoded link is echoed to your browser's javascript console.
+<i class="fas fa-link fa-lg"></i> Shared link: Displays a link you can copy for sharing your circuit. The link is [*uriencoded*](https://en.wikipedia.org/wiki/Percent-encoding), also known as *percent encoded*. This lets you use these text characters , / ? : @ & = + $ # in signal and component names. The decoded link is echoed to your browser's javascript console.
 
-<i class="fa fa-save"></i> Save netlist: Save the current netlist. See System information below for where the circuit gets saved on different platforms.
+<i class="fas fa-save fa-lg"></i> Save netlist: Save the current netlist. See System information below for where the circuit gets saved on different platforms.
 
-<i class="fa fa-cut"></i> <i class="fa fa-copy"></i> <i class="fa fa-paste"></i> Cut/Copy/Paste: The usual edit functions.  
+<i class="fas fa-cut fa-lg"></i> Cut, <i class="fas fa-copy fa-lg"></i> Copy, <i class="fas fa-paste fa-lg"></i> Paste: The usual edit functions.  
 
 > Mac shortcuts: &#8984;-X, &#8984;-C, &#8984;-V  
 > PC shortcuts: ctl-X, ctl-C, ctl-V
 
-<i class="fa fa-times" style="font-size:22px;"></i> Delete: Delete the selected components.
+<i class="fas fa-times fa-lg"></i> Delete: Delete the selected components.
 
 ### Simulations
 
@@ -144,7 +144,7 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 **TRAN**: Transient response. Find the time response, plot voltage or current vs. time.
 
-<i class="fa fa-download"></i> Download: Saves the TRAN or AC data as a .csv file (comma-separated variables) called data.csv in your Downloads folder. This type of file can be opened in Excel or MatLab.
+<i class="fas fa-download fa-lg"></i> Download: Saves the TRAN or AC data as a .csv file (comma-separated variables) called data.csv in your Downloads folder. This type of file can be opened in Excel or MatLab.
 
 ## Device models
 
@@ -160,11 +160,11 @@ Your circuit is never transferred to the Spinning Numbers web server.
 
 ### Desktop/laptop
 
-A quick way to save your circuit is to click on the <i class="fa fa-link"></i> link icon. It displays a big URL you can copy and paste wherever you want. Paste it into a browser to recreate the circuit.
+A quick way to save your circuit is to click on the <i class="fas fa-link"></i> link icon. It displays a big URL you can copy and paste wherever you want. Paste it into a browser to recreate the circuit.
 
-The <i class="fa fa-save"></i> save icon saves the circuit to the Download folder on your computer in JSON format (JavaScript Object Notation). The file is named *ckt.txt*. 
+The <i class="fas fa-save"></i> save icon saves the circuit to the Download folder on your computer in JSON format (JavaScript Object Notation). The file is named *ckt.txt*. 
 
-The <i class="fa fa-folder-open"></i> open icon loads a circuit from your computer's file system. 
+The <i class="fas fa-folder-open"></i> open icon loads a circuit from your computer's file system. 
 
 If you want to keep your work be sure to save your circuit before leaving the web page. 
 
@@ -195,7 +195,7 @@ https://spinningnumbers.org/circuit-sandbox/index.html?parts=g,v,r,s&analyses=dc
 
 A URL parameter list starts with a ? question mark. Each parameter is separated by an & ampersand character. Notice there are no quote marks.
 
-You can also provide an initial schematic. Draw up a circuit and grab the URL with the <i class="fa fa-link"></i> link. The circuit JSON is captured in the value parameter. Append the part and analysis options like this with ampersands,
+You can also provide an initial schematic. Draw up a circuit and grab the URL with the <i class="fas fa-link"></i> link. The circuit JSON is captured in the value parameter. Append the part and analysis options like this with ampersands,
 
 ```
 https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",0.5,36.5,4,"50",null,null,null,"100","0.01","1000"]]&parts=g,v,r,s&analyses=dc,tran
@@ -286,4 +286,5 @@ This version of the simulator includes additions by Willy McAllister, including,
 * Touch sensitivity
 * Internationalization
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/9defb49fb8.js"></script>
+
