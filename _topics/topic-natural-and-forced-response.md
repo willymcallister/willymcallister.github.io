@@ -114,3 +114,7 @@ If you connect an external energy source to a circuit its behavior changes. The 
 [![]({{ site.baseurl }}{% link i/article.svg %}) RLC natural response — variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %})
 
 ---
+
+<i class="fas fa-arrow-left"></i> [Special topics in DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis-special.md %}) $\qquad$ [AC analysis]({{ site.baseurl }}{% link _topics/topic-ac-analysis.md %}) <i class="fas fa-arrow-right"></i>
+
+---

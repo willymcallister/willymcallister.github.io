@@ -59,3 +59,9 @@ comments: true
 * Binary counter
 * Carry chains
 * Linear-feedback shift register
+
+---
+
+<i class="fas fa-arrow-left"></i> [Electrostatics]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}) $\qquad$ [Spinning Numbers]({{ site.baseurl }}{% link index.md %}) <i class="fas fa-arrow-right"></i>
+
+---

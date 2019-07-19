@@ -39,3 +39,8 @@ Find the currents and voltages of a DC circuit. Kirchhoff's Laws, node voltage m
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %})
 
+---
+
+<i class="fas fa-arrow-left"></i> [Resistor circuits]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %}) $\qquad$ [Special topics in DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis-special.md %}) <i class="fas fa-arrow-right"></i>
+
+---

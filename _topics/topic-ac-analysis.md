@@ -1,6 +1,6 @@
 ---
 layout: topic
-title:  AC analysis
+title:  AC circuit analysis
 author: Willy McAllister
 comments: true
 ---
@@ -55,3 +55,8 @@ Solving circuits with differential equations is a pain. If we impose a disciplin
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) AC analysis high-level review]({{ site.baseurl }}{% link _articles/ac-analysis-review.md %})
 
+---
+
+<i class="fas fa-arrow-left"></i> [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %}) $\qquad$ [Special topics in AC analysis]({{ site.baseurl }}{% link _topics/topic-ac-special.md %}) <i class="fas fa-arrow-right"></i>
+
+---

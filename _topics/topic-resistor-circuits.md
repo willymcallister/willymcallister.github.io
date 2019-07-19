@@ -40,3 +40,9 @@ Series and parallel resistors, and the voltage divider.
 [![]({{ site.baseurl }}{% link i/video.svg %}) Resistor circuit with two batteries]({{ site.baseurl }}{% link _videos/resistor-circuit-with-two-batteries.md %})
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Resistance and Resistivity]({{ site.baseurl }}{% link _articles/resistance-resistivity.md %})
+
+---
+
+<i class="fas fa-arrow-left"></i> [Circuit elements]({{ site.baseurl }}{% link _topics/topic-circuit-elements.md %}) $\qquad$ [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %}) <i class="fas fa-arrow-right"></i>
+
+---

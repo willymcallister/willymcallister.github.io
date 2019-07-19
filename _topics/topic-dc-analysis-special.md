@@ -26,3 +26,8 @@ Linearity and superposition. Transforming sources. Thévenin and Norton equivale
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Thévenin's theorem — how to]({{ site.baseurl }}{% link _articles/thevenin-howto.md %})
 
+---
+
+<i class="fas fa-arrow-left"></i> [DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %}) $\qquad$ [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %}) <i class="fas fa-arrow-right"></i>
+
+---

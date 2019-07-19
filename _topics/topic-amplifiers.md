@@ -33,6 +33,12 @@ The *operational amplifier* is the building block of analog electronics.
 
 [![]({{ site.baseurl }}{% link i/exercise.svg %}) Exercise --- summing opamp]({{ site.baseurl }}{% link _articles/opamp-summing-exercise.md %})
 
+---
+
+<i class="fas fa-arrow-left"></i> [Special topics in AC analysis]({{ site.baseurl }}{% link _topics/topic-ac-special.md %}) $\qquad$ [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) <i class="fas fa-arrow-right"></i>
+
+---
+
 **Further study**
 
-One of the best sources of information about analog circuit design and operational amplifiers is the design library at Analog Devices](http://www.analog.com/en/education/education-library/tutorials/analog-electronics.html). This company is one of the leaders in analog integrated circuits. Over the years their design engineers have written great tutorials and detailed guides about their product line and, more importantly, about the fundamentals of analog design and signal sensing. This is a highly trusted source. 
+One of the best sources of information about analog circuit design and operational amplifiers is the design library at [Analog Devices](http://www.analog.com/en/education/education-library/tutorials/analog-electronics.html). This company is one of the leaders in analog integrated circuits. Over the years their design engineers have written great tutorials and detailed guides about their product line and, more importantly, about the fundamentals of analog design and signal sensing. This is a highly trusted source. 

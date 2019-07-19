@@ -29,3 +29,8 @@ The examples collected here are the classic electrostatic configurations. Point 
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Electric potential and voltage]({{ site.baseurl }}{% link _articles/electric-potential.md %})
 
+---
+
+<i class="fas fa-arrow-left"></i> [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) $\qquad$ [Digital electronics]({{ site.baseurl }}{% link _topics/topic-digital.md %}) <i class="fas fa-arrow-right"></i>
+
+---

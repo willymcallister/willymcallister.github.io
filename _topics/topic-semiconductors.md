@@ -18,3 +18,9 @@ Using semiconductor devices in circuits.
 [![]({{ site.baseurl }}{% link i/article.svg %}) Diode equation]({{ site.baseurl }}{% link _articles/diode-equation.md %})
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Diode circuit — worked example]({{ site.baseurl }}{% link _articles/diode-example.md %})
+
+---
+
+<i class="fas fa-arrow-left"></i> [Amplifiers]({{ site.baseurl }}{% link _topics/topic-amplifiers.md %}) $\qquad$ [Electrostatics]({{ site.baseurl }}{% link _topics/topic-electrostatics.md %}) <i class="fas fa-arrow-right"></i>
+
+---

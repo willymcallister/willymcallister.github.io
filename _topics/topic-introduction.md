@@ -37,6 +37,12 @@ Check out the summary of the math and science preparation that will get you read
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Preparing to study electrical engineering]({{ site.baseurl }}{% link _articles/preparing-to-study-ee.md %})
 
+---
+
+<i class="fas fa-arrow-left"></i> [Spinning Numbers]({{ site.baseurl }}{% link index.md %}) $\qquad$ [Circuit elements]({{ site.baseurl }}{% link _topics/topic-circuit-elements.md %}) <i class="fas fa-arrow-right"></i>
+
+---
+
 ## Video ![]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![]({{ site.baseurl }}{% link i/article.svg %})
 
 When you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view the video and have more questions, check out the corresponding article because it may go a little deeper into the topic.

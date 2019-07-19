@@ -7,7 +7,7 @@ comments: true
 
 The basic elements of circuit design are components (resistors, capacitors, and inductors), and sources (voltage and current). We describe these elements as both ideal elements and real-world objects. 
 
-We also develop precise terminology for how to talk about the parts of circuits (nodes and branches). 
+We also develop precise terminology for how to talk about the parts of circuits (nodes and branches).  
 
 Finally, we learn about assigning labels to voltages and currents.
 
@@ -33,6 +33,8 @@ Finally, we learn about assigning labels to voltages and currents.
 
 [![]({{ site.baseurl }}{% link i/video.svg %}) Labeling voltages]({{ site.baseurl }}{% link _videos/labeling-voltages.md %})
 
-{% comment %}
-[![]({{ site.baseurl }}{% link i/article.svg %}) Inductor — how it works]({{ site.baseurl }}{% link _articles/inductor-how-it-works.md %}) 
-{% endcomment %}
+---
+
+<i class="fas fa-arrow-left"></i> [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %}) $\qquad$ [Resistor circuits]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %}) <i class="fas fa-arrow-right"></i>
+
+---
