@@ -8,10 +8,11 @@ comments: true
 A simulator for experimenting with circuits.
 
 [![Run circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]])  
-Run [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) in English, or with a smaller screen for [mobile](https://spinningnumbers.org/circuit-sandbox/index-mobile.html).  
-Ejecutar [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) en español.  
-运行 [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 简体中文版 (simplified Chinese).  
-[Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
+
+* [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) Run in English.  
+* [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index-es.html) Ejecutar en español.  
+* [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-zh.html) 运行简体中文版 (simplified Chinese)  
+* [Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index-ja.html) を日本語で実行する (Japanese)
 
 Want to help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
