@@ -125,10 +125,10 @@ If you take the reciprocal of resistance we call that *conductance*. The unit of
 
 The idea of conductance is most useful when you have resistors in parallel. See this [article](tbd) on parallel conductance.  
 
-<details>
-<summary>mho</summary>
-<p>In the old days, $1/\Omega$ was called a "mho" (Ohm spelled backwards), and the symbol for mhos was $\mho$ (inverse ohms, get it?). This terminology is old fashioned and you shouldn't use it (unless you are writing a paper on the history of electricity).</p>
-</details>
+{% capture summary %}moh{% endcapture %}  
+{% capture details %}  
+In the old days, $1/\Omega$ was called a "mho" (Ohm spelled backwards), and the symbol for mhos was $\mho$ (inverse ohms, get it?). This terminology is old fashioned and you shouldn't use it (unless you are writing a paper on the history of electricity).  
+{% endcapture %}{% include details.html %} 
 
 Where $\text R$ as the common variable name for resistance, the common variable name for conductance is $\text G$. I think this is because the letter $\text G$ has a slight resemblance to $\Omega$ rolled over on its side. It is not fully upside down, but reminds us of the antique $\mho$ symbol. 
 

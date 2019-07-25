@@ -6,7 +6,9 @@ comments: true
 youtubeID: HpipBkRMm8U
 ---
 
-Electricity begins with *electric force*.  Electric force can be explained by saying matter has a property called *charge*.  
+Electricity begins with *electric force*.  
+
+Electric force can be explained by saying matter has a property called *charge*.  
 
 Written by Willy McAllister.
 
@@ -23,29 +25,32 @@ Written by Willy McAllister.
 ### Where we're headed 
 {:.no_toc}
 
-* A good way to learn about charge is to understand its historical development. The idea of charge came about to explain the existence of electric force.
+* There are two types of charge. Benjamin Franklin gave us the names for charge, Plus and Minus. 
 
-* There are two types of charge. Benjamin Franklin gave us the names for charge, Plus and Minus. The same (like) charges repel each other, and different (unlike) charges attract each other.
+* Like charges repel each other, $+$ repels $+$, $-$ repels $-$. 
+
+* Unlike charges attract each other, $+$ attracts $-$.
 
 * Charles Augustin de Coulomb worked out how the electric force behaves. He showed the electric force is proportional to the product of the two charges $(q_1, q_2)$, and inversely proportional to the square of the distance between the charges. This is called [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law).
 
     $F_e \propto \dfrac{q_1 \, q_2}{r^2}$
 
-* The smallest charged objects we know of are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. They have the same charge, with opposite signs. 
+* The smallest charged objects we know of are the electron $(-)$ and the proton $(+)$. They have the same charge, with opposite signs. 
 
-* You can specify a specific amount of charge two ways, in units of *coulombs* or by counting some number of *electron charges*, $e^-$. 
+* $1$ coulomb is defined as the total charge of $6.242 \times 10^{18}$ elementary charges.
 
-* $1 \,\text{coulomb}$ is the amount of charge that moves past a point in a wire in $1\,\text{second}$ when the current is $1\,\text{ampere}$. 
-
-* $1 \,\text{coulomb}$ is equivalent to the total charge of $6.242 \times 10^{18}$ electrons.  
-  The charge on an electron is $e^- = 1.602 \times 10^{-19}$ coulombs. 
+* The charge on an electron is $e^- = -1.602 \times 10^{-19}$ coulombs. 
 
 
 ----
 
+A good way to learn about charge is to understand its historical development. The idea of charge came about to explain the existence of electric force.
+
 ## Eels and amber
 
-For the moment, pretend you never heard of electricity, and forget you know anything about atoms. Egyptians knew if you touched an eel it could give you a shock. 5000 year old Egyptian texts refer to eels as "Thunderer of the Nile." They didn't know what was happening, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). So the very first practical application of electricity was in medicine.
+For the moment, pretend you never heard of electricity. Forget you know about atoms. 
+
+5000 years ago Egyptians knew if you touched an eel it could give you a shock. Texts refer to eels as "Thunderer of the Nile." They didn't know what was happening, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). So the very first practical application of electricity was in medicine.
 
 {% include img.html img="charge_electric-eel.jpg" alt="Electric eel" %}{: height="200px" :}
 
@@ -53,7 +58,7 @@ For the moment, pretend you never heard of electricity, and forget you know anyt
 
 {% include img.html img="charge_ant_in_amber.jpg" alt="Ant in amber" %}
 
-Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. Then they noticed things like feathers or their own hair were attracted to the amber. Today we have a word for it, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so it means the "rubbing-electric" effect.
+Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. They noticed the amber attracted feathers and hair. Today we have a word for this, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so it means the "rubbing-electric" effect.
 
 You get the same effect passing a plastic comb through your dry hair, or rubbing a balloon on your sweater. The comb makes your hair stand up. The balloon attracts things but repels other rubbed balloons.
 
@@ -69,63 +74,62 @@ I bet you can guess what we use this word for.
 
 ## Making sense of electric force
 
-So we have these observations of nature: rubbing cats or balloons. We observe this invisible "amber force," sometimes attraction, sometimes repulsion, depending on what was rubbed. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Stranger yet, the force acts at a distance. The two objects don't have to be touching, yet we see this obvious pushing or pulling force between them. This is super weird (and super fascinating).  
+So we have these observations of nature: rubbing cats or balloons. We observe this invisible "amber force," sometimes attraction, sometimes repulsion, depending on what was rubbed. So from the very beginning we could tell there were two kinds of electric force, attraction and repulsion. Even stranger, the force acts at a distance. The two objects don't have to be touching yet we see this obvious pushing or pulling force between them. This is super weird (and super fascinating).  
 
-<details>
-<summary>Maybe amber force is the same as magnetism?</summary>
-<p>This rubbing-cats force seems kind of like magnetism, which has two kinds and the same <em>force at a distance</em> property. But electric force has to come from a different place. Magnetism is a property of certain kinds of rocks called lodestones (a rock that contains iron). This electric force comes from the friction between amber and cat and has nothing to do with iron.
+{% capture summary %}Is amber force is the same as magnetism?{% endcapture %}  
+{% capture details %}  
+This rubbing-cats force seems kind of like magnetism, which has two kinds and the same *force at a distance* property. But electric force has to come from a different place. Magnetism is a property of certain kinds of rocks called lodestones (a rock that contains iron). The electric force comes from the friction between amber and cat and has nothing to do with iron.
 
-As you study electrical engineering or physics you will learn that electricity and magnetism are very closely related. When these ideas come together we merge their names and call it <em>electromagnetism</em>. 
-</p>
-<p>Gravity has the same <em>force at a distance</em> thing, but there is only one kind of gravity (only attraction). So it is a very different kind of force.
-</p>
-</details>
+As you study electrical engineering or physics you learn that electricity and magnetism are closely related. When these ideas come together we merge their names and call it *electromagnetism*. 
+
+Gravity also has the same *force at a distance* feature, but there is only one kind of gravity (only attraction). So it is a very different kind of force.  
+{% endcapture %}{% include details.html %} 
 
 The best explanation anyone has come up with (so far) to make sense of electric force is: Physical objects (matter) displaying this electric force possess a property called *charge*. 
 
-<details>
-<summary>What is a "property of matter"? 
-</summary>
-<p>Matter has a number of properties: mass, color, volume, squishiness. These are not little things that are inside the matter; they are aspects of the matter itself. When an object attracts or repels nearby objects we say it has the property of <em>charge</em>. Charge is not some little tiny piece of stuff tucked inside electrons and protons, it is a property of those particles.
-</p>
-</details>
+{% capture summary %}What is a "property of matter"?{% endcapture %}  
+{% capture details %}  
+Matter has a number of properties: mass, color, volume, squishiness. These are not little things that are inside the matter; they are aspects of the matter itself. When an object attracts or repels nearby objects we say it has the property of *charge*. Charge is not some little tiny piece of stuff tucked inside electrons and protons, it is a property of those particles.  
+{% endcapture %}{% include details.html %} 
 
 ## Making sense of charge
 
-Now we know why there is electric force---it's because objects have charge. 
+Now we know why there is electric force---it's because objects have *charge*. 
 
-So what is charge? Uhh...
+That's great. So uhh, what is charge?
 
-To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. We made up a story about charge to make us feel like we know what's going on. The idea of charge, real or not, leads us in the right direction for understanding electricity. 
+To this day, we have no idea why this rub-the-cat electric force exists, just like we don't know why gravity exists. It just does. We made up a story about charge to make us feel like we know what's going on. If we embrace the idea of charge it leads us in the right direction for understanding electricity. 
 
-The whole "acting at a distance" thing has always been puzzling, but we don't have a better explanation. When we study electrostatics, we draw lines of force leading away from charges flowing out into nothing. We play-act that these lines are real and we stick with this theory as long as it produces great results, which it does. This is a problem for physicists to ponder on while electrical engineers go off to build stuff.
+The whole "acting at a distance" thing has always been puzzling, but we don't have a better explanation. When we study electrostatics, we draw lines of force leading away from charges flowing out into nothing. We play-act that these lines are real and we stick with this theory as long as it produces great results, which it does. This is a problem for physicists to ponder while electrical engineers go off and build stuff.
 
 ## Benjamin Franklin
 
 In 1752 Ben Franklin nearly killed himself while flying a kite in a lightning storm. He wanted to show that lightning was made of electricity. He could tell because the key attached to the wet kite string gave off sparks and tingled his knuckles, the same as if you shuffled your feet on the carpet and touched a doorknob.
 
-Franklin thought of electricity as an invisible electric fluid. While doing rubbing experiments he theorized that rubbing caused one object to lose some invisible electric fluid while the other object gained fluid. Franklin coined the word *charge* and gave us the names of the two charges, "positive" and "negative". 
+There was great debate about the nature of electricity in Franklin's time. Many physicists thought of it as two invisible fluids. Franklin thought of electricity as a single electric fluid. While doing rubbing experiments he theorized that rubbing caused one object to lose some invisible electric fluid while the other object gained fluid. Franklin coined the word *charge* and gave us the names of the two charges, *positive* and *negative*. 
 
-<details>
-<summary>What's in a name?</summary>
-<p>The names $+$ and $-$ made sense. If you let equal amounts of the two charges come together you get zero charge (neutral). So charge seems like it can be described with positive and negative numbers because of the way charges combine. But Franklin could have chosen another pair of words instead of the signs we use for numbers. Like maybe "in" and "out" or "red" and "blue".  After all, there are two kinds of magnetism. The poles of a magnet are not called $+$ and $-$, they are called North and South. In some ways I wish he had picked different names. The choice of number signs for charge causes some confusion when we pick the direction of positive current flow.</p>
+{% capture summary %}What's in a name?{% endcapture %}  
+{% capture details %}  
+The names $+$ and $-$ made sense. If you let equal amounts of the two charges come together you get zero charge (neutral). So charge seems like it can be described with positive and negative numbers because of the way it combines. 
 
-<p>Franklin coined a number of electrical terms: battery, charge, conductor, plus, minus, condenser (another name for a capacitor). </p>
-</details>
+But Franklin could have chosen another pair of words instead of the signs we use for numbers. Like maybe "in" and "out" or "red" and "blue".  After all, there are two kinds of magnetism. The poles of a magnet are not called $+$ and $-$, they are called North and South. In some ways I wish he had picked different names. The choice of number signs for charge causes some confusion when we pick the direction of positive current flow.
+
+Franklin coined a number of electrical terms: battery, charge, conductor, plus, minus, condenser (another name for a capacitor).  
+{% endcapture %}{% include details.html %} 
 
 So now we have a name for this electricity stuff. Charge! 
 
 ## Charles Augustin de Coulomb
 
-Even if we can't explain *why* there is electric force, we can describe what it does. The first person to do a good job of this was French physicist [Charles Augustin de Coulomb](https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb), in 1784. This was 30 years after Franklin, but still 113 years before the discovery of the electron in 1897 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). So Coulomb (and Franklin) worked with the idea of charge without knowing about electrons or protons or atoms.
+Even if we can't explain *why* there is electric force (attraction and repulsion), we can describe what it does. The first person to do a good job of this was French physicist [Charles Augustin de Coulomb](https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb), in 1784. This was 30 years after Franklin, but still 113 years before the discovery of the electron in 1897 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). So Coulomb (and Franklin) worked with the idea of charge without knowing about electrons or protons.
 
-Coulomb invented a very sensitive instrument to measure electric force, the *torsion balance*. He did experiments putting different amounts of charge on spheres (two little cannonballs) and measuring the electric force between them with his sensitive torsion balance. Then he worked out an equation that gave the same result as his data.
+Coulomb invented a very sensitive instrument to measure electric force, the *torsion balance*. He put different amounts of charge on spheres (two little cannonballs) and measured the electric force between them with his sensitive torsion balance. Then he worked out an equation that gave the same result as his data.
 
 {% capture summary %}Coulomb's torsion balance{% endcapture %}  
 {% capture details %}  
-The torsion balance is based on twisting a fine wire. It works like a car tire hanging from a tree branch by a rope. If you sit quietly in the tire, a small nudge makes you twist back and forth. Eventually you stop twisting and come to a stand-still at some angle where the rope feels most relaxed (no twist). 
+The torsion balance is based on twisting a fine wire. It works like a car tire hanging by a rope from a tree branch. If you sit quietly in the tire, a small nudge makes you twist back and forth. Eventually you stop twisting and come to a stand-still at some angle where the rope feels most relaxed (no twist). 
 
-Coulomb drew this illustration of his torsion balance,
+(Optional reading) Coulomb drew this illustration of his torsion balance,
 
 {% include img.html img="charge_torsion_balance3.png" alt="Coulomb's torsion balance" %}{: width="460px" :}
 
@@ -138,55 +142,48 @@ Then you put some charge on the fixed sphere by touching the post holding it in 
 The big cylindrical chamber is sealed to prevent breezes from messing up the measurement. It is made of glass so you can see inside. The other figures are close-up views of the important bits and pieces of the main instrument.  
 {% endcapture %}{% include details.html %}
 
-{% capture summary %}How did Coulomb himself measure charge?{% endcapture %}  
+{% capture summary %}How did Coulomb measure charge before there was a coulomb?{% endcapture %}  
 {% capture details %}  
-Coulomb did not have very good control over how much charge was applied to the spheres. One sphere had "some charge" and was attracted to the other sphere that had "some charge". But, he did have good control of ratios of charge.  He was quite smart about how he applied the charge. 
+Coulomb did not have very good control over how much charge was applied to the spheres. One sphere had "some charge" and was attracted to the other sphere that had "some charge." But, he did have good control of ratios of charge.  He was quite smart about how he applied the charge. 
 
 For example, start with no charge on the two spheres. You can tell they are uncharged because they don't attract or repel. Now put some charge on one sphere, let's call it $q$. ($Q$ or $q$ are the variable names Coulomb used for charge, and we still use them today.) If you touch the charged sphere to the uncharged sphere, they will share $q$ evenly between them. You don't know what the charge is precisely, but you know they are both charged the same, both with a charge of $q/2$. 
 
 Can you think of a way to charge a sphere with $q/4$?  
 {% endcapture %}{% include details.html %}
 
-Coulomb demonstrated that the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law). 
+Coulomb demonstrated the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law). 
 
 $F \propto \dfrac{q_1\,q_2}{r^2}$
 
-The $\propto$ symbol means "proportional to". We will replace it with an $=$ sign by including a constant of proportionality in the equation in this article on [electric force](electric-force). 
+The $\propto$ symbol means "proportional to". We will replace it with an $=$ sign by including a constant of proportionality in the equation in the article on [electric force](electric-force). 
 
-Check out this marvelous 1959 educational video with Professor Eric Rogers from Princeton University demonstrating electric force. You can see Professor Rogers transfer charge from his "charging arrangement" machine to one balloon and then sharing that charge with another.
+Check out this marvelous 1959 educational video with Professor Eric Rogers from Princeton University demonstrating electric force. See how Professor Rogers transfers charge from his "charging arrangement" machine to one balloon and then shares that charge with another balloon.
 
 {% include embed-video.html %}
 
 ## Coulomb - the unit of charge
 
-Early electrical scientists needed a way to talk about amounts of charge. Since they didn't know about electrons and protons they couldn't define an amount of charge based on those particles. Instead, the unit of charge (the coulomb) was defined based on a certain current flowing in a circuit. 
+The unit of charge is named the coulomb, in honor of guess who. 
 
-The first definition of charge was,
+$1$ coulomb is defined in terms of the elementary charge on a proton, 
 
-$1\,\text{coulomb}$ is the amount of charge that flows in $1\,\text{second}$ when the current is $1\,\text{ampere}$.
+$1 \,\text{coulomb} = 6.241509074 \times 10^{18} \,\text{elementary charges}$
 
-The unit of charge was named the coulomb, in honor of guess who. 
+Think of a coulomb as a bucket of charge, like a bucket of water. If you put $6.241509074 \times 10^{18}$ protons in a bucket then the bucket contains $+1$ coulomb of charge. If the bucket had this many electrons the charge would be $-1$ coulomb.
 
-An example circuit you could build would be a $1\,\text{volt}$ battery connected to a $1\,\Omega$ resistor. Ohm's Law tells us the current will be $\text I = \text V/\text R = 1/1 = 1 \,\text{ampere}$. When that is happening, there is $1 \,\text{coulomb}$ of charge passing by every second at every point in the circuit, by definition.
+If we take the reciprocal we derive the charge on an electron in terms of coulombs.
 
-{% include img.html img="charge_coulomb_per_second.svg" alt="A coulomb per second is an ampere" %}
+$e^- = -\dfrac{1}{6.242 \times 10^{18}} = -1.603 \times 10^{-19}\,\text{coulomb}$
 
-Think of a coulomb as a bucket of charge, like a bucket of water. You can scoop smaller amounts of charge out of the bucket to get milliliters or teaspoons of charge. We use terms like microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$. Thinking of charge as a continuous fluid is the way Franklin thought about it.
+You can scoop smaller amounts of charge out of the bucket to get microcoulomb $(\mu\text C)$ or nanocoulomb $(\text{nC})$ of charge. 
 
-<details>
-<summary>The definition of a coulomb assumes you know what an ampere is.</summary>
-<p>One ampere is the current you get when $1\,\text{coulomb}$ of charge is passing by every second. One coulomb is how much charge passes by in a second when the current is one ampere. These are circular definitions. To break the circle the ampere is also defined with specific conditions for an experiment you can do in a laboratory. There have been several different definitions of that experiment over time. One of the original definitions of the ampere was based the current it takes to electroplate a certain weight of silver onto a surface,</p>
-
-<blockquote>The ampère is represented by that quantity of current which is capable of depositing 4.025 grammes (62.10 grains) of silver per hour or 0.001118 grammes per second.</blockquote>
-
-<p>This was known as the <em>silver ampere</em>.</p>
-</details>
+Franklin thought of charge as a continuous fluid. That's how we are thinking about it when we measure charge in coulombs.
 
 It's amazing, but the classical fields of electrostatics (what we are studying here) and electrodynamics developed in the late 1800's did not predict or depend on knowing about the existence of the electron. 
 
 ## Electron
 
-The electron was discovered in 1892 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). We now know the smallest charged objects are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amounts of charge on the electron and proton are identical, with opposite signs. The mass of electron is $1000\times$ less than a proton, but the charge of the two particles is identical. Nature made it that way. 
+The electron was discovered in 1892 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). We now know the smallest charged objects are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amounts of charge on the electron and proton are identical, with opposite signs. The mass of electron is $1000\times$ less than a proton, but the charge of the two particles is identical. We don't know why, we just know Nature made it that way. 
 
 The electron gets the $-$ sign and the proton the $+$ sign because of the way Franklin stated his "one fluid" theory of electricity so long ago. The material he though was lacking electric fluid had picked up extra electrons from the other material used to rub it. There was no way to know this at the time. The important point to remember is the signs/names we use for charge are arbitrary. There is nothing naturally "negative" about the electron's charge; its only true property is that it is unlike the charge of the proton. It's just a name.
 
@@ -194,27 +191,6 @@ The variable we use for the charge of an electron is $-e$ or $e^-$. The charge o
 
 {% include img.html img="j-j-thomson.png" alt="J. J. Thomson" %}{: height="300px" :}
 <p class="caption">J. J. Thomson in the laboratory, Cambridge University, England.</p>
-
-
-## Measuring charge by counting electrons 
-
-A coulomb of charge is like a big bucket of sand, where each grain of sand is an electron charge, $e^-$. When dealing with everyday currents there are lots of electrons moving around. So we measure charge in buckets (coulombs).
-
-Now that we know about electrons, we can also measure charge by counting electrons. Down at the atomic level we often count electrons rather than coulombs, because each electron matters. 
-
-So what is the relationship between the coulomb unit and the charge of an individual electron? How many grains of sand $(e^-)$ are there in a bucket of one coulomb?
-
-Electrons are *really* small, and one coulomb of charge is a *ton* of electron charges. 
-
-In terms of electron charges, 
-
-$1$ coulomb $= 6.242 \times 10^{18} \,e^-$  
-
-This number is measured by experiment. That's $6.242$ billion billion electrons! That is a *lot* of electrons moving in one ampere of current. So it's no wonder when we deal with everyday currents we don't count the electrons of sand, but instead talk about current in more convenient every-day number of amperes (coulombs/second).
-
-If we take the reciprocal we derive the charge on an electron in terms of coulombs.
-
-$e^- = \dfrac{1}{6.242 \times 10^{18}} = 1.603 \times 10^{-19}\,\text{coulomb}$
 
 ## Summary
 {:.no_toc}
@@ -227,7 +203,7 @@ Franklin gave us the names of charge, positive and negative.
 
 Coulomb worked out the equation that describes the effect of charge.
 
-You can talk about charge either in units of coulombs or by counting electron charges. Pick whichever way suits the discussion best.  
+The unit of charge is the coulomb, defined as a number of elementary charges.
 
 <details>
 <summary>Photo credits</summary>
