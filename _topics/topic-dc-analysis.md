@@ -39,6 +39,12 @@ Find the currents and voltages of a DC circuit. Kirchhoff's Laws, node voltage m
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %})
 
+[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries.md %}) solved by recognizing the trick
+
+[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV1.md %}) solved by the Node Voltage Method (1)
+
+[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV2.md %}) solved by the Node Voltage Method (2)
+
 ---
 
 <i class="fas fa-arrow-left"></i> [Resistor circuits]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %}) $\qquad$ [Special topics in DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis-special.md %}) <i class="fas fa-arrow-right"></i>
