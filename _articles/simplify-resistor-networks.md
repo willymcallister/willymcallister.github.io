@@ -1,12 +1,12 @@
 ---
 layout: article
-title:  "Simplifying resistor networks"
+title:  "Simplify resistor networks"
 author: Willy McAllister
 comments: true
 youtubeID: pUzHSQa6lko
 ---
 
-Complicated resistor networks can be simplified by identifying series and parallel resistors within the context of a larger circuit. This article describes a systematic way to simplify a resistor network.
+Complicated resistor networks can be simplified by finding series and parallel resistor combinations within the context of the larger circuit. 
 
 ----
 
@@ -18,13 +18,11 @@ Complicated resistor networks can be simplified by identifying series and parall
 
 ----
 
-## Simplify a resistor network
-
 Here is the example circuit we will work through together,
 
 ![Example circuit]({{ site.baseurl }}{% link i/simplifying1.svg %})
 
-We see a voltage source connected to a resistor network. The two little circles near the left end represent the *ports* of the resistor network. 
+We see a voltage source connected to a resistor network. The two little circles near the left end represent the *port* of the resistor network. 
 
 **Figure out how much current $(i)$ the voltage source is required to supply to the resistor network.**
 
@@ -32,11 +30,11 @@ The answer is not immediately obvious. But, we have some tools at our disposal: 
 
 At this point, have a go at answering the problem yourself. After giving it a try, continue reading to see the solution unfold.
 
-Refresh your understanding of [Series resistors]({{ site.baseurl }}{% link _articles/series-resistors.md %}) or [Parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}).
+Refresh your understanding of [series resistors]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}).
 
-## Strategy for simplifying a resistor network
+## Strategy
 
-Here's a general strategy we'll be following to simplify any resistor network.
+Here's a general strategy to simplify any resistor network,
 
 * Begin as far away as possible from the circuit location in question. 
 * Identify and replace series or parallel resistor combinations with their equivalent resistor. 
