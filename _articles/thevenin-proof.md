@@ -34,7 +34,7 @@ Any combination of resistors and sources can be simplified down to a single curr
 
 One of the surprising concepts from linear circuit theory is the idea that two circuits can be *equivalent*. Two circuits are equivalent if they display the same $i$-$v$ behavior *at a selected port*. Thévenin's theorem says: A complicated linear circuit can be replaced with an equivalent Thévenin circuit made from one voltage source in series with one resistor. 
 
-In an earlier article, [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to turn any resistor network into a single resistor. Thévenin's theorem is the next step. It teaches us how to simplify a network of resistors *and* sources. If you have a complicated circuit the theorem shows you how to construct a simple equivalent circuit. 
+In an earlier article, [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}), we learned how to turn any resistor network into a single resistor. Thévenin's theorem is the next step. It teaches us how to simplify a network of resistors *and* sources. If you have a complicated circuit the theorem shows you how to construct a simple equivalent circuit. 
 
 In this article we prove Thévenin's theorem using the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). The [following article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) shows practical steps to create a Thévenin equivalent of a circuit. The proof and the practical design steps are separate ideas, often mixed together in many texts. 
 

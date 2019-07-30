@@ -52,7 +52,7 @@ To create a Thévenin or Norton equivalent,
 
 One of the coolest ideas from linear circuit theory is the concept of an *equivalent circuit*. Say you have a circuit and you "look into" a port using a voltmeter and ammeter. You observe some sort of $i$-$v$ behavior. If you have another circuit that displays the same $i$-$v$ behavior then those two circuits are *equivalent* from the viewpoint of the ports. 
 
-In an earlier article on [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}), we learned how to turn any resistor network into an equivalent single resistor. Thévenin's and Norton's theorems are the next step. They teach us how to simplify networks of resistors *and* sources. If you have a complicated linear circuit the theorems provide the instructions for how to construct a very simple equivalent circuit. 
+In an earlier article on how to [simplify a resistor network]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}), we learned how to turn any resistor network into an equivalent single resistor. Thévenin's and Norton's theorems are the next step. They teach us how to simplify networks of resistors *and* sources. If you have a complicated linear circuit the theorems provide the instructions for how to construct a very simple equivalent circuit. 
 
 ## Using Thévenin's theorem
 
