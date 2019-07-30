@@ -152,7 +152,7 @@ Here's the circuit redrawn all squared up in a familiar style,
 ![Example 2 with Wye transformation]({{ site.baseurl }}{% link i/delta_wye10.svg %}){: .centered :}
 {% endcapture %}{% include details.html %}
 
-We continue simplification using series and parallel resistor combinations, just as we did in the article on [Simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplifying-resistor-networks.md %}).
+We continue simplification using series and parallel resistor combinations, just as we did in the article on how to [simplify resistor networks]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}).
 
 On the left branch, $3.125 + 1.25 = 4.375 \,\Omega$  
 On the right branch, $4 + 1 = 5\,\Omega$
