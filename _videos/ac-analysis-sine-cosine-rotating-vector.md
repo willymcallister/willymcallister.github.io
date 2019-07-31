@@ -1,6 +1,6 @@
 ---
 layout: video
-title:  "Sine and cosine come from a rotating vector"
+title:  "Sine and cosine from a rotating vector"
 author: Willy McAllister
 youtubeID: a_zReGTxdlQ
 comments: true

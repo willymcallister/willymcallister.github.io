@@ -19,7 +19,7 @@ Solving circuits with differential equations is a pain. If we impose a disciplin
 
 [![]({{ site.baseurl }}{% link i/video.svg %}) Sine of time]({{ site.baseurl }}{% link _videos/ac-analysis-sine-of-time.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Sine and cosine come from a rotating vector]({{ site.baseurl }}{% link _videos/ac-analysis-sine-cosine-rotating-vector.md %})
+[![]({{ site.baseurl }}{% link i/video.svg %}) Sine and cosine from a rotating vector]({{ site.baseurl }}{% link _videos/ac-analysis-sine-cosine-rotating-vector.md %})
 
 [![]({{ site.baseurl }}{% link i/video.svg %}) Lead and Lag]({{ site.baseurl }}{% link _videos/ac-analysis-lead-lag.md %})
 

@@ -5,15 +5,20 @@ author: Willy McAllister
 comments: true
 ---
 
-Welcome to Spinning Numbers! Learn about electricity and electrical engineering.  
+Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 
->Breaking News: May 20, 2019 --- The definition of the Ampere has changed! It is now based on the charge of the electron rather than a force measurement.  
-[Define the standard electrical units]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
+New videos! July 30, 2019  
+[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (1)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV1.md %})   
+[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (2)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV2.md %})    
+
+Breaking News: May 20, 2019 --- The definition of the Ampere has changed!
+
+---
 
 ### [Circuit sandbox simulator ![circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox.png %}){: height="80px" :}]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %})
 
-Circuit sandbox [in English](https://spinningnumbers.org/circuit-sandbox/index.html), [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html), [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html), [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html).  
-Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation)
+Circuit simulator [in English](https://spinningnumbers.org/circuit-sandbox/index.html), [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html), [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html), [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html).  
+Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
 
 ### [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
