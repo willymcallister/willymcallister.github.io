@@ -7,11 +7,11 @@ comments: true
 
 Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 
-New videos! July 30, 2019  
+July 30, 2019 --- New videos!  
 [![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (1)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV1.md %})   
 [![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (2)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV2.md %})    
 
-Breaking News: May 20, 2019 --- The definition of the Ampere has changed!
+May 20, 2019 --- Breaking News --- [The definition of the Ampere has changed!]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
 
 ---
 
