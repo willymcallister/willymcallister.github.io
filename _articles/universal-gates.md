@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-The NAND and NOR gates have an distinctive property. These gates are *universal* or *functionally complete*. Universal means you can build every possible logic function with either all NAND gates or all NOR gates.
+NAND and NOR gates are *universal* or *functionally complete*. Universal means you can build every possible logic function with all NAND gates or all NOR gates.
 
-This property is not essential for a digital designer to know, but it is an interesting bit of wisdom. It's also a great introductory logic puzzle.
+This property is an interesting bit of digital wisdom. It's also a great introductory logic puzzle.
 
 Written by Willy McAllister.
 
