@@ -7,7 +7,7 @@ comments: true
 
 Thévenin's theorem says a complicated network of resistors and sources, when viewed from a port, can be simplified down to one voltage source and one resistor. 
 
-We cover Thévenin's theorem in two steps. In this article we present the proof. In the [next article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) we turn Thévenin's theorem into a tool for circuit analysis.
+We cover Thévenin's theorem in two steps. In this article we present the proof. In the [next article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) we turn Thévenin's theorem into a practical tool for circuit analysis.
 
 Written by Willy McAllister.
 
@@ -323,7 +323,7 @@ To find the Norton current directly from the complicated circuit place a short a
 
 ## Review
 
-The proof demonstrates that Thévenin's theorem is true, and it also guides us to a practical way to find a Thévenin or Norton equivalent.
+The proof demonstrates that Thévenin's theorem is true and it also guides us to a practical way to find a Thévenin or Norton equivalent.
 
 * The superposition strategy gave us three types of sub-circuit. Some had one voltage source, some had one current source, and one sub-circuit had no internal sources. 
 

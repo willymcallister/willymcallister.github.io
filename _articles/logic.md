@@ -49,9 +49,9 @@ Now we define the abstract notions of Boolean Logic. Don't worry how circuits ac
 
 In Boole's system a *logical variable* is allowed to have two values, TRUE or FALSE, abbreviated as T and F. We often indicate TRUE with the symbol 1 and false with 0. Don't think of 1 and 0 as numbers---yet---just think of them as two distinct symbols that are easy to tell apart.
 
-{% capture summary %}Some variables are boolean, some are not.{% endcapture %}
+{% capture summary %}Some variables are Boolean, some are not.{% endcapture %}
 {% capture details %}  
-Not everything can be modeled as a boolean variable. For example,
+Not everything can be modeled as a Boolean variable. For example,
 
 "What day is it?"
 
@@ -59,7 +59,7 @@ is not TRUE or FALSE because it has seven possible answers (Sunday, Monday, Tues
 
 "Is today Friday?"
 
-this can be modeled as a boolean variable because the answer to this question is either TRUE or FALSE.
+this can be modeled as a Boolean variable because the answer to this question is either TRUE or FALSE.
 {% endcapture %}{% include details.html %} 
 
 ### Operators

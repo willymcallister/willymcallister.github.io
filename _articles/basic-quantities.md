@@ -5,11 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Charge is the stuff electricity is made of. Voltage and current are the cornerstone concepts in electricity. 
-
-We create our first mental pictures of current and voltage. 
-
-Power happens when voltage and current act together.
+Charge, current, and voltage are the cornerstone concepts of electricity. We create our first mental models for these basic electrical quantities.
 
 ----
 

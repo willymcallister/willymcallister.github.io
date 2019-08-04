@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "Logic symbols"
+title:  "Digital logic symbols"
 author: Willy McAllister
 comments: true
 ---
 
-There are two common sets of logic symbols. The distinctive shapes of MIL-STD-806B and the more uniform boxy shapes of IEC 60617.
+There are two common sets of digital logic symbols. The *distinctive shapes* of MIL-STD-806B and the more uniform boxy shapes of IEC 60617.
 
 Written by Willy McAllister.
 
@@ -19,7 +19,7 @@ Written by Willy McAllister.
 
 ----
 
-Logical thoughts can be represented in text form as boolean equations, or as symbols in a logic schematic. I find it easier to understand the meaning and *intent* of a logic design when it is drawn with symbols in schematic form. 
+Logical thoughts can be represented in text form as Boolean equations, or as symbols in a logic schematic. I find it easier to understand the meaning and *intent* of a logic design when it is drawn with symbols in schematic form. 
 
 ## Symbols for simple gates
 

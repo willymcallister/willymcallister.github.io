@@ -32,7 +32,7 @@ Definitions and concept checks for important features of a circuit, including,
 ## Circuit terms
 
 #### Circuit
-comes from the word *circle*. A circuit is a collection of real components, power sources, and signal sources, all connected so current can flow in a complete circle. You can also call a circuit a *network*.
+*Circuit* comes from the word *circle*. A circuit is a collection of components, power sources, and signal sources, all connected so current can flow in a complete circle. You can also call a circuit a *network*.
 
 #### Closed circuit
 A circuit is *closed* if the circle is complete, if all currents have a path back to where they came from.  

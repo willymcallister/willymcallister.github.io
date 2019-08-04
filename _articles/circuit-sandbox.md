@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-A simulator for learning about circuits.
+A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. It is not a version of SPICE---it is its own interpretation of a circuit simulator written entirely in JavaScript.
 
 [![Run circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]])  
 
@@ -231,7 +231,7 @@ Here are your part choices,
 
 ## Translation
 
-If you would like to help translate the Circuit Sandbox into other languages, that would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/gh-pages/Translation-table.docx) for you to translate.
+If you can help translate the Circuit Sandbox into other languages, that would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/gh-pages/Translation-table.docx) for you to translate.
 
 So far, Circuit Sandbox is available in,
 
@@ -240,15 +240,15 @@ So far, Circuit Sandbox is available in,
 * Simplified Chinese, zh-cn.js (courtesy of GitHub user [Zhu Hao](https://github.com/greedyhao))
 * Japanese, ja.js (courtesy of my friend Leslie Shiozaki, a professional translator)
 
-## The circuit sandbox was created at MIT
+## The Circuit Sandbox was created at MIT
 
-The Circuit Sandbox simulator was created at MIT by Professor Chris Terman in 2011, and was used by the very first massively-open-online class (MOOC), MIT 6.002x. MIT transferred Circuit Sandbox to [EdX](www.edx.org) in 2012. I made further improvements to the simulator interface while at Khan Academy in 2016 and since then.
+The Circuit Sandbox was written by MIT Professor Chris Terman in 2011 for  MIT 6.002x, the very first massively-open-online class (MOOC). MIT transferred Circuit Sandbox to [EdX](www.edx.org) in 2012. I made further improvements to the simulator while at Khan Academy in 2016 and since then.
 
-Circuit Sandbox is *not* a version of SPICE. It is its own interpretation of a circuit simulator. It includes schematic capture and a circuit simulation engine. The simulator is 100% Javascript and does not require installation. All you do is click on the link and the simulator opens, ready to run.
+Circuit Sandbox includes schematic capture and a circuit simulation engine. It is *not* a version of SPICE. It is its own interpretation of a circuit simulator written in 100% Javascript. It does not require installation---just click on the link and the simulator opens, ready to run.
 
 ## Other circuit simulators
 
-The granddaddy of all circuit simulation programs is SPICE (Simulation Program with Integrated Circuit Emphasis). This program was created at the University of California, Berkeley in the 1970's. It was originally written in FORTRAN and has always been in the public domain. SPICE is one of the jewels of human creativity.
+The granddaddy of all circuit simulation programs is SPICE (Simulation Program with Integrated Circuit Emphasis). This program was created at the University of California, Berkeley in the 1970's. It was originally written in FORTRAN. SPICE has always been in the public domain. It is one of the jewels of human creativity.
 
 The input to SPICE is a plain-text circuit description (a SPICE netlist). SPICE is the workhorse of the electronics industry because it supports sophisticated models for semiconductor devices (diodes and many types of transistors). 
 

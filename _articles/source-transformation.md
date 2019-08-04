@@ -5,6 +5,8 @@ author: Willy McAllister
 comments: true
 ---
 
+*Source transformation* is a way to simplify a circuit. You change a voltage source into a current source, or the other way around. The method is based on Thévenin's theorem and Norton's theorem.
+
 Two simple circuits have special names,
 
 The *Thévenin* form is a voltage source in series with a resistor.  
@@ -13,7 +15,6 @@ The *Norton* form is a current source in parallel with a resistor.
 ![Thévenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
 
 It is possible to convert between Thévenin and Norton forms.  
-This is called *source transformation*. 
 
 Written by Willy McAllister. 
 
