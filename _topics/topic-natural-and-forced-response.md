@@ -2,7 +2,7 @@
 layout: topic
 title:  Natural and forced response
 author: Willy McAllister
-comments: true
+comments: false
 ---
 
 Capacitors and inductors store energy. The *natural response* of a circuit is what it does "naturally" as its internal energy moves around. As the energy sloshes around we track what happens to voltage and current.
