@@ -78,9 +78,9 @@ List of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spin
 
 These videos and articles began at Khan Academy where I had the honor of being the Electrical Engineering Content Fellow in 2016. The concepts are explained at the level of an undergraduate EE student. Motivated middle school and high school students can get a lot from the course. 
 
-I set up this Spinning Numbers web site after completing my KA fellowship. I've reviewed and significantly improved all the articles, and added several new articles. A nice new feature is the Circuit Sandbox simulator. You will find simulation models included in most articles, to let you try your hand and bring the concepts to life. 
+Spinning Numbers web site came to life in 2016 after I completed my fellowship at KA. All the articles have been reviewed and significantly improved, and several new articles have made their appearance. A nice new feature is the Circuit Sandbox simulator. Many articles include simulation models to let you try your test your understanding and bring the concepts to life. 
 
-Good luck as you learn about electronics and electrical engineering. Please leave a comment if you enjoy your visit, and ask questions. I'm here to help.
+Good luck on your journey into electronics and electrical engineering. Please leave a comment if you enjoy your visit, and ask questions. I'm here to help.
 
    \- Willy McAllister
 
