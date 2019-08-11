@@ -5,16 +5,17 @@ author: Willy McAllister
 comments: true
 ---
 
-A learner asked,  
-"In the [video](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law) on Coulomb's Law, why does Sal say the gravitational force is a weak force compared to the electrostatic force, even though it's operating at such a large scale?" 
-
 The gravitational force is *extremely* weak compared to the electric force.
 
-Explained by Willy McAllister.
+Why does [Sal say](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law) the gravitational force is a weak compared to the electric force, even though it operates at such a large scale?
+
+Written by Willy McAllister.
 
 ----
 
-The reason you don't feel electric force in everyday life is because almost every electron in the universe is nestled up close to an identical positive charge (the nucleus of an atom). That equalizes (neutralizes) the electric force. That's why we are not aware of it most of the time. Let's compare the force of gravity to the electric force between two apples.
+You don't feel electric force in everyday life because almost every negative charge (electron) in the universe is nestled up close to a positive charge (the nucleus of an atom). That equalizes (neutralizes) the electric force. That's why we are not aware of it most of the time. 
+
+Let's compare the force of gravity to the electric force between two apples.
 
 ![Two apples]({{ site.baseurl }}{% link i/apples.jpg %}){: .centered :}{: height="260px"}
 
