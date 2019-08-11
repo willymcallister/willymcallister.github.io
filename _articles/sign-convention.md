@@ -5,7 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-When you add symbolic voltage and current labels to a circuit element, you should point the current arrow into the terminal with the positive voltage polarity. This is the *sign convention for passive components*. 
+The sign convention for passive components is a simple, widely understood way to assign voltages and currents in a circuit. The sign convention defines what we mean by positive voltage and current.
+
+When you add voltage and current labels to a circuit element, the convention is to point the current arrow into the terminal with the positive voltage polarity.
 
 ----
 
@@ -20,11 +22,9 @@ When you add symbolic voltage and current labels to a circuit element, you shoul
 ### Where we're headed 
 {:.no_toc}
 
-The *sign convention for passive components* says, 
+The *sign convention for passive components* is an arbitrary but widely accepted rule that says, 
 
-Point the current arrow into positive voltage terminal of the element. 
-
-This rule allows us to directly apply Ohm's Law $(v = i\,\text R)$ to a resistor. (We don't have to think about including an extra minus sign.)
+Point the current arrow into the positive voltage terminal of an element. 
 
 ----
 
