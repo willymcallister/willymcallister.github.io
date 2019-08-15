@@ -7,11 +7,13 @@ comments: true
 
 Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 
-July 30, 2019 --- New videos!  
+July 30, 2019 --- New  
 [![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (1)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV1.md %})   
-[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (2)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV2.md %})    
+[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (2)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV2.md %})  
+[![]({{ site.baseurl }}{% link i/article.svg %}) What people are saying about Spinning Numbers]({{ site.baseurl }}{% link _articles/people-are-saying.md %})
 
-May 20, 2019 --- Breaking News --- [The definition of the Ampere has changed!]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %})
+
+May 20, 2019 --- Breaking News --- [The definition of the Ampere has changed]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %}).
 
 ---
 
@@ -63,14 +65,14 @@ A collection of amusing, interesting, (and possibly useful), engineering questio
 ### [What's with the name? <img class="sn-logo" src="/i/sn_logo2.svg">]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %})     
 Where does the name [Spinning Numbers]({{ site.baseurl }}{% link _articles/whats-with-the-name.md %}) come from?
 
-#### [Printing]({{ site.baseurl }}{% link printing.md %})  
+### [Printing]({{ site.baseurl }}{% link printing.md %})  
 Tips on the best way to [print]({{ site.baseurl }}{% link printing.md %}) articles from Spinning Numbers.
 
-#### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
+### [Everything]({{ site.baseurl }}{% link _topics/everything.md %})
 List of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
 
 ----
-#### External resources
+### External resources
 
 [Glossary of electrical terms](https://electricalschool.org/)
 

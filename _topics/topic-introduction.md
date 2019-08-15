@@ -11,6 +11,8 @@ Check out the summary of the math and science preparation that will get you read
 
 ----
 
+Charge, current, and voltage are the cornerstone concepts of electricity. We create our first mental models for these basic electrical quantities.
+
 [![]({{ site.baseurl }}{% link i/article.svg %}) Charge]({{ site.baseurl }}{% link _articles/charge.md %})
 
 [![]({{ site.baseurl }}{% link i/video.svg %}) Current]({{ site.baseurl }}{% link _videos/current.md %})
