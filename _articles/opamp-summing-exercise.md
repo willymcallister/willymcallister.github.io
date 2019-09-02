@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Open this schematic of a [summing amplifier](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["w",[232,48,224,48]],["w",[232,96,232,48]],["w",[176,88,176,48]],["w",[136,96,136,48]],["w",[120,48,136,48]],["w",[176,48,136,48]],["w",[176,152,104,152]],["w",[48,96,48,104]],["w",[72,96,48,96]],["w",[232,96,248,96]],["w",[176,104,176,152]],["w",[208,152,176,152]],["w",[208,152,208,104]],["w",[184,88,176,88]],["w",[120,96,136,96]],["r",[120,96,1],{"name":"Rb","r":"15k","_json_":15},["2","3"]],["r",[120,48,1],{"name":"Ra","r":"10k","_json_":16},["2","1"]],["r",[224,48,1],{"name":"Rf","r":"20k","_json_":17},["vout","2"]],["v",[48,104,0],{"name":"vinb","value":"step(0,1,5m,1n)","_json_":18},["3","0"]],["w",[184,104,176,104]],["o",[184,88,0],{"A":"30000","_json_":20},["2","0","vout","0"]],["L",[248,96,0],{"label":"vout","_json_":21},["vout"]],["v",[-16,48,0],{"name":"vina","value":"square(0,1,1000,50)","_json_":22},["1","0"]],["g",[104,152,0],{"_json_":23},["0"]],["w",[104,152,48,152]],["w",[-16,96,-16,152]],["w",[48,152,-16,152]],["w",[72,48,-16,48]],["view",-77.30000000000001,-21.260000000000005,1.953125,"50","10","1G",null,"100","0.0099","1000"]]) in another browser tab.
+Open this schematic of a [summing amplifier](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B72%2C48%2C-16%2C48%5D%5D%2C%5B%22w%22%2C%5B48%2C152%2C-16%2C152%5D%5D%2C%5B%22w%22%2C%5B-16%2C96%2C-16%2C152%5D%5D%2C%5B%22w%22%2C%5B104%2C152%2C48%2C152%5D%5D%2C%5B%22g%22%2C%5B104%2C152%2C0%5D%2C%7B%22_json_%22%3A4%7D%2C%5B%220%22%5D%5D%2C%5B%22v%22%2C%5B-16%2C48%2C0%5D%2C%7B%22name%22%3A%22vina%22%2C%22value%22%3A%22square(0%2C1%2C1000%2C50)%22%2C%22_json_%22%3A5%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22L%22%2C%5B248%2C96%2C0%5D%2C%7B%22label%22%3A%22vout%22%2C%22_json_%22%3A6%7D%2C%5B%22vout%22%5D%5D%2C%5B%22o%22%2C%5B184%2C88%2C0%5D%2C%7B%22A%22%3A%2230000%22%2C%22_json_%22%3A7%7D%2C%5B%223%22%2C%220%22%2C%22vout%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B184%2C104%2C176%2C104%5D%5D%2C%5B%22v%22%2C%5B48%2C104%2C0%5D%2C%7B%22name%22%3A%22vinb%22%2C%22value%22%3A%22step(0%2C1%2C5m%2C1n)%22%2C%22_json_%22%3A9%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B224%2C48%2C1%5D%2C%7B%22name%22%3A%22Rf%22%2C%22r%22%3A%2220k%22%2C%22_json_%22%3A10%7D%2C%5B%22vout%22%2C%223%22%5D%5D%2C%5B%22r%22%2C%5B120%2C48%2C1%5D%2C%7B%22name%22%3A%22Ra%22%2C%22r%22%3A%2210k%22%2C%22_json_%22%3A11%7D%2C%5B%223%22%2C%221%22%5D%5D%2C%5B%22r%22%2C%5B120%2C96%2C1%5D%2C%7B%22name%22%3A%22Rb%22%2C%22r%22%3A%2220k%22%2C%22_json_%22%3A12%7D%2C%5B%223%22%2C%222%22%5D%5D%2C%5B%22w%22%2C%5B120%2C96%2C136%2C96%5D%5D%2C%5B%22w%22%2C%5B184%2C88%2C176%2C88%5D%5D%2C%5B%22w%22%2C%5B208%2C152%2C208%2C104%5D%5D%2C%5B%22w%22%2C%5B208%2C152%2C176%2C152%5D%5D%2C%5B%22w%22%2C%5B176%2C104%2C176%2C152%5D%5D%2C%5B%22w%22%2C%5B232%2C96%2C248%2C96%5D%5D%2C%5B%22w%22%2C%5B72%2C96%2C48%2C96%5D%5D%2C%5B%22w%22%2C%5B48%2C96%2C48%2C104%5D%5D%2C%5B%22w%22%2C%5B176%2C152%2C104%2C152%5D%5D%2C%5B%22w%22%2C%5B176%2C48%2C136%2C48%5D%5D%2C%5B%22w%22%2C%5B120%2C48%2C136%2C48%5D%5D%2C%5B%22w%22%2C%5B136%2C96%2C136%2C48%5D%5D%2C%5B%22w%22%2C%5B176%2C88%2C176%2C48%5D%5D%2C%5B%22w%22%2C%5B232%2C96%2C232%2C48%5D%5D%2C%5B%22w%22%2C%5B232%2C48%2C224%2C48%5D%5D%2C%5B%22s%22%2C%5B-16%2C48%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A28%7D%2C%5B%221%22%5D%5D%2C%5B%22view%22%2C-86.8%2C-21.26%2C1.953125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.0099%22%2C%221000%22%5D%5D) in another browser tab.
 
 **What does this amplifier do? Develop an expression for $\bm{v_o}$ in terms of $\bm{v_{ina}}$, $\bm{v_{inb}}$ and the resistor values.**
 
@@ -13,32 +13,41 @@ Open this schematic of a [summing amplifier](https://spinningnumbers.org/circuit
 {% capture details %}  
 From the video, the gain expression for a summing amplifier is,
 
-$v_o = - \left (\dfrac{\text{Rf}}{\text{Ra}} v_{ina} + \dfrac{\text{Rf}}{\text{Rb}} v_{inb} \right )$  
+$v_o = - \left (\dfrac{\text{Rf}}{\text{Ra}} \,v_{ina} + \dfrac{\text{Rf}}{\text{Rb}} \,v_{inb} \right )$  
 
 Fill in the resistor values,
 
-$v_o = - \left (\dfrac{\text{20\,\text K}}{10\,\text k} v_{ina} + \dfrac{10\,\text k}{15\,\text k} v_{inb} \right )$  
+$v_o = - \left (\dfrac{\text{20\,\text k}}{10\,\text k} \,v_{ina} + \dfrac{20\,\text k}{20\,\text k} \,v_{inb} \right )$  
 
-$v_o = - \left (2 v_{ina} + 0.75 v_{inb} \right )$  
+$v_o = - \left (2 \,v_{ina} + v_{inb} \right )$  
 {% endcapture %}{% include details.html %}
 
-**Observe the inputs: Add voltage probes to the two input voltages. Click on TRAN to run a transient simulation.** 
+Observe the inputs: The schematic has a voltage probe on one input. **Click on TRAN to run a transient simulation and see what it looks like.** 
+
+Move the voltage probe to the other input. **Click on TRAN again to see what the other input looks like.**
 
 One input voltage is a square wave. The other is a single step voltage.
 
 **Sketch what you think the output will look like.**
 
-Knowing the shape of the inputs and the amplifier's function, make a guess.
+You know the shape of the inputs and the amplifier function. What will the output look like?
 
 **Add a voltage probe to the output node. Run another TRAN.**
 
 Does the simulated output match your sketch?
 
-**Starting from a blank schematic, design a summing amplifier that performs this function: $\bm{v_o = -\left ( 4\,v_{ina} + 3\,v_{inb}\right )}$.**
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+Simulation model of a [summing amplifier with probes](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22s%22%2C%5B48%2C96%2C2%5D%2C%7B%22color%22%3A%22orange%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A0%7D%2C%5B%221%22%5D%5D%2C%5B%22w%22%2C%5B72%2C48%2C-16%2C48%5D%5D%2C%5B%22s%22%2C%5B-16%2C48%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A2%7D%2C%5B%223%22%5D%5D%2C%5B%22s%22%2C%5B248%2C96%2C0%5D%2C%7B%22color%22%3A%22green%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A3%7D%2C%5B%22vout%22%5D%5D%2C%5B%22w%22%2C%5B48%2C152%2C-16%2C152%5D%5D%2C%5B%22w%22%2C%5B-16%2C96%2C-16%2C152%5D%5D%2C%5B%22w%22%2C%5B104%2C152%2C48%2C152%5D%5D%2C%5B%22g%22%2C%5B104%2C152%2C0%5D%2C%7B%22_json_%22%3A7%7D%2C%5B%220%22%5D%5D%2C%5B%22v%22%2C%5B-16%2C48%2C0%5D%2C%7B%22name%22%3A%22vina%22%2C%22value%22%3A%22square(0%2C1%2C1000%2C50)%22%2C%22_json_%22%3A8%7D%2C%5B%223%22%2C%220%22%5D%5D%2C%5B%22L%22%2C%5B248%2C96%2C0%5D%2C%7B%22label%22%3A%22vout%22%2C%22_json_%22%3A9%7D%2C%5B%22vout%22%5D%5D%2C%5B%22o%22%2C%5B184%2C88%2C0%5D%2C%7B%22A%22%3A%2230000%22%2C%22_json_%22%3A10%7D%2C%5B%222%22%2C%220%22%2C%22vout%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B184%2C104%2C176%2C104%5D%5D%2C%5B%22v%22%2C%5B48%2C104%2C0%5D%2C%7B%22name%22%3A%22vinb%22%2C%22value%22%3A%22step(0%2C1%2C5m%2C1n)%22%2C%22_json_%22%3A12%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B224%2C48%2C1%5D%2C%7B%22name%22%3A%22Rf%22%2C%22r%22%3A%2220k%22%2C%22_json_%22%3A13%7D%2C%5B%22vout%22%2C%222%22%5D%5D%2C%5B%22r%22%2C%5B120%2C48%2C1%5D%2C%7B%22name%22%3A%22Ra%22%2C%22r%22%3A%2210k%22%2C%22_json_%22%3A14%7D%2C%5B%222%22%2C%223%22%5D%5D%2C%5B%22r%22%2C%5B120%2C96%2C1%5D%2C%7B%22name%22%3A%22Rb%22%2C%22r%22%3A%2220k%22%2C%22_json_%22%3A15%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22w%22%2C%5B120%2C96%2C136%2C96%5D%5D%2C%5B%22w%22%2C%5B184%2C88%2C176%2C88%5D%5D%2C%5B%22w%22%2C%5B208%2C152%2C208%2C104%5D%5D%2C%5B%22w%22%2C%5B208%2C152%2C176%2C152%5D%5D%2C%5B%22w%22%2C%5B176%2C104%2C176%2C152%5D%5D%2C%5B%22w%22%2C%5B232%2C96%2C248%2C96%5D%5D%2C%5B%22w%22%2C%5B72%2C96%2C48%2C96%5D%5D%2C%5B%22w%22%2C%5B48%2C96%2C48%2C104%5D%5D%2C%5B%22w%22%2C%5B176%2C152%2C104%2C152%5D%5D%2C%5B%22w%22%2C%5B176%2C48%2C136%2C48%5D%5D%2C%5B%22w%22%2C%5B120%2C48%2C136%2C48%5D%5D%2C%5B%22w%22%2C%5B136%2C96%2C136%2C48%5D%5D%2C%5B%22w%22%2C%5B176%2C88%2C176%2C48%5D%5D%2C%5B%22w%22%2C%5B232%2C96%2C232%2C48%5D%5D%2C%5B%22w%22%2C%5B232%2C48%2C224%2C48%5D%5D%2C%5B%22view%22%2C-81.3%2C-21.26%2C1.953125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.0099%22%2C%221000%22%5D%5D).
+{% endcapture %}{% include details.html %}
+
+### Design challenge
+
+Starting from a blank schematic, **design a summing amplifier that performs this function: $\bm{v_o = -\left ( 4\,v_{ina} + 3\,v_{inb}\right )}$.**
 
 [Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html)
 
-Hint: Pick new values for the resistors with the right ratios.
+Hint: Pick values for the resistors with the appropriate ratios.
 
 Verify your new amplifier does what you expect.
 
@@ -48,9 +57,6 @@ For example, make one of them a sine wave. Does the output do what you expect?
 
 Make them both sine waves with a different frequency. 
 
-Make up a signal pattern in your head and see if you can build it.
+Make up an output signal in your head and see if you can build it from two inputs.
 
-{% capture summary %}Summing amplifier with probes{% endcapture %}  
-{% capture details %}  
-Simulation model of a [summing amplifier with probes](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["w",[232,48,224,48]],["w",[232,96,232,48]],["w",[176,88,176,48]],["w",[136,96,136,48]],["w",[120,48,136,48]],["w",[176,48,136,48]],["w",[176,152,104,152]],["w",[48,96,48,104]],["w",[72,96,48,96]],["w",[232,96,248,96]],["w",[176,104,176,152]],["w",[208,152,176,152]],["w",[208,152,208,104]],["w",[184,88,176,88]],["w",[120,96,136,96]],["r",[120,96,1],{"name":"Rb","r":"15k","_json_":15},["3","1"]],["r",[120,48,1],{"name":"Ra","r":"10k","_json_":16},["3","2"]],["r",[224,48,1],{"name":"Rf","r":"20k","_json_":17},["vout","3"]],["v",[48,104,0],{"name":"vinb","value":"step(0,1,5m,1n)","_json_":18},["1","0"]],["w",[184,104,176,104]],["o",[184,88,0],{"A":"30000","_json_":20},["3","0","vout","0"]],["L",[248,96,0],{"label":"vout","_json_":21},["vout"]],["v",[-16,48,0],{"name":"vina","value":"square(0,1,1000,50)","_json_":22},["2","0"]],["g",[104,152,0],{"_json_":23},["0"]],["w",[104,152,48,152]],["w",[-16,96,-16,152]],["w",[48,152,-16,152]],["s",[248,96,0],{"color":"green","offset":"0","_json_":27},["vout"]],["s",[-16,48,0],{"color":"cyan","offset":"0","_json_":28},["2"]],["w",[72,48,-16,48]],["s",[48,96,2],{"color":"orange","offset":"0","_json_":30},["1"]],["view",-81.30000000000001,-21.260000000000005,1.953125,"50","10","1G",null,"100","0.0099","1000"]]).
-{% endcapture %}{% include details.html %}
+
