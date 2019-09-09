@@ -242,7 +242,7 @@ So far, Circuit Sandbox is available in,
 
 ## The Circuit Sandbox was created at MIT
 
-The Circuit Sandbox was written by MIT Professor Chris Terman in 2011 for  MIT 6.002x, the very first massively-open-online class (MOOC). MIT transferred Circuit Sandbox to [EdX](www.edx.org) in 2012. I made further improvements to the simulator while at Khan Academy in 2016 and since then.
+The Circuit Sandbox was written by MIT Professor Chris Terman in 2011 for  MIT 6.002x, the very first massively-open-online class (MOOC). MIT transferred Circuit Sandbox to [EdX](https://www.edx.org/) in 2012. I made further improvements to the simulator while at Khan Academy in 2016 and since then.
 
 Circuit Sandbox includes schematic capture and a circuit simulation engine. It is *not* a version of SPICE. It is its own interpretation of a circuit simulator written in 100% Javascript. It does not require installation---just click on the link and the simulator opens, ready to run.
 

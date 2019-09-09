@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-The Node Voltage Method is one of the well-organized methods for analyzing a circuit. It is based on [Kirchhoff's Current Law](electrical-engineering/ee-circuit-analysis/a/ee-kirchhoffs-laws). Node Voltage is the method embedded inside the popular circuit simulator, SPICE.
+The Node Voltage Method is one of the well-organized methods for analyzing a circuit. It is based on [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}). Node Voltage is the method embedded inside the popular circuit simulator, SPICE.
 
 Written by Willy McAllister.
 

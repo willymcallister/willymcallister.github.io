@@ -105,7 +105,8 @@ From the definition of decibel,
 
 gain in $\text{dB} = 10 \log_{10} \dfrac{2}{1} = 10 \log_{10} 2 = 3.01\,\text{dB}$.
 
-Use your calculator to compute the log or tell Google: ```10*log10(2)``` or use the [power ratio to dB calculator](#power-ratio-to-db).
+Use your calculator to compute the log or tell Google: ```10*log10(2)```   
+or use the [power ratio to dB calculator](#power-ratio-to-db).
 
 Now flip the power ratio to $1:2$ and figure out what that means in decibels,
 
@@ -263,7 +264,8 @@ From the definition of decibel,
 
 gain in $\text{dB} = 20 \log_{10} \dfrac{2}{1} = 20 \log_{10} 2 = 6.02\,\text{dB}$.
 
-Use your calculator to compute the log or tell Google: ```20*log10(2)``` or use the [voltage ratio to dB calculator](#voltage-ratio-to-db).
+Use your calculator to compute the log or tell Google: ```20*log10(2)```  
+or use the [voltage ratio to dB calculator](#voltage-ratio-to-db).
 
 ## Example 6
 {:.no_toc}

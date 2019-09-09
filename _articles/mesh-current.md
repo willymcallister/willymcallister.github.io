@@ -5,7 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-The Mesh Current Method is one of two well-organized methods for solving a circuit. (The other is the [Node Voltage Method]({{ site.baseurl }}{% link _articles/node-voltage.md %}).) The Mesh Current Method is a beautiful application of [Kirchhoff's Voltage Law](electrical-engineering/ee-circuit-analysis/a/ee-kirchhoffs-laws) (KVL).
+The Mesh Current Method is one of two well-organized methods for solving a circuit. (The other is the [Node Voltage Method]({{ site.baseurl }}{% link _articles/node-voltage.md %}).) 
+
+The Mesh Current Method is a beautiful application of [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) (KVL).
 
 ----
 
@@ -28,7 +30,7 @@ The Mesh Current Method is one of two well-organized methods for solving a circu
 * Solve the resulting system of equations to get the mesh currents.
 * Find the element currents and voltages with Ohm's Law.
 
-Exception: If the circuit is [*non-planar*](#exception-non-planar-circuits), or you have a current source shared by two meshes, use the [Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %}). The [Loop Current Method](w/a/ee-loop-current-method) is a small variation of the Mesh Current Method.
+Exception: If the circuit is [*non-planar*](#exception-non-planar-circuits), or you have a current source shared by two meshes, use the [Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %}). The [Loop Current Method]({{ site.baseurl }}{% link _articles/loop-current.md %}) is a small variation of the Mesh Current Method.
 
 ----
 

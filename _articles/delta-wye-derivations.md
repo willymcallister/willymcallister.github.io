@@ -37,7 +37,7 @@ Given the three resistor values of one configuration we are going to derive the 
 
 ## $\Delta$ to $\text Y$ derivation
 
-This derivation was contributed by Khan Academy learner [_phidot_](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-resistor-circuits/a/ee-delta-wye-resistor-networks?qa_expand_key=kaencrypted_ad2413cde556298b64a98d41d01fd684_cd6a16e8a8a657a21f768c0ff04804160d977a939ac691b3ecd6f7ee4a7f3b908c3a74bcab01337d6533d3b2cd73bf8f6ff245d796c6ba5cd4935e7434b49ff5a41f9fde6e3e3b40568f65d949ebef1c2069c478d967b52cc4b9a4782497244937b838cd8908e0ad3a3a524e87a524e6f816e4f6f1312d1554b5f5586074aab1f7d6c61e4d62263fecf53eb29522e61469af6deb96ff91ae7303c04481bb2de0). Let's figure out $R1$ in the $\text Y$ configuration in terms of $\Delta$ resistors $(Ra, Rb, Rc)$. We write a set of three simultaneous equations describing the resistance between each pair of terminals. 
+This derivation was contributed by Khan Academy learner [_phidot_](https://www.khanacademy.org/profile/phidot/discussion). Let's figure out $R1$ in the $\text Y$ configuration in terms of $\Delta$ resistors $(Ra, Rb, Rc)$. We write a set of three simultaneous equations describing the resistance between each pair of terminals. 
 
 $R_{xy}: \quad R1 + R2 = Rc \parallel (Ra+Rb)$  
 $R_{yz}: \quad R2 + R3 = Ra \parallel (Rb+Rc)$  

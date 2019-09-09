@@ -82,7 +82,7 @@ The strategy for solving this circuit is as follows,
 
 To get going on a precise answer for the natural response let's set up the circuit with some initial energy. The initial energy will take the form of a charge placed on the capacitor, which generates a voltage. (I could have chosen to start with an initial current in the inductor, but I didn't.)
 
-The components are labeled with careful attention to the [sign convention for passive components](w/a/ee-sign-convention). The capacitor voltage has its positive terminal at the bottom, so $i$ flows into the $+$ terminal as the sign convention requires.
+The components are labeled with careful attention to the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). The capacitor voltage has its positive terminal at the bottom, so $i$ flows into the $+$ terminal as the sign convention requires.
 
 ![LC natural response circuit before switch]({{ site.baseurl }}{% link i/lc_natural_response1.svg %}){: .centered :}{: height="200px" :}
 

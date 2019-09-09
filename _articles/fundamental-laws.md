@@ -5,7 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-The fundamental laws are Ohm's Law (and the $i$-$v$ equations for capacitor and inductor) and Kirchhoff's Laws. We applied Ohm's Law a few times already for [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({{ site.baseurl }}{% link _videos/voltage-divider.md %}), and [simplifying a resistor network]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}). Now we toss [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) into our tool box and solve a circuit. 
+The fundamental laws are Ohm's Law (along with the $i$-$v$ equations for capacitor and inductor) and Kirchhoff's Laws. We applied Ohm's Law a few times already for [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %}), and [simplifying a resistor network]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}). 
+
+Now we toss [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) into our box of tricks and solve a circuit. 
 
 ----
 
@@ -58,18 +60,17 @@ Here are features of this circuit, and the voltages and currents we will discove
 * $1$ source voltage, $v_{\text S}$, and $2$ element voltages, $v_1$ and $v_2$. 
 * $1$ source current, $i_{\text S}$, and $3$ element currents, $i_1$, $i_2$ and $i_3$.  
 
-<details>
-<summary>node</summary>
-<p>A <a href="a/circuit-terminology.html#node"><em>node</em></a> is a junction where $2$ or more elements connect.</p>
-</details>
+{% capture summary %}review node{% endcapture %}  
+{% capture details %} 
+A [*node*]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}#node) is a junction where $2$ or more elements connect.  
+{% endcapture %}{% include details.html %}
 
-<details>
-<summary>mesh and loop</summary>
-<p>A <em>loop</em> is any closed path through circuit elements. A <em>mesh</em> is a loop that has no other loops inside it.</p>
-<p>Definitions and examples of loops and meshes can be found in <a href="/a/circuit-terminology.html#loop">Circuit terminology</a>.</p>
-</details>
+{% capture summary %}review mesh and loop{% endcapture %}  
+{% capture details %}  
+A *loop* is any closed path through circuit elements. A *mesh* is a loop that has no other loops inside it. Examples can be found in [Circuit terminology]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}#loop).  
+{% endcapture %}{% include details.html %}
 
-When we assign polarity to voltage and current we use the [sign convention for passive components]({{ site.baseurl }}{% link _videos/passive-sign-convention.md %}). The current arrow always points into the positive voltage of each resistor. 
+When we assign polarity to voltage and current we use the sign convention for passive components. The current arrow always points into the positive voltage of each resistor. 
 
 This circuit has three nodes, redrawn here to highlight the junctions at nodes $b$ and $c$.
 
@@ -114,10 +115,10 @@ $+140 - v_1 - v_2 = 0$
 
 The $-$ signs for $v_1$ and $v_2$ are because we encounter their $+$ sign first during the clockwise tour around the loop. We see a voltage *drop* as we go through the component. 
 
-<details>
-<summary>What is the big zig-zag symbol?</summary>
-<p>The $\sum$ symbol is the Greek letter capital Sigma. In mathematical notation it is the <em>summation</em> operation. It adds up a series of numbers. $v_1 + v_2 + v_3 + ... + v_n$.</p>
-</details>
+{% capture summary %}What is the big zig-zag symbol?{% endcapture %}  
+{% capture details %}  
+The $\sum$ symbol is the Greek letter capital Sigma. In mathematical notation it is the <em>summation</em> operation. It adds up a series of numbers. $v_1 + v_2 + v_3 + ... + v_n$.  
+{% endcapture %}{% include details.html %}
 
 ### KCL at node $b$
 
@@ -192,7 +193,7 @@ $i_3 =$ \_\_\_\_\_ $\text A$
 <p> $i_3 = 12\,\text A$</p>
 </details>
 
-{% capture summary %}show answer{% endcapture %}  
+{% capture summary %}show the full solution{% endcapture %}  
 {% capture details %}  
 ## Solve the system of equations
 {:.no_toc}

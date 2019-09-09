@@ -721,7 +721,7 @@ $s_{1,2} = -\alpha \pm \cancel{\sqrt{\alpha^2 - \omega_o^2}}$
 
 $s_{1,2} = -\alpha$
 
-Solving a second-order differential equation with repeated roots is a bit tricky. I recommend [Sal's video](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/w/v/repeated-roots-of-the-characteristic-equation) where he explains the challenge of repeated roots and how to handle them.
+Solving a second-order differential equation with repeated roots is a bit tricky. I recommend [Sal's video](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/complex-roots-characteristic-equation/v/repeated-roots-of-the-characteristic-equation) where he explains the challenge of repeated roots and how to handle them.
 
 Here's how it's done.
 
@@ -739,7 +739,7 @@ Since $s_1$ and $s_2$ are the same, the solution collapses down to just one term
 
 $i = Ke^{-\alpha t}$
 
-This one equation isn't enough to get a general solution to a second-order differential equation. That means this proposed solution is a loser. This happens because of the repeated roots. As [Sal suggests](https://www.khanacademy.org/science/electrical-engineering/ee-circuit-analysis-topic/ee-natural-and-forced-response/a/w/v/repeated-roots-of-the-characteristic-equation), we try a different proposed solution,
+This one equation isn't enough to get a general solution to a second-order differential equation. That means this proposed solution is a loser. This happens because of the repeated roots. As [Sal suggests](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/complex-roots-characteristic-equation/v/repeated-roots-of-the-characteristic-equation), we try a different proposed solution,
 
 $i = K_1 e^{-\alpha t} + K_2\, t \, e^{-\alpha t}$
 

@@ -31,7 +31,7 @@ Written by Willy McAllister.
 
 * Unlike charges attract each other, $+$ attracts $-$.
 
-* Charles Augustin de Coulomb worked out how the electric force behaves. He showed the electric force is proportional to the product of the two charges $(q_1, q_2)$, and inversely proportional to the square of the distance between the charges. This is called [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law).
+* Charles Augustin de Coulomb worked out how the electric force behaves. He showed the electric force is proportional to the product of the two charges $(q_1, q_2)$, and inversely proportional to the square of the distance between the charges. This is called [Coulomb's Law](https://www.khanacademy.org/science/ap-physics-1/ap-electric-charge-electric-force-and-voltage/coulombs-law-and-electric-force-ap/v/coulombs-law).
 
     $F_e \propto \dfrac{q_1 \, q_2}{r^2}$
 
@@ -151,7 +151,7 @@ For example, start with no charge on the two spheres. You can tell they are unch
 Can you think of a way to charge a sphere with $q/4$?  
 {% endcapture %}{% include details.html %}
 
-Coulomb demonstrated the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it [Coulomb's Law](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law). 
+Coulomb demonstrated the electric force is proportional to the amount of charge on each object and inversely proportional to the square of the distance between them $(1/r^2)$. We call it [Coulomb's Law](https://www.khanacademy.org/science/ap-physics-1/ap-electric-charge-electric-force-and-voltage/coulombs-law-and-electric-force-ap/v/coulombs-law). 
 
 $F \propto \dfrac{q_1\,q_2}{r^2}$
 

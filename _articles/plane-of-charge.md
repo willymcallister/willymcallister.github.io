@@ -276,8 +276,8 @@ This example was for an infinite plane of charge. In the real world there is no 
 {:.no_toc} 
 Khan Academy videos. 
 
-[Field from an infinite plate - part 1](/science/physics/electricity-magnetism/electric-field/v/proof-advanced-field-from-infinite-plate-part-1)  
-[Field from an infinite plate - part 2](/science/physics/electricity-magnetism/electric-field/v/proof-advanced-field-from-infinite-plate-part-2) 
+[Field from an infinite plate - part 1](https://www.khanacademy.org/science/physics/electric-charge-electric-force-and-voltage/electric-field/v/proof-advanced-field-from-infinite-plate-part-1)  
+[Field from an infinite plate - part 2](https://www.khanacademy.org/science/physics/electric-charge-electric-force-and-voltage/electric-field/v/proof-advanced-field-from-infinite-plate-part-2) 
 
 The derivation Sal does is slightly different than the one in this article.
 

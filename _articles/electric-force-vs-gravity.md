@@ -7,7 +7,7 @@ comments: true
 
 The gravitational force is *extremely* weak compared to the electric force.
 
-Why does [Sal say](https://www.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/v/coulombs-law) the gravitational force is a weak compared to the electric force, even though it operates at such a large scale?
+Why does [Sal say](https://www.khanacademy.org/science/ap-physics-1/ap-electric-charge-electric-force-and-voltage/coulombs-law-and-electric-force-ap/v/coulombs-law) (at 4:40) the gravitational force is a weak compared to the electric force, even though it operates at such a large scale?
 
 Written by Willy McAllister.
 
@@ -56,11 +56,12 @@ This is the force you would feel if a fully loaded oil supertanker was sitting o
 The electric force is unimaginably greater than the force of gravity.
 
 ## Background
+
 The [mole](https://en.wikipedia.org/wiki/Mole_(unit)) is defined by Avogadro’s Number, $6.022 \times 10^{23}$.  
 $1\,\text{mole}$ of $\text H_2\text O$ weighs $18\,\text{grams}$. $2\,\text{grams}$ of hydrogen plus $16\,\text{grams}$ of oxygen.  
 An apple is mostly water. $100\,\text{grams}$ of water is $100\,\text g/(18\,\text g/\text{mole}) = 5.5\,\text{moles}$ of water molecules.   
  
-There are [almost exactly]((https://en.wikipedia.org/wiki/Faraday_constant)) $10{,}000\,\text{coulombs}$ of negative charge in $1\,\text{mole}$ of electrons.  
+There are [almost exactly](https://en.wikipedia.org/wiki/Faraday_constant) $10{,}000\,\text{coulombs}$ of negative charge in $1\,\text{mole}$ of electrons.  
 If you take $1$ electron from $1$ out of every $55{,}000$ molecules in an apple, it adds up to $1\,\text{coulomb}$ of electrons.    
 
 $1\,\text{newton}$ is about $0.25\,\text{pounds}$.  
