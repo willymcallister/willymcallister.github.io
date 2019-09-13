@@ -59,7 +59,7 @@ In an earlier article on how to [simplify a resistor network]({{ site.baseurl }}
 Thévenin's theorem looks like this in schematic form,
 
 ![Thévenin's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22.svg %}){: .centered :}
-<p class="caption">On the left is a circuit made of any number of resistors, voltage sources, and current sources. We select two internal nodes and mark them with little circles to define a port we care about. We draw the port so it pokes out the side of the circuit. We create a Thévenin equivalent "from the viewpoint" of this port.</p>
+<p class="caption">The top circuit is made of any number of resistors, voltage sources, and current sources. We select two internal nodes and mark them with little circles to define a port we care about. We draw the port so it pokes out the side of the circuit. We create a Thévenin equivalent "from the viewpoint" of this port.</p>
 
 ## When is Thévenin's theorem useful?
 
@@ -128,7 +128,7 @@ $\bold R = 1000\,\Omega$
 
 {% capture summary %}$\parallel${% endcapture %}  
 {% capture details %}  
-Two vertical bars $\parallel$ are shorthand notation for "in parallel with."  
+$\parallel$ is a shorthand notation for "in parallel with"  
 {% endcapture %}{% include details.html %} 
 
 #### Thévenin voltage
@@ -274,27 +274,25 @@ Here's a practical application. This circuit shows a common way to set up a bipo
 
 ![Example 2 circuit]({{ site.baseurl }}{% link i/thevenin40.svg %}){: .centered :}
 
-The $100\,\text k\Omega$ and $50\,\text k\Omega$ resistors set the voltage of $\text Q1$'s base terminal to an intermediate value between the power supply and ground. Together these resistors are called the *biasing network*. It is often useful to convert the biasing network into its Thévenin equivalent. 
+The $100\,\text k\Omega$ and $50\,\text k\Omega$ resistors set the voltage of $\text Q1$'s base terminal to an intermediate value between the power supply and ground. Together these resistors are called the *biasing network*. We are going to convert the biasing network into its Thévenin equivalent. 
 
-**Find the Thévenin equivalent of the biasing network.** 
+**Identify the port and isolate the biasing network by removing the external components.**
 
-Identify the port with two small circles and isolate the biasing network by removing the external components,
+{% capture summary %}Isolated biasing network{% endcapture %}  
+{% capture details %}  
+![Example 2 biasing network]({{ site.baseurl }}{% link i/thevenin41.svg %}){: .centered :}  
+{% endcapture %}{% include details.html %}
 
-![Example 2 biasing network]({{ site.baseurl }}{% link i/thevenin41.svg %}){: .centered :}
+**Find the two Thévenin components, a voltage source and resistance.**
 
-Now we find the two Thévenin components, a voltage source and resistance. To test your understanding, give this a try on your own before peeking at the answer.
-
-{% capture summary %}Thévenin voltage{% endcapture %}  
+{% capture summary %}Thévenin voltage and resistance{% endcapture %}  
 {% capture details %}  
 The Thévenin voltage is the voltage on the port when we leave it open, $v_{oc}$. The circuit is a voltage divider so we'll use that formula to find $v_{oc}$,
 
 $\text V_\text T = v_{oc} = 15\,\text V\,\dfrac{50\text k}{100\text k + 50\text k} = 15\,\text V \cdot \dfrac{1}{3}$
 
 $\text V_\text T = 5\,\text V$
-{% endcapture %}{% include details.html %} 
 
-{% capture summary %}Thévenin resistance{% endcapture %}  
-{% capture details %} 
 To get the Thévenin resistance we suppress the voltage source by replacing it with a short circuit. The Thévenin resistance is what's left,
 
 ![Example 2 biasing network with voltage source suppressed]({{ site.baseurl }}{% link i/thevenin42.svg %}){: .centered :}
@@ -313,7 +311,7 @@ Assemble the two components to get the Thévenin equivalent,
 ![Example 2 Thévenin equivalent]({{ site.baseurl }}{% link i/thevenin43.svg %}){: .centered :}
 {% endcapture %}{% include details.html %} 
 
-And the final step is to embed the Thévenin equivalent of the biasing network back into the amplifier circuit,
+**Embed the Thévenin equivalent back into the amplifier circuit.**
 
 {% capture summary %}Thévenin equivalent embedded into amplifier{% endcapture %}  
 {% capture details %} 

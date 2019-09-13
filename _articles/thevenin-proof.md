@@ -41,7 +41,7 @@ In this article we prove Thévenin's theorem using the principle of [superpositi
 In schematic form, Thévenin's theorem looks like this,
 
 ![Thévenin's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22.svg %}){: .centered :}
-<p class="caption">On the left is an arbitrary circuit made of any number of resistors, voltage sources, and current sources. We select any two internal nodes we are interested in and mark them with little circles to define a <em>port</em>, shown at the edge of the circuit. We create the Thévenin equivalent "from the viewpoint" of this port.</p>
+<p class="caption">The top circuit is made of any number of resistors, voltage sources, and current sources. We select any two internal nodes we are interested in and mark them with little circles to define a <em>port</em>, shown at the edge of the circuit. We create the Thévenin equivalent "from the viewpoint" of this port.</p>
 
 In equation form, Thévenin's theorem is,
 
