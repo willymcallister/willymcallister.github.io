@@ -7,15 +7,17 @@ comments: true
 
 Let's introduce the ideal opamp. 
 
-![Opamp schematic symbol]({{ site.baseurl }}{% link i/opamp_schematic_symbol.png %}){: height="140px" :}{: .centered :}
+![Opamp schematic symbol]({{ site.baseurl }}{% link i/circuit_sandbox_opamp_symbol.png %}){: height="140px" :}{: .centered :}
 
 An opamp is a *differential* amplifier. It measures the difference in voltage between its two input ports. It amplifies that difference and puts the result on the output port.
 
 $v_o = \text A \,(v^+ - v^-)$
 
+See also the [Circuit sandbox opamp model]({{ site.baseurl }}{% link _articles/circuit-sandbox.md %}#opamp).  
+
 Open up this incomplete [schematic](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22s%22%2C%5B240%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A0%7D%2C%5B%228%22%5D%5D%2C%5B%22w%22%2C%5B248%2C96%2C232%2C96%5D%5D%2C%5B%22g%22%2C%5B208%2C152%2C0%5D%2C%7B%22_json_%22%3A2%7D%2C%5B%220%22%5D%5D%2C%5B%22v%22%2C%5B56%2C104%2C0%5D%2C%7B%22name%22%3A%22v%2B%22%2C%22value%22%3A%22dc(1.1)%22%2C%22_json_%22%3A3%7D%2C%5B%227%22%2C%226%22%5D%5D%2C%5B%22L%22%2C%5B248%2C96%2C0%5D%2C%7B%22label%22%3A%22vout%22%2C%22_json_%22%3A4%7D%2C%5B%22vout%22%5D%5D%2C%5B%22o%22%2C%5B184%2C88%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22A%22%3A%2210%22%2C%22_json_%22%3A5%7D%2C%5B%225%22%2C%224%22%2C%22vout%22%2C%223%22%5D%5D%2C%5B%22v%22%2C%5B144%2C104%2C0%5D%2C%7B%22name%22%3A%22v-%22%2C%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A6%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22view%22%2C-8.34%2C14.292%2C2.44140625%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.0099%22%2C%221000%22%5D%5D) in another browser tab.
 
-The triangle is the symbol for an opamp. The gain of this opamp has been set really low so you can see how a differential amplifier works.
+The gain of this opamp has been set really low so you can see how a differential amplifier works.
 
 Double-click on the opamp. Give it a name like "U1".   
 **What is the gain of this opamp, $\text A$?**

@@ -149,9 +149,25 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 ## Device models
 
-The simulator has simple models for semiconductor devices and an operational amplifier, with just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
+The simulator has simple models for semiconductor devices and an ideal operational amplifier. Each model has just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
 
-The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14} \text A$. The diode's *area* parameter scales up the saturation current to $a \times \text I_\text s$. 
+### Diode model
+
+The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ ampere. The diode's Area parameter scales the saturation current to Area $\times \,\text I_\text s$. 
+
+{% include img.html img="circuit_sandbox_diode_symbol.png" alt="Circuit Sandbox diode symbol" %}{: height="180px" :}
+
+Setting the area is equivalent to placing that many diodes in parallel.
+
+### Opamp model
+
+The ideal opamp symbol has two inputs (v+ and v-) and an output (vo). There are no positive and negative power supply inputs. The extra input, vg, is the reference for the output voltage. 
+
+{% include img.html img="circuit_sandbox_opamp_symbol.png" alt="Circuit Sandbox opamp symbol" %}{: height="140px" :}
+
+The defining equation for the opamp is: A(vp - vn) = vo - vg
+
+The default gain is A $= 30{,}000$. If the input voltages are identical then the output voltage will be vg. If you plan on symmetric power supply voltages, connect vg to ground. If they are not symmetric set vg half way between whatever power inputs you intend for your opamp. 
 
 ## System information
 
