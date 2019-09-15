@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-*Source transformation* is a way to simplify a circuit. You change a voltage source into a current source, or the other way around. The method is based on Thévenin's theorem and Norton's theorem.
+*Source transformation* lets you change a voltage source into a current source, or the other way around. It is a way to simplify a circuit. The method is based on Thévenin's theorem and Norton's theorem.
 
 Two simple circuits have special names,
 
