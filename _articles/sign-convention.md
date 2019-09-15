@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-The sign convention for passive components is a simple, widely understood way to assign voltages and currents in a circuit. The sign convention defines what we mean by positive voltage and current.
+The sign convention for passive components is a widely understood way to assign polarity to voltages and currents. It defines what we mean by positive and negative voltage and current.
 
-When you add voltage and current labels to a circuit element, the convention is to point the current arrow into the terminal with the positive voltage polarity.
+When you label the voltage and current of a circuit element, the convention says you should point the current arrow into the terminal with the positive voltage polarity.
 
 ----
 
