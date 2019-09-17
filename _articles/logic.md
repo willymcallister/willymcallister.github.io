@@ -5,11 +5,13 @@ author: Willy McAllister
 comments: true
 ---
 
-Digital electronics is based on the ancient philosophy of *logic*. Logical variables are two-valued, or *binary*---either true or false. 
+Digital electronics is based on the ancient philosophy of *logic*. 
 
-Logic values are combined with a short list of *operators*, AND, OR, and NOT. 
+Logical variables are two-valued, or *binary*---either true or false. 
 
-We represent logic with equations, symbols, and truth tables.
+Logic variables are combined with a short list of *operators*---AND, OR, and NOT. 
+
+We represent logic several ways---with equations, symbols, and truth tables.
 
 Written by Willy McAllister.
 
@@ -281,9 +283,3 @@ We haven't shown how to create these logic functions with electronic circuits, b
 [A Mathematical Theory of Communication - original paper](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), Claude E. Shannon, *Bell Systems Technical Journal*, Vol. 27, pp. 379–423, 623–656, July and October, 1948. This groundbreaking paper created the field of Information Theory. The term *bit* appears in print for the very first time near the end of page 1.
 
 [A mathematical theory of communication - Khan Academy video](https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication) demonstrates the information redundancy in English.
-
-## Appendix - Draw the OR symbol
-
-The OR symbol is beautiful---it is constructed from three circles and two short lines,
-
-![How to draw an OR gate]({{ site.baseurl }}{% link i/logic_or_drawing.png %}){: .centered }{: height="300px" :}

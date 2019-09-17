@@ -13,6 +13,8 @@ comments: true
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) NAND and NOR gates]({{ site.baseurl }}{% link _articles/logic-nand-nor.md %})
 
+[![]({{ site.baseurl }}{% link i/article.svg %}) Logic gates]({{ site.baseurl }}{% link _articles/logic-gates.md %}) --- summary of gate symbols
+
 [![]({{ site.baseurl }}{% link i/article.svg %}) Universal gates]({{ site.baseurl }}{% link _articles/universal-gates.md %}) --- your first logic puzzle 
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Logic identities]({{ site.baseurl }}{% link _articles/logic-identities.md %})
