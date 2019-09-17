@@ -4,7 +4,6 @@ title:  "Euler's sine"
 author: Willy McAllister
 comments: true
 ---
-<p>&nbsp;</p>
 
 {% include d3a/eulers-sine-d3.html %}
 

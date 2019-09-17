@@ -4,7 +4,6 @@ title:  "Euler's cosine"
 author: Willy McAllister
 comments: true
 ---
-<p>&nbsp;</p>
 
 {% include d3a/eulers-cosine-d3.html %} 
 

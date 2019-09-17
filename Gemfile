@@ -22,7 +22,7 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'github-pages'
-   gem "jekyll", git: "https://github.com/jekyll/jekyll.git", branch: "3.8-stable"
+   gem "jekyll"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
