@@ -7,13 +7,11 @@ comments: true
 
 Welcome to Spinning Numbers! Learn about electricity and electrical engineering.
 
-July 30, 2019 --- New  
-[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (1)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV1.md %})   
-[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit with two batteries solved by the Node Voltage Method (2)]({{ site.baseurl }}{% link _videos/circuit-with-two-batteries-NV2.md %})  
-[![]({{ site.baseurl }}{% link i/article.svg %}) What people are saying about Spinning Numbers]({{ site.baseurl }}{% link _articles/people-are-saying.md %})
+September 16, 2019 --- New  
+[![]({{ site.baseurl }}{% link i/article.svg %}) Logic gates]({{ site.baseurl }}{% link _articles/logic-gates.md %}) --- summary of gate symbols and how to draw an OR symbol.
 
 
-May 20, 2019 --- Breaking News --- [The definition of the Ampere has changed]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %}).
+May 20, 2019 --- [The definition of the Ampere has changed]({{ site.baseurl }}{% link _articles/standard-electrical-units.md %}).
 
 ---
 
