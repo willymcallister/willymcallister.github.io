@@ -123,7 +123,7 @@ Conductance and conductivity are the same ideas as resistance and resistivity, b
 
 If you take the reciprocal of resistance we call that *conductance*. The unit of conductance is $1/\Omega$ or "inverse ohms". In the modern system of SI units this has an honorary name, the siemens (always with an s on the end). The symbol for siemens is $(\text S)$. The unit is named after Werner von Siemens, a German electrical engineer who founded the company with the same name. 
 
-The idea of conductance is most useful when you have resistors in parallel. See this [article](tbd) on parallel conductance.  
+The idea of conductance is most useful when you have resistors in parallel. See this article on [parallel conductance]({{ site.baseurl }}{% link _articles/parallel-conductance.md %}).  
 
 {% capture summary %}moh{% endcapture %}  
 {% capture details %}  
