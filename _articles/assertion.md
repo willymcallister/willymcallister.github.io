@@ -72,7 +72,9 @@ It is important to pick good signal names. Pick names that mean "this is what I 
 We can also talk about logic signals being *ON* or *OFF*. ON and OFF don't mean the same as 1 and 0, or TRUE and FALSE, or high and low. Let's illustrate with a light switch,
 
 ![Light switch]({{ site.baseurl }}{% link i/light_switch.jpg %}){: .centered :}{: height="200px" :}
-<p class="caption">A normal light switch is mounted so the light is ON when the lever is up.</p>
+
+A normal light switch is mounted so the light is ON when the lever is up.
+{: .caption :}
 
 ON turns the light on. With the switch mounted in it's usual orientation, it seems okay to associate ON with 1/TRUE/HIGH. 
 
@@ -102,7 +104,9 @@ Assertion is a slightly different perspective from 1's and 0's. We split the def
 You already know the distinctive gate shapes,
 
 ![gate symbols]({{ site.baseurl }}{% link i/logic1.svg %}){: .centered :}
-<p class="caption">The distinctive shapes: buffer, AND, OR, and XOR.</p>
+
+The distinctive shapes: buffer, AND, OR, and XOR.
+{: .caption :}
 
 First, the shape tells you *what the gate does* when its inputs are *asserted*. The shape does its thing and *asserts* its output,
 

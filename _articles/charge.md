@@ -190,7 +190,9 @@ The electron gets the $-$ sign and the proton the $+$ sign because of the way Fr
 The variable we use for the charge of an electron is $-e$ or $e^-$. The charge of a proton can be written as $+e$ or $e^+$.
 
 {% include img.html img="j-j-thomson.png" alt="J. J. Thomson" %}{: height="300px" :}
-<p class="caption">J. J. Thomson in the laboratory, Cambridge University, England.</p>
+
+J. J. Thomson in the laboratory, Cambridge University, England.
+{: .caption :}
 
 ## Summary
 {:.no_toc}

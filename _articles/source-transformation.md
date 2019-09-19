@@ -76,7 +76,9 @@ Voltage and current source lines do not pass through the origin.
 Now make it more interesting: Find the $i$-$v$ behavior of this resistor and voltage source circuit. 
 
 ![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2.svg %}){: .centered :}
-<p class="caption">The pair of little circles on the right represents the <em>port</em> of this simple network. You are allowed to touch the port with voltmeter probes. You can also measure current if you connect an ammeter to the port. This is what it means to "look into" the circuit from the "viewpoint" of the port.</p>
+
+The pair of little circles on the right represents the *port* of this simple network. You are allowed to touch the port with voltmeter probes. You can also measure current if you connect an ammeter to the port. This is what it means to "look into" the circuit from the "viewpoint" of the port.
+{: .caption :}
 
 **Derive the $i$-$v$ graph for this circuit.** 
 

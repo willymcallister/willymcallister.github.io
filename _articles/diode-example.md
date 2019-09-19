@@ -84,7 +84,8 @@ What you do is plot the two equations on the same graph and find where they cros
 
 ![LED diode curve with load line]({{ site.baseurl }}{% link i/diode5.svg %}){: .centered :}
 
-<p class="caption">Graphical solution to the resistor-LED circuit. The blue line is a plot of the diode equation for an LED. The green line is a plot of the resistor equation. The red point where the two graphs intersect is where the current in the diode and resistor are the same.</p>
+Graphical solution to the resistor-LED circuit. The blue line is a plot of the diode equation for an LED. The green line is a plot of the resistor equation. The red point where the two graphs intersect is where the current in the diode and resistor are the same.
+{: .caption :}
 
 We get a fairly accurate answer by reading the intersection point from the graph,
 

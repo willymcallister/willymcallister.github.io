@@ -167,8 +167,9 @@ We now have a big collection of alternate symbols for XOR and XNOR. How can you 
 **Figure out a pattern. How can you tell XOR apart from XNOR?**
 
 ![All possible XOR and XNOR symbols]({{ site.baseurl }}{% link i/logic45.svg %})
-<p class="caption">The top row is XOR symbols. The bottom row is XNOR symbols.
-</p>
+
+The top row is XOR symbols. The bottom row is XNOR symbols.
+{: .caption :}
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %} 

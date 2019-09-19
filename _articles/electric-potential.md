@@ -324,7 +324,8 @@ Let's visualize what the potential looks like. Potential is a scalar, so there a
 
 ![Equipotential circles around point charge Q]({{ site.baseurl }}{% link i/electric_potential7.svg %}){: .centered :}
 
-<p class="caption">The charge in the center is $Q$. The circles are "equipotential contours". Test charge $q$ is shown at two different distances, $a$ and $b$. If $q$ isn't there, the potential still exists. </p>
+The charge in the center is $Q$. The circles are "equipotential contours". Test charge $q$ is shown at two different distances, $a$ and $b$. If $q$ isn't there, the potential still exists.
+{: .caption :}
 
 Images like this don't do a great job showing the magnitude falling off as $1/r$. You have to imagine that in your head.
 

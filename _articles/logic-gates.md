@@ -52,7 +52,9 @@ The bubble or flag indicates a logic inversion.
 IEC 60617 also defines symbols for more complicated digital functions like multi-bit registers. Here is an example, an 8-bit D flip flop with edge-triggered clock and enable,
 
 ![Complex logic function 8-bit latch with enable]({{ site.baseurl }}{% link i/logic46.svg %}){: .centered } 
-<p class="caption">For this complex shape the data signals (D and Q) are in the main lower block and the control signals are gathered at the top. Inputs go on the left, outputs on the right. Data inputs and outputs are always straight across from each other, so you can read the flow.</p>
+
+For this complex shape the data signals (D and Q) are in the main lower block and the control signals are gathered at the top. Inputs go on the left, outputs on the right. Data inputs and outputs are always straight across from each other, so you can read the flow.
+{: .caption :}
 
 If you use a CAD program to draw logic, it's symbol library may follow the IEC convention or they may just wing it and make up complex symbols in their own style.
 

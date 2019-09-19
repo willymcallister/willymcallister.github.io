@@ -127,7 +127,8 @@ Since temperature $\text T$ appears in the diode $i$-$v$ equation, we know the d
 
 ![Silicon diode i-v curve at -40C, +27C, and +85C]({{ site.baseurl }}{% link i/diode4.svg %}){: .centered :}
 
-<p class="caption">Silicon diode at $\text T = -40^{\circ}\text C, +27^{\circ}\text C$, and $+85^{\circ}\text C$. Warmer temperatures shift the diode curve right.</p>
+Silicon diode at $\text T = -40^{\circ}\text C, +27^{\circ}\text C$, and $+85^{\circ}\text C$. Warmer temperatures shift the diode curve right.
+{: .caption :}
 
 ## Summary
 {:.no_toc}

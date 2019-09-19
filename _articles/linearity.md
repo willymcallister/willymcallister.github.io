@@ -94,7 +94,9 @@ When you check a function for the scaling property, see if the two sides of the 
 The scaling property can be drawn like this,
 
 ![Scaling test]({{ site.baseurl }}{% link i/linearity_scaling.svg %}){: .centered :}
-<p class="caption">If the two outputs are equal then function $f$ has the scaling property and it is a linear function.</p>
+
+If the two outputs are equal then function $f$ has the scaling property and it is a linear function.
+{: .caption :}
 
 #### Tripler
 {:.no_toc}
@@ -205,7 +207,9 @@ $f(x_1 + x_2) = f(x_1) + f(x_2)$
 This is the adding property, or *additivity* in math lingo. It says, the function of a sum equals the sum of the function applied to each term. 
 
 ![Additivity property]({{ site.baseurl }}{% link i/linearity_additivity1.svg %}){: .centered :}
-<p class="caption">The additivity property. Top: the sum of two signals applied to $f(x)$. Bottom: two signals applied individually to $f(x)$ and added together. The outputs are equal.</p>
+
+The additivity property. Top: the sum of two signals applied to $f(x)$. Bottom: two signals applied individually to $f(x)$ and added together. The outputs are equal.
+{: .caption :}
 
 Additivity is the theoretical basis for circuit analysis. 
 

@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Thévenin's theorem - how to"
+title:  "Thévenin's theorem how to"
 author: Willy McAllister
 comments: true
 ---
@@ -59,7 +59,9 @@ In an earlier article on how to [simplify a resistor network]({{ site.baseurl }}
 Thévenin's theorem looks like this in schematic form,
 
 ![Thévenin's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22.svg %}){: .centered :}
-<p class="caption">The top circuit is made of any number of resistors, voltage sources, and current sources. We select two internal nodes and mark them with little circles to define a port we care about. We draw the port so it pokes out the side of the circuit. We create a Thévenin equivalent "from the viewpoint" of this port.</p>
+
+The top circuit is made of any number of resistors, voltage sources, and current sources. We select two internal nodes and mark them with little circles to define a port we care about. We draw the port so it pokes out the side of the circuit. We create a Thévenin equivalent "from the viewpoint" of this port.
+{: .caption :}
 
 ## When is Thévenin's theorem useful?
 
@@ -297,7 +299,8 @@ To get the Thévenin resistance we suppress the voltage source by replacing it w
 
 ![Example 2 biasing network with voltage source suppressed]({{ site.baseurl }}{% link i/thevenin42.svg %}){: .centered :}
 
-<p class="caption">The symbol on the right is an eyeball "looking into" the port to find $\text R_\text T$.</p>
+The symbol on the right is an eyeball "looking into" the port to find $\text R_\text T$.
+{: .caption :}
 
 $\text R_\text T = 50\text k \parallel 100\,\text k = \dfrac{50\text k \cdot 100\text k}{50\text k + 100\text k} = \dfrac{5000\text M}{150\text k}$
 

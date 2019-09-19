@@ -73,19 +73,19 @@ Connections between lines can be indicated by *dots.* Dots are an unambiguous in
 
 ![dots connect wires]({{ site.baseurl }}{% link i/circuit_terminology_dots.svg %}){: height="140px"}{: .centered :}
 
-<p class="caption">
-(a) and (b) are both good. (c) no dot indicates no connection. <br>   
-(d) also indicates no connection; the horizontal wire "hops" over the vertical wire. <br>
-(d) is very clear but takes extra effort and space to draw. <br>
+(a) and (b) are both good. (c) no dot indicates no connection.    
+(d) also indicates no connection; the horizontal wire "hops" over the vertical wire.  
+(d) is very clear but takes extra effort and space to draw.  
 For crossing connected lines,  (e) is acceptable, but risks looking too much like (c), so (f) is the better practice.
-</p>
+{: .caption :}
 
 #### Reference Designator
 When you place an element in a schematic you often give it a unique name, known as a *reference designator*. Examples of reference designators are $\text{R1}$, $\text{C6}$, and $\text{V}_\text{BAT}$. The $1$ in $\text{R1}$ is part of the name, and does not indicate the resistance value. Reference designators are by definition unique for each schematic. They let you identify components by name even if some of them have the same value. It is okay to use reference designators in equations. $\text{R1}$ can be assigned a resistance value, $\text{R1} = 4.7\,\text k\Omega$, and it can be used as a variable in expressions, as in $\text{R2} \cdot \text{C6} = 4.7\,\text k\Omega \cdot 2\,\mu\text F$.
 
 ![reference designator]({{ site.baseurl }}{% link i/circuit_terminology_refdes.svg %}){: .centered :}
 
-<p class="caption">Reference designators give elements unique names—even if their values are the same.</p>
+Reference designators give elements unique names—even if their values are the same.
+{: .caption :}
 
 #### Node
 A junction where $2$ *or more* elements connect is called a *node*. The schematic below shows a single node (the black dot) formed by the junction of five elements (abstractly represented by orange rectangles). 
@@ -202,7 +202,8 @@ The reference node is often referred to as *ground*. The concept of *ground* has
 
 ![ground stake next to a home]({{ site.baseurl }}{% link i/circuit_terminology_ground_stake.jpg %}){: .centered :} 
 
-<p class="caption">A metal stake driven into the ground next to a home. The wire clamped to the stake curves up to the right to provide the safety ground reference for the home's electrical system. Sometimes the grounding wire is clamped to a water pipe where the pipe disappears into the Earth.</p>
+A metal stake driven into the ground next to a home. The wire clamped to the stake curves up to the right to provide the safety ground reference for the home's electrical system. Sometimes the grounding wire is clamped to a water pipe where the pipe disappears into the Earth.
+{: .caption :}
 
 Ground is
 

@@ -39,7 +39,10 @@ The Mesh Current Method works for circuits that are *planar*.
 * A *non-planar* circuit is shown below on the right. It has has to be drawn with at least one crossed wire, there's no way to draw it flat. Since there is no way to redraw the circuit to avoid a crossed wire, the circuit on the right is non-planar.
 
 ![Planar and non-planar circuits]({{ site.baseurl }}{% link i/loop1.svg %}){: .centered }
-<p class="caption">Left: planar circuit, can be drawn with no crossed wires.<br>Right: non-planar circuit, can only be drawn with a crossed wire.</p>
+
+Left: planar circuit, can be drawn with no crossed wires.  
+Right: non-planar circuit, can only be drawn with a crossed wire.
+{: .caption :}
 
 If a circuit is non-planar we *must* use the Loop Current Method.
 

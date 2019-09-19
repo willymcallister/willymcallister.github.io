@@ -264,7 +264,8 @@ Now advance time to $t=0^+$, the moment *after* the switch closes. For our given
 
 ![RLC after switch closes, voltage Vo]({{ site.baseurl }}{% link i/rlc_natural_response26.svg %}){: .centered :}
 
-<p class="caption">Circuit conditions just after the switch closes. At $t=0^+$ the current $i(0^+) = 0$ and $v_\text C(0^+) = \text V_0$.</p>
+Circuit conditions just after the switch closes. At $t=0^+$ the current $i(0^+) = 0$ and $v_\text C(0^+) = \text V_0$.
+{: .caption :}
 
 We successfully made it through the switch closing. 
 
@@ -379,7 +380,8 @@ Let $v_c(0) = 10\,\text V$ and $i_\text L(0) = 0$.
 
 ![Under damped worked example circuit]({{ site.baseurl }}{% link i/rlc_natural_response23.svg %}){: .centered :}
 
-<p class="caption">$\text{RLC}$ under damped natural response example circuit. The capacitor has an initial voltage of $10$ volts. There is no current in the inductor the moment prior to the switch closing.</p>
+$\text{RLC}$ under damped natural response example circuit. The capacitor has an initial voltage of $10$ volts. There is no current in the inductor the moment prior to the switch closing.
+{: .caption :}
 
 Find $\alpha$, $\omega_o$, and $\omega_d$,
 
@@ -414,7 +416,10 @@ $i = 5\, e^{-t} \sin 2t$
 Let's graph $i$ versus time to appreciate what we have,
 
 ![RLC current waveform]({{ site.baseurl }}{% link i/rlc_underdamped_current.svg %}){: .centered :}
-<p class="caption">Series $\text{RLC}$ under damped current, $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$. <br>The faint gray curves are $\pm 5e^{-t}$, the envelope of the decaying sine wave.</p>
+
+Series $\text{RLC}$ under damped current, $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$.  
+The faint gray curves are $\pm 5e^{-t}$, the envelope of the decaying sine wave.
+{: .caption :}
 
 Talk it through,
 * When the switch closes, the current starts at $0$ and takes a big surge upwards. You can see the initial slope of $10\,\text A/\text{sec}$. 
@@ -546,7 +551,9 @@ I never fully understand a waveform until I see a picture of it. Here are all th
 
 ![RLC voltage waveforms]({{ site.baseurl }}{% link i/rlc_underdamped_voltages.svg %}){: .centered :}
 
-<p class="caption">Series $\text{RLC}$ under damped voltages, $v_\text R, v_\text L, v_\text C$, for $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$.</p>
+Series $\text{RLC}$ under damped voltages, $v_\text R, v_\text L, v_\text C$, for $\text R=2\,\Omega$, $\text L = 1\,\text H$, and $\text C = \dfrac{1}{5}\,\text F$.
+{: .caption :}
+
 {% capture summary %}current waveform for comparison{% endcapture %}  
 {% capture details %}  
 ![RLC current waveform]({{ site.baseurl }}{% link i/rlc_underdamped_current.svg %}){: .centered :}  
@@ -695,7 +702,8 @@ And here is what it looks like,
 
 ![RLC over damped current]({{ site.baseurl }}{% link i/rlc_overdamped_current.svg %}){: .centered :}
 
-<p class="caption"> Series $\text{RLC}$ over damped current. The two gray traces show the two decaying exponentials. $+1.25\,e^{+t}$ and $-1.25\,e^{-9t}$. Add them together to get the natural response. $\text R = 10$ ohms, $\text L = 1$ henry, and $\text C = 1/9$ farad.</p>
+Series $\text{RLC}$ over damped current. The two gray traces show the two decaying exponentials. $+1.25\,e^{+t}$ and $-1.25\,e^{-9t}$. Add them together to get the natural response. $\text R = 10$ ohms, $\text L = 1$ henry, and $\text C = 1/9$ farad.
+{: .caption :}
 
 The response start at zero because the two exponentials cancel each other. One of them decays away rapidly, leaving a single exponential decay over time. The response never goes negative. 
 
@@ -866,7 +874,9 @@ $i = 10\,t\,e^{-2 t}$
 The critically damped natural response with an initial voltage looks like this,
 
 ![RLC critically damped current with initial voltage]({{ site.baseurl }}{% link i/rlc_critically_damped_current_V.svg %}){: .centered :}
-<p class="caption">Critically damped series $\text{RLC}$ with an initial voltage. $\text R = 4$ ohms, $\text L = 1$ henry, $\text C = 1/4$ farad, with an initial $10$ volts on the capacitor. The curved gray line is $i = 10\,e^{-2t}$. The slanted straight gray line is $i = t$. The blue result is the product of the two gray lines, $i = 10\,t\,e^{-2 t}$.</p>
+
+Critically damped series $\text{RLC}$ with an initial voltage. $\text R = 4$ ohms, $\text L = 1$ henry, $\text C = 1/4$ farad, with an initial $10$ volts on the capacitor. The curved gray line is $i = 10\,e^{-2t}$. The slanted straight gray line is $i = t$. The blue result is the product of the two gray lines, $i = 10\,t\,e^{-2 t}$.
+{: .caption :}
 
 * The current starts and ends at $i = 0$. 
 * When the switch closes the current surges upwards and decays back down to zero. 
@@ -991,7 +1001,8 @@ And here is the distinctive shape of a critically damped response with an initia
 
 ![RLC critically damped current with initial current]({{ site.baseurl }}{% link i/rlc_critically_damped_current_I.svg %}){: .centered :}
 
-<p class="caption">Critically damped series $\text{RLC}$ with an initial current. The gray lines are the two terms in the solution. The upper gray line is $\text I_0\,e^{-\alpha t}$. The lower gray line is $-\alpha \text I_0\,t\,e^{-\alpha t}$. Add them together to get the blue result.</p>
+Critically damped series $\text{RLC}$ with an initial current. The gray lines are the two terms in the solution. The upper gray line is $\text I_0\,e^{-\alpha t}$. The lower gray line is $-\alpha \text I_0\,t\,e^{-\alpha t}$. Add them together to get the blue result.
+{: .caption :}
 
 * The current starts at $i = \text I_0 = 1.75\,\text A$. 
 * It goes negative at $0.5$ seconds, and then decays back up to zero. 

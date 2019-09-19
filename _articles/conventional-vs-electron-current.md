@@ -65,7 +65,12 @@ It generates less confusion if you always say the longer "conventional current d
 The instrument we use to measure current---an ammeter---cannot tell the difference between positive charge moving one way from negative charge moving the other way. An ammeter reports a single number when it measures current. It displays one number for the combined amount of positive and negative charge moving around (see the [definition of current]({{ site.baseurl }}{% link _articles/basic-quantities.md %}#current)). An ammeter displays a positive sign when current (the direction positive charge would flow) flows in the red lead and out the black lead. The current arrow points in the direction electrons are *coming from*.
 
 ![Current flow]({{ site.baseurl }}{% link i/conventional_current2.svg %}){: .centered :}
-<p class="caption">The blue arrows indicate the conventional current direction in both cases.<br>$\quad\text{a.}\, 1\,\text{mA}$ flows into the red lead. The meter reads a positive current.<br>$\quad\text{b.}\, 1\,\text{mA}$ flows into the black lead. The meter reads a negative current.<br>Electrons flow in the opposite direction of the blue arrows in both cases.</p>
+
+The blue arrows indicate the conventional current direction in both cases.  
+$\quad\text{a.}\, 1\,\text{mA}$ flows into the red lead. The meter reads a positive current.  
+$\quad\text{b.}\, 1\,\text{mA}$ flows into the black lead. The meter reads a negative current.  
+Electrons flow in the opposite direction of the blue arrows in both cases.
+{: .caption :}
 
 ## Military veterans
 

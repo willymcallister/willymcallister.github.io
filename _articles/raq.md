@@ -219,7 +219,9 @@ $1\,\text{nanometer} = 10\,\text{angstrom}, \mathring{\text A}$
 A silicon atom is about $0.2\,\text{nm}$ or $20\,\mathring{\text A}$ in diameter. The spacing between atoms in a crystal is $0.235\,\text{nm}$ or $2.35\,\mathring{\text A}$ in a [zig-zag pattern](https://www.princeton.edu/~maelabs/mae324/glos324/silicon.htm). 
 
 ![Silicon crystal]({{ site.baseurl }}{% link i/silicon_crystal.gif %}){: .centered :}
-<p class="caption">Silicon crystal structure. The distance between the two colored Si atoms is $2.35\,\mathring{\text A}$.</p>
+
+Silicon crystal structure. The distance between the two colored Si atoms is $2.35\,\mathring{\text A}$.
+{: .caption :}
 
 $15 \,\text{nm} / .235 \,\text{nm silicon atomic spacing} = 64$ silicon atoms 
 
@@ -340,7 +342,9 @@ $\dfrac{4}{3}\pi\,r^3 = \dfrac{4}{3}\pi\,0.001^3 = \dfrac{4}{3}\pi\,\text{mm}^3 
 (We learned above that a $1$ millimeter cube has a volume of $1$ microliter.)
 
 ![Cube milliliter]({{ site.baseurl }}{% link i/cube_milliliter.svg %}){: .centered }{: height="240px" :}
-<p class="caption">There are $10\times 10\times 10 = 1000\,\mu\text{L}$ in $1\,\text{mL}$. A $1\,\text{cm}$ cube was once called a $\text{cc}$ for <em>cubic centimeter</em>. Now it is called a milliliter or $\text{mL}$. A doctor or nurse might abbreviated it to "mil" when you get a shot.</p>
+
+There are $10\times 10\times 10 = 1000\,\mu\text{L}$ in $1\,\text{mL}$. A $1\,\text{cm}$ cube was once called a $\text{cc}$ for <em>cubic centimeter</em>. Now it is called a milliliter or $\text{mL}$. A doctor or nurse might abbreviated it to "mil" when you get a shot.
+{: .caption :}
 
 Molecular weight tells you how much a mole of that substance weighs in grams. A water molecule (H<sub>2</sub>O) has a molecular weight of $18$ $(16$ for O plus $1$ for each H$)$. That means $1\,\text{mole}$ of water weighs $18\,\text{grams}$. 
 

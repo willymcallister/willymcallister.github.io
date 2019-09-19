@@ -82,7 +82,9 @@ Let $\text V_\text P = 2\,\text V$ and $\text R = 1.33\,\text k\Omega$. The radi
 The voltage and current look like this,
 
 ![Sine waves, voltage and current]({{ site.baseurl }}{% link i/rms2.svg %}){: .centered :}
-<p class="caption">In a resistor voltage (orange) and current (blue) go up and down together. If voltage is a sine, then current is also a sine. The vertical scale is $1\,\text V$ and $1\,\text{mA}$ per division. The time scale is arbitrary.</p>
+
+In a resistor voltage (orange) and current (blue) go up and down together. If voltage is a sine, then current is also a sine. The vertical scale is $1\,\text V$ and $1\,\text{mA}$ per division. The time scale is arbitrary.
+{: .caption :}
 
 **Sketch what you think the power looks like.**
 
@@ -109,7 +111,9 @@ With the values from our example circuit,
 $p = \dfrac{2^2}{1333}\,\sin^2{\omega t} = 0.003\,\sin^2{\omega t} = 3\,\sin^2{\omega t}\,\text{mW}$
 
 ![Power wave]({{ site.baseurl }}{% link i/rms3.svg %}){: .centered :}
-<p class="caption">Voltage, current, and power (black). The vertical power scale is $1\,\text{mW}$ per division.</p>
+
+Voltage, current, and power (black). The vertical power scale is $1\,\text{mW}$ per division.
+{: .caption :}
 
 Power is highest at the peaks of the voltage and current sine. Power is lowest when they are near zero. In between those points the power varies between its highest point and zero. Power is proportional to voltage or current squared---the high parts are strongly reinforced---most of the power is delivered during the peaks.
 {% endcapture %}{% include details.html %} 
@@ -164,7 +168,9 @@ With actual circuit values,
 $p_{avg} = \dfrac{2^2}{1300}\, \dfrac{1}{2} = 1.5\,\text{mW}$
 
 ![Power wave with average power]({{ site.baseurl }}{% link i/rms6.svg %}){: .centered :}
-<p class="caption">The average power is $1/2$ of the peak value. The vertical scale is $1\,\text{mW}$ per division.</p>
+
+The average power is $1/2$ of the peak value. The vertical scale is $1\,\text{mW}$ per division.
+{: .caption :}
 
 Alert! The eyeball-the-average method works with nice symmetric signals where it's easy to predict the average. If the average isn't totally obvious go ahead and do the calculus. Two non-easy examples are triangle waves and sawtooth waves.
 
@@ -253,7 +259,9 @@ For voltage in the shape of a sine wave the RMS voltage is,
 $\text V_\text{RMS} = \dfrac{\text V_{peak}}{\sqrt 2}$
 
 ![RMS voltage on a sine]({{ site.baseurl }}{% link i/rms7.svg %}){: .centered :}
-<p class="caption">The RMS voltage of a unit sine wave. This gives you a visual impression of the proportions of a sine and its corresponding RMS value.</p>
+
+The RMS voltage of a unit sine wave. This gives you a visual impression of the proportions of a sine and its corresponding RMS value.
+{: .caption :}
 
 An AC voltage is almost always identified by its RMS voltage. It is rare to use peak voltage. The input voltage to this power adaptor is rated at $120\,\text{VAC}$, which is an RMS voltage value,
 

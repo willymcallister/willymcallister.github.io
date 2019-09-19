@@ -31,7 +31,8 @@ Up to now we've looked at first-order circuits like the [RC natural response]({{
 
 ![RC natural response plot]({{ site.baseurl }}{% link i/rc_natural_response_voltage.svg %}){: .centered :}
 
-<p class="caption">The $\text{RC}$ natural response is described by a first-order differential equation.</p>
+The $\text{RC}$ natural response is described by a first-order differential equation.
+{: .caption :}
 
 ## Second-order systems
 
@@ -43,7 +44,8 @@ Second-order systems are the simplest systems that rock back and forth in time, 
 
 ![LC natural response circuit after switch]({{ site.baseurl }}{% link i/lc_natural_response2.svg %}){: .centered :}{: height="200px" :}
 
-<p class="caption">Circuit conditions just after the switch closes.</p>
+Circuit conditions just after the switch closes.
+{: .caption :}
 
 Let's say the capacitor has an initial voltage, which means it is storing some charge, $q = \text C\,\text V_0$. Think of $q$ as positive charge sitting on the top plate of the capacitor. We are going to reason through this by tracking what happens to $q$. 
 
@@ -55,14 +57,16 @@ Over at the capacitor, charge (current) flows out of the top plate, shown in blu
 
 ![LC natural response intuition 1]({{ site.baseurl }}{% link i/lc_natural_response_intuition1.svg %}){: .centered :}
 
-<p class="caption">A little after closing the switch, current is rising and voltage is falling.</p>
+A little after closing the switch, current is rising and voltage is falling.
+{: .caption :}
 
 Eventually, we reach a state where the charge on the top plate is the same as the bottom plate. The voltage across the capacitor therefore falls to $0$.
 
 Over at the inductor there is a current flowing, even though the voltage is $0$, because the energy stored in the inductor's magnetic field keeps it flowing. (Current does not abruptly drop to $0$ when the voltage reaches $0$.)  
 ![LC natural response intuition 2]({{ site.baseurl }}{% link i/lc_natural_response_intuition2.svg %}){: .centered :}
 
-<p class="caption">The voltage eventually falls to $0$ as the amount of charge on the top and bottom capacitor plates becomes the same. At the same time, the current in the inductor reaches its highest value. That current continues to pump the remaining charge onto the bottom plate of the capacitor.</p>
+The voltage eventually falls to $0$ as the amount of charge on the top and bottom capacitor plates becomes the same. At the same time, the current in the inductor reaches its highest value. That current continues to pump the remaining charge onto the bottom plate of the capacitor.
+{: .caption :}
 
 The inductor current continues to move charge from the top plate to the bottom. Now there is more positive charge on the bottom plate than the top, so the voltage actually reverses sign and becomes negative.
 
@@ -70,19 +74,22 @@ As charge continues to build up on the bottom plate, it repels against the arriv
 
 ![LC natural response intuition 3]({{ site.baseurl }}{% link i/lc_natural_response_intuition3.svg %}){: .centered :}
 
-<p class="caption">The inductor continues heaping positive charge on the bottom plate of the capacitor, so the voltage goes negative.</p>
+The inductor continues heaping positive charge on the bottom plate of the capacitor, so the voltage goes negative.
+{: .caption :}
 
 After a little while, the voltage reaches a peak negative value when *all* the charge has flowed to the bottom plate. The voltage will be the negative of whatever the capacitor started at. Charge stops moving for a brief moment, so the current crosses $0$. 
 
 ![LC natural response intuition 4]({{ site.baseurl }}{% link i/lc_natural_response_intuition4.svg %}){: .centered :}
 
-<p class="caption">After all the available charge has flowed to the bottom plate,  the voltage reaches its negative peak, and the current falls to $0$.</p>
+After all the available charge has flowed to the bottom plate,  the voltage reaches its negative peak, and the current falls to $0$.
+{: .caption :}
 
 The previous image is almost identical to where we started. The current is back to zero, and the voltage is at a peak value. The peak happens to be the negative of where we started. We can go back to the start of the story and tell it again just the same, except with charge moving from the bottom plate of the capacitor back to the top. Here's the end result after one full cycle,
 
 ![LC natural response intuition 5]({{ site.baseurl }}{% link i/lc_natural_response_intuition5.svg %}){: .centered :}
 
-<p class="caption">The second half of the cycle is the same as the first, but with charge moving from the bottom plate of the capacitor back to the top plate.</p>
+The second half of the cycle is the same as the first, but with charge moving from the bottom plate of the capacitor back to the top plate.
+{: .caption :}
 
 The exchange of charge between top and bottom plates continues forever. The rate of oscillation (the frequency), is determined by the value of $\text L$ and $\text C$. We will discover how that works when we do the formal derivation of the $\text{LC}$ natural response in the next article.
 

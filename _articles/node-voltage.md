@@ -87,9 +87,11 @@ The element voltage across the $20\,\Omega$ resistor can be written with either 
 
 ![Current arrow controlled by node voltages]({{ site.baseurl }}{% link i/node_voltage8.svg %}){: .centered :}
 
-<p class="caption">Above left, $v_a$ is considered the more positive voltage so it appears in the first position of the difference. The voltage arrow points toward node $a$ and the current arrow points in from node $a$.</p>
+Above left, $v_a$ is considered the more positive voltage so it appears in the first position of the difference. The voltage arrow points toward node $a$ and the current arrow points in from node $a$.
+{: .caption :}
 
-<p class="caption">Above right, $v_b$ is considered the more positive voltage so it is now in the first position of the difference. The voltage arrow flips to point toward node $b$ and the current arrow points in from node $b$.</p>
+Above right, $v_b$ is considered the more positive voltage so it is now in the first position of the difference. The voltage arrow flips to point toward node $b$ and the current arrow points in from node $b$.
+{: .caption :}
 
 We use this new skill to control the direction of the current arrow in the KCL equation we're about to write in the forth step of the Node Voltage Method.
 
@@ -402,7 +404,9 @@ You can confirm your answer by simulating the [guided example](https://spinningn
 Sometimes you come across a circuit where a voltage source does not have either of its terminals connected to the reference node. A source like this is said to be *floating*. A floating source is a problem for the Node Voltage Method, but it is not too big of a challenge.
 
 ![Floating voltage source]({{ site.baseurl }}{% link i/node_voltage14.svg %}){: .centered :}
-<p class="caption">Battery $\text V_2$ is floating because neither terminal is connected to ground.</p>
+
+Battery $\text V_2$ is floating because neither terminal is connected to ground.
+{: .caption :}
 
 Let's use the Node Voltage Method and see what happens, 
 

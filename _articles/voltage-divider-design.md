@@ -136,7 +136,9 @@ That means $\text R2$, the resistor on the bottom, is $9$ times bigger than $\te
 Now we load the circuit with $\text R_\text L$ and see how the output voltage changes. 
 
 ![Voltage divider 90% of Vin]({{ site.baseurl }}{% link i/voltage_divider12.svg %})
-<p class="caption">Voltage divider with $v_{out}= 90\%$ of $v_{in}$.</p>
+
+Voltage divider with $v_{out}= 90\%$ of $v_{in}$.
+{: .caption :}
 
 Here's a repetition of the expression we derived above for the loaded voltage divider, 
 
@@ -177,7 +179,9 @@ $\text R1$, the resistor on the top, is $9$ times bigger than $\text R2$.
 Now we load the circuit with $\text R_\text L$ and see what happens to the output voltage. 
 
 ![Voltage divider 10% of Vin]({{ site.baseurl }}{% link i/voltage_divider12.svg %})
-<p class="caption">Voltage divider with $v_{out}= 10\%$ of $v_{in}$.</p>
+
+Voltage divider with $v_{out}= 10\%$ of $v_{in}$.
+{: .caption :}
 
 The expression for the loaded voltage divider is still, 
 

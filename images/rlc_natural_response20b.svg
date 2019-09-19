@@ -13,12 +13,12 @@
    id="Layer_1"
    x="0px"
    y="0px"
-   width="419.54654"
+   width="232.42249"
    height="202.36749"
-   viewBox="0 0 419.54654 202.3675"
+   viewBox="0 0 232.42249 202.3675"
    xml:space="preserve"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="rlc_natural_response20.svg"><metadata
+   sodipodi:docname="rlc_natural_response20b.svg"><metadata
      id="metadata4559"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -41,7 +41,7 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      inkscape:zoom="1.19653"
-     inkscape:cx="209.77327"
+     inkscape:cx="114.85724"
      inkscape:cy="101.18375"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -88,17 +88,17 @@
      class="st9 st29 st30"
      id="text4369"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="248.35382"
+     x="153.43781"
      y="85.367996">+</text>
 <text
      class="st9 st29 st30"
      id="text4371"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="248.35362"
+     x="153.43761"
      y="145.36749">−</text>
 <g
      id="g4377"
-     transform="translate(-27.646379,-4.6325)"><line
+     transform="translate(-122.5624,-4.6325001)"><line
        class="st10"
        x1="257.39999"
        y1="48"
@@ -125,7 +125,7 @@
        id="rect4385"
        style="fill:none" /></g><g
      id="g4387"
-     transform="translate(-27.646379,-4.6325)"><polyline
+     transform="translate(-122.5624,-4.6325001)"><polyline
        class="st10"
        points="216,180 162,179.6 162,155.6  "
        id="polyline4389"
@@ -157,7 +157,7 @@
        id="polyline4399"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
      id="g4401"
-     transform="translate(-27.646379,-4.6325)"><line
+     transform="translate(-122.5624,-4.6325001)"><line
        class="st13"
        x1="162"
        y1="143.60001"
@@ -235,7 +235,7 @@
        id="rect4429"
        style="fill:none" /></g><g
      id="g4431"
-     transform="translate(-27.646379,-4.6325)"><g
+     transform="translate(-122.5624,-4.6325001)"><g
        id="g4433"><line
          class="st5"
          x1="162"
@@ -253,25 +253,25 @@
      class="st29 st30"
      id="text4441"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="104.35352"
+     x="9.4375"
      y="103.3676">L</text>
 <text
      class="st29 st30"
      id="text4443"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="200.35371"
+     x="105.43769"
      y="25.3675">R</text>
 <text
      class="st29 st30"
      id="text4445"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     x="302.35352"
+     x="207.4375"
      y="103.3676">C</text>
 <text
      class="st6 st31 st30"
      id="text4447"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     x="110.35372"
+     x="15.437698"
      y="67.367599"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
        id="tspan4646">i</tspan></text>
@@ -279,7 +279,7 @@
      class="st24 st31 st30"
      id="text4449"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#1fab54"
-     x="158.35362"
+     x="63.437599"
      y="163.3676"><tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
    id="tspan4644">t</tspan>=0</text>
@@ -288,9 +288,9 @@
      points="252,180 306,179.6 306,118.1 "
      id="polyline4451"
      style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
-     transform="translate(-27.646379,-4.6325)" /><g
+     transform="translate(-122.5624,-4.6325001)" /><g
      id="g4453"
-     transform="translate(-27.646379,-4.6325)"><g
+     transform="translate(-122.5624,-4.6325001)"><g
        id="g4455"><path
          class="st23"
          d="m 240.3,190.2 c 0.6,-3.6 0.4,-7.8 -0.6,-12.1 -1.8,-7.5 -5.8,-13.5 -10.2,-16.1"
@@ -306,41 +306,41 @@
      class="st9 st31 st30"
      id="text4467"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="360.91302"
+     x="265.99701"
      y="36.742298" />
 <text
      class="st9 st29 st30"
      id="text4473"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="386.18842"
+     x="291.2724"
      y="36.742298" />
 <text
      class="st9 st31 st30"
      id="text4481"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="370.25143"
+     x="275.33542"
      y="61.942501" />
 <text
      class="st6 st31 st30"
      id="text4491"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     x="18.913021"
+     x="-76.002998"
      y="36.742298" />
 <text
      class="st6 st31 st30"
      id="text4497"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     x="44.188419"
+     x="-50.727604"
      y="36.742298" />
 <text
      class="st6 st31 st30"
      id="text4503"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     x="18.388121"
+     x="-76.527901"
      y="61.942501" />
 <g
      id="g4507"
-     transform="translate(-27.646379,-4.6325)"><g
+     transform="translate(-122.5624,-4.6325001)"><g
        id="g4509"><circle
          class="st0"
          cx="252"
@@ -377,7 +377,7 @@
        id="line4521"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
      id="g4523"
-     transform="translate(-27.646379,-4.6325)"><line
+     transform="translate(-122.5624,-4.6325001)"><line
        class="st2"
        x1="216"
        y1="180"
@@ -412,14 +412,14 @@
      class="st9 st29 st30"
      id="text4539"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="170.35362"
+     x="75.437599"
      y="67.367996">+</text>
 <text
      class="st9 st31 st30"
      id="text4541"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
      dy="0 6"
-     x="200.35382"
+     x="105.4378"
      y="73.367302"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
        id="tspan4642">v</tspan><tspan
@@ -429,25 +429,25 @@
      class="st9 st29 st30"
      id="text4545"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="152.35382"
+     x="57.437798"
      y="85.366997">+</text>
 <text
      class="st9 st29 st30"
      id="text4547"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="152.35362"
+     x="57.437599"
      y="145.36771">−</text>
 <text
      class="st9 st29 st30"
      id="text4549"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="230.35362"
+     x="135.43761"
      y="67.367599">−</text>
 <text
      class="st9 st31 st30"
      id="text4551"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     x="152.35342"
+     x="57.437401"
      y="110.37308"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
        id="tspan4638">v</tspan><tspan
@@ -455,55 +455,8 @@
        id="tspan4592"
        dy="6">L</tspan></text>
 <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#11accd;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="9.5950003"
-     y="40.087925"
-     id="text4561"><tspan
-       sodipodi:role="line"
-       id="tspan4563"
-       x="9.5950003"
-       y="40.087925"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd;fill-opacity:1"
-       dy="0 0 0 0 0 -6"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math;fill:#11accd;fill-opacity:1"
-   id="tspan4632">t</tspan> = 0−</tspan><tspan
-       sodipodi:role="line"
-       x="9.5950003"
-       y="68.212921"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd;fill-opacity:1"
-       id="tspan4565"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math;fill:#11accd;fill-opacity:1"
-   id="tspan4630">i</tspan> = 0</tspan></text>
-<text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff9955;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="329.88501"
-     y="40.087925"
-     id="text4561-5"><tspan
-       sodipodi:role="line"
-       id="tspan4563-3"
-       x="329.88501"
-       y="40.087925"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9955"
-       dy="0 0 0 0 0 -6"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
-   id="tspan4634">t</tspan> = 0−</tspan><tspan
-       sodipodi:role="line"
-       x="329.88501"
-       y="68.212921"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9955"
-       id="tspan4565-7"
-       dy="0 6 -6 0 0 0 6"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:KaTeX_Math;-inkscape-font-specification:KaTeX_Math"
-   id="tspan4636">v</tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4590">C</tspan> = V<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-   id="tspan4648">0</tspan></tspan></text>
-<text
      y="110.20245"
-     x="224.69791"
+     x="129.78189"
      class="st9 st31 st30"
      id="text4551-4"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
@@ -512,16 +465,4 @@
        id="tspan4640">v</tspan><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan4618">C</tspan></text>
-<flowRoot
-     xml:space="preserve"
-     id="flowRoot4622"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     transform="translate(-27.646379,-4.6325)"><flowRegion
-       id="flowRegion4624"><rect
-         id="rect4626"
-         width="92.860466"
-         height="83.651161"
-         x="8.4418602"
-         y="8.1906919" /></flowRegion><flowPara
-       id="flowPara4628"
-       style="font-size:40px;line-height:1.25"> </flowPara></flowRoot></svg>
+</svg>

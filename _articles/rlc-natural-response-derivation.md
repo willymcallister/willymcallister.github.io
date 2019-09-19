@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-We derive the natural response of a series resistor-inductor-capacitor $(\text{RLC})$ circuit. 
+We derive the natural response of a series resistor-inductor-capacitor $(\text{RLC})$ circuit.
 
 ![RLC circuit for natural response]({{ site.baseurl }}{% link i/rlc_natural_response19.svg %}){: .centered :}
 
@@ -76,37 +76,41 @@ Here's the $\text{RLC}$ circuit the moment before the switch is closed. We call 
 
 ![RLC circuit with switch open]({{ site.baseurl }}{% link i/rlc_natural_response20.svg %}){: .centered :}
 
-<p class="caption">The moment before the switch closes. The current $i$ is $0$ everywhere, and the capacitor is charged up to an initial voltage $\text V_0$.</p>
+The moment before the switch closes. The current $i$ is $0$ everywhere, and the capacitor is charged up to an initial voltage $\text V_0$.
+{: .caption :}
 
-<details>
-<summary>voltage polarity and current direction</summary>
-<p>There's a bit of cleverness with the voltage polarity and current direction. I looked ahead a little in the analysis and arranged the voltage polarities to get some positive signs where I want them, just for aesthetic value. At the same time, it is important to respect the sign convention for passive components. </p>
+{% capture summary %}voltage polarity and current direction{% endcapture %}  
+{% capture details %}  
+There's a bit of cleverness with the voltage polarity and current direction. I looked ahead a little in the analysis and arranged the voltage polarities to get some positive signs where I want them, just for aesthetic value. At the same time, it is important to respect the sign convention for passive components.
 
-<p>Capacitor voltage: I want the capacitor to start out with a positive charge on the top plate, which means the positive sign for $v_\text C$ is also the top plate. The natural response will start out with a positive voltage hump.</p>
+Capacitor voltage: I want the capacitor to start out with a positive charge on the top plate, which means the positive sign for $v_\text C$ is also the top plate. The natural response will start out with a positive voltage hump.
 
-<p>Inductor current: When the switch closes, the initial surge of current flows from the capacitor over to the inductor, in a counter-clockwise direction. I want this initial current surge to have a positive sign. Current $i$ flows into the inductor from the top. I think this makes the natural response current plot look nicer. </p>
+Inductor current: When the switch closes, the initial surge of current flows from the capacitor over to the inductor, in a counter-clockwise direction. I want this initial current surge to have a positive sign. Current $i$ flows into the inductor from the top. I think this makes the natural response current plot look nicer.
 
-<p>Inductor voltage: The sign convention for the passive inductor tells me assign $v_\text L$ with the positive voltage sign at the top. </p>
+Inductor voltage: The sign convention for the passive inductor tells me assign $v_\text L$ with the positive voltage sign at the top.
 
-<p>Resistor voltage: The resistor voltage makes no artistic contribution, so it can be assigned to match either the capacitor or the inductor. I happened to match it to the capacitor, but you could do it either way.</p>
- 
-<p><img src="https://ka-perseus-images.s3.amazonaws.com/47b668a658a71c1017573fdb061342d59449ffde.svg"></p>
-<p class="caption">The voltage and current assignment used in this article. $v_\text C$ is positive on the top plate of the capacitor. Both $v_\text R$ and $v_\text C$ will have $-$ signs in the clockwise KVL equation.</p>
+Resistor voltage: The resistor voltage makes no artistic contribution, so it can be assigned to match either the capacitor or the inductor. I happened to match it to the capacitor, but you could do it either way.
 
-<p>Respect the passive sign convention: The artistic voltage polarity I chose for $v_\text C$ (positive at the top) conflicts with the direction of $i$ in terms of the passive sign convention. Current $i$ flows up out of the $+$ capacitor instead of down into the $+$ terminal as the sign convention requires. I account for the backwards current when I write the $i$-$v$ equation for the capacitor, with a $-$ sign in front of $i$.</p>
+![RLC circuit with switch closed]({{ site.baseurl }}{% link i/rlc_natural_response20b.svg %}){: .centered :}
 
-<p>The current through the resistor has the same issue as the capacitor, it's also backwards from the passive sign convention. I will handle it the same way when I write Ohm's law for the resistor, with a $-$ sign in front of $i$.</p>
+The voltage and current assignment used in this article. $v_\text C$ is positive on the top plate of the capacitor. Both $v_\text R$ and $v_\text C$ will have $-$ signs in the clockwise KVL equation.
+{: .caption :}
 
-<p>Notice how I achieved artistic intent <em>and</em> respected the passive sign convention.</p>
+Respect the passive sign convention: The artistic voltage polarity I chose for $v_\text C$ (positive at the top) conflicts with the direction of $i$ in terms of the passive sign convention. Current $i$ flows up out of the $+$ capacitor instead of down into the $+$ terminal as the sign convention requires. I account for the backwards current when I write the $i$-$v$ equation for the capacitor, with a $-$ sign in front of $i$.
 
-<p>I thought it would be helpful walk through this in detail. Most textbooks give you the integro-differential equation without this long explanation. You have to work out the signs yourself. </p>
-</details>
+The current through the resistor has the same issue as the capacitor, it's also backwards from the passive sign convention. I will handle it the same way when I write Ohm's law for the resistor, with a $-$ sign in front of $i$.
+
+Notice how I achieved artistic intent *and* respected the passive sign convention.
+
+I thought it would be helpful walk through this in detail. Most textbooks give you the integro-differential equation without this long explanation. You have to work out the signs yourself.  
+{% endcapture %}{% include details.html %}
 
 Now we close the switch and the circuit becomes, 
 
 ![RLC circuit with switch closed]({{ site.baseurl }}{% link i/rlc_natural_response21.svg %}){: .centered :}
 
-<p class="caption">From the moment the switch closes we want to find the current and voltage for $t=0^+$ and after.</p>
+From the moment the switch closes we want to find the current and voltage for $t=0^+$ and after.
+{: .caption :}
 
 We write $i$-$v$ equations for each individual element,
 

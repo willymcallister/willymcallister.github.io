@@ -271,7 +271,9 @@ The moment just after the switch closes is called $t=0^+$. We have to carefully 
 After the switch closes there is only one voltage, so we'll just call it $v$ from now on.
 
 ![LC natural response circuit after switch]({{ site.baseurl }}{% link i/lc_natural_response2.svg %}){: .centered :}{: height="200px" :}
-<p class="caption">The switch is closed. There is now just one voltage, $v = v_\text L = -v_\text C$. The initial voltage on the capacitor is $v = \text V_0$.</p>
+
+The switch is closed. There is now just one voltage, $v = v_\text L = -v_\text C$. The initial voltage on the capacitor is $v = \text V_0$.
+{: .caption :}
 
 What happens to current and voltage? Do they stay the same? Do they jump to new values? We know some properties of inductors and capacitors to help us figure this out,
 

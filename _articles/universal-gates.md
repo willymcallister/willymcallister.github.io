@@ -130,9 +130,9 @@ To convince yourself this is a correct implementation fill out the rest of this 
 It took 5 NAND gates to create an XOR function.
 {% endcapture %}{% include details.html %}
 
-It turns out it is possible to build an XOR with only 4 NAND gates.
+It turns out it is possible to build an XOR with only 4 NAND gates. (This one is tough.)
 
-{% capture summary %}show how{% endcapture %}  
+{% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
 F = A $\oplus$ B
 

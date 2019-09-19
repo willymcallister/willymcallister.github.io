@@ -70,7 +70,8 @@ Here is an arbitrary triangle with its sides and angles labeled,
 
 ![Arbitrary triangle]({{ site.baseurl }}{% link i/law_of_cosines_sines.svg %}){: .centered :}
 
-<p class="caption">The sides are $a$, $b$, and $c$. The angles are $\alpha$, $\beta$, and $\gamma$. Naming convention: The angles (Greek alphabet) are opposite their corresponding side (Latin alphabet). $\alpha$ is opposite $a$, etc.</p> 
+The sides are $a$, $b$, and $c$. The angles are $\alpha$, $\beta$, and $\gamma$. Naming convention: The angles (Greek alphabet) are opposite their corresponding side (Latin alphabet). $\alpha$ is opposite $a$, etc.
+{: .caption :}
 
 ### Law of Cosines
 
@@ -128,7 +129,8 @@ Next, sketch the individual force vectors. There are two force vectors to think 
 
 ![Charge triangle with force vector direction]({{ site.baseurl }}{% link i/three_point_charges3.svg %}){: .centered :}
 
-<p class="caption">Force vectors point along straight lines between charges. We don't know the length of the vectors, yet.</p> 
+Force vectors point along straight lines between charges. We don't know the length of the vectors, yet.
+{: .caption :}
 
 Apply Coulomb's Law to find the magnitude of each force, 
 
@@ -154,7 +156,8 @@ To set up the force triangle for vector addition, slide the green vector down so
 
 ![Force triangle set up for vector addition]({{ site.baseurl }}{% link i/three_point_charges5.svg %}){: .centered :}
 
-<p class="caption"> Force triangle. Translate $\greenD{\vec F_{20}}$ downward to the tip of $\blueD{\vec F_{10}}$ to set up the vector addition to find $F_0$.</p>
+Force triangle. Translate $\greenD{\vec F_{20}}$ downward to the tip of $\blueD{\vec F_{10}}$ to set up the vector addition to find $F_0$.
+{: .caption :}
 
 We want to find the magnitude and angle of $\vec F_0$. This triangle is not a right triangle, so it's not so simple to find $\vec F_0$. This is where we use the Laws of Cosines and Sines.
 

@@ -67,7 +67,9 @@ Here is the strategy we use to model the circuit with a differential equation an
 To start off we define two separate current arrows, $i_\text R$ and $i_\text C$. With two arrows we respect the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}) for both $\text R$ and $\text C$. 
 
 ![RC natural response circuit with labeled current arrows]({{ site.baseurl }}{% link i/rc_natural_response0b.svg %}){: .centered :}
-<p class="caption">$i_\text R$ flows into the positive voltage terminal of $\text R$. $i_\text C$ flows into the positive voltage terminal of $\text C$. This means the $i$-$v$ equations we write for $\text R$ and $\text C$ don't need a negative sign.</p>
+
+$i_\text R$ flows into the positive voltage terminal of $\text R$. $i_\text C$ flows into the positive voltage terminal of $\text C$. This means the $i$-$v$ equations we write for $\text R$ and $\text C$ don't need a negative sign.
+{: .caption :}
 
 $\text R$ and $\text C$ are described by their voltage-current equations. 
 
@@ -284,7 +286,9 @@ $v(3\,\text{ms}) = 0.515 \,\text{volts}$
 **c. Plot $v(t)$**
 
 {% include d3a/rc_natural_response1.html %}
-<p class="caption">Click Start to trace the time response. The dot moves forward in time at a constant rate.</p>
+
+Click Start to trace the time response. The dot moves forward in time at a constant rate.
+{: .caption :}
 
 The dashed lines indicate the answer from part b, $v(t) = 0.515 \,\text V$ when $t=\text{RC} =$ one time constant $= 3 \,\text{ms}$. 
 
@@ -328,7 +332,9 @@ With a time constant of $1\,\text{nanosecond}$, this is a pretty quick circuit.
 **c. Plot $v(t)$.**
 
 {% include d3a/rc_natural_response2.html %}
-<p class="caption">Click Start to trace the time response. </p>
+
+Click Start to trace the time response.
+{: .caption :}
 
 **d. How many times constants does it take for the voltage to drop below $95\%$ of its initial value?**  
 

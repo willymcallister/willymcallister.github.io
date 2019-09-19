@@ -67,8 +67,9 @@ Second, put both teams on the field. If there is no referee to boss them around 
 When the referee has had enough of this he blows his whistle and shouts, "I mean it! Go to your respective ends!" The referee is the voltage in this analogy. He's the pressure that makes charges move. The players end their chit-chat and move off in the right direction. Along the way a red player might come near a blue player and they have a little interaction, but the referee expects players to keep moving, so they separate and keep going. 
 
 ![Manchester (red) vs. Chelsea (Blue)]({{ site.baseurl }}{% link i/manchester-chelsea.jpg %}){: .centered }
-<p class="caption">Manchester United's Wayne Rooney and Chelsea's Didier Drogba have a chat. (FA Cup Final 2007 - Photo by Neal Simpson - EMPICS/PA Images via Getty Images)
-</p>
+
+Manchester United's Wayne Rooney and Chelsea's Didier Drogba have a chat. (FA Cup Final 2007 - Photo by Neal Simpson - EMPICS/PA Images via Getty Images)
+{: .caption :}
 
 If you can envision this movement in your head then you have a good idea of what current looks like in a wire at the atomic level.
 

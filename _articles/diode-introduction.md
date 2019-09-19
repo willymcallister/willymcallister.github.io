@@ -7,7 +7,8 @@ comments: true
 
 {% include img.html img="diode_glass1.jpg" alt="Diodes in axial glass pagkage" %}
 
-<p class="caption">These small glass packages have silicon diodes inside. The black band at one end is the cathode, the side where current flows out of the diode.</p>
+These small glass packages have silicon diodes inside. The black band at one end is the cathode, the side where current flows out of the diode.
+{: .caption :}
 
 The diode is our first semiconductor device. A diode's distinctive feature is that it conducts current in one direction but not in the other. We won't go into the details of how a diode does this or how it's made. Fortunately, you don't have to know how to make a diode before you can use it in a circuit.
 
@@ -45,7 +46,8 @@ The most well-known and well-understood semiconductor material is Silicon (Si, a
 
 ![Periodic table surrounding Silicon]({{ site.baseurl }}{% link i/diode_periodic_table.svg %}){: .centered :}
 
-<p class="caption">Part of the periodic table showing silicon (Si) and other nearby semiconductor materials. B - boron, C - carbon, N - nitrogen, Al - aluminum, Si - silicon, P - phosphorus, Ga - gallium, Ge - germanium, As - arsenic.</p>
+Part of the periodic table showing silicon (Si) and other nearby semiconductor materials. B - boron, C - carbon, N - nitrogen, Al - aluminum, Si - silicon, P - phosphorus, Ga - gallium, Ge - germanium, As - arsenic.
+{: .caption :}
 
 Other semiconductor materials include germanium (Ge, atomic number $32$, right below Silicon), and gallium-arsenide, a  $1 : 1$ ratio of Gallium and Arsenic, also known as GaAs, (atomic numbers $31$ and $33$, on either side of germanium). 
 
@@ -88,13 +90,15 @@ Diode packages like the glass and black plastic cylinders shown above usually ha
 
 ![Labeled diode in axial black package]({{ site.baseurl }}{% link i/diode_black2.svg %}){: .centered :}
 
-<p class="caption">The stripe (any contrasting color) corresponds to the diode's cathode.</p>
+The stripe (any contrasting color) corresponds to the diode's cathode.
+{: .caption :}
 
 This red LED (light emitting diode) does not have a stripe, but instead has wire leads of different length. The forward current goes into the longer lead (anode). The package may have a bump or tab sticking out on the anode side.
 
 ![LED diode in plastic package]({{ site.baseurl }}{% link i/diode_LED1.svg %}){: .centered :}
 
-<p class="caption">The longer lead corresponds to the anode. Current flow into the diode from this direction.</p>
+The longer lead corresponds to the anode. Current flow into the diode from this direction.
+{: .caption :}
 
 ### Identify the terminals with a multimeter
 
@@ -102,7 +106,8 @@ A reliable way to verify the identity of the terminals is using a multimeter to 
 
 ![Use an ohmmeter to test diodes]({{ site.baseurl }}{% link i/diode_voltmeters.svg %}){: .centered :}
 
-<p class="caption">The diode is flipped in each image.</p> 
+The diode is flipped in each image.
+{: .caption :} 
 
 $\text a.$ If the ohmmeter reads a finite resistance that means the diode is conducting a small current in the forward direction. A small current is flowing from the red $+$ lead through the diode. That means the red lead is touching the anode.  
 $\text b.$ If the resistance reads O.L (for overload), the diode is not conducting current. That means the red $+$  lead is touching the cathode.
@@ -133,7 +138,8 @@ A diode is a [non-linear device]({{ site.baseurl }}{% link _articles/linearity-R
 
 ![Silicon diode i-v characteristic]({{ site.baseurl }}{% link i/diode1.svg %}){: .centered :}
 
-<p class="caption">Diode $i$-$v$ curve of a silicon diode. A positive voltage (anode higher than cathode) on the diode puts it in its forward biased region. A negative voltage means the diode is operating in its reverse biased region. At negative voltages exceeding $\text V_{\text{br}}$ the diode is in breakdown and the current rapidly increases in the negative direction.</p>
+Diode $i$-$v$ curve of a silicon diode. A positive voltage (anode higher than cathode) on the diode puts it in its forward biased region. A negative voltage means the diode is operating in its reverse biased region. At negative voltages exceeding $\text V_{\text{br}}$ the diode is in breakdown and the current rapidly increases in the negative direction.
+{: .caption :}
 
 The blue curve above can be created by measurements. Take an ordinary diode and apply different voltages to it. Write down the current at each voltage. Your $i$-$v$ data will resemble this plot.
 

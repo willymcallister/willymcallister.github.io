@@ -43,7 +43,9 @@ To understand the decibel it helps to know where it came from. Why is there a $\
 The decibel was invented by engineers at the Bell Telephone Co. in the 1920's (now AT&T). Bell engineers wanted to express how much power was gained in an amplifier or how much power was lost driving a phone signal down a long copper transmission line. 
 
 ![Send a signal down a telephone land line]({{ site.baseurl }}{% link i/decibel1.svg %}){: .centered :}
-<p class="caption">Low-power phone signal $p_0$ is amplified by $A_1$ to higher power $p_1$ and sent down transmission line $T_1$. Over distance the signal power diminishes down to $p_2$. It has to be amplified again by $A_2$ restoring it to higher power $p_3$ to continue the trip. This process happens over and over again for a long-distance phone call.</p>
+
+Low-power phone signal $p_0$ is amplified by $A_1$ to higher power $p_1$ and sent down transmission line $T_1$. Over distance the signal power diminishes down to $p_2$. It has to be amplified again by $A_2$ restoring it to higher power $p_3$ to continue the trip. This process happens over and over again for a long-distance phone call.
+{: .caption :}
 
 Just making up numbers, suppose the incoming signal is $p_0 = 1 \,\text{mW}$. We want to drive the land line with a $p_1 = 1\,\text W$ signal. Amplifier $A_1$ provides the necessary gain. The signal travels down the long transmission line and loses almost all of its energy into the resistance of the line. Miles or kilometers away the signal has attenuated down to $p_2 = 0.01\,\text{mW}$ (*attenuate* means *loss*). Amplifier $A_2$ receives the signal and boosts it back up again to $p_3$.
 

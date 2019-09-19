@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Thévenin's theorem - proof"
+title:  "Thévenin's theorem proof"
 author: Willy McAllister
 comments: true
 ---
@@ -41,7 +41,9 @@ In this article we prove Thévenin's theorem using the principle of [superpositi
 In schematic form, Thévenin's theorem looks like this,
 
 ![Thévenin's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22.svg %}){: .centered :}
-<p class="caption">The top circuit is made of any number of resistors, voltage sources, and current sources. We select any two internal nodes we are interested in and mark them with little circles to define a <em>port</em>, shown at the edge of the circuit. We create the Thévenin equivalent "from the viewpoint" of this port.</p>
+
+The top circuit is made of any number of resistors, voltage sources, and current sources. We select any two internal nodes we are interested in and mark them with little circles to define a *port*, shown at the edge of the circuit. We create the Thévenin equivalent "from the viewpoint" of this port.
+{: .caption :}
 
 In equation form, Thévenin's theorem is,
 
@@ -88,7 +90,8 @@ Before diving into the proof, we do a clever trick. We connect something to the 
 
 ![Example circuit with external current source]({{ site.baseurl }}{% link i/thevenin23.svg %}){: .centered :}
 
-<p class="caption">Linear network with an external current source connected to the port.</p>
+Linear network with an external current source connected to the port.
+{: .caption :}
 
 The external current source contributes something special to the superposition solution. The extra current source means one sub-circuit has *all* internal sources suppressed, which leaves just a resistor network. 
 
@@ -270,7 +273,9 @@ Norton's theorem is a companion to Thévenin's,
 A circuit with any combination of resistors and sources can be replaced by a single current source in parallel with a single resistor. In schematic form, Norton's theorem looks like this,
 
 ![Norton's theorem illustrated]({{ site.baseurl }}{% link i/thevenin22n.svg %}){: .centered :}
-<p class="caption">On the left is an arbitrary circuit made of any number of resistors, voltage sources, and current sources. We select any two internal nodes we are interested in and define a port, brought out to the edge of the circuit. We create the Norton equivalent "from the viewpoint" of this port.</p>
+
+On the left is an arbitrary circuit made of any number of resistors, voltage sources, and current sources. We select any two internal nodes we are interested in and define a port, brought out to the edge of the circuit. We create the Norton equivalent "from the viewpoint" of this port.
+{: .caption :}
 
 Norton and Thévenin circuit forms are interchangeable based on what we learned in the article on [source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %}). We proved the Thévenin and Norton forms are equivalent, meaning they have the same $i$-$v$ behavior. We know any Thévenin form can be transformed to or from a corresponding Norton form. That means we don't need a separate proof of Norton's Theorem. All we need is to remind ourselves how to do source transformation, 
 
@@ -313,7 +318,9 @@ $\blue i = -\dfrac{\goldC v}{\text R_\text T} + \text I_\text N$
 If you could somehow force the port voltage to be $\goldC v$ to be $0$ then $\blueD i$ becomes the Norton current, $\text I_\text N$. Do this by placing a short across the port, 
 
 ![Short placed across the port of a Thévenin form]({{ site.baseurl }}{% link i/thevenin22n1.svg %}){: height="300px" :}{: .centered :}
-<p class="caption">$i_{sc}$ stands for short circuit current. It's another name for the Norton current, $\text I_\text N$.</p>
+
+$i_{sc}$ stands for short circuit current. It's another name for the Norton current, $\text I_\text N$.
+{: .caption :}
 
 Here's what the same short looks like applied to the Thévenin and Norton forms,
 

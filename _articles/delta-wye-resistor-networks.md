@@ -39,7 +39,8 @@ For the transformation to be valid, the resistance between each pair of terminal
 
 ![Delta and Wye configurations with labeled nodes and resistors.]({{ site.baseurl }}{% link i/delta_wye3.svg %}){: .centered :} 
 
-<p class="caption ">DIAGRAM 1 $- \,\Delta$ and $\text Y$ configurations with labeled nodes and resistors.</p>
+DIAGRAM 1 $- \,\Delta$ and $\text Y$ configurations with labeled nodes and resistors.
+{: .caption :}
 
 It is possible to write three simultaneous equations to capture this constraint. 
 

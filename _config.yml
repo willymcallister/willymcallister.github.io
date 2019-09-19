@@ -72,4 +72,5 @@ defaults:
 
 timezone: America/Los_Angeles
 
+# Referenced by Jekyll-SEO-tag plug-in
 logo: "/assets/logo.png"
