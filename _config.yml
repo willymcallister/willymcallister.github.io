@@ -35,6 +35,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -70,3 +71,5 @@ defaults:
       image: true
 
 timezone: America/Los_Angeles
+
+logo: "/assets/logo.png"
