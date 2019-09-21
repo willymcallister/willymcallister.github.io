@@ -7,7 +7,7 @@ comments: true
 
 The fundamental laws are Ohm's Law (along with the $i$-$v$ equations for capacitor and inductor) and Kirchhoff's Laws. We applied Ohm's Law a few times already for [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %}), and [simplifying a resistor network]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}). 
 
-Now we toss [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) into our box of tricks and solve a circuit. 
+Now we add [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) to our box of tricks and solve a circuit. 
 
 ----
 
@@ -246,7 +246,7 @@ $v_2 = 60 \,\text V$
 
 $v_1$ and $v_2$ are both solved. 
 
-![]({{ site.baseurl }}{% link i/fundamental_laws2.svg %}){: .centered :}
+![Schematic with solved v1 and v2]({{ site.baseurl }}{% link i/fundamental_laws2.svg %}){: .centered :}
 
 Now we can go after the unknown currents, using Ohm's Law.
 

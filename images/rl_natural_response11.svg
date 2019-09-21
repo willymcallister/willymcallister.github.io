@@ -18,7 +18,7 @@
    height="286.96729"
    viewBox="0 0 286.42468 286.96729"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="rl_natural_response11.svg"><metadata
      id="metadata7481"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -42,7 +42,7 @@
      fit-margin-right="10"
      inkscape:zoom="1.7476529"
      inkscape:cx="138.306"
-     inkscape:cy="145.3378"
+     inkscape:cy="99.56212"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -99,10 +99,9 @@
 </style><text
      class="st38 st37"
      id="text7163"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="92.196503"
-     y="56.472641"
-     sodipodi:linespacing="125%"><tspan
+     y="56.472641"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan4290"
        dx="0 0 3">I<tspan
@@ -112,8 +111,7 @@
      id="text7169"
      x="130.99969"
      y="19.967501"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="130.99969"
        y="19.967501"
        class="st36 st37"
@@ -123,8 +121,7 @@
      id="text7175"
      x="268.99969"
      y="157.9675"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="268.99969"
        y="157.9675"
        class="st36 st37"

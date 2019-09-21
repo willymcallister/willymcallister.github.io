@@ -34,7 +34,7 @@ $v = \text L\,\dfrac{di}{dt}\qquad$ and $\quad \displaystyle i = \dfrac1{\text L
 
 ## Inductor $i$-$v$ equations
 
-![](https://ka-perseus-images.s3.amazonaws.com/88daa30b2015bbaab75bc94874bdeab712104f74.svg){: .centered :}{: height="200px"}
+![inductor symbol](https://ka-perseus-images.s3.amazonaws.com/88daa30b2015bbaab75bc94874bdeab712104f74.svg){: .centered :}{: height="200px"}
 
 $v = \text L\,\dfrac{di}{dt}\quad$ and $\quad\displaystyle i = \dfrac1{\text L}\, \int_{\,0}^{\,T} v\,\text dt + i_0$    
 
@@ -76,7 +76,7 @@ Now we look at a few different simple circuits to get a feel for what the induct
 
 The first example is an inductor connected to an ideal current source. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/b9070d62ff9d8e0ab7ab350e86abf31ba033bdf4.svg){: .centered :}{: height="180px"}
+![Inductor connected to current source](https://ka-perseus-images.s3.amazonaws.com/b9070d62ff9d8e0ab7ab350e86abf31ba033bdf4.svg){: .centered :}{: height="180px"}
 
 The current source provides a constant current to the inductor, $i = \text I$.  
 For example, let $i = 2 \,\text{mA}$. 
@@ -113,7 +113,7 @@ An inductor "looks like" a short circuit when its current is constant.
 
 Now let's the current source to an ideal constant voltage source and see what the $i$-$v$ equation predicts. Let's get specific and say $\text V = 3\,\text V$ and $\text L = 10\,\text{mH}$. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/a276a0e7a21337ca28b29f25c3c53021b714baf2.svg){: .centered :}{: height="180px"}
+![Inductor connected to voltage source](https://ka-perseus-images.s3.amazonaws.com/a276a0e7a21337ca28b29f25c3c53021b714baf2.svg){: .centered :}{: height="180px"}
 
 If we put these values into the inductor equation we get,
 

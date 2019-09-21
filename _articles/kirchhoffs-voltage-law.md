@@ -48,7 +48,7 @@ $i = \dfrac{V}{R_{series}} = \dfrac{20\,\text V}{1000\,\Omega} = 0.020\,\text A 
 
 Now we know the current. That let's us find the voltages across the four resistors. Go back to the original schematic and add voltage labels to all five elements, 
 
-![](https://ka-perseus-images.s3.amazonaws.com/2c4987a0ba27eb7ed7c5b363d9fc6609f12cc105.svg){: .centered :}
+![Example with voltage labels](https://ka-perseus-images.s3.amazonaws.com/2c4987a0ba27eb7ed7c5b363d9fc6609f12cc105.svg){: .centered :}
 
 Apply Ohm's Law four times to find the voltage across each resistor,
 
@@ -62,7 +62,7 @@ The circuit is now solved. We know the current and all voltages.
 
 We can write the voltages for the resistors and the source on the schematic. These five voltages are referred to as *element voltages*. (The circuit nodes get names, $\greenE{\text a}$ to $\greenE{\text e}$, so we can talk about them.)
 
-![](https://ka-perseus-images.s3.amazonaws.com/ffdd00057828a3dd41a6ed563b2da30a22add4bd.svg){: .centered :}
+![Example with voltage values](https://ka-perseus-images.s3.amazonaws.com/ffdd00057828a3dd41a6ed563b2da30a22add4bd.svg){: .centered :}
 
 Let's do a quick check. Add up the voltages across the resistors, 
 
@@ -90,10 +90,11 @@ Pro tip: It helps to imagine a tiny version of yourself standing at the starting
 
 <p>When you encounter a new element, look at the voltage sign as you enter the element.</p>  
 
-<ul>
+<p><ul>
 <li>If the sign is $+$, add the element voltage.</li> 
 <li>If the sign is $-$, subtract the element voltage.</li>
-</ul> 
+</ul>
+</p>
 
 <p>This rule does not have the idea of voltage rise/drop, but may be simpler to remember. You can choose how you want to think about it. The key thing is to be consistent when you apply your chosen rule.</p>
 </details>
@@ -108,7 +109,7 @@ Step 1. Begin in the lower left, at node $\greenE{\text a}$.
 
 Step 2. Walk clockwise. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/ffdd00057828a3dd41a6ed563b2da30a22add4bd.svg){: .centered :}
+![Walking around the loop procedure](https://ka-perseus-images.s3.amazonaws.com/ffdd00057828a3dd41a6ed563b2da30a22add4bd.svg){: .centered :}
 
 Step 3. The first element we come to is the $20\,\text V$ source. The first voltage sign we encounter is a $-$ minus sign. That tells us there is going to be a voltage *rise* going through this element. So we initialize the loop sum by *adding* the source voltage,  
 
@@ -140,7 +141,7 @@ We started and ended at the same node, so it should make sense that the ending v
 
 We'll do another example, with variable names instead of numerical values. The following familiar schematic is labeled with voltages and node names. Look carefully, the voltage polarity signs are arranged in a way you might not expect. All the voltage arrows point in the same direction around the loop. This will reveal a cool property of loops.
 
-![](https://ka-perseus-images.s3.amazonaws.com/f281164686f22113542f59584a3fbbfec0f271be.svg){: .centered :}
+![Schematic with all voltage labels pointing the same direction](https://ka-perseus-images.s3.amazonaws.com/f281164686f22113542f59584a3fbbfec0f271be.svg){: .centered :}
 
 Let's walk around the loop again, adding up voltages as we go. Pick node $\greenE{\text a}$ in the lower left as the starting point. Walk clockwise around the loop (an arbitrary choice, either way works). Starting at node $\greenE{\text a}$, going up, we encounter a minus sign on the voltage source. That means there is going to be a voltage *rise* of $+v_{ab}$ going through the voltage source. Because it's a voltage rise, this element voltage gets a $+$ sign in the loop sum,
 

@@ -48,7 +48,7 @@ $\qquad\cos \omega t = \dfrac{e^{+j\omega t} + e^{-j\omega t}}{2}$
 
 For now, don't worry about the fancy math notation, there's plenty of time to study that. Chill, enjoy the videos,
 
-![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-sine-wave.md %})$\qquad$![]({{ site.baseurl }}{% link i/video.svg %}) [Euler's cosine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-cosine-wave.md %})
+![Euler's sine wave animation]({{ site.baseurl }}{% link i/video.svg %}) [Euler's sine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-sine-wave.md %})$\qquad$![Euler's cosine wave animation]({{ site.baseurl }}{% link i/video.svg %}) [Euler's cosine wave]({{ site.baseurl }}{% link _videos/ac-analysis-eulers-cosine-wave.md %})
 
 If you want to know more and you can't stand to wait, jump to [AC analysis introduction]({{ site.baseurl }}{% link _videos/ac-analysis-intro1.md %}) where the theory of spinning numbers is developed and applied.
 

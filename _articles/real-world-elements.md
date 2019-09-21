@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-![](/i/resistor_assortment.jpg){: .centered }
+![Resistor assortment](/i/resistor_assortment.jpg){: .centered }
 
 The circuit elements discussed in the previous article are *ideal circuit elements*. Real-world circuit elements come close to the ideal mathematical models, but inevitably will be imperfect. Being a good engineer means being aware of the limitations of real-world components compared to their the ideal abstractions.
 
@@ -41,7 +41,7 @@ These extra properties are called *parasitic* effects. These tiny inductors and 
 
 Most of the time we can ignore these parasitic effects, until we can't. That's an odd way of saying that you will use your judgment and experience to decide if parasitics need to be accounted for. If parasitics matter, you can model a component as a combination of ideal elements, as shown here for a resistor. The resistor symbol is the intended component, and the capacitor and inductor represent parasitic effects.
 
-![](https://ka-perseus-images.s3.amazonaws.com/43aa00123cc2a1d3ff4a13c339825ecb9d285da0.svg){: .centered }
+![Resistor with parasitic capacitance and inductance](https://ka-perseus-images.s3.amazonaws.com/43aa00123cc2a1d3ff4a13c339825ecb9d285da0.svg){: .centered }
 
 ### Temperature sensitivity
 
@@ -79,7 +79,7 @@ A real resistor breaks down (it burns up and is destroyed) if the heat dissipate
 
 Example of a conventional *axial* resistor,
 
-![](https://ka-perseus-images.s3.amazonaws.com/779f0952f353edf27ca9c9eb8978f7741ef1ef9f.jpg){: .centered }
+![Axial resistor](https://ka-perseus-images.s3.amazonaws.com/779f0952f353edf27ca9c9eb8978f7741ef1ef9f.jpg){: .centered }
 
 The color bands tell you the value of the resistor and its tolerance. The bands on this resistor are Orange Orange Brown Gold. From the resistor color code chart, the first two bands corresponds to the *digits* of the value, $3\, 3$. The third band is the *multiplier*, brown stands for $\times 10^1$. The fourth (last) band indicates the tolerance, gold is $\pm 5\%$. The resistor value is $330 \,\Omega\,\pm5\%$.
 
@@ -90,7 +90,7 @@ The color bands tell you the value of the resistor and its tolerance. The bands 
 
 This is a precision resistor with 5 color bands,
 
-![](https://ka-perseus-images.s3.amazonaws.com/b1f771301e3da7ada6e3603ad31ed55cb97704b6.jpg){: .centered }
+![Precision resistor with 5 color bands](https://ka-perseus-images.s3.amazonaws.com/b1f771301e3da7ada6e3603ad31ed55cb97704b6.jpg){: .centered }
 
 Read the bands from left to right:  Red Red Blue Brown Brown $= 2 \,2 \,6 \,1 \,1$. The first three bands $(2\,2\,6)$ are the value. The fourth band is the multiplier $(\times 10^1)$. The fifth (last) band indicates the tolerance. A brown band is $1\%$. (If you ever come across a red band it stands for a tolerance of $2\%$). The resistor value is $2260 \,\Omega\,\pm 1\%$. 
 
@@ -100,7 +100,7 @@ Reading this resistor value is pretty tricky. It is hard to tell which end you s
 
 This is a  *surface mount* resistor,
 
-![](https://ka-perseus-images.s3.amazonaws.com/cccc66df53843a97cc948b246a0a6f343329b2ab.jpg){: .centered }
+![Surface-mount resistor](https://ka-perseus-images.s3.amazonaws.com/cccc66df53843a97cc948b246a0a6f343329b2ab.jpg){: .centered }
 
 The resistance value is encoded in the $3$-digit code: $102$, meaning $10 \times 10^2 = 1000 \,\Omega$. You can't tell from the picture but the size of this resistor happens to be "0602", indicating its footprint is $6 \, \text{mm} \times 2 \, \text{mm}$.
 
@@ -110,7 +110,7 @@ Here's how a surface mount resistor is made. The resistor itself is a single lay
 
 Example of a resistor that's part of an integrated circuit,
 
-![](https://ka-perseus-images.s3.amazonaws.com/f754369c927f3e89a88a18898a4ed745b5846e49.svg){: .centered }
+![Serpentine resistor on an IC](https://ka-perseus-images.s3.amazonaws.com/f754369c927f3e89a88a18898a4ed745b5846e49.svg){: .centered }
 
 The designer selects one of the layers on the integrated circuit with high resistivity and creates (draws) a serpentine pattern to achieve the desired resistance.
 
@@ -132,7 +132,7 @@ Learn more about capacitors and how they work in the [capacitors and capacitance
 
 Real capacitors come in lots of different shapes,
 
-![](https://ka-perseus-images.s3.amazonaws.com/abaf98dabaf79e6d8b8a129f3d558ca2dd0d92b0.jpg){: .centered }
+![Variety of capacitors](https://ka-perseus-images.s3.amazonaws.com/abaf98dabaf79e6d8b8a129f3d558ca2dd0d92b0.jpg){: .centered }
 
 Cylindrical capacitors (upper left, black, dark blue, or silver) are made of two metal foil plates rolled up like a jellyroll to pack a large plate area in a small space. The circle-shaped capacitors (bottom, aqua and orange) are simply two metal disks facing each other, separated by an insulator. Adjustable capacitors (right, white and metal) use air as the insulator between plates. One set of plates rotates, changing the overlapping area with the stationary plates to change the capacitance. Variable capacitors are used to tune radios, for example.
 
@@ -150,13 +150,13 @@ The material separating the capacitor plates is supposed to be insulating (allow
 
 A *surface mount* capacitor is shown here,
 
-![](https://ka-perseus-images.s3.amazonaws.com/83cbc8772fd80929d2c4b1aedca437c3184bc44e.jpg){: .centered }
+![Surface-mount capacitor](https://ka-perseus-images.s3.amazonaws.com/83cbc8772fd80929d2c4b1aedca437c3184bc44e.jpg){: .centered }
 
 Leakage currents might flow between the metal ends of the capacitor through the gunk left behind from the soldering process if the circuit board is not cleaned very well.
 
 Here's a peek inside a surface-mount capacitor. It is a stack of many layers of interleaved conducting plates and insulating ceramic layers.
 
-![](https://ka-perseus-images.s3.amazonaws.com/0145623ade609f30d963a2921c5a419fe3da4a8e.png){: .centered }
+![Surface-mount capacitor cut-away view](https://ka-perseus-images.s3.amazonaws.com/0145623ade609f30d963a2921c5a419fe3da4a8e.png){: .centered }
  
 ## Real-world inductors
 
@@ -184,7 +184,7 @@ The other unavoidable feature of inductors is they take up a lot of space. The m
 
 We finish up with this astonishing image of an air-core inductor. This large copper coil was part of a wireless telegraph station built in New Jersey, USA in 1912. It could send a message 4000 miles (6400 km), all the way across the Atlantic Ocean to Germany. Wow. Needless to say, most inductors are *much* smaller.
 
-![](https://ka-perseus-images.s3.amazonaws.com/5eb33430f28a5d2c61daf7f29b39c27084d3f34f.jpg){: .centered }
+![Humongous inductor, bigger than a man](https://ka-perseus-images.s3.amazonaws.com/5eb33430f28a5d2c61daf7f29b39c27084d3f34f.jpg){: .centered }
 
 ----
 

@@ -8,12 +8,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="276.03296"
-   height="327.8725"
+   width="279.57626"
+   height="322.9675"
    version="1.1"
    id="svg2"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="rl_natural_response8.svg">
+   sodipodi:docname="rl_natural_respons11a.svg">
   <metadata
      id="metadata118">
     <rdf:RDF>
@@ -43,11 +43,11 @@
      showgrid="false"
      fit-margin-top="10"
      fit-margin-right="10"
-     fit-margin-left="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.5676826"
-     inkscape:cx="138.01648"
-     inkscape:cy="163.93625"
+     fit-margin-left="10"
+     inkscape:zoom="1.5914914"
+     inkscape:cx="139.78813"
+     inkscape:cy="161.48375"
      inkscape:current-layer="svg2" />
   <xhtml:defs>
     <xhtml:style
@@ -55,311 +55,316 @@
 svg .grid { stroke-width: 0.5px; stroke: rgb(187, 187, 187); opacity: 0.5; }
 svg .domain { stroke-width: 3px; stroke: black; }
 svg { border: none; }
-svg .path { stroke-width: 4px; stroke: rgb(17, 172, 205); fill: none; }
+svg .path { stroke-width: 4px; stroke: rgb(255, 156, 57); fill: none; }
 svg text { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 16px; line-height: normal; font-family: katex_main; }
 svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: katex_math; }]]></xhtml:style>
   </xhtml:defs>
   <path
      class="domain"
-     d="m 12.021364,236.8725 0,0.5 239.999996,0 0,-0.5"
+     d="m 12.021364,231.9675 0,0.5 239.999996,0 0,-0.5"
      id="path8"
      inkscape:connector-curvature="0"
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="12.021363"
-     y1="236.8725"
+     y1="231.9675"
      x1="12.021363"
      id="line12"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line14"
-     y2="316.8725"
+     y2="311.9675"
      x2="12.021363"
-     y1="36.872501"
+     y1="31.967501"
      x1="12.021363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="52.021362"
-     y1="236.8725"
+     y1="231.9675"
      x1="52.021362"
      id="line18"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line20"
-     y2="316.8725"
+     y2="311.9675"
      x2="52.021362"
-     y1="36.872501"
+     y1="31.967501"
      x1="52.021362"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="92.021362"
-     y1="236.8725"
+     y1="231.9675"
      x1="92.021362"
      id="line24"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line26"
-     y2="316.8725"
+     y2="311.9675"
      x2="92.021362"
-     y1="36.872501"
+     y1="31.967501"
      x1="92.021362"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="132.02136"
-     y1="236.8725"
+     y1="231.9675"
      x1="132.02136"
      id="line30"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line32"
-     y2="316.8725"
+     y2="311.9675"
      x2="132.02136"
-     y1="36.872501"
+     y1="31.967501"
      x1="132.02136"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="172.02136"
-     y1="236.8725"
+     y1="231.9675"
      x1="172.02136"
      id="line36"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line38"
-     y2="316.8725"
+     y2="311.9675"
      x2="172.02136"
-     y1="36.872501"
+     y1="31.967501"
      x1="172.02136"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="212.02136"
-     y1="236.8725"
+     y1="231.9675"
      x1="212.02136"
      id="line42"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line44"
-     y2="316.8725"
+     y2="311.9675"
      x2="212.02136"
-     y1="36.872501"
+     y1="31.967501"
      x1="212.02136"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none;stroke:#000000"
      x2="252.02136"
-     y1="236.8725"
+     y1="231.9675"
      x1="252.02136"
      id="line48"
-     y2="242.8725" />
+     y2="237.9675" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line50"
-     y2="316.8725"
+     y2="311.9675"
      x2="252.02136"
-     y1="36.872501"
+     y1="31.967501"
      x1="252.02136"
      class="grid" />
   <text
-     x="258.60797"
+     x="262.15128"
      dx="0"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
      id="text52"
-     y="240.4158">
+     y="235.5108">
     <tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan4379">t</tspan>
   </text>
   <path
      class="domain"
-     d="m 51.521364,317.3725 0.5,0 0,-280 -0.5,0"
+     d="m 51.521364,312.4675 0.5,0 0,-280.000001 -0.5,0"
      id="path56"
      inkscape:connector-curvature="0"
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="317.3725"
-     y1="317.3725"
+     y2="312.4675"
+     y1="312.4675"
      x1="51.521362"
      id="line60"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line62"
-     y2="317.3725"
+     y2="312.4675"
      x2="251.52136"
-     y1="317.3725"
+     y1="312.4675"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="277.3725"
-     y1="277.3725"
+     y2="272.4675"
+     y1="272.4675"
      x1="51.521362"
      id="line66"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line68"
-     y2="277.3725"
+     y2="272.4675"
      x2="251.52136"
-     y1="277.3725"
+     y1="272.4675"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="237.3725"
-     y1="237.3725"
+     y2="232.4675"
+     y1="232.4675"
      x1="51.521362"
      id="line72"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line74"
-     y2="237.3725"
+     y2="232.4675"
      x2="251.52136"
-     y1="237.3725"
+     y1="232.4675"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="197.3725"
-     y1="197.3725"
+     y2="192.4675"
+     y1="192.4675"
      x1="51.521362"
      id="line78"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line80"
-     y2="197.3725"
+     y2="192.4675"
      x2="251.52136"
-     y1="197.3725"
+     y1="192.4675"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="157.3725"
-     y1="157.3725"
+     y2="152.4675"
+     y1="152.4675"
      x1="51.521362"
      id="line84"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line86"
-     y2="157.3725"
+     y2="152.4675"
      x2="251.52136"
-     y1="157.3725"
+     y1="152.4675"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="117.3725"
-     y1="117.3725"
+     y2="112.4675"
+     y1="112.4675"
      x1="51.521362"
      id="line90"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line92"
-     y2="117.3725"
+     y2="112.4675"
      x2="251.52136"
-     y1="117.3725"
+     y1="112.4675"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="77.372498"
-     y1="77.372498"
+     y2="72.467499"
+     y1="72.467499"
      x1="51.521362"
      id="line96"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line98"
-     y2="77.372498"
+     y2="72.467499"
      x2="251.52136"
-     y1="77.372498"
+     y1="72.467499"
      x1="11.521363"
      class="grid" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none;stroke:#000000"
-     y2="37.372501"
-     y1="37.372501"
+     y2="32.467499"
+     y1="32.467499"
      x1="51.521362"
      id="line102"
      x2="45.521362" />
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line104"
-     y2="37.372501"
+     y2="32.467499"
      x2="251.52136"
-     y1="37.372501"
+     y1="32.467499"
      x1="11.521363"
      class="grid" />
   <text
      dy="-12"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
      id="text106"
-     x="51.521362"
-     y="36.872501">
+     x="47.978054"
+     y="31.967501">
     <tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       id="tspan4381">i</tspan>
+       id="tspan4381">v</tspan>
   </text>
   <path
      inkscape:connector-curvature="0"
      id="path108"
-     d="m 13.435016,76.8725 h 40"
+     d="m 11.521364,231.9675 40,0 0,-128"
      class="path"
-     style="stroke:#00aad4;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none" />
+     style="fill:none;stroke:#ff7f2a;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none" />
+  <text
+     id="text110"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     dy="-1"
+     y="103.9675"
+     x="59.521362"
+     dx="0 0 0 0 0 0 0 0 0 0 3"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+   id="tspan4387">v</tspan>
+
+
+(0<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan4385">+</tspan>
+
+
+) = I<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan4383">0</tspan>
+
+
+R</text>
   <path
      inkscape:connector-curvature="0"
      id="path112"
-     d="m 179.52136,236.8725 72,0"
+     d="m 179.52136,231.9675 72,0"
      class="path"
-     style="stroke:#00aad4;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:round" />
+     style="stroke:#ff7f2a;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none" />
   <text
-     id="text110-6"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
-     dy="0 0 0 -6 6"
-     y="83.134674"
-     x="61.823772">
-    <tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       id="tspan4193">i</tspan>
-    <tspan
-       id="tspan4197"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       dy="0 0 0 0 0 0 0 0 0 -12">(0<tspan
-   style="font-size:64.99999762%;baseline-shift:super"
-   id="tspan4202">+</tspan>
-) = I<tspan
-   style="font-size:64.99999762%;baseline-shift:sub"
-   id="tspan4200">0</tspan>
-</tspan>
-  </text>
-  <text
-     id="text110"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
-     dy="0 0 0 6"
-     y="213.26306"
-     x="181.746">
-    <tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       id="tspan4193-2">i</tspan>
-    <tspan
-       id="tspan4197-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-       dy="0 0 0 0 0 0 0 0 0 -12">(∞) = 0</tspan>
-  </text>
+     dx="0 0 0 0 0 0 0 0 0 0 0"
+     x="176.68666"
+     y="213.57373"
+     dy="-1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text4043"><tspan
+   id="tspan4037"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">v</tspan>
+
+(∞) = 0</text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#ff7f2a;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 51.521364,103.96551 c 1.639074,5.43575 4.656484,14.93619 8.599226,21.27547 0.969733,1.55917 -8.599226,-14.08991 -8.599226,-21.27547 l 2.698797,4.35287 c 1.460039,2.35488 -0.585177,4.86949 0,7.69209 1.008748,4.8657 11.757257,23.41312 14.18159,23.41312 0.221099,0 -8.505134,-13.6698 -7.164864,-13.6698 0.850513,0 0,1.36749 0,2.05123 0,2.41884 0.707014,3.3547 1.275769,5.64086 1.360275,5.46775 1.11227,-1.02561 1.275768,-1.02561 2.796686,0 0.159581,4.605 1.275769,6.66648 4.500339,8.31164 15.172494,15.41909 15.947106,15.89699 0.533414,0.32909 0.938585,-1.05494 0.637884,-1.53841 -1.16609,-1.87488 -5.482728,-2.9256 -6.720451,-4.91566 -2.090231,-3.36075 -5.337664,-10.58763 -7.770694,-10.58763 -0.850512,0 6.868589,5.62938 6.868589,7.68676 0,1.88821 11.839238,14.79603 13.363514,16.02143 0.427237,0.34346 4.342455,6.66648 4.46519,6.66648 0.94949,0 -8.93038,-11.13834 -8.93038,-11.79455 0,-1.20869 -3.262351,0.45418 -3.189421,0.51281 0.952475,0.76571 0.896178,0.78966 2.551537,2.56403 4.861733,5.21124 11.601632,11.76258 17.063401,16.1534 0.46462,0.37351 13.265182,10.09327 13.395572,10.76893 1.05951,5.48979 18.96549,21.79426 21.20965,21.79426 1.35942,0 -5.94487,-6.24782 -6.37884,-6.66647 -2.20895,-2.13098 -9.51309,-3.91674 -12.1198,-4.61526 -0.16952,-0.0454 -15.640472,-19.75294 -14.83081,-19.10203 0.71671,0.57617 20.01451,21.5393 22.00701,24.7429 2.66118,4.27874 19.00198,11.29175 20.25282,11.79454 5.1187,2.0575 15.28093,7.17928 15.30921,7.17928 3.7949,0 -5.616,-1.97588 -5.74095,-2.05121 -4.71412,-2.84234 -16.41875,-5.59459 -17.22287,-6.15369 -9.77253,-6.79468 -0.19113,1.97441 0,2.05123 0.68546,0.27553 13.39557,4.47492 13.39557,6.15367 0,0.18294 8.86836,0.97577 9.56825,1.53843 0.88717,0.7132 17.42031,5.69377 17.22288,5.64086 -2.68752,-0.72018 -15.75877,-5.66407 -15.14975,-6.15367 2.73858,-2.20159 25.36072,12.48095 25.3559,9.74332 -0.003,-1.93456 -14.79947,-1.37579 -16.74447,-3.97425"
+     id="path4714"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cscssssssssscssscsscccssccccsscscscsssc" />
 </svg>

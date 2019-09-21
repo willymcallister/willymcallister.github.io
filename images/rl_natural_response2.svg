@@ -12,7 +12,7 @@
    height="327.8725"
    version="1.1"
    id="svg7906"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="rl_natural_response2.svg">
   <metadata
      id="metadata8020">
@@ -41,9 +41,9 @@
      inkscape:window-height="728"
      id="namedview8016"
      showgrid="false"
-     inkscape:zoom="1.4111111"
-     inkscape:cx="162.53561"
-     inkscape:cy="151.00001"
+     inkscape:zoom="1.5676826"
+     inkscape:cx="138.9803"
+     inkscape:cy="163.93625"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -211,10 +211,9 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
   <text
      x="260.53561"
      dx="0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
      id="text7956"
-     y="236.8725"
-     sodipodi:linespacing="125%">
+     y="236.8725">
     <tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan8638">t</tspan>
@@ -393,9 +392,8 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
     </g>
     <text
        id="text8010"
-       style="font-size:16px;line-height:125%;text-anchor:middle;fill:#000000"
-       dy="-12"
-       sodipodi:linespacing="125%">
+       style="font-size:16px;line-height:0%;text-anchor:middle;fill:#000000"
+       dy="-12">
       <tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
          id="tspan8642">i</tspan>
@@ -404,16 +402,15 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
   <path
      inkscape:connector-curvature="0"
      id="path8012"
-     d="m 12.535606,76.8725 40,0"
+     d="m 13.04451,76.8725 h 40"
      class="path"
      style="fill:none;stroke:#00aad4;stroke-width:5;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none" />
   <text
      id="text110"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
      dy="0 0 0 -6 6"
      y="82.823189"
-     x="69.251732"
-     sodipodi:linespacing="125%">
+     x="69.251732">
     <tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan4193">i</tspan>
@@ -423,6 +420,7 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
        dy="0 0 0 0 0 0 0 0 0 -12">(0<tspan
    style="font-size:64.99999762%;baseline-shift:super"
    id="tspan4202">+</tspan>
+
 ) = I<tspan
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan4200">0</tspan>

@@ -63,17 +63,17 @@ This discussion of equivalence may seem rather overdone. Why make such a big dea
 
 This may seem baffling, (but only for a moment). As we just talked about, the following two schematics are equivalent. But, not *everything* is exactly the same. The point-to-point connections between elements are not the same.
 
-![]({{ site.baseurl }}{% link i/equivalence3.svg %}){: .centered :}
+![Equivalent schematics drawn differently]({{ site.baseurl }}{% link i/equivalence3.svg %}){: .centered :}
 
 Look at the blue arrow in the left schematic. That wire carries the current flowing towards  $\text R2$ and $\text R3$. 
 
 **See if you can find the equivalent wire in the schematic on the right.**  
 (Find a wire carrying the current going to $\text R2$ and $\text R3$.)
 
-<details>
-<summary>Where is that wire?</summary>
-<p>It is not there! There is no wire in the schematic on the right with the combined current flowing to  $\text R2$ and $\text R3$. This is so strange!</p>
-</details>
+{% capture summary %}Where is that wire?{% endcapture %}  
+{% capture details %}  
+It is not there! There is no wire in the schematic on the right with the combined current flowing to  $\text R2$ and $\text R3$. This is so strange!  
+{% endcapture %}{% include details.html %} 
 
 What is going on? It is a trick question, to highlight something about the nature of schematics.
 
@@ -93,25 +93,25 @@ Hint: There are three answers.
 
 ![8 schematics]({{ site.baseurl }}{% link i/equivalence4.svg %}){: .centered :}
 
-<details>
-<summary>Show a hint</summary>
- <p>Trace the branches and nodes starting from a consistent place in each circuit, like for example the $+$ terminal of the voltage source.  Follow the branch and node pattern of each circuit to find the ones that match.</p>
- </details>
+{% capture summary %}Show a hint{% endcapture %}  
+{% capture details %}  
+Trace the branches and nodes starting from a consistent place in each circuit, like for example the $+$ terminal of the voltage source.  Follow the branch and node pattern of each circuit to find the ones that match.  
+{% endcapture %}{% include details.html %} 
 
-<details>
-<summary>Show an answer</summary>
-<p>A = G</p>
-</details>
+{% capture summary %}Show an answer{% endcapture %}  
+{% capture details %}  
+A = G  
+{% endcapture %}{% include details.html %} 
 
-<details>
-<summary>Show another answer</summary>
-<p>C = F = H</p>
-</details>
+{% capture summary %}Show another answer{% endcapture %}  
+{% capture details %}  
+C = F = H  
+{% endcapture %}{% include details.html %} 
 
-<details>
-<summary>Show the last answer</summary>
-<p>B = D = E</p>
-</details>
+{% capture summary %}Show the last answer{% endcapture %}  
+{% capture details %}  
+B = D = E  
+{% endcapture %}{% include details.html %} 
 
 ## Good schematics
 
@@ -129,7 +129,7 @@ Both you and your colleagues will appreciate these drawing habits for creating g
 
 The following schematics are equivalent, but the one on the left is not as easy to read as the one on the right. It violates all three principles of good schematic drawing. The one on the right follows the guidelines for a good schematic.
 
-![]({{ site.baseurl }}{% link i/equivalence5.svg %}){: .centered :}
+![Equivalent schematics, one drawn better]({{ site.baseurl }}{% link i/equivalence5.svg %}){: .centered :}
 
 {% include embed-video.html %}
 

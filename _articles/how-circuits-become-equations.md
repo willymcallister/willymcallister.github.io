@@ -59,7 +59,7 @@ How many unknowns does a circuit have? Every two-terminal element contributes on
 
 As we discuss this idea in abstract terms, we will also use this real circuit example. If you want to review your understanding of circuit terminology, check [here]({{ site.baseurl }}{% link _videos/circuit-terminology.md %}).
 
-![](https://ka-perseus-images.s3.amazonaws.com/8309b48b32c77e0e946ace775000ed6f7dcd4986.svg){: .centered :}
+![Example circuit](https://ka-perseus-images.s3.amazonaws.com/8309b48b32c77e0e946ace775000ed6f7dcd4986.svg){: .centered :}
 
 **How many elements are there in the circuit?**
 
@@ -124,15 +124,15 @@ The system of equations you write captures these constraints. Half of the equati
 
 Imagine unconnected circuit components scattered about on the tabletop. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/f6c23e7cf5491924eecedcc76a7e0c3051cd4b04.svg){: .centered :}
+![Scattered circuit elements](https://ka-perseus-images.s3.amazonaws.com/f6c23e7cf5491924eecedcc76a7e0c3051cd4b04.svg){: .centered :}
 
 Each element has unknown <span style="color:#11accd">current</span> and <span style="color:#e07d10">voltage</span>,
 
-![](https://ka-perseus-images.s3.amazonaws.com/4f2f4d524a4d1b53fa0a1b1a7d4db8523363a319.svg){: .centered :}
+![Scattered elements with i and v labels](https://ka-perseus-images.s3.amazonaws.com/4f2f4d524a4d1b53fa0a1b1a7d4db8523363a319.svg){: .centered :}
 
 Each element brings along an <span style="color:#1fab54">$i$-$v$ equation</span>. Think of each element as little chunk of math. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/295cb1ef8ac43f1a95bcf2fe690957c59ae4f7f8.svg){: .centered :}
+![Scattered elements with element laws](https://ka-perseus-images.s3.amazonaws.com/295cb1ef8ac43f1a95bcf2fe690957c59ae4f7f8.svg){: .centered :}
 
 These $i$-$v$ relations represent $E$ independent equations. That's half the required total.
 
@@ -148,7 +148,7 @@ The remaining $E$ equations come from the constraints caused by the connections 
 
 Let's say a circuit has  $E$ elements and $N$ nodes. Our example circuit has $E = 5$ elements and $N = 3$ nodes. We also know the circuit has $6$ loops, and $3$ of those loops are meshes. 
 
-![](https://ka-perseus-images.s3.amazonaws.com/8309b48b32c77e0e946ace775000ed6f7dcd4986.svg){: .centered :}
+![Example circuit again](https://ka-perseus-images.s3.amazonaws.com/8309b48b32c77e0e946ace775000ed6f7dcd4986.svg){: .centered :}
 
 <details>
 <summary>Show me the nodes</summary>
@@ -236,7 +236,7 @@ If for some reason you want to (or have to) include other non-mesh loop equation
 
 Our example circuit has $6$ available loops. From that set of choices, we need to come up with $3$ independent KVL equations.
 
-![](https://ka-perseus-images.s3.amazonaws.com/22611a54c3bb46d663ab72234ff8287e84515713.svg)
+![Example circuit with highlighted meshes and loops](https://ka-perseus-images.s3.amazonaws.com/22611a54c3bb46d663ab72234ff8287e84515713.svg)
 
 The simplest way is to pick the three meshes, $\goldD{\text{I}}$, $\goldD{\text{II}}$, and $\goldD{\text{III}}$. You are a winner! The meshes produce the right number of equations, and they are guaranteed to be independent. This is the basis of the [Mesh Current Method]({{ site.baseurl }}{% link _articles/mesh-current.md %}).
 

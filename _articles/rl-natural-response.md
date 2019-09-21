@@ -9,7 +9,7 @@ We investigate the *natural response* of a resistor inductor $(\text{RL})$ circu
 
 ![RL natural response circuit]({{ site.baseurl }}{% link i/rl_natural_response1.svg %}){: .centered :}
 
-To figure out this circuit we have to account for time, so we have to use some concepts from calculus. We use [derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives) to describe how the $\text{RL}$ circuit behaves.
+An inductor's $i$-$v$ equation is $v = \text L \,di/dt$. The voltage depends on how current is changing from moment to moment. We use concepts from calculus, specifically [derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives), to handle this dependence on time. 
 
 Written by Willy McAllister.
 
@@ -36,29 +36,29 @@ The *time constant* for an $\text{RL}$ circuit is $\tau = \dfrac{\text L}{\text 
 
 ----
 
-The $\text{RL}$ circuit appears any time a wire is involved in a circuit. Sometimes the wire is formed into a coil and we call it an inductor. Wires and traces on circuit boards always have a small inductance. The thin gold wires bonded to the pads on an integrated circuit have enough self-inductance to be important in very fast circuits. 
+The *natural response* of a circuit is what the circuit does "naturally" when it has some internal energy and we allow it to dissipate. It is the most basic behavior of a circuit. 
 
-The *natural response* of a circuit is what the circuit does when there are no external influences (it has internal energy, but no energy coming in from outside). It is the most basic behavior of a circuit. 
+Why do we study the $\text{RL}$ natural response? Because it appears any time a wire is involved in a circuit. If the wire is formed into a coil we call it an inductor. Even if it is not coiled up, every wire and every trace on a circuit board has a small inductance that might be important. Gold bond wires in an integrated circuit have enough inductance to be important in very fast circuits. There is always inductance around and always resistance nearby.
 
 ## Intuitive description
 
 To get the $\text{RL}$ circuit to do something, we call on an outside helper to create a current in the inductor. Then we disconnect the external circuit, step back, and watch what happens.
 
-![RL natural response circuit switch closed]({{ site.baseurl }}{% link i/rl_natural_response6.svg %}){: .centered :}{: height="160px"} 
+![RL natural response circuit switch closed]({{ site.baseurl }}{% link i/rl_natural_response6.svg %}){: .centered :}
 
-On the right side we have inductor $\text L$, and resistor $\text R$. This is the circuit we want to study. On the left side is our "outside helper," a current source, $\text I$, resistor $\text R0$, and a switch in the closed position. 
+On the right side we have inductor $\text L$ and resistor $\text R$. This is the circuit we want to study. On the left side is our "outside helper," made of current source $\text I$, resistor $\text R0$, and a switch in the closed position. 
 
 Assume the switch has been closed for a long time. The blue loop shows how the current flows in this circuit, 
 
-![RL natural response circuit two current paths]({{ site.baseurl }}{% link i/rl_natural_response7.svg %}){: .centered :}{: height="160px"} 
+![RL natural response circuit two current paths]({{ site.baseurl }}{% link i/rl_natural_response7.svg %}){: .centered :} 
 
 How do we know all the current flows through just the inductor and no current flows in either resistor? The inductor equation tells us so,
 
 $v = \text{L}\,\dfrac{di}{dt}$
 
-The current from the source is constant. It does not change with time. 
+The current from the source is constant. The derivative of any constant is always $0$.
 
-In derivative notation we say, $\dfrac{di}{dt} = \dfrac{d}{dt}\text I_0 = 0$. The derivative of any constant is always $0$.
+In derivative notation we say, $\dfrac{di}{dt} = \dfrac{d}{dt}\text I_0 = 0$. 
 
 If we put this value into the inductor equation we get,
 
@@ -68,7 +68,7 @@ $v = 0$
 
 The voltage across the inductor (and therefore both resistors) is $0$. Ohm's Law tells us a resistor with $0$ volts has $0$ current. Therefore, all of $\text I_0$ flows through the inductor.
 
->When current in an inductor is constant (also known as **DC** or zero frequency), the inductor "looks like" a short circuit. It has $0$ volts across its ends, just like an ideal wire.
+>When current in an inductor is constant (also known as **DC** or zero frequency) it has $0$ volts across its ends, just like an ideal wire. The inductor "looks like" a short circuit.
 
 Summary: Before the switch opens,  
 Current in the inductor is $\text I_0$.  
@@ -76,20 +76,20 @@ Voltage across the inductor and resistor is $0$ volts.
 
 ### Initial conditions
 
-Initial conditions are the $i$'s and $v$'s *after* the switch opens. So let's open the switch. This is an abrupt and significant change to the circuit. What happens to current and voltage? Do they stay the same? Do they jump to some new value? We have to figure it out.
+We know what's going on when the switch is closed. The next step is to find the $i$'s and $v$'s just *after* the switch opens. These are called the *initial conditions*. Opening the switch is an abrupt change to the circuit. What happens to current and voltage? Do they stay the same? Do they jump to some new value? We have to figure it out.
 
 The switch opens at time $t = 0$. The $\text I$ and $\text R0$ helper circuit disconnects from the $\text{RL}$ section. We end up with two separate paths for current, 
 
-![Switch opens, current loops]({{ site.baseurl }}{% link i/rl_natural_response5.svg %}){: .centered :}{: height="180px"}
+![Switch opens, current loops]({{ site.baseurl }}{% link i/rl_natural_response5.svg %}){: .centered :}
 
 On the helper side, current from the source flows through $\text R0$.  
-On the $\text{RL}$ side, the current in $\text L$ can flow through $\text R$. 
+On the $\text{RL}$ side, the current in $\text L$ flows through $\text R$. 
 
 The helper circuit has done its job and we won't pay attention to it from now on. 
 
-{% capture summary %}What is R0 for?{% endcapture %}  
+{% capture summary %}Why do we need R0?{% endcapture %}  
 {% capture details %}  
-After the switch is thrown open, $\text R0$ provides a path for the current from the current source. It is not nice to ask a current source to drive an open circuit. The ideal current source creates an infinite voltage if it tries to drive current into an open circuit. For a similar reason, you should never short out an ideal voltage source, to avoid infinite current.  
+After the switch is thrown open, $\text R0$ provides a path for the current from the current source. It is not nice to ask a current source to drive an open circuit. The ideal current source creates an infinite voltage if it tries to drive current into an open circuit. If you simulate this circuit without $\text R0$ the simulator will be very unhappy. (For a similar reason, you should never short out an ideal voltage source, to avoid infinite current.)  
 {% endcapture %}{% include details.html %} 
 
 #### Initial current
@@ -99,71 +99,84 @@ An instant after the switch opens, at $t=0^+$, what happens to the inductor curr
 
 Here is the most interesting property of an inductor, 
 
->The current in an inductor *cannot* change instantaneously. 
+The current in an inductor *cannot* change instantaneously. 
 
 {% capture summary %}why?{% endcapture %}  
 {% capture details %}  
-Current pushed into an inductor by an external source causes energy to be stored in a magnetic field surrounding the inductor. If the external current stops, the stored energy does not vanish or go somewhere else in zero time. Stored magnetic energy returns to the circuit by continuing to push the inductor current. See the mechanical analogy to visualize this. 
+Current pushed into an inductor causes energy to be stored in a magnetic field surrounding the inductor. If the current stops, the stored energy does not vanish or go somewhere else in zero time. Stored magnetic energy returns to the circuit by continuing to push the inductor current. 
 
-Over a short time interval (like the tiny interval from before to after a switch opens) the current in an inductor is continuous (does not suddenly jump to a different value). As the time interval approaches zero, the inductor current before and after the switch event is the same. $\text I_\text L(0^+) = \text I_\text L(0^-)$.
+Over a short time interval (like the tiny interval from before to after a switch opens) the current in an inductor is continuous---it does not suddenly jump to a different value. As the time interval approaches zero, the inductor current before and after the switch event is the same. $\text I_\text L(0^+) = \text I_\text L(0^-)$.
 
 This behavior is predicted by the inductor equation,
 
 $v = \text L\,\dfrac{di}{dt}$
 
-If the current changes instantly, that implies a finite change of current, $di = \Delta i$, happens in zero time, $dt = 0$. The derivative of current is $di/dt = \Delta i/0$, or infinite. The inductor equation predicts there will be an infinite voltage across the inductor. Infinite voltage does not happen. There *has* to be some finite time interval $\Delta t$ to allow the energy to dissipate.
+If the current changes instantly, that implies a finite change of current, $di = \Delta i$, happening in zero time, $dt = 0$. The derivative of current is $di/dt = \Delta i/0$, or infinite. The inductor equation predicts there will be an infinite voltage across the inductor. Infinite voltage does not happen. There *has* to be some finite time interval $\Delta t$ to allow the energy to dissipate.
 {% endcapture %}{% include details.html %} 
 
 {% capture summary %}mechanical analogy{% endcapture %}  
 {% capture details %} 
 The energy stored in an inductor's magnetic field is similar to momentum stored in a mass. If you try to stop a moving mass, its momentum does not dissipate instantly. You can't stop a moving mass in an instant. We say: Momentum tends to *sustain* the motion of the mass. 
 
-Pick the front wheel of your bicycle up off the ground and give it a good hard spin. Now grab it with your hand and try to stop it in an instant. Your hand gets quite a jolt and it takes time for the wheel to stop. There is a lot of kinetic energy in the spinning wheel.
+A great example of a moving mass is a bicycle wheel. Pick up the front wheel of your bicycle off the ground and give it a good hard spin. Now grab it with your hand and try to stop it instantly. Your hand gets quite a jolt and the wheel does not stop right away. There is a lot of energy stored in a spinning wheel.
 {% endcapture %}{% include details.html %} 
 
-The current just before the switch opens,![](https://fastly.kastatic.org/ka-perseus-images/5e8325bdacb549ba5f902f732b1fe6351f42f7c0.svg){: height="180px"}
+The inductor current just before the switch opens,
 
-equals the current after the switch opens,![](https://fastly.kastatic.org/ka-perseus-images/b102dcbe84f13463838b37b64d07f70febc2b05b.svg){: height="180px"}
+![Current before switch opens]({{ site.baseurl }}{% link i/rl_natural_response13.svg %})
+
+equals the inductor current just after the switch opens,  
+
+![Current after switch opens]({{ site.baseurl }}{% link i/rl_natural_response14.svg %})
+
+$i(0^+) = i(0^-) = \text I_0$
+
+This is the initial condition for the $\text{RL}$ current.
 
 #### Initial voltage
 {:.no_toc}
 
-What about the voltage? There is a current in $\text R$, so the voltage jumps up to $v = \text I_0\,\text R$. The voltage across an inductor is allowed to make sudden jumps. Notice the jump in voltage does not depend on the value of the inductor, $\text L$.
+What happens to voltage when the switch opens? All of a sudden there is a current forced to flow in $\text R$---so the voltage jumps abruptly up to $v = \text I_0\,\text R$. 
 
-| ![RL initial Io]({{ site.baseurl }}{% link i/rl_natural_response2.svg %}) | ![RL initial Vo]({{ site.baseurl }}{% link i/rl_natural_response4.svg %}) |
+![RL initial Io]({% link i/rl_natural_response2.svg %})
+![RL initial Vo]({% link i/rl_natural_response4.svg %})
 
-We reasoned our way through the switch event and have the initial conditions. 
+Inductor current can't change suddenly, but its voltage is allowed to make sudden jumps.
 
-{% capture summary %}Voltage on an inductor can change in an instant{% endcapture %}  
+{% capture summary %}Inductor voltage can change in an instant{% endcapture %}  
 {% capture details %}  
-An inductor has no problem if its voltage changes instantaneously. If the voltage jumps from $1$ to $10$, the $i$-$v$ equation predicts the slope of current, $di/dt$, will increase by a factor of $10$. This actually happens with real-life inductors.
+An inductor has no problem if its voltage changes instantaneously. If you force the voltage to jump from $1$ to $10\,\text V$ the $i$-$v$ equation says the slope of current, $di/dt$, will increase by a factor of $10$. Inductor current can change slope; it just can't jump abruptly to a new value.
 
-In the mechanical analogy, the voltage on an inductor is analogous to the force on a mass. Nothing stops you from suddenly changing how hard you push on your bicycle wheel as you spin it up.  
+In the mechanical analogy, the voltage is analogous to the force. Nothing stops you from suddenly changing how hard you push on your bicycle wheel as you spin it up.  
 {% endcapture %}{% include details.html %} 
+
+We reasoned our way through the switch event. 
 
 ### What happens after a long time? 
 
-Before we look at what happens after the switch event, let's first think about where the circuit goes in the long run. If we wait a long time, any energy in the inductor will eventually be transformed into heat by the resistor. When all the energy has turned into heat, $i$ will be $0$, and $v$ will be $0$. This is called the *final state* of our circuit. 
+Before we look at what happens after the switch event, let's first think about what happens in the long run. If we wait a long time, magnetic energy in the inductor emerges as current, which eventually is transformed into heat by the resistor. When all the energy has turned into heat, $i$ will be $0$, and $v$ will be $0$. This is the *final state* of our circuit. 
 
-$i(t)$ and $v(t)$ now look like this with the long-time response sketched in,
+$i(t)$ and $v(t)$ look like this with the long-time response added,
 
-![Current after a long time]({{ site.baseurl }}{% link i/rl_natural_response8.svg %}) | ![Voltage after a long time]({{ site.baseurl }}{% link i/rl_natural_response9.svg %})
+![Current after a long time]({% link i/rl_natural_response8.svg %})
+![Voltage after a long time]({% link i/rl_natural_response9.svg %})
 
 ### What happens in between?
 
-![](https://fastly.kastatic.org/ka-perseus-images/f6a8e92a99bfd59ead47e4b0fb265c8710f63608.svg){: .centered :}{: height="180px"}
+![RL circuit]({% link i/rl_natural_response15.svg %}){: .centered :}
 
 Now we fill in what happens between $t=0$ and "a long time from now." Let's make a guess. There is probably some sort of smooth curve joining the two segments. I would guess the rate of change could be higher near the beginning when the current is high. That means the power dissipation in the resistor is high so energy dissipates faster. With this intuition, we sketch in predicted curves for current and voltage,
 
-![Current sketched in]({{ site.baseurl }}{% link i/rl_natural_response10.svg %}) | ![Voltage sketched in]({{ site.baseurl }}{% link i/rl_natural_response11.svg %})
+![Current sketched in]({% link i/rl_natural_response10a.svg %}) 
+![Voltage sketched in]({% link i/rl_natural_response11a.svg %})
 
-This will turn out to be a pretty good guess for the $\text{RL}$ natural response. Just with our intuition we figured out where it starts and ends, and we estimated what the current and voltage look like during the transition. We are not exactly sure how fast the curves come down, or how long "a long time" really is.
+This will turn out to be a pretty good guess for the $\text{RL}$ natural response. Just with our intuition we figured out where it starts and ends, and we estimated what the current and voltage look like during the transition. We are not exactly sure how fast the curves come down, or how long "a long time" really is. 
 
 ## Formal derivation
 
-We want to derive the $\text{LC}$ *natural response*, $\blueD i$ and $\goldD v$ as a function of time. This derivation follows the same steps as the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}). 
+We want to derive the $\text{LC}$ natural response, $\blueD i$ and $\goldD v$ as a function of time. This derivation follows the same steps as the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}). 
 
-![](https://ka-perseus-images.s3.amazonaws.com/0a55992334b0224455b16dec84fd378dd3abd3bc.svg){: .centered :}{: height="180px"}
+![RL basic circuit]({{ site.baseurl }}{% link i/rl_natural_response0.svg %}){: .centered :}
 
 We assume $\text I_0$ is the initial current flowing in the inductor.
 
@@ -179,13 +192,13 @@ The inductor is described by the inductor $i$-$v$ equation,
 
 $v_\text L = \text L \,\dfrac{di}{dt}$
 
-![](https://ka-perseus-images.s3.amazonaws.com/38a5992cae262c50157b8d1e8b5f544dc3aecaf1.svg){: .centered :}{: height="220px"}
+![RL with voltage labels]({{ site.baseurl }}{% link i/rl_natural_response12.svg %}){: .centered :}
 
 {% capture summary %}passive sign convention{% endcapture %}  
 {% capture details %}  
 The resistor and inductor voltages are oriented using the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). The current direction is indicated by the blue arrow, and the two voltages are oriented so the current flows *into* the positive voltage terminals of $\text R$ and $\text L$.
 
-We are really careful about this because it determines the signs in the  equations coming up soon.  
+We are careful about this because it determines signs in equations coming up soon.  
 {% endcapture %}{% include details.html %} 
 
 ### Model the circuit
@@ -288,7 +301,7 @@ $\text I_0 = Ke^0 = K \cdot 1$
 
 $K = \text I_0$ 
 
-All done! We found a function and two constants and the differential equation came true. The general solution for the natural response of an $\text{RL}$ circuit is,
+Done! We found a function and two constants and the differential equation came true. The general solution for the natural response of an $\text{RL}$ circuit is,
 
 $\boxed{i(t) = \text I_0\,e^{-\text Rt/\text L}}$
 
@@ -300,7 +313,8 @@ $\boxed{v(t) = \text R\,\text I_0\,e^{-\text Rt/\text L}}$
 
 I always like to see what the equations look like,
 
-![RL natural response current]({{ site.baseurl }}{% link i/rl_natural_response_current_nolabel.svg %}) | ![RL natural response voltage]({{ site.baseurl }}{% link i/rl_natural_response_voltage_nolabel.svg %})
+![RL current]({% link i/rl_natural_response_current_nolabel.svg %}) 
+![RL voltage]({% link i/rl_natural_response_voltage_nolabel.svg %})
 
 Before the switch closes the current is flat at $\text I_0$. The switch closes at $t=0$ and the current falls on an exponential curve until it fades to $0$.
 
@@ -308,7 +322,8 @@ The voltage across the inductor is $0$ before the switch closes. It makes a shar
 
 Compare these computed graphs to the ones we sketched earlier. The sketches have the right shape.
 
-![Current sketched in]({{ site.baseurl }}{% link i/rl_natural_response10.svg %}) | ![Voltage sketched in]({{ site.baseurl }}{% link i/rl_natural_response11.svg %})
+![Current sketched in]({% link i/rl_natural_response10a.svg %}) 
+![Voltage sketched in]({% link i/rl_natural_response11a.svg %})
 
 ### Time constant
 
@@ -316,13 +331,13 @@ An exponent has to be a plain vanilla number. It isn't allowed to have dimension
 
 $\text L/\text R$ is called the *time constant* of a resistor-inductor combination. It has the same properties as the corresponding product $\text R \cdot \text{C}$ in the resistor-capacitor circuit. We use the Greek letter $\tau$ (tau) as the symbol for time constant,
 
-$\tau = \dfrac{\text L}{\text R}\quad$ seconds
+$\tau = \dfrac{\text L}{\text R}$ seconds
 
 We can rewrite the natural response equation like this, 
 
 $i(t) = \text I_0e^{-t/\tau}$
 
-When $t$ is equal to the time constant, the exponent becomes $-1$. The exponential term is equal to $1/e$, or about $0.37$. 
+When $t$ is equal to the time constant, the exponent becomes $-1$. The exponential term is equal to $1/e = 1/1.569$, or about $0.37$. 
 
 The time constant determines how fast the exponential curve comes down to zero. After $1$ time constant has passed, the current is down to $37\%$ of its initial value. If you wait $3$ to $5$ time constants, the natural response is pretty much over.
 
@@ -344,9 +359,9 @@ How do you remember the order of the quotient? Is $\text R$ on top, or is it $\t
 
 ## Worked example
 
-Let's do an example.
+Let's work through an example,
 
-![](https://fastly.kastatic.org/ka-perseus-images/4da31c8b75365fd0b62b9b453d27a07725d82f9e.svg){: .centered :}{: height="180px"}
+![Worked example circuit]({% link i/rl_natural_response16.svg %}){: .centered :}
 
 Problem 1  
 **What is $\blueD i$ if the switch is closed?**
@@ -372,7 +387,7 @@ The inductor equation tells us $v = \text L\,\dfrac{di}{dt} = 0 \,\text{V}$.
 
 The switch is thrown open at $t=0$. 
 
-![](https://fastly.kastatic.org/ka-perseus-images/a5a64348b5e2459b1506f6f3ced58bc1c6ec4cb1.svg){: .centered :}{: height="180px"}
+![Worked example switch thrown open]({% link i/rl_natural_response17.svg %}){: .centered :} 
 
 Problem 3  
 **What is $\blueD i$ in the inductor the instant after the switch opens?**  
@@ -403,7 +418,7 @@ $\tau = 80\,\text{ns}$
 Problem 5  
 **Write expressions for $i(t)$ and $v(t)$ after $t=0$.**  
 
-$i(t) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 
+$i(t) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 $v(t) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -425,12 +440,13 @@ $v(t) = 1.6\,e^{-t/80\,\text{ns}}$
 
 The natural response looks like this,
 
-|![RL natural response current]({{ site.baseurl }}{% link i/rl_natural_response_current.svg %})|![RL natural response voltage]({{ site.baseurl }}{% link i/rl_natural_response_voltage.svg %})|
+![RL natural response current]({% link i/rl_natural_response_current.svg %})
+![RL natural response voltage]({% link i/rl_natural_response_voltage.svg %})
 {% endcapture %}{% include details.html %} 
 
 ### Simulation model
 
-Try this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[208,128,0],{"_json_":0},["0"]],["w",[272,48,272,24]],["w",[152,24,152,32]],["r",[272,48,4],{"name":"R","r":"200","_json_":3},["1","0"]],["l",[152,48,0],{"name":"L","l":"16u","_json_":4},["2","0"]],["i",[40,48,0],{"name":"I0","value":"step(8m,0,0,1n)","_json_":5},["1","0"]],["w",[152,96,152,128]],["w",[272,96,272,128]],["w",[40,128,40,96]],["w",[40,48,40,24]],["s",[208,24,0],{"color":"red","offset":"0","_json_":10},["1"]],["w",[272,24,208,24]],["w",[272,128,208,128]],["w",[152,128,208,128]],["w",[152,24,40,24]],["w",[152,128,40,128]],["a",[152,48,5],{"color":"cyan","offset":"0","_json_":16},["2","1"]],["w",[152,24,208,24]],["view",1.1599999999999966,-17.708,2.44140625,"50","10","1G",null,"100","400n","1000"]]). Click on **TRAN** to perform a transient analysis. The current source has its own internal switch. It starts at $8\,\text{mA}$ and steps abruptly down to $0$ at $t=0$. Confirm for yourself the current is down to $37\%$ of its $t(0)$ value after one time constant. 
+Try this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B152%2C24%2C208%2C24%5D%5D%2C%5B%22a%22%2C%5B152%2C48%2C5%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A1%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22w%22%2C%5B152%2C128%2C40%2C128%5D%5D%2C%5B%22w%22%2C%5B152%2C24%2C40%2C24%5D%5D%2C%5B%22w%22%2C%5B152%2C128%2C208%2C128%5D%5D%2C%5B%22w%22%2C%5B272%2C128%2C208%2C128%5D%5D%2C%5B%22w%22%2C%5B272%2C24%2C208%2C24%5D%5D%2C%5B%22s%22%2C%5B208%2C24%2C0%5D%2C%7B%22color%22%3A%22red%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A7%7D%2C%5B%221%22%5D%5D%2C%5B%22w%22%2C%5B40%2C48%2C40%2C24%5D%5D%2C%5B%22w%22%2C%5B40%2C128%2C40%2C96%5D%5D%2C%5B%22w%22%2C%5B272%2C96%2C272%2C128%5D%5D%2C%5B%22w%22%2C%5B152%2C96%2C152%2C128%5D%5D%2C%5B%22i%22%2C%5B40%2C48%2C0%5D%2C%7B%22name%22%3A%22I0%22%2C%22value%22%3A%22step(8m%2C0%2C0%2C1n)%22%2C%22_json_%22%3A12%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22l%22%2C%5B152%2C48%2C0%5D%2C%7B%22name%22%3A%22L%22%2C%22l%22%3A%2216u%22%2C%22_json_%22%3A13%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B272%2C48%2C4%5D%2C%7B%22name%22%3A%22R%22%2C%22r%22%3A%22200%22%2C%22_json_%22%3A14%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C24%2C152%2C32%5D%5D%2C%5B%22w%22%2C%5B272%2C48%2C272%2C24%5D%5D%2C%5B%22g%22%2C%5B208%2C128%2C0%5D%2C%7B%22_json_%22%3A17%7D%2C%5B%220%22%5D%5D%2C%5B%22view%22%2C-11.34%2C-21.708%2C2.44140625%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%22400n%22%2C%221000%22%5D%5D). Click on **TRAN** to perform a transient analysis. The current source has its own internal switch. It starts at $8\,\text{mA}$ and steps abruptly down to $0$ at $t=0$. Confirm for yourself the current is down to $37\%$ of its $t(0)$ value after one time constant. 
 
 ## Summary
 {:.no_toc}
@@ -461,12 +477,19 @@ If you have covered this technique in your calculus studies, you can solve both 
 <p>
 $\begin{aligned}
 \text L \frac{di}{dt} &= -i\,\text R \\
+\\
 \text L \frac{di}{i} &= -\text R \,dt \\
+\\
 \int_0^{t} \text L \frac{di}{i} &= -\int_0^t \text R \,dt \\
+\\
 \text L\,(\ln i(t) - \ln i(0)) &= -\text R\,t \\
+\\
 \text L\,\ln(i(t)/\text I_0) &= -\text R\,t \\
+\\
 \ln(i(t)/\text I_0) &= -\text R\,t/\text L \\
+\\
 i(t)/\text I_0 &= e^{-\text Rt/\text L} \\
+\\
 i(t) &= \text I_0\,e^{-\text Rt/\text L}
 \end{aligned}$
 </p>

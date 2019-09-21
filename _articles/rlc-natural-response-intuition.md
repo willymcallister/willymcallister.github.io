@@ -7,7 +7,7 @@ comments: true
 
 The resistor-inductor-capacitor $\text{RLC}$ circuit is the popular kid of analog circuits. It is found in real life circuits we actually build, since every real circuit has finite resistance, inductance, and capacitance. It has a rich and complex behavior with application in many areas of engineering.
 
-![](https://ka-perseus-images.s3.amazonaws.com/7bf2a85a2432376373d66e4a86fe015fdb5f5570.svg){: .centered :}
+![RLC circuit basic setup]({{ site.baseurl }}{% link i/rlc_natural_response18.svg %}){: .centered :}
 
 In this article we take an intuitive look at the natural response of an $\text{RLC}$. Then we do the formal math in two follow-on articles, RLC natural response [derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}) and [variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}).
 
@@ -41,7 +41,7 @@ This prediction is similar what we did for the [LC natural response](https://spi
 $\text{RLC}$ natural response. The switch is open and there is an initial voltage $\text V_0$ on the capacitor.
 {: .caption :}
 
-Let's say the capacitor has an initial voltage $\text V_0$. That means it is storing some charge, $q = \text C\,\text V_0$. Focus on $+q$, the positive charge sitting on the top plate of the capacitor. We will follow that as it moves around the circuit. 
+Let's say the capacitor has an initial voltage $\text V_0$. That means it is storing some charge, $q = \text C\,\text V_0$. Focus on $+q$, the positive charge sitting on the top plate of the capacitor. We will follow that as it moves around the circuit.
 
 The switch is open, so there is no current in the inductor, and no current in the capacitor or resistor, either. As long as the switch is open, the charge just sits on the capacitor with no place to go. 
 
@@ -124,7 +124,7 @@ The $\text{RLC}$ circuit has mechanical analog, a pendulum with friction. The ad
 
 As a pendulum swings back and forth, friction from both air resistance and the pivot point dissipates energy. Each swing gets shorter and shorter until the pendulum finally stops moving. If friction is low, the pendulum swings for a long time before it stops (under damped). If friction is very high, the pendulum makes just one slow drop to the bottom center and stops (over damped). At one precise value, the pendulum will fall to the bottom center as fast as possible, without overshooting and coming back (critically damped). 
 
-![](https://ka-perseus-images.s3.amazonaws.com/7096c1bfc06a0eeab18dab76b5240aa8218721c9.svg){: .centered :}
+![RLC pendulum analog]({{ site.baseurl }}{% link i/rlc_natural_response_intuition7.svg %}){: .centered :}
 
 Check out this [video](https://www.youtube.com/watch?v=99ZE2RGwqSM) of a pendulum with different amounts of friction.
 

@@ -40,9 +40,9 @@ Unlike charges attract, (we use the variable $q$ or $Q$ to represent charge)
 
 Like charges repel,
 
-![Like charges repel](https://ka-perseus-images.s3.amazonaws.com/ad2e3509c6247e7f9fc93a403ccb0e7cb7b7cded.svg){: .centered :}
+![Like charges repel, two positive charges](https://ka-perseus-images.s3.amazonaws.com/ad2e3509c6247e7f9fc93a403ccb0e7cb7b7cded.svg){: .centered :}
 
-![](https://ka-perseus-images.s3.amazonaws.com/cdabd5f111af810133940243a238e1e7c2a98dd2.svg){: .centered :}
+![Like charges repel, two negative charges](https://ka-perseus-images.s3.amazonaws.com/cdabd5f111af810133940243a238e1e7c2a98dd2.svg){: .centered :}
 
 ## Coulomb - the unit of charge
 

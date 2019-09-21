@@ -105,7 +105,6 @@ For a short straight wire, the value of $\text L$ is really small. It doesn't ma
 
 <details>
 <summary>What does the $d$ mean?</summary>
-
 <p>The $d$ in ${di}/{dt}$ is notation from calculus, it means <em>differential</em>.   
 You can think of $d$ as meaning "a tiny change in ..." </p>
 
@@ -116,11 +115,11 @@ You can think of $d$ as meaning "a tiny change in ..." </p>
 
 The next step in building a useful inductor is to wrap the wire into a coil shape. Now we have much more wire in a small space, and get many more magnetic lines. The coil shape causes the magnetic field to become concentrated on the inside of the coil. This is how we get large values of inductance $\text L$. Adding more turns to the coil crams more magnetic lines into the core, and $\text L$ gets bigger.
 
-![](/i/inductor_coil.svg){: .centered :}
+![Magnetic field around a coiled inductor](/i/inductor_coil.svg){: .centered :}
 
 Each individual little section of wire still has the same field lines as in the straight wire example. In the center of the coil, all the field lines from all the neighboring loops point in the same direction. 
 
-![](/i/inductor_coil2.svg){: .centered :}
+![Closeup of magnetic field around a coiled inductor](/i/inductor_coil2.svg){: .centered :}
 
 See if you can use the Right Hand Rule to confirm that the magnetic field line arrows in the coil images are correct.
 
