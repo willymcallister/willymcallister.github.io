@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-We investigate the *natural response* of a resistor inductor $(\text{RL})$ circuit. This derivation is similar to the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
+We investigate the *natural response* of a resistor inductor $(\text{RL})$ circuit. This derivation is similar to the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}).
 
-![RL natural response circuit]({{ site.baseurl }}{% link i/rl_natural_response1.svg %}){: .centered :}
+![RL natural response circuit]({% link i/rl_natural_response1.svg %}){: .centered :}
 
 An inductor's $i$-$v$ equation is $v = \text L \,di/dt$. The voltage depends on how current is changing from moment to moment. We use concepts from calculus, specifically [derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives), to handle this dependence on time. 
 
@@ -44,13 +44,13 @@ Why do we study the $\text{RL}$ natural response? Because it appears any time a 
 
 To get the $\text{RL}$ circuit to do something, we call on an outside helper to create a current in the inductor. Then we disconnect the external circuit, step back, and watch what happens.
 
-![RL natural response circuit switch closed]({{ site.baseurl }}{% link i/rl_natural_response6.svg %}){: .centered :}
+![RL natural response circuit switch closed]({% link i/rl_natural_response6.svg %}){: .centered :}
 
 On the right side we have inductor $\text L$ and resistor $\text R$. This is the circuit we want to study. On the left side is our "outside helper," made of current source $\text I$, resistor $\text R0$, and a switch in the closed position. 
 
 Assume the switch has been closed for a long time. The blue loop shows how the current flows in this circuit, 
 
-![RL natural response circuit two current paths]({{ site.baseurl }}{% link i/rl_natural_response7.svg %}){: .centered :} 
+![RL natural response circuit two current paths]({% link i/rl_natural_response7.svg %}){: .centered :} 
 
 How do we know all the current flows through just the inductor and no current flows in either resistor? The inductor equation tells us so,
 
@@ -80,7 +80,7 @@ We know what's going on when the switch is closed. The next step is to find the 
 
 The switch opens at time $t = 0$. The $\text I$ and $\text R0$ helper circuit disconnects from the $\text{RL}$ section. We end up with two separate paths for current, 
 
-![Switch opens, current loops]({{ site.baseurl }}{% link i/rl_natural_response5.svg %}){: .centered :}
+![Switch opens, current loops]({% link i/rl_natural_response5.svg %}){: .centered :}
 
 On the helper side, current from the source flows through $\text R0$.  
 On the $\text{RL}$ side, the current in $\text L$ flows through $\text R$. 
@@ -123,11 +123,11 @@ A great example of a moving mass is a bicycle wheel. Pick up the front wheel of 
 
 The inductor current just before the switch opens,
 
-![Current before switch opens]({{ site.baseurl }}{% link i/rl_natural_response13.svg %})
+![Current before switch opens]({% link i/rl_natural_response13.svg %})
 
 equals the inductor current just after the switch opens,  
 
-![Current after switch opens]({{ site.baseurl }}{% link i/rl_natural_response14.svg %})
+![Current after switch opens]({% link i/rl_natural_response14.svg %})
 
 $i(0^+) = i(0^-) = \text I_0$
 
@@ -174,9 +174,9 @@ This will turn out to be a pretty good guess for the $\text{RL}$ natural respons
 
 ## Formal derivation
 
-We want to derive the $\text{LC}$ natural response, $\blueD i$ and $\goldD v$ as a function of time. This derivation follows the same steps as the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}). 
+We want to derive the $\text{LC}$ natural response, $\blueD i$ and $\goldD v$ as a function of time. This derivation follows the same steps as the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}). 
 
-![RL basic circuit]({{ site.baseurl }}{% link i/rl_natural_response0.svg %}){: .centered :}
+![RL basic circuit]({% link i/rl_natural_response0.svg %}){: .centered :}
 
 We assume $\text I_0$ is the initial current flowing in the inductor.
 
@@ -192,11 +192,11 @@ The inductor is described by the inductor $i$-$v$ equation,
 
 $v_\text L = \text L \,\dfrac{di}{dt}$
 
-![RL with voltage labels]({{ site.baseurl }}{% link i/rl_natural_response12.svg %}){: .centered :}
+![RL with voltage labels]({% link i/rl_natural_response12.svg %}){: .centered :}
 
 {% capture summary %}passive sign convention{% endcapture %}  
 {% capture details %}  
-The resistor and inductor voltages are oriented using the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). The current direction is indicated by the blue arrow, and the two voltages are oriented so the current flows *into* the positive voltage terminals of $\text R$ and $\text L$.
+The resistor and inductor voltages are oriented using the [sign convention for passive components]({% link _articles/sign-convention.md %}). The current direction is indicated by the blue arrow, and the two voltages are oriented so the current flows *into* the positive voltage terminals of $\text R$ and $\text L$.
 
 We are careful about this because it determines signs in equations coming up soon.  
 {% endcapture %}{% include details.html %} 
@@ -225,7 +225,7 @@ This equation is called a *first-order ordinary differential equation* (ODE). Wh
 
 Now we go through the solution of an ODE step by step. 
 
-Our goal is to discover a function $i(t$) that, when plugged in, makes the ODE true. One way to come up with an $i(t)$ is to make an informed guess and try it out. We will guess a solution, just like we did with the [RC natural response]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}). 
+Our goal is to discover a function $i(t$) that, when plugged in, makes the ODE true. One way to come up with an $i(t)$ is to make an informed guess and try it out. We will guess a solution, just like we did with the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}). 
 
 {% capture summary %}Are there other ways?{% endcapture %}  
 {% capture details %}  

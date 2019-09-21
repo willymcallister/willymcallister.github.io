@@ -7,9 +7,9 @@ comments: true
 
 Kirchhoff's Laws for current and voltage are the heart and soul of circuit analysis. With Kirchhoff's Laws plus the basic $i$-$v$ equations for individual components (resistor, capacitor, inductor), we have the tool set we need to analyze circuits.
 
-This article covers Kirchhoff's Current Law, also known as KCL. The companion of KCL is [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}).  
+This article covers Kirchhoff's Current Law, also known as KCL. The companion of KCL is [Kirchhoff's Voltage Law]({% link _articles/kirchhoffs-voltage-law.md %}).  
 
-Make sure you are familiar with the circuit terms [node, distributed node, branch, and loop]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}). 
+Make sure you are familiar with the circuit terms [node, distributed node, branch, and loop]({% link _articles/circuit-terminology.md %}). 
 
 ----
 
@@ -32,9 +32,9 @@ $\large\displaystyle \sum_n i_n = 0$
 
 ## Currents into a node
 
-Try to reason through this example by yourself, before we talk about the theory. The schematic below shows four branch currents flowing in and out of a [distributed node]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}#distributed-node). The currents are in milliamps, $\text{mA}$. One of the currents, $\blueD i$, is not known.
+Try to reason through this example by yourself, before we talk about the theory. The schematic below shows four branch currents flowing in and out of a [distributed node]({% link _articles/circuit-terminology.md %}#distributed-node). The currents are in milliamps, $\text{mA}$. One of the currents, $\blueD i$, is not known.
 
-![Intuitive currents into a node](https://ka-perseus-images.s3.amazonaws.com/c38b3827ab82958e86d23020984560bd8d7a0e84.svg){: .centered :}
+![Currents into a node]({% link i/kcl1.svg %}){: .centered :}
 
 Problem 1. **What is $i$?**
 
@@ -49,7 +49,7 @@ $i = $ \_\_\_\_\_ $\text{mA}$
 
 Here's another example, this time with variable names instead of numerical values and a more abstract-looking node. This node has $5$ branches. Each branch might (or might not) carry a current, labeled $i_1 \,\text{to} \, i_5$. 
 
-![Node with variable current names](https://ka-perseus-images.s3.amazonaws.com/b66c761db0f00536ede144784dc537f13199ac81.svg){: .centered :}
+![Node with variable current names]({% link i/kcl2.svg %}){: .centered :}
 
 All the arrows are drawn pointing in. This choice of direction is arbitrary. We don't know which way the currents are actually flowing, so all arrows pointing in is as good a choice as any. The arrows establish a *reference direction* for what we choose to call a positive current. 
 
@@ -123,7 +123,7 @@ Currents are in milliamps, $\text{mA}$.
 
 Problem 2. **What is $i_5$?**  
 
-![Problem 2 node](https://ka-perseus-images.s3.amazonaws.com/7c513a6eb0ef5adb06c662019c06fefd8529e37c.svg){: .centered :}
+![Problem 2 node]({% link i/kcl3.svg %})
 
 $i_5 = $ \_\_\_\_\_ $\text{mA}$
 
@@ -151,35 +151,34 @@ $i_5 = $ \_\_\_\_\_ $\text{mA}$
 
 Problem 3. **What is $i_3$ in this distributed node?**
 
-![Problem 3 node](https://ka-perseus-images.s3.amazonaws.com/f408c3dadf72f69f3a13e2562cc568a515f76ce8.svg){: .centered :}
+![Problem 3 node]({% link i/kcl4.svg %})
 
-<details>
-<summary>show answer</summary>
-<p>$i_3 = 0\,\text{mA}$</p>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+$i_3 = 0\,\text{mA}$
 
-<p>This question tests your arrow skills. The arrow directions are jumbled up, some in, some out. This prompts us to break the problem into two steps. Take it slow and get the signs right. </p>
+This question tests your arrow skills. The arrow directions are jumbled up, some in, some out. This prompts us to break the problem into two steps. Take it slow and get the signs right.
 
-<ol>
-<li>Redraw the node with all the arrows pointing in the same direction (all in or all out), making adjustments to the numerical signs as needed.</li> 
-<li>Apply Kirchhoff's Current Law.</li>
-</ol>
+1. Redraw the node with all the arrows pointing in the same direction (all in or all out), making adjustments to the numerical signs as needed.
+2. Apply Kirchhoff's Current Law.
 
-<p>Step 1. The arrow for $i_3$ is pointing out. The strategy will be to make all the other arrows point the same direction as $i_3$. If a current arrow has to flip, we adjust the sign of the current. Inspecting the original diagram, we have to flip two arrows, and two corresponding signs. The redrawn schematic below has currents $-4$ and $+1$ flowing <em>out</em>.</p>
+Step 1. The arrow for $i_3$ is pointing out. The strategy will be to make all the other arrows point the same direction as $i_3$. If a current arrow has to flip, we adjust the sign of the current. Inspecting the original diagram, we have to flip two arrows, and two corresponding signs. The redrawn schematic below has currents $-4$ and $+1$ flowing *out*.
 
-<p><img src="https://fastly.kastatic.org/ka-perseus-images/62e29600b97cbdbf7de8f8adfea1af7b75080abb.svg" height="160px"></p>
+![Problem 3 node again]({% link i/kcl5.svg %}){: .centered :}
 
-<p>Step 2. Apply Kirchhoff's Current Law. We use the form of the current law that says, "The sum of all currents flowing out of a node is zero." So add up all the out currents and set the sum equal to zero.</p>
+Step 2. Apply Kirchhoff's Current Law. We use the form of the current law that says, "The sum of all currents flowing out of a node is zero." So add up all the out currents and set the sum equal to zero.
 
-<p>$-4 +6 + i_3 + 1 + (-3) = 0$</p>
+$-4 +6 + i_3 + 1 + (-3) = 0$
 
-<p>Solving for $i_3$,</p>
+Solving for $i_3$,
 
-<p>$i_3 = -[-4 +6 + 1 + (-3)]$</p>
+$i_3 = -[-4 +6 + 1 + (-3)]$
 
-<p>$i_3 = 0 \,\text{mA}$</p>
+$i_3 = 0 \,\text{mA}$
 
-<p>There is $0$ current flowing in the branch labeled $i_3$.</p>
-</details>
+There is $0$ current flowing in the branch labeled $i_3$.  
+{% endcapture %}{% include details.html %} 
+
 
 ## Summary
 {:.no_toc}

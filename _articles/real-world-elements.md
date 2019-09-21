@@ -41,7 +41,7 @@ These extra properties are called *parasitic* effects. These tiny inductors and 
 
 Most of the time we can ignore these parasitic effects, until we can't. That's an odd way of saying that you will use your judgment and experience to decide if parasitics need to be accounted for. If parasitics matter, you can model a component as a combination of ideal elements, as shown here for a resistor. The resistor symbol is the intended component, and the capacitor and inductor represent parasitic effects.
 
-![Resistor with parasitic capacitance and inductance](https://ka-perseus-images.s3.amazonaws.com/43aa00123cc2a1d3ff4a13c339825ecb9d285da0.svg){: .centered }
+![Resistor with parasitic capacitance and inductance]({% link i/real_resistor_parasitics.svg %}){: .centered :}
 
 ### Temperature sensitivity
 
@@ -57,40 +57,40 @@ $v = i\,\text R$
 
 The two symbols for a resistor look like this,
 
-![Resistor symbols]({{ site.baseurl }}{% link i/element_resistor_symbols.svg %}){: .centered }
+![Resistor symbols]({% link i/element_resistor_symbols.svg %}){: .centered }
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
 ### Resistor properties
 
-The resistance value of a resistor depends on two things: *what it is made of*, and *how it is shaped*. The bulk material properties determine how difficult it is for electrons flow through. You could think of it as how often electrons crash into the atoms in the material as they try to flow by. This property of a bulk material is called *resistivity*. You might also hear about *conductivity*, which is just the inverse of resistivity.
+The resistance value of a resistor depends on two things: *what it is made of*, and *how it is shaped*. The bulk material properties determine how difficult it is for electrons flow through. You could think of it as how often electrons crash into the atoms in the material as they try to flow by. This property of a bulk material is called [*resistivity*]({% link _articles/resistance-resistivity.md %}). You might also hear about *conductivity*, which is just the inverse of resistivity.
 
 After selecting a bulk material with a certain resistivity, the resistance of the resistor is determined by its shape, typically a cylinder, or long rectangle, or ribbon. A longer resistor has higher resistance than a shorter resistor. Electrons suffer more collisions as they pass through the jungle of atoms in the material. A resistor with a bigger cross-section (a fatter cylinder) has lower resistance than a resistor with smaller cross-section, because electrons have a greater number of available paths to follow. 
 
 There are lots of "R" words. A quick summary,
 
-* A **Resistor** is a circuit element, a physical object with a controlled shape.
+* **Resistor** is a circuit element, a physical object with a manufactured shape.
 * **Resistivity** is a property of a bulk material. The unit of resistivity is ohm meters, $\Omega \cdot \text m$.
 * **Resistance** is property of a resistor, determined by both the resistivity of the material and the shape of the resistor. The unit of resistance is ohms, $\Omega$.
 
-A real resistor breaks down (it burns up and is destroyed) if the heat dissipated by the resistor is greater than what its construction materials can stand. Resistors come with a power rating that you should not exceed in your design. If you try to dissipate $1$ watt in a $1/8$ watt resistor, you may end up with a burned chunk of something that is no longer a resistor.
+A real resistor breaks down (burned up, destroyed) if the heat dissipated by the resistor is greater than what its construction materials can stand. Resistors come with a power rating that you should not exceed in your design. If you try to dissipate $1$ watt in a $1/8$ watt resistor, you may end up with a burned chunk of something that is no longer a resistor.
 
 ### Axial resistors
 
 Example of a conventional *axial* resistor,
 
-![Axial resistor](https://ka-perseus-images.s3.amazonaws.com/779f0952f353edf27ca9c9eb8978f7741ef1ef9f.jpg){: .centered }
+![Axial resistor]({% link i/real_axial_resistor.jpg %}){: .centered :}
 
 The color bands tell you the value of the resistor and its tolerance. The bands on this resistor are Orange Orange Brown Gold. From the resistor color code chart, the first two bands corresponds to the *digits* of the value, $3\, 3$. The third band is the *multiplier*, brown stands for $\times 10^1$. The fourth (last) band indicates the tolerance, gold is $\pm 5\%$. The resistor value is $330 \,\Omega\,\pm5\%$.
 
 {% capture summary %}resistor color code{% endcapture %}  
 {% capture details %}  
-![Resistor color code]({{ site.baseurl }}{% link i/resistor_color_code.svg %}){: .centered :}  
+![Resistor color code]({% link i/resistor_color_code.svg %}){: .centered :}  
 {% endcapture %}{% include details.html %}
 
 This is a precision resistor with 5 color bands,
 
-![Precision resistor with 5 color bands](https://ka-perseus-images.s3.amazonaws.com/b1f771301e3da7ada6e3603ad31ed55cb97704b6.jpg){: .centered }
+![Precision resistor with 5 color bands]({% link i/real_axial_resistor_5band.jpg %}){: .centered :} 
 
 Read the bands from left to right:  Red Red Blue Brown Brown $= 2 \,2 \,6 \,1 \,1$. The first three bands $(2\,2\,6)$ are the value. The fourth band is the multiplier $(\times 10^1)$. The fifth (last) band indicates the tolerance. A brown band is $1\%$. (If you ever come across a red band it stands for a tolerance of $2\%$). The resistor value is $2260 \,\Omega\,\pm 1\%$. 
 
@@ -100,17 +100,17 @@ Reading this resistor value is pretty tricky. It is hard to tell which end you s
 
 This is a  *surface mount* resistor,
 
-![Surface-mount resistor](https://ka-perseus-images.s3.amazonaws.com/cccc66df53843a97cc948b246a0a6f343329b2ab.jpg){: .centered }
+![Surface-mount resistor]({% link i/real_smt_resistor.jpg %}){: .centered :}
 
 The resistance value is encoded in the $3$-digit code: $102$, meaning $10 \times 10^2 = 1000 \,\Omega$. You can't tell from the picture but the size of this resistor happens to be "0602", indicating its footprint is $6 \, \text{mm} \times 2 \, \text{mm}$.
 
 Here's how a surface mount resistor is made. The resistor itself is a single layer of material screened on top of a little chunk of ceramic insulator, and covered with a protective layer.
 
-![Surface mount resistor cross section]({{ site.baseurl }}{% link i/resistor_smt_construction.svg %}){: .centered }
+![Surface mount resistor cross section]({% link i/resistor_smt_construction.svg %}){: .centered }
 
 Example of a resistor that's part of an integrated circuit,
 
-![Serpentine resistor on an IC](https://ka-perseus-images.s3.amazonaws.com/f754369c927f3e89a88a18898a4ed745b5846e49.svg){: .centered }
+![Serpentine resistor on an IC]({% link i/real_serpentine_resistor.svg %}){: .centered :}
 
 The designer selects one of the layers on the integrated circuit with high resistivity and creates (draws) a serpentine pattern to achieve the desired resistance.
 
@@ -122,7 +122,7 @@ $i = \text C \,\dfrac{dv}{dt}$
 
 The some symbols for a capacitor look like this,
 
-![Capacitor symbols]({{ site.baseurl }}{% link i/element_capacitor_symbols.svg %}){: .centered }
+![Capacitor symbols]({% link i/element_capacitor_symbols.svg %}){: .centered }
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -132,7 +132,7 @@ Learn more about capacitors and how they work in the [capacitors and capacitance
 
 Real capacitors come in lots of different shapes,
 
-![Variety of capacitors](https://ka-perseus-images.s3.amazonaws.com/abaf98dabaf79e6d8b8a129f3d558ca2dd0d92b0.jpg){: .centered }
+![Assortment of capacitors]({% link i/real_capacitor_assortment.jpg %}){: .centered :}
 
 Cylindrical capacitors (upper left, black, dark blue, or silver) are made of two metal foil plates rolled up like a jellyroll to pack a large plate area in a small space. The circle-shaped capacitors (bottom, aqua and orange) are simply two metal disks facing each other, separated by an insulator. Adjustable capacitors (right, white and metal) use air as the insulator between plates. One set of plates rotates, changing the overlapping area with the stationary plates to change the capacitance. Variable capacitors are used to tune radios, for example.
 
@@ -150,13 +150,13 @@ The material separating the capacitor plates is supposed to be insulating (allow
 
 A *surface mount* capacitor is shown here,
 
-![Surface-mount capacitor](https://ka-perseus-images.s3.amazonaws.com/83cbc8772fd80929d2c4b1aedca437c3184bc44e.jpg){: .centered }
+![Surface-mount capacitor]({% link i/real_smt_capacitor.jpg %}){: .centered :}
 
 Leakage currents might flow between the metal ends of the capacitor through the gunk left behind from the soldering process if the circuit board is not cleaned very well.
 
 Here's a peek inside a surface-mount capacitor. It is a stack of many layers of interleaved conducting plates and insulating ceramic layers.
 
-![Surface-mount capacitor cut-away view](https://ka-perseus-images.s3.amazonaws.com/0145623ade609f30d963a2921c5a419fe3da4a8e.png){: .centered }
+![Surface-mount capacitor cut-away view]({% link i/real_smt_capacitor_cutaway.png %}){: .centered :}
  
 ## Real-world inductors
 
@@ -168,7 +168,7 @@ $v = \text L \,\dfrac{di}{dt}$
 
 The symbol for an inductor looks like this,
 
-![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered }
+![Inductor symbol]({% link i/element_inductor_symbol.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
@@ -184,7 +184,7 @@ The other unavoidable feature of inductors is they take up a lot of space. The m
 
 We finish up with this astonishing image of an air-core inductor. This large copper coil was part of a wireless telegraph station built in New Jersey, USA in 1912. It could send a message 4000 miles (6400 km), all the way across the Atlantic Ocean to Germany. Wow. Needless to say, most inductors are *much* smaller.
 
-![Humongous inductor, bigger than a man](https://ka-perseus-images.s3.amazonaws.com/5eb33430f28a5d2c61daf7f29b39c27084d3f34f.jpg){: .centered }
+![Humongous inductor, bigger than a man]({% link i/real_humongous_inductor.jpg %}){: .centered :}
 
 ----
 
