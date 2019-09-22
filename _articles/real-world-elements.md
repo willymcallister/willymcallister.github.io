@@ -168,7 +168,7 @@ $v = \text L \,\dfrac{di}{dt}$
 
 The symbol for an inductor looks like this,
 
-![Inductor symbol]({% link i/inductor_symbol.svg %}){: .centered }
+![Inductor symbol]({% link i/inductor_symbol1.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
