@@ -57,7 +57,7 @@ $v = i\,\text R$
 
 The two symbols for a resistor look like this,
 
-![Resistor symbols]({% link i/element_resistor_symbols.svg %}){: .centered }
+![Resistor symbols]({% link i/resistor_symbols.svg %}){: .centered }
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -122,7 +122,7 @@ $i = \text C \,\dfrac{dv}{dt}$
 
 The some symbols for a capacitor look like this,
 
-![Capacitor symbols]({% link i/element_capacitor_symbols.svg %}){: .centered }
+![Capacitor symbols]({% link i/capacitor_symbols.svg %}){: .centered }
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -168,7 +168,7 @@ $v = \text L \,\dfrac{di}{dt}$
 
 The symbol for an inductor looks like this,
 
-![Inductor symbol]({% link i/element_inductor_symbol.svg %}){: .centered }
+![Inductor symbol]({% link i/inductor_symbol.svg %}){: .centered }
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 

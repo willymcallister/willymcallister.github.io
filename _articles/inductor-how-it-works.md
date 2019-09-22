@@ -125,7 +125,7 @@ See if you can use the Right Hand Rule to confirm that the magnetic field line a
 
 The symbol for an inductor looks like this:
 
-![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered :}
+![Inductor symbol]({{ site.baseurl }}{% link i/inductor_symbol.svg %}){: .centered :}
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 
