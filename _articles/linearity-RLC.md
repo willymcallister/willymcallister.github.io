@@ -112,27 +112,27 @@ Some examples of greatness: [Kirchhoff's Current Law]({{ site.baseurl }}{% link 
 
 It might help to talk a little bit something that is *not* a linear device, just for contrast. A [diode]({{ site.baseurl }}{% link _articles/diode-introduction.md %}) is a kind of non-linear semiconductor device. 
 
-![Diode circuit symbol](https://ka-perseus-images.s3.amazonaws.com/1f8173073dbe9f75bb92c6d4185a9a05e565ba6e.svg){: height="100px"}{: .centered }
+![Diode symbol]({% link i/diode_symbol1.svg %}){: .centered :} 
 
 We will learn a lot more about diodes later on. For now, I just want to take a look at the blue $i$-$v$ curve of a diode. This is an example of what a non-linear electronic device looks like,
-
-![Typical diode i-v curve](https://ka-perseus-images.s3.amazonaws.com/4bf9cc907f92bc4ef0dcdce3a213e34a4f6c27b2.svg){: height="300px"}{: .centered }
-                    
+                   
+![Diode i-v curve]({% link i/diode1.svg %}){: .centered :} 
+ 
 This $i$-$v$ curve is the element law for a diode. It clearly does not look like a straight line, so this is definitely not a linear device. The non-linear behavior of a diode is typical of other semiconductor devices like transistors. 
 
-<details>
-<summary>optional: A few details about the diode i-v curve.</summary>
-<p>If you apply a small positive voltage to a diode, pretty much zero current flows if the voltage is less than about $0.6\,\text V$. As the voltage gets a little above $0.6\,\text V$ on the $+$ voltage axis, the current rises rapidly to a high value. The highest the voltage you see in normal operation is $0.75 \text{ to } 1.2\,\text V$. (If the voltage gets any higher than that, so much current is flowing the diode overheats.)</p>
+{% capture summary %}optional: A few details about the diode i-v curve.{% endcapture %}  
+{% capture details %}  
+If you apply a small positive voltage to a diode, pretty much zero current flows if the voltage is less than about $0.6\,\text V$. As the voltage gets a little above $0.6\,\text V$ on the $+$ voltage axis, the current rises rapidly to a high value. The highest the voltage you see in normal operation is $0.75 \text{ to } 1.2\,\text V$. (If the voltage gets any higher than that, so much current is flowing the diode overheats.)
 
-<p>When you apply a negative voltage to a diode, the current is very close to zero.  When the voltage reaches a fairly high negative value, $\text V_\text{br}$, known as the <em>breakdown voltage</em>, the current gets very high in the reverse direction. $\text V_\text{br}$ of $-50\,\text V$ is typical.</p>
-</details>
+When you apply a negative voltage to a diode, the current is very close to zero.  When the voltage reaches a fairly high negative value, $\text V_\text{br}$, known as the *breakdown voltage*, the current gets very high in the reverse direction.  
+{% endcapture %}{% include details.html %} 
 
 In general, functions with non-linear behavior don't have linearity properties. We humans have not come up with a general-purpose method to exactly solve non-linear equations/circuits. Each new type of circuit requires mathematical techniques specific to the new circuit. This tends to drive everyone crazy. The usual approach to non-linear circuits is to bend over backwards to make it seem linear over at least some small range of operation. That's what is happening when you see terms like "piecewise-linear approximation" or "small-signal model."
 
-<details>
-<summary>Should I avoid non-linear circuits?</summary>
-<p>I've gone a little overboard here, perhaps giving the impression that non-linear elements are bad. They are great in their own way. Every semiconductor device is non-linear (diodes and transistors), and there are billions of them in every computer, mobile phone, and every other electronic gadget. Engineers have figured out how to use non-linear devices, and you will, too, as you continue your studies.</p>
-</details>
+{% capture summary %}Should I avoid non-linear circuits?{% endcapture %}  
+{% capture details %}  
+I've gone a little overboard here, perhaps giving the impression that non-linear elements are bad. They are great in their own way. Every semiconductor device is non-linear (diodes and transistors), and there are billions of them in every computer, mobile phone, and every other electronic gadget. Engineers have figured out how to use non-linear devices, and you will, too, as you continue your studies.  
+{% endcapture %}{% include details.html %} 
 
 ## Summary
 {:.no_toc}

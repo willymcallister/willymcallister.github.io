@@ -26,7 +26,7 @@ You should be familiar with the definitions of [node, distributed node, branch, 
 
 Kirchhoff's Voltage Law for voltages around a loop,
 
-$\large\displaystyle \sum_n v_n = 0$
+$\displaystyle \sum_n v_n = 0$
 
 ----
 
@@ -36,7 +36,7 @@ Our example circuit has four resistors and a voltage source. We will solve this 
 
 The first step in solving this circuit is to figure out the current. Then we will find the voltages across each individual resistor.
 
-![Example circuit](https://ka-perseus-images.s3.amazonaws.com/efc81d92860a31695ca50439588a03c4657f70e6.svg){: .centered :}
+![Example circuit]({% link i/kvl1.svg %}){: .centered :}
 
 We recognize this as a series circuit. There is only one current flowing, $\blueD i$, through all five elements. To find $i$, the four series resistors can be reduced to a single equivalent resistor,
 
@@ -48,7 +48,7 @@ $i = \dfrac{V}{R_{series}} = \dfrac{20\,\text V}{1000\,\Omega} = 0.020\,\text A 
 
 Now we know the current. That let's us find the voltages across the four resistors. Go back to the original schematic and add voltage labels to all five elements, 
 
-![Example with voltage labels](https://ka-perseus-images.s3.amazonaws.com/2c4987a0ba27eb7ed7c5b363d9fc6609f12cc105.svg){: .centered :}
+![Example circuit with voltage labels]({% link i/kvl2.svg %}){: .centered :} 
 
 Apply Ohm's Law four times to find the voltage across each resistor,
 
@@ -60,9 +60,9 @@ $v_{\text{R4}} = 20\,\text{mA} \cdot 400\,\Omega = +8\,\text{V}$
 
 The circuit is now solved. We know the current and all voltages.  
 
-We can write the voltages for the resistors and the source on the schematic. These five voltages are referred to as *element voltages*. (The circuit nodes get names, $\greenE{\text a}$ to $\greenE{\text e}$, so we can talk about them.)
+We can write the voltages for the resistors and the source on the schematic. These five voltages are referred to as *element voltages*. (The circuit nodes get names, $\greenE{a}$ to $\greenE{e}$, so we can talk about them.)
 
-![Example with voltage values](https://ka-perseus-images.s3.amazonaws.com/ffdd00057828a3dd41a6ed563b2da30a22add4bd.svg){: .centered :}
+![Example circuit with voltage values]({% link i/kvl3.svg %}){: .centered :} 
 
 Let's do a quick check. Add up the voltages across the resistors, 
 
@@ -105,11 +105,11 @@ Step 4. Continue around the loop until you reach the starting point, including e
 
 Let's follow the loop procedure step-by-step with the example circuit. 
 
-Step 1. Begin in the lower left, at node $\greenE{\text a}$.
+Step 1. Begin in the lower left, at node $\greenE{a}$.
 
 Step 2. Walk clockwise. 
 
-![Walking around the loop procedure](https://ka-perseus-images.s3.amazonaws.com/ffdd00057828a3dd41a6ed563b2da30a22add4bd.svg){: .centered :}
+![Example circuit with voltage values]({% link i/kvl3.svg %}){: .centered :} 
 
 Step 3. The first element we come to is the $20\,\text V$ source. The first voltage sign we encounter is a $-$ minus sign. That tells us there is going to be a voltage *rise* going through this element. So we initialize the loop sum by *adding* the source voltage,  
 
@@ -131,7 +131,7 @@ $+ 20\,\text V - 2\,\text V - 4\,\text V - 6\,\text V - 8\,\text V$
 
 (Check the circuit diagram, make sure I got the last two $-$ signs right.)
 
-Step 4. Done. We made it back home to node $\greenE{\text a}$. What does this add up to?  
+Step 4. Done. We made it back home to node $\greenE{a}$. What does this add up to?  
 
 $+ 20\,\text V - 2\,\text V - 4\,\text V - 6\,\text V - 8\,\text V = 0$
 
@@ -141,13 +141,13 @@ We started and ended at the same node, so it should make sense that the ending v
 
 We'll do another example, with variable names instead of numerical values. The following familiar schematic is labeled with voltages and node names. Look carefully, the voltage polarity signs are arranged in a way you might not expect. All the voltage arrows point in the same direction around the loop. This will reveal a cool property of loops.
 
-![Schematic with all voltage labels pointing the same direction](https://ka-perseus-images.s3.amazonaws.com/f281164686f22113542f59584a3fbbfec0f271be.svg){: .centered :}
+![Schematic with all voltage labels pointing the same direction]({% link i/kvl4.svg %}){: .centered :} 
 
-Let's walk around the loop again, adding up voltages as we go. Pick node $\greenE{\text a}$ in the lower left as the starting point. Walk clockwise around the loop (an arbitrary choice, either way works). Starting at node $\greenE{\text a}$, going up, we encounter a minus sign on the voltage source. That means there is going to be a voltage *rise* of $+v_{ab}$ going through the voltage source. Because it's a voltage rise, this element voltage gets a $+$ sign in the loop sum,
+Let's walk around the loop again, adding up voltages as we go. Pick node $\greenE{a}$ in the lower left as the starting point. Walk clockwise around the loop (an arbitrary choice, either way works). Starting at node $\greenE{a}$, going up, we encounter a minus sign on the voltage source. That means there is going to be a voltage *rise* of $+v_{ab}$ going through the voltage source. Because it's a voltage rise, this element voltage gets a $+$ sign in the loop sum,
 
 $+v_{\text{ab}} \, ...$
 
-Continue around the loop from node $\greenE{\text b}$ to $\greenE{\text c}$ to $\greenE{\text d}$ to $\greenE{\text e}$, and finish back home at node $\greenE{\text a}$. Append resistor voltages to the growing sum along the way. The polarity labels on the resistors are arranged so we always encounter a $-$ sign as we approach each resistor. So the resistor voltages all go into the loop sum with a $+$ sign. The final loop sum looks like this,
+Continue around the loop from node $\greenE{b}$ to $\greenE{c}$ to $\greenE{d}$ to $\greenE{e}$, and finish back home at node $\greenE{a}$. Append resistor voltages to the growing sum along the way. The polarity labels on the resistors are arranged so we always encounter a $-$ sign as we approach each resistor. So the resistor voltages all go into the loop sum with a $+$ sign. The final loop sum looks like this,
 
 $+v_{\text{ab}} + v_{\text{R1}} + v_{\text{R2}} + v_{\text{R3}} + v_{\text{R4}}$
 
@@ -228,7 +228,7 @@ Kirchhoff's Voltage Law has some nice properties,
 
 **What is $v_{\text R3}$?**  
 
-![Concept check loop](https://ka-perseus-images.s3.amazonaws.com/5abe032a381c51901584ea8315f489a45528332a.svg)
+![Concept check loop]({% link i/kvl5.svg %})
 
 Tip: Watch out for the voltage arrow directions!
 
@@ -253,7 +253,7 @@ $v_{\text R3} = $ \_\_\_\_\_ $\text V$
 
 <p>$v_{\text{R3}} = +6 \,\text V$</p>
 
-<p>Check the voltage arrow for $\text R3$. It is pointing up, from node $\greenE{\text e}$ towards node $\greenE{\text d}$. The positive result for $v_{\text{R3}}$ means node $\greenE{\text d}$ is $6$ volts higher than node $\greenE{\text e}$.</p>
+<p>Check the voltage arrow for $\text R3$. It is pointing up, from node $\greenE{e}$ towards node $\greenE{d}$. The positive result for $v_{\text{R3}}$ means node $\greenE{d}$ is $6$ volts higher than node $\greenE{e}$.</p>
 </details>
 
 More practice: Do this problem again, but walk around the loop in the opposite direction and construct a different KVL equation. You should get the same answer.
