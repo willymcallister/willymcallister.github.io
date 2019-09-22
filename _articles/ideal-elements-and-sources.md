@@ -118,7 +118,7 @@ where $\text I$ is a constant output current, like $i=2\,\text{mA}$. The current
 
 The two symbols for a resistor look like this,
 
-![Resistor symbols]({{ site.baseurl }}{% link i/element_resistor_symbols.svg %}){: .centered :}
+![Resistor symbols]({{ site.baseurl }}{% link i/resistor_symbols.svg %}){: .centered :}
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -134,7 +134,7 @@ $\text R$ is a constant of proportionality, representing the *resistance* of the
 
 The $i$-$v$ plot for a resistor is shown below. The equation is Ohm's Law solved for $i=v/\text R$. The slope of the resistor line is $1/\text R$.
 
-![Resistor i-v plot]({{ site.baseurl }}{% link i/element_resistor_i-v.svg %}){: .centered :}  
+![Resistor i-v plot]({{ site.baseurl }}{% link i/resistor_i-v.svg %}){: .centered :}  
 
 <details>
 <summary>What is the resistance of this resistor?</summary>
@@ -260,7 +260,7 @@ This equation captures the $i$-$v$ relationship for capacitors. It also tells us
 
 The some symbols for a capacitor look like this,
 
-![Capacitor symbols]({{ site.baseurl }}{% link i/element_capacitor_symbols.svg %}){: .centered :}
+![Capacitor symbols]({{ site.baseurl }}{% link i/capacitor_symbols.svg %}){: .centered :}
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -318,7 +318,7 @@ The constant of proportionality $\text L$ is the called the *inductance*. The un
 
 The symbol for an inductor looks like this,
 
-![Inductor symbol]({{ site.baseurl }}{% link i/element_inductor_symbol.svg %}){: .centered :}
+![Inductor symbol]({{ site.baseurl }}{% link i/inductor_symbol1.svg %}){: .centered :}
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 

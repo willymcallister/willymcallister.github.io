@@ -34,11 +34,11 @@ Suppose a restaurant has the problem of buttering toast. They want to be very mo
 
 Here is a piece of toast, and the lines of butter go out and hit it all over. 
 
-![Butter gun with one slice of toast](https://ka-perseus-images.s3.amazonaws.com/93ab73645fabee343755051c8bd50eb659623df3.svg){: .centered :}{: height="260px" :}
+![Butter gun with one slice of toast]({% link i/buttergun1.svg %}){: .centered :}
 
 Now instead of one toast, the butter lines might continue on. You can put the toast farther back, at *twice* the distance. Two pieces of toast wide, and two toasts high. 
 
-![Butter gun with four slices of toast at a distance](https://ka-perseus-images.s3.amazonaws.com/b9285c665b814cd7448073409084e2a1e1de15f5.svg){: .centered :}{: height="260px" :}
+![Butter gun with four slice of toast at a distance]({% link i/buttergun2.svg %}){: .centered :}
 
 Altogether, four pieces of toast to intercept the butter. The butter will be a *quarter* as thick when the toast is twice as far away. This is the *inverse square law (of buttering)*. 
 
