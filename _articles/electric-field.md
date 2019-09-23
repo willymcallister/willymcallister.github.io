@@ -220,7 +220,7 @@ $\|\vec E\| = 50{,}000\,\text V/\text m$
 
 That may seem like an astonishingly large number for an electric field, but it is not an unusual value at all. The voltage and dimension in this example are reasonable values for a typical surface mount capacitor. 
 
-![Surface mount capacitor](https://ka-perseus-images.s3.amazonaws.com/0145623ade609f30d963a2921c5a419fe3da4a8e.png){:height="200px"}{: .centered }  
+![Surface-mount capacitor cut-away view]({% link i/real_smt_capacitor_cutaway.png %}){: .centered :}{:height="300px"}
 {% endcapture %}{% include details.html %} 
 
 {% capture summary %}what happens near the edges?{% endcapture %}  

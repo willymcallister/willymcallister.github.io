@@ -5,14 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Our study of electricity begins with *electrostatics* and the *electrostatic force*. This is one of the four fundamental forces of nature. The electrostatic force is nicely modeled by Coulomb's Law. We use Coulomb's Law to find the forces created by nearby charges.
-
-Electrostatics deals with forces between *charges*. *Static* means the charges are not moving, or at least are not moving very fast. 
-
-{% capture summary %}How fast is "not very fast"?{% endcapture %}  
-{% capture details %}  
-When a charge is in motion, it generates a magnetic field. The magnetic field creates a magnetic force. As we begin our study of electricity, we want to keep things really simple and focus on just electric force. So we have charges sit still, or move very slowly. Therefore, "not very fast" means so slow the magnetic effects are insignificant compared to the electric force.
-{% endcapture %}{% include details.html %} 
+Our study of electricity begins with *electrostatics* and the *electrostatic force*. This is one of the four fundamental forces of nature. The electrostatic force is nicely modeled by Coulomb's Law. We use Coulomb's Law to find the force between nearby charges.
 
 Written by Willy McAllister. 
 
@@ -26,27 +19,50 @@ Written by Willy McAllister.
 
 ----
 
+### Where we're headed 
+{:.no_toc}
+
+Do Coulomb's Law problems in two steps,
+* Figure out the *direction* of the force based on the sign of the charges.
+* Figure out the *magnitude* of the force using the absolute value of the charges.
+
+----
+
+As we begin our study of electricity we start really simple, with *electrostatics*.
+
+Electrostatic problems deal with the force between *charges*. *Static* means the charges are not moving, or at least not moving very fast.
+
+How fast is "not very fast"? When charge moves it generates a magnetic field. The magnetic field adds a magnetic force to the problem, making it way more complicated. Therefore, "not very fast" means so slow the magnetic effects are insignificant compared to the electric force.
+
 ## Charge
 
-Where does electric force come from? The answer is, it comes from *charge*. But how do we know there is such a thing as charge? The concept of charge comes from observing nature. Under certain conditions (like when you rub a balloon on your sweater) we see forces between objects. To explain those forces we came up with the idea that objects had a property called *charge*. 
+Where does electric force come from? The answer is, electric force comes from *charge*. But how do we know there is such a thing as charge? We see electric force happening in nature. Under certain conditions (like when you rub a balloon on your sweater or run a comb through dry hair) we see electric forces between objects. To explain those forces we came up with the idea that objects had a property called *charge*. This is a pretty mind-blowing concept. 
 
-Charge is a lot like gravity, it is a force that "acts at a distance." This is a pretty mind-blowing concept. Also, the existence of charge, "Electric force comes from charge, and we know charge exists because we see electric force", seems quite circular, and it is. However, it is the best story we've been able to come up with, and it allows us to do so many magical and impressive things with electricity. 
+To wrap your mind around charge you have to accept a circular argument,
 
-Electric forces are very large, [far greater than the force of gravity](electric-force-vs-gravity.html). There is only one type of gravity; gravity only attracts. Unlike gravity, there are *two* types of electric charge. We call them *positive* and *negative*.
+"Electric force comes from charge. Charge exists because we see electric force". 
 
-Unlike charges attract, (we use the variable $q$ or $Q$ to represent charge)
+It sounds made up. And it is. So it is okay if you are skeptical. In the end, this is the best story we've come up with, and it allows us to do many magical and impressive things with electricity. 
 
-![Unlike charges attract](https://ka-perseus-images.s3.amazonaws.com/b6cd829cee03885a7b6853a793cab4df29690203.svg){: .centered :}
+Charge is a lot like gravity. Like gravity, it "acts at a distance." However, there is only one type of gravity; gravity only attracts. Unlike gravity, there are *two* types of electric charge. We call them *positive* and *negative*.
+
+### The one and only 2-part rule of charge
+
+Unlike charges attract,
+
+![Unlike charges attract]({% link i/electric_force4.svg %}){: .centered :}
 
 Like charges repel,
 
-![Like charges repel, two positive charges](https://ka-perseus-images.s3.amazonaws.com/ad2e3509c6247e7f9fc93a403ccb0e7cb7b7cded.svg){: .centered :}
+![Like charges repel, two positive charges]({% link i/electric_force5.svg %}){: .centered :}
 
-![Like charges repel, two negative charges](https://ka-perseus-images.s3.amazonaws.com/cdabd5f111af810133940243a238e1e7c2a98dd2.svg){: .centered :}
+![Like charges repel, two negative charges]({% link i/electric_force6.svg %}){: .centered :}
+
+(It is common to use the variables $q$ or $Q$ to represent charge.)
 
 ## Coulomb - the unit of charge
 
-When we want to attach a number to an amount of charge, the unit we use is the *coulomb*, abbreviated with a capital $\text C$. If you want to learn about this unit, take a quick side trip to this [article]({{ site.baseurl }}{% link _articles/charge.md %}#coulomb---the-unit-of-charge). 
+When we want to attach a number to an amount of charge, the unit we use is the *coulomb*, abbreviated with a capital C. If you want to learn about this unit, take a quick side trip to this [article]({{ site.baseurl }}{% link _articles/charge.md %}#coulomb---the-unit-of-charge). 
 
 ## Coulomb's Law of electric force
 
@@ -56,11 +72,11 @@ $\vec F = \dfrac{1}{4\pi\epsilon_0} \,\dfrac{q_0\, q_1}{r^2} \,\bold{\hat r}$
   
 Where
 
-* $\vec F$ is the electric force. The force is a vector. It acts along a direct line between the two charged bodies. The force is measured in newtons. 
-* $q_0$ and $q_1$ are the amount of charge on each object, measured in *coulombs*.  
+* $\vec F$ is the electric force measured in newtons. The force is a vector. It acts along a direct line between the two charged bodies.
+* $q_0$ and $q_1$ are the amounts of charge on each object, measured in *coulombs*.  
 * $r$ is the distance between the charged objects, measured in meters.
-* $\bold{\hat r}$ is a unit vector (a vector of length $1$) that points from one charge towards the other. It turns the right side into a vector quantity. $\bold{\hat r}$ reminds us the force acts along the line between the two charges.   
-* $\dfrac{1}{4\pi\epsilon_0}$ is a constant of proportionality. It relates the units on the left side (newtons) to the units on the right side (coulombs and meters). We need a constant because we want the answer come out with the right value given the system of units we use to measure force, charge, and distance (newtons, coulombs, meters). 
+* $\bold{\hat r}$ is a notational finesse. It represents a unit vector (a vector of length $1$) that points from one charge towards the other. It turns the right side into a vector quantity. $\bold{\hat r}$ reminds us the force acts along the line between the two charges.   
+* $\dfrac{1}{4\pi\epsilon_0}$ is a constant of proportionality. It relates the units on the left side (newtons) to the units on the right side (coulombs and meters). We need this constant because we want the answer come out with the right value within the system of units we use to measure force, charge, and distance (newtons, coulombs, meters). 
 
 ## $\epsilon_0$ permittivity of free space
 
@@ -78,7 +94,7 @@ The constant $\epsilon_0$ is the conversion factor for the experimental setup an
 
 $\epsilon_0 = 8.854 187 817 \times 10^{-12}$ coulomb$^2/$newton-meter$^2$
 
-The first person to measure $\epsilon_0$ was [Coulomb](charge.html#charles-augustin-de-coulomb) himself, which is why we use his name for the unit of charge.
+The first person to measure $\epsilon_0$ was [Coulomb](charge.html#charles-augustin-de-coulomb) himself.
 
 This value of $\epsilon_0$ means,
 
@@ -86,11 +102,13 @@ $\dfrac{1}{4\pi \epsilon_0} = \dfrac{1}{4\pi \cdot 8.854 \times 10^{-12}} = 8.98
 
 For engineering purposes, we round this to something easier to remember,
 
-$\dfrac{1}{4\pi \epsilon_0} = 9 \times 10^{9}$ newton-meter$^2$/coulomb$^2$
+$\dfrac{1}{4\pi \epsilon_0} = 9 \,\times 10^{9}\,\text{N-m}^2/\text C^2\quad$ (newton-meter$^2$/coulomb$^2)$
 
 Some textbooks give this number a name, $K$. You will see $K$ and $\epsilon_0$ notation used in different charge problems, so be ready for both. Coulomb's Law can be written,
 
 $\vec F = 9 \times 10^{9} \dfrac{q_0\,q_1}{r^2}\,\bold{\hat r}$
+
+Electric forces are very large, [far greater than the force of gravity]({{ site.baseurl }}{% link _articles/electric-force-vs-gravity.md %}).
 
 ## Example - two point charges
 
@@ -99,8 +117,8 @@ $\vec F = 9 \times 10^{9} \dfrac{q_0\,q_1}{r^2}\,\bold{\hat r}$
 ![Two point charges]({{ site.baseurl }}{% link i/electric_force1.svg %}){: .centered :}
 
 The force is predicted by Coulomb's Law. We always do these sorts of problems in two steps. 
-* First, figure out the *direction* of the force. 
-* Second, figure out the *magnitude* of the force.
+1. Figure out the *direction* of the force by inspecting the two charges. 
+2. Take the absolute value of the charges and figure out the *magnitude* of the force with Coulomb's Law. 
 
 ### Direction
 
@@ -110,23 +128,23 @@ The direction of the force can be found by inspection. The electric force always
 
 ### Magnitude
 
-The magnitude of the force comes from Coulomb's Law. We use the absolute value of the charges (since we already figured out the direction), 
+The magnitude of the force comes from Coulomb's Law. Since we know the direction, that let's us use the absolute value of the charges and drop the vector notation, 
 
-$\|\vec F\| = 9 \times 10^9 \,\dfrac{\|q_0\|\, \|q_1\|}{r^2}$
+$\|F\| = 9 \times 10^9 \,\dfrac{\|q_0\|\, \|q_1\|}{r^2}$
 
-We don't have to use vector notation since we already know the direction. And for the same reason we use the absolute value of the charges. Fill in the values we know and crank the arithmetic,
+Fill in the values we know and crank the arithmetic,
 
-$\|\vec F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\,\mu\text C\cdot 50\,\text{nC}}{(2\,\text{cm})^2}$
+$\|F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\,\mu\text C\cdot 50\,\text{nC}}{(2\,\text{cm})^2}$
 
 Expanding the numbers to scientific notation,
 
-$\|\vec F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\times 10^{-6}\text C\cdot 50\times 10^{-9}\text{C}}{(0.02\,\text m)^2}$
+$\|F\| = 9 \times 10^{9} \,\dfrac{\text{Nm}^2}{\text C^2} \,\,\dfrac{3\times 10^{-6}\text C\cdot 50\times 10^{-9}\text{C}}{(0.02\,\text m)^2}$
 
 Cancel the units and compute the force,
 
-$\|\vec F\| = 9 \times 10^{9} \,\dfrac{\text N\cancel\text m^2}{\cancel{\text C^2}} \,\,\dfrac{150\times 10^{-15}\,\cancel\text C^2}{4\times 10^{-4}\,\cancel{\text m^2}}$
+$\|F\| = 9 \times 10^{9} \,\dfrac{\text N\cancel\text m^2}{\cancel{\text C^2}} \,\,\dfrac{150\times 10^{-15}\,\cancel\text C^2}{4\times 10^{-4}\,\cancel{\text m^2}}$
 
-$\|\vec F\| = 3.37\times 10^{-3}\,\text N$
+$\|F\| = 3.37\times 10^{-3}\,\text N$
 
 And we assemble the answer by combining the direction and magnitude of the force. The two charges are being pulled together with a force of $3.37\times 10^{-3}\,\text N$,
 
@@ -147,9 +165,9 @@ $\dfrac{1}{4\pi \epsilon_0} = 9 \times 10^{9}$ newton-meter$^2$/coulomb$^2$
 
 $\epsilon_0$ is the *permittivity of free space*.
 
-When working on electric force problems we usually do it in two steps,
-* Figure out the direction of the force based on the sign of the charges.
-* Figure out the magnitude of the force using the absolute value of the charges.
+When working on electric force problems we do it in two steps,
+* Figure out the *direction* of the force based on the sign of the charges.
+* Figure out the *magnitude* of the force using the absolute value of the charges.
 
 Then combine the direction and magnitude to get a force vector. Doing it this way avoids errors that often happen if you include signs and vector directions into the Coulomb's Law equation. 
 
