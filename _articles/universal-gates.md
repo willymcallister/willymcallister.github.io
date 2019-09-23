@@ -43,7 +43,7 @@ Can you connect A to the input ports of the NAND to make this happen? (If it wou
 
 Here is the truth table for NAND, 
 
-![NAND truth table]({{ site.baseurl }}{% link i/logic_tt_NAND.svg %}){: .centered }
+![NAND truth table]({{ site.baseurl }}{% link i/logic_tt_NAND.svg %})
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
@@ -102,9 +102,9 @@ And finally,
 
 **Build an XOR function with NAND gates.**
 
-This one is challenging. If you can do this one you are a logic designer. If you get stuck, don't worry, you will be a designer soon.
+This one is challenging. If you get it, consider yourself a good logic designer. If you get stuck, don't worry, you will be soon.
 
-Here is the truth tables for XOR,
+Here is the truth table for XOR,
 
 ![XOR truth table]({{ site.baseurl }}{% link i/logic_tt_XOR.svg %})
 
@@ -120,17 +120,21 @@ C = A $\oplus$ B
 
 ![XOR made with NAND gates]({{ site.baseurl }}{% link i/logic20.svg %}){: .centered }
 
-To convince yourself this is a correct implementation fill out the rest of this truth table,
-![Truth table for universal XOR]({{ site.baseurl }}{% link i/logic_tt_XOR_universal.svg %}){: .centered }
-<details>
-    <summary>DO NOT look in here until you have tried the truth table yourself!</summary>
-        <img class="centered" src="/i/logic_tt_XOR_universal_solved.svg" alt="Truth table for universal XOR solved">
-</details>
-
 It took 5 NAND gates to create an XOR function.
 {% endcapture %}{% include details.html %}
 
-It turns out it is possible to build an XOR with only 4 NAND gates. (This one is tough.)
+To convince yourself this is a correct implementation **fill out the rest of this truth table**,
+
+![Truth table for universal XOR]({{ site.baseurl }}{% link i/logic_tt_XOR_universal.svg %}){: .centered }
+
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+![Truth table for universal XOR solved]({{ site.baseurl }}{% link i/logic_tt_XOR_universal_solved.svg %}){: .centered :}  
+{% endcapture %}{% include details.html %} 
+
+It is possible to build an XOR with only 4 NAND gates. **Give it a shot.** (This one is tough.)
+
+Hint: ...I can't think of a hint.
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
@@ -139,14 +143,16 @@ F = A $\oplus$ B
 ![XOR made with only 4 NAND gates]({{ site.baseurl }}{% link i/logic21.svg %}){: .centered }
 
 I wouldn't expect a beginner to come up with this arrangement, but it is pretty clever.
-
-To convince yourself this is an XOR make yourself a truth table and fill it out,
-![Truth table for 4-NAND XOR]({{ site.baseurl }}{% link i/logic_tt_XOR_4nand.svg %}){: .centered }
-<details>
-    <summary>Completed truth table. No peeking!</summary>
-        <img class="centered" src="/i/logic_tt_XOR_4nand_solved.svg" alt="Truth table for 4-NAND XOR solved">
-</details>
 {% endcapture %}{% include details.html %}
+
+To convince yourself this is an XOR **fill in this truth table**,
+
+![Truth table for 4-NAND XOR]({{ site.baseurl }}{% link i/logic_tt_XOR_4nand.svg %}){: .centered }
+
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+![Truth table for 4-NAND XOR solved]({{ site.baseurl }}{% link i/logic_tt_XOR_4nand_solved.svg %}){: .centered :}  
+{% endcapture %}{% include details.html %} 
 
 You did it! You created every basic gate with just NAND. That means NAND is universal.
 

@@ -38,32 +38,31 @@ The red lines in these images represent the magnetic field. Here's a single stra
 
 ![Inductor straight wire]({{ site.baseurl }}{% link i/inductor_straight_wire.svg %}){: .centered :}
 
-<details>
-<summary>How do we know the magnetic field is there?</summary>
-<p>How can you tell if there is a magnetic field near the wire?<br>
-By using a magnetic field sensor, of course.<br>  
-You already know what that is, it's called a compass.</p>
+{% capture summary %}How do we know the magnetic field is there?{% endcapture %}  
+{% capture details %}  
+How can you tell if there is a magnetic field near the wire?  
+By using a magnetic field sensor, of course.  
+You already know what that is, it's called a compass.
 
-<p><img class="centered" src="/i/compass_align.jpg" alt="Compass" height="160px" /></p>
+![Compass]({{ site.baseurl }}{% link i/compass_align.jpg %}){: .centered :}{: height="160px" :}
 
-<p>If there is no nearby magnetic field, the needle of the compass lines up with the magnetic field of the Earth, and points towards magnetic north. If you create a magnetic field, the compass needle swings around and lines up with the new field. The magnetic field from the wire is stronger than the earth's field, so it overpowers it and tips the compass needle.</p>
+If there is no nearby magnetic field, the needle of the compass lines up with the magnetic field of the Earth, and points towards magnetic north. If you create a magnetic field, the compass needle swings around and lines up with the new field. The magnetic field from the wire is stronger than the earth's field, so it overpowers it and tips the compass needle.
 
-<p>Using a compass as a magnetic field sensor is an example of how we create "eyes" to  "see" the invisible. Electricity and magnetism are invisible, so we build different kinds of "eyes" all the time. It is an essential skill. This is one reason a lot of people think EE's are wizards.</p>
-</details>
+Using a compass as a magnetic field sensor is an example of how we create "eyes" to  "see" the invisible. Electricity and magnetism are invisible, so we build different kinds of "eyes" all the time. It is an essential skill. This is one reason people think EE's are wizards.  
+{% endcapture %}{% include details.html %} 
 
-<details>
-<summary>Magnetic lines and the Right Hand Rule</summary>
-<p>You may notice that both current and the magnetic lines have arrowheads. The direction of these arrows is not arbitrary; it is a property of nature. If you know one of the arrows, you can figure out the other by using the Right Hand Rule. </p>
+{% capture summary %}Magnetic lines and the Right Hand Rule{% endcapture %}  
+{% capture details %}  
+You may notice that both current and the magnetic lines have arrowheads. The direction of these arrows is not arbitrary; it is a property of nature. If you know one of the arrows, you can figure out the other by using the Right Hand Rule.
 
-<p><img class="centered" src="/i/inductor_right_hand_rule.svg" alt="Right Hand Rule"></p>
+![Right Hand Rule]({{ site.baseurl }}{% link i/inductor_right_hand_rule.svg %}){: .centered :}
 
-<p>Using your RIGHT hand, wrap your fingers around the wire with your thumb pointing in the direction of current (conventional current flow, not electron flow). The magnetic field line arrows will be flowing out of your fingertips.
-</p>
+Using your RIGHT hand, wrap your fingers around the wire with your thumb pointing in the direction of current (conventional current flow, not electron flow). The magnetic field line arrows will be flowing out of your fingertips.
 
-<p>Pro tip: If you are right-handed, <em>put your pencil down</em> when you use the rule. The most common error is using your left hand to do the Right Hand Rule, which gives you the wrong answer. If your left hand needs something to do, use it as the wire.</p>
+Pro tip: If you are right-handed, *put your pencil down* when you use the rule. The most common error is using your left hand to do the Right Hand Rule, which gives you the wrong answer. If your left hand needs something to do, use it as the wire.
 
-<p>If you ever peek into a classroom during a test on Electricity and Magnetism, you will see all the students using this rule. It looks pretty funny.</p>
-</details>
+If you ever peek into a classroom during a test on Electricity and Magnetism, you will see all the students using this rule. It looks pretty funny.  
+{% endcapture %}{% include details.html %} 
 
 So now we have something called an inductor. It's just a straight wire, but it has a magnetic field surrounding it caused by the current. Let's figure out why it follows the inductor $i$-$v$ equation.
 
@@ -86,12 +85,23 @@ Do you see the circular argument? Changing current makes a changing magnetic fie
 
 <details>
     <summary>This seems terribly complicated.</summary>
-    <p>If this seems really complicated, don't feed bad. It seems that way to me, too. </p>
+    <p>If this seems really complicated, it seems that way to me, too. </p>
     <p>Electromagnetism <em>is</em> complicated. There are a couple of reasons. Two things contribute to making electromagnetism hard to figure out, </p>
     <p>1) One complication is that you get voltage only if the magnetic field is <em>changing</em>. If the magnetic field is constant (not changing), you get no voltage, and no current. So if you just hold a magnet near a wire, nothing happens. This may seem strange, but it's what nature gives us.
     </p>
     <p>2) The other complication is how magnetism and electricity interact in three dimensional space. Recall the first image in this article, with the wire and magnetic field. The plane of the magnetic lines surrounding the wire is perpendicular to the wire. This means all your math in three dimensions and you have to learn things like the Right Hand Rule and vector cross products. It's hard to hold all this in your head. Ørsted actually needed some luck to position a moving magnet at just the right angle before he figured out what was going on.</p>
 </details>
+
+{% capture summary %}This seems terribly complicated.{% endcapture %}  
+{% capture details %}  
+If this seems really complicated, it seems that way to me, too.
+
+Electromagnetism *is* complicated. There are a couple of reasons,
+
+1) One complication is that you get voltage only if the magnetic field is *changing*. If the magnetic field is constant (not changing), you get no voltage, and no current. So if you just hold a magnet near a wire, nothing happens. This may seem strange, but it's what nature gives us.
+
+2) The other complication is how magnetism and electricity interact in three dimensional space. Recall the first image in this article, with the wire and magnetic field. The plane of the magnetic lines surrounding the wire is perpendicular to the wire. This means all your math is in three dimensions. You have to learn things like the Right Hand Rule and vector cross products. Ørsted actually needed some luck to position a moving magnet at just the right angle before he figured out what was going on.  
+{% endcapture %}{% include details.html %} 
 
 Now we can explain the key trick performed by an inductor: 
 

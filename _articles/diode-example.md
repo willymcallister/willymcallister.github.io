@@ -186,16 +186,16 @@ Suppose you build this circuit and the LED is not bright enough. The brightness 
 Try changing something about the circuit to increase brightness.  
 Then sketch a new graphical solution. 
 
-<details>
-    <summary>brighter LED</summary>
-    <p>One way to get more diode current is to reduce the series resistance. Lower resistance makes the load line tip upward, making it steeper. If we reduce the resistor from $200\,\Omega$ down to $100\,\Omega$ and plot a new load line we get this solution,</p>
+{% capture summary %}brighter LED{% endcapture %}  
+{% capture details %}  
+One way to get more diode current is to reduce the series resistance. Lower resistance makes the load line tip upward, making it steeper. If we reduce the resistor from $200\,\Omega$ down to $100\,\Omega$ and plot a new load line we get this solution,
 
-<p><img class="centered" src="/i/diode6.svg" /></p>
+![Brighter load line plot]({{ site.baseurl }}{% link i/diode6.svg %}){: .centered :}
 
-<p>Reducing the resistor to $100\,\Omega$ tips the load line up and raises the $i$-axis intercept up to $3.3\,\text V / 100\,\Omega = 33\,\text{mA}$. At the point where the two graphs intersect the LED current increases from $13\,\text{mA}$ to a bit more than $15\,\text{mA}$, making it brighter. The voltage on the diode increases, too, but only a little bit.</p> 
+Reducing the resistor to $100\,\Omega$ tips the load line up and raises the $i$-axis intercept up to $3.3\,\text V / 100\,\Omega = 33\,\text{mA}$. At the point where the two graphs intersect the LED current increases from $13\,\text{mA}$ to a bit more than $15\,\text{mA}$, making it brighter. The voltage on the diode increases, too, but only a little bit. 
 
-<p>You could also see what happens if you increase the supply voltage. The resistor line moves in a different way when the voltage is adjusted. Go ahead give that a try on your own.</p>
-</details>
+You could also see what happens if you increase the supply voltage. The resistor line moves in a different way when the voltage is adjusted. Go ahead give that a try on your own.  
+{% endcapture %}{% include details.html %} 
 
 ## Why have a resistor?
 
@@ -205,16 +205,16 @@ Suppose we want maximum brightness and the simplest circuit. How about leaving o
 
 Hint: Imagine what happens to the load line as the resistor transitions from $100\,\Omega$ to $0\,\Omega$.
 
-<details>
-<summary>show answer</summary>
-<p>If we make the resistor smaller and smaller, the load line gets steeper and steeper. The bottom of the load line is anchored at the power supply value, $3.3\,\text V$. The load line intersects with the diode curve at higher and higher currents. When the resistor value becomes $0\,\Omega$ the load line is vertical.</p>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+If we make the resistor smaller and smaller, the load line gets steeper and steeper. The bottom of the load line is anchored at the power supply value, $3.3\,\text V$. The load line intersects with the diode curve at higher and higher currents. When the resistor value becomes $0\,\Omega$ the load line is vertical.
 
-<p><img class="centered" src="/i/diode7.svg"></p>
+![load line plot with a 0 resistor]({{ site.baseurl }}{% link i/diode7.svg %}){: .centered :}
 
-<p>When $\text R = 0\,\Omega$, the load line points straight up and does not intersect the diode curve until way way up there at some very high current. Two things can happen at this point. The diode burns out from the excess heat, or, assuming the diode survives this abuse, the battery runs down in just a little while. </p>
+When $\text R = 0\,\Omega$, the load line points straight up and does not intersect the diode curve until way way up there at some very high current. Two things can happen at this point. The diode burns out from the excess heat, or, assuming the diode survives this abuse, the battery runs down in just a little while.
 
-<p>It turns out to be a bad idea to leave out the resistor. You need to include a resistor to limit the current.</p>
-</details>
+It turns out to be a bad idea to leave out the resistor. You need to include a resistor to limit the current.  
+{% endcapture %}{% include details.html %} 
 
 ## Summary
 {:.no_toc}

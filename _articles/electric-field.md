@@ -218,7 +218,7 @@ $\|\vec E\| = \dfrac{5\,\text V}{0.0001\,\text m}$
 
 $\|\vec E\| = 50{,}000\,\text V/\text m$
 
-That may seem like an astonishingly large number for an electric field, but it is not an unusual value at all. The voltage and dimension in this example are reasonable values for a typical surface mount capacitor. 
+That may seem like an astonishingly large number for an electric field, but it is not an unusual value at all. The voltage and dimension in this example are reasonable values for a typical surface mount capacitor. The common 1608 surface mount capacitor has overall dimensions $1.6 \,\text{mm} \times 0.8\,\text{mm} \times 0.9\,\text{mm}$.
 
 ![Surface-mount capacitor cut-away view]({% link i/real_smt_capacitor_cutaway.png %}){: .centered :}{:height="300px"}
 {% endcapture %}{% include details.html %} 
