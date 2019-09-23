@@ -12,7 +12,7 @@
    height="424.19028"
    version="1.1"
    id="svg2"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="diode6.svg">
   <metadata
      id="metadata156">
@@ -28,6 +28,40 @@
   </metadata>
   <defs
      id="defs154">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker26267"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#74cf70;stroke-width:1pt;stroke-opacity:1;fill:#74cf70;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path26265" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect26257"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect25959"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath4464">
@@ -57,9 +91,9 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      fit-margin-left="10"
-     inkscape:zoom="1.2777285"
-     inkscape:cx="249.6478"
-     inkscape:cy="212.09514"
+     inkscape:zoom="13.424072"
+     inkscape:cx="135.53806"
+     inkscape:cy="266.14006"
      inkscape:current-layer="svg2" />
   <xhtml:defs>
     <xhtml:style
@@ -73,7 +107,7 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
   </xhtml:defs>
   <line
      id="line6"
-     style="stroke:#c8ecc6;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+     style="stroke:#74cf70;stroke-width:3;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.3"
      y2="394.28537"
      x2="291.73187"
      y1="119.28538"
@@ -92,12 +126,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line14"
      y2="400.28537" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text16"
      dy="0"
      y="413.91528"
-     x="34.231873"
-     sodipodi:linespacing="125%">-1</text>
+     x="34.231873">-1</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line18"
@@ -129,12 +162,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line28"
      y2="400.28537" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text30"
      dy="0"
      y="413.91528"
-     x="154.23187"
-     sodipodi:linespacing="125%">1</text>
+     x="154.23187">1</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line32"
@@ -151,12 +183,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line36"
      y2="400.28537" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text38"
      dy="0"
      y="413.91528"
-     x="214.23187"
-     sodipodi:linespacing="125%">2</text>
+     x="214.23187">2</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line40"
@@ -173,12 +204,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line44"
      y2="400.28537" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text46"
      dy="0"
      y="413.91528"
-     x="274.23187"
-     sodipodi:linespacing="125%">3</text>
+     x="274.23187">3</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line48"
@@ -195,12 +225,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line52"
      y2="400.28537" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text54"
      dy="0"
      y="413.91528"
-     x="334.23187"
-     sodipodi:linespacing="125%">4</text>
+     x="334.23187">4</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line56"
@@ -217,12 +246,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line60"
      y2="400.28537" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text62"
      dy="0"
      y="413.91528"
-     x="394.23187"
-     sodipodi:linespacing="125%">5</text>
+     x="394.23187">5</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:middle;fill:none"
      id="line64"
@@ -234,10 +262,9 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
   <text
      x="450.42474"
      dx="0"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text66"
-     y="397.82867"
-     sodipodi:linespacing="125%"><tspan
+     y="397.82867"><tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
    id="tspan4474">v</tspan>
 <tspan
@@ -273,12 +300,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line80"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text82"
      dy="0"
      x="77.645264"
-     y="348.32867"
-     sodipodi:linespacing="125%">5</text>
+     y="348.32867">5</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line84"
@@ -295,12 +321,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line88"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text90"
      dy="0"
      x="77.645264"
-     y="298.32867"
-     sodipodi:linespacing="125%">10</text>
+     y="298.32867">10</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line92"
@@ -317,12 +342,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line96"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text98"
      dy="0"
      x="77.645264"
-     y="248.32867"
-     sodipodi:linespacing="125%">15</text>
+     y="248.32867">15</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line100"
@@ -339,12 +363,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line104"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text106"
      dy="0"
      x="77.645264"
-     y="198.32867"
-     sodipodi:linespacing="125%">20</text>
+     y="198.32867">20</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line108"
@@ -361,12 +384,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line112"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text114"
      dy="0"
      x="77.645264"
-     y="148.32867"
-     sodipodi:linespacing="125%">25</text>
+     y="148.32867">25</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line116"
@@ -383,12 +405,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line120"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text122"
      dy="0"
      x="77.645264"
-     y="98.328682"
-     sodipodi:linespacing="125%">30</text>
+     y="98.328682">30</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line124"
@@ -405,12 +426,11 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      id="line128"
      x2="87.731873" />
   <text
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text130"
      dy="0"
      x="77.645264"
-     y="48.328686"
-     sodipodi:linespacing="125%">35</text>
+     y="48.328686">35</text>
   <line
      style="font-size:medium;font-family:sans-serif;text-anchor:end;fill:none"
      id="line132"
@@ -421,11 +441,10 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      class="grid" />
   <text
      dy="-12"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      id="text134"
      x="100.81847"
-     y="40.742069"
-     sodipodi:linespacing="125%"><tspan
+     y="40.742069"><tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle"
    id="tspan4472">i</tspan>
  (mA)</text>
@@ -460,26 +479,30 @@ svg .tick text { font-style: normal; font-variant: normal; font-weight: normal; 
      x1="198.13187" />
   <text
      id="text146"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      y="190.74207"
-     x="234.9917"
-     sodipodi:linespacing="125%">diode</text>
+     x="234.9917">diode</text>
   <text
      id="text148"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      y="310.11215"
-     x="287.62161"
-     sodipodi:linespacing="125%">resistor</text>
+     x="287.62161">resistor</text>
   <text
      id="text150"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000"
      y="290.11215"
-     x="287.62161"
-     sodipodi:linespacing="125%">100 Ω</text>
+     x="287.62161">100 Ω</text>
   <circle
      id="circle140"
      style="fill:#f9685d"
      r="4"
      cy="238.28537"
      cx="198.13187" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#74cf70;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker26267)"
+     d="m 126.59701,163.44574 c 2.09825,-2.60183 4.19562,-5.20256 6.9315,-6.92429 2.73588,-1.72173 6.07335,-2.5561 9.42796,-3.39475"
+     id="path26255"
+     inkscape:connector-curvature="0"
+     inkscape:path-effect="#path-effect26257"
+     inkscape:original-d="m 126.59701,163.44574 c 2.09837,-2.60174 4.19573,-5.20247 6.2921,-7.8022 3.35537,-0.92346 6.71257,-1.6789 10.06736,-2.51684" />
 </svg>
