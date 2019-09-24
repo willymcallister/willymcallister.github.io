@@ -75,8 +75,13 @@ When we use the word *conductance* instead of *resistance* we are simply emphasi
 
 <details>
 <summary>resistivity and conductivity</summary>
-<p>You may have heard the terms <em>resistivity</em> and <em>conductivity</em>. These sound a lot like <em>resistance</em> and <em>conductance</em>, but they are a little different. Resistivity and conductivity are properties of the bulk material used to make individual resistors. See this article, <a href="https://spinningnumbers.org/a/resistance-resistivity.html">Resistance and resistivity</a>, or this Wikipedia page on <a href="https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance">Electrical Resistance and Conductance</a>.</p>
+<p>You may have heard the terms <em>resistivity</em> and <em>conductivity</em>. These sound a lot like <em>resistance</em> and <em>conductance</em>, but they are a little different. Resistivity and conductivity are properties of the bulk material used to make individual resistors. See this article, <a href="https://spinningnumbers.org/a/resistivity.html">Resistance and resistivity</a>, or this Wikipedia page on <a href="https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance">Electrical Resistance and Conductance</a>.</p>
 </details>
+
+{% capture summary %}resistivity and conductivity{% endcapture %}  
+{% capture details %}  
+You may have heard the terms *resistivity* and *conductivity*. These sound a lot like *resistance* and *conductance*, but they are a little different. Resistivity and conductivity are properties of the bulk material used to make individual resistors. See this article on [Resistivity]({{ site.baseurl }}{% link _articles/resistivity.md %}), or this Wikipedia page on [Electrical Resistance and Conductance](https://en.wikipedia.org/wiki/Electrical_resistance_and_conductance).  
+{% endcapture %}{% include details.html %}
 
 ## Parallel conductance
 

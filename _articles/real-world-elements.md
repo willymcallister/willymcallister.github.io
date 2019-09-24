@@ -63,7 +63,7 @@ In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and othe
 
 ### Resistor properties
 
-The resistance value of a resistor depends on two things: *what it is made of*, and *how it is shaped*. The bulk material properties determine how difficult it is for electrons flow through. You could think of it as how often electrons crash into the atoms in the material as they try to flow by. This property of a bulk material is called [*resistivity*]({% link _articles/resistance-resistivity.md %}). You might also hear about *conductivity*, which is just the inverse of resistivity.
+The resistance value of a resistor depends on two things: *what it is made of*, and *how it is shaped*. The bulk material properties determine how difficult it is for electrons flow through. You could think of it as how often electrons crash into the atoms in the material as they try to flow by. This property of a bulk material is called [*resistivity*]({% link _articles/resistivity.md %}). You might also hear about *conductivity*, which is just the inverse of resistivity.
 
 After selecting a bulk material with a certain resistivity, the resistance of the resistor is determined by its shape, typically a cylinder, or long rectangle, or ribbon. A longer resistor has higher resistance than a shorter resistor. Electrons suffer more collisions as they pass through the jungle of atoms in the material. A resistor with a bigger cross-section (a fatter cylinder) has lower resistance than a resistor with smaller cross-section, because electrons have a greater number of available paths to follow. 
 
