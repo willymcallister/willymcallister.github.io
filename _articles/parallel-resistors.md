@@ -6,7 +6,7 @@ comments: true
 ---
 Components are in *parallel* if they share two nodes, like this, 
 
-![Circuit components in parallel]({{ site.baseurl }}{% link i/parallel_resistors1.svg %}){: .centered :} 
+![Circuit components in parallel]({{ site.baseurl }}{% link i/parallel_resistors1.svg %}){: .centered :}  
 
 We reveal the properties of the parallel connection by looking at resistor circuits. Figuring out parallel resistors is a little trickier than series resistors.
 

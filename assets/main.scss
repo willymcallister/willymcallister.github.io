@@ -2,9 +2,14 @@
 
 ---
 
+$base-font-size:    18px !default;
+$comment-font-size: 17px !default;
+$brand-color:       #1E72DC !default;
+$grey-color:        #757575 !default;
+
 @import "minima";
 
-// Styles in spinningnumbers/assets/main.scss
+// Styles for spinningnumbers
 
 //div {border: 1px solid blue;}     //debug
 //span {border: 1px solid red;}     //debug
@@ -21,14 +26,38 @@ blockquote {
     font-size: $base-font-size;     //overrides 1.125 increase in _base.scss
     letter-spacing: 0px;            //overrides -1px spacing in _base.scss
 }
+
 .centered {
     display: block;
     margin: auto;
 }
+
 .caption {
     color: $grey-color;
     font-size: $small-font-size;
 }
+
+hr {
+    margin: 1em 0;
+    //border-top: $grey-color;
+    border-top: 1px solid $grey-color-light;
+}
+
+body {
+    -webkit-text-size-adjust: none;   //overrides 100% in _base.scss
+}
+
+.footer-col-2 {
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2));    //overrides 20%
+  }
+
+.footer-col-3 {
+  width: -webkit-calc(40% - (#{$spacing-unit} / 2));    //overrides 45%
+  }
+
+//
+// Overline styles for digital variables
+//
 .oline {
     text-decoration: overline;
 }
@@ -36,47 +65,10 @@ blockquote {
     border-top: black 1px solid; 
     padding: 2px 0 0 0;
 }
-table {
-    border: 1px solid $grey-color-light;
-    border-radius: 2px;
-    margin-bottom: 15px;
-    border-spacing: 0px;
-}
-th {
-    margin: 0;
-    padding: 5px;
-    border: 0;
-    border-bottom: 2px solid $grey-color-light;
-}
-td {
-    padding: 5px 10px;
-}
-$grey-color-zebra: lighten($grey-color, 45%) !default;
-.zebra tr:nth-child(odd) td {
-    background-color: $grey-color-zebra;
-}
-hr {
-    margin: 1em 0;
-    //border-top: $grey-color;
-    border-top: 1px solid $grey-color-light;
 
-}
-.footer-heading {
-  letter-spacing: -0.25px;
-  font-weight: 300;
-
-  &,
-  &:visited {
-    color: $grey-color-dark;
-  }
-}
-.col3-list {
-  list-style: none;
-  margin-left: 0;
-}
-
-////// comment form //////
-
+//
+// Staticman new comment form
+//
 input, select, textarea, label, button {
     @extend body;
 }
@@ -127,8 +119,9 @@ a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
 }
 
-////// existing comments //////
-
+//
+// Staticman existing comments
+//
 .comments {
     //border-top: 1px solid $grey-color-light; //WMc replaced by <hr>
     //padding: 20px 0px 0px 0px;
@@ -166,11 +159,12 @@ a.youtube_link:link, a.youtube_link:visited {
   font-size: $small-font-size;
 }
 
-////// <details> tag //////
-
+//
+// <details> tag
+//
 details {
     border-radius: 10px;
-	padding: 0px 8px;     //padding matches [open] padding to keep the summary sitting still when opened.
+	padding: 0px 8px;     //closed padding matches [open] padding to keep the summary sitting still when opened.
     margin-bottom: 15px;
 }
 details[open] {
@@ -187,7 +181,9 @@ details summary {
     color: $ka-default5;
 }
 
-////// video frame //////
+//
+// video iframe
+//
 .video-backdrop {
     width: 100%;
     background: black;
@@ -210,8 +206,9 @@ details summary {
     height: 100%;
 }
 
-////// pop-up modal window for comments //////
-
+//
+// pop-up modal window for Staticman comments
+//
 .show-modal {
     overflow: hidden;
     position: relative;
