@@ -37,7 +37,7 @@ Series and parallel resistors, and the voltage divider.
 
 [![]({{ site.baseurl }}{% link i/video.svg %}) Voltage divider]({{ site.baseurl }}{% link _videos/voltage-divider.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Resistance and Resistivity]({{ site.baseurl }}{% link _articles/resistance-resistivity.md %})
+[![]({{ site.baseurl }}{% link i/article.svg %}) Resistivity]({{ site.baseurl }}{% link _articles/resistivity.md %})
 
 ---
 
