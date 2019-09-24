@@ -83,13 +83,12 @@ $10^{\,-6}$  | micro-  | $\mu$     | be careful $\mu$ (mu) doesn't turn into \"m
 $10^{\,-9}$  | nano-   | $\text n$ | 
 $10^{\,-12}$ | pico-   | $\text p$ |
 
-<details>
-<summary>How do you say "giga"?</summary>
-<p>The Latin word <em>gigas</em> gives us the number prefix <em>giga-</em>. It is also the source of the English word <em>giant</em>. In English, the letter "g" can be hard (goat) or soft (giant). So how should "giga-" be pronounced?</p>
+{% capture summary %}How do you say "giga"?{% endcapture %}  
+{% capture details %}  
+The Latin word *gigas* gives us the number prefix *giga-*. It is also the source of the English word <em>giant</em>. In English, the letter "g" can be hard (goat) or soft (giant). So how should "giga-" be pronounced?
 
-<p>I hear the hard "g" most of the time, but the soft "g" is fine. You might come across someone saying it that way. One such person is <a href="https://www.youtube.com/embed/mjCRUvX2D0E?rel=0">Doc Brown in the movie Back to the Future</a>)</p>
-
-</details>
+I hear the hard "g" most of the time, but the soft "g" is fine. You might come across someone saying it that way. One such person is [Doc Brown](https://www.youtube.com/embed/mjCRUvX2D0E?rel=0) in the movie Back to the Future  
+{% endcapture %}{% include details.html %}
 
 ## Large and small engineering numbers
 

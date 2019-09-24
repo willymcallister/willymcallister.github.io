@@ -274,53 +274,36 @@ $s=-\alpha \pm\,\sqrt{\alpha^2 - \omega_o^2}$
 
 Depending on the relative size of $\alpha$ compared to $\omega_o$ the expression $\alpha^2 - \omega_o^2$ under the square root will be positive, zero, or negative,
 
-|-------------------+---------------------+------------------------------|
+
 | relation |sign of $\alpha^2 - \omega_o^2$ | $\sqrt{\alpha^2 - \omega^2}$ |
 |-------------------|:-------------------:|------------------------------|
 | $\alpha>\omega_o$ | $+$                 | positive real number         |
-|-------------------+---------------------+------------------------------|
 | $\alpha=\omega_o$ | $0$                 | vanishes                     |
-|-------------------+---------------------+------------------------------|
 | $\alpha<\omega_o$ | $-$                 | imaginary number             |
-|-------------------+---------------------+------------------------------|
 
 The roots $s$ will come out like this,
 
-|-------------------+---------------------+---------------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ |            $s$          |
 |-------------------|:-------------------:|---------------------------|
 | $\alpha>\omega_o$ | $+$                 | 2 different real roots    |
-|-------------------+---------------------+---------------------------|
 | $\alpha=\omega_o$ | $0$                 | 2 repeated real roots     |
-|-------------------+---------------------+---------------------------|
 | $\alpha<\omega_o$ | $-$                 | 2 complex conjugate roots |
-|-------------------+---------------------+---------------------------|
 
 Looking farther ahead, the response $i(t)$ will come out like this,
 
-|-------------------+---------------------+----------------------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ |             $i(t)$             |
 |-------------------|:-------------------:|----------------------------------|
 | $\alpha>\omega_o$ | $+$                 | sum of 2 decaying exponentials   |
-|-------------------+---------------------+----------------------------------|
 | $\alpha=\omega_o$ | $0$                 | $t\,\cdot$ decaying exponential  | 
-|-------------------+---------------------+----------------------------------|
 | $\alpha<\omega_o$ | $-$                 | $\sin\cdot$ decaying exponential | 
-|-------------------+---------------------+----------------------------------|
 
 We have nicknames for the three variations,
 
-|-------------------+---------------------+-------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ | nickname        |
 |-------------------|:-------------------:|-------------------|
 | $\alpha>\omega_o$ | $+$                 | over damped       |
-|-------------------+---------------------+-------------------|
 | $\alpha=\omega_o$ | $0$                 | critically damped |
-|-------------------+---------------------+-------------------|
-| $\alpha<\omega_o$ | $-$                 | under damped      |
-|-------------------+---------------------+-------------------| 
-
-
+| $\alpha<\omega_o$ | $-$                 | under damped      | 
 
 Now you are ready to go to the following article, [RLC natural response - variations]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}), where we look at each outcome in detail. 
 

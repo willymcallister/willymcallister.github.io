@@ -120,7 +120,7 @@ $\qquad\quad$![N parallel resistors]({{ site.baseurl }}{% link i/parallel_resist
 
 Let's figure out how the main current $i$ splits up and flows through each resistor. We are looking for $i_{\text R1}$, $i_{\text R2}$, and $i_{\text R3}$.  
 
-![Parallel resistor circuit]({{ site.baseurl }}{% link i/parallel_resistors4.svg %}) 
+![Parallel resistor circuit]({{ site.baseurl }}{% link i/parallel_resistors4.svg %}){: .centered :} 
 
 Apply Ohm's Law to the individual resistors. $v$ is the same in each equation,
 
@@ -197,47 +197,47 @@ Based on the resistor currents you just found,
 
 **The largest share of current goes through which resistor?**
 
-Choose one: | smallest | middle | largest
+Choose one: $\quad$ smallest $\quad$  middle $\quad$ largest
 
-<details>
-<summary>Show answer</summary>
-<p>The smallest resistor carries the largest share of current.</p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+The smallest resistor carries the largest share of current.  
+{% endcapture %}{% include details.html %}
 
 **PROBLEM 3**
 
 **The smallest share of current goes through which resistor?**
 
-Choose one: | smallest | middle | largest
+Choose one: $\quad$ smallest $\quad$  middle $\quad$ largest
 
-<details>
-<summary>Show answer</summary>
-<p>The largest resistor carries the smallest share of current. </p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+The largest resistor carries the smallest share of current.  
+{% endcapture %}{% include details.html %}
 
 **PROBLEM 4**
 
-**What is the relative size of the equivalent resistor compared to the three parallel resistors?**
+**What is the relative size of the equivalent resistor compared to the parallel resistors?**
 
-| $\text{R}_\text{parallel}$ is larger than the largest resistor.
-| $\text{R}_\text{parallel}$ is between the largest and smallest resistor.
-| $\text{R}_\text{parallel}$ is smaller than the smallest resistor.
+* $\text{R}_\text{parallel}$ is larger than the largest resistor.
+* $\text{R}_\text{parallel}$ is between the largest and smallest resistor.
+* $\text{R}_\text{parallel}$ is smaller than the smallest resistor.
 
-<details>
-<summary>Show answer</summary>
-<p>The equivalent parallel resistor is smaller than the smallest parallel resistor. Always.</p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+The equivalent parallel resistor is smaller than the smallest parallel resistor. Always.  
+{% endcapture %}{% include details.html %}
  
 **Problem 5**
 
 **Which resistor has the highest voltage?**
 
-Choose one: | smallest | middle | largest
+Choose one: $\quad$ smallest $\quad$  middle $\quad$ largest
 
-<details>
-<summary>Show answer</summary>
-<p>Trick question. All three resistors have the same voltage. That's what it means to be in parallel. They all share the same voltage.</p>
-</details>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+Trick question. All three resistors have the same voltage. That's what it means to be in parallel. They all share the same voltage.  
+{% endcapture %}{% include details.html %}
 
 ## Special case --- $2$ resistors in parallel
 
@@ -249,24 +249,24 @@ $\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text R1} +\dfrac{1}{\t
 
 We can do a bit of algebra to come up with an alternative expression with just one fraction. Rather than just telling you the answer, it is a rite of passage to work through the algebra yourself the first time. The answer is tucked away so you can try this on your own before peeking. See if you can derive an expression for $\text R_{\text{parallel}}$ in the form of a single fraction.
 
-<details>
-<summary>Two resistors in parallel</summary>
-<p>$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text R1} +\dfrac{1}{\text R2} \right )}$</p>
+{% capture summary %}Two resistors in parallel{% endcapture %}  
+{% capture details %}  
+$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{1}{\text R1} +\dfrac{1}{\text R2} \right )}$
 
-<p>Work on the denominator to clear the fractions. The common denominator is $\text R1 \, \text R2$.</p>
+Work on the denominator to clear the fractions. The common denominator is $\text R1 \, \text R2$.
 
-<p>$\text R_{\text{parallel}} = \dfrac{1}{\left (\dfrac{1}{\text R1}\,\dfrac{\text R2}{\text R2}\right ) + \left (\dfrac{1}{\text R2}\,\dfrac{\text R1}{\text R1}  \right )}$</p>
+$\text R_{\text{parallel}} = \dfrac{1}{\left (\dfrac{1}{\text R1}\,\dfrac{\text R2}{\text R2}\right ) + \left (\dfrac{1}{\text R2}\,\dfrac{\text R1}{\text R1}  \right )}$
 
-<p>$\text R_{\text{parallel}} = \dfrac{1} {\left ( \dfrac{\text R2}{\text R1\,\text R2} \right ) + \left (\dfrac{\text R1}{\text R1\,\text R2}  \right )}$</p>
+$\text R_{\text{parallel}} = \dfrac{1} {\left ( \dfrac{\text R2}{\text R1\,\text R2} \right ) + \left (\dfrac{\text R1}{\text R1\,\text R2}  \right )}$
 
-<p>$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{\text R1 + \text R2}{\text R1\,\text R2}  \right )}$</p>
+$\text R_{\text{parallel}} = \dfrac{1} {\left (\dfrac{\text R1 + \text R2}{\text R1\,\text R2}  \right )}$
 
-<p>Flip over the big fraction to get the equation for two resistors in parallel, </p>
+Flip over the big fraction to get the equation for two resistors in parallel,
 
-<p>$\text R_{\text{parallel}} = {\dfrac{\text R1\,\text R2} {\text R1 + \text R2}}$</p>
+$\text R_{\text{parallel}} = {\dfrac{\text R1\,\text R2} {\text R1 + \text R2}}$
 
-<p>The product over the sum. This is worth memorizing.</p>
-</details>
+The product over the sum. This is worth memorizing.  
+{% endcapture %}{% include details.html %}
 
 ## Special case --- $2$ equal resistors in parallel
 

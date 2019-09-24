@@ -68,7 +68,6 @@ The Greek word for amber is ἤ λ ε κ τ ρ ο ν.
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | eta | lambda | epsilon | kappa | tau | rho | omicron | nu |
 | e | l | e | k | t | r | o | n |
-{: .zebra }
 
 I bet you can guess what we use this word for. 
 

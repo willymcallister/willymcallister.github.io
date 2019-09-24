@@ -12,7 +12,7 @@ Here's a template for inserting an html \<details\> tag into markdown. It allows
 DETAILS  
 {% endcapture %}{% include details.html %} 
 
-## Markdown template
+## Markdown template 
 
 Copy and paste these four lines into your markdown document.  
 

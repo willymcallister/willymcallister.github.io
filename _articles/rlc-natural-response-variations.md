@@ -5,9 +5,9 @@ author: Willy McAllister
 comments: true
 ---
 
-We dive into variations of the series resistor-inductor-capacitor $(\text{RLC)}$ natural response. 
+We dive into variations of the series resistor-inductor-capacitor $(\text{RLC)}$ natural response.   
 
-![RLC circuit]({{ site.baseurl }}{% link i/rlc_natural_response18.svg %}){: .centered :}
+![RLC circuit]({{ site.baseurl }}{% link i/rlc_natural_response18.svg %}){: .centered :} 
 
 The previous article [RLC natural response - derivation]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}) set up the differential equation and derived the characteristic equation. You should study that article before this one. Our story picks up at the point where we solve for $s$, the roots of the characteristic equation.
 
@@ -86,51 +86,35 @@ $s = -\alpha \pm \sqrt{\alpha^2 - \omega_o^2}$
 
 Depending on the relative size of $\alpha$ compared to $\omega_o$ the expression $\alpha^2 - \omega_o^2$ under the square root will be positive, zero, or negative,
 
-|-------------------+---------------------+------------------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ | $\sqrt{\alpha^2 - \omega_o^2}$ |
 |-------------------|:-------------------:|------------------------------|
 | $\alpha>\omega_o$ | $+$                 | positive real number         |
-|-------------------+---------------------+------------------------------|
 | $\alpha=\omega_o$ | $0$                 | vanishes                     |
-|-------------------+---------------------+------------------------------|
 | $\alpha<\omega_o$ | $-$                 | imaginary number             |
-|-------------------+---------------------+------------------------------|
 
 The roots $s$ will come out like this,
 
-|-------------------+---------------------+---------------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ |            $s$          |
 |-------------------|:-------------------:|---------------------------|
 | $\alpha>\omega_o$ | $+$                 | 2 different real roots    |
-|-------------------+---------------------+---------------------------|
 | $\alpha=\omega_o$ | $0$                 | 2 repeated real roots     |
-|-------------------+---------------------+---------------------------|
 | $\alpha<\omega_o$ | $-$                 | 2 complex conjugate roots |
-|-------------------+---------------------+---------------------------|
 
 Looking farther ahead, the response $i(t)$ will come out like this,
 
-|-------------------+---------------------+----------------------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ |             $i(t)$             |
 |-------------------|:-------------------:|----------------------------------|
 | $\alpha>\omega_o$ | $+$                 | sum of 2 decaying exponentials   |
-|-------------------+---------------------+----------------------------------|
 | $\alpha=\omega_o$ | $0$                 | $t\,\cdot$ decaying exponential  | 
-|-------------------+---------------------+----------------------------------|
 | $\alpha<\omega_o$ | $-$                 | $\sin\cdot$ decaying exponential | 
-|-------------------+---------------------+----------------------------------|
 
 We have nicknames for the three variations,
 
-|-------------------+---------------------+-------------------|
 | relation |sign of $\alpha^2 - \omega_o^2$ | nickname        |
 |-------------------|:-------------------:|-------------------|
 | $\alpha>\omega_o$ | $+$                 | over damped       |
-|-------------------+---------------------+-------------------|
 | $\alpha=\omega_o$ | $0$                 | critically damped |
-|-------------------+---------------------+-------------------|
-| $\alpha<\omega_o$ | $-$                 | under damped      |
-|-------------------+---------------------+-------------------| 
+| $\alpha<\omega_o$ | $-$                 | under damped      | 
 
 For the rest of this article we carry each variation through to a symbolic solution. Then we do an example circuit with real component values. Each variations begins at Step 5: Find the roots of the characteristic equation.
 
