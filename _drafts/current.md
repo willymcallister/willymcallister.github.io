@@ -19,7 +19,7 @@ Electric current is the flow of charge, similar to the flow of water in a river 
 ### Where we are headed
 {:.no_toc}
 
-Current is the flow of charge. This is the cornerstone concept in electrical engineering. 
+Current is the flow of charge. This is the cornerstone concept in electrical engineering.
 
 ----
 

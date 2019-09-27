@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-You may have heard the terms *resistivity* and *resistance* as they relate to *resistors*. They sound alike but have slightly different meaning. Resistivity and resistance capture the idea that materials fight against the flow of current.
+You may have heard the terms *resistivity* and *resistance* as they relate to *resistors*. They sound alike but have slightly different meaning. Resistivity and resistance capture the idea that materials fight against the flow of current. 
 
 There are two more resistor words you should know about: *conductivity* and *conductance*. Conductivity and conductance are the same ideas as resistivity and resistance, but with the opposite attitude. They describe how much current is welcomed to flow.
 
