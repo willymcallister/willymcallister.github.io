@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-We dive into variations of the series resistor-inductor-capacitor $(\text{RLC)}$ natural response.   
+We explore three variations of the series resistor-inductor-capacitor $(\text{RLC)}$ natural response.    
 
 ![RLC circuit]({{ site.baseurl }}{% link i/rlc_natural_response18.svg %}){: .centered :} 
 
@@ -1061,16 +1061,12 @@ $s_{1,2} = -\alpha \pm j\omega_d$
 
 After you work out $\alpha$ and $\omega_o$, compute $\alpha^2 - \omega_o^2$. Based on the sign, select one of these solutions for $i(t)$,
 
-|----------------+------------|-----+------+----------------------------------|
+
 | variant        |$v_\text C$ | $i_\text L$| $\alpha^2 - \omega_o^2$ | $i(t)$ |
 |----------------|:----------:|:---:|:----:|----------------------------------|
 | over damped    |$\text V_0$ | $0$ | $+$  | $i = \dfrac{\text V_0}{(s_1 - s_2) \, \text L} \left ( e^{s_1 t} - e^{s_2 t} \right )$ |
-|----------------+------------+-----+------+----------------------------------|
 | critically damped|$\text V_0$ | $0$ | $0$ | $i = \dfrac{\text V_0}{\text L}\, t\, e^{-\alpha t}$|
-|----------------+------------+-----+------+----------------------------------|
 | critically damped|$0$ | $\text I_0$ | $0$ | $i = \text I_0 e^{-\alpha t}(1 - \alpha t)$       | 
-|----------------+------------+-----+------+----------------------------------|
 | under damped   |$\text V_0$ | $0$ | $-$  | $i = \dfrac{\text V_0}{\omega_d \text L} e^{-\alpha t} \sin \omega_d t$     | 
-|----------------+------------+-----+------+----------------------------------|
 
 The $v_\text C$ and $i_\text L$ columns indicate the voltage and current at $t = 0^-$.
