@@ -2,25 +2,17 @@
 
 ---
 
+$base-font-size:    18px !default;
+$comment-font-size: 17px !default;
+$brand-color:       #1E72DC !default;
+$grey-color:        #757575 !default;
+
+@import "minima";
 
 // Styles for spinningnumbers
 
 //div {border: 1px solid blue;}     //debug
 //span {border: 1px solid red;}     //debug
-
-$base-font-size:    18px !default;
-$comment-font-size: 17px !default;
-$grey-color:        #757575 !default;
-$grey-color-dark:    darken($grey-color, 25%) !default;
-$grey-color-darkish: darken($grey-color, 15%) !default;
-
-// Dark theme
-$text-color:       silver !default;
-$background-color: $grey-color-dark;       // was #444
-$brand-color:      #1DA1F2 !default; // Twitter Blue
-$orange-color:     #f66a0a !default;
-
-@import "minima";
 
 .sn-logo {
     margin: 0em 0.25em;
@@ -52,15 +44,7 @@ hr {
 }
 
 table {
-  width: inherit !important;          //overrides 100% in _base.scss
-  tr {
-    &:nth-child(even) {
-      background-color: $grey-color-darkish;
-    }
-  }
-  th {
-    background-color: $grey-color;
-  }
+    width: inherit !important;        //overrides 100% in _base.scss
 }
 
 body {
@@ -74,10 +58,6 @@ body {
 .footer-col-3 {
   width: -webkit-calc(40% - (#{$spacing-unit} / 2));    //overrides 45%
   }
-
-img {
-    background-color: $grey-color-darkish;
-}
 
 //
 // Overline styles for digital variables
@@ -99,15 +79,17 @@ details {
     margin-bottom: 15px;
 }
 details[open] {
-    background: $grey-color-darkish;
+    background: $grey-color-light;
     padding: 0px 8px 8px 8px;
 }
 summary {
     margin: 0px 0px 8px 0px;
     outline:none;
 }
+
+$ka-default5 : #236ec9 !default;
 details summary {
-    color: $brand-color;
+    color: $ka-default5;
 }
 
 //
@@ -138,7 +120,7 @@ textarea {
     vertical-align: top;
 }
 .textfield__input {
-    border: 1px solid $grey-color;
+    border: 1px solid rgba(0,0,0,.12);
     padding: 4px 5px;
     width: 100%;
     font-size: $comment-font-size; 
@@ -288,26 +270,4 @@ button:hover {
 }
 a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
-}
-
-// Dark Theme
-
-.orange {
-  color: $orange-color;
-}
-
-.grey {
-  color: $grey-color;
-}
-
-.site-header {
-  //background-color: $background-color;
-  border-top: 5px solid $brand-color;
-}
-
-.site-title {
-  &,
-  &:visited {
-    color: inherit;
-  }
 }
