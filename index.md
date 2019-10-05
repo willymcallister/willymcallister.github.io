@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Welcome to Spinning Numbers. Learn about electricity and electrical engineering. 
+Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
 September 16, 2019 --- New  
 [![]({{ site.baseurl }}{% link i/article.svg %}) Logic gates]({{ site.baseurl }}{% link _articles/logic-gates.md %}) --- summary of gate symbols and how to draw an OR symbol.
