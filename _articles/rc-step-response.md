@@ -50,11 +50,12 @@ Here's the circuit we are going to study,
 
 The input is an abrupt voltage step starting at $\text V_0$ and instantly jumps up to $\text V_{\text S}$ at $t = 0$. We want to find the voltage on the capacitor, $\goldC{v(t)}$, as a function of time. 
 
-<details>
-<summary>the step is instantaneous</summary>
-<p>A step is an ideal mathematical idea that doesn't exist in the real world. The voltage has only two values, $\text V_0$ and $\text V_{\text S}$. There are no in-between values. When we draw a step with a vertical orange line at $t = 0$ it's simply a graphical connection between the top and bottom horizontal lines. The vertical line isn't meant to suggest intermediate voltage values exist at $t = 0$.</p>
-<p>In the real world, there will always be some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in. </p>
-</details>
+{% capture summary %}the step is instantaneous{% endcapture %}  
+{% capture details %}  
+A step is an ideal mathematical idea that doesn't exist in the real world. The voltage has only two values, $\text V_0$ and $\text V_{\text S}$. There are no in-between values. When we draw a step with a vertical orange line at $t = 0$ it's simply a graphical connection between the top and bottom horizontal lines. The vertical line isn't meant to suggest intermediate voltage values exist at $t = 0$.
+
+In the real world, there will always be some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in.  
+{% endcapture %}{% include details.html %} 
 
 ## Intuition
 ### Initial state
@@ -99,13 +100,14 @@ There is another equivalent way to draw this circuit. We change the voltage sour
 
 This version of the circuit is a better match to the math coming up since the initial condition, $v(0) = \text V_0$, is more obvious. 
 
-<details>
-<summary>how does $\text V_0$ get there?</summary>
-<p>I just want you to believe I can put some charge on the capacitor to generate $\text V_0$. If you just have to know, here's a circuit that can do that,</p>
+{% capture summary %}how does $\text V_0$ get there?{% endcapture %}  
+{% capture details %}  
+I just want you to believe I can put some charge on the capacitor to generate $\text V_0$. If you just have to know, here's a circuit that can do that,
 
-<p><img src="/i/rc_step_alt1a.svg" alt="RC step circuit initialized to V0" style="height:160px;"></p>
-<p>Both switches are thrown at the exact same moment. The one on the right opens, and the one on the left closes at $t = 0$.</p>
-</details>
+![RC step circuit initialized to V0]({% link i/rc_step_alt1a.svg %}){: .centered :}{: height="160px" :}
+
+Both switches are thrown at the exact same moment. The one on the right opens, and the one on the left closes at $t = 0$.  
+{% endcapture %}{% include details.html %} 
 
 We model the circuit by writing an equation for the currents flowing *out* of the top right node using [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}),
 
@@ -165,9 +167,9 @@ $\begin{array}{c l c c}
 
 Internally stored energy is referred to as the *initial conditions*, or i.c.'s.
 
-<details>
-<summary>math vocab</summary>
-<p>Mathematicians use the following terms. You may see them in linear algebra class.</p>
+{% capture summary %}math vocab{% endcapture %}  
+{% capture details %}  
+Mathematicians use the following terms. You may see them in linear algebra class.
 
 <p>$\begin{array}{c l c c}
    && \underline{\text{Initial conditions}}& \underline{\text{Inputs}} \\
@@ -177,17 +179,19 @@ Internally stored energy is referred to as the *initial conditions*, or i.c.'s.
 \end{array}$
 </p>
 
-<p>The homogeneous solution can also be called the <em>complementary</em> solution.</p> 
-<p>More math jargon,</p>
-<p>Our differential equation is a mouthful, <br> <em>non-homogeneous first-order constant-coefficient ordinary differential equation</em>.</p>
-<ul>
-<li>*Homogeneous* means the equation contains $v$ and derivatives of $v$, and nothing else. Specifically, there is no constant term.</li>
-<li>*Non-homogeneous* means there is some term that's not $v$ or one of its derivatives. Our equation has a $\text V_{\text S}$ term not related to $v$.</li> 
-<li>*First-order* means the highest derivative is the first derivative $dv/dt$.</li>
-<li>*Constant coefficient* means the values of the components $(\text{R, C})$ are constant and do not change as time goes by.</li> 
-<li>*Ordinary* means there is just one independent variable, $t$.</li>
-</ul>
-</details> 
+The homogeneous solution can also be called the <em>complementary</em> solution. 
+
+More math jargon,
+
+Our differential equation is a mouthful,  
+*non-homogeneous first-order constant-coefficient ordinary differential equation*.
+
+* Homogeneous* means the equation contains $v$ and derivatives of $v$, and nothing else. Specifically, there is no constant term.
+* *Non-homogeneous* means there is some term that's not $v$ or one of its derivatives. Our equation has a $\text V_{\text S}$ term not related to $v$.
+* *First-order* means the highest derivative is the first derivative $dv/dt$.
+* *Constant coefficient* means the values of the components $(\text{R, C})$ are constant and do not change as time goes by.
+* *Ordinary* means there is just one independent variable, $t$.  
+{% endcapture %}{% include details.html %} 
 
 ### Solving a driven circuit
 
@@ -230,24 +234,24 @@ The forced response happens to look exactly like the input. (That doesn't always
 
 In this plot and the others following I'm using a voltage step with $V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. 
 
-<details>
-<summary>What happens if the guess is wrong?</summary>
-<p>What does it look like if you guess at a solution and it doesn't work?</p>
+{% capture summary %}What happens if the guess is wrong?{% endcapture %}  
+{% capture details %}  
+What does it look like if you guess at a solution and it doesn't work?
 
-<p>You guess at a solution, like $v(t) = K\text{(something)}$. 
+You guess at a solution, like $v(t) = K\text{(something)}$. 
 Then you test it by plugging it into the differential equation.
-Your guess works if you can solve for the $K$ constant and it actually turns out to be a constant.</p>
+Your guess works if you can solve for the $K$ constant and it actually turns out to be a constant.
 
-<p>As an example, suppose you guessed a solution $v(t) = K\cdot t$ (instead of $v(t) = K)$. When you plug v(t) into the differential equation,</p>
+As an example, suppose you guessed a solution $v(t) = K\cdot t$ (instead of $v(t) = K)$. When you plug v(t) into the differential equation,
 
-<p>$\dfrac{dKt}{dt} + \dfrac{Kt}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$</p>
+$\dfrac{dKt}{dt} + \dfrac{Kt}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
 
-<p>You get,</p> 
+You get, 
 
-<p>$K + Kt = V/\text{RC}$</p>
+$K + Kt = V/\text{RC}$
 
-<p>When you go to solve this for $K$ you can't get rid of that time term. This says $K$ depends on time, so it's not constant. That's a fail for this proposed solution.</p>
-</details>
+When you go to solve this for $K$ you can't get rid of that time term. This says $K$ depends on time, so it's not constant. That's a fail for this proposed solution.  
+{% endcapture %}{% include details.html %} 
 
 ### Natural response
 
@@ -356,19 +360,18 @@ Assume $\text V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. Let $\text
 
 $v(t) = $  \_\_\_\_\_\_\__ 
 
-<details>
-<summary>show answer</summary>
-<p>The moment of interest is the downward step, so reassign $t=0$ to be the time of the downward step. By repositioning $t=0$ we can use the step response expression above. The roles of the high and low voltages are reversed, so you can think of it this way,</p>
+{% capture summary %}show answer{% endcapture %}  
+{% capture details %}  
+The moment of interest is the downward step, so reassign $t=0$ to be the time of the downward step. By repositioning $t=0$ we can use the step response expression above. The roles of the high and low voltages are reversed, so you can think of it this way,
 
-<p>$\text V_0$ (starting voltage) $= 6\,\text V$ and $\text V_{\text S}$ (ending voltage) $= 2\,\text V$.</p>
+$\text V_0$ (starting voltage) $= 6\,\text V$ and $\text V_{\text S}$ (ending voltage) $= 2\,\text V$.
 
-<p>$v(t) = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
-</p>
+$v(t) = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
 
-<p>$v(t) = 2 + (6 - 2)\,e^{-t/(3\,\text k \,\cdot \, 0.4 \,\mu)}$</p>
+$v(t) = 2 + (6 - 2)\,e^{-t/(3\,\text k \,\cdot \, 0.4 \,\mu)}$
 
-<p>$v(t) = 2 + 4\,e^{-t/1.2\,\text{msec}}$</p>
-</details>
+$v(t) = 2 + 4\,e^{-t/1.2\,\text{msec}}$  
+{% endcapture %}{% include details.html %} 
 
 ## Simulation model
 

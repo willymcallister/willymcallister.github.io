@@ -7,7 +7,7 @@ comments: true
 
 A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. It is a circuit simulator written entirely in JavaScript---it is not a version of SPICE. 
 
-[![Run circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]])  
+[![Run circuit sandbox]({% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]])  
 
 * [Run in English](https://spinningnumbers.org/circuit-sandbox/index.html)  
 * [Ejecutar en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)  
@@ -34,11 +34,11 @@ YOU DON'T NEED TO READ THE REST OF THIS UNLESS YOU GET STUCK.
 
 To create a circuit, drag components from the part bin on the right onto the schematic.
 
-[![Run circuit sandbox]({{ site.baseurl }}{% link i/circuit_sandbox_schematic.png %}){: height="340px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]])
+[![Run circuit sandbox]({% link i/circuit_sandbox_schematic.png %}){: height="340px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]])
 
 Sample output: Click on **TRAN** to perform a *transient* analysis, a plot of voltage vs. time.
 
-{% include img.html img="circuit_sandbox_transient_analysis.png" alt="Transient analysis screenshot" %}{: height="340px" :}
+![Transient analysis screenshot]({% link i/circuit_sandbox_transient_analysis.png %}){: height="340px" :}{: .centered :}
 
 ## Getting started
 
@@ -113,10 +113,10 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 ## On-screen controls 
 
-![Scroll/pan]({{ site.baseurl }}{% link i/circuit_sandbox_scroll_controls.png %}){:height="40px"}  Scroll/Pan     
-![Zoom]({{ site.baseurl }}{% link i/circuit_sandbox_zoom_controls.png %}){:height="80px"}  Zoom in, out, fit          
-![Rotate]({{ site.baseurl }}{% link i/circuit_sandbox_rotate_control.png %}){:height="40px"}  Rotate          
-![Delete]({{ site.baseurl }}{% link i/circuit_sandbox_delete_control.png %}){:height="40px"} Delete        
+![Scroll/pan]({% link i/circuit_sandbox_scroll_controls.png %}){:height="40px"}  Scroll/Pan     
+![Zoom]({% link i/circuit_sandbox_zoom_controls.png %}){:height="80px"}  Zoom in, out, fit          
+![Rotate]({% link i/circuit_sandbox_rotate_control.png %}){:height="40px"}  Rotate          
+![Delete]({% link i/circuit_sandbox_delete_control.png %}){:height="40px"} Delete        
 
 ## Menu bar
 
@@ -155,7 +155,7 @@ The simulator has simple models for semiconductor devices and an ideal operation
 
 The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ ampere. The diode's Area parameter scales the saturation current to Area $\times \,\text I_\text s$. 
 
-{% include img.html img="circuit_sandbox_diode_symbol.png" alt="Circuit Sandbox diode symbol" %}{: height="180px" :}
+![Circuit Sandbox diode symbol]({% link i/circuit_sandbox_diode_symbol.png %}){: height="180px" :}{: .centered :}
 
 Setting the area is equivalent to placing that many diodes in parallel.
 
@@ -163,7 +163,7 @@ Setting the area is equivalent to placing that many diodes in parallel.
 
 The ideal opamp symbol has two inputs (v+ and v-) and an output (vo). There are no positive and negative power supply inputs. The extra input, vg, is the reference for the output voltage. 
 
-{% include img.html img="circuit_sandbox_opamp_symbol.png" alt="Circuit Sandbox opamp symbol" %}{: height="140px" :}
+![Circuit Sandbox opamp symbol]({% link i/circuit_sandbox_opamp_symbol.png %}){: height="140px" :}{: .centered :}
 
 The defining equation for the opamp is: A(vp - vn) = vo - vg
 

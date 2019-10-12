@@ -192,17 +192,20 @@ That's the four symbols for the basic gates. We will learn a bunch more soon.
 A *truth table* is another way to understand the logic operations. It is common to use the 1/0 notation, 1 = true, 0 = false. Again, don't think of 1 and 0 as numbers, yet. They are just two symbols easy to tell apart. A truth table lists all possible variations of the inputs and the outcome in the last column. 
 
 The truth table for AND looks like this,
-{% include img.html img="logic_tt_AND.svg" alt="Truth table for the AND function" %}
+
+![Truth table for the AND function]({% link i/logic_tt_AND.svg %}){: .centered :}
 
 This truth table has four rows because that's how many distinct combinations of A and B there are. (Two input variables have $2^2=4$ combinations. Three variables would have $2^3=8$ possible combinations.) For a second, think about the 1's and 0's as numbers. Notice how similar the AND function is to multiplication. That is where the notation for AND comes from, AB or A$\cdot$B. 
 
 The truth table for OR looks like this,
-{% include img.html img="logic_tt_OR.svg" alt="Truth table for the OR function" %}
+
+![Truth table for the OR function]({% link i/logic_tt_OR.svg %}){: .centered :}
 
 The OR function sort of resembles addition---but not quite. That's why the written form of OR is A+B.  
 
 And the XOR truth table---the only difference is the last row,
-{% include img.html img="logic_tt_XOR.svg" alt="Truth table for the XOR function" %}
+
+![Truth table for the XOR function]({% link i/logic_tt_XOR.svg %}){: .centered :}
 
 The XOR operation is closer to a true addition. It's main job in digital systems is doing the add operation.
 
@@ -256,7 +259,7 @@ Pro tip: You want to be able to write out the input rows of a truth table really
 
 **What is the equation represented by this logic diagram?**
 
-{% include img.html img="logic6.svg" alt="a logic function" %}
+![a simple logic function]({% link i/logic6.svg %}){: .centered :}
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}

@@ -43,7 +43,7 @@ $\sin \theta = \dfrac{\text{opposite}}{\text{hypotenuse}}\qquad \textbf S\text{i
 
 $\cos \theta = \dfrac{\text{adjacent}}{\text{hypotenuse}}\qquad \textbf C\text{osine is } \textbf A\text{djacent over } \textbf H\text{ypotenuse}$
   
-<p>$\tan \theta = \dfrac{\text{opposite}}{\text{adjacent}}\quad\qquad \textbf T\text{angent is } \textbf O\text{pposite over } \textbf A\text{djacent}$  
+$\tan \theta = \dfrac{\text{opposite}}{\text{adjacent}}\quad\qquad \textbf T\text{angent is } \textbf O\text{pposite over } \textbf A\text{djacent}$  
 {% endcapture %}{% include details.html %}
 
 * There's lots more at [trigonometry](https://www.khanacademy.org/math/trigonometry).
@@ -120,20 +120,16 @@ High school physics:
 High school chemistry: 
 * [Elements and atoms](https://www.khanacademy.org/science/biology/chemistry--of-life/elements-and-atoms/v/elements-and-atoms)
 * [Electron and nucleus](https://www.khanacademy.org/science/chemistry/electronic-structure-of-atoms/history-of-atomic-structure/a/discovery-of-the-electron-and-nucleus)
-* The [mole](https://www.khanacademy.org/science/chemistry/atomic-structure-and-properties/introduction-to-the-atom/v/the-mole-and-avogadro-s-number)
+* [Mole](https://www.khanacademy.org/science/chemistry/atomic-structure-and-properties/introduction-to-the-atom/v/the-mole-and-avogadro-s-number)
 
 ## Classics
 
 Engineering equations make more sense if you recognize the Greek alphabet.
-
-<p>
-<details>
-<summary>alpha, beta, gamma, ...</summary>
-<p>
-<img src="/i/greek_alphabet.svg" alt="Greek alphabet" style="width:192px;height:696px;">
-</p>
-</details>
-</p>
+ 
+{% capture summary %}Greek alphabet{% endcapture %}  
+{% capture details %}  
+![Greek alphabet]({% link /i/greek_alphabet.svg %}){: height="696px" :}
+{% endcapture %}{% include details.html %}  
 
 ## Summary
 {:.no_toc}

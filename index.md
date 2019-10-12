@@ -83,4 +83,3 @@ Spinning Numbers web site came to life in 2016 after I completed my fellowship a
 Good luck on your journey into electronics and electrical engineering. Please leave a comment if you enjoy your visit, and ask questions. I'm here to help.
 
    \- Willy McAllister
-

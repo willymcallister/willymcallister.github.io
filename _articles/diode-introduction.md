@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-{% include img.html img="diode_glass1.jpg" alt="Diodes in axial glass pagkage" %}
+![Diodes in axial glass pagkage]({% link i/diode_glass1.jpg %}){: .centered :}
 
 These small glass packages have silicon diodes inside. The black band at one end is the cathode, the side where current flows out of the diode.
 {: .caption :}

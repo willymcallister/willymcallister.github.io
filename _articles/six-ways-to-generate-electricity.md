@@ -9,28 +9,28 @@ There are six ways to generate electricity. Some are more widely used than other
 
 FRICTION — Voltage is produced when you rub certain materials together, like a balloon on your sweater. This was the first kind of electricity humans recognized. A [Van de Graaff generator](https://libraries.mit.edu/_archives/exhibits/van-de-graaff/) produces millions of volts with friction. It is not a very practical way to generate useful voltage---right after the big $ZAP!$ the voltage disappears.
 
-{% include img.html img="van-de-graaff-generator.jpg" alt="Van de Graaff generator" %}{: height="300px" :}
+![Van de Graaff generator]({% link i/van-de-graaff-generator.jpg %}){: .centered :}{: height="300px" :}
 
 PRESSURE (piezoelectricity) — Voltage produced by squeezing crystals of certain substances like quartz or tourmaline. Pronounced "pee-ay'-zoe". The  microphone in a mobile phone is sensitive to sound pressure because it is made with a piezoelectric alloy called PZT, lead zirconate titanate.  
 
-{% include img.html img="piezoelectricity.gif" alt="piezoelectricity" %}
+![piezoelectricity]({% link i/piezoelectricity.gif %}){: .centered :}
 
 HEAT (thermoelectricity) — Voltage is produced by heating the junction between two different metals that have been welded together. This device is called a *thermocouple*. It is used to sense temperature. The schematic symbol looks like this,
 
-{% include img.html img="thermocouple-symbol.svg" alt="thermocouple schematic symbol" %}{: height="100px" :}
+![thermocouple schematic symbol]({% link i/thermocouple-symbol.svg %}){: .centered :}{: height="100px" :}
 
 LIGHT (photoelectricity) — Voltage is produced when light hits a photosensitive (light sensitive) substance. Semiconductor materials like silicon are light sensitive. A *photodiode* is in a package with a window on top to allow light to hit the diode. The amount of light changes the conductivity of the diode.
 
-{% include img.html img="photodiode.jpg" alt="photodiode" %}{: height="200px" :}
+![photodiode]({% link i/photodiode.jpg %}){: .centered :}{: height="200px" :}
 
 CHEMICAL — Voltage can be created by a chemical reaction. We call this a battery. Chemical action generates voltages inside your nerve cells.
 
-{% include img.html img="Duracell_Coppertop_Battery_Family.jpg" alt="batteries" %}{: height="300px" :}
+![batteries]({% link i/Duracell_Coppertop_Battery_Family.jpg %}){: .centered :}{: height="300px" :}
 
 MAGNETISM — Voltage produced when the wire moves through a
 magnetic field, or a magnetic field moves past a conductor. This is how AC electricity is created in large-scale power plants, hydroelectric dams, and portable/emergency generators.
 
-{% include img.html img="Hoover_Dam's_generators2.jpg" alt="Hydroelectric generators at Hoover Dam, AZ USA" %}{: height="400px" :}
+![Hydroelectric generators at Hoover Dam, AZ USA]({% link i/Hoover_Dam's_generators2.jpg %}){: .centered :}{: height="400px" :}
 
 ### References 
 

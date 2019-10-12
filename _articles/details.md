@@ -53,3 +53,39 @@ $\text V_{\text T} = \text V_{\text T} \, \text R_{\text N} = 0.002 \cdot 500 = 
 
 The markdown source file for this article is in \_articles/details.md.
 
+## Image with caption
+
+Image with caption
+
+
+Image with text
+
+{% capture image %}IMAGE FILE NAME{% endcapture %}  
+{% capture alt %}ALT TEXT{% endcapture %}  
+{% capture description %}  
+DESCRIPTION  
+{% endcapture %}{% include image_left_with_text.html %}
+
+```
+{% raw %}
+ 
+{% endraw %}
+```
+
+
+```
+{% raw %}
+ 
+{% endraw %}
+```
+
+{% capture image %}charge_electric-eel.jpg{% endcapture %}  
+{% capture alt %}Electric eel{% endcapture %}
+{% capture height %}200px{% endcapture %}  
+{% capture caption %}This is an electric eel.{% endcapture %}
+{% include image_centered_with_caption.html %}
+
+{% capture image %}charge_electric-eel.jpg{% endcapture %}  
+{% capture alt %}Electric eel{% endcapture %}
+{% capture height %}200px{% endcapture %}  
+{% include image_centered_without_caption.html %}
