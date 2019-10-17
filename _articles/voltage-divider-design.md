@@ -7,9 +7,9 @@ comments: true
 
 A common resistor circuit goes by the nickname *voltage divider*. 
 
-![Voltage divider]({{ site.baseurl }}{% link i/voltage_divider0.svg %}){: .centered :}
+![Voltage divider]({% link i/voltage_divider0.svg %}){: .centered :}
 
-In the [previous article]({{ site.baseurl }}{% link _articles/voltage-divider.md %}) we developed an equation for voltage dividing,
+In the [previous article]({% link _articles/voltage-divider.md %}) we developed an equation for voltage dividing,
 
 $v_{out}  = v_{in}\,\dfrac{\text R2}{\text R1 + \text R2}$ 
 
@@ -38,7 +38,7 @@ The accuracy of a divider is also impacted by the tolerance of the two resistors
 
 ----
 
-A voltage divider isn't useful unless its output is connected to something. Remember back in the [voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %}) article we made an assumption? We assumed the current flowing away from the node between the two resistors was $0$. That let us treat $\text{R1}$ and $\text{R2}$ as if they were in series, and we developed the voltage divider equation. Let's check what happens if that assumption is not true. 
+A voltage divider isn't useful unless its output is connected to something. Remember back in the [voltage divider]({% link _articles/voltage-divider.md %}) article we made an assumption? We assumed the current flowing away from the node between the two resistors was $0$. That let us treat $\text{R1}$ and $\text{R2}$ as if they were in series, and we developed the voltage divider equation. Let's check what happens if that assumption is not true. 
 
 We look at three important cases,
 * Output voltage around the mid-range of the divider $($near $v_{in}/2)$
@@ -55,7 +55,7 @@ $v_{out} = \dfrac{v_{in}}{2}$
 
 In ideal operation, current $i_1$ flows down through $\text R1$ and continues on through $\text R2$. If we connect a load to the divider, represented by resistor $\text R_{\text L}$, this will cause a small portion of $i_1$, we'll call it $i_\text L$, to flow away from the center node, heading to the right through $\text R_\text L$. 
 
-![Voltage divider in mid-range]({{ site.baseurl }}{% link i/voltage_divider10.svg %}){: .centered :}
+![Voltage divider in mid-range]({% link i/voltage_divider10.svg %}){: .centered :}
 
 Does the voltage divider still work with a load, or does our voltage divider story collapse? 
 
@@ -67,7 +67,7 @@ $\text{R}_{\text L} = 10\,\text{R2}$
 
 With this high-resistance load, take a look at what happens to the output voltage. 
 
-$\text{R2}$ and $\text{R}\_{\text L}$ are in parallel. Combine the two parallel resistors using the [parallel resistor formula]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}#special-case---2-resistors-in-parallel),  
+$\text{R2}$ and $\text{R}\_{\text L}$ are in parallel. Combine the two parallel resistors using the [parallel resistor formula]({% link _articles/parallel-resistors.md %}#special-case---2-resistors-in-parallel),  
 
 $\text{R2} \parallel \text{R}\_{\text L} = \dfrac{\text{R2}\cdot\text{R}_{\text L}}{\text{R2}+\text{R}\_{\text L}}$
 
@@ -80,7 +80,7 @@ $\dfrac{\text{R2}\cdot10\,\text{R2}}{\text{R2}+10\,\text{R2}} = \dfrac{10}{11}\,
 
 Here is a redrawn version of our loaded voltage divider, showing the equivalent resistance of $\text R2$ in parallel with $\text R_\text L$,
 
-![Voltage divider with R2 \|\| RL]({{ site.baseurl }}{% link i/voltage_divider11.svg %}){: .centered :}
+![Voltage divider with R2 \|\| RL]({% link i/voltage_divider11.svg %}){: .centered :}
 
 The $10{\times}$ load resistor reduces the resistance at the bottom of the divider by about $9\%$. 
 
@@ -135,7 +135,7 @@ That means $\text R2$, the resistor on the bottom, is $9$ times bigger than $\te
 
 Now we load the circuit with $\text R_\text L$ and see how the output voltage changes. 
 
-![Voltage divider 90% of Vin]({{ site.baseurl }}{% link i/voltage_divider12.svg %})
+![Voltage divider 90% of Vin]({% link i/voltage_divider12.svg %}){: .centered :}
 
 Voltage divider with $v_{out}= 90\%$ of $v_{in}$.
 {: .caption :}
@@ -178,7 +178,7 @@ $\text R1$, the resistor on the top, is $9$ times bigger than $\text R2$.
 
 Now we load the circuit with $\text R_\text L$ and see what happens to the output voltage. 
 
-![Voltage divider 10% of Vin]({{ site.baseurl }}{% link i/voltage_divider12.svg %})
+![Voltage divider 10% of Vin]({% link i/voltage_divider12.svg %}){: .centered :}
 
 Voltage divider with $v_{out}= 10\%$ of $v_{in}$.
 {: .caption :}

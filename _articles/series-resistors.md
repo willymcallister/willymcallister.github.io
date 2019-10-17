@@ -7,7 +7,7 @@ comments: true
 
 Components are in *series* if they are joined head to tail like this, 
 
-![Circuit components in series]({{ site.baseurl }}{% link i/series_resistors1.svg %}){: .centered :} 
+![Circuit components in series]({% link i/series_resistors1.svg %}){: .centered :} 
 
 We show the properties of the series connection using resistors.
 
@@ -27,21 +27,21 @@ Written by Willy McAllister.
 
 Resistors are in series when they are connected head-to-tail *and* there are no other wires branching off from the nodes between components. $\text{R1}$, $\text{R2}$, and $\text{R3}$ are in series,
 
-![Resistors in series]({{ site.baseurl }}{% link i/series_resistors2.svg %}){: .centered :} 
+![Resistors in series]({% link i/series_resistors2.svg %}){: .centered :} 
 
 In a series connection the same current flows in every resistor. All the current going in the front end flows out the other end. The current is the same everywhere along the chain.
 
-![Resistors in series have the same current]({{ site.baseurl }}{% link i/series_resistors2a.svg %}){: .centered :} 
+![Resistors in series have the same current]({% link i/series_resistors2a.svg %}){: .centered :} 
 
 The resistors in the following image are *not* in series. Extra branches lead away from the nodes between resistors. If these branches have current (orange arrows) then $\text{R1}$, $\text{R2}$, and $\text{R3}$ *do not* share the same current and are therefore not in series. 
 
-![Resistors not in series]({{ site.baseurl }}{% link i/series_resistors3.svg %}){: .centered :} 
+![Resistors not in series]({% link i/series_resistors3.svg %}){: .centered :} 
 
 ## Resistors in series
 
 Here is a circuit with resistors in series. Voltage source $\text V_{\text{S}}$ is connected to a chain of resistors. The resistors are connected head-to-tail, so we know they are in series. 
 
-![Three resistors and voltage source]({{ site.baseurl }}{% link i/series_resistors4.svg %}){: .centered :} 
+![Three resistors and voltage source]({% link i/series_resistors4.svg %}){: .centered :} 
 
 Here's what we know,
 
@@ -84,7 +84,7 @@ We can imagine a new bigger *equivalent* resistor equal to the sum of the series
 
 $\text R_{\text{series}} = \text{R1} + \text{R2} + \text{R3}$
 
-![Equivalent series resistor]({{ site.baseurl }}{% link i/series_resistors5.svg %}){: .centered :} 
+![Equivalent series resistor]({% link i/series_resistors5.svg %}){: .centered :} 
 
 You may hear this slang expression: From the "viewpoint" of the voltage source, the three series resistors "look like" one larger equivalent resistor. The current $i$ provided by the voltage source is the same in both cases.
 
@@ -106,7 +106,7 @@ If you have many resistors in series, the general form of the equivalent series 
 
 $\text R_{\text{series}} = \text{R1} + \text{R2} + \ldots + \text{R}_\text N$
 
-![N resistors in series]({{ site.baseurl }}{% link i/series_resistors6.svg %})
+![N resistors in series]({% link i/series_resistors6.svg %})
 
 ## Voltage distributes between resistors in series
 
@@ -120,7 +120,7 @@ This makes more sense if we do an example with real numbers. I encourage you to 
 
 **PROBLEM 1**
 
-![Problem 1 resistor circuit]({{ site.baseurl }}{% link i/series_resistors7.svg %}){: .centered :} 
+![Problem 1 resistor circuit]({% link i/series_resistors7.svg %}){: .centered :} 
 
 **a. What is the current $i$?**
 
@@ -137,7 +137,6 @@ The steps are,
 
 {% capture summary %}Show answer{% endcapture %}  
 {% capture details %}  
-
 **Part a.** The equivalent $\text R_{\text{series}}$ is the sum of the three resistors.
 
 $\text R_{\text{series}} = 300\,\Omega + 500\,\Omega + 1200\,\Omega = 2000\,\Omega$
@@ -146,7 +145,7 @@ The current $i$ comes from Ohm's Law,
 
 $i = \dfrac{v_\text S}{\text R_{\text{series}}} = 10\,\text V / 2000\,\Omega = 0.005\,\text A = 5\,\text{mA}$
 
-![Problem 1 solved for current]({{ site.baseurl }}{% link i/series_resistors8.svg %}) 
+![Problem 1 solved for current]({% link i/series_resistors8.svg %}){: .centered :}  
 
 **Part b.** Knowing $i$, we compute the individual resistor voltages,
 
@@ -158,7 +157,7 @@ $v_{\text{R3}} = i\, \text{R3} = 5\,\text{mA} \cdot 1200\,\Omega = 6.0\,\text V$
 
 Here's the full solution,
 
-![Problem 1 solved for current]({{ site.baseurl }}{% link i/series_resistors9.svg %}) 
+![Problem 1 solved for current]({% link i/series_resistors9.svg %}){: .centered :}  
 
 **Part c.** Check: Do the resistor voltages add up to the source voltage?
 

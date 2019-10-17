@@ -25,7 +25,7 @@ Written by Willy McAllister.
 
 Understanding linearity is an exercise in using function notation $f(x)$.
 
-![Function notation]({{ site.baseurl }}{% link i/linearity_fofx.svg %}){: .centered :}
+![Function notation]({% link i/linearity_fofx.svg %}){: .centered :}
 
 Whatever the input is, it is stuffed into the argument of the function. The output is $f($input$)$.
 
@@ -93,7 +93,7 @@ When you check a function for the scaling property, see if the two sides of the 
 
 The scaling property can be drawn like this,
 
-![Scaling test]({{ site.baseurl }}{% link i/linearity_scaling.svg %}){: .centered :}
+![Scaling test]({% link i/linearity_scaling.svg %}){: .centered :}
 
 If the two outputs are equal then function $f$ has the scaling property and it is a linear function.
 {: .caption :}
@@ -130,7 +130,7 @@ Both sides produce the same result, $24$, so the scaling test passes.
 
 Here's $f(x) = 3x$ plotted as the blue line,
 
-![f(x) = 3x]({{ site.baseurl }}{% link i/linearity_3x_slope.svg %}){: .centered :}
+![f(x) = 3x]({% link i/linearity_3x_slope.svg %}){: .centered :}
 
 $f(x)$ looks pretty "line-ish," but does it pass the scaling test? We demonstrate the scaling test graphically by plotting some points. We start by plotting an arbitrary first point, $[x, f(x)]$. Then we scale $x$ by $a$ and generate two new points, $[ax, f(ax)]$ and $[ax, af(x)]$. If the new points land on the same spot, the scaling test passes. We use $x=4$ and $a=2$ again.
 
@@ -167,7 +167,7 @@ Left side: $\quad f(ax) = f(2 \cdot 4) = 8^2/16 = \underline{4}$
 
 The results, $2$ and $4$, are not the same, so the scaling test fails. We can illustrate this on the graph of the green parabola shown here,
 
-![f(x) = x^2 / 16]({{ site.baseurl }}{% link i/linearity_x_squared.svg %}){: .centered :}
+![f(x) = x^2 / 16]({% link i/linearity_x_squared.svg %}){: .centered :}
 
 $[x, f(x)] = [4, 4^2/16] = [4, 1]$, the $\greenD{\bullet}$ green dot on the $f(x)$ parabola.
 
@@ -206,7 +206,7 @@ $f(x_1 + x_2) = f(x_1) + f(x_2)$
 
 This is the adding property, or *additivity* in math lingo. It says, the function of a sum equals the sum of the function applied to each term. 
 
-![Additivity property]({{ site.baseurl }}{% link i/linearity_additivity1.svg %}){: .centered :}
+![Additivity property]({% link i/linearity_additivity1.svg %}){: .centered :}
 
 The additivity property. Top: the sum of two signals applied to $f(x)$. Bottom: two signals applied individually to $f(x)$ and added together. The outputs are equal.
 {: .caption :}
@@ -217,7 +217,7 @@ Additivity is the theoretical basis for circuit analysis.
 
 Suppose we have a signal made up of two parts, $x_1 + x_2$. Just for fun, $x_1$ could be the voice of a singer and $x_2$ could be guitar music. A microphone picks up the singer's voice. The sound of the strings are sensed by the guitar "pick ups." Both signals connect to a *mixer* (the circle with the plus sign) where they are combined, $x_1 + x_2$. The output of the mixer goes to a *linear amplifier*. The music plays over a loudspeaker. 
 
-![Singer and guitar system]({{ site.baseurl }}{% link i/linearity_additivity2.svg %})
+![Singer and guitar system]({% link i/linearity_additivity2.svg %})
 
 **Does the guitar change what the singer's voice sounds like?** 
 
@@ -230,24 +230,24 @@ To tell if the guitar changes the singer's voice we make three recordings.
 
 1. The singer belts out the song $(x_1)$ while the guitar player goes off in the corner and does his math homework. We record the singer's amplified voice and call it $f(x_1)$, 
 
-![Just the singer]({{ site.baseurl }}{% link i/linearity_additivity3.svg %})
+![Just the singer]({% link i/linearity_additivity3.svg %})
 
 {:start="2"}
 2. The singer goes on break and the guitar player wails on his guitar, $x_2$. We record the guitar by itself and call it $f(x_2)$,
 
-![Just the guitar]({{ site.baseurl }}{% link i/linearity_additivity4.svg %})
+![Just the guitar]({% link i/linearity_additivity4.svg %})
 
 {:start="3"}
 3. The singer and guitar play together and record the amplified sound as $f(x_1 + x_2)$,
 
-![Singer and guitar together]({{ site.baseurl }}{% link i/linearity_additivity5.svg %})
+![Singer and guitar together]({% link i/linearity_additivity5.svg %})
 
 The question is, does $f(x_1 + x_2)$ sound the same or different than $f(x_1) + f(x_2)$? 
 
 {:start="4"}
 4. To find out we play back the individual voice and guitar recordings and add them together, meaning we listen to $f(x_1) + f(x_2)$. 
 
-![Playback singer and guitar]({{ site.baseurl }}{% link i/linearity_additivity6.svg %})
+![Playback singer and guitar]({% link i/linearity_additivity6.svg %})
 
 As we listen to this recording can we tell it apart from $f(x_1 + x_2)$? We were told the amplifier is linear, so it has the additivity property. The additivity property tells us, 
 
@@ -265,7 +265,7 @@ $f(x_1 + x_2)\stackrel{?}{=} f(x_1) + f(x_2)\qquad$ additivity test
 
 If $f(x)$ is not linear and we put $x_1+x_2$ into the input, the output does not come out as the sum of $f(x_1)+f(x_2)$. Instead, the output can be a complicated mash-up of the two inputs. Imagine we build a non-linear function that squares its input, a "squarer."
 
-![f(x) is a squarer function]({{ site.baseurl }}{% link i/linearity_squarer.svg %}){: .centered :}
+![f(x) is a squarer function]({% link i/linearity_squarer.svg %}){: .centered :}
 
 $f(x) = x^2$
 
@@ -296,13 +296,13 @@ $f(2+3) = 2^2 + 2(2\cdot 3) + 3^2 = 4 + 12 + 9 = 25$
 
 ## Superposition
 
-The scaling and additivity properties of linear functions together are called the *principle of superposition*. It is the basis of a [circuit analysis technique]({{ site.baseurl }}{% link _articles/superposition.md %}) with the same name. 
+The scaling and additivity properties of linear functions together are called the *principle of superposition*. It is the basis of a [circuit analysis technique]({% link _articles/superposition.md %}) with the same name. 
 
-Superposition is also put to brilliant use in the [Mesh current method]({{ site.baseurl }}{% link _articles/mesh-current.md %}). It is used in many other engineering areas. Superposition might not seem like a big deal, but it is a huge deal for electronics systems, especially signal processing.
+Superposition is also put to brilliant use in the [Mesh current method]({% link _articles/mesh-current.md %}). It is used in many other engineering areas. Superposition might not seem like a big deal, but it is a huge deal for electronics systems, especially signal processing.
 
 At it's heart, superposition tells us we can take a complex signal (the sum of many simple things) and break it up into its component pieces. We put the simple inputs through the function one by one and add up the outputs. It's a way to avoid the gnarly math of analyzing the original complex signal and still get the right answer. 
 
-In the next article, [Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %}), we test to see if our favorite electronic components, $\text{R, L, and C}$ are linear functions.
+In the next article, [Linearity of electronic components]({% link _articles/linearity-RLC.md %}), we test to see if our favorite electronic components, $\text{R, L, and C}$ are linear functions.
 
 ## Summary
 {:.no_toc}

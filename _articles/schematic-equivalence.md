@@ -131,6 +131,8 @@ The following schematics are equivalent, but the one on the left is not as easy 
 
 ![Equivalent schematics, one drawn better]({{ site.baseurl }}{% link i/equivalence5.svg %}){: .centered :}
 
+Just for fun, this animation transforms one circuit into the other,
+
 {% include embed-video.html %}
 
 ## Capture your intent

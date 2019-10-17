@@ -17,7 +17,7 @@
    height="188"
    viewBox="0 0 118.8325 188"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="delta_wye12.svg"><metadata
      id="metadata41"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -39,9 +39,9 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      fit-margin-left="45"
-     inkscape:zoom="2.1088435"
-     inkscape:cx="48"
-     inkscape:cy="97"
+     inkscape:zoom="2.8829787"
+     inkscape:cx="59.416248"
+     inkscape:cy="94"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -135,7 +135,8 @@
      id="line17"
      style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><g
      id="g19"
-     transform="translate(-99,-8)"><rect
+     transform="translate(-99,-8)"
+     style="fill:none"><rect
        x="150"
        y="174"
        class="st3"
@@ -148,10 +149,9 @@
        cy="180"
        r="3"
        id="circle23"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><text
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><text
      id="text25"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="81"
      y="100"><tspan
        x="81"
@@ -166,7 +166,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Ω</tspan></text>
 <g
      id="g31"
-     transform="translate(-99,-8)"><rect
+     transform="translate(-99,-8)"
+     style="fill:none"><rect
        x="150"
        y="18"
        class="st3"
@@ -179,4 +180,4 @@
        cy="24"
        r="3"
        id="circle35"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g></svg>
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g></svg>

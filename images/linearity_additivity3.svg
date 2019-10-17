@@ -17,7 +17,7 @@
    height="103.26221"
    viewBox="0 0 491.47715 103.26222"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="linearity_additivity3.svg"><metadata
      id="metadata4698"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -71,9 +71,9 @@
      inkscape:window-height="695"
      id="namedview4694"
      showgrid="false"
-     inkscape:zoom="1.0421348"
-     inkscape:cx="279.23451"
-     inkscape:cy="51.631106"
+     inkscape:zoom="1.0214107"
+     inkscape:cx="245.73857"
+     inkscape:cy="51.631104"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -110,8 +110,7 @@
      id="text4622"
      x="333.28384"
      y="253.8221"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%" />
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start" />
 <rect
      x="216.45062"
      y="17.179056"
@@ -122,19 +121,17 @@
      style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:none" /><text
      class="st18 st19"
      id="text4656"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="143.16208"
-     y="43.270943"
-     sodipodi:linespacing="125%">x<tspan
+     y="43.270943">x<tspan
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan75405">1</tspan></text>
 <text
      class="st18 st19"
      id="text4666"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="228.24878"
-     y="59.270981"
-     sodipodi:linespacing="125%">amp</text>
+     y="59.270981">amp</text>
 <g
      id="g5371"
      transform="translate(52.896965,-186.72915)"><circle
@@ -143,7 +140,7 @@
        cx="61.235195"
        id="path4761"
        style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><text
-       style="font-size:21px;font-family:KaTeX_Main-Regular"
+       style="font-size:21px;line-height:0%;font-family:KaTeX_Main-Regular"
        y="244.92784"
        x="52.968929"
        id="text4672-9"
@@ -151,10 +148,9 @@
 </g><text
      class="st18 st19"
      id="text4656-8"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="9.1423779"
-     y="24.872499"
-     sodipodi:linespacing="125%"><tspan
+     y="24.872499"><tspan
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.50000191px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
        id="tspan77007">singer</tspan></text>
 <g
@@ -205,11 +201,10 @@
          id="path4600-9"
          d="m 84,144 c -2.8,1.1 -6.4,2.9 -8.5,4.8 l 1.7,-4.8 -1.7,-4.8 c 2.1,1.9 5.7,3.7 8.5,4.8 z" /></g></g><text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      x="62.371937"
      y="94.626091"
-     id="text77126"
-     sodipodi:linespacing="125%"><tspan
+     id="text77126"><tspan
        sodipodi:role="line"
        id="tspan77128"
        x="62.371937"
@@ -218,36 +213,34 @@
 <flowRoot
      xml:space="preserve"
      id="flowRoot79128"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     transform="translate(-3.0517582e-5,0)"><flowRegion
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-3.0517582e-5)"><flowRegion
        id="flowRegion79130"><rect
          id="rect79132"
          width="261.96228"
          height="147.77359"
          x="274.43668"
          y="-25.320007" /></flowRegion><flowPara
-       id="flowPara79134"></flowPara></flowRoot><g
-     id="g79073"
-     transform="translate(1.948225,0.34189434)"><path
-       sodipodi:nodetypes="cccccc"
-       inkscape:connector-curvature="0"
-       id="path77004"
-       d="m 349.36133,43.514515 18.06472,-12.782173 0.0386,24.725903 0.0386,24.725906 -18.38313,-13.412954 z"
-       inkscape:transform-center-y="-0.28224599"
-       inkscape:transform-center-x="7.1597358"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /><rect
-       y="21.990114"
-       x="343.47839"
-       height="65.903534"
-       width="9.3186789"
-       id="rect77000"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></g><text
+       id="flowPara79134"
+       style="font-size:40px;line-height:1.25"> </flowPara></flowRoot><path
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     inkscape:transform-center-x="7.1597358"
+     inkscape:transform-center-y="-0.28224599"
+     d="m 355.08908,43.856409 18.06472,-12.782173 0.0386,24.725903 0.0386,24.725906 -18.38313,-13.412954 z"
+     id="path77004"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccc" /><rect
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect77000"
+     width="9.3186789"
+     height="65.903534"
+     x="345.42661"
+     y="22.332008" /><text
      class="st18 st19"
      id="text4668-6"
      x="399.08545"
      y="59.949528"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%">f(x<tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">f(x<tspan
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan75409">1</tspan>)</text>
 <path

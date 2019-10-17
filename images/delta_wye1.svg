@@ -17,8 +17,8 @@
    height="181.87621"
    viewBox="0 0 362 181.87621"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="delta-wye1.svg"><metadata
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="delta_wye1.svg"><metadata
      id="metadata4383"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -39,9 +39,9 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      fit-margin-left="10"
-     inkscape:zoom="1.739899"
-     inkscape:cx="184"
-     inkscape:cy="91"
+     inkscape:zoom="1.3867403"
+     inkscape:cx="181"
+     inkscape:cy="90.938103"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -174,13 +174,13 @@
        style="fill:none" /></g><text
      class="st37 st38"
      id="text4313"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="265.00009"
      y="27.876207">Y</text>
 <g
      id="g4315"
-     transform="translate(-14,3.8762082)"><rect
+     transform="translate(-14,3.8762082)"
+     style="fill:none"><rect
        x="282"
        y="156"
        class="st3"
@@ -193,9 +193,10 @@
        cy="162"
        r="3"
        id="circle4319"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g4321"
-     transform="translate(-14,3.8762082)"><rect
+     transform="translate(-14,3.8762082)"
+     style="fill:none"><rect
        x="210"
        y="36"
        class="st3"
@@ -208,9 +209,10 @@
        cy="42"
        r="3"
        id="circle4325"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g4327"
-     transform="translate(-14,3.8762082)"><rect
+     transform="translate(-14,3.8762082)"
+     style="fill:none"><rect
        x="354"
        y="36"
        class="st3"
@@ -223,12 +225,11 @@
        cy="42"
        r="3"
        id="circle4331"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><text
-     transform="matrix(0.99984775,0.01744909,-0.01744909,0.99984775,0,0)"
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><text
+     transform="rotate(0.99980996)"
      class="st37 st38"
      id="text4333"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="80.508743"
      y="26.476435">Δ</text>
 <g
@@ -300,7 +301,8 @@
        id="line4359"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
      id="g4361"
-     transform="translate(-14,3.8762082)"><rect
+     transform="translate(-14,3.8762082)"
+     style="fill:none"><rect
        x="96"
        y="156"
        class="st3"
@@ -313,9 +315,10 @@
        cy="162"
        r="3"
        id="circle4365"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g4367"
-     transform="translate(-14,3.8762082)"><rect
+     transform="translate(-14,3.8762082)"
+     style="fill:none"><rect
        x="168"
        y="36"
        class="st3"
@@ -328,9 +331,10 @@
        cy="42"
        r="3"
        id="circle4371"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g4373"
-     transform="translate(-14,3.8762082)"><rect
+     transform="translate(-14,3.8762082)"
+     style="fill:none"><rect
        x="24"
        y="36"
        class="st3"
@@ -343,4 +347,4 @@
        cy="42"
        r="3"
        id="circle4377"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g></svg>
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g></svg>

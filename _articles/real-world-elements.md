@@ -174,7 +174,7 @@ It looks like a wire wrapped around in a coil, since that is the usual way to ma
 
 Real-world inductors come in lots of shapes.
 
-![Air-core inductor](/i/inductor_air_core.jpg) ![Toroidal ferrite-core inductor](/i/inductor_ferrite_core.png) ![Inductor on form](/i/inductor_on_form.jpg)
+![Air-core inductor](/i/inductor_air_core.jpg){: height="160px" :} ![Toroidal ferrite-core inductor](/i/inductor_ferrite_core.png){: height="160px" :} ![Inductor on form](/i/inductor_on_form.jpg){: height="160px" :}
 
 ### Parasitics
 

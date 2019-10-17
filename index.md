@@ -70,11 +70,13 @@ Tips on the best way to [print]({{ site.baseurl }}{% link printing.md %}) articl
 List of [everything]({{ site.baseurl }}{% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
 
 ----
-### External resources
+#### External resources
 
 [Glossary of electrical terms](https://electricalschool.org/)
 
 ----
+
+#### Greetings
 
 These videos and articles began at Khan Academy where I had the honor of being the Electrical Engineering Content Fellow in 2016. The concepts are explained at the level of an undergraduate EE student. Motivated middle school and high school students can get a lot from the course. 
 

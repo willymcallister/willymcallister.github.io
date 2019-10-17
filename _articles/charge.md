@@ -63,7 +63,7 @@ For the moment, pretend you never heard of electricity. Forget you know about at
 {% capture alt %}Ant in amber{% endcapture %}
 {% include image_centered_without_caption.html %}
 
-Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. They noticed the amber attracted feathers and hair. Today we have a word for this, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so it means the "rubbing-electric" effect.
+Egyptian or Greek aristocrats lounging around wearing their fancy amber jewelry would pet their cats with it. They noticed the amber attracted feathers and hair. Today we have a word for this, the [*triboelectric effect*]({{ site.baseurl }}{% link _videos/triboelectric-effect.md %}). "Tribo-" is Greek for "rub", so it means "rubbing-electric" effect.
 
 You get the same effect passing a plastic comb through your dry hair, or rubbing a balloon on your sweater. The comb makes your hair stand up. The balloon attracts things but repels other rubbed balloons.
 

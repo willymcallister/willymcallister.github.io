@@ -17,8 +17,8 @@ I encourage you to work through this on paper. Write out truth tables as you nee
 
 ## Identities
 
-<span class="oline">0</span> =  
-<span class="oline">1</span> =  
+<span class="oline">0</span> = \_\_\_\_\_\_  
+<span class="oline">1</span> = \_\_\_\_\_\_
 
 NOT(NOT B) =  
 
@@ -28,20 +28,20 @@ NOT(NOT B) =
 {% endcapture %}{% include details.html %}
 
 
-A &middot; <span class="oline">A</span> =    
-A + <span class="oline">A</span> =  
+A &middot; <span class="oline">A</span> =  \_\_\_\_\_\_  
+A + <span class="oline">A</span> =  \_\_\_\_\_\_
 
-A &middot; 0 =  
-A &middot; 1 =   
-A &middot; A =  
+A &middot; 0 =  \_\_\_\_\_\_  
+A &middot; 1 =  \_\_\_\_\_\_    
+A &middot; A =  \_\_\_\_\_\_
 
-A + 0 =   
-A + 1 =   
-A + A =  
+A + 0 =  \_\_\_\_\_\_   
+A + 1 =  \_\_\_\_\_\_   
+A + A =  \_\_\_\_\_\_
 
-A $\oplus$ 0 =  
-A $\oplus$ 1 =   
-A $\oplus$ A =  
+A $\oplus$ 0 =  \_\_\_\_\_\_  
+A $\oplus$ 1 =  \_\_\_\_\_\_   
+A $\oplus$ A =  \_\_\_\_\_\_
 
 ## Properties
 
@@ -63,7 +63,7 @@ A + BC = (A + B)(A + C)
 
 Draw a logic diagram of each expression. Then pick from identities and properties to simplify,
 
-A + AB = 
+A + AB = \_\_\_\_\_\_
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
@@ -78,7 +78,7 @@ A &middot; (1 + B) = A &middot; 1 = A
 The outcome of A + AB does not depend on B. 
 {% endcapture %}{% include details.html %}
 
-A(A + B) =  
+A(A + B) =  \_\_\_\_\_\_
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %} 

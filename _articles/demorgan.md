@@ -7,7 +7,7 @@ comments: true
 
 DeMorgan's theorem unleashes the full power of NAND and NOR gates. It is by far the most important theorem in digital design. DeMorgan lets you clearly reveal your *design intent*. Logic becomes easier to understand and get right.
 
-Using DeMorgan's theorem in your designs is an important aspect of *discipline* we talked about in the [introduction to digital electronics]({{ site.baseurl }}{% link _articles/digital-electronics.md %}).
+Using DeMorgan's theorem in your designs is an important aspect of *discipline* we talked about in the [introduction to digital electronics]({% link _articles/digital-electronics.md %}).
 
 Written by Willy McAllister.
 
@@ -36,10 +36,10 @@ DeMorgan's theorem,
 
 DeMorgan's theorem emerges from the truth tables for NAND and NOR. Let's look at NAND,
 
-![NAND symbol]({{ site.baseurl }}{% link i/logic_NAND.svg %})
-![NAND truth table]({{ site.baseurl }}{% link i/logic_tt_NAND.svg %})
+![NAND symbol]({% link i/logic_NAND.svg %})
+![NAND truth table]({% link i/logic_tt_NAND.svg %})
 
-Back when we introduced [NAND and NOR]({{ site.baseurl }}{% link _articles/logic-nand-nor.md %}) and the [basic logic gates]({{ site.baseurl }}{% link _articles/logic.md %}#operators) we defined the operations with a single statement that said how to make the output TRUE. But, there is another way to describe a truth table. You can describe when the output is FALSE. 
+Back when we introduced [NAND and NOR]({% link _articles/logic-nand-nor.md %}) and the [basic logic gates]({% link _articles/logic.md %}#operators) we defined the operations with a single statement that said how to make the output TRUE. But, there is another way to describe a truth table. You can describe when the output is FALSE. 
 
 **Write two statements, one for when the output of NAND is FALSE, and another when the output is TRUE.**
 
@@ -59,8 +59,8 @@ From this we get DeMorgan's theorem for NAND, <span class="oline">A&middot;B</sp
 
 Now we look at the NOR truth table,
 
-![NOR symbol]({{ site.baseurl }}{% link i/logic_NOR.svg %})
-![NOR truth table]({{ site.baseurl }}{% link i/logic_tt_NOR.svg %})
+![NOR symbol]({% link i/logic_NOR.svg %})
+![NOR truth table]({% link i/logic_tt_NOR.svg %})
 
 There are two ways to describe the NOR truth table---when the output is FALSE or when the output is TRUE. **How would you do it? Give it a try.**
 
@@ -89,11 +89,11 @@ The two forms of DeMorgan's theorem are,
 
 {:start="1"} 
 1. Fill out this truth table a column at a time to reinforce DeMorgan's theorem.  
-![DeMorgan truth table]({{ site.baseurl }}{% link i/logic_tt_demorgan.svg %})
+![DeMorgan truth table]({% link i/logic_tt_demorgan.svg %})
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
-![DeMorgan truth table solved]({{ site.baseurl }}{% link i/logic_tt_demorgan_solved.svg %})
+![DeMorgan truth table solved]({% link i/logic_tt_demorgan_solved.svg %})
 {% endcapture %}{% include details.html %} 
 
 {:start="2"}
@@ -161,7 +161,7 @@ or
 
 What if there isn't a bar on every term? What if you have something like <span class="oline">A</span> &middot; B and you want to use deMorgan's theorem? DeMorgan's theorem is written with bars on every term, so if one term has no bar we do a little trick: we add two bars above B, and then use the same rule. Two bars is a logic identity, <span class="ooline"><span class="oline">B</span></span> = B. Inverting B twice gives you back B.
 
-![Inverting twice is a logic identity. B-bar-bar = B]({{ site.baseurl }}{% link i/logic27.svg %})
+![Inverting twice is a logic identity. B-bar-bar = B]({% link i/logic27.svg %})
 
 This lets us write <span class="oline">A</span> &middot; B as <span class="oline">A</span> &middot; <span class="ooline"><span class="oline">B</span></span> and every term has at least one bar over it. 
 
@@ -175,13 +175,13 @@ DeMorgan's theorem suggests additional gate symbols.
 
 Look at the NAND form of DeMorgan's theorem: If <span class="oline">A&middot;B</span> = <span class="oline">A</span> + <span class="oline">B</span> then,
 
-![DeMorgan NAND symbols]({{ site.baseurl }}{% link i/logic22.svg %})
+![DeMorgan NAND symbols]({% link i/logic22.svg %})
 
 The symbol on the left is the usual NAND symbol. On the right we just invented an equivalent symbol for NAND. These two symbols are *both* NAND gates. DeMorgan's theorem says the equivalent symbols do *exactly* the same thing. The new symbol on the right emphasizes the OR part of the DeMorgan equation.
 
 How about for the NOR form? If <span class="oline">A + B</span> = <span class="oline">A</span> &middot; <span class="oline">B</span> then,
 
-![DeMorgan NOR symbols]({{ site.baseurl }}{% link i/logic23.svg %})
+![DeMorgan NOR symbols]({% link i/logic23.svg %})
 
 The symbol on the left is the usual NOR symbol. On the right we just invented an equivalent symbol for NOR. These two symbols are *both* NOR gates. DeMorgan's theorem says the equivalent symbols do *exactly* the same thing. The one on the right emphasizes the AND part of the DeMorgan equation. 
 

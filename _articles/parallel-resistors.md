@@ -6,7 +6,7 @@ comments: true
 ---
 Components are in *parallel* if they share two nodes, like this, 
 
-![Circuit components in parallel]({{ site.baseurl }}{% link i/parallel_resistors1.svg %}){: .centered :}  
+![Circuit components in parallel]({% link i/parallel_resistors1.svg %}){: .centered :}  
 
 We reveal the properties of the parallel connection by looking at resistor circuits. Figuring out parallel resistors is a little trickier than series resistors.
 
@@ -28,24 +28,24 @@ Components are in parallel when their two terminals connect to the same nodes.
 
 In the following image, $\text R1$, $\text R2$, and $\text R3$ are in parallel. The two horizontal lines represent the two nodes shared by all three resistors.
 
-![Resistors in parallel]({{ site.baseurl }}{% link i/parallel_resistors2.svg %}){: .centered :} 
+![Resistors in parallel]({% link i/parallel_resistors2.svg %}){: .centered :} 
 
 {% capture summary %}Review the definition of a node{% endcapture %}  
 {% capture details %}  
-Review the definitions of *node* and a *distributed node* in this article on [Circuit terminology]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}#node). Another good resource to help you understand parallel circuits is this article on [Schematic equivalence]({{ site.baseurl }}{% link _articles/schematic-equivalence.md %}).  
+Review the definitions of *node* and a *distributed node* in this article on [Circuit terminology]({% link _articles/circuit-terminology.md %}#node). Another good resource to help you understand parallel circuits is this article on [Schematic equivalence]({% link _articles/schematic-equivalence.md %}).  
 {% endcapture %}{% include details.html %}
 
 Because the resistors are connected to the same nodes, the same voltage appears across each parallel resistor. 
 
 The resistors in the following image are *not* in parallel. There are extra components (orange boxes) breaking up the common nodes between resistors. This circuit has four separate nodes, so $\text R1$, $\text R2$, and $\text R3$ *do not* share the same voltage.
 
-![Components not in parallel]({{ site.baseurl }}{% link i/parallel_resistors3.svg %}){: .centered :} 
+![Components not in parallel]({% link i/parallel_resistors3.svg %}){: .centered :} 
 
 ## Resistors in parallel
 
 Here is a circuit with resistors in parallel. This circuit has a current source. We don't get to use those very often, so this should be fun.
 
-![Parallel resistor circuit]({{ site.baseurl }}{% link i/parallel_resistors4.svg %}){: .centered :} 
+![Parallel resistor circuit]({% link i/parallel_resistors4.svg %}){: .centered :} 
 
 Current source $\text I_\text s$ is driving current $i$ towards $\text R1$, $\text R2$, and $\text R3$. Current $i$ returns to the bottom terminal of the current source.  but we don't yet know the voltage $v$ or how $i$ splits up into the three resistor currents. 
 
@@ -104,7 +104,7 @@ $\dfrac{1}{\text R_{\text{parallel}}} = \dfrac{1}{\text R1} +\dfrac{1}{\text R2}
 
 You can replace the three parallel resistors with a single equivalent resistor and $i$ and $v$ stay exactly the same.
 
-![Equivalent parallel resistor]({{ site.baseurl }}{% link i/parallel_resistors5.svg %}){: .centered :} 
+![Equivalent parallel resistor]({% link i/parallel_resistors5.svg %}){: .centered :} 
 
 From the "viewpoint" of the current source, you can't tell the difference between the equivalent resistor and the three parallel resistors. 
 
@@ -114,13 +114,13 @@ We can generalize the parallel resistor equation for any number of resistors in 
 
 $\dfrac{1}{\text R_{\text{parallel}}} = \dfrac{1}{\text R1} +\dfrac{1}{\text R2} + \ldots + \dfrac{1}{\text{R}_\text N}$
 
-$\qquad\quad$![N parallel resistors]({{ site.baseurl }}{% link i/parallel_resistors6.svg %})
+$\qquad\quad$![N parallel resistors]({% link i/parallel_resistors6.svg %})
 
 ## Current distributes between resistors in parallel
 
 Let's figure out how the main current $i$ splits up and flows through each resistor. We are looking for $i_{\text R1}$, $i_{\text R2}$, and $i_{\text R3}$.  
 
-![Parallel resistor circuit]({{ site.baseurl }}{% link i/parallel_resistors4.svg %}){: .centered :} 
+![Parallel resistor circuit]({% link i/parallel_resistors4.svg %}){: .centered :} 
 
 Apply Ohm's Law to the individual resistors. $v$ is the same in each equation,
 
@@ -136,7 +136,7 @@ This will sink in better if we do an example with real numbers.
 
 **PROBLEM 1**
 
-![Problem 1 circuit]({{ site.baseurl }}{% link i/parallel_resistors7.svg %}){: .centered :} 
+![Problem 1 circuit]({% link i/parallel_resistors7.svg %}){: .centered :} 
 
 **a. Find voltage $v$.**
 
@@ -165,7 +165,7 @@ $v = i\,\text R_{\text{parallel}}$
 
 $v  = 100\,\text{mA} \cdot 31.25\,\Omega = 3.125\,\text V$
 
-![Problem 1 circuit]({{ site.baseurl }}{% link i/parallel_resistors8.svg %}) 
+![Problem 1 circuit]({% link i/parallel_resistors8.svg %}){: .centered :} 
 
 **Part b.** Knowing $v$ we can go back and compute the individual resistor currents,
 
@@ -177,7 +177,7 @@ $i_{\text R3} = \dfrac{v}{\text R3} = \dfrac{3.125\,\text V}{\text{500}} = \phan
 
 Here is what the solution looks like,
 
-![Problem 1 solution]({{ site.baseurl }}{% link i/parallel_resistors9.svg %})
+![Problem 1 solution]({% link i/parallel_resistors9.svg %}){: .centered :}
 
 **Part c.** Check: Do the resistor currents add up to the source current?
 
@@ -241,7 +241,7 @@ Trick question. All three resistors have the same voltage. That's what it means 
 
 ## Special case --- $2$ resistors in parallel
 
-![2 resistors in parallel]({{ site.baseurl }}{% link i/parallel_resistors10.svg %}){: .centered :} 
+![2 resistors in parallel]({% link i/parallel_resistors10.svg %}){: .centered :} 
 
 From the general equation, two resistors in parallel have an equivalent resistance of,
 

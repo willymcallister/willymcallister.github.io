@@ -21,11 +21,11 @@ Written by Willy McAllister.
 
 The *Delta* and *Wye* names come from the shape of the circuits, which resemble letters. The transformation allows you to replace three resistors in a $\Delta$ configuration by three resistors in a $\text Y$ configuration, and the other way around. 
 
-![Delta and Wye configurations]({{ site.baseurl }}{% link i/delta_wye1.svg %}){: .centered :} 
+![Delta and Wye configurations]({% link i/delta_wye1.svg %}){: .centered :} 
 
 Drawing $\Delta$ and $\text Y$ this way emphasizes the 3 terminals. The configurations can be redrawn to square up the resistors. This is called a $\pi - \text T$ configuration,
 
-![Pi and T configurations]({{ site.baseurl }}{% link i/delta_wye2.svg %}){: .centered :} 
+![Pi and T configurations]({% link i/delta_wye2.svg %}){: .centered :} 
 
 The $\pi - \text T$ style is what you might find in a typical schematic. The transformation equations apply to $\pi - \text T$ as well.
 
@@ -37,14 +37,14 @@ Something to notice: The two configurations have a different number of nodes. $\
 
 For the transformation to be valid, the resistance between each pair of terminals must be the same before and after. 
 
-![Delta and Wye configurations with labeled nodes and resistors.]({{ site.baseurl }}{% link i/delta_wye3.svg %}){: .centered :} 
+![Delta and Wye configurations with labeled nodes and resistors.]({% link i/delta_wye3.svg %}){: .centered :} 
 
 DIAGRAM 1 $- \,\Delta$ and $\text Y$ configurations with labeled nodes and resistors.
 {: .caption :}
 
 It is possible to write three simultaneous equations to capture this constraint. 
 
-Consider terminals $x$ and $y$ on the $\text Y$ side. Assume terminal $z$ isn't connected to anything, so the current in $R3$ is $0$. We can make this assumption because we know resistors are [linear]({{ site.baseurl }}{% link _articles/linearity.md %}) devices and we can apply the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). (If you haven't studied linearity and superposition yet, please trust me for now that the assumption is a good one.) 
+Consider terminals $x$ and $y$ on the $\text Y$ side. Assume terminal $z$ isn't connected to anything, so the current in $R3$ is $0$. We can make this assumption because we know resistors are [linear]({% link _articles/linearity.md %}) devices and we can apply the principle of [superposition]({% link _articles/superposition.md %}). (If you haven't studied linearity and superposition yet, please trust me for now that the assumption is a good one.) 
 
 In the $\Delta$ configuration, the resistance between  $x$ and $y$ is $Rc$ in parallel with $Ra +Rb$. On the $\text Y$ side, the resistance between $x$ and $y$ is the series combination $R1+R2$. 
 
@@ -54,7 +54,7 @@ $R1+R2 = \dfrac{Rc\,(Ra+Rb)}{Rc+(Ra+Rb)}$
 
 We can write two similar expressions for the other two pairs of terminals. Notice the $\Delta$ resistors have letter names, $(Ra$, etc.$)$ and the $\text Y$ resistors have number names, $(R1$, etc.$)$.
 
-After solving the simultaneous equations (not shown), we get the equations to transform either network into the other. Find a full derivation of the transform equations is in this [article]({{ site.baseurl }}{% link _articles/delta-wye-derivations.md %}).
+After solving the simultaneous equations (not shown), we get the equations to transform either network into the other. Find a full derivation of the transform equations is in this [article]({% link _articles/delta-wye-derivations.md %}).
 
 ### $\Delta \rightarrow \text Y$ transformation
 
@@ -92,7 +92,7 @@ $R2 = \dfrac{Ra\,Rc}{Ra + Rb + Rc} = \dfrac{3 \cdot 3}{3 + 3 + 3} = 1\,\Omega$
 
 $R3 = \dfrac{Ra\,Rb}{Ra + Rb + Rc} = \dfrac{3 \cdot 3}{3 + 3 + 3} = 1\,\Omega$
 
-![3 ohm Delta and 1 ohm Wye]({{ site.baseurl }}{% link i/delta_wye4.svg %}) 
+![3 ohm Delta and 1 ohm Wye]({% link i/delta_wye4.svg %}){: .centered :}
 
 Going in the other direction, from $\text Y \rightarrow\Delta$, looks like this,
 
@@ -112,21 +112,21 @@ Look like a wizard: If you come across a *balanced* $\Delta$ or $\text Y$ (all t
 
 Now for an example that's a little less tidy. Let's find the equivalent resistance between the top and bottom terminals of this circuit,
 
-![Example 2 less tidy delta circuit]({{ site.baseurl }}{% link i/delta_wye5.svg %}){: .centered :}
+![Example 2 less tidy delta circuit]({% link i/delta_wye5.svg %}){: .centered :}
 
 Try as we might, there are no resistors in series or in parallel. But we are not stuck. First, let's redraw the schematic to emphasize we have two $\Delta$ connections stacked one on top of the other, 
 
-![Example 2 drawn as two deltas]({{ site.baseurl }}{% link i/delta_wye6.svg %}){: .centered :}
+![Example 2 drawn as two deltas]({% link i/delta_wye6.svg %}){: .centered :}
 
 Now select one of the $\Delta$'s to convert to a $\text Y$. We will perform a $\Delta \rightarrow \text Y$ transformation on the bottom $\Delta$ (an arbitrary choice). This might break the log jam, opening up other opportunities for simplification. 
 
 *Very carefully* label the resistors and nodes. It is critical to keep the resistor names and node names straight. $Rc$ must connect between nodes $x$ and $y$, and so on for the other resistors. Refer to <small>DIAGRAM 1</small> above for the labeling convention.
 
-![Example 2 with labels]({{ site.baseurl }}{% link i/delta_wye7.svg %}){: .centered :}
+![Example 2 with labels]({% link i/delta_wye7.svg %}){: .centered :}
 
 When we do the transform on the lower $\Delta$, the three black $\Delta$ resistors will be replaced by three new gray $\text Y$ resistors, like this,
 
-![Example 2 with shadow Wye]({{ site.baseurl }}{% link i/delta_wye8.svg %}){: .centered :}
+![Example 2 with shadow Wye]({% link i/delta_wye8.svg %}){: .centered :}
 
 **Convert the lower $\Delta$ to a $\text Y$. Draw the new circuit.**
 
@@ -146,19 +146,19 @@ To draw the new circuit, substitute the equivalent $\text Y$ network in place of
 
 Voilà! Here's our circuit with the $\text Y$ resistors in place of the bottom $\Delta$. The circuit now has series and parallel resistors where there were none before.
 
-![Example 2 with Wye transformation]({{ site.baseurl }}{% link i/delta_wye9.svg %}){: .centered :}
+![Example 2 with Wye transformation]({% link i/delta_wye9.svg %}){: .centered :}
 
 Here's the circuit redrawn all squared up in a familiar style,
 
-![Example 2 with Wye transformation]({{ site.baseurl }}{% link i/delta_wye10.svg %}){: .centered :}
+![Example 2 with Wye transformation]({% link i/delta_wye10.svg %}){: .centered :}
 {% endcapture %}{% include details.html %}
 
-We continue simplification using series and parallel resistor combinations, just as we did in the article on how to [simplify resistor networks]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}).
+We continue simplification using series and parallel resistor combinations, just as we did in the article on how to [simplify resistor networks]({% link _articles/simplify-resistor-networks.md %}).
 
 On the left branch, $3.125 + 1.25 = 4.375 \,\Omega$  
 On the right branch, $4 + 1 = 5\,\Omega$
 
-![Example 2 simplified]({{ site.baseurl }}{% link i/delta_wye11.svg %}){: .centered :}
+![Example 2 simplified]({% link i/delta_wye11.svg %}){: .centered :}
 
 The two parallel resistors combine as, 
 
@@ -168,7 +168,7 @@ And we finish by adding the last two series resistors together,
 
 $R_{equivalent} = 2.33 + 1.66 = 4\,\Omega$
 
-![Example 2 result 4 ohms]({{ site.baseurl }}{% link i/delta_wye12.svg %}){: .centered :}
+![Example 2 result 4 ohms]({% link i/delta_wye12.svg %}){: .centered :}
 
 The original five resistors simplify down to a single $4\,\Omega$ resistor.
 
@@ -185,7 +185,7 @@ $\Delta - \text Y$ transformations are another tool in your bag of tricks for si
 
 Don't bother to memorize the transformation equations. If the need arises, you can look them up.
 
-For the curious: Find a full derivation of the transform equations is in this [article]({{ site.baseurl }}{% link _articles/delta-wye-derivations.md %}).
+For the curious: Find a full derivation of the transform equations is in this [article]({% link _articles/delta-wye-derivations.md %}).
 
 
 

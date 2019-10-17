@@ -2,15 +2,43 @@
 
 ---
 
-// Styles for spinningnumbers
+// Custom styles for spinningnumbers
 
 //div {border: 1px solid blue;}     //debug
 //span {border: 1px solid red;}     //debug
 
-$base-font-size:    18px !default;
-$comment-font-size: 17px !default;
-$brand-color:       #1E72DC !default;
-$grey-color:        #757575 !default;
+$base-font-size:     18px !default;
+$comment-font-size:  17px !default;
+$grey-color:         #757575 !default;
+$grey-color-darkish: darken($grey-color, 15%) !default;
+$grey-color-dark:    darken($grey-color, 25%) !default;
+$brand-color:        #2a7ae2;
+$brand-color-dark:   darken($brand-color,10%) !default;
+
+
+html, html[data-theme="light"], {
+    --text-color: #111;
+    --table-text-color: #3f3f3f;
+    --table-header-color: #e3e3e3;
+    --table-zebra-color: #eaeaea;
+    --background-color: #fdfdfd;
+    --img-background-color: #fdfdfd;
+}
+
+html[data-theme="dark"] {
+    --text-color: silver;
+    --table-text-color: #d3d3d3;
+    --table-header-color: #808080;
+    --table-zebra-color: #4d4d4d;
+    --background-color: #353535;
+    --img-background-color: #4f4f4f;    //$grey-color-darkish
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+      content: "dark";
+    }
+}
 
 @import "minima";
 
@@ -47,16 +75,52 @@ blockquote {
 
 hr {
     margin: 1em 0;
-    //border-top: $grey-color;
     border-top: 1px solid $grey-color-light;
 }
 
 table {
-    width: inherit !important;        //overrides 100% in _base.scss
+  width: inherit !important;          //overrides 100% in _base.scss
+  color: var(--table-text-color);
+  tr {
+    &:nth-child(even) {
+      background-color: var(--table-zebra-color);
+    }
+  }
+  th {
+    background-color: var(--table-header-color);
+  }
 }
 
 body {
     -webkit-text-size-adjust: none;   //overrides 100% in _base.scss
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main img {
+    background-color: var(--img-background-color);
+    opacity: .75
+}
+
+a {
+  //color: var(--brand-color);
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+  //  color: var(--brand-color);
+  color: $brand-color-dark;
+  }
+
+  &:hover {
+  //  color: var(--brand-color);
+  color: $brand-color-dark;
+    text-decoration: underline;
+  }
+}
+
+.site-nav .page-link {
+    color: var(--text-color);
 }
 
 //
@@ -79,17 +143,15 @@ details {
     margin-bottom: 15px;
 }
 details[open] {
-    background: $grey-color-light;
+    background: $grey-color-darkish;
     padding: 0px 8px 8px 8px;
 }
 summary {
     margin: 0px 0px 8px 0px;
     outline:none;
 }
-
-$ka-default5 : #236ec9 !default;
 details summary {
-    color: $ka-default5;
+    color: $brand-color;
 }
 
 //
@@ -98,8 +160,8 @@ details summary {
 input, select, textarea, label, button {
 //    @extend body;
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -120,7 +182,7 @@ textarea {
     vertical-align: top;
 }
 .textfield__input {
-    border: 1px solid rgba(0,0,0,.12);
+    border: 1px solid $grey-color;
     padding: 4px 5px;
     width: 100%;
     font-size: $comment-font-size; 
@@ -270,4 +332,17 @@ button:hover {
 }
 a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
+}
+
+// Dark Theme
+
+.site-header {
+  border-top: 5px solid $brand-color;
+}
+
+.site-title {
+  &,
+  &:visited {
+    color: inherit;
+  }
 }

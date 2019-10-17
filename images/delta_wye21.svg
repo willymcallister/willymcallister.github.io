@@ -17,7 +17,7 @@
    height="194.28322"
    viewBox="0 0 402.17432 194.28322"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="delta_wye21.svg"><metadata
      id="metadata10993"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -35,7 +35,7 @@
      inkscape:window-height="734"
      id="namedview10989"
      showgrid="false"
-     inkscape:zoom="1.6709172"
+     inkscape:zoom="1.248215"
      inkscape:cx="201.08716"
      inkscape:cy="97.141609"
      inkscape:window-x="0"
@@ -91,7 +91,17 @@
 	.st40{fill:#11ACCD;stroke:#000000;stroke-miterlimit:10;}
 	.st41{fill:#BABEC2;stroke:#BABEC2;stroke-miterlimit:10;}
 	.st42{stroke:#000000;stroke-miterlimit:10;}
-</style><g
+</style><path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 99.956169,163.39536 C 181.85768,140.02328 172.65858,50.697289 169.58782,47.225991"
+     id="path11558-2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" /><path
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 304.05851,163.26582 c 81.9015,-23.37208 72.7024,-112.698076 69.63164,-116.169374"
+     id="path11558"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" /><g
      id="g10871"
      transform="translate(1.3882991,1.8625008)"><line
        class="st0"
@@ -173,7 +183,8 @@
        id="rect10901"
        style="fill:none" /></g><g
      id="g10903"
-     transform="translate(1.3882991,1.8625008)"><rect
+     transform="translate(1.3882991,1.8625008)"
+     style="fill:none"><rect
        x="294"
        y="156"
        class="st3"
@@ -186,9 +197,10 @@
        cy="162"
        r="3"
        id="circle10907"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g10909"
-     transform="translate(1.3882991,1.8625008)"><rect
+     transform="translate(1.3882991,1.8625008)"
+     style="fill:none"><rect
        x="222"
        y="36"
        class="st3"
@@ -201,9 +213,10 @@
        cy="42"
        r="3"
        id="circle10913"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g10915"
-     transform="translate(1.3882991,1.8625008)"><rect
+     transform="translate(1.3882991,1.8625008)"
+     style="fill:none"><rect
        x="366"
        y="36"
        class="st3"
@@ -216,7 +229,7 @@
        cy="42"
        r="3"
        id="circle10919"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g10921"
      transform="translate(1.3882991,1.8625008)"><line
        class="st0"
@@ -285,7 +298,8 @@
        id="line10945"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
      id="g10947"
-     transform="translate(1.3882991,1.8625008)"><rect
+     transform="translate(1.3882991,1.8625008)"
+     style="fill:none"><rect
        x="90"
        y="156"
        class="st3"
@@ -298,9 +312,10 @@
        cy="162"
        r="3"
        id="circle10951"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g10953"
-     transform="translate(1.3882991,1.8625008)"><rect
+     transform="translate(1.3882991,1.8625008)"
+     style="fill:none"><rect
        x="162"
        y="36"
        class="st3"
@@ -313,9 +328,10 @@
        cy="42"
        r="3"
        id="circle10957"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><g
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><g
      id="g10959"
-     transform="translate(1.3882991,1.8625008)"><rect
+     transform="translate(1.3882991,1.8625008)"
+     style="fill:none"><rect
        x="18"
        y="36"
        class="st3"
@@ -328,67 +344,58 @@
        cy="42"
        r="3"
        id="circle10963"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><text
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><text
      class="st26 st38 st39"
      id="text10965"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="9.2124996"
      y="37.862499">x</text>
 <text
      class="st26 st38 st39"
      id="text10967"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="177.0143"
      y="37.862499">y</text>
 <text
      class="st26 st38 st39"
      id="text10969"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="91.533882"
      y="184.03572">z</text>
 <text
      class="st26 st38 st39"
      id="text10971"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="213.21249"
      y="37.862499">x</text>
 <text
      class="st26 st38 st39"
      id="text10973"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="381.01431"
      y="37.862499">y</text>
 <text
      class="st26 st38 st39"
      id="text10975"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="295.53387"
      y="184.03572">z</text>
 <text
      class="st26 st38 st39"
      id="text10977"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="146.22859"
      y="115.8625">Ga</text>
 <text
      class="st26 st38 st39"
      id="text10979"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="86.687599"
      y="25.862499">Gc</text>
 <text
      class="st26 st38 st39"
      id="text10981"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="235.14198"
      y="91.862503">G<tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -396,8 +403,7 @@
 <text
      class="st26 st38 st39"
      id="text10983"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="338.22861"
      y="91.862503">G<tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -405,8 +411,7 @@
 <text
      class="st26 st38 st39"
      id="text10985"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="314.22861"
      y="133.8625">G<tspan
    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
@@ -414,16 +419,10 @@
 <text
      class="st26 st38 st39"
      id="text10987"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#11accd"
      x="19.600988"
      y="115.8625">Gb</text>
 <path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="m 304.05851,163.26582 c 81.9015,-23.37208 72.7024,-112.698076 69.63164,-116.169374"
-     id="path11558"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cc" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 362.1432,118.12772 9.0976,6.64825"
      id="path11560"
@@ -447,11 +446,6 @@
        r="3"
        id="circle10907-2"
        style="fill:#000000;stroke:#000000;stroke-miterlimit:10" /></g><path
-     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     d="M 99.956169,163.39536 C 181.85768,140.02328 172.65858,50.697289 169.58782,47.225991"
-     id="path11558-2"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cc" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 158.04087,118.25726 9.0976,6.64825"
      id="path11560-3"

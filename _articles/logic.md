@@ -37,11 +37,11 @@ All squares are rectangles.
 All rectangles have four sides.  
 Therefore all squares have four sides.
 
-For hundreds of years philosophers studied the nuances of true and false. They organized logic into categories and entertained each other with logic puzzles. 
+Philosophers studied the nuances of true and false. They organized logic into categories and entertained each other with logic puzzles. This went on for hundreds of years.
 
-Then in the mid-1800's English mathematician George Boole demonstrated how logic could be described with just three terms, `AND`, `OR`, and `NOT`. He showed how logic could be described with mathematical notation. He invented an unusual logic algebra that we now call Boolean algebra. People thought this was interesting but for the next century it was taught only as a philosopher's amusement. 
+In the mid-1800's English mathematician George Boole demonstrated how logic could be described with just three terms, AND, OR, and NOT, and he described logic with mathematical notation. He invented an unusual logic system we now call Boolean algebra. People found this interesting, but for the next hundred years it was viewed only as a philosopher's amusement. 
 
-Then in 1934, an MIT student named Claude Shannon spent a summer internship at Bell Telephone Laboratories. His job was to babysit a complicated analog computer called a [differential analyzer](https://en.wikipedia.org/wiki/Differential_analyser). He had learned about Boole's logic in a philosophy class. While watching the machine work for hours on end, Shannon made the connection between logic and electrical circuits. That realization is a key moment in the history of the digital world we live in today.
+In 1934, an MIT student named [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon) spent a summer at Bell Telephone Laboratories as a student intern. His job was to babysit a complicated analog computer called a [differential analyzer](https://en.wikipedia.org/wiki/Differential_analyser). He had taken a philosophy class at MIT and learned about Boole's logic. While watching the machine work for hours on end, Shannon made the connection between logic and electrical circuits. That realization is a key moment in the history of the digital world we live in today.
 
 ## Boolean logic
 
@@ -100,7 +100,7 @@ AB $\qquad$ A $\cdot$ B  $\qquad$ A & B  $\qquad$ A && B  $\qquad$ A $\land$ B
 
 We can also draw the AND function with a logic symbol,
 
-![A AND B equals C]({{ site.baseurl }}{% link i/logic_AND.svg %}){: .centered }
+![A AND B equals C]({% link i/logic_AND.svg %}){: .centered }
 
 #### The OR operation
 {:.no_toc}
@@ -132,7 +132,7 @@ A $+$ B $\qquad$ A \|\| B  $\qquad$ A $\lor$ B
 
 We can draw the problem with the logic symbol for OR,
 
-![A OR B equals C]({{ site.baseurl }}{% link i/logic_OR.svg %}){: .centered }
+![A OR B equals C]({% link i/logic_OR.svg %}){: .centered }
 
 #### The NOT operation
 {:.no_toc}
@@ -160,13 +160,13 @@ The last one is pronounced reset *bang!* just for fun.
 
 The symbol for an inverter introduces the *bubble* notation,
 
-![A NOT equals A-bar]({{ site.baseurl }}{% link i/logic_NOT.svg %}){: .centered }
+![A NOT equals A-bar]({% link i/logic_NOT.svg %}){: .centered }
 
 The triangle shape is there so the bubble has something to attach to. The triangle is not the logic function. All the action is in the bubble.
 
 If the input happens to be inverted, like <span class="oline">A</span>, you might want to draw the bubble on the input side of the triangle, so the bubble is on the  same side as <span class="oline">A</span>,
 
-![NOT A-bar equals A]({{ site.baseurl }}{% link i/logic_NOT_demorgan.svg %}){: .centered }
+![NOT A-bar equals A]({% link i/logic_NOT_demorgan.svg %}){: .centered }
 
 Both variations of the inverter symbol mean exactly the same thing. The logic input variable is inverted going through the gate. You will see why this is a good idea when we study bubble matching and logical *assertion*. 
 
@@ -183,7 +183,7 @@ In textbooks or in writing the XOR function is a plus sign in a circle, $A \oplu
 
 The symbol for XOR is a variation on the OR symbol,
 
-![A XOR B equals C]({{ site.baseurl }}{% link i/logic_XOR.svg %}){: .centered }
+![A XOR B equals C]({% link i/logic_XOR.svg %}){: .centered }
 
 That's the four symbols for the basic gates. We will learn a bunch more soon.
 
@@ -252,7 +252,7 @@ hint: How many rows does a 3-input truth table have?
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}
 3-input truth table 
-![3-input truth table]({{ site.baseurl }}{% link i/logic_tt_8row.svg %}){: .centered }
+![3-input truth table]({% link i/logic_tt_8row.svg %}){: .centered }
 
 Pro tip: You want to be able to write out the input rows of a truth table really fast. Look at this truth table and find a pattern for each column that you can memorize. For example, the C column alternates 0 and 1. What pattern do you see for the A and B columns?
 {% endcapture %}{% include details.html %} 

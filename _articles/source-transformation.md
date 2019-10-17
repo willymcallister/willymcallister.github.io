@@ -12,7 +12,7 @@ Two simple circuits have special names,
 The *Thévenin* form is a voltage source in series with a resistor.  
 The *Norton* form is a current source in parallel with a resistor.
 
-![Thévenin and Norton forms]({{ site.baseurl }}{% link i/thevenin0.svg %})
+![Thévenin and Norton forms]({% link i/thevenin0.svg %})
 
 It is possible to convert between Thévenin and Norton forms.  
 
@@ -43,7 +43,7 @@ Thévenin and Norton forms are *equivalent* because they have the same $i$-$v$ b
 
 We'll draw a lot of $i$-$v$ graphs to visualize what's going on. The idea sinks in better if you to do most of the work. Please follow along with pencil and paper. 
 
-We use source transformation in the [proof of Thévenin's and Norton's theorem]({{ site.baseurl }}{% link _articles/thevenin-proof.md %}). 
+We use source transformation in the [proof of Thévenin's and Norton's theorem]({% link _articles/thevenin-proof.md %}). 
 
 ## $i$-$v$ graphs for V, I, and R
 
@@ -52,11 +52,11 @@ Let's first review the $i$-$v$ graphs of sources and resistors by themselves. Pr
 * current source, $i = 6\,\text{mA}$
 * resistor, $\text R = 2\,\text k\Omega$  
 
-![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :}
+![Blank i-v graph]({% link i/thevenin_blank_graph.svg %}){: .centered :}
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
-![i-v graphs of v, i, and r]({{ site.baseurl }}{% link i/thevenin1.svg %}){: .centered :}
+![i-v graphs of v, i, and r]({% link i/thevenin1.svg %}){: .centered :}
 
 The resistor line has a tilt of $1/\text R = 1/2\,\text k\Omega$. It passes through the origin.  
 The voltage source line is a vertical line passing through $v = 5\,\text V$.  
@@ -75,7 +75,7 @@ Voltage and current source lines do not pass through the origin.
 
 Now make it more interesting: Find the $i$-$v$ behavior of this resistor and voltage source circuit. 
 
-![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2.svg %}){: .centered :}
+![Resistor and voltage source schematic]({% link i/thevenin2.svg %}){: .centered :}
 
 The pair of little circles on the right represents the *port* of this simple network. You are allowed to touch the port with voltmeter probes. You can also measure current if you connect an ammeter to the port. This is what it means to "look into" the circuit from the "viewpoint" of the port.
 {: .caption :}
@@ -90,16 +90,16 @@ $i = f(v,\text R_\text T,\text V_\text T) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Plot your function for** $\text V_\text T = 5\,\text V$ and $\text R_\text T = 2\,\text k\Omega$.
 
-![Thévenin schematic with 5 V and 2 kohms]({{ site.baseurl }}{% link i/thevenin2b.svg %}){: .centered :}
+![Thévenin schematic with 5 V and 2 kohms]({% link i/thevenin2b.svg %}){: .centered :}
 
-![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :}
+![Blank i-v graph]({% link i/thevenin_blank_graph.svg %}){: .centered :}
 
 Now that you've had a try, it's my turn. I will derive an $i$-$v$ expression by traditional circuit analysis, and then again with some EE cleverness. 
 
 #### Traditional circuit analysis
 {:.no_toc}
 
-![Labeled resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2a.svg %}){: .centered :}
+![Labeled resistor and voltage source schematic]({% link i/thevenin2a.svg %}){: .centered :}
 
 Write KVL around the loop; start in the lower left,
 
@@ -121,7 +121,7 @@ $i = -\dfrac{v}{2\,\text k\Omega} + \dfrac{5\,\text V}{2\,\text k\Omega} = -\dfr
 
 And it plots like this,
 
-![Resistor and voltage source i-v graph]({{ site.baseurl }}{% link i/thevenin3.svg %}){: .centered :} 
+![Resistor and voltage source i-v graph]({% link i/thevenin3.svg %}){: .centered :} 
 
 The line is tilted $i$-$v$ like a resistor, with a negative slope because of the way we defined the direction of the $i$ arrow, but it does not pass through the origin like a resistor would.
 
@@ -142,7 +142,7 @@ The line crosses the voltage axis when $i = 0$. How might we force $i$ to be $0$
 
 We could connect nothing across the port to create an open circuit,
 
-![Open circuit on port]({{ site.baseurl }}{% link i/thevenin4.svg %}){: .centered :} 
+![Open circuit on port]({% link i/thevenin4.svg %}){: .centered :} 
 
 With $i = 0$, measure the voltage with a voltmeter (or do it in your head).
 
@@ -163,7 +163,7 @@ The line crosses the current axis when $v = 0$. How might we force $v$ to be $0$
 
 We could connect a wire across the port to short it out,
 
-![Short circuit on port]({{ site.baseurl }}{% link i/thevenin5.svg %}){: .centered :} 
+![Short circuit on port]({% link i/thevenin5.svg %}){: .centered :} 
 
 With $v = 0$, measure the current in the shorting wire. Insert an ammeter into the wire (or do it in your head).
 
@@ -182,7 +182,7 @@ The line crosses the current axis at $i_{sc}$.
 {% capture details %}  
 You can see the plot right away. Just mark the two points and draw a line. The points are $(v_{oc},0)$ and $(0,i_{sc})$.
 
-![i-v plot]({{ site.baseurl }}{% link i/thevenin6.svg %}){: .centered :} 
+![i-v plot]({% link i/thevenin6.svg %}){: .centered :} 
 
 Now find the equation of the line. Given two points the equation of the line is,
 
@@ -210,7 +210,7 @@ The open-circuit/short-circuit technique is pretty handy. We will use it again.
 
 Now let's look at the Norton form,
 
-![Norton circuit: Resistor and current source]({{ site.baseurl }}{% link i/thevenin7.svg %}){: .centered :}
+![Norton circuit: Resistor and current source]({% link i/thevenin7.svg %}){: .centered :}
 
 **Work out a symbolic expression for port current $i$ in terms of** $v,\text R_{\text N},\text I_{\text N}$. 
 
@@ -219,9 +219,9 @@ $i = f(v,\text R_{\text N},\text I_{\text N}) = $ \_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Then plot your function with these values,** $\text I_{\text N} = 2\,\text{mA}$ and $\text R_{\text N} = 500\,\Omega$.
 
-![Norton circuit: 2 ma and 500 ohms]({{ site.baseurl }}{% link i/thevenin7a.svg %}){: .centered :}
+![Norton circuit: 2 ma and 500 ohms]({% link i/thevenin7a.svg %}){: .centered :}
 
-![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :}
+![Blank i-v graph]({% link i/thevenin_blank_graph.svg %}){: .centered :}
 
 Now that you've had a chance to plot the function, I will derive the Norton $i$-$v$ expression by traditional circuit analysis, and then with EE cleverness like we did above. 
 
@@ -245,7 +245,7 @@ Here's the plot with the given values,
 
 $i = -\dfrac{v}{500\,\Omega} + 2\,\text{mA}$
 
-![First Norton i-v graph]({{ site.baseurl }}{% link i/thevenin8.svg %}){: .centered :}
+![First Norton i-v graph]({% link i/thevenin8.svg %}){: .centered :}
 
 #### More EE cleverness
 {:.no_toc}
@@ -254,7 +254,7 @@ Let's identify two points with the same open-circuit/short-circuit thing we did 
 
 **Find two points where the $i$-$v$ line of this circuit crosses the $v$ axis and $i$ axis.**
 
-![Norton circuit: Resistor and current source]({{ site.baseurl }}{% link i/thevenin7.svg %}){: .centered :}
+![Norton circuit: Resistor and current source]({% link i/thevenin7.svg %}){: .centered :}
 
 Put open and short circuits across the port and measure with your mental multimeter.
 
@@ -266,7 +266,7 @@ $(0, i_{sc}) = (0$, \_\_\_\_\_\_\_\_ $)$
 {% capture details %}  
 The line crosses the $v$ axis when $i = 0$. To force $i = 0$ leave the port unconnected (open circuit) so no current can flow in or out of the port,
 
-![open circuit on port]({{ site.baseurl }}{% link i/thevenin8c.svg %}){: .centered :}
+![open circuit on port]({% link i/thevenin8c.svg %}){: .centered :}
 
 With the port open, all of $\text I_{\text N}$ is has to flow through $\text R_{\text N}$. The open-circuit voltage is,
 
@@ -278,7 +278,7 @@ The $i$-$v$ line crosses the $v$ axis at $1\,\text V$. That's our first point.
 
 The line crosses the $i$ axis when $v = 0$. To force $v = 0$ connect a wire to short across the port.
 
-![short circuit on port]({{ site.baseurl }}{% link i/thevenin8b.svg %}){: .centered :}
+![short circuit on port]({% link i/thevenin8b.svg %}){: .centered :}
 
 With the wire shorting out the port there is $0$ voltage across the resistor. All of $\text I_{\text N}$ flows through the short and none through the resistor. What is the short-circuit current? By simple inspection,
 
@@ -288,7 +288,7 @@ The $i$-$v$ line crosses the $i$ axis at $2\,\text{mA}$. This is our second poin
 
 Use these two points to construct an equation of the line. It should match what we did with the KCL analysis just above. Here is the plot,
 
-![i-v plot]({{ site.baseurl }}{% link i/thevenin8a.svg %}){: .centered :}
+![i-v plot]({% link i/thevenin8a.svg %}){: .centered :}
 {% endcapture %}{% include details.html %} 
 
 What have we learned about the Norton form? The Norton form behaves just like the Thévenin form. It plots as a line in $i$-$v$ space. You can position the line anywhere you want by your choice of component values.
@@ -330,7 +330,7 @@ If you are given one form you instantly change it into the other with these rela
 
 $\text V_{\text T} = 5\,\text V$, $\text R_{\text T} = 2\,\text k\Omega$
 
-![Design challenge 1 Thévenin to Norton]({{ site.baseurl }}{% link i/thevenin11a.svg %}){: .centered :}
+![Design challenge 1 Thévenin to Norton]({% link i/thevenin11a.svg %}){: .centered :}
 
 $\text I_{\text N} =$ \_\_\_\_\_\_\_\_
 
@@ -342,14 +342,14 @@ $\text R_\text N = \text R_\text T = 2000\,\Omega$
 
 $\text I_{\text N} = \dfrac{\text V_{\text T}}{\text R_{\text T}} = \dfrac{5}{2000} = 2.5\,\text{mA}$
 
-![Design challenge 1 Thévenin to Norton]({{ site.baseurl }}{% link i/thevenin11.svg %}){: .centered :}
+![Design challenge 1 Thévenin to Norton]({% link i/thevenin11.svg %}){: .centered :}
 {% endcapture %}{% include details.html %} 
 
 **3. Use the component values from the Norton example above to create an equivalent Thévenin circuit.**
 
 $\text I_{\text N} = 2\,\text{mA}$, $\text R_{\text N} = 500\,\Omega$
 
-![Design challenge 1 Norton to Thévenin]({{ site.baseurl }}{% link i/thevenin12a.svg %}){: .centered :}
+![Design challenge 1 Norton to Thévenin]({% link i/thevenin12a.svg %}){: .centered :}
 
 $\text V_{\text T} =$ \_\_\_\_\_\_\_\_
 
@@ -361,7 +361,7 @@ $\text R_\text T = \text R_\text N = 500\,\Omega$
 
 $\text V_{\text T} = \text I_{\text N} \, \text R_{\text N} = 0.002 \cdot 500 = 1\,\text V$
 
-![Design challenge 1 Norton to Thévenin]({{ site.baseurl }}{% link i/thevenin12.svg %}){: .centered :}
+![Design challenge 1 Norton to Thévenin]({% link i/thevenin12.svg %}){: .centered :}
 {% endcapture %}{% include details.html %} 
 
 Notice how the conversion process resembles Ohm's Law.
@@ -374,12 +374,12 @@ Use this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.ht
 
 **1. Design your own Thévenin form. Pick any values for $\text V_\text T$ and $\text R_\text T$.**
 
-![Design challenge 2 Thévenin circuit]({{ site.baseurl }}{% link i/thevenin13.svg %}){: .centered :}
+![Design challenge 2 Thévenin circuit]({% link i/thevenin13.svg %}){: .centered :}
 
 {:start="2"}
 **2. Design the Norton equivalent to your Thévenin circuit,**
 
-![Design challenge 2 Norton circuit]({{ site.baseurl }}{% link i/thevenin15.svg %}){: .centered :}
+![Design challenge 2 Norton circuit]({% link i/thevenin15.svg %}){: .centered :}
 
 {:start="3"}
 **3. Determine the open-circuit voltage and short-circuit current of both forms,**
@@ -391,13 +391,13 @@ $v_{oc} =$ \_\_\_\_\_\_\_\_\_ $\quad i_{sc} =$ \_\_\_\_\_\_\_\_\_
 
 $i = $ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-![Blank i-v graph]({{ site.baseurl }}{% link i/thevenin_blank_graph.svg %}){: .centered :} 
+![Blank i-v graph]({% link i/thevenin_blank_graph.svg %}){: .centered :} 
 (Adjust the scales so your particular graph look nice.) 
 
 {:start="5"}
 **5. Connect a load resistor $\text R_\text L$ to both forms.** Use the same resistance for both load resistors.
 
-![Design challenge 2 with load resistor]({{ site.baseurl }}{% link i/thevenin16.svg %})
+![Design challenge 2 with load resistor]({% link i/thevenin16.svg %})
 
 {:start="6"}
 **6. Compute the voltage and current for both load resistors,**
@@ -430,7 +430,7 @@ To derive the equation of the $i$-$v$ line for a complicated circuit we found tw
 
 **Caution:** Shorting out real electronic equipment to find $i_{sc}$ is a recipe for smoke. Be super careful before you do this.
 
-In the next article we apply [source transformation]({{ site.baseurl }}{% link _articles/source-transformation-example.md %}) to a problem.
+In the next article we apply [source transformation]({% link _articles/source-transformation-example.md %}) to a problem.
 
 {% capture summary %}What about other circuits with one source and one resistor?{% endcapture %}  
 {% capture details %}  
@@ -439,7 +439,7 @@ After so much talk about Thévenin and Norton forms, it's an obvious question to
 * Voltage source in parallel with a resistor
 * Current source in series with a resistor
 
-![Other resistor and source circuits]({{ site.baseurl }}{% link i/thevenin50.svg %})
+![Other resistor and source circuits]({% link i/thevenin50.svg %})
 
 Give this a little thought for a second or two. What do the resistors do?
 

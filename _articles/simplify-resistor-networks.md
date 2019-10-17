@@ -140,7 +140,7 @@ You started with $7$ resistors and simplified down to $1$, a significant reducti
 
 Not all simplifications make it down to a single resistor at the end. (The circuit may not be made entirely of resistors.) But always take the opportunity to simplify if the chance is presented.
 
-## Just for fun animation  
+Just for fun, here's an animation of the simplification process,
 
 {% include embed-video.html %}
 

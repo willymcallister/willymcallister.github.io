@@ -9,7 +9,7 @@ There are two common sets of symbols for logic gates,
 * The older *distinctive shapes* of MIL-STD-806B
 * The more modern and uniform boxy shapes of IEC 60617
 
-We describe what these gates do in the article on [Logic]({{ site.baseurl }}{% link _articles/logic.md %}#operators).
+We describe what these gates do in the article on [Logic]({% link _articles/logic.md %}#operators).
 
 Written by Willy McAllister.
 
@@ -31,11 +31,11 @@ There are two common sets of symbols,
 
 * **MIL-STD-806B** defines the *distinctive shapes* for the simple gates. I prefer these symbols for simple gates because they are easier to identify at a glance. These are the symbols I use at Spinning Numbers. Notice how NOT is indicated with a bubble.
 
-![Distinctive logic shapes for simple gates]({{ site.baseurl }}{% link i/logic11.svg %}){: .centered }{: height="110px" :}
+![Distinctive logic shapes for simple gates]({% link i/logic11.svg %}){: .centered }{: height="110px" :}
 
 * **IEC 60617, ANSI/IEEE Std 91-1984** defines rectangular shapes for both simple gates. Notice how the NOT symbol has a *flag* instead of a bubble.
 
-![IEC/ANSI logic shapes for simple gates]({{ site.baseurl }}{% link i/logic12.svg %}){: .centered }{: height="110px" :}
+![IEC/ANSI logic shapes for simple gates]({% link i/logic12.svg %}){: .centered }{: height="110px" :}
 
 * [**DIN 40700**](https://de.wikipedia.org/wiki/Logikgatter#Typen_von_Logikgattern_und_Symbolik) There's a chance you may come across some antique symbols in academic papers---the third column of symbols is an older set once used in Europe. 
 
@@ -43,7 +43,7 @@ There are two common sets of symbols,
 
 The distinctive and IEC/ISO symbols for NAND and NOR,
 
-![Distinctive and IEC/ISO symbols for NAND and NOR]({{ site.baseurl }}{% link i/logic15.svg %}){: .centered }{: height="200px" :} 
+![Distinctive and IEC/ISO symbols for NAND and NOR]({% link i/logic15.svg %}){: .centered }{: height="200px" :} 
 
 The bubble or flag indicates a logic inversion.
 
@@ -51,7 +51,7 @@ The bubble or flag indicates a logic inversion.
 
 IEC 60617 also defines symbols for more complicated digital functions like multi-bit registers. Here is an example, an 8-bit D flip flop with edge-triggered clock and enable,
 
-![Complex logic function 8-bit latch with enable]({{ site.baseurl }}{% link i/logic46.svg %}){: .centered } 
+![Complex logic function 8-bit latch with enable]({% link i/logic46.svg %}){: .centered } 
 
 For this complex shape the data signals (D and Q) are in the main lower block and the control signals are gathered at the top. Inputs go on the left, outputs on the right. Data inputs and outputs are always straight across from each other, so you can read the flow.
 {: .caption :}
@@ -68,7 +68,7 @@ Which symbols should you use? That is up to your preference or your school's or 
 
 I recommend you pick one set or the other---don't mix them together in the same schematic. I like the distinctive shapes because they are quicker to recognize and are truly beautiful.
 
-![Distinctive logic gate shapes]({{ site.baseurl }}{% link i/logic_gates.svg %}){: .centered }{: height="260px" :}
+![Distinctive logic gate shapes]({% link i/logic_gates.svg %}){: .centered }{: height="260px" :}
 
 For complex symbols I use the IEC style whenever possible. I like how data and control are clearly separated.
 
@@ -76,6 +76,6 @@ For complex symbols I use the IEC style whenever possible. I like how data and c
 
 The OR symbol is beautiful---it is constructed from three circles and two short lines,
 
-![How to draw an OR gate]({{ site.baseurl }}{% link i/logic_OR_draw.png %}){: .centered }{: height="300px" :}
+![How to draw an OR gate]({% link i/logic_OR_draw.png %}){: .centered }{: height="300px" :}
 
-<small>Click [here]({{ site.baseurl }}{% link i/logic_OR_draw.svg %}) for the .svg source image, drawn on a 1 mm grid with 5 mm major grid lines.</small>
+<small>Click [here]({% link i/logic_OR_draw.svg %}) for the .svg source image, drawn on a 1 mm grid with 5 mm major grid lines.</small>

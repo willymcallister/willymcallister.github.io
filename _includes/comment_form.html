@@ -46,7 +46,8 @@
   </fieldset>
 
   <fieldset>
-    <div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+    <!--div class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}" data-theme="dark"></div-->
+    <div id="reCaptcha"></div>
   </fieldset>
 
   <fieldset>
@@ -56,3 +57,14 @@
   </fieldset>
 
 </form>
+
+<script>
+function showReCaptcha() {
+  var node = document.createElement("div");
+  node.setAttribute('class', 'g-recaptcha');
+  node.setAttribute('data-sitekey', '{{ site.reCaptcha.siteKey }}');
+  node.setAttribute('data-theme', localStorage.theme);
+  document.getElementById("reCaptcha").appendChild(node);
+}
+showReCaptcha();
+</script>

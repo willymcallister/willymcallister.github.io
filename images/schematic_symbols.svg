@@ -338,9 +338,9 @@
      fit-margin-right="100"
      fit-margin-bottom="100"
      fit-margin-left="100"
-     inkscape:zoom="1.2213913"
-     inkscape:cx="201.84182"
-     inkscape:cy="336.86977"
+     inkscape:zoom="0.21634448"
+     inkscape:cx="1160.1868"
+     inkscape:cy="829.10083"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -2010,9 +2010,11 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.9375px">XOR</tspan></text>
 <g
      id="g3019-6"
-     transform="translate(931.22541,138.72342)"><g
+     transform="translate(931.22541,138.72342)"
+     style="fill:none"><g
        transform="translate(-7.7116099,73.797146)"
-       id="g1499-3-3"><path
+       id="g1499-3-3"
+       style="fill:none"><path
          style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path1321-1-6-2-6-9"
          sodipodi:type="arc"
@@ -2067,7 +2069,7 @@
        cy="363.97394"
        cx="570.24927"
        id="path1247-3-1"
-       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></g><g
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.8125;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" /></g><g
      id="g3025-8"
      transform="translate(1289.4441,-91.652193)"
      style="fill:none"><g
