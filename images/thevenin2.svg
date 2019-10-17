@@ -15,7 +15,7 @@
    y="0px"
    viewBox="0 0 210.96352 130.62653"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="thevenin2.svg"
    width="210.96352"
    height="130.62653"><metadata
@@ -39,9 +39,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="3.0001362"
-     inkscape:cx="109.96811"
-     inkscape:cy="65.313264"
+     inkscape:zoom="2.3795584"
+     inkscape:cx="105.48176"
+     inkscape:cy="65.313263"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -146,7 +146,7 @@
      id="path4191"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-4"
      cx="198.1792"
      cy="117.84222"
@@ -159,17 +159,16 @@
      d="m 189.1801,22.001825 8.65023,0"
      id="path4227"
      inkscape:connector-curvature="0" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7"
      cx="198.1792"
      cy="22.13195"
      r="2.2843127" /><text
      class="st23 st24"
      id="text4877"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
      x="137.57249"
-     y="53.314011"
-     sodipodi:linespacing="125%"><tspan
+     y="53.314011"><tspan
        style="font-size:22.5px"
        id="tspan8470">R</tspan><tspan
        style="font-size:16.25px"
@@ -178,10 +177,9 @@
 <text
      class="st23 st24"
      id="text4893"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-opacity:1"
      x="9.5724993"
-     y="71.313805"
-     sodipodi:linespacing="125%"><tspan
+     y="71.313805"><tspan
        style="font-size:22.5px"
        id="tspan8474">V</tspan><tspan
        id="tspan8478"

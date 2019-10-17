@@ -160,9 +160,9 @@
      fit-margin-left="10"
      fit-margin-right="8"
      fit-margin-bottom="10"
-     inkscape:zoom="0.82030617"
-     inkscape:cx="306.70039"
-     inkscape:cy="184.94631"
+     inkscape:zoom="0.81510537"
+     inkscape:cx="307.93565"
+     inkscape:cy="191.78945"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -199,7 +199,7 @@
 	.st26{fill:none;stroke:#11ACCD;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
 </style><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 502.23416,154.21337 H 433.57838"
+     d="M 502.23783,154.21337 H 434.07791"
      id="path6277-2"
      inkscape:connector-curvature="0" /><g
      aria-label=" "
@@ -296,10 +296,10 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Math;-inkscape-font-specification:'KaTeX_Math, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke:none"
        id="path971"
        inkscape:connector-curvature="0" /></g><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-9-2"
      cx="431.80298"
-     cy="154.4456"
+     cy="154.15807"
      r="2.2843127" /><flowRoot
      xml:space="preserve"
      id="flowRoot13793-5"
@@ -731,14 +731,14 @@
      x1="354.01172"
      class="st9" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 429.4459,154.44431 H 401.679"
+     d="M 429.4459,154.15679 H 401.679"
      id="path17671"
      inkscape:connector-curvature="0" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 431.50399,243.14624 H 399.99796"
+     d="M 429.13233,243.14624 H 399.99796"
      id="path17673"
      inkscape:connector-curvature="0" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-4-3-7"
      cx="431.80298"
      cy="243.18404"

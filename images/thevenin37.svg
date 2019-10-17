@@ -100,7 +100,7 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.2535433"
+     inkscape:zoom="1.2560454"
      inkscape:cx="199.83354"
      inkscape:cy="75.34819"
      inkscape:window-x="0"
@@ -250,11 +250,11 @@
      dx="0 3">2mA</text>
 <path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 267.08319,137.96897 53.69591,0"
+     d="m 267.06558,137.96897 h 51.83113"
      id="path4191-2"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-4-3"
      cx="321.33585"
      cy="137.91205"
@@ -264,7 +264,7 @@
      id="path4225-3"
      inkscape:connector-curvature="0" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 266.12889,41.931438 53.43928,0"
+     d="m 266.12037,41.931438 h 52.54151"
      id="path4227-7"
      inkscape:connector-curvature="0" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
@@ -378,7 +378,7 @@
      y="24.783993"
      dx="0 0 0 3">500Ω</text>
 <circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-9"
      cx="321.33585"
      cy="41.913288"

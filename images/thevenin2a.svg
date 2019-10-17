@@ -16,7 +16,7 @@
    viewBox="0 0 279.16111 130.62653"
    xml:space="preserve"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="thevenin2a1.svg"
+   sodipodi:docname="thevenin2a.svg"
    width="279.1611"
    height="130.62653"><metadata
      id="metadata4923"><rdf:RDF><cc:Work
@@ -39,9 +39,9 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.7246144"
-     inkscape:cx="145.24986"
-     inkscape:cy="65.313266"
+     inkscape:zoom="1.7982448"
+     inkscape:cx="139.58055"
+     inkscape:cy="65.313263"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -146,7 +146,7 @@
      id="path4191"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-4"
      cx="229.62183"
      cy="117.84222"
@@ -159,7 +159,7 @@
      d="m 186.60699,22.001825 h 40.9027"
      id="path4227"
      inkscape:connector-curvature="0" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7"
      cx="229.62183"
      cy="22.13195"

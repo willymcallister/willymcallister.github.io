@@ -76,7 +76,7 @@
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     inkscape:zoom="1.0142999"
+     inkscape:zoom="1.0163244"
      inkscape:cx="246.96838"
      inkscape:cy="75.348175"
      inkscape:window-x="0"
@@ -179,7 +179,7 @@
      id="path4962"
      inkscape:connector-curvature="0" /><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     d="m 60.315294,138.00826 310.444876,0"
+     d="M 60.310888,138.00826 H 368.05875"
      id="path4191"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><path
@@ -264,7 +264,7 @@
      id="path4191-2"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cc" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-4-3"
      cx="370.62195"
      cy="137.91205"
@@ -369,7 +369,7 @@
        id="rect4875-9"
        style="fill:none" /></g><path
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000012;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 295.01605,41.985294 73.71618,0"
+     d="m 295.01188,41.985294 h 73.10956"
      id="path4227-6"
      inkscape:connector-curvature="0" /><text
      class="st23 st24"
@@ -428,7 +428,7 @@
      d="m 424.91332,67.732022 0,-25.811582"
      id="path4225-3-6"
      inkscape:connector-curvature="0" /><circle
-     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="path4193-7-9"
      cx="370.62195"
      cy="41.913288"

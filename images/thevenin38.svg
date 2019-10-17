@@ -17,7 +17,7 @@
    height="272"
    viewBox="0 0 210.2876 272"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="thevenin38.svg"><metadata
      id="metadata17228"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -39,7 +39,7 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      fit-margin-left="10"
-     inkscape:zoom="1.8676471"
+     inkscape:zoom="1.9926471"
      inkscape:cx="105.1438"
      inkscape:cy="136"
      inkscape:window-x="0"
@@ -160,7 +160,8 @@
        id="line17152"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
      id="g17154"
-     transform="translate(-33.712402,4)"><rect
+     transform="translate(-33.712402,4)"
+     style="fill:none"><rect
        x="150"
        y="246"
        class="st3"
@@ -173,12 +174,11 @@
        cy="252"
        r="3"
        id="circle17158"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g><text
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g><text
      id="text17160"
      x="170.28749"
      y="220"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="170.28749"
        y="220"
        class="st39 st40 st41"
@@ -194,8 +194,7 @@
      id="text17166"
      x="44.287598"
      y="220"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="44.287598"
        y="220"
        class="st39 st40 st41"
@@ -211,8 +210,7 @@
      id="text17172"
      x="106.14529"
      y="120.4567"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="106.14529"
        y="120.4567"
        class="st39 st40 st41"
@@ -228,8 +226,7 @@
      id="text17178"
      x="170.2876"
      y="70"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="170.2876"
        y="70"
        class="st39 st40 st41"
@@ -245,8 +242,7 @@
      id="text17184"
      x="44.287598"
      y="70"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
-     sodipodi:linespacing="125%"><tspan
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"><tspan
        x="44.287598"
        y="70"
        class="st39 st40"
@@ -322,7 +318,8 @@
        id="line17216"
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /></g><g
      id="g17218"
-     transform="translate(-33.712402,4)"><rect
+     transform="translate(-33.712402,4)"
+     style="fill:none"><rect
        x="150"
        y="6"
        class="st3"
@@ -335,4 +332,4 @@
        cy="12"
        r="3"
        id="circle17222"
-       style="fill:#ffffff;stroke:#000000;stroke-miterlimit:10" /></g></svg>
+       style="fill:none;stroke:#000000;stroke-miterlimit:10" /></g></svg>
