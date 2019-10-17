@@ -10,12 +10,14 @@
 $base-font-size:     18px !default;
 $comment-font-size:  17px !default;
 $grey-color:         #757575 !default;
-$grey-color-darkish: darken($grey-color, 15%) !default;
-$grey-color-dark:    darken($grey-color, 25%) !default;
+$grey-color-darkish: darken($grey-color, 15%) !default;     // #4f4f4f;
+$grey-color-dark:    darken($grey-color, 25%) !default;     // #353535;    
 $brand-color:        #2a7ae2;
-$brand-color-dark:   darken($brand-color,10%) !default;
+$brand-color-dark:   darken($brand-color,10%) !default;     // #1a62bf;
 
-
+//
+// Switchable colors
+//
 html, html[data-theme="light"], {
     --text-color: #111;
     --table-text-color: #3f3f3f;
@@ -23,6 +25,7 @@ html, html[data-theme="light"], {
     --table-zebra-color: #eaeaea;
     --background-color: #fdfdfd;
     --img-background-color: #fdfdfd;
+    --site-top-margin-color: #353535;   // $grey-color-dark
 }
 
 html[data-theme="dark"] {
@@ -31,7 +34,8 @@ html[data-theme="dark"] {
     --table-header-color: #808080;
     --table-zebra-color: #4d4d4d;
     --background-color: #353535;
-    --img-background-color: #4f4f4f;    //$grey-color-darkish
+    --img-background-color: #4f4f4f;    // $grey-color-darkish
+    --site-top-margin-color: #2a7ae2;   // $brand-color
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,17 +107,14 @@ main img {
 }
 
 a {
-  //color: var(--brand-color);
   color: $brand-color;
   text-decoration: none;
 
   &:visited {
-  //  color: var(--brand-color);
   color: $brand-color-dark;
   }
 
   &:hover {
-  //  color: var(--brand-color);
   color: $brand-color-dark;
     text-decoration: underline;
   }
@@ -121,6 +122,17 @@ a {
 
 .site-nav .page-link {
     color: var(--text-color);
+}
+
+.site-header {
+  border-top: 5px solid var(--site-top-margin-color);
+}
+
+.site-title {
+  &,
+  &:visited {
+    color: inherit;
+  }
 }
 
 //
@@ -246,7 +258,7 @@ button:hover {
 }
 
 //
-// Pop-up modal window for Staticman comments
+// Staticman Pop-up modal window for submitted comments
 //
 .show-modal {
     overflow: hidden;
@@ -332,17 +344,4 @@ button:hover {
 }
 a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
-}
-
-// Dark Theme
-
-.site-header {
-  border-top: 5px solid $brand-color;
-}
-
-.site-title {
-  &,
-  &:visited {
-    color: inherit;
-  }
 }
