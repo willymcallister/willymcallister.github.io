@@ -7,13 +7,17 @@ comments: true
 
 Electrical units like current and voltage are precisely defined by an international standard.
 
+----
+
 >On May 20, 2019 the [definition of the ampere](https://en.wikipedia.org/wiki/2019_redefinition_of_SI_base_units#Ampere) changed---it is now based on the charge of the electron rather than a force measurement.  
 >
->Previous definition: The ampere is that constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed 1 m apart in vacuum, would produce between these conductors a force equal to 2×10−7 newton per meter of length.
+>Previous definition: "The ampere is that constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross-section, and placed 1 m apart in vacuum, would produce between these conductors a force equal to 2×10−7 newton per meter of length."
 >
->New definition: The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge $e$ to be 1.602176634×10−19 when expressed in the unit C, which is equal to A⋅s.
+>New definition: "The ampere, symbol A, is the SI unit of electric current. It is defined by taking the fixed numerical value of the elementary charge $e$ to be 1.602176634×10−19 when expressed in the unit C, which is equal to A⋅s."
+>
+>The ampere used to be defined by a force, and the coulomb was derived from the ampere. Now it is the other way around. The coulomb is an exact multiple of the elementary charge, $e$, and the ampere is defined as a coulomb/second.
 
-----
+---
 
 #### Contents
 {:.no_toc}

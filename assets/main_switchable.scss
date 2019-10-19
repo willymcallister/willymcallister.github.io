@@ -26,6 +26,7 @@ html, html[data-theme="light"], {
     --background-color: #fdfdfd;
     --img-background-color: #fdfdfd;
     --site-top-margin-color: #353535;   // $grey-color-dark
+    --pre-background-color: #eef;
 }
 
 html[data-theme="dark"] {
@@ -33,9 +34,10 @@ html[data-theme="dark"] {
     --table-text-color: #d3d3d3;
     --table-header-color: #808080;
     --table-zebra-color: #4d4d4d;
-    --background-color: #353535;
+    --background-color: #353535;        // $grey-color-dark
     --img-background-color: #4f4f4f;    // $grey-color-darkish
     --site-top-margin-color: #2a7ae2;   // $brand-color
+    --pre-background-color: #343c46;    // $grey-color-dark blended with $brand-color #343c46
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,6 +77,7 @@ html[data-theme="dark"] {
 blockquote {
     font-size: $base-font-size;     //overrides 1.125 increase in _base.scss
     letter-spacing: 0px;            //overrides -1px spacing in _base.scss
+    border-left: 
 }
 
 hr {
@@ -103,7 +106,7 @@ body {
 
 main img {
     background-color: var(--img-background-color);
-    opacity: .75
+    opacity: .9;
 }
 
 a {
@@ -133,6 +136,10 @@ a {
   &:visited {
     color: inherit;
   }
+}
+
+.highlighter-rouge .highlight, pre, code {
+    background-color: var(--pre-background-color);
 }
 
 //

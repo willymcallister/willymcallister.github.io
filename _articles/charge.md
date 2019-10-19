@@ -52,14 +52,14 @@ For the moment, pretend you never heard of electricity. Forget you know about at
 
 5000 years ago Egyptians knew if you touched an eel it could give you a shock. Texts refer to eels as "Thunderer of the Nile." They didn't know what was happening, but they used to tell sick people to touch eels, and sometimes it made them feel better (other times probably not). So the very first practical application of electricity was in medicine.
 
-{% capture image %}charge_electric-eel.jpg{% endcapture %}  
+{% capture image %}electric-eel.jpg{% endcapture %}  
 {% capture alt %}Electric eel{% endcapture %}
 {% capture height %}200px{% endcapture %}  
 {% include image_centered_without_caption.html %}
 
 2600 years ago the Greeks made jewelry out of a pretty stone called amber. Amber isn't really a stone, it is fossilized resin from trees. Resin is a goopy substance trees make as a defense to fight off insects and cover wounds (broken branches). Sometimes this goopy resin drips from the tree, turns into a solid (fossilizes), and gets the name amber. Amber is basically a natural version of plastic.
 
-{% capture image %}charge_ant_in_amber.jpg{% endcapture %}  
+{% capture image %}ant_in_amber.jpg{% endcapture %}  
 {% capture alt %}Ant in amber{% endcapture %}
 {% include image_centered_without_caption.html %}
 
@@ -135,7 +135,7 @@ The torsion balance is based on twisting a fine wire. It works like a car tire h
 
 (Optional) Coulomb drew this illustration of his torsion balance,
 
-{% capture image %}charge_torsion_balance3.png{% endcapture %}  
+{% capture image %}torsion_balance3.png{% endcapture %}  
 {% capture alt %}Coulomb's torsion balance{% endcapture %}
 {% capture height %}460px{% endcapture %}  
 {% include image_centered_without_caption.html %}
