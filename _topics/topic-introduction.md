@@ -45,4 +45,4 @@ Charge, current, and voltage are the cornerstone concepts of electricity. We cre
 
 ## Video ![]({{ site.baseurl }}{% link i/video.svg %}) vs. Article ![]({{ site.baseurl }}{% link i/article.svg %})
 
-When you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view the video and have more questions, check out the corresponding article because it may go a little deeper into the topic.
+When you come across a video and article with the same or similar names, they cover roughly the same ideas. Choose the format that helps you learn best. If you view one and have more questions, check out the corresponding article/video, because it may help to see it presented two different ways.

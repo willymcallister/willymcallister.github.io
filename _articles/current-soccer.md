@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Visualizing electric current with an analogy.
+Visualize electric current with an analogy to soccer players.
 
 Written by Willy McAllister.
 
@@ -51,20 +51,22 @@ This analogy is a pretty silly but it illustrates how to measure unlike players/
 
 ## Attract and repel
 
-In our analogy the players are acting the part of the charges. There's one thing we can add to our analogy to make it more like electric current. 
+There's one thing we can add to our analogy to make it more like electric current. 
 
-You now the main property of electric charges: like charges repel, and unlike charges attract. Our soccer players don't do that. In fact they probably do the opposite. Players on the blue team are friends with other blue players, and don't hang out with red players from the other team, and the other way around for the red team.
+You know the main property of electric charges: like charges repel, and unlike charges attract. Our soccer players don't do that. In fact they probably do the opposite. Players are friends with other players on their own team, and don't hang out with players from the other team. Charges do the opposite.
 
 Let's make up a rule to make soccer players more like charges,
 
 * Players *don't like* players on their own team. They stay apart (repel). 
-* Players *do like* players on the other team. They hang out and chat (attract).
+* Players *like* players on the other team. They hang out together (attract).
 
-First, imagine there is just one team on the field. What would it look like when the referee tells them to change ends of the field? They all start trotting down the field, and at the same time they move away from each other. You end up with a lot of players walking down both sidelines, and only a few going down the middle of the field. (This happens in electric current. Electrons mostly travel along the outer diameter of a wire. It is called the *skin effect*.)
+Let's do some thought experiments.
 
-Second, put both teams on the field. If there is no referee to boss them around what would happen? Both teams would spread out across the field. Players would move away from their own teammates and go hang out with someone on the other team. You would see pairs of players spread out all over the field. 
+First, imagine there is one team on the field. What happens when the referee toots his whistle to change ends of the field? They all start trotting down the field and at the same time move away from each other. Some players end up near both sidelines. Other players space out all across the field. 
 
-When the referee has had enough of this he blows his whistle and shouts, "I mean it! Go to your respective ends!" The referee is the voltage in this analogy. He's the pressure that makes charges move. The players end their chit-chat and move off in the right direction. Along the way a red player might come near a blue player and they have a little interaction, but the referee expects players to keep moving, so they separate and keep going. 
+Second, put both teams on the field, but no referee. If there is no referee to boss them around what would happen? Both teams would spread out across the field. Players move away from their teammates and go hang out with someone on the other team. You would see pairs of players spread out all over the field. If they were charges, they would be paired. Every $+$ finds a $-$ and becomes neutral.
+
+Now the referee shows up. He blows his whistle and shouts, "I mean it! Go to your respective ends!" The referee is the voltage in this analogy. He's the pressure that makes players/charges move. The players end their chit-chat and move off in the direction they are told. Along the way a red player might come near a blue player and they have a little interaction, but the referee expects players to keep moving. 
 
 ![Manchester (red) vs. Chelsea (Blue)]({{ site.baseurl }}{% link i/manchester-chelsea.jpg %}){: .centered }
 
@@ -75,18 +77,18 @@ If you can envision this movement in your head then you have a good idea of what
 
 ## Uphill both ways
 
-Why does something move? Why does anything move? When you think about it from an energy standpoint, things move because they spontaneously go to a state of lower energy. 
+Why does something move? Why does anything move? When you think about it from an energy standpoint, things move because they spontaneously go from a state of high energy to a state of lower energy. 
 
-If you plot energy on a vertical axis, a particle moves "downhill" on the plot, that is, toward a state of lower energy. That's why it is easier for you to walk down a real hill compared to walking up. And it takes less effort to drop a book compared to picking one up. Chemists make plots like this to describe chemical reactions. When something bursts into flames that is a chemical reaction that moves rapidly downhill.
+If you plot energy on a vertical axis, a particle moves "downhill" on the plot, that is, toward a state of lower energy. That's why it is easier for you to walk down a real hill compared to walking up. And it takes less effort to drop a book compared to picking one up. Chemists make plots like this to describe chemical reactions. When something bursts into flames or explodes that chemical reaction moves downhill rapidly.
 
-When we see charges move, they do so because they "want" to move to a state of lower energy. If you place an electron near a positive charge and let it go, it moves toward the plus charge. That direction is "downhill" from the viewpoint of the electron. If you hold the electron still and let go of the plus charge, it moves toward the electron. Moving in that direction is downhill from the perspective of the plus charge. 
+When charges move they do so because they "want" to move to a state of lower energy. If you place an electron near a positive charge and let it go, it moves toward the positive charge. That direction is "downhill" from the viewpoint of the electron. If you hold the electron still and let go of the plus charge, it moves toward the electron. Moving in that direction is downhill from the perspective of the plus charge. 
 
-So which way is downhill for electric charge? It's downhill both ways! Electrons have one view of downhill, and at the same time, positive charges have the opposite view. This is totally strange to think about because we never experience downhill both ways in our everyday life, but for electric charges it's how things are. 
+So which way is downhill for electric charge? It's downhill both ways! Electrons have one view of downhill, and at the same time positive charges have the opposite view. This is strange to think about. We never experience downhill both ways in our everyday life. There are no special mountain ranges that are easier to walk up. But for electric charges, it's how things are. 
 
 ## Energy diagrams
 
-We don't often draw energy diagrams in beginning electronics because it's hard to draw two downhills on a single graph. On an energy graph if positive charge rolls down the page then electrons roll up the page (up is downhill for an electron). Too weird. 
+We don't often draw energy diagrams in beginning electronics. It's hard to draw two downhills on a single graph. If positive charge rolls down the page then electrons roll up the page (up is downhill for an electron). Too weird. 
 
-In the article on [Voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I drew a mountain as an energy diagram. I was careful to only talk about electrons rolling down the mountain and made no mention of positive charge spontaneously rolling up. That is something the gravity analogy cannot represent.
+In the video on [visualizing voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I draw a mountain as an energy diagram. I'm careful to only mention electrons rolling down the mountain and avoided talking about positive charge spontaneously rolling uphill. The gravity analogy for voltage is fine for talking about one type of charge, but struggles if you include both.
 
-When you study semiconductors we explain how they work with energy diagrams. By that time you will be deep enough into electronics that you can deal with two downhills. 
+When you study semiconductors we use energy diagrams to understand how they work. That's a fairly advanced topic. By that time you will be deep enough into electronics that you can deal with two downhills. 
