@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Basic electrical quantities: charge, current, voltage"
+title:  "Charge, current, voltage"
 author: Willy McAllister
 comments: true
 ---

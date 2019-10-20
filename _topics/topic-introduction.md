@@ -23,7 +23,7 @@ Charge, current, and voltage are the cornerstone concepts of electricity. We cre
 
 [![]({{ site.baseurl }}{% link i/video.svg %}) Voltage]({{ site.baseurl }}{% link _videos/voltage.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Basic electrical quantities]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) --- charge, current, voltage, power
+[![]({{ site.baseurl }}{% link i/article.svg %}) Charge, current, voltage]({{ site.baseurl }}{% link _articles/basic-quantities.md %}) --- the basic electrical quantities
 
 [![]({{ site.baseurl }}{% link i/article.svg %}) Conventional current vs. electron current]({{ site.baseurl }}{% link _articles/conventional-vs-electron-current.md %})
 
