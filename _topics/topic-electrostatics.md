@@ -11,26 +11,26 @@ The examples collected here are the classic electrostatic configurations. Point 
 
 ----
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Charge]({{ site.baseurl }}{% link _articles/charge.md %})
+[![]({% link i/article.svg %}) Charge]({% link _articles/charge.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Electric force and Coulomb's Law]({{ site.baseurl }}{% link _articles/electric-force.md %})
+[![]({% link i/article.svg %}) Electric force and Coulomb's Law]({% link _articles/electric-force.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Inverse square law — The Fable of the Butter Gun]({{ site.baseurl }}{% link _articles/inverse-square-law.md %})
+[![]({% link i/article.svg %}) Inverse square law — The Fable of the Butter Gun]({% link _articles/inverse-square-law.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Three point charges]({{ site.baseurl }}{% link _articles/three-point-charges.md %})
+[![]({% link i/article.svg %}) Three point charges]({% link _articles/three-point-charges.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Line of charge — test charge off the end]({{ site.baseurl }}{% link _articles/line-of-charge1.md %})
+[![]({% link i/article.svg %}) Line of charge — test charge off the end]({% link _articles/line-of-charge1.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Electric field]({{ site.baseurl }}{% link _articles/electric-field.md %})
+[![]({% link i/article.svg %}) Electric field]({% link _articles/electric-field.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Line of charge — test charge to the side]({{ site.baseurl }}{% link _articles/line-of-charge2.md %})
+[![]({% link i/article.svg %}) Line of charge — test charge to the side]({% link _articles/line-of-charge2.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Plane of charge]({{ site.baseurl }}{% link _articles/plane-of-charge.md %})
+[![]({% link i/article.svg %}) Plane of charge]({% link _articles/plane-of-charge.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Electric potential and voltage]({{ site.baseurl }}{% link _articles/electric-potential.md %})
+[![]({% link i/article.svg %}) Electric potential and voltage]({% link _articles/electric-potential.md %})
 
 ---
 
-<i class="fas fa-arrow-left"></i> [Semiconductors]({{ site.baseurl }}{% link _topics/topic-semiconductors.md %}) $\qquad$ [Digital electronics]({{ site.baseurl }}{% link _topics/topic-digital.md %}) <i class="fas fa-arrow-right"></i>
+<i class="fas fa-arrow-left"></i> [Semiconductors]({% link _topics/topic-semiconductors.md %}) $\qquad$ [Digital electronics]({% link _topics/topic-digital.md %}) <i class="fas fa-arrow-right"></i>
 
 ---

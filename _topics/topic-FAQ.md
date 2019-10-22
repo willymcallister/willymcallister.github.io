@@ -9,10 +9,10 @@ I get a questions about electrical engineering that are interesting but don't ha
 
 ----
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) What's the difference between impedance and resistance?]({{ site.baseurl }}{% link _articles/difference-between-Z-and-R.md %})
+[![]({% link i/article.svg %}) What's the difference between impedance and resistance?]({% link _articles/difference-between-Z-and-R.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Inductor - how it works]({{ site.baseurl }}{% link _articles/inductor-how-it-works.md %}) 
+[![]({% link i/article.svg %}) Inductor - how it works]({% link _articles/inductor-how-it-works.md %}) 
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) 6 ways to generate electricity]({{ site.baseurl }}{% link _articles/six-ways-to-generate-electricity.md %}) 
+[![]({% link i/article.svg %}) 6 ways to generate electricity]({% link _articles/six-ways-to-generate-electricity.md %}) 
 
 

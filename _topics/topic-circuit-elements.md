@@ -13,28 +13,28 @@ Finally, we learn about assigning labels to voltages and currents.
 
 ----
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Ideal circuit elements]({{ site.baseurl }}{% link _videos/ideal-elements.md %})
+[![]({% link i/video.svg %}) Ideal circuit elements]({% link _videos/ideal-elements.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Ideal sources]({{ site.baseurl }}{% link _videos/ideal-sources.md %})
+[![]({% link i/video.svg %}) Ideal sources]({% link _videos/ideal-sources.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Ideal elements and sources]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %})
+[![]({% link i/article.svg %}) Ideal elements and sources]({% link _articles/ideal-elements-and-sources.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Real-world circuit elements]({{ site.baseurl }}{% link _articles/real-world-elements.md %})
+[![]({% link i/article.svg %}) Real-world circuit elements]({% link _articles/real-world-elements.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Circuit terminology]({{ site.baseurl }}{% link _videos/circuit-terminology.md %})
+[![]({% link i/video.svg %}) Circuit terminology]({% link _videos/circuit-terminology.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Circuit terminology]({{ site.baseurl }}{% link _articles/circuit-terminology.md %})
+[![]({% link i/article.svg %}) Circuit terminology]({% link _articles/circuit-terminology.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Schematic equivalence]({{ site.baseurl }}{% link _articles/schematic-equivalence.md %}) 
+[![]({% link i/article.svg %}) Schematic equivalence]({% link _articles/schematic-equivalence.md %}) 
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Sign convention for passive components]({{ site.baseurl }}{% link _videos/passive-sign-convention.md %})
+[![]({% link i/video.svg %}) Sign convention for passive components]({% link _videos/passive-sign-convention.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %})
+[![]({% link i/article.svg %}) Sign convention for passive components]({% link _articles/sign-convention.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Labeling voltages]({{ site.baseurl }}{% link _videos/labeling-voltages.md %})
+[![]({% link i/video.svg %}) Labeling voltages]({% link _videos/labeling-voltages.md %})
 
 ---
 
-<i class="fas fa-arrow-left"></i> [Introduction]({{ site.baseurl }}{% link _topics/topic-introduction.md %}) $\qquad$ [Resistor circuits]({{ site.baseurl }}{% link _topics/topic-resistor-circuits.md %}) <i class="fas fa-arrow-right"></i>
+<i class="fas fa-arrow-left"></i> [Introduction]({% link _topics/topic-introduction.md %}) $\qquad$ [Resistor circuits]({% link _topics/topic-resistor-circuits.md %}) <i class="fas fa-arrow-right"></i>
 
 ---

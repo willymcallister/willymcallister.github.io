@@ -10,24 +10,24 @@ Linearity and superposition. Transforming sources. Thévenin and Norton equivale
 
 ----
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) How circuits become equations]({{ site.baseurl }}{% link _articles/how-circuits-become-equations.md %})
+[![]({% link i/article.svg %}) How circuits become equations]({% link _articles/how-circuits-become-equations.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Linearity]({{ site.baseurl }}{% link _articles/linearity.md %})
+[![]({% link i/article.svg %}) Linearity]({% link _articles/linearity.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Linearity of electronic components]({{ site.baseurl }}{% link _articles/linearity-RLC.md %})
+[![]({% link i/article.svg %}) Linearity of electronic components]({% link _articles/linearity-RLC.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Superposition]({{ site.baseurl }}{% link _articles/superposition.md %})
+[![]({% link i/article.svg %}) Superposition]({% link _articles/superposition.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Source transformation]({{ site.baseurl }}{% link _articles/source-transformation.md %})
+[![]({% link i/article.svg %}) Source transformation]({% link _articles/source-transformation.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Source transformation — example]({{ site.baseurl }}{% link _articles/source-transformation-example.md %})
+[![]({% link i/article.svg %}) Source transformation — example]({% link _articles/source-transformation-example.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Thévenin's theorem — proof]({{ site.baseurl }}{% link _articles/thevenin-proof.md %})
+[![]({% link i/article.svg %}) Thévenin's theorem — proof]({% link _articles/thevenin-proof.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Thévenin's theorem — how to]({{ site.baseurl }}{% link _articles/thevenin-howto.md %})
+[![]({% link i/article.svg %}) Thévenin's theorem — how to]({% link _articles/thevenin-howto.md %})
 
 ---
 
-<i class="fas fa-arrow-left"></i> [DC analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %}) $\qquad$ [Natural and forced response]({{ site.baseurl }}{% link _topics/topic-natural-and-forced-response.md %}) <i class="fas fa-arrow-right"></i>
+<i class="fas fa-arrow-left"></i> [DC analysis]({% link _topics/topic-dc-analysis.md %}) $\qquad$ [Natural and forced response]({% link _topics/topic-natural-and-forced-response.md %}) <i class="fas fa-arrow-right"></i>
 
 ---

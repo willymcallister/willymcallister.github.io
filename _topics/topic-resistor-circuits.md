@@ -9,38 +9,38 @@ Series and parallel resistors, and the voltage divider.
 
 ----
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Series resistors]({{ site.baseurl }}{% link _videos/series-resistors.md %})
+[![]({% link i/video.svg %}) Series resistors]({% link _videos/series-resistors.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Series resistors]({{ site.baseurl }}{% link _articles/series-resistors.md %})
+[![]({% link i/article.svg %}) Series resistors]({% link _articles/series-resistors.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Parallel resistors (1)]({{ site.baseurl }}{% link _videos/parallel-resistors-part1.md %})
+[![]({% link i/video.svg %}) Parallel resistors (1)]({% link _videos/parallel-resistors-part1.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Parallel resistors (2)]({{ site.baseurl }}{% link _videos/parallel-resistors-part2.md %})
+[![]({% link i/video.svg %}) Parallel resistors (2)]({% link _videos/parallel-resistors-part2.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Parallel resistors (3)]({{ site.baseurl }}{% link _videos/parallel-resistors-part3.md %})
+[![]({% link i/video.svg %}) Parallel resistors (3)]({% link _videos/parallel-resistors-part3.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Parallel resistors]({{ site.baseurl }}{% link _articles/parallel-resistors.md %})
+[![]({% link i/article.svg %}) Parallel resistors]({% link _articles/parallel-resistors.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Parallel conductance]({{ site.baseurl }}{% link _articles/parallel-conductance.md %})
+[![]({% link i/article.svg %}) Parallel conductance]({% link _articles/parallel-conductance.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Delta-Wye resistor networks]({{ site.baseurl }}{% link _articles/delta-wye-resistor-networks.md %})
+[![]({% link i/article.svg %}) Delta-Wye resistor networks]({% link _articles/delta-wye-resistor-networks.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Delta-Wye derivations]({{ site.baseurl }}{% link _articles/delta-wye-derivations.md %})
+[![]({% link i/article.svg %}) Delta-Wye derivations]({% link _articles/delta-wye-derivations.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Simplify resistor networks]({{ site.baseurl }}{% link _videos/simplify-resistor-networks.md %})
+[![]({% link i/video.svg %}) Simplify resistor networks]({% link _videos/simplify-resistor-networks.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Simplify resistor networks]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %})
+[![]({% link i/article.svg %}) Simplify resistor networks]({% link _articles/simplify-resistor-networks.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %})
+[![]({% link i/article.svg %}) Voltage divider]({% link _articles/voltage-divider.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Voltage divider — design considerations]({{ site.baseurl }}{% link _articles/voltage-divider-design.md %})
+[![]({% link i/article.svg %}) Voltage divider — design considerations]({% link _articles/voltage-divider-design.md %})
 
-[![]({{ site.baseurl }}{% link i/video.svg %}) Voltage divider]({{ site.baseurl }}{% link _videos/voltage-divider.md %})
+[![]({% link i/video.svg %}) Voltage divider]({% link _videos/voltage-divider.md %})
 
-[![]({{ site.baseurl }}{% link i/article.svg %}) Resistivity]({{ site.baseurl }}{% link _articles/resistivity.md %})
+[![]({% link i/article.svg %}) Resistivity]({% link _articles/resistivity.md %})
 
 ---
 
-<i class="fas fa-arrow-left"></i> [Circuit elements]({{ site.baseurl }}{% link _topics/topic-circuit-elements.md %}) $\qquad$ [DC circuit analysis]({{ site.baseurl }}{% link _topics/topic-dc-analysis.md %}) <i class="fas fa-arrow-right"></i>
+<i class="fas fa-arrow-left"></i> [Circuit elements]({% link _topics/topic-circuit-elements.md %}) $\qquad$ [DC circuit analysis]({% link _topics/topic-dc-analysis.md %}) <i class="fas fa-arrow-right"></i>
 
 ---
