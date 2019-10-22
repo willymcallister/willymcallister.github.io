@@ -89,6 +89,12 @@ So which way is downhill for electric charge? It's downhill both ways! Electrons
 
 We don't often draw energy diagrams in beginning electronics. It's hard to draw two downhills on a single graph. If positive charge rolls down the page then electrons roll up the page (up is downhill for an electron). Too weird. 
 
-In the video on [visualizing voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I draw a mountain as an energy diagram. I'm careful to only mention electrons rolling down the mountain and avoided talking about positive charge spontaneously rolling uphill. The gravity analogy for voltage is fine for talking about one type of charge, but struggles if you include both.
+In the video on [visualizing voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I draw a mountain as an energy diagram. I'm careful to only mention electrons rolling down the mountain and avoided talking about positive charge spontaneously rolling uphill. 
+{% capture image %}basic_voltage_analogy.svg{% endcapture %}  
+{% capture alt %}Voltage is analogous to elevation{% endcapture %}
+{% capture height %}200px{% endcapture %}  
+{% include image_centered_without_caption.html %}
+
+The gravity analogy for voltage is fine for talking about one type of charge, but struggles if you include both.
 
 When you study semiconductors we use energy diagrams to understand how they work. That's a fairly advanced topic. By that time you will be deep enough into electronics that you can deal with two downhills. 
