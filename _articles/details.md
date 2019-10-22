@@ -83,3 +83,32 @@ $\text V_{\text T} = \text V_{\text T} \, \text R_{\text N} = 0.002 \cdot 500 = 
 {% endcapture %}{% include details.html %} 
 
 The markdown source file for this article is in \_articles/details.md.
+
+#Messing around
+
+<style>
+  .div1 {
+  height: 350px;
+  width: 530px;
+  background-color: blue;
+  display: table-cell;
+  vertical-align: middle;
+}
+.div1:hover .div2 {
+  color:  #cfd9cd;   // theme green blended with white
+}
+.div2 {
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: small-caps;
+}
+</style>
+
+<div class="div1" style="background-image: url(https://www.pvgc.com/images/dynamic/getImage.gif?ID=100008989)">
+  <div class="div2">
+    Membership
+  </div>
