@@ -5,6 +5,8 @@ author: Willy McAllister
 comments: true
 ---
 
+Insert these useful templates into markdown documents to embed images into articles. There are variations for left/center/right images along with text-style text or caption-style caption. Each template is paired with an html include file you save in your \_includes folder. 
+
 ----
 
 #### Contents
@@ -14,8 +16,6 @@ comments: true
 {:toc}
 
 ----
-
-Here are some useful templates to embed images with captions into articles. Each template is paired with an html include file you save in your \_includes folder. 
 
 ## Image_left_with_caption
 
