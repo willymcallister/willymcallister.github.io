@@ -7,6 +7,8 @@ comments: true
 
 Electric current is the flow of charge, similar to the flow of water in a river or garden hose. The key difference: there is one type of water but there are two types of charge---and they move in opposite directions. 
 
+This article gives you a mental picture of current at the atomic level, and at the scale of real-world current.
+
 ----
 
 #### Contents
@@ -27,14 +29,15 @@ Current is the flow of charge. This is the cornerstone concept in electrical eng
 
 Current in metal wires is carried by electrons. Each atom in a metal wire contributes one or more valence electrons to a "swarm" of electrons free to move around in the metal. Valence electrons are the ones farthest from the nucleus. They are easily pulled away from metal atoms. This swarm behavior is a special property of elements classified as metals. 
 
-![Copper atom]({{ site.baseurl }}{% link i/basic_copper_atom.svg %}){: .centered :}{: height="160px" width="245px" :}
-
+{% capture image %}copper_atom.svg{% endcapture %}
+{% capture alt %}Copper atom{% endcapture %}
+{% capture caption %}
 A copper atom has one valence electron in its outer shell. At any normal temperature this valence electron has enough energy to leave its atom and join a 'metallic swarm' of electrons. An applied voltage influences the motion of the swarm.
-{: .caption :}
+{% endcapture %}{% include image_left_with_caption.html %}
 
-When you apply a voltage to a wire it is equivalent to an *electrical pressure*. Voltage causes an electric force on charged particles (Coulomb's force), and if the particles are able to move, they will. In metals, the valence electrons move around. The other electrons are more tightly bound to the nucleus, so they don't go anywhere. The nucleus (protons and neutrons) are stuck in the atomic lattice, so they don't go anywhere, either.
+When you apply a voltage to a wire it is equivalent to an *electrical pressure*. Voltage creates an electric force on charged particles (Coulomb's force), and if the particles are able to move, they will. In metals, the valence electrons move around. The other 28 electrons are more tightly bound to the nucleus, so they can't go anywhere. The nucleus, made of protons and neutrons, is stuck in the atomic lattice, so it doesn't go anywhere, either.
 
-Which way to they move? Electrons, e$^-$, have a negative charge. They are attracted to the higher voltage, on the left in this image, and repelled by the negative voltage on the right. 
+Which way to the free electrons move? Electrons, e$^-$, have a negative charge. They are attracted to the higher voltage, on the left in this image, and repelled by the negative voltage on the right. 
 
 ![Current flow in wire]({{ site.baseurl }}{% link i/current_wire.svg %}){: .centered :}{: height="140px" :}
 
@@ -42,19 +45,38 @@ The metals with the loosest electrons (the best [conductors](https://en.wikipedi
 
 ## Can current be positive charge?
 
-Yes. Current is the movement of any type of charge. It can be carried by both positive and negative charge at the same time. 
+Yes. Current is the movement of any type of charge. Current can be carried by negative charge or positive charge or both positive and negative charge at the same time. 
 
-A good example is saltwater. Current in saltwater is carried by both positive and negative charge. Table salt is sodium chloride, NaCl. In solid form, the sodium and chlorine atoms are held together by an *ionic bond*, a relatively weak chemical bond. When you put salt in water the water molecules wiggle between the Na and Cl atoms and pry them apart. This is what happens when salt *dissolves*. 
+A good example is saltwater. Current in saltwater is carried by both positive and negative charge at the same time. We start with a little bit of chemistry. Ordinary table salt is sodium chloride, NaCl. Neutral sodium and chlorine atoms look like this,
 
-Na and Cl separate and become free-floating, each surrounded by water molecules. In the process Na gladly gives up one of its electrons, and Cl joyously accepts an electron. Na and Cl turn into ions with opposite charge, Na$^+$ and Cl$^-$. 
+{% capture image %}sodium_atom.svg{% endcapture %}
+{% capture alt %}Sodium atom{% endcapture %}
+{% capture caption %}
+Like copper, a sodium atom has one valence electron in its outer shell. It does not take very much energy for that electron to escape from its atom. If the valence electron departs, sodium is left with a [stable octet](https://www.khanacademy.org/test-prep/mcat/chemical-processes/covalent-bonds/a/single-and-multiple-covalent-bonds).
+{% endcapture %}{% include image_left_with_caption.html %}
+
+{% capture image %}chlorine_atom.svg{% endcapture %}
+{% capture alt %}Chlorine atom{% endcapture %}
+{% capture caption %}
+A chlorine atom has seven electrons in its outer shell. It is one short of a stable octet. That open spot attracts nearby electrons.
+{% endcapture %}{% include image_left_with_caption.html %}
+
+In solid form, the sodium and chlorine atoms are held together by the sharing of that valence electron. It's called an *ionic bond*. As chemical bonds go, an ionic bond is relatively weak and easy to break. When you put salt in water the water molecules wiggle between the Na and Cl atoms and pry them apart. We say the salt *dissolves*. 
+
+Na and Cl separate and become free-floating, each surrounded by water molecules. In the process Na donates its valence electron, and Cl accepts it to fill its octet. Na and Cl turn into ions with opposite charge, Na$^+$ and Cl$^-$. 
+
+>This is a blockquote..
 
 ![Current flow in saltwater]({{ site.baseurl }}{% link i/current_saltwater.svg %}){: .centered :}{: height="140px" :}
 
-Saltwater is a good conductor. Both ions respond to an applied voltage. They move through the saltwater in opposite directions. Na$^+$ is attracted toward negative voltage (on the right in the image) and Cl$^-$ is attracted toward positive voltage (on the left). 
+Now back to electricity. Saltwater is a good conductor. Both ions respond to an applied voltage. They move through the saltwater in opposite directions. Na$^+$ is attracted toward negative voltage (on the right in the image) and Cl$^-$ is attracted toward positive voltage (on the left). This movement of charge counts as an electric current.
 
-In saltwater the current is composed of positive and negative ions, not free electrons like in metal. The entire charged ion drifts through the water. The electrons do not from atom to atom. 
+The moving charges are positive and negative ions, not free electrons like in metal. Whole charged ions drift through the water. The electrons do not hop from atom to atom. 
 
-Electric currents in our bodies are the same thing, moving ions. The water molecules, H$_2$O, are electrically neutral. They don't move in response to the applied voltage. (They might rotate to line up with the electric force, but they don't move any distance.)
+{% capture summary %}Does pure water conduct?{% endcapture %}  
+{% capture details %}  
+Super pure water without any salt or other ions is a poor conductor. However, there is almost no chance you will come across water this pure. Water is very good at dissolving whatever it comes in contact with, like the walls of the container it is in. It always finds some way to have plenty of salt ions available to conduct. Water pure enough to not conduct only exists in specialized chemistry labs.  
+{% endcapture %}{% include details.html %} 
 
 {% capture summary %}What happens at the ends? {% endcapture %}  
 {% capture details %}  
@@ -65,12 +87,7 @@ At this point, here's the answer: It's complicated---please don't ask. There is 
 My recommendation is, for now: Apply your curiosity to electric circuits.  
 {% endcapture %}{% include details.html %} 
 
-{% capture summary %}Does pure water conduct?{% endcapture %}  
-{% capture details %}  
-Super pure water without any salt or other ions is a poor conductor. However, there is almost no chance you will come across water this pure. Water is very good at dissolving whatever it comes in contact with, like the walls of the container it is in. It always finds some way to have plenty of salt ions available to conduct. Water pure enough to not conduct only exists in specialized chemistry labs.  
-{% endcapture %}{% include details.html %} 
-
-Another place positive and negative ions work together to create current is inside a battery. The chemical processes have moving electrons and positive ions. The current inside fluorescent lamps and neon signs includes positive ions on the move. I don't know any examples where current is just positive charge.
+Electric currents in our bodies are made of moving ions, both positive and negative. Another place positive and negative ions work together is inside a battery. The battery's chemical reactions are moving electrons and positive ions. The current in fluorescent lamps and neon signs includes positive ions. (I don't know any examples where current is just positive charge.)
 
 ## Visualize current
 
