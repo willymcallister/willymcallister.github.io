@@ -37,7 +37,7 @@ If you fiddle around with static electricity you will eventually conclude there 
 
 **Conductors** are atoms whose outer electrons (valence electrons) have relatively weak bonds to their nuclei, as shown in this fanciful image of a copper atom. When a bunch of metal atoms are together, they gladly share their outer electrons with each other. Metals have a cloud or "swarm" of electrons not associated with a particular nucleus. A very small electric force can make the electron swarm move around in a current. Copper, gold, silver, and aluminum are good conductors.
 
-![Copper atom]({{ site.baseurl }}{% link i/basic_copper_atom.svg %}){: .centered :}{: height="160px" width="245px" :}
+![Copper atom]({{ site.baseurl }}{% link i/copper_atom.svg %}){: .centered :}
 
 There are also relatively poor conductors. Tungsten — a metal used for the filament in an incandescent light bulb — is a relatively poor conductor compared to copper. When you put a voltage on a tungsten filament it resists the flow of current and gets really hot. Carbon in graphite form used in pencils is a relatively poor conductor. The electrons in these materials are less likely to escape from an atom. (An exotic form of carbon called graphene turns out to be a superb conductor).
 

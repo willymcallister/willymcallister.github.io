@@ -25,8 +25,9 @@ html, html[data-theme="light"], {
     --table-zebra-color: #eaeaea;
     --background-color: #fdfdfd;
     --img-background-color: #fdfdfd;
-    --site-top-margin-color: #353535;   // $grey-color-dark
+    --site-top-margin-color: #353535;       // $grey-color-dark
     --pre-background-color: #eef;
+    --details-background-color: #dbdbdb;;   // $grey-color-light
 }
 
 html[data-theme="dark"] {
@@ -38,6 +39,7 @@ html[data-theme="dark"] {
     --img-background-color: #4f4f4f;    // $grey-color-darkish
     --site-top-margin-color: #2a7ae2;   // $brand-color
     --pre-background-color: #343c46;    // $grey-color-dark blended with $brand-color #343c46
+    --details-background-color: #4f4f4f;// $grey-color-darkish
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,10 +105,18 @@ body {
     color: var(--text-color);
 }
 
-main img {
-    background-color: var(--img-background-color);
-    opacity: .9;
-}
+//main img {
+//    background-color: var(--img-background-color);
+///    opacity: .9;
+//}
+
+img {
+    opacity: .8;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
 
 a {
   color: $brand-color;
@@ -161,7 +171,8 @@ details {
     margin-bottom: 15px;
 }
 details[open] {
-    background: $grey-color-darkish;
+//    background: $grey-color-darkish;
+    background: var(--details-background-color);
     padding: 0px 8px 8px 8px;
 }
 summary {
