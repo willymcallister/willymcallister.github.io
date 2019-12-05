@@ -218,6 +218,7 @@ One of the side effects of Euler's formula $\omega$ gets separated from $j$ and 
 Now we want to find the amplitude constants, $A_1$ and $A_2$. We use the initial conditions, once we figure out what they are.
 
 ### Find the initial conditions
+{:.no_toc}
 
 We'll assume the current starts at zero and the capacitor starts with a voltage of $\text V_0$, 
 
@@ -290,6 +291,7 @@ $i(0^+) = 0$
 $\dfrac{di}{dt}(0^+) = \dfrac{\text V_0}{\text L}$
 
 ### Find the amplitude constants
+{:.no_toc}
 
 As a reminder, our proposed solution is,
 
@@ -355,6 +357,7 @@ $\alpha = \dfrac{\text R}{2\text L} \qquad \omega_o = \dfrac{1}{\sqrt{\text{LC}}
 $s_{1,2} = -\alpha \pm \sqrt{\alpha^2 - \omega_o^2}\quad$ or $\quad s_{1,2} = -\alpha \pm j\omega_d$
 
 ### Under damped example
+{:.no_toc}
 
 What does an under damped $i$ look like? Let's do a real example,
 
@@ -388,6 +391,7 @@ $s_{1,2} = -1 \pm j2$
 $($Or, you could have just used $s_{1,2} = -\alpha \pm j\omega_d = -1 \pm j2 )$
 
 #### Current
+{:.no_toc}
 
 The two natural frequencies are complex conjugates, which puts us in the under damped case. We insert them into the under damped solution, 
 
@@ -414,6 +418,7 @@ Talk it through,
 This example is called an *under damped* solution because the current swings above and below zero, at least a few times.
 
 #### Voltages
+{:.no_toc}
 
 Before we move on we should take a look at the natural response of the three voltages.
 
@@ -560,6 +565,7 @@ $v_\text C = \phantom{-} \,\dfrac{\text V_0}{\omega_d} e^{-\alpha t}(\omega_d \c
 {% endcapture %}{% include details.html %} 
 
 ### Under damped discussion
+{:.no_toc}
 
 This example is called *under damped* because the current swings above and below zero. A bell is an *under damped* second-order mechanical system. For second-order electrical systems, we borrow a bell term and say the under damped system \"rings.\"
 
@@ -568,6 +574,7 @@ The current looks like a sine wave that diminishes over time. Think of the sound
 When we analyzed the [$\text{LC}$ natural response]({{ site.baseurl }}{% link _videos/lc-natural-response-intuition1.md %}) we came up with a sine wave that lasted forever. In real life, $\text R$ is never zero, so there is always some energy lost. After all, a bell does not ring forever.
 
 ### Under damped simulation model
+{:.no_toc}
 
 To explore further on your own, open this [under damped simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["l",[136,48,0],{"name":"L","l":"1","_json_":0},["4","7"]],["r",[224,24,1],{"name":"R","r":"2","_json_":1},["2","1"]],["c",[272,48,0],{"name":"C","c":"0.2","_json_":2},["2","0"]],["n",[176,136,3],{"name":"SW1","WL":"10000","_json_":3},["7","3","0"]],["w",[136,136,176,136]],["w",[224,136,272,136]],["w",[136,24,176,24]],["v",[320,160,0],{"name":"SW2-ctl","value":"step(0,20,5u,1n)","_json_":7},["6","0"]],["g",[320,208,0],{"_json_":8},["0"]],["v",[392,48,0],{"name":"Vo","value":"dc(10)","_json_":9},["5","0"]],["w",[392,48,392,24]],["g",[392,112,0],{"_json_":11},["0"]],["p",[296,24,3],{"name":"SW2","WL":"10000","_json_":12},["2","6","5"]],["a",[136,32,1],{"color":"black","offset":"0","_json_":13},["1","4"]],["w",[136,24,136,32]],["w",[392,24,344,24]],["v",[200,160,4],{"name":"SW1-ctl","value":"step(0,20,10m,1n)","_json_":16},["3","0"]],["g",[200,208,0],{"_json_":17},["0"]],["w",[272,48,272,24]],["w",[296,24,272,24]],["w",[224,24,272,24]],["w",[272,136,272,96]],["w",[136,136,136,96]],["w",[392,112,392,96]],["w",[320,48,320,160]],["s",[272,24,0],{"color":"cyan","offset":"0","_json_":25},["2"]],["g",[272,136,0],{"_json_":26},["0"]],["s",[136,24,0],{"color":"magenta","offset":"0","_json_":27},["1"]],["view",12,-28.199,1.5625,"50","10","1G",null,"100","6","1000"]]). Run a transient analysis by clicking on **TRAN** in the main menu bar. 
 
@@ -694,6 +701,7 @@ The response start at zero because the two exponentials cancel each other. One o
 If you are curious about the voltages, use the voltage derivation from the under damped case for inspiration. Use the simulation model to plot the voltages and compare your results.
 
 ### Over damped simulation model
+{:.no_toc}
 
 To explore further on your own, open this [over damped simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[136,24,0],{"color":"magenta","offset":"0","_json_":0},["3"]],["g",[272,136,0],{"_json_":1},["0"]],["s",[272,24,0],{"color":"cyan","offset":"0","_json_":2},["4"]],["w",[320,48,320,160]],["w",[392,112,392,96]],["w",[136,136,136,96]],["w",[272,136,272,96]],["w",[224,24,272,24]],["w",[296,24,272,24]],["w",[272,48,272,24]],["g",[200,208,0],{"_json_":10},["0"]],["v",[200,160,4],{"name":"SW1-ctl","value":"step(0,20,10m,1n)","_json_":11},["5","0"]],["w",[392,24,344,24]],["w",[136,24,136,32]],["a",[136,32,1],{"color":"black","offset":"0","_json_":14},["3","2"]],["p",[296,24,3],{"name":"SW2","WL":"10000","_json_":15},["4","6","7"]],["g",[392,112,0],{"_json_":16},["0"]],["w",[392,48,392,24]],["v",[392,48,0],{"name":"Vo","value":"dc(10)","_json_":18},["7","0"]],["g",[320,208,0],{"_json_":19},["0"]],["v",[320,160,0],{"name":"SW2-ctl","value":"step(0,20,5u,1n)","_json_":20},["6","0"]],["w",[136,24,176,24]],["w",[224,136,272,136]],["w",[136,136,176,136]],["n",[176,136,3],{"name":"SW1","WL":"10000","_json_":24},["1","5","0"]],["c",[272,48,0],{"name":"C","c":"0.1111","_json_":25},["4","0"]],["r",[224,24,1],{"name":"R","r":"10","_json_":26},["4","3"]],["l",[136,48,0],{"name":"L","l":"1","_json_":27},["2","1"]],["view",12,-34.69999999999999,1.5625,"50","10","1G",null,"100","6","1000"]]). Run a transient analysis by clicking on **TRAN** in the main menu bar. Current is plotted in black. The voltages are in color.
 
@@ -748,6 +756,7 @@ The critically damped case can turn out two ways. It depends on how the initial 
 ![RLC with initial current Io]({{ site.baseurl }}{% link i/rlc_natural_response25.svg %}){: .centered :}
 
 ### Critically damped with an initial voltage
+{:.no_toc}
 
 The initial conditions are the same as the [under damped case]({{ site.baseurl }}{% link _articles/rlc-natural-response-variations.md %}#find-the-initial-conditions), so I won't repeat it here, 
 
@@ -867,6 +876,7 @@ Critically damped series $\text{RLC}$ with an initial voltage. $\text R = 4$ ohm
 * When there is an initial voltage, the critically damped response never swings negative. 
 
 ### Critically damped with an initial current
+{:.no_toc}
 
 For this solution we set up a current in the inductor and make the capacitor voltage zero,
 
@@ -993,6 +1003,7 @@ Critically damped series $\text{RLC}$ with an initial current. The gray lines ar
 * When there is an initial current, the critically damped response crosses the time axis one time and then decays to $0$. 
 
 ### Critically damped simulation models
+{:.no_toc}
 
 To explore on your own, open up one of these simulation models 
 
@@ -1009,9 +1020,9 @@ Explore: Go back to the definitions of $\alpha$ and $\omega_o$ and design a diff
     <p>I would like to thank Khan Academy learner Jonathan B. Landham for discovering and reporting an error in my critically damped solution and providing the inspiration to fully work out the derivation with repeated roots.</p>
 </details>
 
-## Three variants plotted together
+## Three variations plotted together
 
-Compare the waveforms from the three variants that started with $10\,\text V$ on the capacitor. Here they are plotted together on the same scale, 
+Let's compare the waveforms from the three variants, the ones that started with $10\,\text V$ on the capacitor. Here they are plotted together on the same scale, 
 
 ![3 variants plotted together]({{ site.baseurl }}{% link i/rlc_3variations_current.svg %}){: .centered :}
 
