@@ -192,7 +192,7 @@ It's amazing, but the classical fields of electrostatics (what we are studying h
 
 The electron was discovered in 1892 ([J.J. Thomson](https://en.wikipedia.org/wiki/Electron#Discovery)). We now know the smallest charged objects are two sub-atomic particles, the electron $(-)$ and the proton $(+)$. The amounts of charge on the electron and proton are identical, with opposite signs. The mass of electron is $1000\times$ less than a proton, but the charge of the two particles is identical. We don't know why, we just know Nature made it that way. 
 
-The electron gets the $-$ sign and the proton the $+$ sign because of the way Franklin stated his "one fluid" theory of electricity so long ago. The material he though was lacking electric fluid had picked up extra electrons from the other material used to rub it. There was no way to know this at the time. The important point to remember is the signs/names we use for charge are arbitrary. There is nothing naturally "negative" about the electron's charge; its only true property is that it is unlike the charge of the proton. It's just a name.
+The electron gets the $-$ sign and the proton the $+$ sign because of the way Franklin stated his "one fluid" theory of electricity so long ago. The material he thought was lacking electric fluid had picked up extra electrons from the other material used to rub it. There was no way to know this at the time. The important point to remember is the signs/names we use for charge are arbitrary. There is nothing naturally "negative" about the electron's charge; its only true property is that it is unlike the charge of the proton. It's just a name.
 
 The variable we use for the charge of an electron is $-e$ or $e^-$. The charge of a proton can be written as $+e$ or $e^+$.
 
