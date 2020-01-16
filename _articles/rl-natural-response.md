@@ -466,13 +466,13 @@ $i(t) = \text I_0\,e^{-\text t/\tau}$
 
 ## Appendix - Separable differential equation
 
-The differential equation we derived for the $\text{LC}$ circuit is,
+The differential equation we derived for the $\text{RL}$ circuit is,
 
 $\text L \dfrac{di}{dt} + i\,\text R = 0$
 
-This is a *separable* differential equation. A differential equation is separable if it is possible to sort all the $i$'s and $di$'s to one side of the equation and get all the $dt$'s on the other side. This happens in the second step below.
+This is a *separable* differential equation. A differential equation is separable if it is possible to sort all the $i$'s and $di$'s as a product on one side of the equation and get all the $dt$'s in a product on the other side. This happens in the second step below.
 
-If you have covered this technique in your calculus studies, you can solve both the $\text{RL}$ and $\text{RC}$ first-order differential equations with this method, without guessing a solution.
+If you covered this technique when you studied differential equations, you can solve both the $\text{RL}$ and $\text{RC}$ first-order differential equations with this method, without guessing a solution.
 
 <p>
 $\begin{aligned}
@@ -494,4 +494,4 @@ i(t) &= \text I_0\,e^{-\text Rt/\text L}
 \end{aligned}$
 </p>
 
-This is the same result we came up with in the main article by guessing a solution. Sal has a sequence of videos where he solves this type of [separable differential equation](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction).
+This is the same result we came up with in the main article by guessing a solution. Sal has a sequence of videos where he covers this type of [separable differential equation](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction). He does a [worked example](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/modeling-population-with-simple-differential-equation) to solve a population growth problem. You will see it is the same as the solution to the RL circuit in this appendix.

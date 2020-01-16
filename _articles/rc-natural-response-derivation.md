@@ -350,9 +350,11 @@ Any $\text{RC}$ transient is pretty much over after $3$ time constants.  Amazing
 
 ### Another way to solve this ODE
 
-The ODE we solved here is a *separable* differential equation. We used a guessing method. Another method for solving separable differential equations is included as an appendix at the end of [RL natural response]({{ site.baseurl }}{% link _articles/rl-natural-response.md %}). The math is more sophisticated, but there is no guessing involved. 
+We used a guessing method to solve the ODE for this circuit. It turns out this ODE is a *separable* differential equation. We could have solved it without a guess using the method of [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction). This is one of the first methods taught in the formal study of differential equations. An appendix at the end of [RL natural response]({% link _articles/rl-natural-response.md %}#appendix---separable-differential-equation) shows an example. The method requires you to have skills in integration, but there is no guessing involved. 
 
-Sal has a video on [separable differential equations](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction) that goes into depth on this method. He talks about [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) while solving a second-order differential equation. We use the guessing method again when we solve the [RLC natural response]({{ site.baseurl }}{% link _articles/rlc-natural-response-derivation.md %}).
+Sal does a worked example using [separable differential equations](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/modeling-population-with-simple-differential-equation) to solve a population growth problem. If you replace insects with voltage, it is also the solution to the RC circuit in this article. 
+
+Later on, Sal uses the [guessing a solution](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations/linear-homogeneous-2nd-order/v/2nd-order-linear-homogeneous-differential-equations-2) method to solve a second-order differential equation. Guessing is the appropriate method for the [LC]({% link _articles/lc-natural-response-derivation.md %}) and [RLC]({% link _articles/rlc-natural-response-derivation.md %}) circuits coming up.
 
 ### $e$ is a special number
 
