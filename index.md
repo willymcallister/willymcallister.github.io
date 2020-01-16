@@ -7,19 +7,14 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-NEW: Try out <a href="#" title="Toggle color theme" onclick="modeSwitcher()">Dark Mode</a>.
-
-May 2019 --- [The definition of the Ampere has changed]({% link _articles/standard-electrical-units.md %}).
+>If you have trouble posting a comment, write me directly at [willy@spinningnumbers.org](mailto:willy@spinningnumbers.org). 
 
 ---
 
-### [Circuit sandbox simulator ![circuit sandbox]({% link i/circuit_sandbox.png %}){: height="80px" :}]({% link _articles/circuit-sandbox.md %})
-
-Circuit simulator [in English](https://spinningnumbers.org/circuit-sandbox/index.html), [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html), [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html), [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html).  
-Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
-
 ### [Introduction]({% link _topics/topic-introduction.md %})
 Become familiar with the most important electrical quantities: charge, current, and voltage.
+
+News: [The definition of the Ampere]({% link _articles/standard-electrical-units.md %}) changed in 2019.
 
 ### [Circuit elements]({% link _topics/topic-circuit-elements.md %})
 Circuits are made of resistors, capacitors, inductors, and power sources.
@@ -55,26 +50,31 @@ Electric force is described by Coulomb's Law. Electric field. Formal definition 
 ### [Digital electronics]({% link _topics/topic-digital.md %})
 Basic concepts underlying digital hardware design.
 
-### [Rarely asked questions]({% link _articles/raq.md %})
+### [Circuit sandbox simulator ![circuit sandbox]({% link i/circuit_sandbox.png %}){: height="80px" :}]({% link _articles/circuit-sandbox.md %})
+
+Circuit simulator [in English](https://spinningnumbers.org/circuit-sandbox/index.html), [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html), [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html), [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html).  
+Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
+
+---
+#### [Rarely asked questions]({% link _articles/raq.md %})
 A collection of amusing, interesting, (and possibly useful), engineering questions.
 
-### [What's with the name? <img class="sn-logo" src="/i/sn_logo2.svg">]({% link _articles/whats-with-the-name.md %})     
+#### [What's with the name? <img class="sn-logo" src="/i/sn_logo2.svg">]({% link _articles/whats-with-the-name.md %})     
 Where does the name [Spinning Numbers]({% link _articles/whats-with-the-name.md %}) come from?
 
-### [Printing]({% link printing.md %})  
+#### [Printing]({% link printing.md %})  
 Tips on the best way to [print]({% link printing.md %}) articles from Spinning Numbers.
 
-### [Everything]({% link _topics/everything.md %})
-List of [everything]({% link _topics/everything.md %}) on Spinning Numbers. Topics, articles, videos, images, and on and on.
+#### [Everything]({% link _topics/everything.md %})
+List of [everything]({% link _topics/everything.md %}) on Spinning Numbers---topics, articles, videos, images, and on and on.
 
-----
 #### External resources
 
 [Glossary of electrical terms](https://electricalschool.org/)
 
 ----
 
-#### Greetings
+### Greetings
 
 These videos and articles began at Khan Academy where I had the honor of being the Electrical Engineering Content Fellow in 2016. The concepts are explained at the level of an undergraduate EE student. Motivated middle school and high school students can get a lot from the course. 
 
