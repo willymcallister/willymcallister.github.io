@@ -50,23 +50,32 @@ The two common symbols for constant voltage sources look like this,
 
 ![Voltage source symbols]({{ site.baseurl }}{% link i/source_voltage_symbols.svg %}){: .centered :}
 
-The symbol on the left is a battery. The long horizontal line represents the positive terminal of the battery, and the short horizontal line is the negative terminal. Sometimes the battery is not marked with $+$ and +-$ signs, so this long-line short-line thing is to memorize. 
+The symbol on the left is a battery. The long horizontal line represents the positive terminal of the battery, and the short horizontal line is the negative terminal. Sometimes the battery is not marked with $+$ and $-$ signs, so this long-line short-line thing is something you want to memorize. 
+
+{% capture summary %}origin of the battery symbol{% endcapture %}
+{% capture details %}
+The battery symbol is a reminder of the very first battery invented by Volta. A stack of alternating dissimilar metal disks,
+{% capture image %}battery_stack.png{% endcapture %} 
+{% capture alt %}The battery symbol originated from the stack of alternating metals in Volta's battery.{% endcapture %}
+{% capture height %}300px{% endcapture %} 
+{% include image_centered_without_caption.html %}
+{% endcapture %}{% include details.html %}
 
 The circle symbol represents some other kind of voltage source, a power supply or generator. It is best practice to draw the $+$ and $-$ signs inside the circle instead of on the outside. That way they don't get confused with other voltage labels added to the schematic later.
 
-An ideal constant voltage source has a fixed output voltage, independent of the current drawn by the components connected to its terminals,
+An ideal constant voltage source has a fixed output voltage, independent of the current,
 
 ![Voltage source i-v plot]({{ site.baseurl }}{% link i/source_constant_voltage_i-v.svg %}){: .centered :}
-Current versus voltage plot for a constant voltage source.
+Current versus voltage plot for a constant voltage source. The current is determined by the components connected to the voltage source.
 {:.caption :}
 
 The $i$-$v$ equation for a constant voltage source is, $v = \text V$, where $\text V$ is some constant voltage, like $v=3\,\text V$. Notice that current isn't mentioned in the $i$-$v$ equation.
 
-It is common see the variable $e$ associated with voltage. This comes from the term "electromotive force" or *emf*. Technically it refers to voltage created by a generator, but $e$ is used as a general term for voltage. You can use either $v$ or $e$ and everyone will know what you mean.
+The obvious variable name for a voltage is $v$, but it is also common see the variable $e$ associated with voltage. This comes from the term "electromotive force" or *emf*. Technically, emf refers to voltage created by a generator, but $e$ is used as a general term for voltage. You can use either $v$ or $e$ and everyone will know what you mean.
 
 {% capture summary %}$i$ vs. $v${% endcapture %}  
 {% capture details %}  
-The plot above is an example of a coordinate system we come across frequently. The independent variable on the horizontal axis is $v$, and the dependent variable on the vertical axis is $i$. This is called an $i$-$v$ plot.
+The plot above is an example of a coordinate system we use a lot. The independent variable on the horizontal axis is voltage, $v$. The dependent variable on the vertical axis is current, $i$. This is called an $i$-$v$ plot.
 {% endcapture %}{% include details.html %} 
 
 ### Variable voltage source
