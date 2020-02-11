@@ -113,17 +113,17 @@ The symbol for a constant current source looks like this,
 
 ![Constant current source symbol]({{ site.baseurl }}{% link i/source_constant_current_symbol.svg %}){: .centered :}
 
-The arrow indicates the direction of positive current flow.
+The arrow indicates the direction of current flow.
 
 An ideal constant current source has a fixed output current, independent of the voltage connected to its terminals,
 
 ![Current source i-v plot]({{ site.baseurl }}{% link i/source_constant_current_i-v.svg %}){: .centered :}
-Current versus voltage plot for a constant current source.
+Current versus voltage plot for a constant current source. The voltage is determined by the components connected to the current source.
 {:.caption :}
 
 The equation for a constant current source is, $i = \text I$ where $\text I$ is a constant output current, like $i=2\,\text{mA}$. 
 
-Notice there is no mention of voltage in the $i$-$v$ equation. The current is the same no matter what voltage appears across the source. For an ideal current source, the voltage at the terminals becomes whatever is required to push out the constant current, even if that voltage is gigantic. 
+Notice there is no mention of voltage in the $i$-$v$ equation. The current is the same no matter what voltage appears across the source. For an ideal current source, the voltage at the terminals is whatever is required to push out the constant current, even if that voltage is gigantic. 
 
 When we build real current sources, of course, the range of operation is significantly restricted compared to the ideal current source abstraction.
 

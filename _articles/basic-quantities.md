@@ -64,7 +64,7 @@ When we give a number for current, it is reported as the number of charges per u
 {% capture details %}  
 We point the current arrow in opposite the direction electrons move. This may seem jarring, but we will make it work. This definition often causes confusion for beginners and people who learned electricity in the military or some technician schools.. 
 
-For example the U.S. Navy NEETS program in the 1960's used the opposite convention where current flow is defined in the direction of electron motion. We don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).  
+For example the U.S. Navy [NEETS](https://www.fcctests.com/neets/Neets.htm) program in the 1960's used the opposite convention where current flow is defined in the direction of electron motion. We don't use that here at Spinning Numbers, nor does most of the electrical engineering world. More on this later when we talk about [conventional current direction]({{ site.baseurl }}{% link _videos/conventional-current.md %}).  
 {% endcapture %}{% include details.html %} 
 
 Since current is the amount of charge passing through a boundary in some period of time, it can be expressed in general terms with this notation from calculus,
