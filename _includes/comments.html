@@ -1,4 +1,5 @@
 <section class="comments">
+{% if site.enableComments %}
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
     <hr>
@@ -25,4 +26,5 @@
   <div id="respond" class="comment__new">
     {% include comment_form.html %}
   </div>
+{% endif %}
 </section>

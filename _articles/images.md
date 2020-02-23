@@ -178,8 +178,8 @@ Example,
 
 Insert template into markdown,
 ```
-{% raw %}{% capture image %}electric-eel.jpg{% endcapture %} 
-{% capture alt %}Electric eel{% endcapture %}
+{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
+{% capture alt %}ALT_TEXT{% endcapture %}
 {% capture height %}200px{% endcapture %} 
 {% include image_centered_without_caption.html %}{% endraw %}
 ```

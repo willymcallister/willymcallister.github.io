@@ -30,7 +30,7 @@ Point the current arrow into the positive voltage terminal of an element.
 
 >This article is based on conventional current direction, *not* electron current direction.
 >
->Veterans: Some military electronic training programs (for example the U.S. Navy NEETS program from the 1960's) use the opposite sign convention, defining current to flow in the direction of electron motion. We don't use that convention here at Spinning Numbers. We follow the SI convention for current direction.
+>Veterans: Some military electronic training programs (for example the U.S. Navy [NEETS](https://www.fcctests.com/neets/Neets.htm) program from the 1960's) use the opposite sign convention, defining current to flow in the direction of electron motion. We don't use that convention here at Spinning Numbers. We follow the SI convention for current direction.
 
 -----
 
