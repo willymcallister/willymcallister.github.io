@@ -1,4 +1,4 @@
-<a href="#" class="page-link" id="expand" title="Open up all hints" onclick="openAll()">Expand</a>
+<a href="#" class="page-link" id="expand" title="Open all hints" onclick="openAll()">Expand</a>
 
 <script>
 function openAll() {
@@ -9,6 +9,7 @@ function openAll() {
   }
   document.getElementById("expand").setAttribute( "onClick", "javascript: closeAll();" );
   document.getElementById("expand").innerHTML = "Collapse";
+  document.getElementById("expand").setAttribute('title', 'Close all hints');
 }
 
 function closeAll() {
@@ -19,6 +20,7 @@ function closeAll() {
   }
   document.getElementById("expand").setAttribute( "onClick", "javascript: openAll();" );
   document.getElementById("expand").innerHTML = "Expand";
+  document.getElementById("expand").setAttribute('title', 'Open all hints');
 }
 </script>
 <!-- source: https://stackoverflow.com/questions/43008609/expanding-all-details-tags -->
