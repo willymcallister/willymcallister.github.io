@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture post_slug %}{{ page.title | slugify | prepend:'v-' }}{% endcapture %}
+{% capture post_slug %}{{ page.title | slugify: "latin" | prepend:'v-' }}{% endcapture %}
 
 <article class="post">
 	<div class="video-backdrop">

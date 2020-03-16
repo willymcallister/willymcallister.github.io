@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %}
+{% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify: "latin" }}{% endcapture %}
 
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">

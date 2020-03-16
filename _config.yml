@@ -44,6 +44,7 @@ google_analytics: UA-91424157-1
 
 # Staticman comments
 #staticmanUrl: https://api.staticman.net/v3/entry/github/willymcallister/willymcallister.github.io/master/comments
+#staticmanUrl: https://spinningnumbers-staticmandev.herokuapp.com/entry/willymcallister/willymcallister.github.io/master/comments
 staticmanUrl: https://spinningnumbers-staticmandev.herokuapp.com/v3/entry/github/willymcallister/willymcallister.github.io/master/comments
 enableComments: true
 

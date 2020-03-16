@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture post_slug %}{{ page.title | slugify | prepend:'a-' }}{% endcapture %}
+{% capture post_slug %}{{ page.title | slugify: "latin" | prepend:'a-' }}{% endcapture %}
 
 <article class="post">
 

@@ -271,3 +271,20 @@ button:hover {
 a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
 }
+//
+// Ripple effect
+//
+$focus-color:       #1E72DC !default;   // brand color
+$active-color:      #757575 !default;   // grey color
+.ripple {
+  background-position: center;
+  transition: background 0.5s;
+  &:hover {
+    background: $focus-color radial-gradient(circle, transparent 1%, $focus-color 1%) center/15000%;
+  }
+  &:active {
+    background-color: $active-color;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}

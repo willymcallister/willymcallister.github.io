@@ -1,6 +1,6 @@
 <div>
   <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
-</div>
+</div>{% capture height %}{% endcapture %} 
 <div class="caption">
   {{ caption | markdownify }}
 </div>
