@@ -5,9 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-Current is a cornerstone concept in electrical engineering. Current is the flow of charge, similar to the flow of water in a river or garden hose. The key difference: there is one type of water but there are two types of charge---and they move in opposite directions. It's a little bit tricky.
+Current is a cornerstone concept in electrical engineering. Current is the flow of charge, similar to the flow of water in a river or garden hose. 
 
-This article creates a mental picture---a way to think about current at the atomic level.
+The key difference between flowing water and flowing charge: there is one type of water but there are two types of charge---and they move in opposite directions. It's a bit tricky.
+
+This article describes a mental picture---a way to think about current at the atomic level.
 
 ----
 
@@ -112,45 +114,47 @@ My recommendation is---just for now---save curiosity about electrolysis for anot
 
 ## Visualize current
 
-Here's a way to visualize current---you play a little mind game. Since moving charge has this weird both-ways-at-once feature we will go step by step. In the following examples we deal with the generalized idea of a conductor with moving charges. We are not talking about a specific physical wire or water path. We are also not talking about *amperes* or *coulombs*. Just counting moving charges.
+Here's a way to visualize current---you play a little mind game. In the following examples we we use the most general concept of current, with both types of moving charge. We are not talking about a specific physical wire or water path. We are also not talking about *amperes* or *coulombs*. Just counting moving charges.
 
-**Example 1:** In this first example is just positive charge. The $+$ charge is moving away from the positive voltage toward the negative voltage. Our goal is to find out how much current is flowing,
+**Example 1:** Just positive charge: Positive charge is repelled by the positive voltage and attracted toward the negative voltage. This is the "downhill" direction for positive charge. Our goal: Determine how much current is flowing,
 
 {% capture image %}current_general0p.svg{% endcapture %} 
 {% capture alt %}Flow of positive charge through a membrane, observed by a little dude.{% endcapture %}
 {% capture height %}200px{% endcapture %} 
 {% include image_centered_without_caption.html %}
 
-Imagine a thin membrane (blue) stretched all the way across the conducting path. The membrane allows charge to pass through. Because the membrane stretches all the way across the conductor, ALL charge has to go through it. There's no way for charge to sneak around the membrane.
+Imagine a thin membrane (blue) stretched all the way across the conducting path. The membrane allows charge to pass through. Because the membrane stretches all the way across the conductor, ALL charge has to go through it. There's no path where charge can sneak around the membrane.
 
-To visualize current, shrink yourself down to atomic size and stand near the membrane. You are so small you can count individual charges as they pass through the membrane. 
+Shrink yourself down to atomic size and stand near the membrane. You are so small you can see individual charges as they pass through the membrane. 
 
-Count charges for a fixed amount of time as they pass through the membrane. After the time interval is over, report the current as the total amount of charge divided by the amount of time---the units will be charge per second. 
+Count charges for a fixed amount of time as they pass through the membrane. After the time interval is over, report the current in units of charge per second. 
 
 **Suppose you count $1000$ positive ions passing through the membrane in one second. What is the current?**
 
 {% capture summary %}show answer{% endcapture %}
 {% capture details %}
-It's a current of $1000\,e^+/\text{sec}$. 
+Assume each positive ion particle has a single elementary charge, $e^+$.
+
+The current is $1000\,e^+/\text{sec}$. 
 {% endcapture %}{% include details.html %}
 
-**Example 2:** For our second example, let's have just negative charge moving. The voltage has not changed, so the negative charges move in the opposite direction (toward the positive voltage, away from the negative voltage). We do the same drill,
+**Example 2:** Just negative charge: The voltage is the same, so the negative charge moves in the opposite direction (for negative charge, "downhill" is toward the positive voltage, away from the negative voltage). We do the same drill,
 
 {% capture image %}current_general0n.svg{% endcapture %} 
 {% capture alt %}Flow of negative charge through a membrane{% endcapture %}
 {% capture height %}200px{% endcapture %} 
 {% include image_centered_without_caption.html %}
 
-Count charges as they pass through the membrane. After the time interval is over, report the current as the amount of charge divided by the amount of time---in units of charge per second. 
+Shrink down. Count charges as they pass through the membrane. After the time interval is over, report the current in units of charge per second. 
 
-**This time you count $20{,}000$ electrons in one nanosecond. What's the current?**
+**This time you count $20{,}000$ electrons in one nanosecond. What is the current?**
 
 {% capture summary %}show answer{% endcapture %}
 {% capture details %}
 The current is $20{,}000\,e^-/\text{nsec}$.
 {% endcapture %}{% include details.html %}
 
-**Example 3:** Now for the most general form of current flow---with two types of charge at the same time. 
+**Example 3:** The most general form of current flow---two types of charge at the same time. 
 
 {% capture image %}current_general1.svg{% endcapture %} 
 {% capture alt %}Flow of positive and negative charge through a membrane{% endcapture %}
@@ -159,23 +163,24 @@ The current is $20{,}000\,e^-/\text{nsec}$.
 
 You measure current the same way---count the charges moving through the membrane in a fixed time interval. 
 
-**You observe $300$ positive charges and $300$ negative charges going through the membrane in $1$ second. The two types of charge move in opposite directions. What is the current?**
+**In $1$ second you observe $300$ positive charges and $300$ negative charges going through the membrane in opposite directions. What is the current?**
 
 {% capture summary %}show answer{% endcapture %}
 {% capture details %}
-This is kind of tricky. Two currents are flowing at the same time. At this point we don't have a compact way to answer, so for now we say the current is $300 \, e^+/\text{sec}$ going right plus $300 \, e^-/\text{sec}$ going left.
+This is kind of tricky. It is not clear how to answer this. So for now we give a long answer: The current is $300 \, e^+/\text{sec}$ going right plus $300 \, e^-/\text{sec}$ going left.
 {% endcapture %}{% include details.html %}
 
-Example 3 is a hint we need to come up with a better way to define the direction for current. It is kind of clever how we do this, but it is often a source of confusion for beginners.
+In summary, this is a good mental model of current: Imagine a transparent membrane. It cuts all the way across the current path. Count charges as they pass through the membrane. Report current as charge per second. 
 
-START HERE where should this section go?
+## Direction START HERE
 
-## Ammeters are dumb 
+Example 3 reveals the complexity of reporting current. This can be a big source of confusion for beginners. We need to come up with a better way to describe current direction. It is kind of clever how we do this. 
 
-There's a bit of reality that makes measuring current challenging. Our instrument for measuring current, the *ammeter*, cannot tell what type of charge is moving. Positive charge moving one way registers exactly the same as negative charge moving the other way. The ammeter gives the same answer in both cases. In real life we can't ask our atomic-sized self what types of charge are moving. 
-
+Where should this detail go?
 {% capture summary %}Why are ammeters so dumb?{% endcapture %}
 {% capture details %}
+There's a bit of reality that makes measuring current challenging. Our instrument for measuring current, the *ammeter*, cannot tell what type of charge is moving. Positive charge moving one way registers exactly the same as negative charge moving the other way. The ammeter gives the same answer in both cases. In real life we can't ask our atomic-sized self what types of charge are moving. 
+
 It is hard to tell what kind of charge is moving. Here's a generalized conductor with some free-to-move charge. (We don't care about the fixed charges---they don't contribute to current.) 
 {% capture image %}current2.svg{% endcapture %} 
 {% capture alt %}Neutral conductor. Same amount of charge on both sides.{% endcapture %}
@@ -201,13 +206,16 @@ The right side is missing one positive charge for a net charge of $1e^+ + 2e^- =
 The last two examples have the same charge imbalance! How can you tell them apart? Ha! Without an atomic microscope or some serious experimentation you can't.
 {% endcapture %}{% include details.html %}
 
-## Direction
+Something that contributes to the complexity of current flow are all the signed quantities, 
+* $+/-$ direction
+* $+/-$ charge 
+* $+/-$ voltage
 
-For now we confine our thoughts to currents flowing along lines, like wires or tubes of water. We don't deal with current flowing across a sheet or through bulk solids. When confined to a line there are only two possible directions for current to flow---this way or that way. This is so simple we don't use vector notation to indicate current direction, it works fine to just use $+$ and $-$ signs. 
+It is quite challenging to keep all of these straight. If you think you head might explode, be patient. We will work this all out.
 
-START HERE
+When current is confined to a line (a wire or tube of water) there are two possible directions charge can move---this way or that way. This is so simple we don't have to use vector notation, it works fine to just use $+$ and $-$ signs to distinguish the two possible physical directions. 
 
-This is a start. Next we have to decide which way is positive and which way is negative. If we say a current is *positive*, what does that mean? 
+Next we decide which way is positive and which way is negative. If we say a current is *positive*, what does that mean? 
 
 We start by adding an arrow to the wire. The arrow (blue) defines what we mean by positive current,
 
