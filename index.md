@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
->If you have trouble posting a comment, write me directly at [willy@spinningnumbers.org](mailto:willy@spinningnumbers.org). 
+>The Comment system is up and running. Your comments will post after moderation. However, email notifications are still giving me trouble. If you have trouble posting a comment, write me directly at [willy@spinningnumbers.org](mailto:willy@spinningnumbers.org). 
 
 ---
 
