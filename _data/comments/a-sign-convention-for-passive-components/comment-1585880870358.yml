@@ -1,0 +1,21 @@
+_id: b6b33f70-7552-11ea-b3e4-9b3a2593c0e0
+_parent: 'https://spinningnumbers.org/a/sign-convention.html'
+replying_to: '2'
+message: >-
+  The second power example is where I apply the sign convention for passive
+  components to an "active" (not passive) circuit element, the voltage source.
+  We are abusing the passive sign convention somewhat when we do this, but let's
+  see what happens. The current arrow points in to the + terminal of the voltage
+  source. The current arrow defines which direction we consider as positive
+  current. That doesn't mean current actually flows that way, but if it did, its
+  value would have a + sign. In fact, we know the current flows the other way,
+  out of the + battery terminal and into the top of the resistor. So with the
+  current arrow pointing into the battery, the value of the current is a
+  negative value, i = -8mA. If you do a power calculation on the voltage source
+  you multiply a positive voltage times a negative current, ending up with a
+  negative power for an object that generates power. That is an outcome of using
+  the passive sign convention.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-04-03T02:27:50.355Z'
