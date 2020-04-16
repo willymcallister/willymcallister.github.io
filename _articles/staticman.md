@@ -87,4 +87,4 @@ This is a static site. Comments are implemented with [Staticman](https://staticm
 
 ## Playground
 
-If you are setting up your own system, feel free to practice here. Add comments to this page to see how it works and the timing of regenerating the site when a new comment comes in.
+If you are setting up your own system, feel free to practice here. Add comments to this page to see how it works and the timing of regenerating the site when a new comment comes in. This site is moderated, so it takes a while for your comment to appear (I have to approve it).
