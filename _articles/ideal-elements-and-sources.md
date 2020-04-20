@@ -127,7 +127,29 @@ Notice there is no mention of voltage in the $i$-$v$ equation. The current is th
 
 When we build real current sources, of course, the range of operation is significantly restricted compared to the ideal current source abstraction.
 
-The idea of a current source is kind of weird, but it is important. Current sources are used to model a transistor. 
+The idea of a current source is kind of weird, but it is important.  
+
+{% capture summary %}real current sources{% endcapture %}
+{% capture details %}
+A battery has a constant voltage and variable current. That's why it is a good real-world example of an ideal voltage source.
+
+A current source is the opposite, a source of constant current and variable voltage. These are less familiar because you can't buy a current source in the grocery store.
+
+It is possible to build a current source as a rather complicated instrument.
+
+Current sources are mostly used when we model transistors in a computer simulation. There is a region of a transistor's behavior that looks a lot like a current source.
+
+This is the current-vs-voltage plot of a MOSFET transistor,
+
+{% capture image %}mosfet_i-v.svg{% endcapture %} 
+{% capture alt %}MOSFET i-v characteristic{% endcapture %}
+{% capture caption %}From the Wikipedia article on the [MOSFET](https://en.wikipedia.org/wiki/MOSFET).{% endcapture %}
+{% include image_centered_with_caption.html %}
+
+Notice the blue lines to the right of the red line are horizontal---the area labeled *saturation region*. In that area the current is constant and the voltage can be any value within a voltage range. For this MOSFET, the saturation region starts around 2 volts and extends above 10 volts. 
+
+In the saturation region, a MOSFET is acting like a current source. We use an ideal current source as part of the MOSFET model to create that horizontal behavior during simulation.
+{% endcapture %}{% include details.html %}
 
 ## Resistor
 
