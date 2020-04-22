@@ -6,7 +6,9 @@ comments: true
 post_slug: "Staticman and mailgun"
 ---
 
-Spinningnumbers.org is a static web site. I use [Staticman v3](https://staticman.net) as a service to make it seem like my static site is responsive to comments and discussion.
+>I'm in the process of setting up my own instance of Staticman v2 at Heroku. Some of what follows is different from what the site is doing right now. Update coming soon (4/2020).
+
+Spinningnumbers.org is a static web site. I use [Staticman v2](https://staticman.net) as a service to make it seem like my static site is responsive to comments and discussion.
 
 Staticman allows users to enter their email address to subscribe to a post and be notified if new comments appear.  
 
