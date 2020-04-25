@@ -5,11 +5,16 @@ author: Willy McAllister
 comments: true
 ---
 
-Configure and deploy an instance of Staticman at Heroku. These instructions are for a Jekyll site hosted at GitHub using Staticman v2 and reCaptcha v2. Notifications are sent with MailGun and comments are moderated. 
+Configure and deploy an instance of Staticman at Heroku. 
 
-This is mostly an Installation Guide and partly a Theory of Operation. Corrections are welcomed.
+* Jekyll site hosted at GitHub using Staticman v2
+* reCaptcha v2 for spam reduction
+* MailGun, a free mailing list service for Notifications
+* Comments are moderated 
 
-This guide does not cover how to set up your Jekyll site for commenting.
+This is mostly an Installation Guide and partly a Theory of Operation. Corrections and clarifications are very much welcomed.
+
+This guide does not cover the _include files for implementing commenting on your Jekyll site. See my [_includes/comments*](https://github.com/willymcallister/willymcallister.github.io/tree/master/_includes) and the [credits](#credits) at the end.
 
 ----
 
@@ -131,13 +136,13 @@ What accounts are involved?
 * Heroku (password protected)
 
 What needs to be protected? 
-* reCaptcha secret (in _config.yml, staticman.yml, and every post with a comment form).
+* reCaptcha secret key (in _config.yml, staticman.yml, and every post with a comment form).
 * MailGun API key (in staticman.yml).
 * MailGun domain (in staticman.yml).
 * Subscriber email addresses stored at GitHub. 
 
 What are these used for?  
-* Encrypted reCaptcha secret is passed to Staticman when Submit is clicked. Staticman decrypts it to cleartext and uses it to perform the reCaptcha test.
+* Encrypted reCaptcha secret key is passed to Staticman when Submit is clicked. Staticman decrypts it to cleartext and uses it to perform the reCaptcha test.
 * Encrypted MailGun API key is passed to Staticman via staticman.yml and decrypted by Staticman. The cleartext API key is uses as a password to send requests to MailGun. This prevents bad guys from accessing your MailGun account to send mail or grab your mailing lists. 
 * Encrypted MailGun domain is passed to Staticman via staticman.yml and decrypted by Staticman. This protects your specific MailGun domain from being known by bad guys to make it harder to send to your mailing lists. (I'm weakening this protection by mentioning my MailGun domain in this article.)
 * Subscriber email addresses are saved as cleartext at MailGun but get obfuscated in comment files sent to GitHub.
@@ -289,7 +294,7 @@ Add the cleartext siteKey to _config.yml and staticman.yml.
 
 Unencrypted secret: `recapcha40charactersecretKeyasdf12345xx0` 
 
-Encrypt the reCaptcha **SECRET** site key (not the siteKey) using the Staticman API bridge /encrypt/ endpoint. To encrypt, assemble the following URL and put it into a browser,  
+Encrypt the reCaptcha **SECRET** key (not the siteKey) using the Staticman API bridge /encrypt/ endpoint. To encrypt, assemble the following URL and put it into a browser,  
 
 General form,  
 
@@ -308,7 +313,7 @@ The encrypted reCaptcha secret key is sent with each new comment to Staticman AP
 
 ## Set up MailGun
 
-Sign up for a free MailGun account. As part of the process you are issued some API keys, 
+Sign up for a MailGun account. It is free until you exceed 10,000 emails per month. As part of the process you are issued some API keys, 
 * Private API key --- this is the one we use, treat it like a password
 * Public validation key --- not used
 * HTTP webhook signing key --- not used
@@ -316,6 +321,8 @@ Sign up for a free MailGun account. As part of the process you are issued some A
 A MailGun Private API key:          `key-mailgunprivateAPIkey1234asdf1234`
 
 A MailGun public validation key: `pubkey-willyspublicvalidationkey1234asd`  
+
+Tell your ISP about MailGun: You have to add some entries to your domain records where your domain is hosted. 
 
 ### Encrypt the Mailgun Private API key
 
@@ -459,7 +466,7 @@ Here are [Staticman's instructions](https://staticman.net/docs/webhooks) for set
 
 ## Try it out
 
-Get ready to view your log on the Heroku site (MORE: View logs), or retrieve the log to your computer,
+Get ready to view your log on the Heroku site (MORE: View logs), or download the log with,
 
 ```
 heroku logs --app spinningnumbers-staticmandev2
@@ -534,7 +541,12 @@ If you recently messed with the RSA key you have to redo all encryptions (3), an
 
 #### reCaptcha ERROR for site owner: Invalid site key
 
-This error appears in your reCaptcha symbol. The reCaptcha encrypted secret key in _config.yml is not correct. Make sure you used your latest RSA key to encrypt. (And make sure the reCaptcha key in staticman.yml matches what is in _config.yml). Rebuild your web site by stopping the server and run it again without the -incremental flag. This will rebuild everything.
+{% capture image %}recaptcha_invalid_site_key.png{% endcapture %} 
+{% capture alt %}reCaptcha invalid site key error message{% endcapture %}
+{% capture height %}74px{% endcapture %}   
+{% capture description %} 
+Your encrypted reCaptcha secret key in _config.yml was decrypted by Staticman and sent to reCaptcha. reCaptcha found it wanting. Make sure your reCaptcha secret key is encrypted with your latest RSA key. And while you are at it, make sure the reCaptcha secret key in staticman.yml matches the one in _config.yml. 
+{% endcapture %}{% include image_left_with_text.html %}
 
 #### Mail doesn't arrive
 
@@ -542,23 +554,27 @@ No mail showed up when I  did a curl command to one of my mailing lists.
 
 Mailgun's Log said: "Failed, No MX for mg.spinningnumbers.org" 
 
-I added two MX records to my domain at my domain host, justhost.com  
+I added two MX records to my domain at my domain host, justhost.com,  
 * Priority: 10, host record: mg, points to: mxa.mailgun.org     
-* Priority: 10, host record: mg, points to: mxb.mailgun.org,    
+* Priority: 10, host record: mg, points to: mxb.mailgun.org    
 
-These new records are in addition to an MX record for 
+These new records are in addition to an MX record for, 
 * Priority: 0, host record: @, points to: mail.spinningnumbers.org
 
 ## Credits
 
-[Eduardo](https://staticman.net)
+[Eduardo](https://github.com/eduardoboucas/staticman)
 
 [Travis](https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html)
 
-[Gabe](https://www.gabescode.com/staticman/2019/01/03/create-staticman-instance.html), and [Gabe](https://www.gabescode.com/staticman/2019/01/04/staticman-comments-for-jekyll.html)
+[Gabe](https://www.gabescode.com/staticman/2019/01/03/create-staticman-instance.html) and [Gabe](https://www.gabescode.com/staticman/2019/01/04/staticman-comments-for-jekyll.html)
+
+[Michael](https://github.com/mmistakes/minimal-mistakes)
 
 ## Appendix --- MD5 questions
 
+{% capture summary %}show MD5 questions{% endcapture %}
+{% capture details %}
 **Question:** Why does Staticman return a md5-hashed subscriber email address to Github in the comment file? What is it ever used for?
 
 **Question/Wish:** I wish I could replicate the mailing list MD5 function in a terminal window, something like,
@@ -587,9 +603,12 @@ SubscriptionsManager.prototype._getListAddress = function (entryId) {
 The entryID comes from the value of options[parent] in comment_form.html. options[parent] can be whatever—--post title, slug or made up entry id. options[parent] is only used to create mailing lists. In my case the parent is the page URL and the subscription is to any/all comments for one post.
 
 Related Staticman issue: [#127](https://github.com/eduardoboucas/staticman/issues/127)
+{% endcapture %}{% include details.html %}
 
 ## Appendix --- Exercising MailGun
 
+{% capture summary %}show Exercising MailGun{% endcapture %}
+{% capture details %}
 You can exercise the features of your MailGun account from a terminal window using curl (client URL). 
 
 #### Create a mailing list
@@ -706,5 +725,9 @@ I use this to search mailings lists by date of creation.
 curl -s --user 'api:YOUR_API_KEY' -X DELETE \
     https://api.mailgun.net/v3/lists/LIST@YOUR_DOMAIN_NAME
 ```
+{% endcapture %}{% include details.html %}
 
+## Playground
+
+If you are setting up your own system, feel free to practice here. Add comments to this page to see how it works. It takes 5-10 seconds for Staticman to awaken at Heroku and respond with an Accepted! message. This site is moderated, so I have to approve your comment before it appears.
 
