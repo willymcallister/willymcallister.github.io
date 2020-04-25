@@ -225,7 +225,7 @@ $Gb = \dfrac{G1(G2+G3) + G3(G1+G2) - G2(G1+G3)}{2(G1+G2+G3)}$
 
 Multiply everything out and search for cancellations,
 
-$Gb = \dfrac{\cancel{G1\,G2} \,+ G1\,G3 + G3\,G1 + \,\cancel{G3\,G2} \,-\, \cancel{G2\,G1} \,+ \,\cancel{G2\,G3}}{2(G1+G2+G3)}$
+$Gb = \dfrac{\cancel{G1\,G2} \,+ G1\,G3 + G3\,G1 + \,\cancel{G3\,G2} \,-\, \cancel{G2\,G1} \,- \,\cancel{G2\,G3}}{2(G1+G2+G3)}$
 
 $Gb = \dfrac{\cancel{2}\,G1\,G3}{\cancel{2}(G1+G2+G3)}$
 
@@ -258,5 +258,3 @@ One more flip to get the expression for $Rb$ we've been looking for,
 $Rb=\dfrac{R2\,R3+R1\,R3+R1\,R2}{R2}$
 
 This matches the result from the algebraic derivation we did for $\text Y$ to $\Delta$. Derive the equations for $Ra$ and $Rc$ with the same process. 
-
-
