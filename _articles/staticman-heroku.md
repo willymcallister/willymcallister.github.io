@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Configure and deploy an instance of Staticman at Heroku. 
+Configure and deploy an instance of [Staticman](https://staticman.net) at [Heroku](https://heroku.com). 
 
 * Jekyll site hosted at GitHub using Staticman v2
 * reCaptcha v2 for spam reduction
@@ -31,8 +31,7 @@ This guide does not cover the _include files for implementing commenting on your
 Create a new account at GitHub to act as your Staticman robot for handling comments. This is just an ordinary user account. It will ask you for a unique email address. My bot is named willymcallisterbot. My bot's email address is,  
 `willymcallister1+staticmanbot@gmail.com`
 
->Here's a trick if you have gmail: You can make an unlimited number of new email accounts by appending + after your gmail username, and then any string. For example, if willymcallister1@gmail.com is your email then   
-willymcallister1+staticmanbot@gmail.com counts as a totally different email as far as github is concerned.
+>Here's a trick if you have gmail: You can make an unlimited number of new email accounts by appending + after your gmail username, and then any string. For example, if willymcallister1@gmail.com is your email then willymcallister1+staticmanbot@gmail.com counts as a totally different email as far as github is concerned.
 
 The bot account doesn't have any repositories. It just has a personal access token used by the Staticman app at Heroku, which does all the work.
 
@@ -87,11 +86,11 @@ staticmanUrl: https://spinningnumbers-staticmandev2.herokuapp.com/v2/entry/willy
 
 A bit later we will come back to _config.yml and staticman.yml and add the reCaptcha siteKey and an encrypted reCaptcha secret key.
 
->What's happening : staticmanUrl is built into every [comment_form](https://github.com/willymcallister/willymcallister.github.io/blob/master/_includes/comment_form.html) on your site. When someone submits a comment the web server at GitHub submits the comment form to staticmanUrl. This wakes up the Staticman API bridge at Heroku. Staticman processes the comment (creates the fields you see in a _data/comments file) and sends it to your site's GitHub repository as a Pull Request (if comments are moderated) or pushed directly to the main branch (if comments are not moderated).
+>What's happening: staticmanUrl gets built into every [comment_form](https://github.com/willymcallister/willymcallister.github.io/blob/master/_includes/comment_form.html) on your site. When someone submits a comment the web server at GitHub submits the comment form to staticmanUrl as a POST. This wakes up the Staticman API bridge at Heroku. Staticman puts together the comment file (the files you see under _data/comments) and sends it to your site's GitHub repository as a Pull Request (if comments are moderated) or pushed directly to the main branch (if comments are not moderated).
 
 ### staticman.yml
 
-Create your own staticman.yml starting from a sample staticman.yml from [Staticman's GitHub repository](https://github.com/eduardoboucas/staticman/blob/master/staticman.sample.yml), or copy [mine](https://github.com/willymcallister/willymcallister.github.io/blob/master/staticman.yml), or from [Travis Downs](https://github.com/travisdowns/travisdowns.github.io/blob/master/staticman.yml). Modify as appropriate and add to the top level of your site. 
+Create your own staticman.yml starting from a sample staticman.yml from [Staticman's GitHub repository](https://github.com/eduardoboucas/staticman/blob/master/staticman.sample.yml), or from [mine](https://github.com/willymcallister/willymcallister.github.io/blob/master/staticman.yml), or from [Travis](https://github.com/travisdowns/travisdowns.github.io/blob/master/staticman.yml). Modify as appropriate and save in the top level of your site. 
 
 For each comment request, the Staticman API bridge at Heroku fetches staticman.yml from GitHub. Information in staticman.yml, plus some configuration variables we are going to set directly at Heroku, guides the actions of the Staticman API bridge.
 
@@ -162,8 +161,8 @@ When you set up your Staticman API bridge at Heroku one of its configuration var
 Staticman uses a second algorithm called MD5 (specified in staticman.yml). MD5 is a *hash algorithm* that takes in an arbitrary text string and produces a 128-bit string. 
 
 MD5 serves two purposes,
-* Commenter's email addresses are saved in comment.yml files at GitHub. The email addresses are MD5-encoded to keep them away from prying eyes. MD5 is not a strong cryptosystem and can be broken with modest effort, but it hides email addresses from someone browsing through your repository. 
-* Staticman uses MD5 to generate a compact name for the mailing list (the *alias*) associated with each post. MD5 produces an arbitrary compact name based on your name, repository name, and entryID. With MD5 it is very unlikely two mailing lists will accidentally have the same name. 
+* Commenter's email addresses are saved in comment.yml files at GitHub. The email addresses are MD5-encoded to keep them away from prying eyes. MD5 is not a strong cryptosystem and can be broken with modest effort, but it hides email addresses from someone snooping through your repository. 
+* Staticman also uses MD5 to generate a compact name for the mailing list (the *alias*) associated with each post. MD5 produces an arbitrary compact name based on your name, repository name, and entryID. With MD5 it is very unlikely two mailing lists will accidentally have the same name. 
 
 ## Generate an RSA key
 
@@ -236,9 +235,9 @@ $\text{Hello from Staticman version 3.0.0!}$
 That's what a successful deployment looks like.
 
 >What's happening:  
->**RSA_PRIVATE_KEY** - When you send a string to Staticman's /encrypt/ endpoint it will use the enclosed public key to perform the encryption, and the enclosed private key for decryption. If you ever modify the RSA key you have to do all the encryptions over again and update _config.yml and staticman.yml.
+>**RSA_PRIVATE_KEY** - When you send a string to Staticman's /encrypt/ endpoint it will use the enclosed public key to perform the encryption, and the enclosed private key for decryption. If you ever modify this RSA key you have to do all the encryptions over again and update _config.yml and staticman.yml.
 
->The **personal access token** acts as a password when the Staticman sends a Pull Request or Push to your site. It allows the Staticman API bridge to present itself as the bot, your approved collaborator. Protect your robot's personal access token like a password.
+>The **personal access token** acts as a password when the Staticman sends a Pull Request or Push to your site. It allows the Staticman API bridge to present itself as the bot, your approved collaborator. Protect your bot's personal access token like a password.
 
 >Setting the **TZ** makes Heroku logs easier to read.  
 (Does not work, yet. Still off by many hours.)
@@ -253,25 +252,25 @@ Heroku logs are in the More menu on the Heroku web site.
 ## Invite the bot to become a collaborator
 
 * Log in to GitHub as yourself. Go to to your site repository. 
-* Go to repository Settings: Manage Access. 
+* Go to Settings: Manage Access. 
 * Search for your GitHub bot account (willymcallisterbot) and add it as a collaborator. 
-* Click Add Collaborator. 
-* An invitation is sent to the robot.
+* Click Invite a collaborator. An invitation is sent to the bot.
 
 There are three ways to accept the invitation, pick one,
 
 Log in to GitHub as the bot, willymcallister1+staticmanbot@gmail.com. Click on Accept Invitation.
 
-Or, accept the invitation by opening the email sent to you by GitHub and following the link.
+Or, accept the invitation by opening the email sent to the bot by GitHub and following the link.
 
-Or, use the method from back when Staticman was a public service: Put this URL into a browser,  
+Or, use the method from back when Staticman was a public service:  
+Put this URL into a browser,  
 
 `https://api.staticman.net/v2/connect/{your GitHub username}/{your repository name}`
 
 This should return `OK!` (one time) if it worked.
 
 >What's happening:  
-Once the bot is a collaborator it can modify your site. Your Staticman API bridge knows your bot's Personal Access Token, so it can send things to your site repository, too.
+This allows the bot to modify your site. We will tell the Staticman API bridge your bot's Personal Access Token, so it can send things to your site repository, too.
 
 ## Set up reCaptcha v2
 
@@ -307,7 +306,7 @@ My form,
 The encrypted reCaptcha secret key appears in the browser as a single long line. Enclose the string in double quotes and add `secret: ` in front. Add this line to both _config.yml and staticman.yml.
 
 >What's happening:  
-The encrypted reCaptcha secret key is sent with each new comment to Staticman API bridge. Staticman decrypts what it received to recover the cleartext reCaptcha secret key. It uses the recovered reCaptcha secret key to verify the reCaptcha process was done properly. 
+The encrypted reCaptcha secret key is sent with each new comment to Staticman API bridge. Staticman decrypts what it received to recover the cleartext reCaptcha secret key. It uses the cleartext reCaptcha secret key to verify the reCaptcha process was done properly. 
 >
 >Question: What is the siteKey used for?
 
@@ -322,7 +321,7 @@ A MailGun Private API key:          `key-mailgunprivateAPIkey1234asdf1234`
 
 A MailGun public validation key: `pubkey-willyspublicvalidationkey1234asd`  
 
-Tell your ISP about MailGun: You have to add some entries to your domain records where your domain is hosted. 
+Tell your ISP about MailGun: You have to add some MX entries to your domain records where your domain is hosted. 
 
 ### Encrypt the Mailgun Private API key
 
@@ -381,7 +380,7 @@ curl -s --user 'api:key-willysprivateAPIkey1234asdf1234a' \
     -F text='Testing a Mailgun feature! Sent directly to willymcallister1@gmail.com'
 ```
 
-An email shows up in my inbox. Be patient, it may take 5--10 minutes for it to appear.
+An email shows up in my inbox. Be patient, it may take 5--10 minutes for it to appear. 
 
 Send mail to a mailing list. This sends an email to one of the mailing lists for my site in my MailGun account, 
 
@@ -394,7 +393,7 @@ curl -s --user 'api:key-willysprivateAPIkey1234asdf1234a' \
     -F text='Testing a Mailgun mailing list.'
 ```
 
-It took about 5--10 minutes for the message to show up.
+It took about 5--10 minutes for the message to show up. (You can't send to this mailing list because I didn't tell you my MailGun api key.)
 
 ## fromAddress
 
@@ -460,8 +459,10 @@ Here are [Staticman's instructions](https://staticman.net/docs/webhooks) for set
   - Payload URL: https://spinningnumbers-staticmandev2.herokuapp.com/v1/webhook/  
   - Content type: application/json  
   - Secret: (empty)  
-  - Which events would you like to trigger this webhook?: “Let me select individual events” and select the “Pull request” event.
-  - (I deselected "Push".)  
+  - Which events would you like to trigger this webhook? 
+    - Let me select individual events
+    - Select the “Pull request” event
+    - (I deselected "Push")  
   - Active: Checked.
 
 ## Try it out
