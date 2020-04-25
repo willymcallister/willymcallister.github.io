@@ -5,9 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-Configure and deploy an instance of Staticman at Heroku. These instructions are for a Jekyll site hosted at GitHub using Staticman v2 and reCaptcha v2. MailGun does the emailing and comments are moderated. 
+Configure and deploy an instance of Staticman at Heroku. These instructions are for a Jekyll site hosted at GitHub using Staticman v2 and reCaptcha v2. Notifications are sent with MailGun and comments are moderated. 
 
-This is mostly an Installation Guide and partially a Theory of Operation as perceived by me.
+This is mostly an Installation Guide and partly a Theory of Operation. Corrections are welcomed.
+
+This guide does not cover how to set up your Jekyll site for commenting.
 
 ----
 
@@ -29,15 +31,17 @@ willymcallister1+staticmanbot@gmail.com counts as a totally different email as f
 
 The bot account doesn't have any repositories. It just has a personal access token used by the Staticman app at Heroku, which does all the work.
 
-### Generate a personal access token for the bot
+## Generate a personal access token for the bot
 
-Request a _personal access token_ from GitHub for the bot account. This acts as a password when Staticman API bridge at Heroku sends Pull Requests or Pushes back to your GitHub web site repository.
+Request a _personal access token_ from GitHub for the bot account. This acts as a password when Staticman API bridge at Heroku sends Pull Requests (moderated) or Pushes (not moderated) to your GitHub web site repository.
 
 * Log in to GitHub as your bot, `willymcallister1+staticmanbot@gmail.com`. 
 * Settings (upper right): Developer: Personal Access Tokens.  
 * Request a token.
 * Set scope to: repo, user (or all of them).
 * A personal access token looks like, `8a47c7blahblahblahblahblahblahblahf3f70c`.
+
+Do not mention a valid personal access token in a file on GitHub. If you do, GitHub will recognize it and invalidate it. 
 
 ## Site configuration files
 
@@ -203,7 +207,7 @@ heroku config:add --app spinningnumbers-staticmandev2 "RSA_PRIVATE_KEY=$(cat ~/.
 Send the robot's GitHub personal access token,
 
 ```
-heroku config:add --app spinningnumbers-staticmandev2 "GITHUB_TOKEN=d10368bfbe75d2dad5b7065334d74c9b1d06f253"
+heroku config:add --app spinningnumbers-staticmandev2 "GITHUB_TOKEN=8a47c7blahblahblahblahblahblahblahf3f70c"
 ```
 
 Set your [time zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) for Heroku logs,  
@@ -466,37 +470,6 @@ Submit a comment. Watch the Heroku log to see what happens. You are hoping for a
 
 Also look for errors in your browser's inspector on your post's page. Open the inspector near the comment form and look for errors. Open any underlying objects to see what Staticman/Heroku sent back when the comment_form was submitted.
 
-## MD5 questions
-
-**Question:** Why does Staticman return a md5-hashed subscriber email address to Github in the comment file? What is it ever used for?
-
-**Question/Wish:** I wish I could replicate the mailing list MD5 function in a terminal window, something like,
-
-```
-md5 -s "willymcallister-willymcallister.github.io/master-https://spinningnumbers.org/a/charge.html"
-```
-
-This didn't work. The output did not match the mailing list alias for my Charge article. I suspect the repository name is wrong. If this can be made to work then you can derive the mailing list name stored at MailGun. That would be useful for things like finding and removing recipients. 
-
-The MD5 hash concatenates three fields, separated by hyphens,
-  * username (willymcallister)
-  * repository (not sure what this is)
-  * entryID (article URL)
-
-The is the Staticman code that performs the MD5 hash in SubscriptionsManager.js,
-
-```
-SubscriptionsManager.prototype._getListAddress = function (entryId) {
-  const compoundId = md5(`${this.parameters.username}-${this.parameters.repository}-${entryId}`)
-
-  return `${compoundId}@${this.mailAgent.domain}`
-}
-```
-
-The entryID comes from the value of options[parent] in comment_form.html. options[parent] can be whatever—--post title, slug or made up entry id. options[parent] is only used to create mailing lists. In my case the parent is the page URL and the subscription is to any/all comments for one post.
-
-Related Staticman issue: [#127](https://github.com/eduardoboucas/staticman/issues/127)
-
 ## Troubleshooting
 
 Here are the errors I've committed. If you have others I'm happy to list them here, especially if you have a solution.
@@ -580,6 +553,37 @@ These new records are in addition to an MX record for
 [Travis](https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html)
 
 [Gabe](https://www.gabescode.com/staticman/2019/01/03/create-staticman-instance.html), and [Gabe](https://www.gabescode.com/staticman/2019/01/04/staticman-comments-for-jekyll.html)
+
+## Appendix --- MD5 questions
+
+**Question:** Why does Staticman return a md5-hashed subscriber email address to Github in the comment file? What is it ever used for?
+
+**Question/Wish:** I wish I could replicate the mailing list MD5 function in a terminal window, something like,
+
+```
+md5 -s "willymcallister-willymcallister.github.io/master-https://spinningnumbers.org/a/charge.html"
+```
+
+This didn't work. The output did not match the mailing list alias for my Charge article. I suspect the repository name is wrong. If this can be made to work then you can derive the mailing list name stored at MailGun. That would be useful for things like finding and removing recipients. 
+
+The MD5 hash concatenates three fields, separated by hyphens,
+  * username (willymcallister)
+  * repository (not sure what this is)
+  * entryID (article URL)
+
+The is the Staticman code that performs the MD5 hash in SubscriptionsManager.js,
+
+```
+SubscriptionsManager.prototype._getListAddress = function (entryId) {
+  const compoundId = md5(`${this.parameters.username}-${this.parameters.repository}-${entryId}`)
+
+  return `${compoundId}@${this.mailAgent.domain}`
+}
+```
+
+The entryID comes from the value of options[parent] in comment_form.html. options[parent] can be whatever—--post title, slug or made up entry id. options[parent] is only used to create mailing lists. In my case the parent is the page URL and the subscription is to any/all comments for one post.
+
+Related Staticman issue: [#127](https://github.com/eduardoboucas/staticman/issues/127)
 
 ## Appendix --- Exercising MailGun
 
