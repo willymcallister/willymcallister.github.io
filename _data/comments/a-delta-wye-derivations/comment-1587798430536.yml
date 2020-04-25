@@ -1,0 +1,8 @@
+_id: 61974630-86c3-11ea-a390-8924b37e9e2b
+_parent: 'https://spinningnumbers.org/a/delta-wye-derivations.html'
+replying_to: ''
+message: "Hey similar typo to the one Hch pointed out, \r\nUnder the Y to delta derivation using conductance, \r\n\r\n$Gb = \\dfrac{\\cancel{G1\\,G2} \\,+ G1\\,G3 + G3\\,G1 + \\,\\cancel{G3\\,G2} \\,-\\, \\cancel{G2\\,G1} \\,+ \\,\\cancel{G2\\,G3}}{2(G1+G2+G3)}$\r\n\r\nthe last term should be a minus instead of a plus"
+name: Chc
+email: ''
+hp: ''
+date: '2020-04-25T07:07:10.533Z'
