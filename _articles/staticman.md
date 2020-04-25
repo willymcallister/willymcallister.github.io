@@ -6,7 +6,7 @@ comments: true
 post_slug: "Staticman and mailgun"
 ---
 
->I'm in the process of setting up my own instance of Staticman v2 at Heroku. Some of what follows is different from what the site is doing right now. Update coming soon (4/2020).
+>I set up my own instance of Staticman v2 at Heroku. This article is obsolete. See instead [Staticman at Heroku]({% link _articles/staticman-heroku.md %}).
 
 Spinningnumbers.org is a static web site. I use [Staticman v2](https://staticman.net) as a service to make it seem like my static site is responsive to comments and discussion.
 
@@ -57,7 +57,7 @@ Sign up for a MailGun account at [https://app.mailgun.com/new/signup/](https://a
 It is free until you exceed 10,000 emails per month. Even though it is free, you should still enter a credit card number and get on the Unity Plan. MailGun won't charge if you stay under 10K emails. The credit card number enables some features you want, like the ability to send an email to an address that is not in your Authorized Recipients list (limit 5). 
 
 Tell MailGun about your domain:   
-Click on Add your domain. Enter your personal domain name with ".mg" on the front. 
+Click on Add your domain. Enter your personal domain name with "mg." on the front. 
 
 Tell your ISP about MailGun:  
 You have to add some lines to your domain records where your domain is hosted. 
