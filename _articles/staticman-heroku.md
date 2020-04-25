@@ -445,6 +445,7 @@ Staticman does two things when the webhook arrives,
 Here are [Staticman's instructions](https://staticman.net/docs/webhooks) for setting up the webhook on your GitHub repository, repeated below. Gabe talks more out it [here](https://www.gabescode.com/staticman/2019/01/04/staticman-comments-for-jekyll.html#webhook).
 
 ### Set up the webhook 
+{:.no_toc}
 
 * Go to the Settings page of your GitHub repository, select Webhooks. 
 * Click Add Webhook and use the following options,
@@ -474,7 +475,7 @@ Also look for errors in your browser's inspector on your post's page. Open the i
 
 ## Troubleshooting
 
-Here are the errors I've committed. If you have others I'm happy to list them here, especially if you have a solution.
+Here are the problems I've had. I'm happy to add your's, especially if you have a solution.
 
 #### status=200 success
 
@@ -592,6 +593,7 @@ Related Staticman issue: [#127](https://github.com/eduardoboucas/staticman/issue
 You can exercise the features of your MailGun account from a terminal window using curl (client URL). 
 
 #### Create a mailing list
+{:.no_toc}
 
 General form,
 
@@ -612,6 +614,7 @@ curl -s --user 'api:key-willysprivateAPIkey1234asdf1234a' \
 ```
 
 #### Add a member to a mailing list
+{:.no_toc}
 
 General form,
 
@@ -637,6 +640,7 @@ curl -s --user 'api:key-willysprivateAPIkey1234asdf1234a' \
 ```
 
 #### Update an existing member
+{:.no_toc}
 
 ```
 curl -s --user 'api:YOUR_API_KEY' -X PUT \
@@ -646,6 +650,7 @@ curl -s --user 'api:YOUR_API_KEY' -X PUT \
 ```
 
 #### Remove a member
+{:.no_toc}
 
 ```
 curl -s --user 'api:YOUR_API_KEY' -X DELETE \
@@ -653,6 +658,7 @@ curl -s --user 'api:YOUR_API_KEY' -X DELETE \
 ```
 
 #### Add multiple people to a mailing list
+{:.no_toc}
 
 ```
 curl -s --user 'api:YOUR_API_KEY' \
@@ -662,6 +668,7 @@ curl -s --user 'api:YOUR_API_KEY' \
 ```
 
 #### List members of a mailing list
+{:.no_toc}
 
 General form,
 
@@ -678,6 +685,7 @@ curl -s --user 'api:key-willysprivateAPIkey1234asdf1234a' \
 ```
 
 #### Retrieve a list of mailing lists
+{:.no_toc}
 
 ```
 curl -s --user 'api:YOUR_API_KEY' -G \
@@ -692,6 +700,7 @@ curl -s --user 'api:key-willysprivateAPIkey1234asdf1234a' \
 I use this to search mailings lists by date of creation.
 
 #### Remove a mailing list
+{:.no_toc}
 
 ```
 curl -s --user 'api:YOUR_API_KEY' -X DELETE \
