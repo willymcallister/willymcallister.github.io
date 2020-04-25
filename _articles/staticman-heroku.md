@@ -36,12 +36,14 @@ The bot account doesn't have any repositories. It just has a personal access tok
 Request a _personal access token_ from GitHub for the bot account. This acts as a password when Staticman API bridge at Heroku sends Pull Requests (moderated) or Pushes (not moderated) to your GitHub web site repository.
 
 * Log in to GitHub as your bot, `willymcallister1+staticmanbot@gmail.com`. 
-* Settings (upper right): Developer: Personal Access Tokens.  
+* Go to Settings (upper right).
+* Developer Settings: Personal Access Tokens.  
 * Request a token.
 * Set scope to: repo, user (or all of them).
-* A personal access token looks like, `8a47c7blahblahblahblahblahblahblahf3f70c`.
+* A personal access token looks something like, `8a47c7blahblahblahblahblahblahblahf3f70c`.
+* Write it down somewhere local. We send this to Heroku a few steps farther down.
 
-Do not mention a valid personal access token in a file on GitHub. If you do, GitHub will recognize it and invalidate it. 
+Do not mention a valid personal access token in a file on GitHub. If you do, GitHub will recognize it and invalidate it. You have to go back and create a new one and send it to Heroku.
 
 ## Site configuration files
 
