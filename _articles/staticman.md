@@ -6,7 +6,7 @@ comments: true
 post_slug: "Staticman and mailgun"
 ---
 
->I set up my own instance of Staticman v2 at Heroku. This article is obsolete. See instead [Staticman at Heroku]({% link _articles/staticman-heroku.md %}).
+>This article is obsolete. See instead [Staticman at Heroku]({% link _articles/staticman-heroku.md %}).
 
 Spinningnumbers.org is a static web site. I use [Staticman v2](https://staticman.net) as a service to make it seem like my static site is responsive to comments and discussion.
 
