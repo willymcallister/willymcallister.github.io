@@ -207,25 +207,25 @@ In a terminal window issue these Heroku commands to set configuration variables.
 Send the unencrypted (cleartext) staticman_key to Heroku, (with \\n newlines removed),   
 
 ```
-heroku config:add --app spinningnumbers-staticmandev2 "RSA_PRIVATE_KEY=$(cat ~/.ssh/staticman_key | tr -d '\n')"
+heroku config:add --app yourAppName "RSA_PRIVATE_KEY=$(cat ~/.ssh/staticman_key | tr -d '\n')"
 ```
 
 Send the robot's GitHub personal access token,
 
 ```
-heroku config:add --app spinningnumbers-staticmandev2 "GITHUB_TOKEN=8a47c7blahblahblahblahblahblahblahf3f70c"
+heroku config:add --app yourAppName "GITHUB_TOKEN=8a47c7blahblahblahblahblahblahblahf3f70c"
 ```
 
 Set your [time zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) for Heroku logs,  
 
 ```
-heroku config:add --app spinningnumbers-staticmandev2 "TZ=America/Los_Angeles"
+heroku config:add --app yourAppName "TZ=America/Los_Angeles"
 ```
 
 Check that the configuration variables are set,
 
 ```
-heroku config --app spinningnumbers-staticmandev2 
+heroku config --app yourAppName
 ```
 
 Go to Heroku's web site. Click on Open App in the upper right. The response should be,
@@ -301,7 +301,7 @@ General form,
 
 My form,     
 
-`https://spinningnumbers-staticmandev2.herokuapp.com/v2/encrypt/recapcha40charactersecretKeyasdf12345xx0`
+`https://yourAppName.herokuapp.com/v2/encrypt/recapcha40charactersecretKeyasdf12345xx0`
 
 The encrypted reCaptcha secret key appears in the browser as a single long line. Enclose the string in double quotes and add `secret: ` in front. Add this line to both _config.yml and staticman.yml.
 
@@ -334,7 +334,7 @@ General form,
 My form,
 
 ```
-https://spinningnumbers-staticmandev2.herokuapp.com/v2/encrypt/key-mailgunprivateAPIkey1234asdf1234
+https://yourAppName.herokuapp.com/v2/encrypt/key-mailgunprivateAPIkey1234asdf1234
 ```
 
 Returns the encrypted MailGun Private API key as a big long line. Enclose the string in double quotes and add `apiKey: ` in front. Add this line to staticman.yml.
@@ -348,7 +348,7 @@ General form,
 My MailGun domain is mg.spinningnumbers.org, (not spinningnumbers.org),
 
 ```
-https://spinningnumbers-staticmandev2.herokuapp.com/v2/encrypt/mg.spinningnumbers.org
+https://yourAppName.herokuapp.com/v2/encrypt/mg.spinningnumbers.org
 ```
 
 Returns the encrypted MailGun domain on a single long line. Enclose this string in double quotes. Add `domain:` in front. Add to staticman.yml.
@@ -404,13 +404,13 @@ Usually email notifications announcing new comments come from Staticman(noreply@
 I finally realized: The Staticman Bridge API server at Heroku gets this configuration variable from the environment variables you give it. To change the from address you to set the EMAIL_FROM configuration variable. 
 
 ```
-heroku config:add --app spinningnumbers-staticmandev2 "EMAIL_FROM=willy@spinningnumbers.org"
+heroku config:add --app yourAppName "EMAIL_FROM=willy@spinningnumbers.org"
 ```
 
 Check that the variable got set,  
 
 ```
-heroku config --app spinningnumbers-staticmandev2
+heroku config --app yourAppName
 ```
 
 If you roll your own Staticman server or deploy to Heroku manually (without using the Deploy button) there is a second [configuration file](https://staticman.net/docs/api) associated with the Staticman server called `config.*.json`. Copy [config.test.json](https://github.com/eduardoboucas/staticman/blob/master/config.test.json) or config.sample.json to config.production.json. Then add this line, 
@@ -438,7 +438,7 @@ https://api.staticman.net/v1/webhook
 My version, (yes, v1),
 
 ```
-https://spinningnumbers-staticmandev2.herokuapp.com/v1/webhook
+https://yourAppName.herokuapp.com/v1/webhook
 ```
 
 GitHub triggers the webhook when the moderator approves a comment (merges the Pull Request). GitHub sends the webhook URL to Staticman along with a POST containing a bucket load of information about the Pull Request.
@@ -456,7 +456,7 @@ Here are [Staticman's instructions](https://staticman.net/docs/webhooks) for set
 * Go to the Settings page of your GitHub repository, select Webhooks. 
 * Click Add Webhook and use the following options,
 
-  - Payload URL: https://spinningnumbers-staticmandev2.herokuapp.com/v1/webhook/  
+  - Payload URL: https://yourAppName.herokuapp.com/v1/webhook/  
   - Content type: application/json  
   - Secret: (empty)  
   - Which events would you like to trigger this webhook? 
@@ -470,7 +470,7 @@ Here are [Staticman's instructions](https://staticman.net/docs/webhooks) for set
 Get ready to view your log on the Heroku site (MORE: View logs), or download the log with,
 
 ```
-heroku logs --app spinningnumbers-staticmandev2
+heroku logs --app yourAppName
 ```
 
 Submit a comment. Watch the Heroku log to see what happens. You are hoping for a status=200. This is what a successful log entry looks like,
@@ -516,7 +516,7 @@ Solution: I had an extra / at the end of the URL: webhook/. Remove it.
 Missing favicon.ico. Probably coming from a search engine.
 
 ```
-heroku[router]: at=info method=GET **path="/favicon.ico"**host=spinningnumbers-staticmandev2.herokuapp.com request_id=d8001ccd-3466-4f20-ac80-ed2f7bb3db02 fwd="70.187.193.116" dyno=web.1 connect=0ms service=5ms status=404 bytes=504 protocol=https
+heroku[router]: at=info method=GET path="/favicon.ico"host=spinningnumbers-staticmandev2.herokuapp.com request_id=d8001ccd-3466-4f20-ac80-ed2f7bb3db02 fwd="70.187.193.116" dyno=web.1 connect=0ms service=5ms status=404 bytes=504 protocol=https
 ```
 
 Missing robots.txt. Probably coming from a search engine.
