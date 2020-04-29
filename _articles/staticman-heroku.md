@@ -460,15 +460,13 @@ Here are [Staticman's instructions](https://staticman.net/docs/webhooks) for set
 
 Get ready to view your log on the Heroku site (MORE: View logs), or download the log with,
 
-```
-heroku logs --app yourAppName
-```
+`heroku logs --app yourAppName`  Show last 100 lines of log.  
+`heroku logs --num 200 --app yourAppName`  Show last 200 lines of log.  
+`heroku logs --tail --app yourAppName`  Show tail of log, with live update. Ctrl+C to return to the prompt.
 
 Submit a comment. Watch the Heroku log to see what happens. You are hoping for a status=200. This is what a successful log entry looks like,
 
-```
-2020-03-27T02:12:13.110055+00:00 heroku[router]: at=info method=POST path="/v2/entry/willymcallister/willymcallister.github.io/master/comments" host=spinningnumbers-staticmandev2.herokuapp.com request_id=ad4baa2a-e188-40ea-9471-1f146df5a297 fwd="70.187.193.116" dyno=web.1 connect=0ms service=3572ms status=200 bytes=536 protocol=https
-```
+>2020-03-27T02:12:13.110055+00:00 heroku[router]: at=info method=POST path="/v2/entry/willymcallister/willymcallister.github.io/master/comments" host=spinningnumbers-staticmandev2.herokuapp.com request_id=ad4baa2a-e188-40ea-9471-1f146df5a297 fwd="70.187.193.116" dyno=web.1 connect=0ms service=3572ms **status=200** bytes=536 protocol=https
 
 Also look for errors in your browser's inspector on your post's page. Open the inspector near the comment form and look for errors. Open any underlying objects to see what Staticman/Heroku sent back when the comment_form was submitted.
 
