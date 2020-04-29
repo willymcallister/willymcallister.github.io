@@ -118,7 +118,7 @@ Visit [Staticman at github](https://github.com/eduardoboucas/staticman). Switch 
 Click Deploy to deploy the Staticman API bridge to Heroku. Follow the instructions.
 {% endcapture %}{% include image_left_with_text.html %}
 
-I named my Staticman API bridge at Heroku `spinningnumbers-staticmandev2`.
+For example, I named my Staticman API bridge at Heroku `spinningnumbers-staticmandev2`.
 
 ```
 https://git.heroku.com/spinningnumbers-staticmandev2.git
@@ -216,12 +216,6 @@ Send the robot's GitHub personal access token,
 heroku config:add --app yourAppName "GITHUB_TOKEN=8a47c7blahblahblahblahblahblahblahf3f70c"
 ```
 
-Set your [time zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) for Heroku logs,  
-
-```
-heroku config:add --app yourAppName "TZ=America/Los_Angeles"
-```
-
 Check that the configuration variables are set,
 
 ```
@@ -238,9 +232,6 @@ That's what a successful deployment looks like.
 >**RSA_PRIVATE_KEY** - When you send a string to Staticman's /encrypt/ endpoint it will use the enclosed public key to perform the encryption, and the enclosed private key for decryption. If you ever modify this RSA key you have to do all the encryptions over again and update _config.yml and staticman.yml.
 
 >The **personal access token** acts as a password when the Staticman sends a Pull Request or Push to your site. It allows the Staticman API bridge to present itself as the bot, your approved collaborator. Protect your bot's personal access token like a password.
-
->Setting the **TZ** makes Heroku logs easier to read.  
-(Does not work, yet. Still off by many hours.)
 
 {% capture image %}heroku_More.png{% endcapture %} 
 {% capture alt %}Heroku logs are accessed from the More menu{% endcapture %} 
@@ -480,6 +471,8 @@ Submit a comment. Watch the Heroku log to see what happens. You are hoping for a
 ```
 
 Also look for errors in your browser's inspector on your post's page. Open the inspector near the comment form and look for errors. Open any underlying objects to see what Staticman/Heroku sent back when the comment_form was submitted.
+
+Note: Heroku logs are always shown in UTC time, +00:00. (Coordinated Universal Time, or GMT)
 
 ## Troubleshooting
 
