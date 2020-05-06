@@ -238,6 +238,20 @@ button:hover {
     margin-bottom: 0px;
 }
 
+//Spinner from Travis Downs and MadeMistakes. Disable and dim form while waiting for Staticman.
+.disabled {
+    input,
+    button,
+    textarea,
+    label {
+        pointer-events: none;
+        cursor: not-allowed;
+        filter: alpha(opacity=65);
+        box-shadow: none;
+        opacity: 0.65;
+    }
+}
+
 //
 // Videos
 //

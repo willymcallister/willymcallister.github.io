@@ -5,9 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-SOH CAH TOA is a way to remember the definitions of sine, cosine, and tangent.
-
-These functions are defined by the sides of a right triangle,
+SOH CAH TOA helps you remember the definitions of sine, cosine, and tangent based on the sides of a right triangle,
 
 ![SOHCAHTOA triangle]({{ site.baseurl }}{% link i/sohcahtoa.svg%}){: .centered :}
 

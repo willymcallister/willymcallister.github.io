@@ -6,22 +6,35 @@
   $('.js-form').submit(function () {
     var form = this;
 
-    $(form).addClass('form--loading');
-
+//Spinner from Travis Downs and MadeMistakes
+    $(form).addClass('disabled');
+    $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i>  Submitting');
+//
     $.ajax({
       type: $(this).attr('method'),
       url:  $(this).attr('action'),
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-//        showModal('Comment submitted', 'Thanks! Refresh your browser in a minute to see your comment.');
         showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/willymcallister/willymcallister.github.io/pulls">pending</a>. It will appear when approved.');
-        $(form).removeClass('form--loading');
+        //Spinner
+        $("#comment-form-submit")
+          .html("Submit");
+
+        //$(form)[0].reset();   // clear contents of form after submit (commented out by WMc)
+        $(form).removeClass('disabled');
+        grecaptcha.reset();
+        //
       },
       error: function (err) {
         console.log(err);
-        showModal('Error', 'Sorry, there was an error when your comment was submitted!');
-        $(form).removeClass('form--loading');
+        //Spinner
+        var ecode = (err.responseJSON || {}).errorCode || "unknown";
+        showModal('Error', 'An error occured.<br>[' + ecode + ']');
+        $('#comment-form-submit').html('Submit')
+        $(form).removeClass('disabled');
+        grecaptcha.reset();
+        //
       }
     });
     return false;

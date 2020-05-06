@@ -45,5 +45,3 @@ Notice that $v_o$ and $v_{in}$ are the same. When we model an ideal opamp the vi
 {% capture details %}    
 Simulation model of a [unity-gain amplifier](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[208,104,0],{"_json_":0},["0"]],["g",[72,152,0],{"_json_":1},["0"]],["w",[72,104,72,88]],["v",[72,104,0],{"name":"","value":"sin(0,1,1000,0,0)","_json_":3},["1","0"]],["L",[272,96,0],{"label":"vout","_json_":4},["vout"]],["w",[168,144,248,144]],["w",[168,104,168,144]],["w",[184,104,168,104]],["o",[184,88,0],{"A":"30000","_json_":8},["1","vout","vout","0"]],["w",[248,144,248,96]],["w",[272,96,248,96]],["w",[232,96,248,96]],["s",[272,96,0],{"color":"green","offset":"0","_json_":12},["vout"]],["w",[72,88,184,88]],["view",15.659999999999997,42.292,2.44140625,"50","10","1G",null,"100","0.009","1000"]]).
 {% endcapture %}{% include details.html %}
-
-<script src="https://kit.fontawesome.com/9defb49fb8.js"></script>

@@ -302,6 +302,3 @@ This version of the simulator includes additions by Willy McAllister, including,
 * Sharable link
 * Touch sensitivity
 * Internationalization
-
-<script src="https://kit.fontawesome.com/9defb49fb8.js"></script>
-

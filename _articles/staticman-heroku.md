@@ -531,6 +531,14 @@ Make sure you encrypted the reCaptcha SECRET key, not the reCaptcha SITE key.
 
 If you recently messed with the RSA key you have to redo all encryptions (3), and put them back in _config.yml and staticman.yml.
 
+Something triggered this, resulting in a status=500,
+
+```
+2020-04-30T02:41:48.177549+00:00 heroku[router]: at=info method=POST path="/v2/entry/willymcallister/willymcallister.github.io/master/comments" host=spinningnumbers-staticmandev2.herokuapp.com request_id=00a84540-e2ce-4c27-9b6d-e76e802fce14 fwd="5.183.92.73" dyno=web.1 connect=1ms service=277ms status=500 bytes=524 protocol=https
+```
+
+Don't know what this is.
+
 #### reCaptcha ERROR for site owner: Invalid site key
 
 {% capture image %}recaptcha_invalid_site_key.png{% endcapture %} 
