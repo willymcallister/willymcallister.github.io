@@ -573,7 +573,7 @@ These new records are in addition to an MX record for,
 
 ## Appendix --- MD5 questions
 
-{% capture summary %}show MD5 questions{% endcapture %}
+{% capture summary %}MD5 questions{% endcapture %}
 {% capture details %}
 **Question:** Why does Staticman return a md5-hashed subscriber email address to Github in the comment file? What is it ever used for?
 
@@ -607,7 +607,7 @@ Related Staticman issue: [#127](https://github.com/eduardoboucas/staticman/issue
 
 ## Appendix --- Exercising MailGun
 
-{% capture summary %}show Exercising MailGun{% endcapture %}
+{% capture summary %}Exercising MailGun{% endcapture %}
 {% capture details %}
 You can exercise the features of your MailGun account from a terminal window using curl (client URL). 
 
