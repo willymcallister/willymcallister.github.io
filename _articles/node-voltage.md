@@ -413,11 +413,15 @@ Let's use the Node Voltage Method and see what happens,
 * The reference node has been selected and marked with the ground symbol. 
 * The other three nodes have been named and assigned node voltages, $\goldD{v_a}$, $\goldD{v_b}$ and $\goldD{v_c}$. 
 * Node $a$ is an easy node, since it is connected to battery $\text V1$ and then to ground. We immediately know $\goldD{v_a = \text V_1}$. 
-* The next step is to write a KCL equation for node $b$. 
+* The next step is to write a KCL equation for node $b$. This is the sum of the currents flowing _into_ node $b$,
 
-$\quad i_{\text R2} \quad + \quad i_{\text R_3} + i_{\text V_2} = 0$
-
-$\dfrac{(v_a - v_b)}{\text R2} - \dfrac{v_b}{\text R3} + i_{\text V_2}? = 0$
+<p>
+$\begin{matrix}
+   i_{\text R2} & + & i_{\text R_3} & + & i_{\text V_2} & = 0 \\
+   \\
+   \dfrac{(v_a - v_b)}{\text R2} & - & \dfrac{v_b}{\text R3} & + & i_{\text V_2}? & = 0
+\end{matrix}$
+    </p>
 
 Uh oh. We have to somehow figure out the current in the floating battery, $i_{\text V_2}$. But a battery doesn't tell us what its own current is. The defining equation for the battery is $v = \text V$. There is no mention of current. There is no $i$ involved. So what do we do?
 
