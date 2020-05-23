@@ -7,8 +7,6 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
->The Comment system is up and running. Your comments will post after moderation. You can always write me directly at [willy@spinningnumbers.org](mailto:willy@spinningnumbers.org). 
-
 ---
 
 ### [Introduction]({% link _topics/topic-introduction.md %})
@@ -59,7 +57,7 @@ Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circ
 #### [Rarely asked questions]({% link _articles/raq.md %})
 A collection of amusing, interesting, (and possibly useful), engineering questions.
 
-#### [What's with the name? <img class="sn-logo" src="/i/sn_logo2.svg">]({% link _articles/whats-with-the-name.md %})     
+#### [What's with the name? <img class="sn-logo" src="/i/sn_logo.svg">]({% link _articles/whats-with-the-name.md %})     
 Where does the name [Spinning Numbers]({% link _articles/whats-with-the-name.md %}) come from?
 
 #### [Printing]({% link printing.md %})  
