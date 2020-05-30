@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- The Circuit Sandbox simulator is now available in [Hindi](index.html#circuit-sandbox-simulator-)!
+New --- The Circuit Sandbox simulator is now available in [Hindi and Portuguese](index.html#circuit-sandbox-simulator-)!
 
 ---
 
@@ -56,7 +56,8 @@ Basic concepts underlying digital hardware design.
 * [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)
 * [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html)
 * [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html)
-* [हिंदी में (Hindi)](https://spinningnumbers.org/circuit-sandbox/index-hi.html)  
+* [हिंदी में (Hindi)](https://spinningnumbers.org/circuit-sandbox/index-hi.html)
+* [em português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)  
 
 Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
 
