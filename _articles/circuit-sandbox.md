@@ -13,6 +13,7 @@ A simulator for learning about circuits. Circuit Sandbox includes schematic capt
 * [Ejecutar en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)  
 * [运行简体中文版](https://spinningnumbers.org/circuit-sandbox/index-zh.html) (simplified Chinese)
 * [を日本語で実行する](https://spinningnumbers.org/circuit-sandbox/index-ja.html) (Japanese)
+* [चलाऐ हिंदी में](https://spinningnumbers.org/circuit-sandbox/index-hi.html) (Hindi)
 
 Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
 
@@ -255,6 +256,7 @@ So far, Circuit Sandbox is available in,
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
 * Simplified Chinese, zh-cn.js (courtesy of GitHub user [Zhu Hao](https://github.com/greedyhao))
 * Japanese, ja.js (courtesy of my friend Leslie Shiozaki, a professional translator)
+* Hindi, hi.js (courtesy of Aniruddh Pratap Singh, an engineering student)
 
 ## The Circuit Sandbox was created at MIT
 

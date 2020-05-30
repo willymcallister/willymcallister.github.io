@@ -49,8 +49,13 @@ Electric force is described by Coulomb's Law. Electric field. Formal definition 
 Basic concepts underlying digital hardware design.
 
 ### [Circuit sandbox simulator ![circuit sandbox]({% link i/circuit_sandbox.png %}){: height="80px" :}]({% link _articles/circuit-sandbox.md %})
+ 
+* [in English](https://spinningnumbers.org/circuit-sandbox/index.html)
+* [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)
+* [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html)
+* [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html)
+* [हिंदी में (Hindi)](https://spinningnumbers.org/circuit-sandbox/index-hi.html)  
 
-Circuit simulator [in English](https://spinningnumbers.org/circuit-sandbox/index.html), [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html), [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html), [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html).  
 Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
 
 ---
