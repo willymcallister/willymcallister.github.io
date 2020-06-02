@@ -46,7 +46,7 @@ It sounds made up. And it is. So it is okay if you are skeptical. In the end, th
 
 Charge is a lot like gravity. Like gravity, it "acts at a distance." However, there is only one type of gravity; gravity only attracts. Unlike gravity, there are *two* types of electric charge. We call them *positive* and *negative*.
 
-### The one and only 2-part rule of charge
+### The one and only rule of charge
 
 Unlike charges attract,
 
