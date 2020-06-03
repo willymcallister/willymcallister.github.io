@@ -99,6 +99,18 @@ table {
   }
 }
 
+.noborder {
+  border: none;
+  tr {
+    &:nth-child(even) {
+      background-color: var(--background-color);
+    }
+  }
+  td {
+    border: none;
+  }
+}
+
 body {
     -webkit-text-size-adjust: none;   //overrides 100% in _base.scss
     background-color: var(--background-color);
