@@ -52,8 +52,8 @@ Basic concepts underlying digital hardware design.
 
 ### [Circuit sandbox simulator]({% link _articles/circuit-sandbox.md %})
 
-|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} in English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} em português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|
-|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 用简体中文](https://spinningnumbers.org/circuit-sandbox/index-zh.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 日本語で](https://spinningnumbers.org/circuit-sandbox/index-ja.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} हिंदी में](https://spinningnumbers.org/circuit-sandbox/index-hi.html)|
+|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|
+|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 简体中文](https://spinningnumbers.org/circuit-sandbox/index-zh.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 日本語](https://spinningnumbers.org/circuit-sandbox/index-ja.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} हिन्दी](https://spinningnumbers.org/circuit-sandbox/index-hi.html)|
 {:.noborder}
 
 Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
