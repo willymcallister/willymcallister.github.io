@@ -257,8 +257,8 @@ So far, Circuit Sandbox is available in,
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
 * Simplified Chinese, zh-cn.js (courtesy of GitHub user [Zhu Hao](https://github.com/greedyhao))
 * Japanese, ja.js (courtesy of my friend Leslie Shiozaki, a professional translator)
-* Hindi, hi.js (courtesy of Aniruddh Pratap Singh, a 12th grade student who wants to be an engineer.)
-* Portuguese, pt-BR.js (courtesy of Luís F. V. Peres, graduando em engenharia elétrica, Universidade de São Paulo)
+* Hindi, hi.js (courtesy of Aniruddh Pratap Singh, a 12th grade student who wants to become an engineer.)
+* Portuguese, pt-BR.js (courtesy of Luís F. V. Peres, graduando em engenharia elétrica de Universidade de São Paulo)
 
 ## The Circuit Sandbox was created at MIT
 

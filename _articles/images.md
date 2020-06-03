@@ -23,6 +23,7 @@ Insert template into markdown,
 ```
 {% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %}
 {% capture alt %}ALT TEXT{% endcapture %}
+{% capture height %}200px{% endcapture %} 
 {% capture caption %}
 CAPTION
 {% endcapture %}{% include image_left_with_caption.html %}{% endraw %}
@@ -32,7 +33,7 @@ Include file: image_left_with_caption.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: left; margin-right: 1em;">
-    <img src="../i/{{ image }}" alt="{{ alt }}">
+    <img height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}">
   </div>
   <div class="caption">
     {{ caption | markdownify }}
@@ -43,18 +44,20 @@ Include file: image_left_with_caption.html
 
 Example,
 
-{% capture image %}ant_in_amber.jpg{% endcapture %} 
-{% capture alt %}ALT TEXT{% endcapture %} 
-{% capture caption %} 
-This is an ant captured in a fossilized drop of amber. 
-{% endcapture %}{% include image_left_with_caption.html %}
+{% capture image %}ant_in_amber.jpg{% endcapture %}  
+{% capture alt %}Ant in droplet of amber{% endcapture %}  
+{% capture height %}200px{% endcapture %}  
+{% capture caption %}  
+This is an ant captured in a fossilized droplet of amber.  
+{% endcapture %}{% include image_left_with_caption.html %}  
 
 ## Image_left_with_text
 
 Insert template into markdown,
 ```
 {% raw %}{% capture image %}IMAGE FILE NAME{% endcapture %} 
-{% capture alt %}ALT TEXT{% endcapture %} 
+{% capture alt %}ALT TEXT{% endcapture %}  
+{% capture height %}200px{% endcapture %}  
 {% capture description %} 
 DESCRIPTION 
 {% endcapture %}{% include image_left_with_text.html %}{% endraw %}
@@ -64,19 +67,20 @@ Include file: image_left_with_text.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: left; margin-right: 1em;">
-    <img src="../i/{{ image }}" alt="{{ alt }}">
+    <img height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}">
   </div>
   <div>
     {{ description | markdownify }}
   </div>
 </div>
-<div style="clear: both;"></div>{% endraw %}
+<div style="clear: both;">&nbsp;</div>{% endraw %}
 ```
 
 Example,
 
 {% capture image %}ant_in_amber.jpg{% endcapture %} 
-{% capture alt %}Ant encased in a drop of amber{% endcapture %} 
+{% capture alt %}Ant encased in a drop of amber{% endcapture %}
+{% capture height %}200px{% endcapture %}   
 {% capture description %} 
 Amber is the fossilized form of tree resin. Think of it as a natural form of plastic.  
 {% endcapture %}{% include image_left_with_text.html %}
@@ -87,6 +91,7 @@ Insert template into markdown,
 ```
 {% raw %}{% capture image %}IMAGE FILE NAME{% endcapture %} 
 {% capture alt %}ALT TEXT{% endcapture %} 
+{% capture height %}200px{% endcapture %}   
 {% capture caption %} 
 CAPTION 
 {% endcapture %}{% include image_right_with_caption.html %}{% endraw %}
@@ -96,19 +101,20 @@ Include file: image_right_with_caption.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: right; margin-left: 1em;">
-    <img src="../i/{{ image }}" alt="{{ alt }}">
+    <img height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}">
   </div>
   <div class="caption">
     {{ caption | markdownify }}
   </div>
 </div>
-<div style="clear: both;"></div>{% endraw %}
+<div style="clear: both;">&nbsp;</div>{% endraw %}
 ```
 
 Example,
 
 {% capture image %}diode_voltmeter_dial.jpg{% endcapture %} 
-{% capture alt %}ALT TEXT{% endcapture %} 
+{% capture alt %}ALT TEXT{% endcapture %}
+{% capture height %}200px{% endcapture %}    
 {% capture caption %} 
 Dial of a typical multimeter. 
 {% endcapture %}{% include image_right_with_caption.html %}
@@ -119,6 +125,7 @@ Insert template into markdown,
 ```
 {% raw %}{% capture image %}IMAGE FILE NAME{% endcapture %} 
 {% capture alt %}ALT TEXT{% endcapture %} 
+{% capture height %}200px{% endcapture %}    
 {% capture description %} 
 DESCRIPTION 
 {% endcapture %}{% include image_right_with_text.html %}{% endraw %}
@@ -128,19 +135,20 @@ Include file: image_right_with_text.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: right; margin-left: 1em;">
-    <img src="../i/{{ image }}" alt="{{ alt }}">
+    <img height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}">
   </div>
   <div>
     {{ description | markdownify }}
   </div>
 </div>
-<div style="clear: both;"></div>{% endraw %}
+<div style="clear: both;">&nbsp;</div>{% endraw %}
 ```
 
 Example,
 
 {% capture image %}diode_voltmeter_dial.jpg{% endcapture %} 
 {% capture alt %}ALT TEXT{% endcapture %} 
+{% capture height %}200px{% endcapture %}    
 {% capture description %} 
 Find the 'diode' setting on your multimeter. This can be used to determine the forward conducting direction of the diode. Use this if the marking on the diode is unclear. 
 {% endcapture %}{% include image_right_with_text.html %}

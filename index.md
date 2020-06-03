@@ -50,14 +50,11 @@ Electric force is described by Coulomb's Law. Electric field. Formal definition 
 ### [Digital electronics]({% link _topics/topic-digital.md %})
 Basic concepts underlying digital hardware design.
 
-### [Circuit sandbox simulator ![circuit sandbox]({% link i/circuit_sandbox.png %}){: height="80px" :}]({% link _articles/circuit-sandbox.md %})
- 
-* [in English](https://spinningnumbers.org/circuit-sandbox/index.html)
-* [en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)
-* [用简体中文 (Chinese)](https://spinningnumbers.org/circuit-sandbox/index-zh.html)
-* [日本語で (Japanese)](https://spinningnumbers.org/circuit-sandbox/index-ja.html)
-* [हिंदी में (Hindi)](https://spinningnumbers.org/circuit-sandbox/index-hi.html)
-* [em português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)  
+### [Circuit sandbox simulator]({% link _articles/circuit-sandbox.md %})
+
+|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} in English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} en español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} em português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|
+|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 用简体中文](https://spinningnumbers.org/circuit-sandbox/index-zh.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 日本語で](https://spinningnumbers.org/circuit-sandbox/index-ja.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} हिंदी में](https://spinningnumbers.org/circuit-sandbox/index-hi.html)|
+{:.noborder}
 
 Can you help translate Circuit Sandbox into other languages? [It's easy!](a/circuit-sandbox.html#translation) 
 
