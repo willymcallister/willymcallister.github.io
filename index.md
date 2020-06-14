@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- The Circuit Sandbox simulator is now available in [Hindi and Portuguese](index.html#circuit-sandbox-simulator-)!
+New --- The Circuit Sandbox simulator is translated to [Hindi and Portuguese](index.html#circuit-sandbox-simulator-)!
 
 ---
 
