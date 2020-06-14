@@ -1,8 +1,8 @@
 <section class="comments">
 {% if site.enableComments %}
+  <hr>
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
-    <hr>
     <div class="comments__existing">
     <h2>Questions</h2>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
