@@ -1,0 +1,8 @@
+_id: bf0c24b0-af50-11ea-80eb-f949923588a9
+_parent: 'https://spinningnumbers.org/about/'
+replying_to: '6'
+message: "Filippos,\r\nI'm glad you are enjoying the site. My suggestion for practice is to revisit the articles on DC Circuit Design and collect all the example circuits on paper. Then solve each circuit using as many Methods as you can remember. Node Voltage, Mesh Current, Superposition, Fundamental Laws (winging it), Source Transformation. Also, modify the resistor and/or source values and do it again. Sometimes you can get a current to reverse itself in a resistor by picking different component/source values. Try this on the Floating Voltage Source at the end of Node Voltage Method article. Apply Thevenin's Theorem to a few of the sample circuits. Pick a port anywhere you like, and derive the Thevenin and Norton equivalent. To check your work, use the Circuit Sandbox as a second opinion on the solution. *Don't Cheat* by using the simulator first."
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-06-15T21:39:52.824Z'
