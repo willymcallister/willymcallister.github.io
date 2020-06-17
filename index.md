@@ -7,7 +7,8 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- The Circuit Sandbox simulator is translated to [Hindi and Portuguese](index.html#circuit-sandbox-simulator-)!
+New --- The Circuit Sandbox simulator is translated to [Hindi and Portuguese](index.html#circuit-sandbox-simulator-)!  
+New --- Light/Dark Mode now mimics your system Light/Dark setting. 
 
 ---
 

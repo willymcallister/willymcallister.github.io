@@ -18,7 +18,7 @@ $brand-color-dark:   darken($brand-color,10%) !default;     // #1a62bf;
 //
 // Switchable colors
 //
-html, html[data-theme="light"], {
+/*html, html[data-theme="light"], {
     --text-color: #111;
     --table-text-color: #3f3f3f;
     --table-header-color: #e3e3e3;
@@ -41,11 +41,32 @@ html[data-theme="dark"] {
     --pre-background-color: #343c46;    // $grey-color-dark blended with $brand-color #343c46
     --details-background-color: #4f4f4f;// $grey-color-darkish
 }
+*/
+
+html {
+  --text-color: #111;
+  --table-text-color: #3f3f3f;
+  --table-header-color: #e3e3e3;
+  --table-zebra-color: #eaeaea;
+  --background-color: #fdfdfd;
+  --img-background-color: #fdfdfd;
+  --site-top-margin-color: #353535;       // $grey-color-dark
+  --pre-background-color: #eef;
+  --details-background-color: #dbdbdb;;   // $grey-color-light
+}
 
 @media (prefers-color-scheme: dark) {
-    html {
-      content: "dark";
-    }
+  html {
+  --text-color: silver;
+  --table-text-color: #d3d3d3;
+  --table-header-color: #808080;
+  --table-zebra-color: #4d4d4d;
+  --background-color: #353535;        // $grey-color-dark
+  --img-background-color: #4f4f4f;    // $grey-color-darkish
+  --site-top-margin-color: #2a7ae2;   // $brand-color
+  --pre-background-color: #343c46;    // $grey-color-dark blended with $brand-color #343c46
+  --details-background-color: #4f4f4f;// $grey-color-darkish
+  }
 }
 
 @import "minima";
