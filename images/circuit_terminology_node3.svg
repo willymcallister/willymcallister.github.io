@@ -17,7 +17,7 @@
    height="124.9625"
    viewBox="0 0 487.28259 124.9625"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="circuit_terminology_node3.svg"><metadata
      id="metadata119"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -39,9 +39,9 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      fit-margin-left="10"
-     inkscape:zoom="1.3780488"
-     inkscape:cx="239"
-     inkscape:cy="61"
+     inkscape:zoom="1.0260986"
+     inkscape:cx="243.6413"
+     inkscape:cy="62.481251"
      inkscape:current-layer="Layer_1" /><style
      type="text/css"
      id="style3">
@@ -174,15 +174,13 @@
        style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10" /></g><text
      class="st50 st56 st57"
      id="text25"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff9c39"
      x="257"
      y="108.9625">1</text>
 <text
      class="st51 st56 st57"
      id="text27"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#aa87ff"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#aa87ff"
      x="467"
      y="108.9625">2</text>
 <polyline
@@ -207,8 +205,7 @@
      style="fill:none;stroke:#ed5fa6;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10" /><text
      class="st52 st56 st57"
      id="text35"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ed5fa6"
-     sodipodi:linespacing="125%"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:0%;font-family:KaTeX_Main;-inkscape-font-specification:'KaTeX_Main, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ed5fa6"
      x="467.00009"
      y="24.9625">3</text>
 <g
@@ -424,4 +421,24 @@
      x2="389"
      y2="102.9625"
      id="line113"
-     style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10" /></svg>
+     style="fill:none;stroke:#000000;stroke-linecap:round;stroke-miterlimit:10" /><circle
+     style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.99215686"
+     id="path34747"
+     cx="154.95587"
+     cy="18.906361"
+     r="3.7795277" /><circle
+     r="3.7795277"
+     cy="102.9025"
+     cx="154.95587"
+     id="circle4644"
+     style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.99215686" /><circle
+     r="3.7795277"
+     cy="18.906361"
+     cx="406.8334"
+     id="circle4646"
+     style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.99215686" /><circle
+     style="opacity:0.97000002;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06666672;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.99215686"
+     id="circle4648"
+     cx="406.8334"
+     cy="102.9025"
+     r="3.7795277" /></svg>
