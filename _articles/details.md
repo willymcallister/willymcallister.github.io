@@ -5,6 +5,13 @@ author: Willy McAllister
 comments: true
 ---
 
+Here's a template for inserting an html \<details\> tag into markdown. It allows markdown syntax inside the summary and the body of a \<details\> tag. This works with Jekyll's Kramdown dialect of markdown, served by GitHub Pages.
+
+{% capture summary %}SUMMARY{% endcapture %}
+{% capture details %}
+DETAILS
+{% endcapture %}{% include details.html %}
+
 ----
 
 #### Contents
@@ -14,13 +21,6 @@ comments: true
 {:toc}
 
 ----
-
-Here's a template for inserting an html \<details\> tag into markdown. It allows markdown syntax inside the summary and the body of a \<details\> tag. This works with Jekyll's Kramdown dialect of markdown, served by GitHub Pages.
-
-{% capture summary %}SUMMARY{% endcapture %}
-{% capture details %}
-DETAILS
-{% endcapture %}{% include details.html %}
 
 ## Markdown template
 
