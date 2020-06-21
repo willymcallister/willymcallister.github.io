@@ -1,16 +1,16 @@
 ---
 layout: article
-title:  "Details html tag template"
+title:  "Details tag template"
 author: Willy McAllister
 comments: true
 ---
 
-Here's a template for inserting an html \<details\> tag into markdown. It allows markdown syntax inside the summary and the body of a \<details\> tag. This works with Jekyll's Kramdown dialect of markdown, served by GitHub Pages.
+Here's a template for inserting an html ```\<details\>``` tag into markdown. It allows markdown syntax inside the summary and the body of a ```\<details\>``` tag. This works with Jekyll's Kramdown dialect of markdown, served by GitHub Pages.
 
-{% capture summary %}SUMMARY{% endcapture %}
 {% capture details %}
 DETAILS
-{% endcapture %}{% include details.html %}
+{% endcapture %}
+{% capture summary %}SUMMARY{% endcapture %}{% include details.html %}
 
 ----
 
@@ -27,15 +27,13 @@ DETAILS
 Copy and paste these four lines into your markdown document.  
 
 ```
-{% raw %}
-{% capture summary %}SUMMARY{% endcapture %}
-{% capture details %}
+{% raw %}{% capture details %}
 DETAILS
-{% endcapture %}{% include details.html %}
-{% endraw %}
+{% endcapture %}
+{% capture summary %}SUMMARY{% endcapture %}{% include details.html %}{% endraw %}
 ```
 
-Replace SUMMARY and DETAILS with your content.
+Replace DETAILS and SUMMARY with your content.
 
 ## Include file
 
@@ -50,16 +48,24 @@ The last line of the template references a file: \_includes/details.html. Create
 
 ## Details style
 
-Example style for the details tag,
+Example css styles for the details tag, saved in /assets/main.scss.
 
 ```
-{% raw %}details {
+{% raw %}//
+// <details> tag
+//
+$grey-color:         #757575;
+$grey-color-darkish: darken($grey-color, 15%);
+$brand-color:        #2a7ae2;
+$details-background-color: #dbdbdb;
+
+details {
     border-radius: 10px;
-    padding: 0px 8px;     //closed padding matches [open] padding to keep the summary sitting still when opened.
+    padding: 0px 8px;
     margin-bottom: 15px;
 }
 details[open] {
-    background: $grey-color-darkish;
+    background: $details-background-color;
     padding: 0px 8px 8px 8px;
 }
 summary {
@@ -71,15 +77,28 @@ details summary {
 }{% endraw %}
 ```
 
-## Example
+## Examples
 
-{% capture summary %}show **the** answer{% endcapture %}
+### Markdown syntax, equations, and images inside details tag
+
 {% capture details %}
 $\text R_\text T = \text R_\text N = 500\,\Omega$
 
 $\text V_{\text T} = \text V_{\text T} \, \text R_{\text N} = 0.002 \cdot 500 = 1\,\text V$
 
-![Resistor and voltage source schematic]({{ site.baseurl }}{% link i/thevenin2.svg %}){: .centered :}
-{% endcapture %}{% include details.html %} 
+![Resistor and voltage source schematic]({% link i/thevenin2.svg %}){: .centered :}
+{% endcapture %}
+{% capture summary %}show **the** answer{% endcapture %}{% include details.html %} 
+
+### Nested details tags
+
+{% capture details %}
+This is information in the outer details tag.
+{% capture summary %}Inner details tag{% endcapture %}
+{% capture details %}
+And even more inside an inner details tag.
+{% endcapture %}{% include details.html %}
+{% capture summary %}Outer details tag{% endcapture %}
+{% endcapture %}{% include details.html %}
 
 The markdown source file for this article is in \_articles/details.md.
