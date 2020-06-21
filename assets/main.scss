@@ -2,15 +2,48 @@
 
 ---
 
-// Styles for spinningnumbers
+// Custom styles for spinningnumbers
 
 //div {border: 1px solid blue;}     //debug
 //span {border: 1px solid red;}     //debug
 
-$base-font-size:    18px !default;
-$comment-font-size: 17px !default;
-$brand-color:       #1E72DC !default;
-$grey-color:        #757575 !default;
+$base-font-size:     18px !default;
+$comment-font-size:  17px !default;
+$grey-color:         #757575 !default;
+$grey-color-darkish: darken($grey-color, 15%) !default;     // #4f4f4f;
+$grey-color-dark:    darken($grey-color, 25%) !default;     // #353535;    
+$brand-color:        #2a7ae2;
+$brand-color-dark:   darken($brand-color,10%) !default;     // #1a62bf;
+
+//
+// Switchable colors
+//
+
+html {
+  --text-color: #111;
+  --table-text-color: #3f3f3f;
+  --table-header-color: #e3e3e3;
+  --table-zebra-color: #eaeaea;
+  --background-color: #fdfdfd;
+  --img-background-color: #fdfdfd;
+  --site-top-margin-color: #353535;       // $grey-color-dark
+  --pre-background-color: #eef;
+  --details-background-color: #dbdbdb;    // $grey-color-light
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+  --text-color: silver;
+  --table-text-color: #d3d3d3;
+  --table-header-color: #808080;
+  --table-zebra-color: #4d4d4d;
+  --background-color: #353535;          // $grey-color-dark
+  --img-background-color: #4f4f4f;      // $grey-color-darkish
+  --site-top-margin-color: #2a7ae2;     // $brand-color
+  --pre-background-color: #343c46;      // $grey-color-dark blended with $brand-color #343c46
+  --details-background-color: #4f4f4f;  // $grey-color-darkish
+  }
+}
 
 @import "minima";
 
@@ -47,16 +80,84 @@ blockquote {
 
 hr {
     margin: 1em 0;
-    //border-top: $grey-color;
     border-top: 1px solid $grey-color-light;
 }
 
 table {
-    width: inherit !important;        //overrides 100% in _base.scss
+  width: inherit !important;          //overrides 100% in _base.scss
+  color: var(--table-text-color);
+  tr {
+    &:nth-child(even) {
+      background-color: var(--table-zebra-color);
+    }
+  }
+  th {
+    background-color: var(--table-header-color);
+  }
+}
+
+.noborder {
+  border: none;
+  tr {
+    &:nth-child(even) {
+      background-color: var(--background-color);
+    }
+  }
+  td {
+    border: none;
+  }
 }
 
 body {
     -webkit-text-size-adjust: none;   //overrides 100% in _base.scss
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+//main img {
+//    background-color: var(--img-background-color);
+///    opacity: .9;
+//}
+
+img {
+    opacity: .8;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+  color: $brand-color-dark;
+  }
+
+  &:hover {
+  color: $brand-color-dark;
+    text-decoration: underline;
+  }
+}
+
+.site-nav .page-link {
+    color: var(--text-color);
+}
+
+.site-header {
+  border-top: 5px solid var(--site-top-margin-color);
+}
+
+.site-title {
+  &,
+  &:visited {
+    color: inherit;
+  }
+}
+
+.highlighter-rouge .highlight, pre, code {
+    background-color: var(--pre-background-color);
 }
 
 //
@@ -79,17 +180,16 @@ details {
     margin-bottom: 15px;
 }
 details[open] {
-    background: $grey-color-light;
+//    background: $grey-color-darkish;
+    background: var(--details-background-color);
     padding: 0px 8px 8px 8px;
 }
 summary {
     margin: 0px 0px 8px 0px;
     outline:none;
 }
-
-$ka-default5 : #236ec9 !default;
 details summary {
-    color: $ka-default5;
+    color: $brand-color;
 }
 
 //
@@ -98,8 +198,8 @@ details summary {
 input, select, textarea, label, button {
 //    @extend body;
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
-  background-color: $background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -120,7 +220,7 @@ textarea {
     vertical-align: top;
 }
 .textfield__input {
-    border: 1px solid rgba(0,0,0,.12);
+    border: 1px solid $grey-color;
     padding: 4px 5px;
     width: 100%;
     font-size: $comment-font-size; 
@@ -184,7 +284,7 @@ button:hover {
 }
 
 //
-// Pop-up modal window for Staticman comments
+// Staticman Pop-up modal window for submitted comments
 //
 .show-modal {
     overflow: hidden;
@@ -238,20 +338,6 @@ button:hover {
     margin-bottom: 0px;
 }
 
-//Spinner from Travis Downs and MadeMistakes. Disable and dim form while waiting for Staticman.
-.disabled {
-    input,
-    button,
-    textarea,
-    label {
-        pointer-events: none;
-        cursor: not-allowed;
-        filter: alpha(opacity=65);
-        box-shadow: none;
-        opacity: 0.65;
-    }
-}
-
 //
 // Videos
 //
@@ -284,21 +370,4 @@ button:hover {
 }
 a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
-}
-//
-// Ripple effect
-//
-$focus-color:       #1E72DC !default;   // brand color
-$active-color:      #757575 !default;   // grey color
-.ripple {
-  background-position: center;
-  transition: background 0.5s;
-  &:hover {
-    background: $focus-color radial-gradient(circle, transparent 1%, $focus-color 1%) center/15000%;
-  }
-  &:active {
-    background-color: $active-color;
-    background-size: 100%;
-    transition: background 0s;
-  }
 }
