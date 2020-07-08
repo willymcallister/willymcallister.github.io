@@ -5,6 +5,8 @@ author: Willy McAllister
 comments: true
 ---
 
+[Staticman](https://staticman.net) is a small web service that handles the POST requests from your forms, runs various forms of validation and manipulation and pushes the result to your repository as data files.
+
 Configure and deploy an instance of [Staticman](https://staticman.net) at [Heroku](https://heroku.com). 
 
 * Jekyll site hosted at GitHub using Staticman v2
@@ -471,6 +473,33 @@ Submit a comment. Watch the Heroku log to see what happens. You are hoping for a
 Also look for errors in your browser's inspector on your post's page. Open the inspector near the comment form and look for errors. Open any underlying objects to see what Staticman/Heroku sent back when the comment_form was submitted.
 
 Note: Heroku logs are always shown in UTC time, +00:00. (Coordinated Universal Time, or GMT)
+
+## Akismet - UNDER CONSTRUCTION
+
+This section is incomplete. I have not gotten Akismet to work. Still have questions. 
+
+Optional spam detection service from Wordpress. Enable Akismet for spam detection in addition to reCaptcha.
+
+Sign up for an [Akismet account](https://akismet.com/) and get an API key.
+
+Add these lines to staticman.yml, the remaining Akismet settings are left at default,
+
+```
+# Akismet spam detection
+  akismet:
+    enabled: true
+```
+
+Set environment variables AKISMET_SITE and AKISMET_API_KEY at Heroku. AKISMET_SITE needs to match the site you identify in your Akismet account, typically http://yourdomain.com.
+
+```
+heroku config:add --app yourAppName "AKISMET_SITE=https://spinningnumbers.org"
+```
+
+```
+heroku config:add --app yourAppName "AKISMET_API_KEY=yourAPIkey"
+```
+
 
 ## Troubleshooting
 
