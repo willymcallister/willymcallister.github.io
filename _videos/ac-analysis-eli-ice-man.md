@@ -6,6 +6,6 @@ youtubeID: 2yqjMiFUMlA
 comments: true
 --- 
 
-Here's how to remember the relationship between current and voltage in an inductor and capacitorn with the help of ELI the ICE man.
+Here's how to remember the relationship between current and voltage in an inductor and capacitor with the help of ELI the ICE man.
 
 Created by Willy McAllister.
