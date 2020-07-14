@@ -1,0 +1,12 @@
+_id: a99b92e0-c62b-11ea-be7e-6bbd5f23e959
+_parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
+replying_to: ''
+message: >-
+  Do you know if staticman still works for free mailgun account? I have just a
+  sandbox domain and it works when I test with your curl commands, but doesn't
+  when I submit a new comment on my github page. I literally don't know what to
+  do anymore. :-(
+name: Gabriel Bertolino
+email: 2531cd29a890a51bb80de16617231bf9
+hp: ''
+date: '2020-07-14T23:42:22.208Z'
