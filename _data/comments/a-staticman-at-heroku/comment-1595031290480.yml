@@ -1,0 +1,16 @@
+_id: b20e1c60-c88b-11ea-a2ed-933182047457
+_parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
+replying_to: '6'
+message: >-
+  Gabriel - I am using a free MailGun account. (It is not actually free any
+  more, but the charges are tiny, like  $0.80/1,000 messages, for small amounts
+  of mail.) The sandbox user has significant restrictions. You can only mail to
+  5 'authorized recipients' that you need to set up. Also, I think the sandbox
+  is not capable of receiving mail from outside. When you send a message to
+  MailGun are you observing the log messages at MailGun? The other place to get
+  debug info is within your browser.  Watch what happens when the comment_form
+  is submitted. You dig this data out of the developer tools.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-07-18T00:14:50.473Z'
