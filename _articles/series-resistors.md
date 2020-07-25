@@ -112,7 +112,11 @@ $\text R_{\text{series}} = \text{R1} + \text{R2} + \ldots + \text{R}_\text N$
 
 Let's look at the voltage across each resistor in a series circuit. We apply Ohm's Law to the individual resistors one at a time. The current $i$ is the same in each resistor.
 
-$v_{\text R1} = i\,\text R_1 \qquad v_{\text R2} = i\,\text R_2 \qquad v_{\text R3} = i\,\text R_3 \qquad$
+$v_{\text R1} = i\,\text R1 \qquad v_{\text R2} = i\,\text R2 \quad \ldots \quad v_{\text {RN}} = i\,\text R_\text N$
+
+{% capture image %}series_resistors6a.svg{% endcapture %} 
+{% capture alt %}Voltage distributes between series resistors{% endcapture %}
+{% include image_left_without_caption.html %}
 
 This makes more sense if we do an example with real numbers. I encourage you to try this on your own before peeking at the answer.
 
@@ -122,7 +126,7 @@ This makes more sense if we do an example with real numbers. I encourage you to 
 
 ![Problem 1 resistor circuit]({% link i/series_resistors7.svg %}){: .centered :} 
 
-**a. What is the current $i$?**
+**a. What is the current $\blueD i$ ?**
 
 **b. What are the voltages across the three resistors?**  
 
@@ -137,7 +141,7 @@ The steps are,
 
 {% capture summary %}Show answer{% endcapture %}  
 {% capture details %}  
-**Part a.** The equivalent $\text R_{\text{series}}$ is the sum of the three resistors.
+**a.** The equivalent $\text R_{\text{series}}$ is the sum of the three resistors.
 
 $\text R_{\text{series}} = 300\,\Omega + 500\,\Omega + 1200\,\Omega = 2000\,\Omega$
 
@@ -147,21 +151,21 @@ $i = \dfrac{v_\text S}{\text R_{\text{series}}} = 10\,\text V / 2000\,\Omega = 0
 
 ![Problem 1 solved for current]({% link i/series_resistors8.svg %}){: .centered :}  
 
-**Part b.** Knowing $i$, we compute the individual resistor voltages,
+**b.** Knowing $i$, we compute the individual resistor voltages,
 
-$v_{\text{R1}} = i\, \text{R1} = 5\,\text{mA} \cdot 300\,\Omega = 1.5\,\text V$
+$v_{\text{R1}} = i\, \text R_{300} = 5\,\text{mA} \cdot 300\,\Omega = 1.5\,\text V$
 
-$v_{\text{R2}} = i\, \text{R2} = 5\,\text{mA} \cdot 500\,\Omega = 2.5\,\text V$
+$v_{\text{R2}} = i\, \text R_{500} = 5\,\text{mA} \cdot 500\,\Omega = 2.5\,\text V$
 
-$v_{\text{R3}} = i\, \text{R3} = 5\,\text{mA} \cdot 1200\,\Omega = 6.0\,\text V$
+$v_{\text{R3}} = i\, \text R_{1200} = 5\,\text{mA} \cdot 1200\,\Omega = 6.0\,\text V$
 
 Here's the full solution,
 
 ![Problem 1 solved for current]({% link i/series_resistors9.svg %}){: .centered :}  
 
-**Part c.** Check: Do the resistor voltages add up to the source voltage?
+**c.** Check: Do the resistor voltages add up to the source voltage?
 
-$1.5\,\text V + 2.5\,\text V + 6.0\,\text V = 10\,\text V\qquad$ Yes!  
+$1.5\,\text V + 2.5\,\text V + 6.0\,\text V \stackrel{\checkmark}{=} 10\,\text V\qquad$ Yes!  
 {% endcapture %}{% include details.html %}
 
 **PROBLEM 2**
