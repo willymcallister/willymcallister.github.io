@@ -11,18 +11,20 @@ comments: true
 
 ### Euler's formula for sine
 
-$\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
+$j\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
 
-A sine emerges from spinning numbers in Euler's Formula,
+Sine emerges along the imaginary axis, the vector sum of two spinning numbers, so the vector sum actually produces $j\sin \omega t$,
 
-The green vector is $\dfrac{1}{2} e^{+j\omega t}$
+The green vector is $+\dfrac{1}{2} e^{+j\omega t}$
 
-The pink vector is $-\dfrac{1}{2} e^{-j\omega t}$  
+The pink vector is $-\dfrac{1}{2} e^{-j\omega t}$
 
-Sine is the yellow dot, the vector sum of green and pink.
+The negative sign reverses the pink vector. It starts on the negative real axis while the green vector starts on the positive real axis. (If you reload the web page watch where the two vectors start at $t = 0$.)
+
+Sine (the yellow dot on the imaginary axis) is the vector sum of green and pink.
+
+Created by Willy McAllister.
 
 Just music, no narration. The background music is *Book Bag* by E's Jammy Jams. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
 Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-sinewave-d3.html).
-
-Created by Willy McAllister.

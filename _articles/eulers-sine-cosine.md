@@ -11,26 +11,26 @@ comments: true
 
 ### Euler's formulas for sine and cosine
 
-$\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
+$j\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
 
 $\cos \omega t = \dfrac{1}{2} (e^{+j\omega t} + e^{-j\omega t})$
 
 Sine and cosine emerge from vector sum of three spinning numbers in Euler's Formula, 
 
-The green vector is $\dfrac{1}{2} e^{+j\omega t}$ 
+The green vector is $+\dfrac{1}{2} e^{+j\omega t}$ 
 
 The pink vector is $-\dfrac{1}{2} e^{-j\omega t}$ (used to make sine)  
 
 The red vector is $+\dfrac{1}{2} e^{-j\omega t}$ (used to make cosine)
 
-Sine is the yellow dot, the vector sum of green and pink.
+Sine is the yellow dot on the imaginary axis, the vector sum of green and pink.
 
-Cosine is the orange dot, the vector sum of green and red.
+Cosine is the orange dot on the real axis, the vector sum of green and red.
 
-Notice the $90\degree$ phase shift between sine and cosine created by the simulation. Watch the dots as they pass through the origin.
+Notice the simulation reveals the $90\degree$ phase shift between sine and cosine. Watch the dots as they pass alternately pass through the origin.
+
+Created by Willy McAllister.
 
 Just music, no narration. The background music is *Sunday Stroll* by Huma Huma. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
 Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-cosine-d3.html). The image is not a video. It's being computed on the fly by your device.
-
-Created by Willy McAllister.

@@ -13,16 +13,16 @@ comments: true
 
 $\cos \omega t = \dfrac{1}{2} (e^{+j\omega t} + e^{-j\omega t})$
 
-A cosine emerges from spinning numbers in Euler's Formula, 
+Cosine emerges on the real axis, the vector sum of two spinning numbers, 
 
-The spinning green vector is $\dfrac{1}{2} e^{+j\omega t}$ 
+The spinning green vector is $+\dfrac{1}{2} e^{+j\omega t}$ 
 
 The spinning red vector is $+\dfrac{1}{2} e^{-j\omega t}$  
 
-Cosine is the orange dot, the vector sum of green and red.
+Cosine (the orange dot) is the vector sum of green and red.
+
+Created by Willy McAllister.
 
 Just music, no narration. The background music is *NirvanaVEVO* by Chris Zabriskie. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
 Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-cosine-d3.html).
-
-Created by Willy McAllister.
