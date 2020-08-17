@@ -1,9 +1,6 @@
 <html>
 <head>
   <style>
-    #exponential1 {
-      margin: auto
-    }
     svg .grid {
       stroke-width: 0.5px;
       stroke: #BBB;
@@ -27,7 +24,7 @@
     }
 
     svg text {
-      font: 18px katex_main;
+      font: 16px katex_main;
     }
 
     svg .tick text {
@@ -37,30 +34,28 @@
 </head>
 
 <body>
-  <button id="start1" class="button">Start</button>
-  <div id="exponential1"></div>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <div id="rc-natural-v-d3"></div>
+  <script src="http://d3js.org/d3.v4.min.js"></script>
   <script>
-(function () {
-  var margin = { top:0, right:0, bottom:0, left:0 };        // margin outside border
+  var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
   var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
 
   var 
-      time,
       xmin = -4,
       xmax = +20,
       ymin = -.4,
       ymax = +1.6,
-      hScale = 16,
+      hScale = 12,
       vScale = 120,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
-      xOrigin = -(xmin * hScale),          // pixels
+      xOrigin = -(xmin * hScale);          // pixels
       yOrigin = height + (ymin * vScale);  // pixels
 
   // main container
-  var svgContainer = d3.select("#exponential1")
-    .append("svg")
+  var svgContainer = d3.select("#rc-natural-v-d3")
+    .attr("align","center")
+    .append("svg:svg")
       .attr("width",  width  + padding.left + padding.right)  //width of image
       .attr("height", height + padding.top + padding.bottom)  //height of image
       .attr("transform",
@@ -68,8 +63,6 @@
     .append("g")  //group to build image inside of, offset by padding from border
       .attr("transform",
         "translate(" + padding.left + "," + padding.top + ")");
-
-  d3.select("#exponential1").attr("align","center");
 
   // scales
   var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
@@ -89,10 +82,10 @@
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("t (msec)")
+      .text("t")
       .style("text-anchor", "start")
       .style("font-size", "20px")
-      .style("font-family", "katex_math")
+      .style("font-style", "italic")
       .style('fill', 'black');
   
   // vertical grid lines
@@ -117,10 +110,10 @@
       .call(yAxis)
     .append("text")
       .attr("dy", "-12px")
-      .text("v (volts)")
+      .text("v")
       .style("text-anchor", "middle")
       .style("font-size", "20px")
-      .style("font-family", "katex_math")
+      .style("font-style", "italic")
       .style("fill", "black");
 
   // horizontal grid lines
@@ -132,12 +125,12 @@
       .attr("x2", width - xOrigin)
       .attr("y2", 0);
 
-  // remove "0"s near origin
+  // remove axis tick labels
   svgContainer.selectAll(".tick text")
-    .filter(function (d) { return d === 0;  })
+    //.filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - RC natural response example 1
+  // Waveform - RC natural response with no specific time scale
   // R = 3k  C = 1uF  Vo = 1.4v
   var R = 3000;
   var C = .000001;
@@ -147,20 +140,18 @@
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
   var fromX = 0;
   var toX = xmax;
-
   var xData = samples.map(function (i) 
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var response = d3.line()
+  var diode = d3.line()
     .x(function (d) { return xScale(d); })
     .y(function (d) { return yScale(Vo * (Math.exp(-d/(R*C)/1000))); });
 
   svgContainer.append('svg:path')
     .classed("path", true)
-    .attr('d', response(xData))
-    .style("fill", "none")
-    .style("stroke-width", "3px");
+    .attr('d', diode(xData))
+    .style("fill", "none");
 
   var lineData = [  
       { "x": xmin, "y": Vo}, 
@@ -172,88 +163,26 @@
 
   svgContainer.append('svg:path')
       .classed("path", true)
-      .attr('d', lineFunction(lineData))
-      .style("stroke-width", "3px");
-
-  svgContainer.append("line")
-      .attr("x1", xScale(0))
-      .attr("y1", yScale(0.515))
-      .attr("x2", xScale(3))
-      .attr("y2", yScale(0.515))
-      .attr("stroke-width", 1)
-      .style("stroke-dasharray", ("3, 3"))
-      .attr("stroke", "black");
-
-  svgContainer.append("line")
-      .attr("x1", xScale(3))
-      .attr("y1", yScale(0.515))
-      .attr("x2", xScale(3))
-      .attr("y2", yScale(0))
-      .attr("stroke-width", 1)
-      .style("stroke-dasharray", ("3, 3"))
-      .attr("stroke", "black");
-
-  // Moving dot
-  var dot = svgContainer.append('svg:circle')
-    .attr("cx", xScale(-4))
-    .attr("cy", yScale(Vo))
-    .attr("r",5)
-    .style("fill", "#F9685D");  // KA HUM2
+      .attr('d', lineFunction(lineData));
 
   svgContainer.append("text")
-    .attr("x", xScale(12))
+    .attr("x", xScale(-2.6))
     .attr("y", yScale(1.5))
-    .text("R = 3 kΩ")
+    .text("V")
     .style("text-anchor", "start")
     .style("font-size", "20px")
     .style('fill', 'black');
 
   svgContainer.append("text")
-    .attr("x", xScale(12))
-    .attr("y", yScale(1.2))
-    .text("C = 1 uF")
+    .attr("x", xScale(-2.6))
+    .attr("dx", 13)
+    .attr("y", yScale(1.5))
+    .attr("dy", 8)
+    .text("0")
     .style("text-anchor", "start")
-    .style("font-size", "20px")
+    .style("font-size", "18px")
     .style('fill', 'black');
 
-  svgContainer.append("text")
-    .attr("x", xScale(12))
-    .attr("y", yScale(0.9))
-    .text("Vo = 1.4 V")
-    .style("text-anchor", "start")
-    .style("font-size", "20px")
-    .style('fill', 'black');
-
-  function draw() {
-    var x;
-    var y;
-    
-    x = xScale(time);
-    if(time < 0) {
-      y = yScale(Vo);
-    }
-    else {
-      y = yScale(Vo * (Math.exp(-time/(R*C)/1000)));
-    }
-
-    dot
-      .attr('cx', x)
-      .attr('cy', y);
-
-    time += .1;
-
-    setTimeout(draw, 35, 30);
-  }
-  
-  d3.select("#start1").on("click", function() {
-    dot
-      .attr("cx", xScale(-4))
-      .attr("cy", yScale(Vo));
-    time = -4;
-    draw();
-  });
-
-})();
 </script>
 </body>
 </html>

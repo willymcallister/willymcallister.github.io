@@ -53,7 +53,7 @@ Do not mention a valid personal access token in a file on GitHub. If you do, Git
 
 ## Site configuration files
 
-The goal right now is to get the Staticman API bridge up and running at Heroku so we can get access to Staticman's /encrypt/ endpoint. That allows us to encrypt strings needed by reCaptcha and MailGun. We do that using the RSA key we generate in a an upcoming step.
+The goal right now is to get the Staticman API bridge up and running at Heroku so we can get access to Staticman's /encrypt/ endpoint. That allows us to encrypt strings needed by reCaptcha and MailGun. (We do that encryption using the RSA key we generate in a an upcoming step.)
 
 For the moment, your preliminary _config.yml and staticman.yml don't need reCaptcha or MailGun strings. If you have these entries, leave them alone or comment them out. We'll replace them after the Staticman API bridge is up.
 
@@ -490,10 +490,13 @@ Add these lines to staticman.yml, the remaining Akismet settings are left at def
     enabled: true
 ```
 
-Set environment variables AKISMET_SITE and AKISMET_API_KEY at Heroku. AKISMET_SITE needs to match the site you identify in your Akismet account, typically http://yourdomain.com.
+Set environment variables AKISMET_SITE and AKISMET_API_KEY at Heroku. 
+
+XX AKISMET_SITE needs to match the site you identify in your Akismet account, typically http://yourdomain.com.   
+The Akismet's site should be the URL of the staticman API, not the GH page's. Let's say staticman is hosted on Heroku, then the Akismet's site should be a Heroku URL. See [339](https://github.com/eduardoboucas/staticman/issues/339), [369](https://github.com/eduardoboucas/staticman/issues/369)
 
 ```
-heroku config:add --app yourAppName "AKISMET_SITE=https://spinningnumbers.org"
+XX heroku config:add --app yourAppName "AKISMET_SITE=https://spinningnumbers.org"
 ```
 
 ```
@@ -604,7 +607,14 @@ These new records are in addition to an MX record for,
 
 {% capture summary %}MD5 questions{% endcapture %}
 {% capture details %}
-**Question:** Why does Staticman return a md5-hashed subscriber email address to Github in the comment file? What is it ever used for?
+**Question:** Why does Staticman return a md5-hashed subscriber email address to Github in the comment file? What is it ever used for? **Answer:** If you use Gravatar you can show visitor's avatar with those hashed email. [Gravatar](https://en.gravatar.com/site/implement/) uses md5-hashed email as an identifier. Here is my [gravitar](https://www.gravatar.com/avatar/72f6ffec6e34ab5d69f3811272b5ae97?s=200) with a size s= specification. 
+
+Default image is https%3A%2F%2Fspinningnumbers.org%2Fi%2Fsn_logo300.png.
+
+https://www.gravatar.com/avatar/00000000000000000000000000000000?s=200&r=pg&d=https%3A%2F%2Fspinningnumbers.org%2Fi%2Fsn_logo300.png
+
+Show a mystery person d=mp,  
+https://www.gravatar.com/avatar/00000000000000000000000000000000?s=100&r=pg&d=mp
 
 **Question/Wish:** I wish I could replicate the mailing list MD5 function in a terminal window, something like,
 

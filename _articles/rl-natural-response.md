@@ -480,18 +480,22 @@ $\begin{aligned}
 \\
 \text L \frac{di}{i} &= -\text R \,dt \\
 \\
-\int_0^{t} \text L \frac{di}{i} &= -\int_0^t \text R \,dt \\
+\int_0^{i(t)} \text L \frac{di}{i} &= -\int_0^t \text R \,dt \\
+\\
+\text L\,\ln i \,\bigg \vert_0^{i(t)} &= - \text R\,t \,\bigg \vert_0^{t} \\
 \\
 \text L\,(\ln i(t) - \ln i(0)) &= -\text R\,t \\
 \\
-\text L\,\ln(i(t)/\text I_0) &= -\text R\,t \\
+\text L\,\ln \dfrac{i(t)}{i(0)} &= -\text R\,t \\
 \\
-\ln(i(t)/\text I_0) &= -\text R\,t/\text L \\
+\text L\,\ln \dfrac{i(t)}{\text I_0} &= -\text R\,t \\
 \\
-i(t)/\text I_0 &= e^{-\text Rt/\text L} \\
+\ln \dfrac{i(t)}{\text I_0} &= -\dfrac{\text R\,t}{\text L} \\
+\\
+\dfrac{i(t)}{\text I_0} &= e^{-\text Rt/\text L} \\
 \\
 i(t) &= \text I_0\,e^{-\text Rt/\text L}
 \end{aligned}$
 </p>
 
-This is the same result we came up with in the main article by guessing a solution. Sal has a sequence of videos where he covers this type of [separable differential equation](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction). He does a [worked example](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/modeling-population-with-simple-differential-equation) to solve a population growth problem. You will see it is the same as the solution to the RL circuit in this appendix.
+This is the same result we came up with in the main article by guessing a solution. Sal has a sequence of videos where he covers this type of [separable differential equation](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction). He does a [worked example](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/modeling-population-with-simple-differential-equation) to solve a population growth problem. Notice it is the same as the solution to the RL circuit in this appendix.

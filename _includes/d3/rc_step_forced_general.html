@@ -1,0 +1,157 @@
+<html>
+<head>
+  <style>
+    svg .grid {
+      stroke-width: 0.5px;
+      stroke: #BBB;
+      opacity: 0.5;
+    }
+
+    svg .domain {
+      stroke-width: 3px;
+      stroke: black;
+    }
+
+    svg {
+      border: none;
+    }
+
+    svg .path {
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke: #FF9C39;      /* KA econ2     */
+      fill: none;
+    }
+
+    svg text {
+      font: 16px katex_main;
+    }
+
+    svg .tick text {
+      font: 12px katex_math;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="rc-forced-general-d3"></div>
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script>
+    var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
+    var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
+
+    var 
+      xmin = -1,
+      xmax = +5,
+      ymin = -1,
+      ymax = +8,
+      hScale = 40,
+      vScale = 20,
+      width  = (xmax - xmin) * hScale,     // width of graph axes pixels
+      height = (ymax - ymin) * vScale,     // height of graph axes pixels
+      xOrigin = -(xmin * hScale);          // pixels
+      yOrigin = height + (ymin * vScale);  // pixels
+
+    var svgContainer = d3.select("#rc-forced-general-d3")
+      .attr("align","center")
+      .append("svg:svg")
+        .attr("width",  width  + padding.left + padding.right)  //width of image
+        .attr("height", height + padding.top + padding.bottom)  //height of image
+        .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")")
+      .append("g")  //group to build image inside of, offset by padding from border
+        .attr("transform",
+          "translate(" + padding.left + "," + padding.top + ")");
+
+    // scales
+    var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
+    var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
+    
+    // x axis
+    var xAxis = d3.axisBottom(xScale)
+      .ticks(8)
+      .tickSizeOuter(0);
+
+    svgContainer.append("g")
+        .classed("x-axis", true)
+        .attr("transform", function() {
+          return "translate(" + 0 + "," + yOrigin + ")";
+        })
+        .call(xAxis)
+      .append("text")
+        .attr("x", width)
+        .attr("dx", ".71em")
+        .text("t")
+        .style("text-anchor", "start")
+        .style("font-size", "20px")
+        .style("font-style", "italic")
+        .style('fill', 'black');
+    
+    // vertical grid lines
+    svgContainer.selectAll("g.x-axis g.tick")
+      .append("line")
+        .classed("grid", true)
+        .attr("x1", 0)
+        .attr("y1", -yOrigin)
+        .attr("x2", 0)
+        .attr("y2", height - yOrigin);
+    
+    // y axis
+    var yAxis = d3.axisLeft(yScale)
+        .ticks(8)
+        .tickSizeOuter(0);
+
+    var ya = svgContainer.append("g")
+        .classed("y-axis", true)
+        .attr("transform", function() {
+          return "translate(" + xOrigin + "," + 0 + ")";
+        })
+        .call(yAxis)
+        .append("text")
+          .attr("dy", "-12px")
+          .attr("dx", "-12px")
+          .text("v")
+          .style("text-anchor", "middle")
+          .style("font-size", "20px")
+          .style("font-style", "italic")
+          .style("fill", "black");
+
+    // horizontal grid lines
+    svgContainer.selectAll("g.y-axis g.tick")
+      .append("line")
+        .classed("grid", true)
+        .attr("x1", -xOrigin)
+        .attr("y1", 0)
+        .attr("x2", width - xOrigin)
+        .attr("y2", 0);
+
+    // remove axis tick labels
+    svgContainer.selectAll(".tick text")
+      //.filter(function (d) { return d === 0;  })
+      .remove();
+
+  // Waveform - RC forced response general solution
+  var i = -2;
+  function myLoop() { 
+      var lineData = [ { "x": 0,  "y": i/3}, { "x": 5,  "y": i/3}];
+
+      var forced = d3.line()
+        .x(function (d) { return xScale(d.x); })
+        .y(function (d) { return yScale(d.y); });
+
+      svgContainer.append('svg:path')
+          .classed("path", true)
+          .attr('d', forced(lineData))
+          .style("stroke-width", "1px");
+
+      i++;
+       if (i < 24) {
+              myLoop();
+          }
+    }
+
+    myLoop();
+
+  </script>
+</body>
+</html>

@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
   <style>
     svg .grid {
       stroke-width: 0.5px;
@@ -18,14 +17,14 @@
     }
 
     svg .path {
-      stroke-width: 4px;
-      stroke: #FF9C39;        /* KA econ2     */
-      stroke-linecap: "round";
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke: #FF9C39;      /* KA econ2     */
       fill: none;
     }
 
     svg text {
-      font: 16px katex_math;
+      font: 16px katex_main;
     }
 
     svg .tick text {
@@ -35,28 +34,28 @@
 </head>
 
 <body>
-<script src="http://d3js.org/d3.v4.min.js"></script>
-
-<script>
-// http://rajapradhan.com/blogs/d3-js-v4-essentials/axes/
+  <div id="rc-natural-general-p-d3"></div>
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script>
   var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
   var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
 
   var 
-      xmin = -1,
-      xmax = +5,
-      ymin = -1,
-      ymax = +8,
-      hScale = 40,
-      vScale = 20,
+      xmin = -4,
+      xmax = +20,
+      ymin = -.8,
+      ymax = +1.6,
+      hScale = 12,
+      vScale = 120,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
       height = (ymax - ymin) * vScale,     // height of graph axes pixels
       xOrigin = -(xmin * hScale);          // pixels
       yOrigin = height + (ymin * vScale);  // pixels
 
   // main container
-  var svgContainer = d3.select("body")
-    .append("svg")
+  var svgContainer = d3.select("#rc-natural-general-p-d3")
+    .attr("align","center")
+    .append("svg:svg")
       .attr("width",  width  + padding.left + padding.right)  //width of image
       .attr("height", height + padding.top + padding.bottom)  //height of image
       .attr("transform",
@@ -69,15 +68,6 @@
   var xScale = d3.scaleLinear().domain([xmin, xmax]).range([0, width]);
   var yScale = d3.scaleLinear().domain([ymin, ymax]).range([height, 0]);
   
-  svgContainer.append("line")
-    .attr("x1", xScale(0))
-    .attr("y1", yScale(6))
-    .attr("x2", xScale(5))
-    .attr("y2", yScale(6))
-    .style("stroke-dasharray","5,5")
-    .style("stroke-width", "2px")
-    .style("stroke", "#8AF281");  // KA CS5
-
   // x axis
   var xAxis = d3.axisBottom(xScale)
     .ticks(8)
@@ -92,9 +82,10 @@
     .append("text")
       .attr("x", width)
       .attr("dx", ".71em")
-      .text("t (time)")
+      .text("t")
       .style("text-anchor", "start")
-      .style("font-size", "16px")
+      .style("font-size", "20px")
+      .style("font-style", "italic")
       .style('fill', 'black');
   
   // vertical grid lines
@@ -119,9 +110,11 @@
       .call(yAxis)
     .append("text")
       .attr("dy", "-12px")
-      .text("v (volts)")
+      .attr("dx", "-12px")
+      .text("v")
       .style("text-anchor", "middle")
-      .style("font-size", "16px")
+      .style("font-size", "20px")
+      .style("font-style", "italic")
       .style("fill", "black");
 
   // horizontal grid lines
@@ -133,16 +126,16 @@
       .attr("x2", width - xOrigin)
       .attr("y2", 0);
 
-  // remove tick labels
+  // remove axis tick labels
   svgContainer.selectAll(".tick text")
     //.filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - total response for RC step response article ** NOT USED **
+  // Waveform - RC natural response with no specific time scale
+  // R = 3k  C = 1uF  Vo = 1.4v
   var R = 3000;
-  var C = .0000004;
-  var Vo = 2;
-  var Vs = 6;
+  var C = .000001;
+  var Vo = 1.4;
 
   var nPoints = 200;
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
@@ -152,19 +145,29 @@
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var response = d3.line()
-    .x(function (d) { return xScale(d); })
-    //.y(function (d) { return yScale(Vo * (Math.exp(-d/(R*C)/1000))); });
-    .y(function (d) { return yScale(Vs + (Vo - Vs) * (Math.exp(-d/(R*C)/1000))); });
+  var i = -4;
+    function myLoop() { 
+      var natural = d3.line()
+        .x(function (d) { return xScale(d); })
+        .y(function (d) { return yScale((Vo - i / 5) * (Math.exp(-d/(R*C)/1000))); });
 
-  svgContainer.append('svg:path')
-    .classed("path", true)
-    .attr('d', response(xData))
-    .style("fill", "none");
+      svgContainer.append('svg:path')
+        .classed("path", true)
+        .attr('d', natural(xData))
+        .style("fill", "none")
+        .style("stroke-width", "1px");
+
+        i++;
+         if (i < 14) {
+                myLoop();
+            }
+      }
+
+  myLoop();
 
   var lineData = [  
-      { "x": xmin, "y": Vo}, 
-      { "x":    0, "y": Vo}];
+      { "x": 0,  "y": 0}, 
+      { "x": 10, "y": 0}];
 
   var lineFunction = d3.line()
     .x(function (d) { return xScale(d.x); })
@@ -172,25 +175,8 @@
 
   svgContainer.append('svg:path')
       .classed("path", true)
-      .attr('d', lineFunction(lineData));
-
-  svgContainer.append("text")
-    .attr("x", xScale(-1))
-    .attr("y", yScale(Vo + 0.3))
-    .text("V\u2080")
-    .style("text-anchor", "start")
-    .style("font-family", "katex_main")
-    .style("font-size", "20px")
-    .style('fill', 'black');
-
-  svgContainer.append("text")
-    .attr("x", xScale(-1))
-    .attr("y", yScale(6))
-    .text("Vs")
-    .style("text-anchor", "start")
-    .style("font-family", "katex_main")
-    .style("font-size", "20px")
-    .style('fill', 'black');
+      .attr('d', lineFunction(lineData))
+      .style("stroke-width", "5px");
 
 </script>
 </body>

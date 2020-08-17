@@ -174,7 +174,32 @@ In summary, this is a good mental model of current: Imagine a transparent membra
 
 ## Direction START HERE
 
-Example 3 reveals the complexity of reporting current. This can be a big source of confusion for beginners. We need to come up with a better way to describe current direction. It is kind of clever how we do this. 
+Example 3 reveals the complexity of reporting current. This can be a big source of confusion for beginners. 
+
+-------------
+There are multiple signed quantities involved in current. We have +/- charge moving around and +/- current direction. If you try to think about both signed quantities at the same time it gets to be too much.
+
+What we do in a complicated situation like this is split the problem into smaller parts. This is the standard engineering methodology. First we talk about charge. Then we talk about direction. 
+
+Charge has + and - signs. 
+Charge obeys the familiar rule: opposite charge attracts, like charge repels. When subjected to an electric field or voltage difference, the charges with opposite signs move in opposite directions. 
+
+Current has + and - signs. 
+The sign of the current is defined in terms of the motion of positive charge (this is the “convention”). 
+
+Step 1: 
+Label the wire with a Current Arrow. The current arrow indicates your choice of the direction of positive current. (Like drawing an arrow on a map indicating which way is North.)
+
+Step 2: 
+If positive charge moves the same direction as the current arrow, the value of current is positive (has a + sign). 
+If positive charge moves opposite the direction of the current arrow, the current is negative (has a - sign).
+
+If you want to know what negative charge is doing, it’s always the opposite of whatever positive charge does.
+-----------------
+
+
+
+We need to come up with a better way to describe current direction. It is kind of clever how we do this. 
 
 Where should this detail go?
 {% capture summary %}Why are ammeters so dumb?{% endcapture %}
@@ -597,4 +622,13 @@ Correct. You can build a perfectly consistent current convention using electron 
 - Willy
 
 
+From a recent KA question in Conventional Current Direction  
+So, if I turn on my TV, does it mean that the current will be going from the TV to the plug, whilst the "Electron Current" will be from the plug to the TV? If I am right, isn't this entire concept unnecessary, when we could have just defined the direction of current as the same as that of the electrons?
 
+It's not as crazy as that. We are not pretending the current is going the other way. What we are doing is pointing the current arrow in the direction the electrons are coming from.
+
+It's like how sailors talk about the wind, or how weathervanes work. If you ask a sailor to point at the wind, he or she will point in the direction the wind is coming from. A "north wind" flows from the north. The sailor isn't crazy, and isn't pretending the wind goes the other way. It is just the common understanding amongst sailors about how to name the wind direction.
+
+We do the same with electric current. The reason is electrons have a negative charge--that negative sign is why the direction seems backwards. We define current direction in terms of the motion of positive charge.
+
+And just to be super complete... The current in your TV's power cord is AC "alternating current". It changes direction 50 or 60 times per second. The idea of current direction in AC circuits isn't so useful, since it switches around so often. The first circuits we study in Electronics are based on DC "direct current", where the power source is typically a battery. Defining current direction in DC circuits is important. It is confusing at first, but I promise you will get used to it soon.

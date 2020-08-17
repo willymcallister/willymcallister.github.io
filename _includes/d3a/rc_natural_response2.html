@@ -172,7 +172,8 @@
 
   svgContainer.append('svg:path')
       .classed("path", true)
-      .attr('d', lineFunction(lineData));
+      .attr('d', lineFunction(lineData))
+      .style("stroke-width", "3px");
 
   svgContainer.append("line")
       .attr("x1", xScale(0))

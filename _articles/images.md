@@ -7,6 +7,10 @@ comments: true
 
 Insert these useful templates into markdown documents to embed images into articles. There are variations for left/center/right images along with text-style text or caption-style caption. Each template is paired with an html include file you save in your \_includes folder. 
 
+# Pending question
+**Can I make use of the link check?**
+![RC step response circuit]({% link i/rc_step1a.svg %}){: .centered }
+
 ----
 
 #### Contents
@@ -16,6 +20,80 @@ Insert these useful templates into markdown documents to embed images into artic
 {:toc}
 
 ----
+
+## Image_centered_without_caption
+
+Insert template into markdown,
+```
+{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
+{% capture alt %}ALT_TEXT{% endcapture %}
+{% capture height %}200px{% endcapture %} 
+{% include image_centered_without_caption.html %}{% endraw %}
+```
+
+Include file: \_includes/image_centered_without_caption.html
+```
+{% raw %}<div>
+  <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
+</div>
+<div style="clear: both;"></div>{% endraw %}
+```
+
+Example,
+
+{% capture image %}electric-eel.jpg{% endcapture %} 
+{% capture alt %}Electric eel{% endcapture %}
+{% capture height %}200px{% endcapture %} 
+{% include image_centered_without_caption.html %}
+
+## Image_centered_with_caption
+
+Insert template into markdown,
+```
+{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
+{% capture alt %}ALT_TEXT{% endcapture %}
+{% capture height %}200px{% endcapture %} 
+{% capture caption %}CAPTION{% endcapture %}
+{% include image_centered_with_caption.html %}{% endraw %}
+```
+
+Include file: \_includes/image_centered_with_caption.html
+```
+{% raw %}<div>
+  <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
+</div>
+<div class="caption">
+  {{ caption | markdownify }}
+</div>{% endraw %}
+```
+
+Example,
+
+{% capture image %}electric-eel.jpg{% endcapture %} 
+{% capture alt %}Electric eel{% endcapture %}
+{% capture height %}200px{% endcapture %} 
+{% capture caption %}This is an **electric eel**.{% endcapture %}
+{% include image_centered_with_caption.html %}
+
+## Image_left_without_caption
+
+Insert template into markdown,
+```
+{% raw %}{% capture image %}IMAGE FILE NAME{% endcapture %} 
+{% capture alt %}ALT TEXT{% endcapture %}  
+{% capture height %}200px{% endcapture %}  
+{% capture description %} 
+DESCRIPTION 
+{% endcapture %}{% include image_left_without_caption.html %}{% endraw %}
+```
+
+Include file: \_includes/image_left_without_caption.html
+```
+{% raw %}<div>
+  <p><img height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
+</div> 
+<div style="clear: both;"></div>{% endraw %}
+```
 
 ## Image_left_with_caption
 
@@ -29,7 +107,7 @@ CAPTION
 {% endcapture %}{% include image_left_with_caption.html %}{% endraw %}
 ```
 
-Include file: image_left_with_caption.html 
+Include file: \_includes/image_left_with_caption.html 
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: left; margin-right: 1em;">
@@ -63,7 +141,7 @@ DESCRIPTION
 {% endcapture %}{% include image_left_with_text.html %}{% endraw %}
 ```
 
-Include file: image_left_with_text.html
+Include file: \_includes/image_left_with_text.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: left; margin-right: 1em;">
@@ -97,7 +175,7 @@ CAPTION
 {% endcapture %}{% include image_right_with_caption.html %}{% endraw %}
 ```
 
-Include file: image_right_with_caption.html
+Include file: \_includes/image_right_with_caption.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: right; margin-left: 1em;">
@@ -131,7 +209,7 @@ DESCRIPTION
 {% endcapture %}{% include image_right_with_text.html %}{% endraw %}
 ```
 
-Include file: image_right_with_text.html
+Include file: \_includes/image_right_with_text.html
 ```
 {% raw %}<div style="clear: both;">
   <div style="float: right; margin-left: 1em;">
@@ -152,60 +230,6 @@ Example,
 {% capture description %} 
 Find the 'diode' setting on your multimeter. This can be used to determine the forward conducting direction of the diode. Use this if the marking on the diode is unclear. 
 {% endcapture %}{% include image_right_with_text.html %}
-
-## Image_centered_with_caption
-
-Insert template into markdown,
-```
-{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
-{% capture alt %}ALT_TEXT{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% capture caption %}CAPTION{% endcapture %}
-{% include image_centered_with_caption.html %}{% endraw %}
-```
-
-Include file: image_centered_with_caption.html
-```
-{% raw %}<div>
-  <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
-</div>
-<div class="caption">
-  {{ caption | markdownify }}
-</div>{% endraw %}
-```
-
-Example,
-
-{% capture image %}electric-eel.jpg{% endcapture %} 
-{% capture alt %}Electric eel{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% capture caption %}This is an **electric eel**.{% endcapture %}
-{% include image_centered_with_caption.html %}
-
-## Image_centered_without_caption
-
-Insert template into markdown,
-```
-{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
-{% capture alt %}ALT_TEXT{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% include image_centered_without_caption.html %}{% endraw %}
-```
-
-Include file: image_centered_without_caption.html
-```
-{% raw %}<div>
-  <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
-</div>
-<div style="clear: both;"></div>{% endraw %}
-```
-
-Example,
-
-{% capture image %}electric-eel.jpg{% endcapture %} 
-{% capture alt %}Electric eel{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% include image_centered_without_caption.html %}
 
 ## Caption style
 
