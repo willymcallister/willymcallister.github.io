@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*.
+When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*. 
 
 ![RC step response circuit]({% link i/rc_step1.svg %}){: .centered :}
 
@@ -133,26 +133,28 @@ $v_{tot} = v_n + v_f\qquad$ subject to some initial conditions
 
 where $t$, $n$, and $f$ stand for total response, natural response, and forced response. 
 
-The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: The particular response we hunt for has a nice real-world significance. Somewhere in the family of curves represented by the general solution you can always find *the one* that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. After the natural response dies out the circuit exhibits its *forced response*. You might say the forced response is one particular particular response. 
+The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: The particular response we hunt for is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you can always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. After the natural response dies out what's left is the *forced response*. You might say the forced response is one particular particular response. 
 
 {% capture details %}
-"Somewhere in the family of curves represented by the general solution you can always find *the one* that corresponds to the the long-term behavior of the circuit."
+"Somewhere in the family of curves represented by the general solution you can always find *the one* particular response that corresponds to the the long-term behavior of the circuit."
 
-Here's an example of what I'm talking about, from the RC Natural Response. Recall the general solution to the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}#general-solution),
+Here's an example of what I'm talking about---recall the general solution to the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}#general-solution),
 
 $v(t) = Ke^{-t/\text{RC}}$
 
+We can plot this general solution for lots of different values of $K$,
+
 {% include d3/rc_natural_response_general_p.html %}
 
-The plot shows the family of particular solutions represented by the general solution to the RC natural response. Every one of them ends up at zero after a long time. 
+The plot shows the family of particular solutions represented by the general solution to the $\text{RC}$ natural response. Every one of them ends up at zero after a long time. 
 
-For the natural response there is no forcing function. The only energy in the system is the initial charge on the capacitor. After a long time that initial energy fully dissipates and the voltage approaches $0$. The long-term *steady-state* response is $v = 0$. 
+The natural response has no forcing function. The only energy in the system is the initial charge on the capacitor. After a long time that initial energy dissipates and the voltage approaches $0$. The long-term steady-state response for any value of $K$ is $v = 0$. 
 
-Find the particular response right in the middle that's a straight line along the time axis. This one is interesting because it matches the long-term steady-state response for all time. It is the particular solution we would choose if the initial voltage $\text V_0$ was $0$.
+See if you can find the particular response right in the middle, a straight line along the time axis. This particular response is interesting---it matches the steady-state response (at all times, not just after a long time). It is the particular solution we would choose if the initial voltage $\text V_0$ happened to be $0$.
 
-The point of this example is to show the steady-state or forced response is included in a general solution. If we hold off on evaluating the initial conditions the steady-state solution can be found somewhere as part of the general solution.
+The point of this example is to show you what it means for the steady-state or forced response to be included in a general solution. The steady-state solution can be found somewhere as part of the general solution.
 
-When we add a step input to the RC circuit the steady-state response is no longer zero---it will be some other value. Keep reading to find out where the story goes.
+When we drive the RC circuit with a step function the steady-state response is no longer zero---it will be some other value.
 {% endcapture %}
 {% capture summary %}example{% endcapture %}{% include details.html %} 
 
