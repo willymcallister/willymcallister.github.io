@@ -87,4 +87,4 @@ comments:
 
   # Akismet spam detection
   akismet:
-    enabled: false
+    enabled: true
