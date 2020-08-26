@@ -476,13 +476,13 @@ Note: Heroku logs are always shown in UTC time, +00:00. (Coordinated Universal T
 
 ## Akismet - UNDER CONSTRUCTION
 
-This section is incomplete. I have not gotten Akismet to work. Still have questions. 
+>This section is incomplete. I have not gotten Akismet to work. Still have questions. 
 
-Optional spam detection service from Wordpress. Enable Akismet for spam detection in addition to reCaptcha.
+Akismet is an optional spam detection service from Wordpress. Enable Akismet for spam detection in addition to reCaptcha.
 
-Sign up for an [Akismet account](https://akismet.com/) and get an API key.
+Sign up for an [Akismet account](https://akismet.com/). You get an API key as part of your Akismet account. You will also set up a Wordpress account. The Wordpress account is where you specify the website URL being protected. Typical setting: https://yourdomain.com.
 
-Add these lines to staticman.yml, the remaining Akismet settings are left at default,
+Tell Staticman to use Akismet by adding these lines to staticman.yml. The remaining Akismet settings are left at default,
 
 ```
 # Akismet spam detection
@@ -490,19 +490,21 @@ Add these lines to staticman.yml, the remaining Akismet settings are left at def
     enabled: true
 ```
 
-Set environment variables AKISMET_SITE and AKISMET_API_KEY at Heroku. 
+Over at your Staticman API bridge set environment variables AKISMET_SITE and AKISMET_API_KEY. 
 
-XX AKISMET_SITE needs to match the site you identify in your Akismet account, typically http://yourdomain.com.   
-The Akismet's site should be the URL of the staticman API, not the GH page's. Let's say staticman is hosted on Heroku, then the Akismet's site should be a Heroku URL. See [339](https://github.com/eduardoboucas/staticman/issues/339), [369](https://github.com/eduardoboucas/staticman/issues/369)
+AKISMET_SITE typical setting: https://yourdomain.com. This variable must match the site you identified in your Akismet/Wordpress account.   
 
 ```
-XX heroku config:add --app yourAppName "AKISMET_SITE=https://spinningnumbers.org"
+heroku config:add --app yourAppName "AKISMET_SITE=https://spinningnumbers.org"
 ```
 
 ```
 heroku config:add --app yourAppName "AKISMET_API_KEY=yourAPIkey"
 ```
 
+### Testing Akismet TBD
+
+"Yes this is spam" test: Submit a comment and enter this in the author field: akismet-guaranteed-spam@example.com
 
 ## Troubleshooting
 

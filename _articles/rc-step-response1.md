@@ -119,7 +119,7 @@ We find the step function using a non-obvious theory of differential equations, 
 
 >The total solution to a non-homogeneous differential equation can be found by the superposition (addition) of the circuit's natural response with **any** particular response (found without regard for the initial conditions), followed by using the initial conditions to resolve unknown constants.
 
-This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain.
+If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain.
 
 In mathematical vocabulary the the theory says,
 
@@ -162,17 +162,20 @@ When we drive the RC circuit with a step function the steady-state response is n
 
 The steps to solve a driven circuit,
 
-1. Suppress the driven input (set the input to $0$) and find the general form of the natural response. (The general form is after you solve the characteristic equation but before you use the initial conditions to find the unknown constants.)
-2. Ignoring the initial conditions, find a forced response that solves the non-homogeneous differential equation. Specifically, find the particular solution that looks like a scaled version of the input forcing function. (Sometimes you might have to include derivatives of the input function in the proposed solution.)
+1. Find the general form of the natural response. Do this by suppressing the driven input (set the input to $0$). Ignore the initial conditions for now.
+2. Find the forced response. The forced response is the one particular solution that looks like a scaled version of the input forcing function.  Ignore the initial conditions for now. (Sometimes your proposed solution might have to include the input function plus its derivatives.)
 3. Superimpose (add) the natural response to the forced response to get the total response.
-4. Lastly, apply the initial conditions to resolve the unknown constants. (Holding off the initial conditions until this last step allows the natural and forced response to blend together to create the transition from initial state to steady state.)
+4. Last, apply the initial conditions to the total response and resolve the unknown constants.  
+
+Holding off the initial conditions until this last step allows the natural and forced response to blend together to create the transition from initial state to steady state.
+
 {% capture summary %}so many terms{% endcapture %}  
 {% capture details %}  
-There are many different terms used in math, physics, and engineering related to this type of differential equation. Be aware of these, but don't bother to memorize them. 
+There are so many terms used in math and engineering related to this type of differential equation. Be aware of these, but don't bother to memorize them. 
 
 * Natural response is the *homogeneous solution* or the *force-free solution* or the *complementary solution* (because it complements the particular solution).
 
-* Forced response is a *particular solution* chosen from the general solution. Not just any particular solution, but one specifically derived from the the *steady-state response*.
+* Forced response is a *particular solution* chosen from the general solution. Not just any particular solution but the one specifically derived from the the long term behavior of the circuit, the *steady-state response*.
 
 * Total response is also called the *complete solution*.
 
@@ -184,41 +187,47 @@ Our differential equation is a mouthful, it is a
 What does all this mean?
 
 * *Homogeneous* means the equation contains $v$ and derivatives of $v$, and nothing else. The natural response equation is homogeneous.
-* *Non-homogeneous* or *inhomogeneous* means there is some term that's not $v$ or one of its derivatives. Our step response equation has a $\text V_{\text S}$ term not related to $v$, so it is non-homogeneous. 
-* *First-order* means the highest derivative is the first derivative $dv/dt$. If there was a second derivative, $dv^2/d^2v$, it would be a *second-order* equation.
-* *Constant coefficient* means the values of the components $(\text{R, C})$ are constant and do not change as time goes by. This is also referred to as *time invariant*. You may see a system described by the acronym LTI for *linear time invariant*. LTI means if you run the circuit today and tomorrow with the same initial conditions it will do the same thing both days. It's a nice property.
+* *Non-homogeneous* or *inhomogeneous* means there is some term that's not $v$ or one of its derivatives. Our step response differential equation includes a $\text V_{\text S}$ term not related to $v$, so it is non-homogeneous. 
+* *First-order* means the highest derivative is the first derivative $dv/dt$. If there was a second derivative, $dv^2/d^2v$, it would be a *second-order* equation. $\text{LC}$ and $\text{RLC}$ circuits produces second-order equations.
+* *Constant coefficient* means the values of the components $\text R$ and $\text C$ are constant and do not change as time goes by. This is also referred to as *time invariant*. You may see a system described by the acronym LTI for *linear time invariant*. LTI means if you run the circuit today and tomorrow with the same initial conditions it will do the same thing both days. It's a nice property.
 * *Ordinary* means there is just one independent variable, $t$.  
 {% endcapture %}{% include details.html %} 
 
+Let's work our strategy and see what happens.
+
 ### Natural response
 
-To find the natural response $v_n$ we suppress (turn off, set to zero) the input.
+To find $v_n$, the natural response, we suppress (turn off, set to zero) the input,
 
 {% capture image %}rc_step4a.svg{% endcapture %} 
 {% capture alt %}RC step with input suppressed{% endcapture %}
 {% capture height %}180px{% endcapture %}
-{% capture caption %}Natural response with the input voltage source suppressed.{% endcapture %} 
+{% capture caption %}Natural response with the input suppressed. To suppress a voltage source, replace it with a short. (For more on suppressing sources see [Superposition]({% link _articles/superposition.md %}#suppress-the-inputs).){% endcapture %} 
 {% include image_centered_with_caption.html %}
 
-Suppressing or turning off the input means replacing the voltage source with a short. (For more on suppressing sources see [Superposition]({% link _articles/superposition.md %}#suppress-the-inputs).) 
+We already worked through the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}) in great detail. We quickly repeat the derivation here. 
 
-We already worked through the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}) in great detail. We quickly repeat it here. 
+Write a [KCL]({% link _articles/kirchhoffs-current-law.md %}) equation for the upper right node. Then model the two passive components by their $i$-$v$ equations,
 
-Model the two passive components by their $i$-$v$ equations and use [KCL]({% link _articles/kirchhoffs-current-law.md %}) to assemble this differential equation, 
+$i_\text C + i_\text R = 0$ 
+
+$\text C\,\dfrac{dv_n}{dt} + \dfrac{v_n}{\text{R}} = 0$
+
+to get this differential equation, 
 
 $\dfrac{dv_n}{dt} + \dfrac{v_n}{\text{RC}} = 0$
 
-Notice: With the input suppressed, the right side of the original non-homogeneous differential equation becomes $0$, turning it into a *homogeneous* differential equation.
+Notice: When we suppress the input, the right side of the differential equation comes out $0$, turning it into a *homogeneous* differential equation.
 
 Propose a solution in the form of an exponential with two adjustable parameters, $K_n$ and $s$,
 
 $v_n = K_n\,e^{st}$
 
-Now test the proposed solution to see if it makes the differential equation true. Plug $v_n$ into the homogeneous equation,
+Test the proposed solution to see if it makes the differential equation true. Plug $v_n$ into the homogeneous equation,
 
 $\dfrac{d}{dt}K_n\,e^{st} + \dfrac{1}{\text{RC}}K_n\,e^{st} = 0$
 
-and perform the derivative in the first term, 
+Perform the derivative in the first term, 
 
 $sK_n\,e^{st} + \dfrac{1}{\text{RC}}K_n\,e^{st} = 0$
 
@@ -226,9 +235,7 @@ The common $K_n\,e^{st}$ term can be factored out,
 
 $K_n\,e^{st}\,\left (s + \dfrac{1}{\text{RC}} \right ) = 0$
 
-To make this equation true, the left side has to become $0$. We could set $K_n$ to $0$, which means there was no initial energy. The term $e^{st}$ becomes zero if $s$ is negative and we let $t$ go to infinity. All natural responses approach $0$ if you wait long enough. 
-
-But what happens before that? In the near term something interesting happens if,
+To make this equation true, one of the three product terms on the left side has to be $0$. We could set $K_n$ to $0$, which means there was no initial energy stored in the capacitor. Or, the term $e^{st}$ becomes zero if $s$ is negative and we wait for $t$ to go to infinity. (All natural responses approach $0$ if you wait long enough.) Something interesting happens if we make the third expression $0$,
 
 $s + \dfrac{1}{\text{RC}} = 0$
 
@@ -236,33 +243,38 @@ This is the *characteristic equation* of the $\text{RC}$ natural response. Solve
 
 $s=-\dfrac{1}{\text{RC}}$
 
-This gives us the *general form* of the natural response for $t > 0$,
+Put this value of $s$ back into the proposed solution. This gives us the *general form* of the natural response for $t > 0$,
 
 $v_n = K_n\,e^{-t/\text{RC}}$
 
-{% include d3/rc_step_natural_response_Kn.html %}
+{% include d3/rc_natural_response_general.html %}
+General solution to the RC natural response, $v(t) = K_n\, e^{-t/\text{RC}}$.
+{: .caption :}
 
-The natural response is an exponential curve whose rate of descent to $0$ is determined by the product $\text{RC}$. This general solution represents an infinite family of curves based on the value of $K_n$. We hold off figuring out a specific value of $K_n$. We'll do that after we assemble the total response.
+This general solution is an infinite family of curves based on all possible values of $K_n$. The natural response is an exponential curve whose rate of descent is determined by the product $\text{RC}$. We hold off figuring out a specific value of $K_n$. We'll do that after we assemble the total response.
 
-### Particular response 
+### Forced response 
+
+The superposition theory says we are allowed to find *any* particular solution to the differential equation, paying no heed to the initial capacitor voltage. We won't go for *any* particular solution, but rather we will search for the  particular solution that corresponds to the steady-state *forced response*.
 
 For this step we return to the original non-homogeneous equation,
 
-$\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}\qquad$ initial condition: *ignored*
+$\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
 
-What! This again! When I first studied non-homogeneous equations it was depressing to come back to the original equation and be asked to solve it. What's with all this special superposition theory and natural response if we still have to solve the original hard equation? The key that unlocks the treasure: This time we get to ignore the initial condition. That cracks the door open and keeps us from going crazy. 
+{% capture details %}
+When I first studied non-homogeneous equations I got depressed when the original equation showed up again. What's with all this special superposition theory and natural response if we still have to solve the original hard equation? The key that unlocks the treasure: This time we get to ignore the initial condition while finding the forced response. That cracks the door open and keeps us from going crazy. 
 
-The superposition theory says we are allowed to find *any* particular solution to the differential equation, paying no heed to the initial capacitor voltage. 
+If you think back to when we derived the natural response. The proposed function had to make the differential equation happy *and* produce a constant based on the initial conditions. That's not the case now---we will account for the initial condition *after* we do the superposition.
 
-Think back to when we derived the natural response. The proposed function had to make the differential equation happy *and* produce a constant based on the initial conditions. That's not the case now---we will account for the initial condition *after* we do the superposition.
+{% endcapture %}
+{% capture summary %}What? This again? You said this was really hard to solve! {% endcapture %}{% include details.html %}
 
-Let's make an intelligent guess at a function that would solve the equation. We have extra flexibility because we don't have to worry about the initial condition. Looking at the equation,
+Let's make an intelligent guess at a function that would solve the equation. 
+Looking at the equation,
 
 $\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
 
-Whatever $v$ is, it probably has to bear some resemblance to the function on the right side if we hope to make both sides equal. 
-
-In differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients).
+Whatever $v$ is, it has to bear some resemblance to the function on the right side if we hope to make both sides equal. 
 
 Let's propose a solution that looks like the right side. Since the right side is a constant, we propose a constant solution,
 
@@ -276,15 +288,15 @@ The derivative of a constant is always $0$,
 
 $0 + \dfrac{K_f}{\text{RC}} \stackrel{?}{=} \dfrac{\text V_\text S}{\text{RC}}$
 
-The equation comes true when,
+The equation comes true when what? When,
 
 $K_f = \text V_\text S$
 
-In summary, the *general* solution to the non-homogeneous equation is,
+In summary, a *particular* solution to the non-homogeneous equation is,
 
 $v_f(t) = K_f$
 
-{% include d3/rc_step_forced_general.html %}
+XXX{% include d3/rc_step_forced_general.html %}
 The RC forced general solution, $v(t) = K_f$, before resolving the value of the constant. The general solution is a family of curves that all satisfy the non-homogeneous equation.
 {: .caption :}
 

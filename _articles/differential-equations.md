@@ -5,6 +5,8 @@ author: Willy McAllister
 comments: true
 ---
 
+Sal shows why the superposition works: If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients).
+
 The homogeneous differential equation modeling the $\text{RC}$ natural response circuit is,
 
 $\dfrac{dv}{dt} + \dfrac{1}{\text{RC}} \, v = 0$ 
