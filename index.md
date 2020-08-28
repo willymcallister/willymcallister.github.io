@@ -7,8 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- The Circuit Sandbox simulator is translated to [Hindi and Portuguese](index.html#circuit-sandbox-simulator-)!  
-New --- Light/Dark Mode now mimics your system Light/Dark setting. 
+New --- The Circuit Sandbox simulator is translated to [Hungarian](#circuit-sandbox-simulator)!  
 
 ---
 
@@ -53,7 +52,7 @@ Basic concepts underlying digital hardware design.
 
 ### [Circuit sandbox simulator]({% link _articles/circuit-sandbox.md %})
 
-|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|
+|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} magyarul](https://spinningnumbers.org/circuit-sandbox/index-hu.html)|
 |[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 简体中文](https://spinningnumbers.org/circuit-sandbox/index-zh.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 日本語](https://spinningnumbers.org/circuit-sandbox/index-ja.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} हिन्दी](https://spinningnumbers.org/circuit-sandbox/index-hi.html)|
 {:.noborder}
 

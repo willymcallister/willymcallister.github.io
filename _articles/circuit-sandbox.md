@@ -9,7 +9,7 @@ comments: true
 
 A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. The circuit simulator is written entirely in JavaScript---it is not a version of SPICE. 
 
-|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|
+|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} magyarul](https://spinningnumbers.org/circuit-sandbox/index-hu.html)|
 |[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 简体中文](https://spinningnumbers.org/circuit-sandbox/index-zh.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 日本語](https://spinningnumbers.org/circuit-sandbox/index-ja.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} हिन्दी](https://spinningnumbers.org/circuit-sandbox/index-hi.html)|
 {:.noborder}
 
@@ -256,6 +256,7 @@ So far, Circuit Sandbox is available in,
 * Japanese, ja.js (courtesy of my friend Leslie Shiozaki, a professional translator)
 * Hindi, hi.js (courtesy of Aniruddh Pratap Singh, a 12th grade student who wants to become an engineer.)
 * Portuguese, pt-BR.js (courtesy of Luís F. V. Peres, graduando em engenharia elétrica de Universidade de São Paulo)
+* Hungarian, hu.js (courtesy of Török Attila)
 
 ## The Circuit Sandbox was created at MIT
 
