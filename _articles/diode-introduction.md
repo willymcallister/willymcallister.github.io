@@ -153,7 +153,7 @@ With a positive voltage on its terminals, we say the diode is *forward biased*. 
 
 If you apply a negative voltage to a diode, so the $-$cathode terminal is higher voltage than the $+$anode terminal, this puts us on the left side of the $i$-$v$ curve. We say the diode is *reverse biased*. In the reverse direction, the current is very close to zero, just ever so slightly negative. 
 
-There is a tiny bit of current that flows when a diode is reverse biased. We call it the *reverse saturation current*. This current flows in the opposite direction of the arrow &#9658;, from the cathode towards the anode. A well-made diode has a typical reverse current of $10^{-9}$ to $10^{-12}\,\text A$. In most situations, this is close enough to zero to be ignored. In some cases (like an integrated circuit with millions of diodes), the reverse saturation current becomes important and you give it a bad-sounding name: *leakage current*.
+There is a tiny bit of current that flows when a diode is reverse biased. We call it the *reverse saturation current*. This current flows in the opposite direction of the arrow &#9658;, from the cathode toward the anode. A well-made diode has a typical reverse current of $10^{-9}$ to $10^{-12}\,\text A$. In most situations, this is close enough to zero to be ignored. In some cases (like an integrated circuit with millions of diodes), the reverse saturation current becomes important and you give it a bad-sounding name: *leakage current*.
 
 <details>
 <summary>What does "bias" mean?</summary>
@@ -161,7 +161,7 @@ There is a tiny bit of current that flows when a diode is reverse biased. We cal
 
 <p>In everyday use, <em>bias</em> can be negative, implying unfairness or favoritism, "The rules are biased against me." Or it might describe a tendency, "They show a bias for taking action." Or "The goalkeeper has a bias for jumping to the left on penalty kicks."</p>
 
-<p>In electronics, <em>bias</em> comes up in only a few situations. It has the sense of pulling towards one side. When talking about diodes as we are doing here, <em>forward bias</em> means an applied voltage is tugging the diode towards the forward conducting side of its $i$-$v$ curve. <em>Reverse bias</em> is the opposite, a negative voltage pulls the diode into its <em>reverse bias region</em> where it does not conduct.</p>
+<p>In electronics, <em>bias</em> comes up in only a few situations. It has the sense of pulling to one side. When talking about diodes as we are doing here, <em>forward bias</em> means an applied voltage is tugging the diode toward the forward conducting side of its $i$-$v$ curve. <em>Reverse bias</em> is the opposite, a negative voltage pulls the diode into its <em>reverse bias region</em> where it does not conduct.</p>
 
 <p>The other place you talk about bias: You apply a <em>bias voltage</em> to the terminals of a transistor to place it in a voltage range where it works best. For example, if a transistor works best when its input terminal is between $1$ and $3$ volts, you apply a bias voltage centered at $2$ volts, right in the middle of its happy zone.</p>
 </details>

@@ -219,7 +219,7 @@ Going through this Node Voltage Method seemed like a lot less work than creating
 
 No, there is no magic. The Node Voltage Method is simply a cleverly organized way to approach the same $2E$ equations. The main innovations are,
 
-* We are confident we can do Ohm's Law in our heads while writing the KCL equations. Being this quick with Ohm's Law makes it seem like half of the independent equations are no big deal. We used Ohm's Law towards the end to find the resistor currents. This didn't seem like much of a chore, either.
+* We are confident we can do Ohm's Law in our heads while writing the KCL equations. Being this quick with Ohm's Law makes it seem like half of the independent equations are no big deal. We used Ohm's Law near the end to find the resistor currents. This didn't seem like much of a chore, either.
 * Using the concept of *node voltage* instead of element voltage is a brilliant move that basically annotates KVL equations right on the schematic, so we don't have to write KVL equations.
 * A few node voltages might have easy solutions, the nodes connected to a voltage source whose other terminal is ground. This typically knocks out one or two equations.
 * What remains to solve are the KCL equations at the non-easy nodes.  

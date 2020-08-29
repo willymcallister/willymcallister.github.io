@@ -267,7 +267,7 @@ $i_{\text{diode}}\approx$ \_\_\_\_\_\_$\,\text A$
 
 Now we release the push-button switch and the contacts open up. Before, when there was no diode, the open switch caused $v_{\text{pb}}$ to spike up to a huge positive voltage. Now---with the diode---something better happens.
 
-The switch still attempts to create a big $di/dt$ when it opens. Just like when there was no diode, $v_{\text{pb}}$ starts at $0\,\text V$ and starts to kick up towards a big positive value. But this time,
+The switch still attempts to create a big $di/dt$ when it opens. Just like when there was no diode, $v_{\text{pb}}$ starts at $0\,\text V$ and starts to kick up to a big positive value. But this time,
 
 **What happens when $v_{\text{pb}}$ rises from $0$ to $3.7$ volts?**  
 (Choose all that apply.)

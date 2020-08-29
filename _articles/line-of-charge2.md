@@ -281,7 +281,7 @@ See that $2$ sneak in there? That's the doubling of the $dE_y$ vector we talked 
 
 Now we look at the useful case where the line of charge is very long relative to the separation, or $L \gg a$. 
 
-Stand at $q$ and turn your head either way to look towards the ends of the very long line. The ends are way off in the distance. Your head turns (very nearly) $\pm\,90^{\circ}$ ($\pm\,\pi/2$ radians). These angles become the limits of the integration.
+Stand at $q$ and turn your head either way to look toward the ends of the very long line. The ends are way off in the distance. Your head turns (very nearly) $\pm\,90^{\circ}$ ($\pm\,\pi/2$ radians). These angles become the limits of the integration.
 
 $\displaystyle E_y = \int_{-\pi/2}^{+\pi/2} \dfrac{1}{4\pi\epsilon_0} \dfrac{\lambda}{a} \,\cos \theta \,d\theta$
 

@@ -119,9 +119,9 @@ $\vec E_{Qa} = \dfrac{1}{4\pi\epsilon_0}\dfrac{Q}{a^2}\hat r$
 
 ### Doing work in an electric field
 
-Assume big $Q$ is glued to the page, or held in place by a thumbtack so it can't move. Little $q$ is our test charge. We <u>slowly</u> push $q$ towards $Q$ and think about its electric potential energy.
+Assume big $Q$ is glued to the page, or held in place by a thumbtack so it can't move. Little $q$ is our test charge. We <u>slowly</u> push $q$ toward $Q$ and think about its electric potential energy.
 
-What does it mean to do work in an electric field? You are doing work when you push one charge towards another repelling charge, (or pull it away from an attracting charge).
+What does it mean to do work in an electric field? You are doing work when you push one charge closer to a repelling charge, (or pull it away from an attracting charge).
 
 We recruit a little dude to emphasize something has to hold $q$ in place so it doesn't move off to the left. The little dude pushes back on $q$ with exactly the repelling force from $Q$. 
 

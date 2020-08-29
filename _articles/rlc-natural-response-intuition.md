@@ -62,7 +62,7 @@ This discussion gets complicated because we follow multiple things at once, capa
 
 What happens when the switch closes and we let the circuit do "whatever it wants"? This behavior is called the *natural response*. Follow the charge! 
 
-Close the switch. $+q$ on the top plate has a closed path to move towards the bottom plate.
+Close the switch. $+q$ on the top plate has a closed path to move toward the bottom plate.
 
 ![Charge has a path from the top plate to the bottom plate]({{ site.baseurl }}{% link i/rlc_natural_response_intuition0a.svg %}){: .centered :}
 

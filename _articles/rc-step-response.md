@@ -5,15 +5,13 @@ author: Willy McAllister
 comments: true
 ---
 
-When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*.
+When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*. This step response happens billions of times every second inside digital devices. That means this is the most important analog circuit in digital electronics.
 
 We apply an abrupt step in voltage to a resistor-capacitor $(\text{RC})$ circuit and watch what happens to the voltage across the capacitor, $\goldC{v(t)}$. 
 
 ![RC step response circuit]({{ site.baseurl }}{% link i/rc_step1.svg %}){: .centered :}
 
-This step response happens billions of times every second inside all digital devices. That means this is the most important analog circuit in all of digital electronics.
-
-We introduce the method of *forced plus natural response* to solve the challenging "non-homogeneous" differential equation that models the $\text R\text C$ step circuit. 
+We introduce the method of *forced plus natural response* to solve the challenging *non-homogeneous* differential equation that models the $\text R\text C$ step circuit. 
 
 Before diving into the step response you may want to review [RC natural response - intuition]({{ site.baseurl }}{% link _articles/rc-natural-response-intuition.md %}) and [RC natural response - derivation]({{ site.baseurl }}{% link _articles/rc-natural-response-derivation.md %}).
 
@@ -52,9 +50,9 @@ The input is an abrupt voltage step starting at $\text V_0$ and instantly jumps 
 
 {% capture summary %}the step is instantaneous{% endcapture %}  
 {% capture details %}  
-A step is an ideal mathematical idea that doesn't exist in the real world. The voltage has only two values, $\text V_0$ and $\text V_{\text S}$. There are no in-between values. When we draw a step with a vertical orange line at $t = 0$ it's simply a graphical connection between the top and bottom horizontal lines. The vertical line isn't meant to suggest intermediate voltage values exist at $t = 0$.
+A step function is an ideal mathematical idea. The voltage has only two values, $\text V_0$ and $\text V_{\text S}$. There are no in-between values. When we draw a step with a vertical orange line at $t = 0$ it's simply a graphical connection between the top and bottom horizontal lines. The vertical line isn't meant to suggest intermediate voltage values exist at $t = 0$. Technically, the step function does not meet the definition of a mathematical function, since there's this weirdness at $t=0$. But it's best to let mathematicians ponder that. We engineers don't have to because...  QQQ
 
-In the real world, there will always be some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in.  
+In the real world, step functions always have some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in.  
 {% endcapture %}{% include details.html %} 
 
 ## Intuition
@@ -189,7 +187,7 @@ Our differential equation is a mouthful,
 * Homogeneous* means the equation contains $v$ and derivatives of $v$, and nothing else. Specifically, there is no constant term.
 * *Non-homogeneous* means there is some term that's not $v$ or one of its derivatives. Our equation has a $\text V_{\text S}$ term not related to $v$.
 * *First-order* means the highest derivative is the first derivative $dv/dt$.
-* *Constant coefficient* means the values of the components $(\text{R, C})$ are constant and do not change as time goes by.
+* *Constant coefficient* means the values of the components $(\text{R, C})$ are constant and do not change as time goes by. This is also referred to as *time invariant*, and you may see a system described by the acronym LTI for *linear time invariant*. LTI means if you run the circuit today and tomorrow with the same initial conditions it will do the same thing both days. It's a nice property.
 * *Ordinary* means there is just one independent variable, $t$.  
 {% endcapture %}{% include details.html %} 
 
@@ -345,7 +343,7 @@ $v_t = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$
 
 You don't need to memorize the equation for step response. You know what happens, 
 * The output starts at some value before the step. 
-* When the step arrives, the output voltage head towards the destination, rising (or falling) with a smooth *exponential* shape controlled by the time constant $\text{RC}$. 
+* When the step arrives, the output voltage head toward the destination, rising (or falling) with a smooth *exponential* shape controlled by the time constant $\text{RC}$. 
 * The output finishes at some new value.
 
 This is the analog circuit all computer hardware designers deeply understand. It sets the speed limit for how fast a digital system can run. The resistor comes from the driving gate plus the wiring. The capacitance comes from the wiring plus the input pin of driven gate.
@@ -383,6 +381,10 @@ To explore further, run this [simulation model](https://spinningnumbers.org/circ
 * Change the voltage source from a step to a square wave with a frequency of $50\,\text{Hz}$. **TRAN** again for $50\,\text{msec}$. Compare and contrast a down step to an up step. What is different? What is the same?
 * Change the square wave frequency to $200\,\text{Hz}$ and simulate for $25\,\text{msec}$. What happens? Does the voltage get all the way up to $\text V_\text S$? 
 * Zoom out the schematic page and build a copy of the circuit right next to the original. Try different values for $\text R$ and $\text C$ in the new circuit. Put probes on the two voltages (delete the current probe). Simulate and compare both voltages on the same graph.
+
+QQQ A primary difference between the natural response and the forced response is the natural response always decays to zero, whereas the forced response has no such restriction. In fact, the forced response will have the same form as the forcing function as time goes to infinity. 
+
+QQQ Look at the step response solution. Part of the equation is the natural response, the term with $e^{-t}$. That term fades away as time passes, leaving behind only the forced response.
 
 ## Summary
 {:.no_toc}

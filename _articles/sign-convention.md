@@ -149,7 +149,7 @@ The labeling convention helps you get the right answer when analyzing a circuit.
 
 <details>
 <summary>What is that voltage arrow?</summary>
-<p>The images above show voltage using two notations: with $+$ and $-$ signs, and also with an orange voltage arrow. The voltage arrow points from $-$ towards $+$. The polarity signs and the arrow are redundant, they mean exactly the same thing. You can use either or both in your schematics.</p>
+<p>The images above show voltage using two notations: with $+$ and $-$ signs, and also with an orange voltage arrow. The voltage arrow points from $-$ to $+$. The polarity signs and the arrow are redundant, they mean exactly the same thing. You can use either or both in your schematics.</p>
 </details>
 
 ### Example 1

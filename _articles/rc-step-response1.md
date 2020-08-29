@@ -9,11 +9,9 @@ When something changes in a circuit, the voltages and currents adjust to the new
 
 ![RC step response circuit]({% link i/rc_step1.svg %}){: .centered :}
 
-The $\text{RC}$ step response is the most important analog circuit. In digital systems it sets the speed limit for how fast the system can run. It happens billions of times a second in computers and other digital devices. In analog systems it is the basic building block for filters and signal processing.
+The $\text{RC}$ step response is *the most important* analog circuit. In analog systems it is the building block for filters and signal processing. It sets the speed limit for how fast digital system run---happening billions of times a second inside computers and other digital devices. 
 
-Before diving into the step response you may want to review two articles, [RC natural response - intuition]({% link _articles/rc-natural-response-intuition.md %}), and [RC natural response - derivation]({% link _articles/rc-natural-response-derivation.md %}). To develop an intuitive understanding for what this circuit does see [RC step response - intuition]({% link _articles/rc-step-response-intuition.md %}).
-
-There is a fair amount of new vocabulary associated introduced in this derivation. Stay relaxed and let it soak in slowly. We use the method of *natural response plus forced response* to solve the challenging *non-homogeneous* differential equation that models the $\text R\text C$ step circuit. 
+Before diving into the step response derivation you may want to review two articles, [RC natural response - intuition]({% link _articles/rc-natural-response-intuition.md %}), and [RC natural response - derivation]({% link _articles/rc-natural-response-derivation.md %}). To gain an intuitive understanding for this circuit see [RC step response - intuition]({% link _articles/rc-step-response-intuition.md %}). There is a fair amount of new vocabulary introduced in this derivation. Relax and let it soak in slowly. 
 
 Written by Willy McAllister. 
 
@@ -30,7 +28,7 @@ Written by Willy McAllister.
 ### Where we're headed 
 {:.no_toc}
 
-The *step response* of an $\text R\text C$ circuit is,
+The step response of an $\text R\text C$ circuit is,
 
 $v(t) = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
  
@@ -53,7 +51,7 @@ A step function is a mathematical idea. The voltage has only two values, $\text 
 
 Technically, the step function does not meet the definition of a mathematical function, since there's this discontinuous weirdness at $t=0$. You will see how we deal with that when we determine the initial conditions.   
 
-Real world step functions always have some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in.  
+In the real world step functions always have some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in.  
 {% endcapture %}{% include details.html %} 
 
 It is awkward to express a mathematical model of a step source. There is an equivalent way to draw this circuit. We change the source to a constant voltage $\text V_{\text S}$ and add a switch to cause the step. The initial voltage, $\text V_0$, is placed directly on the capacitor,
@@ -68,10 +66,12 @@ If you just have to know how the initial charge got onto $\text C$, here's a cir
 
 ![RC step circuit initialized to V0]({% link i/rc_step_alt1a.svg %}){: .centered :}{: height="160px" :}
 
-Both switches are thrown at the exact same moment. The one on the right opens, and the one on the left closes at $t = 0$. Prior to $t = 0$ the voltage source on the right charges the capacitor up to $\text V_0$.
+Both switches are thrown at the exact same moment. The switch on the right opens, and the one on the left closes at $t = 0$. Prior to $t = 0$ the voltage source on the right charges the capacitor up to $\text V_0$.
 {% endcapture %}{% include details.html %} 
 
-We start by modeling the circuit with a [KCL]({% link _articles/kirchhoffs-current-law.md %}) equation for the two currents flowing *out* of the top right node, then replace each current with the proper $i$-$v$ expression,
+## Model the circuit
+
+We start by modeling the circuit with [Kirchhoff's Current Law]({% link _articles/kirchhoffs-current-law.md %}) for the two currents flowing *out* of the top right node, then replace each current with the proper $i$-$v$ expression,
 
 <p>
 $\begin{array}{cccc}
@@ -91,54 +91,53 @@ $\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}\qqua
 
 This is the differential equation we have to solve. 
 
-### It is hard to solve
+## It is hard to solve
 
-There's an important difference between this equation and the one we derived for the natural response...
+There's an important difference between this equation and the one we derived for the $\text{RC}$ natural response shown here,
 
 $\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = 0\qquad$  with initial condition: $v(0) = \text V_0$
 
 There was no voltage source for the natural response circuit, and the right side of the differential equation is $0$. The natural response equation is *homogeneous*. That means all terms involve the independent variable $v$ or derivatives of $v$. 
 
-For the step response the right side is a non-zero number, 
+For the step response we got a non-zero number on the right side, 
 
 $\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}\qquad$ with initial condition: $v(0) = \text V_0$
 
-The term on the right side, $\dfrac{\text V_\text S}{\text{RC}}$, is not related to $v$ or a derivative of $v$. Because of this, the equation is *non-homogeneous*. 
+The term on the right, $\dfrac{\text V_\text S}{\text{RC}}$, is not related to $v$ or a derivative of $v$. Because of this, this equation is *non-homogeneous*. 
 
-Solving a non-homogeneous differential equation is not the simplest thing in the world. In fact it is usually a pain in the neck. Fortunately, this equation is solvable without too much torture. Lucky us.
+Solving a non-homogeneous differential equation is not the simplest thing in the world. In fact it is usually a pain in the neck. Fortunately, this non-homogeneous equation is solvable without too much torture. Lucky us.
 
-The electrical reason the step response is challenging is because of the two energy sources. Energy comes from the input voltage source---and---the initial charge on the capacitor. The trouble is the two energy sources have no relationship to each other. This complicates the problem and makes it difficult to solve all at once. 
+The electrical reason the step response is challenging is because of the two energy sources. Energy comes from 1. the input voltage source and 2. the initial charge on the capacitor. The trouble is the two energy sources have no relationship to each other. This complicates the problem and makes it difficult to solve all at once. 
 
-As usual, when a problem involves two energy sources engineers think about superposition. 
+As usual, when a problem involves two energy sources engineers wonder if superposition can somehow be applied. 
 
----
-
-### Solve a driven circuit
+## Solve a driven circuit
 
 We find the step function using a non-obvious theory of differential equations, stated here without proof, 
 
->The total solution to a non-homogeneous differential equation can be found by the superposition (addition) of the circuit's natural response with **any** particular response (found without regard for the initial conditions), followed by using the initial conditions to resolve unknown constants.
+>The total solution to a non-homogeneous differential equation can be found by the superposition (addition) of the circuit's natural response with **any** particular response (found without regard for the initial conditions), followed by applying the initial conditions to resolve any unknown constants.
 
-If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain.
+This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
 
 In mathematical vocabulary the the theory says,
 
 $v_c = v_h + v_p\qquad$ subject to initial conditions
 
-The subscripts $c$, $h$, and $p$ stand for complete solution, homogeneous solution, and particular solution.  
+The subscripts $c$, $h$, and $p$ stand for complete solution, homogeneous solution, and a particular solution.  
 
 In circuit vocabulary the notation becomes,
 
-$v_{tot} = v_n + v_f\qquad$ subject to some initial conditions
+$v_{tot} = v_n + v_f\qquad$ subject to initial conditions
 
-where $t$, $n$, and $f$ stand for total response, natural response, and forced response. 
+where $tot$, $n$, and $f$ stand for total response, natural response, and the forced response. 
 
-The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: The particular response we hunt for is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you can always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. After the natural response dies out what's left is the *forced response*. You might say the forced response is one particular particular response. 
+The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: The particular response we hunt for is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you can always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. You might say the forced response is one particular particular response. 
 
 {% capture details %}
-"Somewhere in the family of curves represented by the general solution you can always find *the one* particular response that corresponds to the the long-term behavior of the circuit."
+What is meant by,  
+"Somewhere in the family of curves represented by the general solution you can always find the one particular response that corresponds to the the long-term behavior of the circuit."?
 
-Here's an example of what I'm talking about---recall the general solution to the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}#general-solution),
+Here's an example of what I'm talking about from the general solution to the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}#general-solution),
 
 $v(t) = Ke^{-t/\text{RC}}$
 
@@ -146,11 +145,11 @@ We can plot this general solution for lots of different values of $K$,
 
 {% include d3/rc_natural_response_general_p.html %}
 
-The plot shows the family of particular solutions represented by the general solution to the $\text{RC}$ natural response. Every one of them ends up at zero after a long time. 
+The plot shows the family of particular solutions represented by the general solution to the $\text{RC}$ natural response. They all end up at zero after a long time. 
 
 The natural response has no forcing function. The only energy in the system is the initial charge on the capacitor. After a long time that initial energy dissipates and the voltage approaches $0$. The long-term steady-state response for any value of $K$ is $v = 0$. 
 
-See if you can find the particular response right in the middle, a straight line along the time axis. This particular response is interesting---it matches the steady-state response (at all times, not just after a long time). It is the particular solution we would choose if the initial voltage $\text V_0$ happened to be $0$.
+See if you can find the particular response that's a straight line along the time axis. This particular response is interesting---it matches the steady-state response (at all times, not just after a long time). It is the particular solution we would choose if the initial voltage $\text V_0$ happened to be $0$.
 
 The point of this example is to show you what it means for the steady-state or forced response to be included in a general solution. The steady-state solution can be found somewhere as part of the general solution.
 
@@ -158,12 +157,12 @@ When we drive the RC circuit with a step function the steady-state response is n
 {% endcapture %}
 {% capture summary %}example{% endcapture %}{% include details.html %} 
 
-### Strategy
+## Strategy
 
 The steps to solve a driven circuit,
 
 1. Find the general form of the natural response. Do this by suppressing the driven input (set the input to $0$). Ignore the initial conditions for now.
-2. Find the forced response. The forced response is the one particular solution that looks like a scaled version of the input forcing function.  Ignore the initial conditions for now. (Sometimes your proposed solution might have to include the input function plus its derivatives.)
+2. Find the forced response. The forced response is the one particular solution that looks like a scaled version of the input forcing function.  Keep ignoring the initial conditions. (Sometimes the proposed solution might need to include the input function *plus* its derivatives.)
 3. Superimpose (add) the natural response to the forced response to get the total response.
 4. Last, apply the initial conditions to the total response and resolve the unknown constants.  
 
@@ -171,7 +170,7 @@ Holding off the initial conditions until this last step allows the natural and f
 
 {% capture summary %}so many terms{% endcapture %}  
 {% capture details %}  
-There are so many terms used in math and engineering related to this type of differential equation. Be aware of these, but don't bother to memorize them. 
+There are so many terms used in math and engineering related to this type of differential equation. Don't try to memorize all this.
 
 * Natural response is the *homogeneous solution* or the *force-free solution* or the *complementary solution* (because it complements the particular solution).
 
@@ -195,29 +194,33 @@ What does all this mean?
 
 Let's work our strategy and see what happens.
 
-### Natural response
+## Natural response
 
 To find $v_n$, the natural response, we suppress (turn off, set to zero) the input,
 
 {% capture image %}rc_step4a.svg{% endcapture %} 
 {% capture alt %}RC step with input suppressed{% endcapture %}
 {% capture height %}180px{% endcapture %}
-{% capture caption %}Natural response with the input suppressed. To suppress a voltage source, replace it with a short. (For more on suppressing sources see [Superposition]({% link _articles/superposition.md %}#suppress-the-inputs).){% endcapture %} 
+{% capture caption %}Find the natural response with the input suppressed. To suppress a voltage source, replace it with a short. (For more on suppressing sources see [Superposition]({% link _articles/superposition.md %}#suppress-the-inputs).){% endcapture %} 
 {% include image_centered_with_caption.html %}
 
-We already worked through the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}) in great detail. We quickly repeat the derivation here. 
+We already worked through the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}) in great detail. We quickly repeat the derivation here. 
 
 Write a [KCL]({% link _articles/kirchhoffs-current-law.md %}) equation for the upper right node. Then model the two passive components by their $i$-$v$ equations,
 
-$i_\text C + i_\text R = 0$ 
-
-$\text C\,\dfrac{dv_n}{dt} + \dfrac{v_n}{\text{R}} = 0$
+<p>
+$\begin{array}{cccc}
+i_\text C & + & i_\text R &=  0 \\
+\\
+\text C\,\dfrac{dv}{dt} & + & \dfrac{v_n}{\text R}&= 0
+\end{array}$
+</p>
 
 to get this differential equation, 
 
 $\dfrac{dv_n}{dt} + \dfrac{v_n}{\text{RC}} = 0$
 
-Notice: When we suppress the input, the right side of the differential equation comes out $0$, turning it into a *homogeneous* differential equation.
+Notice: When we suppress the input, the right side of the differential equation comes out $0$, so it is a *homogeneous* differential equation.
 
 Propose a solution in the form of an exponential with two adjustable parameters, $K_n$ and $s$,
 
@@ -235,7 +238,7 @@ The common $K_n\,e^{st}$ term can be factored out,
 
 $K_n\,e^{st}\,\left (s + \dfrac{1}{\text{RC}} \right ) = 0$
 
-To make this equation true, one of the three product terms on the left side has to be $0$. We could set $K_n$ to $0$, which means there was no initial energy stored in the capacitor. Or, the term $e^{st}$ becomes zero if $s$ is negative and we wait for $t$ to go to infinity. (All natural responses approach $0$ if you wait long enough.) Something interesting happens if we make the third expression $0$,
+To make this equation true, one of the three terms in the product on the left side has to be $0$. We could set $K_n$ to $0$, which means there was no initial energy stored in the capacitor. Or, the term $e^{st}$ becomes zero if $s$ is negative and we wait for $t$ to go to infinity. (All natural responses approach $0$ if you wait long enough.) Something interesting happens if we make the third term $0$,
 
 $s + \dfrac{1}{\text{RC}} = 0$
 
@@ -248,14 +251,14 @@ Put this value of $s$ back into the proposed solution. This gives us the *genera
 $v_n = K_n\,e^{-t/\text{RC}}$
 
 {% include d3/rc_natural_response_general.html %}
-General solution to the RC natural response, $v(t) = K_n\, e^{-t/\text{RC}}$.
+General solution to the $\text{RC}$ natural response, $v_n = K_n\, e^{-t/\text{RC}}$.
 {: .caption :}
 
-This general solution is an infinite family of curves based on all possible values of $K_n$. The natural response is an exponential curve whose rate of descent is determined by the product $\text{RC}$. We hold off figuring out a specific value of $K_n$. We'll do that after we assemble the total response.
+This general solution is an infinite family of curves based on all possible values of $K_n$. The natural response is an exponential curve whose rate of descent is determined by the product $\text{RC}$. If you set $t = 0$ the equation tells you $K_n$ corresponds to the voltage at $t = 0$. We hold off figuring out a specific value of $K_n$ until after we assemble the total response.
 
-### Forced response 
+## Forced response 
 
-The superposition theory says we are allowed to find *any* particular solution to the differential equation, paying no heed to the initial capacitor voltage. We won't go for *any* particular solution, but rather we will search for the  particular solution that corresponds to the steady-state *forced response*.
+The superposition theory says we win with *any* particular solution to the differential equation. However, we won't go for *any* particular solution, but rather for a special one, the  particular solution that corresponds to the long-term steady-state of the circuit. It gets a special name, the *forced response*.
 
 For this step we return to the original non-homogeneous equation,
 
@@ -264,27 +267,24 @@ $\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
 {% capture details %}
 When I first studied non-homogeneous equations I got depressed when the original equation showed up again. What's with all this special superposition theory and natural response if we still have to solve the original hard equation? The key that unlocks the treasure: This time we get to ignore the initial condition while finding the forced response. That cracks the door open and keeps us from going crazy. 
 
-If you think back to when we derived the natural response. The proposed function had to make the differential equation happy *and* produce a constant based on the initial conditions. That's not the case now---we will account for the initial condition *after* we do the superposition.
+Think back to when we derived the natural response. The solution had to make the differential equation happy *and* had to satisfy the initial conditions. That's not the case for the forced response---we apply for the initial condition *after* we do the superposition.
 
 {% endcapture %}
-{% capture summary %}What? This again? You said this was really hard to solve! {% endcapture %}{% include details.html %}
+{% capture summary %}What? This again? You said this was really hard! {% endcapture %}{% include details.html %}
 
-Let's make an intelligent guess at a function that would solve the equation. 
-Looking at the equation,
+Look at the equation and make an intelligent guess at a voltage function that might solve it. 
 
-$\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
+Whatever $v$ is, if we hope to make both sides equal it has to bear some resemblance to the function on the right side---so let's propose a solution that looks like the right side. Since the right side is a constant we propose a yet-to-be-determined[^1] arbitrary constant,
 
-Whatever $v$ is, it has to bear some resemblance to the function on the right side if we hope to make both sides equal. 
+[^1]: *yet-to-be-determined* --- Definition: do not know or have not decided; will in the future.
 
-Let's propose a solution that looks like the right side. Since the right side is a constant, we propose a constant solution,
+$v_f = K_f$
 
-$v_f(t) = K_f$
-
-Pop this into the non-homogeneous equation and see if this $v_f(t)$ makes the equation true,
+Pop this into the non-homogeneous equation and see if this $v_f$ makes the equation true,
 
 $\dfrac{d}{dt} K_f + \dfrac{K_f}{\text{RC}} \stackrel{?}{=} \dfrac{\text V_\text S}{\text{RC}}$
 
-The derivative of a constant is always $0$,
+In the first term, the derivative of a constant is always $0$,
 
 $0 + \dfrac{K_f}{\text{RC}} \stackrel{?}{=} \dfrac{\text V_\text S}{\text{RC}}$
 
@@ -292,106 +292,47 @@ The equation comes true when what? When,
 
 $K_f = \text V_\text S$
 
-In summary, a *particular* solution to the non-homogeneous equation is,
+This resolves the arbitrary constant $K_f$, which means we did what the superposition theory said, we found a *particular solution* for $v_f$,
 
-$v_f(t) = K_f$
-
-XXX{% include d3/rc_step_forced_general.html %}
-The RC forced general solution, $v(t) = K_f$, before resolving the value of the constant. The general solution is a family of curves that all satisfy the non-homogeneous equation.
-{: .caption :}
-
-We get the *particular* solution when we pay attention to the given forcing input,
-
-$v_f(t) = \text V_\text S$ 
-
-Notice the particular solution turned out to be similar to (in fact identical to) the forcing input. That's no accident, since the forcing input is what appears on the right side of the equation. That is why engineers call this particular solution the *forced response*, 
+$v_f = \text V_\text S$ 
 
 {% include d3/rc_step_forced_response.html %}
-The RC forced response, $v(t) = \text V_\text S$, one of the particular solutions selected from the general solution to the non-homogeneous equation.
+A particular solution for the $\text{RC}$ step is $v_f(t) = \text V_\text S$, also known as the forced response.
 {: .caption :}
 
-Also notice we settled on this result without accounting for the initial conditions. That comes soon.  
+We call this particular response the *forced response* because our proposed solution was derived from the *forced input*.
 
+#### Things to notice about the forced response
+{:.no_toc}
 
+Notice: The particular solution turned out to be similar to the forcing input. That is why engineers give this particular solution a special name---the *forced response*.
 
+Notice: The forced response is exactly the input step. That doesn't always happen for every forced input, but it did this time. 
 
-# OLD
-It’s the same as saying we are looking for the final state, long after the original stored energy has dissipated.
+Notice: The force response solves the equation but completely misses the initial condition, $v(0) = \text V_0$. That's okay. The natural response will take care of that when we do the superposition.
+  
+Notice: While the forced response is plotted for all time after $t=0$ you can't observe it with an oscilloscope. The same holds for the natural response component. When we do the upcoming superposition to find the total response we *can* observe that with an oscilloscope.
 
-To find the forced response we suppress (set to zero) the initial conditions. In our case, we remove the charge on the capacitor, so $v_\text C = 0$.
-
-{% capture image %}rc_step3.svg{% endcapture %} 
-{% capture alt %}Force response with initial voltage suppressed{% endcapture %}
-{% capture height %}150px{% endcapture %} 
-{% capture caption %}Force response with the initial voltage suppressed.{% endcapture %}
-{% include image_centered_with_caption.html %}
-
-The theory cited above says we can construct a function that solves the non-homogeneous equation if we find the natural response (which we just did) and add it to *any* particular solution. You may be skeptical, but I assure you it is true, and we are about to exploit the theory in an ingenious way. 
-
-Recall, a *particular* solution to a differential equation is one selected from the infinite number of solutions described by the *general* solution. We will select one specific particular solution that is remarkably easy to identify, and we will call it the *forced response* (you will see why this is an appropriate name).
-
-The particular response we have our eye on is the one that resembles the input driving signal. 
-
-PLOT THE GENERAL SOLUTION
-
-
-
-The forced response is any solution to the differential equation---we don't have to consider the initial condition. It’s the same as saying we are looking for the steady state solution, long after the original stored energy has dissipated.
-
-
-
-The forced response often looks like the input plus its derivatives. It usually ends up with the same shape as the input scaled by some factor. In math class, this is called the *method of undetermined coefficients*.
-
-Take a guess at a solution and try it out: Since the input is a constant after the switch closes let's guess the forced response is also a constant,
-
-$v_{f} = K_f\qquad K_f$ is just some number
-
-As usual, we put the proposed solution into the differential equation and see what happens,
-
-$\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
-
-$\dfrac{d}{dt}K_f + \dfrac{K_f}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
-
-The leading term is the derivative of a constant, so it becomes $0$. That leaves us with,
-
-$\dfrac{K_f}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
-
-So the forced differential equation is true if,
-
-$v_{f} = K_f = \text V_\text S$
-
-The forced response for a step input looks like this,
-
-![Forced response plot]({% link i/rc_step_forced_response.svg %}){: .centered :}
-
-The forced response happens to look exactly like the input. (That doesn't always happen.) Notice how the force response solves the equation but completely misses the initial condition, $v(0) = \text V_0$. That's ok. The natural response will take care of that. The forced response tells us after a long time the capacitor voltage will be $\text V_{\text S}$.
-
-In this plot and the others following I'm using a voltage step with $V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. 
-
-{% capture summary %}What happens if the guess turns out wrong?{% endcapture %}  
 {% capture details %}  
-What does it look like if you guess a solution and it doesn't work?
+What if you guess a forced response and it doesn't work? Let's see what that looks like. Here's an example of a guess that doesn't work. 
 
-You guess at a solution, like $v(t) = K\text{(something)}$. 
-Then you test it by plugging it into the differential equation.
-Your guess works if you can solve for the $K$ constant and it actually turns out to be constant (does not change with time).
+Suppose you guess the solution is a constant $\times$ time, $v_f = K_f\,t$.  
+When you plug $v_f$ into the differential equation,
 
-Here's an example of a guess that doesn't work. Suppose you guess a solution $v(t) = K\cdot t$ (instead of $v(t) = K)$. When you plug v(t) into the differential equation,
-
-$\dfrac{dKt}{dt} + \dfrac{Kt}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
+$\dfrac{d}{dt}K_f\,t + \dfrac{K_f\,t}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
 
 You get, 
 
-$K + Kt = V/\text{RC}$
+$K_f + \dfrac{K_f\,t}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$
 
-When you go to solve this for $K$ you can't get rid of that time term. This says $K$ depends on time, so it's not constant. That's a fail for this proposed solution.  
-{% endcapture %}{% include details.html %} 
+When you solve this for $K_f$ no amount of algebra will get rid of the $t$ term. This means $K_f$ depends on time, so it's not constant. That's a fail for this proposed solution.  
+{% endcapture %}
+{% capture summary %}What happens if the guess is wrong?{% endcapture %}  
+{% include details.html %} 
 
-### Superposition
+## Superposition
 
-The natural response takes into account the initial conditions.  
-The forced response takes into account the input signal.  
-The total response is the superimposition (addition) of the natural and forced responses.
+The total response is the superimposition (sum) of the natural and forced responses,
 
 <p>
 $\begin{array}{cccc}
@@ -401,14 +342,21 @@ v_{tot} = & K_n\,e^{-t/\text{RC}} &+& \text V_\text S
 \end{array}$
 </p>
 
-#### Apply the initial conditions
-{:.no_toc}
+This equation represents the *general* solution to the step response because it has one remaining undetermined constant. The general solution is the infinite family of all possible particular solutions,
 
-Now we use the initial conditions to figure out the one remaining unknown $K_n$. 
+{% include d3/rc_step_response_general.html %}
+General solution to the $\text{RC}$ step response, $v_{tot} = K_n\, e^{-t/\text{RC}} + \text V_\text S$.
+{: .caption :}
 
-We know the voltage at a particular point in time. At $t = 0$ the voltage has to be $\text V_0$, the initial voltage on the capacitor. The *total* response has to be this value, not just the natural response.  
+Look at the plot and find the particular solution that is a horizontal straight line at $v = \text V_\text S$ (hint: the fifth one from the top). That's the particular solution we found above---we named it the forced response. 
 
-In the total response, set $t = 0$ and replace $v_{tot}$ with $\text V_0$,
+## Apply the initial conditions
+
+Now, finally, we apply the initial conditions to figure out the remaining unknown $K_n$.
+
+We know the voltage at a particular point in time: At $t = 0$ the voltage is $\text V_0$, the initial voltage on the capacitor. We find a $K_n$ such that the *total* response---not just the natural response---matches this boundary condition. 
+
+In the total response expression set $t$ to $0$ and replace $v_{tot}$ with $\text V_0$,
 
 $\text V_0 = K_n\,e^{-0/\text{RC}} + \text V_\text S$
 
@@ -420,24 +368,26 @@ Solving for $K_n$,
 
 $K_n = \text V_0 - \text V_\text S$
 
-Replace $K_n$ in the total response to get the step response we've been looking for,
+## Step response
 
-$v_{tot} = K_n\,e^{-t/\text{RC}} + \text V_\text S$
+Replace $K_n$ in the total response and we have the step response we've been looking for,
 
-$v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
+$\boxed{v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S}$
 
-$v_{tot}$ looks like this,
+The total response looks like this,
 
-{% include d3/rc_step_total_responset.html %}
-The RC step total response, $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$, with the given voltage on the capacitor.
+{% include d3/rc_step_response_total.html %}
+The $\text{RC}$ step total response. $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 {: .caption :}
 
-And we've done it! This is the total response of an $\text{RC}$ network to a voltage step.
+We've done it! This is the response of an $\text{RC}$ network to a step voltage.
 
-#### Starting with no charge on the capacitor
+What did $K_n$ turn out to be? $K_n$ is the difference between the starting and ending voltages, $\text V_0 - \text V_\text S$, which is just the right value to flip the natural response term over if needed and make it fit perfectly between start and end.
+
+## No charge on the capacitor
 {:.no_toc}
 
-If the capacitor starts with no initial charge then $v(0) = 0$ and the total response is a little simpler,
+If the capacitor starts with no initial charge then $\text V_0 = 0$, and the total response expression gets a little simpler,
 
 $v_{tot} = (0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 
@@ -445,34 +395,35 @@ $v_{tot} = - \text V_\text S\,e^{-t/\text{RC}} + \text V_\text S$
 
 or
 
-$v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$
+$\boxed{v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )}$
 
-{% include d3/rc_step_total_response0.html %}
-The RC step total response, $v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$, if the capacitor voltage starts at $0$.
+{% include d3/rc_step_response_total0.html %}
+If the capacitor voltage starts at $0$ the RC step total response is $v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$.
 {: .caption :}
 
-## Build your intuition
+## What to remember
 
-You don't need to memorize the equation for step response, but you should remember what happens, 
-* The voltage starts at some initial value prior to the step. 
-* When the step arrives the voltage head towards the destination voltage, rising (or falling) with a smooth *exponential* shape controlled by the time constant $\text{RC}$. 
-* The output finishes at the steady-state value forced by the input.
+You don't need to memorize the equation for the step response, but you should remember what happens, 
+* The voltage starts at some initial value prior to the step, $\text V_0$. 
+* When the step arrives the voltage heads toward the destination voltage, $\text V_\text S$, rising (or falling) with a smooth *exponential* shape controlled by the time constant, $\text{RC}$. 
+* The output approaches $\text V_\text S$, the steady-state value forced by the input.
 
 ## Concept check
 
-Suppose the input voltage makes another step in the downward direction a little later, from $\text V_{\text S}$ back down to $\text V_0$. 
+Suppose the input voltage makes another step in the downward direction a little later, from $\text V_{\text S}$ back down to $\text V_0$. Assume the original $\text V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. 
 
-Assume $\text V_0 = 2\,\text V$ and $\text V_{\text S} = 6\,\text V$. Let $\text R = 3\,\text K\Omega$, $\text C = 0.4\,\mu\text F$.
+Let $\text R = 3\,\text K\Omega$, $\text C = 0.4\,\mu\text F$.
 
-**How does the capacitor voltage respond?**
+**How does the capacitor voltage respond?** 
+
+Hint: Reverse the roles of the high and low voltages, so you can think of it this way,  
+$\text V_0$ (starting voltage) $= 6\,\text V$ and $\text V_{\text S}$ (ending voltage) $= 2\,\text V$.
 
 $v(t) = $  \_\_\_\_\_\_\__ 
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
-The moment of interest is the downward step, so reassign $t=0$ to be the time of the downward step. By repositioning $t=0$ we can use the step response expression above. The roles of the high and low voltages are reversed, so you can think of it this way,
-
-$\text V_0$ (starting voltage) $= 6\,\text V$ and $\text V_{\text S}$ (ending voltage) $= 2\,\text V$.
+The moment of interest is the downward step, so reassign $t=0$ to be the time of the downward step. By repositioning $t=0$ we can use the step response expression above. 
 
 $v(t) = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
 
@@ -483,51 +434,49 @@ $v(t) = 2 + 4\,e^{-t/1.2\,\text{msec}}$
 
 ## Simulation model
 
-To explore further, run this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["v",[104,88,0],{"name":"Vs","value":"step(2,6,1m,1n)","_json_":0},["3","0"]],["r",[168,64,7],{"name":"R","r":"3000","_json_":1},["3","2"]],["w",[104,136,104,152]],["w",[264,152,264,136]],["w",[168,64,104,64]],["g",[192,152,0],{"_json_":5},["0"]],["w",[104,152,192,152]],["w",[264,152,192,152]],["s",[264,64,0],{"color":"cyan","offset":"0","_json_":8},["2"]],["w",[104,88,104,64]],["c",[264,88,0],{"name":"C","c":"0.4u","_json_":10},["1","0"]],["a",[264,72,1],{"color":"magenta","offset":"0","_json_":11},["2","1"]],["w",[216,64,264,64]],["w",[264,64,264,72]],["view",60.428,29.1336,3.0517578125,"50","10","1G",null,"100","0.009","1000"]]) of the circuit.
+To explore further, run this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B264%2C64%2C264%2C88%5D%5D%2C%5B%22v%22%2C%5B104%2C88%2C0%5D%2C%7B%22name%22%3A%22Vs%22%2C%22value%22%3A%22step(2%2C6%2C1m%2C1n)%22%2C%22_json_%22%3A1%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B168%2C64%2C7%5D%2C%7B%22name%22%3A%22R%22%2C%22r%22%3A%223000%22%2C%22_json_%22%3A2%7D%2C%5B%221%22%2C%222%22%5D%5D%2C%5B%22w%22%2C%5B104%2C136%2C104%2C152%5D%5D%2C%5B%22w%22%2C%5B264%2C152%2C264%2C136%5D%5D%2C%5B%22w%22%2C%5B168%2C64%2C104%2C64%5D%5D%2C%5B%22g%22%2C%5B192%2C152%2C0%5D%2C%7B%22_json_%22%3A6%7D%2C%5B%220%22%5D%5D%2C%5B%22w%22%2C%5B104%2C152%2C192%2C152%5D%5D%2C%5B%22w%22%2C%5B264%2C152%2C192%2C152%5D%5D%2C%5B%22s%22%2C%5B264%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A9%7D%2C%5B%222%22%5D%5D%2C%5B%22w%22%2C%5B104%2C88%2C104%2C64%5D%5D%2C%5B%22c%22%2C%5B264%2C88%2C0%5D%2C%7B%22name%22%3A%22C%22%2C%22c%22%3A%220.4u%22%2C%22_json_%22%3A11%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B216%2C64%2C264%2C64%5D%5D%2C%5B%22s%22%2C%5B104%2C64%2C0%5D%2C%7B%22color%22%3A%22red%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A13%7D%2C%5B%221%22%5D%5D%2C%5B%22view%22%2C60.428%2C29.1336%2C3.0517578125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.009%22%2C%221000%22%5D%5D) in a new browser tab.
 
-* Click on **DC** in the top menu bar to perform a static DC analysis. What is the initial voltage on the capacitor? What is the initial current?
-* Click on **TRAN** to run a transient analysis (voltage versus time). See the $\text{RC}$ step response for voltage and current. 
+* Click on **DC** in the top menu bar to perform a static DC analysis. What is the initial voltage on the capacitor? 
+* Click on **TRAN** to run a transient analysis (voltage versus time). See the $\text{RC}$ step response for voltage and current. What are the starting and ending voltages of the step input (red)? What is the final voltage on the capacitor (cyan)?
 * Double click on the voltage source. Change the start and end voltages and see what happens. What happens if the start voltage is higher than the end voltage?
-* Change the voltage source from a step to a square wave with a frequency of $50\,\text{Hz}$. **TRAN** again for $50\,\text{msec}$. Compare and contrast a down step to an up step. What is different? What is the same?
-* Change the square wave frequency to $200\,\text{Hz}$ and simulate for $25\,\text{msec}$. What happens? Does the voltage get all the way up to $\text V_\text S$? 
-* Zoom out the schematic page and build a copy of the circuit right next to the original. Try different values for $\text R$ and $\text C$ in the new circuit. Put probes on the two voltages (delete the current probe). Simulate and compare both voltages on the same graph.
-
-QQQ A primary difference between the natural response and the forced response is the natural response always decays to zero, whereas the forced response has no such restriction. In fact, the forced response will have the same form as the forcing function as time goes to infinity. 
-
-QQQ Look at the step response solution. Part of the equation is the natural response, the term with $e^{-t}$. That term fades away as time passes, leaving behind only the forced response.
+* Add a current probe anywhere in the loop and give it a distinct color. **TRAN** again. What is the current at the start and end? Describe what happens in between.
+* Change the voltage source from **step** to **square**. Reset the low and high voltages to 2V and 6V. Set the frequency to $50\,\text{Hz}$. Change the **TRAN** time to $29\,\text{msec}$. Compare the down step to an up step. What is different? What is the same?
+* Change the square wave frequency to $200\,\text{Hz}$ and **TRAN** again. Describe what happens. 
+* Zoom out the schematic page and build a copy of the circuit next to the original. Try different values for $\text R$ and $\text C$ in the new circuit. Add a voltage probe to the new circuit. Simulate and compare both voltages on the same graph.
 
 ## Summary
 {:.no_toc}
 
-We solved a resistor-capacitor network driven by a step voltage. We used Kirchhoff's Current Law to create a differential equation representing the circuit. Then we solved it by superposition using the method of *forced plus natural response*. 
+We solved an $\text{RC}$ network driven by a step voltage. We used Kirchhoff's Current Law to create a non-homogeneous differential equation representing the circuit. In differential equation vocabulary we superimposed the homogeneous solution with a particular solution. In engineering vocabulary we superimposed the natural response with the forced response. 
 
-* The *forced response* is what the circuit does in response to the input, with the initial conditions set to zero.
+* The *natural response* is what the circuit does with its initial energy, with the input suppressed. The natural response always fades to $0$.
 
-* The *natural response* is what the circuit does with its initial conditions, with the input suppressed.
+* The *forced response* is the engineering name for the particular response corresponding to the long-term steady-state circuit response.
 
-* The *total response* is the  *forced response* plus the *natural response*. 
-
-![RC step response circuit]({% link i/rc_step1a.svg %}){: .centered }
+* The *total response* is the *natural response* plus the *forced response*. 
 
 The step response of an $\text R\text C$ network is,
 
-$v(t) = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
+$v = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
  
-$\text V_\text S$ is the step voltage and $\text V_0$ is the voltage the capacitor starts with.
+where $\text V_\text S$ is the step voltage and $\text V_0$ is the starting voltage on the capacitor.
 
-![Total response plot ]({% link i/rc_step_total_response1.svg %}){: .centered :}
+If the capacitor voltage starts at $0$ the step response expression is a bit simpler,
 
-## Appendix - separable differential equation
+$v = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$
 
-It is possible to solve the $\text{RC}$ step function non-homogeneous differential equation directly, without using the principle of superposition and without guessing an exponential form. 
+----
+## Appendix - Separable differential equation
+
+It is possible to solve this non-homogeneous differential equation directly, without using the principle of superposition and without guessing an exponential solution. 
 
 $\dfrac{dv}{dt} + \dfrac{v}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}$ 
 
-This turns out to be a *separable* differential equation. A differential equation is separable if it you can sort all the $v$'s and $dv$'s into a product on one side and sort the $dt$'s into a product on the other side. That's what happens with this equation.
+This turns out to be a *separable* differential equation. If you learned this technique in a differential equations class you can solve both the $\text{RC}$ and $\text{RL}$ steps function with this method.
 
-If you covered this technique when you studied differential equations, you can solve both the $\text{RC}$ (and $\text{RL}$) step function differential equations with this method, without guessing a solution.
+A differential equation is separable if you can sort all the voltage terms, $v$'s and $dv$'s, into a product on one side and sort the time terms, $dt$'s, into a product on the other side. That happens with this equation.
 
-This isn't the usual way to teach this circuit because the method doesn't generalize to other situations very well, and it does not provide insight into the natural and forced components of the solution.
+This isn't the usual way to teach this circuit because the method doesn't generalize to other forcing inputs, and it does not provide insight into the natural and forced components of the solution.
 
 ![RC step response circuit]({% link i/rc_step1.svg %}){: .centered :}
 
@@ -543,7 +492,7 @@ Rearrange again to separate the $v$ and $dv$ terms to one side and $dt$ term to 
 
 $\dfrac{dv}{v - \text V_\text S} = - \dfrac{dt}{\text{RC}}$
 
-Integrate both sides and include the initial condition,
+Integrate both sides and apply the initial condition,
 
 <p>
 $\begin{aligned}
@@ -571,4 +520,7 @@ $v(t) = \text V_\text S + (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}}$
 
 Sal has a sequence of videos where he covers this type of [separable differential equation](https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-equations/ab-separable-eq/v/separable-differential-equations-introduction). He does a [worked example](https://www.khanacademy.org/math/differential-equations/first-order-differential-equations/exponential-models-diff-eq/v/modeling-population-with-simple-differential-equation) to solve a population growth problem.
 
-<small>This derivation is from Alexander and Sadiku, *Fundamentals of Electric Circuits*, 5th Edition, p. 274.</small>
+The derivation in this appendix is from Alexander and Sadiku, *Fundamentals of Electric Circuits*, 5th Edition, p. 274.
+
+----
+Footnotes:

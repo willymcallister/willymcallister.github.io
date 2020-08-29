@@ -203,7 +203,7 @@ In an upcoming article, [electric field near a plane of charge]({{ site.baseurl 
 
 ![Electric field between two capacitor plates]({{ site.baseurl }}{% link i/electric_field3.svg %}){: .centered :}
 
-The field arrows point straight down from the positive plate towards the negative plate. All arrows are the same length. We learned above that electric field can be measured with units of $\text V/\text m$.
+The field arrows point straight down from the positive plate toward the negative plate. All arrows are the same length. We learned above that electric field can be measured with units of $\text V/\text m$.
 
 **If the voltage on the capacitor is $5\,\text V$ and $d = 0.1\,\text{mm}$, what is the magnitude of the electric field?**
 

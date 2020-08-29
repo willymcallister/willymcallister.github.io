@@ -46,7 +46,7 @@ You already know what that is, it's called a compass.
 
 ![Compass]({{ site.baseurl }}{% link i/compass_align.jpg %}){: .centered :}{: height="160px" :}
 
-If there is no nearby magnetic field, the needle of the compass lines up with the magnetic field of the Earth, and points towards magnetic north. If you create a magnetic field, the compass needle swings around and lines up with the new field. The magnetic field from the wire is stronger than the earth's field, so it overpowers it and tips the compass needle.
+If there is no nearby magnetic field, the needle of the compass lines up with the magnetic field of the Earth, and points to magnetic north. If you create a magnetic field, the compass needle swings around and lines up with the new field. The magnetic field from the wire is stronger than the earth's field, so it overpowers it and tips the compass needle.
 
 Using a compass as a magnetic field sensor is an example of how we create "eyes" to  "see" the invisible. Electricity and magnetism are invisible, so we build different kinds of "eyes" all the time. It is an essential skill. This is one reason people think EE's are wizards.  
 {% endcapture %}{% include details.html %} 

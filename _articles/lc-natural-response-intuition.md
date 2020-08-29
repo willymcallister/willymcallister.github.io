@@ -70,7 +70,7 @@ The voltage eventually falls to $0$ as the amount of charge on the top and botto
 
 The inductor current continues to move charge from the top plate to the bottom. Now there is more positive charge on the bottom plate than the top, so the voltage actually reverses sign and becomes negative.
 
-As charge continues to build up on the bottom plate, it repels against the arrival of new charge from the inductor current. The inductor current bends over and starts to drop back towards $0$. 
+As charge continues to build up on the bottom plate, it repels against the arrival of new charge from the inductor current. The inductor current bends over and starts to drop back toward $0$. 
 
 ![LC natural response intuition 3]({{ site.baseurl }}{% link i/lc_natural_response_intuition3.svg %}){: .centered :}
 

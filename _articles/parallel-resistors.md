@@ -47,7 +47,7 @@ Here is a circuit with resistors in parallel. This circuit has a current source.
 
 ![Parallel resistor circuit]({% link i/parallel_resistors4.svg %}){: .centered :} 
 
-Current source $\text I_\text s$ is driving current $i$ towards $\text R1$, $\text R2$, and $\text R3$. Current $i$ returns to the bottom terminal of the current source.  but we don't yet know the voltage $v$ or how $i$ splits up into the three resistor currents. 
+Current source $\text I_\text s$ is driving current $i$ toward $\text R1$, $\text R2$, and $\text R3$. Current $i$ returns to the bottom terminal of the current source.  but we don't yet know the voltage $v$ or how $i$ splits up into the three resistor currents. 
 
 The things we know are,
 

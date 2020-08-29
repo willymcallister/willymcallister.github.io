@@ -65,7 +65,7 @@ This may seem baffling, (but only for a moment). As we just talked about, the fo
 
 ![Equivalent schematics drawn differently]({{ site.baseurl }}{% link i/equivalence3.svg %}){: .centered :}
 
-Look at the blue arrow in the left schematic. That wire carries the current flowing towards  $\text R2$ and $\text R3$. 
+Look at the blue arrow in the left schematic. That wire carries the current flowing toward $\text R2$ and $\text R3$. 
 
 **See if you can find the equivalent wire in the schematic on the right.**  
 (Find a wire carrying the current going to $\text R2$ and $\text R3$.)

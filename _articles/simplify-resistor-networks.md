@@ -42,7 +42,7 @@ Here's a general strategy to simplify any resistor network,
 
 ## Step-by-step solution to the example
 
-The original question asked about the current from the voltage source. So the "location in question" is near the voltage source on the far left end of the circuit. Therefore, we start the simplification process way over on the far right, and work our way back towards the source.
+The original question asked about the current from the voltage source. So the "location in question" is near the voltage source on the far left end of the circuit. Therefore, we start the simplification process way over on the far right, and work our way back toward the source.
 
 Simplifying a circuit is a process of many small steps. Consider a small chunk of circuit, simplify, and then move to the next chunk. Tip: Redraw the schematic after every step so you don't miss an opportunity to simplify. 
 

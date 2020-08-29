@@ -151,7 +151,7 @@ There are 6 branches in this circuit, one for each element,
 
 {% capture summary %}other definitions of *branch*{% endcapture %}  
 {% capture details %}  
-A *branch* is a path between two nodes. Some texts oriented towards mathematical graph theory define a node as a junction of $3$ elements. In that case, a branch between two nodes may be a single element or may include two or more elements in series (since they don't count a 2-element junction as a node). If that's the case, the number of elements and number of branches is not necessarily the same. 
+A *branch* is a path between two nodes. Some texts define a node as a junction of $3$ elements. If that is the case, a branch between two nodes may be a single element or may include two or more elements in series (since they don't count a 2-element junction as a node). If that's the case, the number of elements and number of branches is not necessarily the same. 
 
 This alternate definition doesn't cause problems because we don't do anything with branch counts that makes a difference to circuit analysis. Just be aware that someone you are talking to may have a slightly different vocabulary than you.   
 {% endcapture %}{% include details.html %} 

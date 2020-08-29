@@ -84,7 +84,7 @@ There are other conventions that remind me of what we're talking about here.
 
 It's our habit to hold maps with North at the top. North at the top isn't right or wrong, it's just a habit that everybody knows. We could all put South or East at the top, but we don't. The conventional direction for maps is North at the top.
 
-Another convention is how sailors identify the direction of the wind. If you are a brand new sailor and Old Swab tells you, "Arrr matey, it's a West wind a'blow'n today.", you might think the wind is blowing towards the west. "Oh," you say, "the west wind will blow the ship farther west." That's a perfectly reasonable thing to conclude if this is your very first time at sea. But Old Swab says, "No, matey, the sailor's convention for wind direction is to say where the wind is a'blow'n' *from*. A West wind blows *from* the west, towards the east." 
+Another convention is how sailors identify the direction of the wind. If you are a brand new sailor and Old Swab tells you, "Arrr matey, it's a West wind a'blow'n today.", you might think the wind is blowing toward the west. "Oh," you say, "the west wind will blow the ship farther west." That's a perfectly reasonable thing to conclude if this is your very first time at sea. But Old Swab says, "No, matey, the sailor's convention for wind direction is to say where the wind is a'blow'n' *from*. A West wind blows *from* the west, toward the east." 
 
 A this point you might have one of two reactions, "What! You're saying there are two kinds of wind! I'm so confused!" Or you could say, "Aye sir, Old Swab," says ye. "I'll use that convention for wind direction from now on. A west wind means we will have lunch farther east from here. Time for me to paint something."
 

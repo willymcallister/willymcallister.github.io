@@ -75,7 +75,7 @@ Where
 * $\vec F$ is the electric force measured in newtons. The force is a vector. It acts along a direct line between the two charged bodies.
 * $q_0$ and $q_1$ are the amounts of charge on each object, measured in *coulombs*.  
 * $r$ is the distance between the charged objects, measured in meters.
-* $\bold{\hat r}$ is a notational finesse. It represents a unit vector (a vector of length $1$) that points from one charge towards the other. It turns the right side into a vector quantity. $\bold{\hat r}$ reminds us the force acts along the line between the two charges.   
+* $\bold{\hat r}$ is a notational finesse. It represents a unit vector (a vector of length $1$) that points from one charge toward the other. It turns the right side into a vector quantity. $\bold{\hat r}$ reminds us the force acts along the line between the two charges.   
 * $\dfrac{1}{4\pi\epsilon_0}$ is a constant of proportionality. It relates the units on the left side (newtons) to the units on the right side (coulombs and meters). We need this constant because we want the answer come out with the right value within the system of units we use to measure force, charge, and distance (newtons, coulombs, meters). 
 
 ## $\epsilon_0$ permittivity of free space

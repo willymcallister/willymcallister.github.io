@@ -253,7 +253,7 @@ $v_{\text R3} = $ \_\_\_\_\_ $\text V$
 
 <p>$v_{\text{R3}} = +6 \,\text V$</p>
 
-<p>Check the voltage arrow for $\text R3$. It is pointing up, from node $\greenE{e}$ towards node $\greenE{d}$. The positive result for $v_{\text{R3}}$ means node $\greenE{d}$ is $6$ volts higher than node $\greenE{e}$.</p>
+<p>Check the voltage arrow for $\text R3$. It is pointing up, from node $\greenE{e}$ toward node $\greenE{d}$. The positive result for $v_{\text{R3}}$ means node $\greenE{d}$ is $6$ volts higher than node $\greenE{e}$.</p>
 </details>
 
 More practice: Do this problem again, but walk around the loop in the opposite direction and construct a different KVL equation. You should get the same answer.

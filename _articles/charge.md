@@ -140,11 +140,11 @@ The torsion balance is based on twisting a fine wire. It works like a car tire h
 {% capture height %}460px{% endcapture %}  
 {% include image_centered_without_caption.html %}
 
-Two spheres are placed inside a chamber (Figure 1). The fixed sphere on the left (b) sits still while the twisting sphere on the right (a) hangs by a thin torsion wire and an arm (P and Figure 3). If electric force is present between the two spheres they are attracted or repelled. The sphere (a) twists towards or away from sphere (b). 
+Two spheres are placed inside a chamber (Figure 1). The fixed sphere on the left (b) sits still while the twisting sphere on the right (a) hangs by a thin torsion wire and an arm (P and Figure 3). If electric force is present between the two spheres they are attracted or repelled. The sphere (a) twists toward or away from sphere (b). 
 
 The fixed sphere (b) starts out uncharged. You put a charge on the twisting sphere (a) and it swing sideways back and forth until it comes to rest at some position. The position is measured on the scale (Q) marked on the outside of the chamber. 
 
-Then you put some charge on the fixed sphere by touching the post holding it in place (m and Figure 5)---near the clamp that looks like chopsticks. This changes the electric force between the spheres and causes the twisting sphere to rotate either towards or away from the fixed sphere, depending on the sign of both charges. The electric force is opposed by the the thin wire trying to untwist itself. Wait for the twisting to stop and read the new position. 
+Then you put some charge on the fixed sphere by touching the post holding it in place (m and Figure 5)---near the clamp that looks like chopsticks. This changes the electric force between the spheres and causes the twisting sphere to rotate either toward or away from the fixed sphere, depending on the sign of both charges. The electric force is opposed by the the thin wire trying to untwist itself. Wait for the twisting to stop and read the new position. 
 
 The big cylindrical chamber is sealed to prevent breezes from messing up the measurement. It is made of glass so you can see inside. The other figures are close-up views of the important bits and pieces of the main instrument.  
 {% endcapture %}{% include details.html %}
