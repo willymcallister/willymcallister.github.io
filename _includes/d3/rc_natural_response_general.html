@@ -144,11 +144,11 @@
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-var i = -4;
+var Kn = -4;
 function myLoop() { 
   var natural = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale((Vo - i / 5) * (Math.exp(-d/(R*C)/1000))); });
+    .y(function (d) { return yScale((Vo - Kn / 5) * (Math.exp(-d/(R*C)/1000))); });
 
   svgContainer.append('svg:path')
     .classed("path", true)
@@ -156,8 +156,8 @@ function myLoop() {
     .style("fill", "none")
     .style("stroke-width", "1px");
 
-    i++;
-     if (i < 14) {
+    Kn++;
+     if (Kn < 14) {
             myLoop();
         }
   }

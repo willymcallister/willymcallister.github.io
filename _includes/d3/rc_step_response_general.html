@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  <div id="rc-natural-general-p-d3"></div>
+  <div id="rc-step-general-d3"></div>
   <script src="http://d3js.org/d3.v4.min.js"></script>
   <script>
   var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
@@ -44,7 +44,7 @@
       xmin = -4,
       xmax = +20,
       ymin = -.8,
-      ymax = +1.6,
+      ymax = +1.7,
       hScale = 12,
       vScale = 120,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
@@ -52,8 +52,7 @@
       xOrigin = -(xmin * hScale);          // pixels
       yOrigin = height + (ymin * vScale);  // pixels
 
-  // main container
-  var svgContainer = d3.select("#rc-natural-general-p-d3")
+  var svgContainer = d3.select("#rc-step-general-d3")
     .attr("align","center")
     .append("svg:svg")
       .attr("width",  width  + padding.left + padding.right)  //width of image
@@ -131,11 +130,11 @@
     //.filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - RC natural response with no specific time scale
-  // R = 3k  C = 1uF  Vo = 1.4v
+  // Waveform - RC step response general solution
+  // R = 3k  C = 1uF  Vs = 1.2v
   var R = 3000;
   var C = .000001;
-  var Vo = 1.4;
+  var Vs = 1.2;
 
   var nPoints = 200;
   var samples = d3.range(0, nPoints + 1)  // 0 1 2 3 ... 200
@@ -145,39 +144,33 @@
     { return ((i / nPoints) * (toX - fromX)) + fromX;
     });
 
-  var Kn = -4;
-    function myLoop() { 
-      var natural = d3.line()
-        .x(function (d) { return xScale(d); })
-        .y(function (d) { return yScale((Vo - Kn / 5) * (Math.exp(-d/(R*C)/1000))); });
+  var Kn = -12;
+  function myLoop() { 
+    var natural = d3.line()
+      .x(function (d) { return xScale(d); })
+      .y(function (d) { return yScale((Kn / 5) * (Math.exp(-d/(R*C)/1000)) + Vs); });
 
-      svgContainer.append('svg:path')
-        .classed("path", true)
-        .attr('d', natural(xData))
-        .style("fill", "none")
-        .style("stroke-width", "1px");
-
-        Kn++;
-         if (Kn < 14) {
-                myLoop();
-            }
-      }
-
-  myLoop();
-
-  var lineData = [  
-      { "x": 0,  "y": 0}, 
-      { "x": 10, "y": 0}];
-
-  var lineFunction = d3.line()
-    .x(function (d) { return xScale(d.x); })
-    .y(function (d) { return yScale(d.y); });
-
-  svgContainer.append('svg:path')
+    svgContainer.append('svg:path')
       .classed("path", true)
-      .attr('d', lineFunction(lineData))
-      .style("stroke-width", "5px");
+      .attr('d', natural(xData))
+      .style("fill", "none")
+      .style("stroke-width", "1px");
 
+    Kn++;
+    if (Kn < 5) {
+      myLoop();
+    }
+  }
+    myLoop();
+
+  svgContainer.append("text")
+    .attr("x",xScale(xmax))
+    .attr("y", yScale(Vs))
+    .text("Vs")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style("font-family", "katex_main")
+    .style("fill", "black");
 </script>
 </body>
 </html>
