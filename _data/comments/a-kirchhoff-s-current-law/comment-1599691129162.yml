@@ -1,0 +1,12 @@
+_id: 3a60ba10-f2ed-11ea-a673-2b0c3d98d12d
+_parent: 'https://spinningnumbers.org/a/kirchhoffs-current-law.html'
+replying_to: '1'
+message: >-
+  Nathan - Not quite sure I understand your question. If you have a wire
+  connecting two nodes it has a single current value, it can't have two. So if
+  you write two KCL equations, one at each node, that wire will participate in
+  both equations, and it will have the same value in both equations.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-09-09T22:38:49.156Z'
