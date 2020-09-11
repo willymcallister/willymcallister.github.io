@@ -49,6 +49,7 @@ html {
 
 .sn-logo {
     margin: 0em 0.25em;
+    background-color: var(--background-color);
 }
 
 .katex {
@@ -114,18 +115,25 @@ body {
     color: var(--text-color);
 }
 
-//main img {
-//    background-color: var(--img-background-color);
-///    opacity: .9;
-//}
-
 img {
-    opacity: .8;
-    transition: opacity .5s ease-in-out;
-  }
-  img:hover {
-    opacity: 1;
-  }
+  background-color: var(--img-background-color);
+  opacity: 1.0;
+  border-radius: 4px;
+}
+
+//img {
+//    opacity: .8;
+//    transition: opacity .5s ease-in-out;
+//  }
+//  img:hover {
+//    opacity: 1;
+//  }
+
+svg {
+  background-color: var(--img-background-color);
+  opacity: 1.0;
+  border-radius: 4px;
+}
 
 a {
   color: $brand-color;
@@ -180,7 +188,6 @@ details {
     margin-bottom: 15px;
 }
 details[open] {
-//    background: $grey-color-darkish;
     background: var(--details-background-color);
     padding: 0px 8px 8px 8px;
 }
@@ -370,4 +377,38 @@ button:hover {
 }
 a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
+}
+
+///
+/// Tool Tip, from https://www.w3schools.com/css/css_tooltip.asp
+///
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dashed #ccc; /* dots under the anchor text */
+}
+
+/* Tooltip content */
+.tooltip .tooltipcontent {
+  visibility: hidden;
+  width: 400px;
+  //background-color: #eee;
+  background: var(--details-background-color);
+
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px; 
+  /* Position the tooltip content */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Show the tooltip content when you mouse over the tooltip anchor text */
+.tooltip:hover .tooltipcontent {
+  visibility: visible;
 }

@@ -38,7 +38,7 @@
   <script src="http://d3js.org/d3.v4.min.js"></script>
   <script>
   var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
-  var padding = { top:40, right:100, bottom:40, left:40 };  // padding inside border
+  var padding = { top:40, right:60, bottom:40, left:60 };  // padding inside border
 
   var 
       xmin = -4,
@@ -131,7 +131,7 @@
     .remove();
 
   // Waveform - RC step response general solution
-  // R = 3k  C = 1uF  Vs = 1.2v
+  // R = 3k  C = 1uF  Vs = 1.2v  Vo = 0.2v
   var R = 3000;
   var C = .000001;
   var Vo = 0.2;

@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  <div id="rc-step-total0-d3"></div>
+  <div id="rc-step-Agarwal-d3"></div>
   <script src="http://d3js.org/d3.v4.min.js"></script>
   <script>
   var margin = { top:0, right:0, bottom:0, left:0 };  // margin outside border
@@ -43,8 +43,8 @@
   var 
       xmin = -4,
       xmax = +20,
-      ymin = -.8,
-      ymax = +1.7,
+      ymin = -1.2,
+      ymax = +1.6,
       hScale = 12,
       vScale = 120,
       width  = (xmax - xmin) * hScale,     // width of graph axes pixels
@@ -52,7 +52,7 @@
       xOrigin = -(xmin * hScale);          // pixels
       yOrigin = height + (ymin * vScale);  // pixels
 
-  var svgContainer = d3.select("#rc-step-total0-d3")
+  var svgContainer = d3.select("#rc-step-Agarwal-d3")
     .attr("align","center")
     .append("svg:svg")
       .attr("width",  width  + padding.left + padding.right)  //width of image
@@ -98,7 +98,7 @@
   
   // y axis
   var yAxis = d3.axisLeft(yScale)
-      .ticks(8)
+      .ticks(12)
       .tickSizeOuter(0);
 
   var ya = svgContainer.append("g")
@@ -130,11 +130,11 @@
     //.filter(function (d) { return d === 0;  })
     .remove();
 
-  // Waveform - RC step response general solution
+  // Waveform - RC step response general solution - Notated for Agarwal
   // R = 3k  C = 1uF  Vs = 1.2v
   var R = 3000;
   var C = .000001;
-  var Vo = 0;
+  var Vo = 0.4;
   var Vs = 1.2;
 
   var nPoints = 200;
@@ -147,13 +147,23 @@
 
   var natural = d3.line()
     .x(function (d) { return xScale(d); })
-    .y(function (d) { return yScale((Vo - Vs) * (Math.exp(-d/(R*C)/1000)) + Vs); });
+    .y(function (d) { return yScale((Vo - Vs) * (Math.exp(-d/(R*C)/1000))); });
 
   svgContainer.append('svg:path')
     .classed("path", true)
     .attr('d', natural(xData))
     .style("fill", "none")
     .style("stroke-width", "3px");
+
+  var forcedLine = [ { "x": 0,  "y": Vs}, { "x": xmax,  "y": Vs}];
+
+  var forced = d3.line()
+    .x(function (d) { return xScale(d.x); })
+    .y(function (d) { return yScale(d.y); });
+
+  var path = svgContainer.append('svg:path')
+      .classed("path", true)
+      .attr('d', forced(forcedLine));
 
   var lineData = [  
     { "x": xmin, "y": Vo}, 
@@ -163,18 +173,83 @@
     .x(function (d) { return xScale(d.x); })
     .y(function (d) { return yScale(d.y); });
 
+  var total = d3.line()
+    .x(function (d) { return xScale(d); })
+    .y(function (d) { return yScale((Vo - Vs) * (Math.exp(-d/(R*C)/1000)) + Vs); });
+
   svgContainer.append('svg:path')
-  .classed("path", true)
-  .attr('d', lineFunction(lineData));
+    .classed("path", true)
+    .attr('d', total(xData))
+    .style("fill", "none")
+    .style("stroke", "#E07D10")       // KA econ2
+    .style("stroke-width", "3px");
+
+  svgContainer.append('svg:path')
+    .classed("path", true)
+    .attr('d', lineFunction(lineData))
+    .style("stroke", "#E07D10");       // KA econ2
 
   svgContainer.append("text")
-    .attr("x",xScale(xmax))
+    .attr("x",xScale(xmax / 6))
+    .attr("y", yScale(Vs + 0.08))
+    .text("forced response")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style("font-family", "katex_main")
+    .style("fill", "black")
+
+  svgContainer.append("text")
+    .attr("x",xScale(-3))
     .attr("y", yScale(Vs))
-    .text("Vs")
+    .text("V")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style("font-family", "katex_main")
+    .style("fill", "black")
+    .append("tspan")
+      .attr("dy", ".3em")
+      .style('font-size', '.9rem')
+      .text("S");
+
+  svgContainer.append("text")
+    .attr("x",xScale(xmax / 6))
+    .attr("y", yScale(Vs / 2))
+    .text("total response")
     .style("text-anchor", "start")
     .style("font-size", "20px")
     .style("font-family", "katex_main")
     .style("fill", "black");
+
+  svgContainer.append("text")
+    .attr("x", xScale(-3))
+    .attr("y", yScale(Vo + 0.06))
+    .text("Vo")
+    .style("text-anchor", "start")
+    .style("font-family", "katex_main")
+    .style("font-size", "20px")
+    .style('fill', 'black')
+
+  svgContainer.append("text")
+    .attr("x",xScale(xmax / 6))
+    .attr("y", yScale(-Vs / 2))
+    .text("natural response")
+    .style("text-anchor", "start")
+    .style("font-size", "20px")
+    .style("font-family", "katex_main")
+    .style("fill", "black");
+
+  svgContainer.append("text")
+    .attr("x",xScale(-0.5))
+    .attr("y", yScale(Vo - Vs))
+    .text("Vo - V")
+    .style("text-anchor", "end")
+    .style("font-size", "20px")
+    .style("font-family", "katex_main")
+    .style("fill", "black")
+    .append("tspan")
+      .attr("dy", ".3em")
+      .style('font-size', '.9rem')
+      .text("S");
 </script>
 </body>
 </html>
