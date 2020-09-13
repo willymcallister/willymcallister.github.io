@@ -112,7 +112,7 @@ We model the line as a collection of point charges by breaking it into tiny litt
 
 Let's create some more variables to describe the location of a point charge named $dQ$,
 
-![Line of charge with a test charge off to the side]({{ site.baseurl }}{% link i/line_of_charge2_3.svg %}){: .centered :}
+![Line of charge with a test charge to the side]({% link i/line_of_charge2_3.svg %}){: .centered :}
 
 * $dQ$ is a tiny bit of charge contained in a tiny length of the line, $dx$.  
 * $a$ is the distance from the line to the location of test charge $q$.  
@@ -125,51 +125,52 @@ Now that we've named everything we can think of, we are ready to attack the prob
 
 **What is the electric field at the location of $q$ from a small chunk of charge, $dQ$?** 
 
-In general, the [electric field from a point charge](link to electric field article) is,
+The general form of the [electric field]({% link _articles/electric-field.md %}) from a point charge $q_p$ is,
 
-$E = \dfrac{1}{4\pi\epsilon_0}\,\dfrac{Q}{r^2}$
+$E = \dfrac{1}{4\pi\epsilon_0}\,\dfrac{q_p}{r^2}$
 
-(where $Q$ is some amount of charge.)
+{% capture details %}
+Electric field is a vector quantity, so technically these equations should use vector notation. For simplicity, we'll work on magnitude and direction separately.
+{% endcapture %}
+{% capture summary %}vector notation{% endcapture %}{% include details.html %}
 
->The electric field is a vector quantity, so technically these equations should use vector notation. For simplicity, we'll work on magnitude and direction separately.
-
-We insert point charge $dQ$ into the equation because it is the source of the electric field. The left side becomes $dE$.
+Each point charge $dQ$ along the line generates an electric field with magnitude $dE$,
 
 $dE = \dfrac{1}{4\pi\epsilon_0}\dfrac{dQ}{r^2}$
 
-We can write $dQ$ in terms of charge density and the length of the charge, $dQ = \lambda\,dx$,
+We can express $dQ$ in terms of the overall charge density of the line times the length of the little chunk of line it occupies, 
+
+$dQ = \lambda\,dx$
 
 $dE = \dfrac{1}{4\pi\epsilon_0}\,\dfrac{\lambda\,dx}{r^2}$
 
-Now we have the electric field expressed with just geometry variables, $dx$ and $r$. Everything else is a constant. 
+Now we have the electric field expressed with just geometry variables, $dx$ and $r$. 
 
-At this point we could express $r$ in terms of $x$,
+At this point it is possible to express <span class="tooltip">$r$ in terms of $x$ <span class="tooltipcontent"><img src="{% link i/line_of_charge2_3.svg %}" alt="Line of charge with a test charge to the side"></span></span>,
 
 $r = \dfrac{x}{\sin \theta}$ 
 
-That would give us an equation in just $x$ and $dx$. T
+This is nice because it gives us an equation in just $x$ and $dx$,
 
 $dE = \dfrac{1}{4\pi\epsilon_0}\,\dfrac{\lambda\,dx}{\left (\dfrac{x^2}{\sin^2 \theta} \right )}$
 
-Then we would attempt to integrate $dx$ along the line to find the electric field. But the integral turns out to be a major pain. 
-
-Instead, we do something else (I wouldn't expect you to come up with this idea, but some clever person did and passed it along to all of us.) ...
+Now that we have a single variable we can attempt to integrate both sides of the equation along the line to find the total electric field. But, as you might imagine, this integral turns out to be a major pain. Instead, we do something else (I wouldn't expect you to come up with this idea, but some clever person did and passed it along to all of us.) ...
 
 #### Change of variables
 
 The natural independent variable for this problem is the angle $\theta$. The integration is simplified if we recast $x$ and $dx$ in terms of $\theta$ and $d\theta$. This is called a *change of variable*. A change of variable is a change of perspective. 
  
-To change variables means we have to find an expression for $\text d\theta$ in terms of $\text dx$. Here is the triangle we are dealing with,
+To perform the change variables we have to find an expression for $\text d\theta$ in terms of $\text dx$. Here is the triangle we are dealing with,
 
 ![Triangle]({{ site.baseurl }}{% link i/line_of_charge2_3a.svg %}){: .centered :}
 
 From the definition of tangent (opposite over adjacent) we know $\tan \theta = \dfrac{x}{a}$ 
 
-I picked the tangent function because it includes both $x$ and $\theta$. 
-
-Take the derivative of $x$ with respect to $\theta$,
+(I picked the tangent function because it includes both $x$ and $\theta$.) 
 
 $x = a\,\tan\theta$
+
+Take the derivative of both sides with respect to $\theta$,
 
 $\dfrac{dx}{d\theta} = \dfrac{d}{d\theta} (a\,\tan \theta)$
 
@@ -177,7 +178,7 @@ $\dfrac{dx}{d\theta} = a\, \sec^2 \theta$
 
 $\blueD{dx = a\, \sec^2 \theta \,d\theta}$
 
-This gives us a way to turn $dx$ into $d\theta$. 
+This is how we turn $dx$ into $d\theta$. 
 
 The electric field expression includes a $1/r^2$ term. Let's fuss with $r^2$ until we can get it in terms of $\theta$. Looking at the triangle diagram again,
 

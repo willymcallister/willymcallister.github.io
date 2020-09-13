@@ -5,7 +5,14 @@ author: Willy McAllister
 comments: true
 ---
 
-The *forced response* is not an easy concept. In the academic world prominent authors define this term different ways. I wasn't aware of dual definitions---I always thought there was just one definition of forced response, the one I was taught in school. Then a visitor pointed out the other definition, which threw me for a loop. I decided to review multiple text books and write down both perspectives so I could learn the difference, and share it with you.
+The *forced response* is not an easy concept. In the academic world prominent authors define this term different ways. I wasn't aware of dual definitions until recently---I always thought there was just one definition of forced response, the one I was taught in school. Then a KA learner pointed out the other definition and threw me for a loop. I decided to roam the web and review multiple text books and write down both perspectives so I could learn the difference, and share it with you.
+
+Resources:
+
+[RC natural response -  intuition]({% link _articles/rc-natural-response-intuition.md %})  
+[RC natural response - derivation]({% link _articles/rc-natural-response-derivation.md %})  
+[RC step response - intuition]({% link _articles/rc-step-response-intuition.md %})  
+[RC step response - derivation]({% link _articles/rc-step-response1.md %})  
 
 Written by Willy McAllister. 
 
@@ -25,7 +32,7 @@ Written by Willy McAllister.
 * The forced response can be defined two ways.
 * If you are talking to someone about forced response and you sense a disconnect it may be because of different electronics backgrounds.
 * Few engineers are aware there are two definitions. Most students don't buy two expensive textbooks on the same topic, so we never run across the other definition.
-* None of this matters for the final answer, the complete response---the one you observe with an oscilloscope. It comes out the same. You can be confident in your answer with either definition. 
+* None of this matters for the final answer, the total response---the one you observe with an oscilloscope. It comes out the same. You can be confident in your answer with either definition. 
 * What does matter is the process you use to find the forced response. There is also a small difference in how you represent the natural response.
 
 Not surprisingly, I prefer one definition over the other, and I will let you know why. I use that definition to derive the [RC step response]({% link _articles/rc-step-response1.md %}).
@@ -57,9 +64,11 @@ These two relatively modern well-known textbooks represent both sides. Both of t
 
 ## Agarwal and Lang
 
+The authors derive the step response using this definition of forced response,
+
 **Forced response: The circuit’s final steady state, caused by the forcing input.**
 
-Agarwal and Lang find the step response using a mathematical theory,
+This is my personal favorite and it's how I derive the forced response in detail in [this]({% link _articles/rc-step-response1.md %}) article. The method is based on this mathematical theory of non-homogeneous differential equations,
 
 >The total solution to a non-homogeneous differential equation can be found by the sum of the **general** solution of the circuit's natural response with **any particular** response (found without regard for the initial conditions), followed by applying the initial conditions to resolve unknown constants.
 
@@ -71,7 +80,7 @@ Then find a specific particular solution, the one that represents the long term 
 
 $v_f = \text V_\text S$ 
 
-Add $v_n + v_f$ to get the complete response in general form,
+Add $v_n + v_f$ to get the total response in general form,
 
 $v_{tot} = K_n\,e^{-t/\text{RC}} + \text V_\text S$
 
@@ -82,31 +91,22 @@ $v(0) = \text V_0$
 $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 
 {% include d3/rc_step_response_Agarwal.html %}
-The total response (middle) is the sum of natural plus forced. $(\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
+The total response (middle) is the sum of natural plus forced: $(\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 {: .caption :}
 
-With this definition the natural response is a scaled version of the $\text{RC}$ natural response you are used to---the one that starts at $\text V_0$ and ends at $0$. It may look a little goofy hanging down below the time axis, but it is just scaled/flipped to make it blend perfectly between the initial condition and the final voltage.
+With this definition the natural response is a scaled version of the $\text{RC}$ natural response you are used to---the one that starts at $\text V_0$ and ends at $0$. It may look a little goofy hanging down below the time axis, but it's just scaled/flipped to make it blend perfectly between the initial condition and the final voltage.
 
 This is my preferred way to define the forced response. I like the clear difference between the transient portion and the steady-state portion. 
 
 At Khan Academy we would say this is the *mathy* way to solve the problem. Critics say this gets you to a correct answer but without the physical insight into what is happening. Adherents say pshaw I can handle that---besides, this method generalizes to non-constant forcing functions like ramps or sine waves.
 
-# Tooltip
-
-I'm talking about <span class="tooltip">Hover over me
-  <span class="tooltipcontent"><img src="../i/rc_step_superposition_natural.svg" alt="Superposition sub-circuits." />
-  </span>
-</span> for the next little while.
-
-And we move on.
-
 ## Alexander and Sadiku 
 
-This text finds the step response three ways. Initially by *separation of variables*, then by *superposition* described here, and finally by the mathy method shown above. The superposition method uses this definition,
+The authors find the step response three ways. Initially by [separation of variables]({% link _articles/rc-step-response1.md %}#appendix---separable-differential-equation), then by [superposition]({% link _articles/superposition.md %}) which is described here, and finally by the [mathy](#agarwal-and-lang) method shown above. The superposition method leads to this definition of forced response,
 
 **Forced response: What the circuit does when the initial conditions are set to $0$.**
 
-This time we solve the step response by the traditional superposition method. The two energy sources are separated into two sub-circuits. The two solutions are superimposed (added) to get the total solution,
+We find the step response by the traditional superposition method. The first thing to notice is there are two sources of energy: 1. the input source, and 2. energy stored in the capacitor. We break the problem into two simpler sub-circuits. One ignores the input energy and the other ignores the stored energy. Then we superimpose (add) the two individual solutions to get the total solution.
 
 {% capture image %}rc_step_superposition_natural.svg{% endcapture %} 
 {% capture alt %}Superposition sub-circuit for natural response{% endcapture %}
@@ -119,26 +119,31 @@ This time we solve the step response by the traditional superposition method. Th
 {% capture caption %}Superposition sub-circuit to find the forced response with initial condition suppressed.{% endcapture %} 
 {% include image_left_with_caption.html %}
 
-The natural response sub-circuit on the left has an initial voltage on the capacitor, $v(0) = \text V_0$ and the input suppressed (turned off), $\text V_\text S = 0$. The result is the traditional $\text{RC}$ natural response,
+The natural response sub-circuit has an initial voltage on the capacitor, $v_n(0) = \text V_0$ and the input suppressed (turned off). We model the circuit  with this homogeneous differential equation,
+
+$\dfrac{dv_n}{dt} + \dfrac 1 {\text{RC}} \, v_n = 0$
+
+The solution is the traditional $\text{RC}$ [natural response]({% link _articles/rc-natural-response-derivation.md %}),
 
 $v_n = \text V_0\,e^{-t/\text{RC}}$
 
-The forced response sub-circuit on the right has the input restored and the initial conditions suppressed, $\text V_0 = 0$. The modeling equation is the same non-homogeneous equation we derived earlier, 
+To find the forced response we restore the input source and suppress the initial conditions, $\text V_0 = 0$. This sub-circuit is modeled by the same non-homogeneous equation we developed for the step response, this time with $0$ initial condition, 
 
 $\dfrac{dv_f}{dt} + \dfrac{v_f}{\text{RC}} = \dfrac{\text V_\text S}{\text{RC}}\qquad$ with initial condition: $v_f(0) = 0$
 
-This is the original difficult non-homogeneous equation with a $0$ initial condition. So now what? Alexander and Sadiku find $v_{tot}$, the general form of the total solution using the method of [separable differential equations]({% link _articles/rc-step-response1.md %}#appendix---separable-differential-equation),
+This is the original difficult non-homogeneous equation. So now what? 
+
+Alexander and Sadiku assume the student has taken a class in differential equations. They find $v_{tot}$, the total step response with the method of [separable differential equations]({% link _articles/rc-step-response1.md %}#appendix---separable-differential-equation),
 
 $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 
-and then replace $\text V_0$ with $0$,
+If you replace $\text V_0$ with $0$ you get this voltage function,
 
 $v_f = -\text V_\text S\,e^{-t/\text{RC}} + \text V_\text S$
 
-START HERE
-$v_f$ is defined to be the *forced response*. Notice with this definition of forced response has a steady-state portion *and* a transient portion.
+$v_f$ is defined to be the *forced response*. With this definition the forced response has a steady-state portion *and* a transient portion.
 
-The total response is the superposition of 
+The total response can be described as the superposition of natural plus forced, 
 
 $v_{tot} = v_n + v_f$
 
@@ -147,53 +152,33 @@ $v_{tot} = \text V_0\,e^{-t/\text{RC}} -\text V_\text S\,e^{-t/\text{RC}} + \tex
 $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 
 {% include d3/rc_step_response_Sadiku.html %}
-The total response (top) is the sum of natural plus forced : $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
+The total response (top) is the sum of natural plus forced: $v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
 {: .caption :}
-
-|Complete response |=|natural response<br>(stored energy)|+|forced response<br>(input energy)|
-{:.noborder }
-
-The authors mention the other method of finding the step response by mathematical means, 
-
-|Complete response |=|transient response<br>(temporary part)|+|steady-state response<br>(permanent part)|
-{:.noborder }
-
-They don't call the particular response the forced response. They give that name to a different term.
-
-
-Alexander and Sadiku solve the step response knowing it is a *separable differential equation*. This derivation, shown in [RC step response appendix]({% link _articles/rc-step-response1.md %}#appendix---separable-differential-equation), produces the complete solution, 
-
-$v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S$
-
-Given this complete solution there are two classical ways to rearrange the algebra and give names to the terms,  
-
-Natural + Forced = Complete  
-or  
-Transient + Steady-state = Complete
-
-In the first case, Natural + Forced, the Forced response has a transient portion and a steady-state portion. 
-
-## Define forced response
-
-1. The final steady-state caused by the forcing input. This includes only the steady-state section, with the transient period being described by the natural response.  
-https://www.sciencedirect.com/topics/computer-science/forced-response: The forced response, yi, depends upon the particular input of the system and is usually the same form as the input. http://web.mit.edu/16.unified/www/FALL/signalssystems/Lecture16_17.pdf: A common method for solving for the particular solution is to try a solution of the same form as the input
-– This is called the “forced response”.  
-Fitzgerald, Higginbotham, Grabel, *Basic Electrical Engineering*, 3rd Edition, p. 76-77, 89. 
-
-2. The full path the circuit takes from initial conditions = 0 all the way until it reaches steady state. This includes a transient period followed by the steady-state response. The natural response is another transient period that deals with the dissipation of initial stored energy. In this definition we resolve $K_n$ right after finding the general solution to natural response. By allowing the forced response to include a transient component that introduces a scaling constant $K_ft$ to the forced response.  
-Ribas: Forced response is the system's response to an external stimulus with zero initial conditions.
-
-Definition 1 is the approach taken here, where we develop the general solution to natural and forced responses, combine them by superposition, and *then* apply the initial condition. 
-
-Definition 2 is what you work through if you use a traditional superposition approach of separating and isolating each energy source. We break the circuit into a zero-input sub-circuit and a zero-state sub-circuit. The challenge here is solving the still-complicated zero-state sub-circuit since it has a transient part and an unrelated steady-state part. Ribas does this by coming up with an 'adjustment factor' (another exponential term) to "correct" the natural response. Seems hokey.
-
-Both definitions use superposition to come up with the same answer for the step response, which is the only thing that's observable and therefore the only thing that matters.
 
 ## Summary
 {:.no_toc}
 
-The two definitions can be revealed by decomposing the total response. We start with the total response and pull it apart and regroup the terms to reveal the different vocabulary. The total response is the same in both cases, but we group terms in slightly different ways. The terms "forced" and "natural" are assigned to different things in each definition.
+There are three ways to solve the step response, 
+* By the method of [separable differential equations]({% link _articles/rc-step-response1.md %}#appendix---separable-differential-equation). This method requires you understand what a separable equation is. It works dandy for the step response, but it does not generalize to other forms of forcing input (ramp or sinusoid). With this method you don't decompose into natural and forced---you get the total response in one step.
 
-Agarwal: The decomposition of the complete response is based on *permanency*. The natural response is the temporary transient part and the forced response is the permanent steady-state part.
+* By the mathy [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients) where we find and transient response and add it to the steady-state response. The transient response is a scaled version of the natural response. We give the steady-state response the name *forced response*. I prefer this method. It generalizes to other forcing inputs.
 
-Sadiku: The decomposition is based on the *sources of energy*. The natural response comes from the stored energy and the forced response comes from the input energy.
+|Total response |=|transient response<br>temporary part<br>natural response|+|steady-state response<br>permanent part<br>forced response|
+{:.noborder }
+
+* By the method of [superposition]({% link _articles/superposition.md %}) where we split to the circuit based on the sources of energy, the input energy and the internal stored energy. The *forced response* is defined to be what the circuit does when the internal stored energy is set to $0$. This forced response has a transient part and a steady-state part. Finding the forced response requires some fancy footwork, either by using the separable equation method or coming up with a "correction" term (see Ribas in References) to find the transient portion. This is not my favorite technique for finding step response, but it is certainly a valid way to think about it.
+
+|Total response |=|stored energy<br>natural response<br>temporary part|+|input energy<br>forced response<br>temporary + permanent part|
+{:.noborder }
+
+## References
+
+Using [separable differential equation]({% link _articles/rc-step-response1.md %}#appendix---separable-differential-equation) to find the RC step response.
+
+Science Direct [Forced response](https://www.sciencedirect.com/topics/computer-science/forced-response) is defined as the steady-state response, see Figure 2–6.
+
+[MIT Signals and Systems lecture notes](http://web.mit.edu/16.unified/www/FALL/signalssystems/Lecture16_17.pdf) --- Forced response is the particular steady-state response that resembles the input, see slide 5. See also [MIT Transient Analysis of First Order RC and RL circuits lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/lecture-notes/transient1_rl_rc.pdf) for a similar definition on page 8.
+
+Stack Exchange question [Difference between natural response and forced response?](https://electronics.stackexchange.com/questions/93061/difference-between-natural-response-and-forced-response) --- See the answer by Felipe Ribas. The forced response is defined as the system's response to an external stimulus with zero initial conditions. The forced response is found using an 'adjustment factor' (another exponential term) to "correct" the natural response.
+
+And finally my thanks to Khan Academy learner [Cal Colson](https://www.khanacademy.org/profile/kaid_1203884218835960459097935/discussion) whose question posted on my RC Step Response article launched this little research project. This is how I learned about the Ribas essay.

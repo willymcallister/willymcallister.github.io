@@ -266,6 +266,8 @@ $K = \text V_0$
 
 $K$ is a constant---it does not depend on $t$. That confirms that our original guess---an exponential voltage---was a good choice. (If we could not find a $K$, or if $K$ wasn't constant (if it turned out to depend on time), then our guess fails and we have to start over with a new guess.)
 
+Once a value for $K$ is determined we go from the general solution to a *particular* solution, selected from amongst the zillion possible $v(t)$'s. The particular solution is the one-out-of-a-zillion functions of $v$ that has exactly $\text V_0$ as the starting voltage. It's the only one.
+
 We have $s$ and $K$ that make the differential equation true. *Drum roll please*...  
 
 The solution for the natural response of an $\text{RC}$ circuit is,

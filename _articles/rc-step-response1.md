@@ -109,49 +109,55 @@ Solving a non-homogeneous differential equation is not the simplest thing in the
 
 The electrical reason the step response is challenging is because of the two energy sources. Energy comes from 1. the input voltage source and 2. the initial charge on the capacitor. The trouble is the two energy sources have no relationship to each other. This complicates the problem and makes it difficult to solve all at once. 
 
-As usual, when a problem involves two energy sources engineers wonder if superposition can somehow be applied. 
+As usual, when a problem involves two energy sources engineers wonder if superposition can somehow be applied. **This is NOT a classical EE superposition (different energy sources), it is a differential equation theory. We are taking a "math route" to the answer**
 
 ## Solve a driven circuit
 
-We find the step function using a non-obvious theory of differential equations, stated here without proof, 
+We find the step function using the method of *homogeneous and particular solutions*, based on a non-obvious theory of differential equations, stated here without proof, 
 
->The total solution to a non-homogeneous differential equation can be found by the superposition (addition) of the circuit's natural response with **any** particular response (found without regard for the initial conditions), followed by applying the initial conditions to resolve any unknown constants.
+>The total solution to a non-homogeneous differential equation can be found by the sum of the **general** solution of the circuit's natural response with **any particular** response (found without regard for the initial conditions), followed by applying the initial conditions to resolve unknown constants.
 
 This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
 
 In mathematical vocabulary the the theory says,
 
+Complete solution = homogeneous solution + particular solution 
+
 $v_c = v_h + v_p\qquad$ subject to initial conditions
 
-The subscripts $c$, $h$, and $p$ stand for complete solution, homogeneous solution, and a particular solution.  
+The subscripts $c$, $h$, and $p$ stand for complete solution, homogeneous solution, and a particular solution. 
 
 In circuit vocabulary the notation becomes,
+
+Complete response = Natural response (zero input) + forced response (zero state)
 
 $v_{tot} = v_n + v_f\qquad$ subject to initial conditions
 
 where $tot$, $n$, and $f$ stand for total response, natural response, and the forced response. 
 
-The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: The particular response we hunt for is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you can always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. You might say the forced response is one particular particular response. 
+**NOTE: These are not exactly the same thing according to Felipe Ribas.** 
+
+The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: We hunt for exactly one particular response, one that is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. You might say the forced response is one particular particular response. 
 
 {% capture details %}
 What is meant by,  
 "Somewhere in the family of curves represented by the general solution you can always find the one particular response that corresponds to the the long-term behavior of the circuit."?
 
-Here's an example of what I'm talking about from the general solution to the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}#general-solution),
+Here's an example of what I'm talking about. This is the general solution to the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}#general-solution),
 
-$v(t) = Ke^{-t/\text{RC}}$
+$v = K\,e^{-t/\text{RC}}$
 
-We can plot this general solution for lots of different values of $K$,
+Let's look at what the general solution represents. The general solution is an infinite family of functions that all make the differential equation true. We plot this equation with different values of $K$. Here are a few of them,
 
 {% include d3/rc_natural_response_general_p.html %}
+The family of particular solutions represented by the general solution. 
+{: .caption :}
 
-The plot shows the family of particular solutions represented by the general solution to the $\text{RC}$ natural response. They all end up at zero after a long time. 
+The natural response has no forcing function. The only energy in the system is the initial charge on the capacitor. After a long time that initial energy dissipates and the voltage approaches $0$. So the long-term steady-state response for any value of $K$ is $v = 0$. 
 
-The natural response has no forcing function. The only energy in the system is the initial charge on the capacitor. After a long time that initial energy dissipates and the voltage approaches $0$. The long-term steady-state response for any value of $K$ is $v = 0$. 
+Find the particular response that's a straight line along the time axis, the line $v = 0$ (bold orange). This particular response is interesting---out of all possible particular responses this one matches the steady-state response at all times, not just after a long time. (It is the particular solution we would choose if the initial voltage $\text V_0$ happened to be $0$.)
 
-See if you can find the particular response that's a straight line along the time axis. This particular response is interesting---it matches the steady-state response (at all times, not just after a long time). It is the particular solution we would choose if the initial voltage $\text V_0$ happened to be $0$.
-
-The point of this example is to show you what it means for the steady-state or forced response to be included in a general solution. The steady-state solution can be found somewhere as part of the general solution.
+The point of this example is to show how the long-term steady-state response appears somewhere in the general solution. We will use this little nugget in a little while.
 
 When we drive the RC circuit with a step function the steady-state response is no longer zero---it will be some other value.
 {% endcapture %}
@@ -172,7 +178,7 @@ Holding off the initial conditions until this last step allows the natural and f
 {% capture details %}  
 There are so many terms used in math and engineering related to this type of differential equation. Don't try to memorize all this.
 
-* Natural response is the *homogeneous solution* or the *force-free solution* or the *complementary solution* (because it complements the particular solution).
+* Natural response is the *homogeneous solution* or the *force-free solution* or the *complementary solution* (because it complements the particular solution). In control systems you might see it called the *free response*.
 
 * Forced response is a *particular solution* chosen from the general solution. Not just any particular solution but the one specifically derived from the the long term behavior of the circuit, the *steady-state response*.
 
@@ -251,7 +257,7 @@ Put this value of $s$ back into the proposed solution. This gives us the *genera
 $v_n = K_n\,e^{-t/\text{RC}}$
 
 {% include d3/rc_natural_response_general.html %}
-General solution to the $\text{RC}$ natural response, $v_n = K_n\, e^{-t/\text{RC}}$.
+General solution to the $\text{RC}$ natural response. $v_n = K_n\, e^{-t/\text{RC}}$  
 {: .caption :}
 
 This general solution is an infinite family of curves based on all possible values of $K_n$. The natural response is an exponential curve whose rate of descent is determined by the product $\text{RC}$. If you set $t = 0$ the equation tells you $K_n$ corresponds to the voltage at $t = 0$. We hold off figuring out a specific value of $K_n$ until after we assemble the total response.
@@ -330,7 +336,7 @@ When you solve this for $K_f$ no amount of algebra will get rid of the $t$ term.
 {% capture summary %}What happens if the guess is wrong?{% endcapture %}  
 {% include details.html %} 
 
-## Superposition
+## Add natural and forced
 
 The total response is the superimposition (sum) of the natural and forced responses,
 
@@ -345,7 +351,7 @@ v_{tot} = & K_n\,e^{-t/\text{RC}} &+& \text V_\text S
 This equation represents the *general* solution to the step response because it has one remaining undetermined constant. The general solution is the infinite family of all possible particular solutions,
 
 {% include d3/rc_step_response_general.html %}
-General solution to the $\text{RC}$ step response, $v_{tot} = K_n\, e^{-t/\text{RC}} + \text V_\text S$.
+General solution to the $\text{RC}$ step response. $v_{tot} = K_n\, e^{-t/\text{RC}} + \text V_\text S$
 {: .caption :}
 
 Look at the plot and find the particular solution that is a horizontal straight line at $v = \text V_\text S$ (hint: the fifth one from the top). That's the particular solution we found above---we named it the forced response. 
@@ -395,7 +401,7 @@ $v_{tot} = - \text V_\text S\,e^{-t/\text{RC}} + \text V_\text S$
 
 or
 
-$\boxed{v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )}$
+$\boxed{v_{tot} = \text V_\text S \left (1 - e^{-t/\text{RC}}\right )}$
 
 {% include d3/rc_step_response_total0.html %}
 If the capacitor voltage starts at $0$ the RC step total response is $v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$.

@@ -135,6 +135,11 @@ svg {
   border-radius: 4px;
 }
 
+.katex svg {
+    background-color: initial;
+    border-radius: initial;
+}
+
 a {
   color: $brand-color;
   text-decoration: none;

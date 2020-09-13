@@ -15,10 +15,6 @@ class SourceLocation {
     this.start = start;
     this.end = end;
   }
-
-  getSource() {
-    return this.lexer.input.slice(this.start, this.end);
-  }
   /**
    * Merges two `SourceLocation`s from location providers, given they are
    * provided in order of appearance.
@@ -60,10 +56,14 @@ class SourceLocation {
  * lead to degraded error reporting, though.
  */
 class Token {
+  // don't expand the token
+  // used in \noexpand
   constructor(text, // the text of this token
   loc) {
     this.text = void 0;
     this.loc = void 0;
+    this.noexpand = void 0;
+    this.treatAsRelax = void 0;
     this.text = text;
     this.loc = loc;
   }
@@ -240,13 +240,23 @@ const assert = function assert(value) {
 
   return value;
 };
+/**
+ * Return the protocol of a URL, or "_relative" if the URL does not specify a
+ * protocol (and thus is relative).
+ */
+
+const protocolFromUrl = function protocolFromUrl(url) {
+  const protocol = /^\s*([^\\/#]*?)(?::|&#0*58|&#x0*3a)/i.exec(url);
+  return protocol != null ? protocol[1] : "_relative";
+};
 var utils = {
   contains,
   deflt,
   escape,
   hyphenate,
   getBaseElem,
-  isCharacterBox
+  isCharacterBox,
+  protocolFromUrl
 };
 
 /* eslint no-console:0 */
@@ -264,25 +274,35 @@ var utils = {
 class Settings {
   constructor(options) {
     this.displayMode = void 0;
+    this.output = void 0;
+    this.leqno = void 0;
+    this.fleqn = void 0;
     this.throwOnError = void 0;
     this.errorColor = void 0;
     this.macros = void 0;
+    this.minRuleThickness = void 0;
     this.colorIsTextColor = void 0;
     this.strict = void 0;
+    this.trust = void 0;
     this.maxSize = void 0;
     this.maxExpand = void 0;
-    this.allowedProtocols = void 0;
+    this.globalGroup = void 0;
     // allow null options
     options = options || {};
     this.displayMode = utils.deflt(options.displayMode, false);
+    this.output = utils.deflt(options.output, "htmlAndMathml");
+    this.leqno = utils.deflt(options.leqno, false);
+    this.fleqn = utils.deflt(options.fleqn, false);
     this.throwOnError = utils.deflt(options.throwOnError, true);
     this.errorColor = utils.deflt(options.errorColor, "#cc0000");
     this.macros = options.macros || {};
+    this.minRuleThickness = Math.max(0, utils.deflt(options.minRuleThickness, 0));
     this.colorIsTextColor = utils.deflt(options.colorIsTextColor, false);
     this.strict = utils.deflt(options.strict, "warn");
+    this.trust = utils.deflt(options.trust, false);
     this.maxSize = Math.max(0, utils.deflt(options.maxSize, Infinity));
     this.maxExpand = Math.max(0, utils.deflt(options.maxExpand, 1000));
-    this.allowedProtocols = utils.deflt(options.allowedProtocols, ["http", "https", "mailto", "_relative"]);
+    this.globalGroup = utils.deflt(options.globalGroup, false);
   }
   /**
    * Report nonstrict (non-LaTeX-compatible) input.
@@ -347,6 +367,24 @@ class Settings {
       typeof console !== "undefined" && console.warn("LaTeX-incompatible input and strict mode is set to " + `unrecognized '${strict}': ${errorMsg} [${errorCode}]`);
       return false;
     }
+  }
+  /**
+   * Check whether to test potentially dangerous input, and return
+   * `true` (trusted) or `false` (untrusted).  The sole argument `context`
+   * should be an object with `command` field specifying the relevant LaTeX
+   * command (as a string starting with `\`), and any other arguments, etc.
+   * If `context` has a `url` field, a `protocol` field will automatically
+   * get added by this function (changing the specified object).
+   */
+
+
+  isTrusted(context) {
+    if (context.url && !context.protocol) {
+      context.protocol = utils.protocolFromUrl(context.url);
+    }
+
+    const trust = typeof this.trust === "function" ? this.trust(context) : this.trust;
+    return Boolean(trust);
   }
 
 }
@@ -571,55 +609,151 @@ function supportedCodepoint(codepoint) {
 }
 
 /**
- * This file provides support to domTree.js
+ * This file provides support to domTree.js and delimiter.js.
  * It's a storehouse of path geometry for SVG images.
  */
 // In all paths below, the viewBox-to-em scale is 1000:1.
-const hLinePad = 80; // padding above a sqrt viniculum.
+const hLinePad = 80; // padding above a sqrt viniculum. Prevents image cropping.
+// The viniculum of a \sqrt can be made thicker by a KaTeX rendering option.
+// Think of variable extraViniculum as two detours in the SVG path.
+// The detour begins at the lower left of the area labeled extraViniculum below.
+// The detour proceeds one extraViniculum distance up and slightly to the right,
+// displacing the radiused corner between surd and viniculum. The radius is
+// traversed as usual, then the detour resumes. It goes right, to the end of
+// the very long viniculumn, then down one extraViniculum distance,
+// after which it resumes regular path geometry for the radical.
 
-const path = {
+/*                                                  viniculum
+                                                   /
+         /▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒←extraViniculum
+        / █████████████████████←0.04em (40 unit) std viniculum thickness
+       / /
+      / /
+     / /\
+    / / surd
+*/
+
+const sqrtMain = function sqrtMain(extraViniculum, hLinePad) {
   // sqrtMain path geometry is from glyph U221A in the font KaTeX Main
-  // All surds have 80 units padding above the viniculumn.
-  sqrtMain: `M95,${622 + hLinePad}c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 ${hLinePad}H400000v40H845z`,
+  return `M95,${622 + extraViniculum + hLinePad}
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l${extraViniculum / 2.075} -${extraViniculum}
+c5.3,-9.3,12,-14,20,-14
+H400000v${40 + extraViniculum}H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M${834 + extraViniculum} ${hLinePad}h400000v${40 + extraViniculum}h-400000z`;
+};
+
+const sqrtSize1 = function sqrtSize1(extraViniculum, hLinePad) {
   // size1 is from glyph U221A in the font KaTeX_Size1-Regular
-  sqrtSize1: `M263,${601 + hLinePad}c0.7,0,18,39.7,52,119c34,79.3,68.167,
-158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120c340,-704.7,510.7,-1060.3,512,-1067
-c4.7,-7.3,11,-11,19,-11H40000v40H1012.3s-271.3,567,-271.3,567c-38.7,80.7,-84,
-175,-136,283c-52,108,-89.167,185.3,-111.5,232c-22.3,46.7,-33.8,70.3,-34.5,71
-c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1s-109,-253,-109,-253c-72.7,-168,-109.3,
--252,-110,-252c-10.7,8,-22,16.7,-34,26c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26
-s76,-59,76,-59s76,-60,76,-60z M1001 ${hLinePad}H40000v40H1012z`,
+  return `M263,${601 + extraViniculum + hLinePad}c0.7,0,18,39.7,52,119
+c34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120
+c340,-704.7,510.7,-1060.3,512,-1067
+l${extraViniculum / 2.084} -${extraViniculum}
+c4.7,-7.3,11,-11,19,-11
+H40000v${40 + extraViniculum}H1012.3
+s-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232
+c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
+s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
+c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
+M${1001 + extraViniculum} ${hLinePad}h400000v${40 + extraViniculum}h-400000z`;
+};
+
+const sqrtSize2 = function sqrtSize2(extraViniculum, hLinePad) {
   // size2 is from glyph U221A in the font KaTeX_Size2-Regular
-  // The 80 units padding is most obvious here. Note start node at M1001 80.
-  sqrtSize2: `M1001,${hLinePad}H400000v40H1013.1s-83.4,268,-264.1,840c-180.7,
-572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,
--7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744c-10,12,-21,25,-33,39s-32,39,-32,39
-c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30c26.7,-32.7,52,-63,76,-91s52,-60,52,-60
-s208,722,208,722c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,
--658.5c53.7,-170.3,84.5,-266.8,92.5,-289.5c4,-6.7,10,-10,18,-10z
-M1001 ${hLinePad}H400000v40H1013z`,
+  return `M983 ${10 + extraViniculum + hLinePad}
+l${extraViniculum / 3.13} -${extraViniculum}
+c4,-6.7,10,-10,18,-10 H400000v${40 + extraViniculum}
+H1013.1s-83.4,268,-264.1,840c-180.7,572,-277,876.3,-289,913c-4.7,4.7,-12.7,7,-24,7
+s-12,0,-12,0c-1.3,-3.3,-3.7,-11.7,-7,-25c-35.3,-125.3,-106.7,-373.3,-214,-744
+c-10,12,-21,25,-33,39s-32,39,-32,39c-6,-5.3,-15,-14,-27,-26s25,-30,25,-30
+c26.7,-32.7,52,-63,76,-91s52,-60,52,-60s208,722,208,722
+c56,-175.3,126.3,-397.3,211,-666c84.7,-268.7,153.8,-488.2,207.5,-658.5
+c53.7,-170.3,84.5,-266.8,92.5,-289.5z
+M${1001 + extraViniculum} ${hLinePad}h400000v${40 + extraViniculum}h-400000z`;
+};
+
+const sqrtSize3 = function sqrtSize3(extraViniculum, hLinePad) {
   // size3 is from glyph U221A in the font KaTeX_Size3-Regular
-  sqrtSize3: `M424,${2398 + hLinePad}c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,
--342,-109.8,-513.3,-110.5,-514c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,
-25c-5.7,9.3,-9.8,16,-12.5,20s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,
--13s76,-122,76,-122s77,-121,77,-121s209,968,209,968c0,-2,84.7,-361.7,254,-1079
-c169.3,-717.3,254.7,-1077.7,256,-1081c4,-6.7,10,-10,18,-10H400000v40H1014.6
-s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185c-2,6,-10,9,-24,9
-c-8,0,-12,-0.7,-12,-2z M1001 ${hLinePad}H400000v40H1014z`,
+  return `M424,${2398 + extraViniculum + hLinePad}
+c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514
+c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20
+s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121
+s209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081
+l${extraViniculum / 4.223} -${extraViniculum}c4,-6.7,10,-10,18,-10 H400000
+v${40 + extraViniculum}H1014.6
+s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185
+c-2,6,-10,9,-24,9
+c-8,0,-12,-0.7,-12,-2z M${1001 + extraViniculum} ${hLinePad}
+h400000v${40 + extraViniculum}h-400000z`;
+};
+
+const sqrtSize4 = function sqrtSize4(extraViniculum, hLinePad) {
   // size4 is from glyph U221A in the font KaTeX_Size4-Regular
-  sqrtSize4: `M473,${2713 + hLinePad}c339.3,-1799.3,509.3,-2700,510,-2702
-c3.3,-7.3,9.3,-11,18,-11H400000v40H1017.7s-90.5,478,-276.2,1466c-185.7,988,
--279.5,1483,-281.5,1485c-2,6,-10,9,-24,9c-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,
--16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200c0,-1.3,-5.3,8.7,-16,30c-10.7,
-21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26s76,-153,76,-153s77,-151,
-77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,606z
-M1001 ${hLinePad}H400000v40H1017z`,
+  return `M473,${2713 + extraViniculum + hLinePad}
+c339.3,-1799.3,509.3,-2700,510,-2702 l${extraViniculum / 5.298} -${extraViniculum}
+c3.3,-7.3,9.3,-11,18,-11 H400000v${40 + extraViniculum}H1017.7
+s-90.5,478,-276.2,1466c-185.7,988,-279.5,1483,-281.5,1485c-2,6,-10,9,-24,9
+c-8,0,-12,-0.7,-12,-2c0,-1.3,-5.3,-32,-16,-92c-50.7,-293.3,-119.7,-693.3,-207,-1200
+c0,-1.3,-5.3,8.7,-16,30c-10.7,21.3,-21.3,42.7,-32,64s-16,33,-16,33s-26,-26,-26,-26
+s76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,104,
+606zM${1001 + extraViniculum} ${hLinePad}h400000v${40 + extraViniculum}H1017.7z`;
+};
+
+const sqrtTall = function sqrtTall(extraViniculum, hLinePad, viewBoxHeight) {
+  // sqrtTall is from glyph U23B7 in the font KaTeX_Size4-Regular
+  // One path edge has a variable length. It runs vertically from the viniculumn
+  // to a point near (14 units) the bottom of the surd. The viniculum
+  // is normally 40 units thick. So the length of the line in question is:
+  const vertSegment = viewBoxHeight - 54 - hLinePad - extraViniculum;
+  return `M702 ${extraViniculum + hLinePad}H400000${40 + extraViniculum}
+H742v${vertSegment}l-4 4-4 4c-.667.7 -2 1.5-4 2.5s-4.167 1.833-6.5 2.5-5.5 1-9.5 1
+h-12l-28-84c-16.667-52-96.667 -294.333-240-727l-212 -643 -85 170
+c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
+219 661 l218 661zM702 ${hLinePad}H400000v${40 + extraViniculum}H742z`;
+};
+
+const sqrtPath = function sqrtPath(size, extraViniculum, viewBoxHeight) {
+  extraViniculum = 1000 * extraViniculum; // Convert from document ems to viewBox.
+
+  let path = "";
+
+  switch (size) {
+    case "sqrtMain":
+      path = sqrtMain(extraViniculum, hLinePad);
+      break;
+
+    case "sqrtSize1":
+      path = sqrtSize1(extraViniculum, hLinePad);
+      break;
+
+    case "sqrtSize2":
+      path = sqrtSize2(extraViniculum, hLinePad);
+      break;
+
+    case "sqrtSize3":
+      path = sqrtSize3(extraViniculum, hLinePad);
+      break;
+
+    case "sqrtSize4":
+      path = sqrtSize4(extraViniculum, hLinePad);
+      break;
+
+    case "sqrtTall":
+      path = sqrtTall(extraViniculum, hLinePad, viewBoxHeight);
+  }
+
+  return path;
+};
+const path = {
+  // Two paths that cover gaps in built-up parentheses.
+  leftParenInner: `M291 0 H417 V300 H291 z`,
+  rightParenInner: `M457 0 H583 V300 H457 z`,
   // The doubleleftarrow geometry is from glyph U+21D0 in the font KaTeX Main
   doubleleftarrow: `M262 157
 l10-10c34-36 62.7-77 86-123 3.3-8 5-13.3 5-16 0-5.3-6.7-8-20-8-7.3
@@ -839,7 +973,7 @@ s-74.2 66.3 -121.5 85c-10 4 -16 7.7 -18 11c0 8.7 6 14.3 18 17c47.3 18.7 87.8 47
 121.5 85s56.5 81.3 68.5 130c0.7 2 1.3 5 2 9s1.2 6.7 1.5 8c0.3 1.3 1 3.3 2 6
 s2.2 4.5 3.5 5.5c1.3 1 3.3 1.8 6 2.5s6 1 10 1c14 0 21 -3.7 21 -11
 c0 -2 -2 -10.3 -6 -25c-20 -79.3 -65 -146.7 -135 -202l-3 -3h399890z
-M100 241v40h399900v-40z M0 241v40h399900v-40zM0 241v40h399900v-40z`,
+M100 620v40h399900v-40z M0 241v40h399900v-40zM0 241v40h399900v-40z`,
   // rightarrowabovebar is mostly from glyph U+2192, KaTeX Main
   rightarrowabovebar: `M0 241v40h399891c-47.3 35.3-84 78-110 128-16.7 32
 -27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20 11 8 0
@@ -871,9 +1005,6 @@ c4.7,-4.7,7,-9.3,7,-14c0,-9.3,-3.7,-15.3,-11,-18c-92.7,-56.7,-159,-133.7,-199,
 -231c-3.3,-9.3,-6,-14.7,-8,-16c-2,-1.3,-7,-2,-15,-2c-10.7,0,-16.7,2,-18,6
 c-2,2.7,-1,9.7,3,21c15.3,42,36.7,81.8,64,119.5c27.3,37.7,58,69.2,92,94.5z
 M500 241 v40 H399408 v-40z M500 435 v40 H400000 v-40z`
-};
-var svgGeometry = {
-  path
 };
 
 /**
@@ -1145,6 +1276,65 @@ class Anchor {
   }
 
 }
+/**
+ * This node represents an image embed (<img>) element.
+ */
+
+class Img {
+  constructor(src, alt, style) {
+    this.src = void 0;
+    this.alt = void 0;
+    this.classes = void 0;
+    this.height = void 0;
+    this.depth = void 0;
+    this.maxFontSize = void 0;
+    this.style = void 0;
+    this.alt = alt;
+    this.src = src;
+    this.classes = ["mord"];
+    this.style = style;
+  }
+
+  hasClass(className) {
+    return utils.contains(this.classes, className);
+  }
+
+  toNode() {
+    const node = document.createElement("img");
+    node.src = this.src;
+    node.alt = this.alt;
+    node.className = "mord"; // Apply inline styles
+
+    for (const style in this.style) {
+      if (this.style.hasOwnProperty(style)) {
+        // $FlowFixMe
+        node.style[style] = this.style[style];
+      }
+    }
+
+    return node;
+  }
+
+  toMarkup() {
+    let markup = `<img  src='${this.src} 'alt='${this.alt}' `; // Add the styles, after hyphenation
+
+    let styles = "";
+
+    for (const style in this.style) {
+      if (this.style.hasOwnProperty(style)) {
+        styles += `${utils.hyphenate(style)}:${this.style[style]};`;
+      }
+    }
+
+    if (styles) {
+      markup += ` style="${utils.escape(styles)}"`;
+    }
+
+    markup += "'/>";
+    return markup;
+  }
+
+}
 const iCombinations = {
   'î': '\u0131\u0302',
   'ï': '\u0131\u0308',
@@ -1337,7 +1527,7 @@ class PathNode {
     this.pathName = void 0;
     this.alternate = void 0;
     this.pathName = pathName;
-    this.alternate = alternate; // Used only for tall \sqrt
+    this.alternate = alternate; // Used only for \sqrt
   }
 
   toNode() {
@@ -1347,7 +1537,7 @@ class PathNode {
     if (this.alternate) {
       node.setAttribute("d", this.alternate);
     } else {
-      node.setAttribute("d", svgGeometry.path[this.pathName]);
+      node.setAttribute("d", path[this.pathName]);
     }
 
     return node;
@@ -1357,7 +1547,7 @@ class PathNode {
     if (this.alternate) {
       return `<path d='${this.alternate}'/>`;
     } else {
-      return `<path d='${svgGeometry.path[this.pathName]}'/>`;
+      return `<path d='${path[this.pathName]}'/>`;
     }
   }
 
@@ -1413,6 +1603,7 @@ function assertSpan(group) {
 // This file is GENERATED by buildMetrics.sh. DO NOT MODIFY.
 var metricMap = {
   "AMS-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "65": [0, 0.68889, 0, 0, 0.72222],
     "66": [0, 0.68889, 0, 0, 0.66667],
     "67": [0, 0.68889, 0, 0, 0.72222],
@@ -1440,6 +1631,7 @@ var metricMap = {
     "89": [0, 0.68889, 0, 0, 0.72222],
     "90": [0, 0.68889, 0, 0, 0.66667],
     "107": [0, 0.68889, 0, 0, 0.55556],
+    "160": [0, 0, 0, 0, 0.25],
     "165": [0, 0.675, 0.025, 0, 0.75],
     "174": [0.15559, 0.69224, 0, 0, 0.94666],
     "240": [0, 0.68889, 0, 0, 0.55556],
@@ -1670,16 +1862,7 @@ var metricMap = {
     "57371": [0.13597, 0.63597, 0, 0, 0.77778]
   },
   "Caligraphic-Regular": {
-    "48": [0, 0.43056, 0, 0, 0.5],
-    "49": [0, 0.43056, 0, 0, 0.5],
-    "50": [0, 0.43056, 0, 0, 0.5],
-    "51": [0.19444, 0.43056, 0, 0, 0.5],
-    "52": [0.19444, 0.43056, 0, 0, 0.5],
-    "53": [0.19444, 0.43056, 0, 0, 0.5],
-    "54": [0, 0.64444, 0, 0, 0.5],
-    "55": [0.19444, 0.43056, 0, 0, 0.5],
-    "56": [0, 0.64444, 0, 0, 0.5],
-    "57": [0.19444, 0.43056, 0, 0, 0.5],
+    "32": [0, 0, 0, 0, 0.25],
     "65": [0, 0.68333, 0, 0.19445, 0.79847],
     "66": [0, 0.68333, 0.03041, 0.13889, 0.65681],
     "67": [0, 0.68333, 0.05834, 0.13889, 0.52653],
@@ -1705,9 +1888,11 @@ var metricMap = {
     "87": [0, 0.68333, 0.08222, 0.08334, 0.98778],
     "88": [0, 0.68333, 0.14643, 0.13889, 0.7133],
     "89": [0.09722, 0.68333, 0.08222, 0.08334, 0.66834],
-    "90": [0, 0.68333, 0.07944, 0.13889, 0.72473]
+    "90": [0, 0.68333, 0.07944, 0.13889, 0.72473],
+    "160": [0, 0, 0, 0, 0.25]
   },
   "Fraktur-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69141, 0, 0, 0.29574],
     "34": [0, 0.69141, 0, 0, 0.21471],
     "38": [0, 0.69141, 0, 0, 0.73786],
@@ -1789,6 +1974,7 @@ var metricMap = {
     "120": [0.18906, 0.47534, 0, 0, 0.38865],
     "121": [0.18906, 0.47534, 0, 0, 0.49884],
     "122": [0.18906, 0.47534, 0, 0, 0.39054],
+    "160": [0, 0, 0, 0, 0.25],
     "8216": [0, 0.69141, 0, 0, 0.21471],
     "8217": [0, 0.69141, 0, 0, 0.21471],
     "58112": [0, 0.62119, 0, 0, 0.49749],
@@ -1801,6 +1987,7 @@ var metricMap = {
     "58119": [0, 0.47534, 0, 0, 0.50073]
   },
   "Main-Bold": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69444, 0, 0, 0.35],
     "34": [0, 0.69444, 0, 0, 0.60278],
     "35": [0.19444, 0.69444, 0, 0, 0.95833],
@@ -1894,6 +2081,8 @@ var metricMap = {
     "124": [0.25, 0.75, 0, 0, 0.31944],
     "125": [0.25, 0.75, 0, 0, 0.575],
     "126": [0.35, 0.34444, 0, 0, 0.575],
+    "160": [0, 0, 0, 0, 0.25],
+    "163": [0, 0.69444, 0, 0, 0.86853],
     "168": [0, 0.69444, 0, 0, 0.575],
     "172": [0, 0.44444, 0, 0, 0.76666],
     "176": [0, 0.69444, 0, 0, 0.86944],
@@ -1920,7 +2109,6 @@ var metricMap = {
     "730": [0, 0.69444, 0, 0, 0.86944],
     "732": [0, 0.69444, 0, 0, 0.575],
     "733": [0, 0.69444, 0, 0, 0.575],
-    "824": [0.19444, 0.69444, 0, 0, 0],
     "915": [0, 0.68611, 0, 0, 0.69166],
     "916": [0, 0.68611, 0, 0, 0.95833],
     "920": [0, 0.68611, 0, 0, 0.89444],
@@ -2048,9 +2236,11 @@ var metricMap = {
     "10217": [0.25, 0.75, 0, 0, 0.44722],
     "10815": [0, 0.68611, 0, 0, 0.9],
     "10927": [0.19667, 0.69667, 0, 0, 0.89444],
-    "10928": [0.19667, 0.69667, 0, 0, 0.89444]
+    "10928": [0.19667, 0.69667, 0, 0, 0.89444],
+    "57376": [0.19444, 0.69444, 0, 0, 0]
   },
   "Main-BoldItalic": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69444, 0.11417, 0, 0.38611],
     "34": [0, 0.69444, 0.07939, 0, 0.62055],
     "35": [0.19444, 0.69444, 0.06833, 0, 0.94444],
@@ -2137,7 +2327,7 @@ var metricMap = {
     "121": [0.19444, 0.44444, 0.105, 0, 0.56166],
     "122": [0, 0.44444, 0.13889, 0, 0.49055],
     "126": [0.35, 0.34444, 0.11472, 0, 0.59111],
-    "163": [0, 0.69444, 0, 0, 0.86853],
+    "160": [0, 0, 0, 0, 0.25],
     "168": [0, 0.69444, 0.11473, 0, 0.59111],
     "176": [0, 0.69444, 0, 0, 0.94888],
     "184": [0.17014, 0, 0, 0, 0.53222],
@@ -2179,6 +2369,7 @@ var metricMap = {
     "8221": [0, 0.69444, 0.07939, 0, 0.62055]
   },
   "Main-Italic": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69444, 0.12417, 0, 0.30667],
     "34": [0, 0.69444, 0.06961, 0, 0.51444],
     "35": [0.19444, 0.69444, 0.06616, 0, 0.81777],
@@ -2265,7 +2456,7 @@ var metricMap = {
     "121": [0.19444, 0.43056, 0.08847, 0, 0.48555],
     "122": [0, 0.43056, 0.12292, 0, 0.40889],
     "126": [0.35, 0.31786, 0.11585, 0, 0.51111],
-    "163": [0, 0.69444, 0, 0, 0.76909],
+    "160": [0, 0, 0, 0, 0.25],
     "168": [0, 0.66786, 0.10474, 0, 0.51111],
     "176": [0, 0.69444, 0, 0, 0.83129],
     "184": [0.17014, 0, 0, 0, 0.46],
@@ -2274,10 +2465,8 @@ var metricMap = {
     "223": [0.19444, 0.69444, 0.10514, 0, 0.53666],
     "230": [0, 0.43056, 0.07514, 0, 0.71555],
     "248": [0.09722, 0.52778, 0.09194, 0, 0.51111],
-    "305": [0, 0.43056, 0, 0.02778, 0.32246],
     "338": [0, 0.68333, 0.12028, 0, 0.98499],
     "339": [0, 0.43056, 0.07514, 0, 0.71555],
-    "567": [0.19444, 0.43056, 0, 0.08334, 0.38403],
     "710": [0, 0.69444, 0.06646, 0, 0.51111],
     "711": [0, 0.62847, 0.08295, 0, 0.51111],
     "713": [0, 0.56167, 0.10333, 0, 0.51111],
@@ -2403,6 +2592,7 @@ var metricMap = {
     "125": [0.25, 0.75, 0, 0, 0.5],
     "126": [0.35, 0.31786, 0, 0, 0.5],
     "160": [0, 0, 0, 0, 0.25],
+    "163": [0, 0.69444, 0, 0, 0.76909],
     "167": [0.19444, 0.69444, 0, 0, 0.44445],
     "168": [0, 0.66786, 0, 0, 0.5],
     "172": [0, 0.43056, 0, 0, 0.66667],
@@ -2431,7 +2621,6 @@ var metricMap = {
     "730": [0, 0.69444, 0, 0, 0.75],
     "732": [0, 0.66786, 0, 0, 0.5],
     "733": [0, 0.69444, 0, 0, 0.5],
-    "824": [0.19444, 0.69444, 0, 0, 0],
     "915": [0, 0.68333, 0, 0, 0.625],
     "916": [0, 0.68333, 0, 0, 0.83334],
     "920": [0, 0.68333, 0, 0, 0.77778],
@@ -2516,7 +2705,6 @@ var metricMap = {
     "8776": [-0.01688, 0.48312, 0, 0, 0.77778],
     "8781": [-0.03625, 0.46375, 0, 0, 0.77778],
     "8784": [-0.133, 0.67, 0, 0, 0.778],
-    "8800": [0.215, 0.716, 0, 0, 0.778],
     "8801": [-0.03625, 0.46375, 0, 0, 0.77778],
     "8804": [0.13597, 0.63597, 0, 0, 0.77778],
     "8805": [0.13597, 0.63597, 0, 0, 0.77778],
@@ -2583,10 +2771,21 @@ var metricMap = {
     "10236": [0.011, 0.511, 0, 0, 1.638],
     "10815": [0, 0.68333, 0, 0, 0.75],
     "10927": [0.13597, 0.63597, 0, 0, 0.77778],
-    "10928": [0.13597, 0.63597, 0, 0, 0.77778]
+    "10928": [0.13597, 0.63597, 0, 0, 0.77778],
+    "57376": [0.19444, 0.69444, 0, 0, 0]
   },
   "Math-BoldItalic": {
-    "47": [0.19444, 0.69444, 0, 0, 0],
+    "32": [0, 0, 0, 0, 0.25],
+    "48": [0, 0.44444, 0, 0, 0.575],
+    "49": [0, 0.44444, 0, 0, 0.575],
+    "50": [0, 0.44444, 0, 0, 0.575],
+    "51": [0.19444, 0.44444, 0, 0, 0.575],
+    "52": [0.19444, 0.44444, 0, 0, 0.575],
+    "53": [0.19444, 0.44444, 0, 0, 0.575],
+    "54": [0, 0.64444, 0, 0, 0.575],
+    "55": [0.19444, 0.44444, 0, 0, 0.575],
+    "56": [0, 0.64444, 0, 0, 0.575],
+    "57": [0.19444, 0.44444, 0, 0, 0.575],
     "65": [0, 0.68611, 0, 0, 0.86944],
     "66": [0, 0.68611, 0.04835, 0, 0.8664],
     "67": [0, 0.68611, 0.06979, 0, 0.81694],
@@ -2639,6 +2838,7 @@ var metricMap = {
     "120": [0, 0.44444, 0, 0, 0.65903],
     "121": [0.19444, 0.44444, 0.03704, 0, 0.59028],
     "122": [0, 0.44444, 0.04213, 0, 0.55509],
+    "160": [0, 0, 0, 0, 0.25],
     "915": [0, 0.68611, 0.15972, 0, 0.65694],
     "916": [0, 0.68611, 0, 0, 0.95833],
     "920": [0, 0.68611, 0.03194, 0, 0.86722],
@@ -2679,10 +2879,22 @@ var metricMap = {
     "981": [0.19444, 0.69444, 0, 0, 0.7125],
     "982": [0, 0.44444, 0.03194, 0, 0.975],
     "1009": [0.19444, 0.44444, 0, 0, 0.6118],
-    "1013": [0, 0.44444, 0, 0, 0.48333]
+    "1013": [0, 0.44444, 0, 0, 0.48333],
+    "57649": [0, 0.44444, 0, 0, 0.39352],
+    "57911": [0.19444, 0.44444, 0, 0, 0.43889]
   },
   "Math-Italic": {
-    "47": [0.19444, 0.69444, 0, 0, 0],
+    "32": [0, 0, 0, 0, 0.25],
+    "48": [0, 0.43056, 0, 0, 0.5],
+    "49": [0, 0.43056, 0, 0, 0.5],
+    "50": [0, 0.43056, 0, 0, 0.5],
+    "51": [0.19444, 0.43056, 0, 0, 0.5],
+    "52": [0.19444, 0.43056, 0, 0, 0.5],
+    "53": [0.19444, 0.43056, 0, 0, 0.5],
+    "54": [0, 0.64444, 0, 0, 0.5],
+    "55": [0.19444, 0.43056, 0, 0, 0.5],
+    "56": [0, 0.64444, 0, 0, 0.5],
+    "57": [0.19444, 0.43056, 0, 0, 0.5],
     "65": [0, 0.68333, 0, 0.13889, 0.75],
     "66": [0, 0.68333, 0.05017, 0.08334, 0.75851],
     "67": [0, 0.68333, 0.07153, 0.08334, 0.71472],
@@ -2735,6 +2947,7 @@ var metricMap = {
     "120": [0, 0.43056, 0, 0.02778, 0.57153],
     "121": [0.19444, 0.43056, 0.03588, 0.05556, 0.49028],
     "122": [0, 0.43056, 0.04398, 0.05556, 0.46505],
+    "160": [0, 0, 0, 0, 0.25],
     "915": [0, 0.68333, 0.13889, 0.08334, 0.61528],
     "916": [0, 0.68333, 0, 0.16667, 0.83334],
     "920": [0, 0.68333, 0.02778, 0.08334, 0.76278],
@@ -2775,104 +2988,12 @@ var metricMap = {
     "981": [0.19444, 0.69444, 0, 0.08334, 0.59583],
     "982": [0, 0.43056, 0.02778, 0, 0.82813],
     "1009": [0.19444, 0.43056, 0, 0.08334, 0.51702],
-    "1013": [0, 0.43056, 0, 0.05556, 0.4059]
-  },
-  "Math-Regular": {
-    "65": [0, 0.68333, 0, 0.13889, 0.75],
-    "66": [0, 0.68333, 0.05017, 0.08334, 0.75851],
-    "67": [0, 0.68333, 0.07153, 0.08334, 0.71472],
-    "68": [0, 0.68333, 0.02778, 0.05556, 0.82792],
-    "69": [0, 0.68333, 0.05764, 0.08334, 0.7382],
-    "70": [0, 0.68333, 0.13889, 0.08334, 0.64306],
-    "71": [0, 0.68333, 0, 0.08334, 0.78625],
-    "72": [0, 0.68333, 0.08125, 0.05556, 0.83125],
-    "73": [0, 0.68333, 0.07847, 0.11111, 0.43958],
-    "74": [0, 0.68333, 0.09618, 0.16667, 0.55451],
-    "75": [0, 0.68333, 0.07153, 0.05556, 0.84931],
-    "76": [0, 0.68333, 0, 0.02778, 0.68056],
-    "77": [0, 0.68333, 0.10903, 0.08334, 0.97014],
-    "78": [0, 0.68333, 0.10903, 0.08334, 0.80347],
-    "79": [0, 0.68333, 0.02778, 0.08334, 0.76278],
-    "80": [0, 0.68333, 0.13889, 0.08334, 0.64201],
-    "81": [0.19444, 0.68333, 0, 0.08334, 0.79056],
-    "82": [0, 0.68333, 0.00773, 0.08334, 0.75929],
-    "83": [0, 0.68333, 0.05764, 0.08334, 0.6132],
-    "84": [0, 0.68333, 0.13889, 0.08334, 0.58438],
-    "85": [0, 0.68333, 0.10903, 0.02778, 0.68278],
-    "86": [0, 0.68333, 0.22222, 0, 0.58333],
-    "87": [0, 0.68333, 0.13889, 0, 0.94445],
-    "88": [0, 0.68333, 0.07847, 0.08334, 0.82847],
-    "89": [0, 0.68333, 0.22222, 0, 0.58056],
-    "90": [0, 0.68333, 0.07153, 0.08334, 0.68264],
-    "97": [0, 0.43056, 0, 0, 0.52859],
-    "98": [0, 0.69444, 0, 0, 0.42917],
-    "99": [0, 0.43056, 0, 0.05556, 0.43276],
-    "100": [0, 0.69444, 0, 0.16667, 0.52049],
-    "101": [0, 0.43056, 0, 0.05556, 0.46563],
-    "102": [0.19444, 0.69444, 0.10764, 0.16667, 0.48959],
-    "103": [0.19444, 0.43056, 0.03588, 0.02778, 0.47697],
-    "104": [0, 0.69444, 0, 0, 0.57616],
-    "105": [0, 0.65952, 0, 0, 0.34451],
-    "106": [0.19444, 0.65952, 0.05724, 0, 0.41181],
-    "107": [0, 0.69444, 0.03148, 0, 0.5206],
-    "108": [0, 0.69444, 0.01968, 0.08334, 0.29838],
-    "109": [0, 0.43056, 0, 0, 0.87801],
-    "110": [0, 0.43056, 0, 0, 0.60023],
-    "111": [0, 0.43056, 0, 0.05556, 0.48472],
-    "112": [0.19444, 0.43056, 0, 0.08334, 0.50313],
-    "113": [0.19444, 0.43056, 0.03588, 0.08334, 0.44641],
-    "114": [0, 0.43056, 0.02778, 0.05556, 0.45116],
-    "115": [0, 0.43056, 0, 0.05556, 0.46875],
-    "116": [0, 0.61508, 0, 0.08334, 0.36111],
-    "117": [0, 0.43056, 0, 0.02778, 0.57246],
-    "118": [0, 0.43056, 0.03588, 0.02778, 0.48472],
-    "119": [0, 0.43056, 0.02691, 0.08334, 0.71592],
-    "120": [0, 0.43056, 0, 0.02778, 0.57153],
-    "121": [0.19444, 0.43056, 0.03588, 0.05556, 0.49028],
-    "122": [0, 0.43056, 0.04398, 0.05556, 0.46505],
-    "915": [0, 0.68333, 0.13889, 0.08334, 0.61528],
-    "916": [0, 0.68333, 0, 0.16667, 0.83334],
-    "920": [0, 0.68333, 0.02778, 0.08334, 0.76278],
-    "923": [0, 0.68333, 0, 0.16667, 0.69445],
-    "926": [0, 0.68333, 0.07569, 0.08334, 0.74236],
-    "928": [0, 0.68333, 0.08125, 0.05556, 0.83125],
-    "931": [0, 0.68333, 0.05764, 0.08334, 0.77986],
-    "933": [0, 0.68333, 0.13889, 0.05556, 0.58333],
-    "934": [0, 0.68333, 0, 0.08334, 0.66667],
-    "936": [0, 0.68333, 0.11, 0.05556, 0.61222],
-    "937": [0, 0.68333, 0.05017, 0.08334, 0.7724],
-    "945": [0, 0.43056, 0.0037, 0.02778, 0.6397],
-    "946": [0.19444, 0.69444, 0.05278, 0.08334, 0.56563],
-    "947": [0.19444, 0.43056, 0.05556, 0, 0.51773],
-    "948": [0, 0.69444, 0.03785, 0.05556, 0.44444],
-    "949": [0, 0.43056, 0, 0.08334, 0.46632],
-    "950": [0.19444, 0.69444, 0.07378, 0.08334, 0.4375],
-    "951": [0.19444, 0.43056, 0.03588, 0.05556, 0.49653],
-    "952": [0, 0.69444, 0.02778, 0.08334, 0.46944],
-    "953": [0, 0.43056, 0, 0.05556, 0.35394],
-    "954": [0, 0.43056, 0, 0, 0.57616],
-    "955": [0, 0.69444, 0, 0, 0.58334],
-    "956": [0.19444, 0.43056, 0, 0.02778, 0.60255],
-    "957": [0, 0.43056, 0.06366, 0.02778, 0.49398],
-    "958": [0.19444, 0.69444, 0.04601, 0.11111, 0.4375],
-    "959": [0, 0.43056, 0, 0.05556, 0.48472],
-    "960": [0, 0.43056, 0.03588, 0, 0.57003],
-    "961": [0.19444, 0.43056, 0, 0.08334, 0.51702],
-    "962": [0.09722, 0.43056, 0.07986, 0.08334, 0.36285],
-    "963": [0, 0.43056, 0.03588, 0, 0.57141],
-    "964": [0, 0.43056, 0.1132, 0.02778, 0.43715],
-    "965": [0, 0.43056, 0.03588, 0.02778, 0.54028],
-    "966": [0.19444, 0.43056, 0, 0.08334, 0.65417],
-    "967": [0.19444, 0.43056, 0, 0.05556, 0.62569],
-    "968": [0.19444, 0.69444, 0.03588, 0.11111, 0.65139],
-    "969": [0, 0.43056, 0.03588, 0, 0.62245],
-    "977": [0, 0.69444, 0, 0.08334, 0.59144],
-    "981": [0.19444, 0.69444, 0, 0.08334, 0.59583],
-    "982": [0, 0.43056, 0.02778, 0, 0.82813],
-    "1009": [0.19444, 0.43056, 0, 0.08334, 0.51702],
-    "1013": [0, 0.43056, 0, 0.05556, 0.4059]
+    "1013": [0, 0.43056, 0, 0.05556, 0.4059],
+    "57649": [0, 0.43056, 0, 0.02778, 0.32246],
+    "57911": [0.19444, 0.43056, 0, 0.08334, 0.38403]
   },
   "SansSerif-Bold": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69444, 0, 0, 0.36667],
     "34": [0, 0.69444, 0, 0, 0.55834],
     "35": [0.19444, 0.69444, 0, 0, 0.91667],
@@ -2960,6 +3081,7 @@ var metricMap = {
     "121": [0.19444, 0.45833, 0.01528, 0, 0.5],
     "122": [0, 0.45833, 0, 0, 0.47639],
     "126": [0.35, 0.34444, 0, 0, 0.55],
+    "160": [0, 0, 0, 0, 0.25],
     "168": [0, 0.69444, 0, 0, 0.55],
     "176": [0, 0.69444, 0, 0, 0.73334],
     "180": [0, 0.69444, 0, 0, 0.55],
@@ -2993,6 +3115,7 @@ var metricMap = {
     "8221": [0, 0.69444, 0, 0, 0.55834]
   },
   "SansSerif-Italic": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69444, 0.05733, 0, 0.31945],
     "34": [0, 0.69444, 0.00316, 0, 0.5],
     "35": [0.19444, 0.69444, 0.05087, 0, 0.83334],
@@ -3080,6 +3203,7 @@ var metricMap = {
     "121": [0.19444, 0.44444, 0.10836, 0, 0.46111],
     "122": [0, 0.44444, 0.08752, 0, 0.43472],
     "126": [0.35, 0.32659, 0.08826, 0, 0.5],
+    "160": [0, 0, 0, 0, 0.25],
     "168": [0, 0.67937, 0.06385, 0, 0.5],
     "176": [0, 0.69444, 0, 0, 0.73752],
     "184": [0.17014, 0, 0, 0, 0.44445],
@@ -3114,6 +3238,7 @@ var metricMap = {
     "8221": [0, 0.69444, 0.00316, 0, 0.5]
   },
   "SansSerif-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "33": [0, 0.69444, 0, 0, 0.31945],
     "34": [0, 0.69444, 0, 0, 0.5],
     "35": [0.19444, 0.69444, 0, 0, 0.83334],
@@ -3201,6 +3326,7 @@ var metricMap = {
     "121": [0.19444, 0.44444, 0.01389, 0, 0.46111],
     "122": [0, 0.44444, 0, 0, 0.43472],
     "126": [0.35, 0.32659, 0, 0, 0.5],
+    "160": [0, 0, 0, 0, 0.25],
     "168": [0, 0.67937, 0, 0, 0.5],
     "176": [0, 0.69444, 0, 0, 0.66667],
     "184": [0.17014, 0, 0, 0, 0.44445],
@@ -3235,6 +3361,7 @@ var metricMap = {
     "8221": [0, 0.69444, 0, 0, 0.5]
   },
   "Script-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "65": [0, 0.7, 0.22925, 0, 0.80253],
     "66": [0, 0.7, 0.04087, 0, 0.90757],
     "67": [0, 0.7, 0.1689, 0, 0.66619],
@@ -3260,9 +3387,11 @@ var metricMap = {
     "87": [0, 0.7, 0.27523, 0, 0.80532],
     "88": [0, 0.7, 0.26006, 0, 0.94445],
     "89": [0, 0.7, 0.2939, 0, 0.70961],
-    "90": [0, 0.7, 0.24037, 0, 0.8212]
+    "90": [0, 0.7, 0.24037, 0, 0.8212],
+    "160": [0, 0, 0, 0, 0.25]
   },
   "Size1-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "40": [0.35001, 0.85, 0, 0, 0.45834],
     "41": [0.35001, 0.85, 0, 0, 0.45834],
     "47": [0.35001, 0.85, 0, 0, 0.57778],
@@ -3271,6 +3400,7 @@ var metricMap = {
     "93": [0.35001, 0.85, 0, 0, 0.41667],
     "123": [0.35001, 0.85, 0, 0, 0.58334],
     "125": [0.35001, 0.85, 0, 0, 0.58334],
+    "160": [0, 0, 0, 0, 0.25],
     "710": [0, 0.72222, 0, 0, 0.55556],
     "732": [0, 0.72222, 0, 0, 0.55556],
     "770": [0, 0.72222, 0, 0, 0.55556],
@@ -3308,6 +3438,7 @@ var metricMap = {
     "10758": [0.25001, 0.75, 0, 0, 0.83334]
   },
   "Size2-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "40": [0.65002, 1.15, 0, 0, 0.59722],
     "41": [0.65002, 1.15, 0, 0, 0.59722],
     "47": [0.65002, 1.15, 0, 0, 0.81111],
@@ -3316,6 +3447,7 @@ var metricMap = {
     "93": [0.65002, 1.15, 0, 0, 0.47222],
     "123": [0.65002, 1.15, 0, 0, 0.66667],
     "125": [0.65002, 1.15, 0, 0, 0.66667],
+    "160": [0, 0, 0, 0, 0.25],
     "710": [0, 0.75, 0, 0, 1.0],
     "732": [0, 0.75, 0, 0, 1.0],
     "770": [0, 0.75, 0, 0, 1.0],
@@ -3345,6 +3477,7 @@ var metricMap = {
     "10758": [0.55001, 1.05, 0, 0, 1.11111]
   },
   "Size3-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "40": [0.95003, 1.45, 0, 0, 0.73611],
     "41": [0.95003, 1.45, 0, 0, 0.73611],
     "47": [0.95003, 1.45, 0, 0, 1.04445],
@@ -3353,6 +3486,7 @@ var metricMap = {
     "93": [0.95003, 1.45, 0, 0, 0.52778],
     "123": [0.95003, 1.45, 0, 0, 0.75],
     "125": [0.95003, 1.45, 0, 0, 0.75],
+    "160": [0, 0, 0, 0, 0.25],
     "710": [0, 0.75, 0, 0, 1.44445],
     "732": [0, 0.75, 0, 0, 1.44445],
     "770": [0, 0.75, 0, 0, 1.44445],
@@ -3366,6 +3500,7 @@ var metricMap = {
     "10217": [0.95003, 1.45, 0, 0, 0.75]
   },
   "Size4-Regular": {
+    "32": [0, 0, 0, 0, 0.25],
     "40": [1.25003, 1.75, 0, 0, 0.79167],
     "41": [1.25003, 1.75, 0, 0, 0.79167],
     "47": [1.25003, 1.75, 0, 0, 1.27778],
@@ -3374,6 +3509,7 @@ var metricMap = {
     "93": [1.25003, 1.75, 0, 0, 0.58334],
     "123": [1.25003, 1.75, 0, 0, 0.80556],
     "125": [1.25003, 1.75, 0, 0, 0.80556],
+    "160": [0, 0, 0, 0, 0.25],
     "710": [0, 0.825, 0, 0, 1.8889],
     "732": [0, 0.825, 0, 0, 1.8889],
     "770": [0, 0.825, 0, 0, 1.8889],
@@ -3642,7 +3778,15 @@ const sigmasAndXis = {
   ptPerEm: [10.0, 10.0, 10.0],
   // The space between adjacent `|` columns in an array definition. From
   // `\showthe\doublerulesep` in LaTeX. Equals 2.0 / ptPerEm.
-  doubleRuleSep: [0.2, 0.2, 0.2]
+  doubleRuleSep: [0.2, 0.2, 0.2],
+  // The width of separator lines in {array} environments. From
+  // `\showthe\arrayrulewidth` in LaTeX. Equals 0.4 / ptPerEm.
+  arrayRuleWidth: [0.04, 0.04, 0.04],
+  // Two values from LaTeX source2e:
+  fboxsep: [0.3, 0.3, 0.3],
+  //        3 pt / ptPerEm
+  fboxrule: [0.04, 0.04, 0.04] // 0.4 pt / ptPerEm
+
 }; // This map contains a mapping from font name and character code to character
 // should have Latin-1 and Cyrillic characters, but may not depending on the
 // operating system.  The metrics do not account for extra height from the
@@ -3749,12 +3893,12 @@ function getCharacterMetrics(character, font, mode) {
   }
 
   let ch = character.charCodeAt(0);
-
-  if (character[0] in extraCharacterMap) {
-    ch = extraCharacterMap[character[0]].charCodeAt(0);
-  }
-
   let metrics = metricMap[font][ch];
+
+  if (!metrics && character[0] in extraCharacterMap) {
+    ch = extraCharacterMap[character[0]].charCodeAt(0);
+    metrics = metricMap[font][ch];
+  }
 
   if (!metrics && mode === 'text') {
     // We don't typically have font metrics for Asian scripts.
@@ -3820,7 +3964,7 @@ function getGlobalMetrics(size) {
      normal font), or "ams" (the ams fonts).
  * - group (required): the ParseNode group type the symbol should have (i.e.
      "textord", "mathord", etc).
-     See https://github.com/Khan/KaTeX/wiki/Examining-TeX#group-types
+     See https://github.com/KaTeX/KaTeX/wiki/Examining-TeX#group-types
  * - replace: the character that this symbol or function should be
  *   replaced with (i.e. "\phi" has a replace value of "\u03d5", the phi
  *   character in the main font).
@@ -3987,12 +4131,13 @@ defineSymbol(math, main, rel, "\u21c1", "\\rightharpoondown", true);
 defineSymbol(math, main, rel, "\u2196", "\\nwarrow", true);
 defineSymbol(math, main, rel, "\u21cc", "\\rightleftharpoons", true); // AMS Negated Binary Relations
 
-defineSymbol(math, ams, rel, "\u226e", "\\nless", true);
-defineSymbol(math, ams, rel, "\ue010", "\\nleqslant");
-defineSymbol(math, ams, rel, "\ue011", "\\nleqq");
+defineSymbol(math, ams, rel, "\u226e", "\\nless", true); // Symbol names preceeded by "@" each have a corresponding macro.
+
+defineSymbol(math, ams, rel, "\ue010", "\\@nleqslant");
+defineSymbol(math, ams, rel, "\ue011", "\\@nleqq");
 defineSymbol(math, ams, rel, "\u2a87", "\\lneq", true);
 defineSymbol(math, ams, rel, "\u2268", "\\lneqq", true);
-defineSymbol(math, ams, rel, "\ue00c", "\\lvertneqq");
+defineSymbol(math, ams, rel, "\ue00c", "\\@lvertneqq");
 defineSymbol(math, ams, rel, "\u22e6", "\\lnsim", true);
 defineSymbol(math, ams, rel, "\u2a89", "\\lnapprox", true);
 defineSymbol(math, ams, rel, "\u2280", "\\nprec", true); // unicode-math maps \u22e0 to \npreccurlyeq. We'll use the AMS synonym.
@@ -4001,22 +4146,22 @@ defineSymbol(math, ams, rel, "\u22e0", "\\npreceq", true);
 defineSymbol(math, ams, rel, "\u22e8", "\\precnsim", true);
 defineSymbol(math, ams, rel, "\u2ab9", "\\precnapprox", true);
 defineSymbol(math, ams, rel, "\u2241", "\\nsim", true);
-defineSymbol(math, ams, rel, "\ue006", "\\nshortmid");
+defineSymbol(math, ams, rel, "\ue006", "\\@nshortmid");
 defineSymbol(math, ams, rel, "\u2224", "\\nmid", true);
 defineSymbol(math, ams, rel, "\u22ac", "\\nvdash", true);
 defineSymbol(math, ams, rel, "\u22ad", "\\nvDash", true);
 defineSymbol(math, ams, rel, "\u22ea", "\\ntriangleleft");
 defineSymbol(math, ams, rel, "\u22ec", "\\ntrianglelefteq", true);
 defineSymbol(math, ams, rel, "\u228a", "\\subsetneq", true);
-defineSymbol(math, ams, rel, "\ue01a", "\\varsubsetneq");
+defineSymbol(math, ams, rel, "\ue01a", "\\@varsubsetneq");
 defineSymbol(math, ams, rel, "\u2acb", "\\subsetneqq", true);
-defineSymbol(math, ams, rel, "\ue017", "\\varsubsetneqq");
+defineSymbol(math, ams, rel, "\ue017", "\\@varsubsetneqq");
 defineSymbol(math, ams, rel, "\u226f", "\\ngtr", true);
-defineSymbol(math, ams, rel, "\ue00f", "\\ngeqslant");
-defineSymbol(math, ams, rel, "\ue00e", "\\ngeqq");
+defineSymbol(math, ams, rel, "\ue00f", "\\@ngeqslant");
+defineSymbol(math, ams, rel, "\ue00e", "\\@ngeqq");
 defineSymbol(math, ams, rel, "\u2a88", "\\gneq", true);
 defineSymbol(math, ams, rel, "\u2269", "\\gneqq", true);
-defineSymbol(math, ams, rel, "\ue00d", "\\gvertneqq");
+defineSymbol(math, ams, rel, "\ue00d", "\\@gvertneqq");
 defineSymbol(math, ams, rel, "\u22e7", "\\gnsim", true);
 defineSymbol(math, ams, rel, "\u2a8a", "\\gnapprox", true);
 defineSymbol(math, ams, rel, "\u2281", "\\nsucc", true); // unicode-math maps \u22e1 to \nsucccurlyeq. We'll use the AMS synonym.
@@ -4026,20 +4171,20 @@ defineSymbol(math, ams, rel, "\u22e9", "\\succnsim", true);
 defineSymbol(math, ams, rel, "\u2aba", "\\succnapprox", true); // unicode-math maps \u2246 to \simneqq. We'll use the AMS synonym.
 
 defineSymbol(math, ams, rel, "\u2246", "\\ncong", true);
-defineSymbol(math, ams, rel, "\ue007", "\\nshortparallel");
+defineSymbol(math, ams, rel, "\ue007", "\\@nshortparallel");
 defineSymbol(math, ams, rel, "\u2226", "\\nparallel", true);
 defineSymbol(math, ams, rel, "\u22af", "\\nVDash", true);
 defineSymbol(math, ams, rel, "\u22eb", "\\ntriangleright");
 defineSymbol(math, ams, rel, "\u22ed", "\\ntrianglerighteq", true);
-defineSymbol(math, ams, rel, "\ue018", "\\nsupseteqq");
+defineSymbol(math, ams, rel, "\ue018", "\\@nsupseteqq");
 defineSymbol(math, ams, rel, "\u228b", "\\supsetneq", true);
-defineSymbol(math, ams, rel, "\ue01b", "\\varsupsetneq");
+defineSymbol(math, ams, rel, "\ue01b", "\\@varsupsetneq");
 defineSymbol(math, ams, rel, "\u2acc", "\\supsetneqq", true);
-defineSymbol(math, ams, rel, "\ue019", "\\varsupsetneqq");
+defineSymbol(math, ams, rel, "\ue019", "\\@varsupsetneqq");
 defineSymbol(math, ams, rel, "\u22ae", "\\nVdash", true);
 defineSymbol(math, ams, rel, "\u2ab5", "\\precneqq", true);
 defineSymbol(math, ams, rel, "\u2ab6", "\\succneqq", true);
-defineSymbol(math, ams, rel, "\ue016", "\\nsubseteqq");
+defineSymbol(math, ams, rel, "\ue016", "\\@nsubseteqq");
 defineSymbol(math, ams, bin, "\u22b4", "\\unlhd");
 defineSymbol(math, ams, bin, "\u22b5", "\\unrhd"); // AMS Negated Arrows
 
@@ -4062,7 +4207,6 @@ defineSymbol(math, ams, textord, "\u2204", "\\nexists");
 defineSymbol(math, ams, textord, "\u2127", "\\mho");
 defineSymbol(math, ams, textord, "\u2132", "\\Finv", true);
 defineSymbol(math, ams, textord, "\u2141", "\\Game", true);
-defineSymbol(math, ams, textord, "\u006b", "\\Bbbk");
 defineSymbol(math, ams, textord, "\u2035", "\\backprime");
 defineSymbol(math, ams, textord, "\u25b2", "\\blacktriangle");
 defineSymbol(math, ams, textord, "\u25bc", "\\blacktriangledown");
@@ -4070,9 +4214,10 @@ defineSymbol(math, ams, textord, "\u25a0", "\\blacksquare");
 defineSymbol(math, ams, textord, "\u29eb", "\\blacklozenge");
 defineSymbol(math, ams, textord, "\u2605", "\\bigstar");
 defineSymbol(math, ams, textord, "\u2222", "\\sphericalangle", true);
-defineSymbol(math, ams, textord, "\u2201", "\\complement", true); // unicode-math maps U+F0 (ð) to \matheth. We map to AMS function \eth
+defineSymbol(math, ams, textord, "\u2201", "\\complement", true); // unicode-math maps U+F0 to \matheth. We map to AMS function \eth
 
 defineSymbol(math, ams, textord, "\u00f0", "\\eth", true);
+defineSymbol(text$1, main, textord, "\u00f0", "\u00f0");
 defineSymbol(math, ams, textord, "\u2571", "\\diagup");
 defineSymbol(math, ams, textord, "\u2572", "\\diagdown");
 defineSymbol(math, ams, textord, "\u25a1", "\\square");
@@ -4088,13 +4233,13 @@ defineSymbol(math, ams, textord, "\u2136", "\\beth", true);
 defineSymbol(math, ams, textord, "\u2138", "\\daleth", true);
 defineSymbol(math, ams, textord, "\u2137", "\\gimel", true); // AMS Greek
 
-defineSymbol(math, ams, textord, "\u03dd", "\\digamma");
+defineSymbol(math, ams, textord, "\u03dd", "\\digamma", true);
 defineSymbol(math, ams, textord, "\u03f0", "\\varkappa"); // AMS Delimiters
 
-defineSymbol(math, ams, open, "\u250c", "\\ulcorner", true);
-defineSymbol(math, ams, close, "\u2510", "\\urcorner", true);
-defineSymbol(math, ams, open, "\u2514", "\\llcorner", true);
-defineSymbol(math, ams, close, "\u2518", "\\lrcorner", true); // AMS Binary Relations
+defineSymbol(math, ams, open, "\u250c", "\\@ulcorner", true);
+defineSymbol(math, ams, close, "\u2510", "\\@urcorner", true);
+defineSymbol(math, ams, open, "\u2514", "\\@llcorner", true);
+defineSymbol(math, ams, close, "\u2518", "\\@lrcorner", true); // AMS Binary Relations
 
 defineSymbol(math, ams, rel, "\u2266", "\\leqq", true);
 defineSymbol(math, ams, rel, "\u2a7d", "\\leqslant", true);
@@ -4322,30 +4467,24 @@ defineSymbol(math, main, bin, "\u2228", "\\lor");
 defineSymbol(math, main, bin, "\u2227", "\\wedge", true);
 defineSymbol(math, main, bin, "\u2228", "\\vee", true);
 defineSymbol(math, main, textord, "\u221a", "\\surd");
-defineSymbol(math, main, open, "(", "(");
-defineSymbol(math, main, open, "[", "[");
 defineSymbol(math, main, open, "\u27e8", "\\langle", true);
 defineSymbol(math, main, open, "\u2223", "\\lvert");
 defineSymbol(math, main, open, "\u2225", "\\lVert");
-defineSymbol(math, main, close, ")", ")");
-defineSymbol(math, main, close, "]", "]");
 defineSymbol(math, main, close, "?", "?");
 defineSymbol(math, main, close, "!", "!");
 defineSymbol(math, main, close, "\u27e9", "\\rangle", true);
 defineSymbol(math, main, close, "\u2223", "\\rvert");
 defineSymbol(math, main, close, "\u2225", "\\rVert");
 defineSymbol(math, main, rel, "=", "=");
-defineSymbol(math, main, rel, "<", "<");
-defineSymbol(math, main, rel, ">", ">");
 defineSymbol(math, main, rel, ":", ":");
 defineSymbol(math, main, rel, "\u2248", "\\approx", true);
 defineSymbol(math, main, rel, "\u2245", "\\cong", true);
 defineSymbol(math, main, rel, "\u2265", "\\ge");
 defineSymbol(math, main, rel, "\u2265", "\\geq", true);
 defineSymbol(math, main, rel, "\u2190", "\\gets");
-defineSymbol(math, main, rel, ">", "\\gt");
+defineSymbol(math, main, rel, ">", "\\gt", true);
 defineSymbol(math, main, rel, "\u2208", "\\in", true);
-defineSymbol(math, main, rel, "\u0338", "\\@not");
+defineSymbol(math, main, rel, "\ue020", "\\@not");
 defineSymbol(math, main, rel, "\u2282", "\\subset", true);
 defineSymbol(math, main, rel, "\u2283", "\\supset", true);
 defineSymbol(math, main, rel, "\u2286", "\\subseteq", true);
@@ -4356,7 +4495,7 @@ defineSymbol(math, main, rel, "\u22a8", "\\models");
 defineSymbol(math, main, rel, "\u2190", "\\leftarrow", true);
 defineSymbol(math, main, rel, "\u2264", "\\le");
 defineSymbol(math, main, rel, "\u2264", "\\leq", true);
-defineSymbol(math, main, rel, "<", "\\lt");
+defineSymbol(math, main, rel, "<", "\\lt", true);
 defineSymbol(math, main, rel, "\u2192", "\\rightarrow", true);
 defineSymbol(math, main, rel, "\u2192", "\\to");
 defineSymbol(math, ams, rel, "\u2271", "\\ngeq", true);
@@ -4367,6 +4506,7 @@ defineSymbol(math, main, spacing, "\u00a0", "\\space"); // Ref: LaTeX Source 2e:
 
 defineSymbol(math, main, spacing, "\u00a0", "\\nobreakspace");
 defineSymbol(text$1, main, spacing, "\u00a0", "\\ ");
+defineSymbol(text$1, main, spacing, "\u00a0", " ");
 defineSymbol(text$1, main, spacing, "\u00a0", "~");
 defineSymbol(text$1, main, spacing, "\u00a0", "\\space");
 defineSymbol(text$1, main, spacing, "\u00a0", "\\nobreakspace");
@@ -4398,15 +4538,15 @@ defineSymbol(text$1, main, textord, "}", "\\}");
 defineSymbol(text$1, main, textord, "}", "\\textbraceright");
 defineSymbol(math, main, open, "{", "\\lbrace");
 defineSymbol(math, main, close, "}", "\\rbrace");
-defineSymbol(math, main, open, "[", "\\lbrack");
-defineSymbol(text$1, main, textord, "[", "\\lbrack");
-defineSymbol(math, main, close, "]", "\\rbrack");
-defineSymbol(text$1, main, textord, "]", "\\rbrack");
-defineSymbol(math, main, open, "(", "\\lparen");
-defineSymbol(math, main, close, ")", "\\rparen");
-defineSymbol(text$1, main, textord, "<", "\\textless"); // in T1 fontenc
+defineSymbol(math, main, open, "[", "\\lbrack", true);
+defineSymbol(text$1, main, textord, "[", "\\lbrack", true);
+defineSymbol(math, main, close, "]", "\\rbrack", true);
+defineSymbol(text$1, main, textord, "]", "\\rbrack", true);
+defineSymbol(math, main, open, "(", "\\lparen", true);
+defineSymbol(math, main, close, ")", "\\rparen", true);
+defineSymbol(text$1, main, textord, "<", "\\textless", true); // in T1 fontenc
 
-defineSymbol(text$1, main, textord, ">", "\\textgreater"); // in T1 fontenc
+defineSymbol(text$1, main, textord, ">", "\\textgreater", true); // in T1 fontenc
 
 defineSymbol(math, main, open, "\u230a", "\\lfloor", true);
 defineSymbol(math, main, close, "\u230b", "\\rfloor", true);
@@ -4415,12 +4555,14 @@ defineSymbol(math, main, close, "\u2309", "\\rceil", true);
 defineSymbol(math, main, textord, "\\", "\\backslash");
 defineSymbol(math, main, textord, "\u2223", "|");
 defineSymbol(math, main, textord, "\u2223", "\\vert");
-defineSymbol(text$1, main, textord, "|", "\\textbar"); // in T1 fontenc
+defineSymbol(text$1, main, textord, "|", "\\textbar", true); // in T1 fontenc
 
 defineSymbol(math, main, textord, "\u2225", "\\|");
 defineSymbol(math, main, textord, "\u2225", "\\Vert");
 defineSymbol(text$1, main, textord, "\u2225", "\\textbardbl");
 defineSymbol(text$1, main, textord, "~", "\\textasciitilde");
+defineSymbol(text$1, main, textord, "\\", "\\textbackslash");
+defineSymbol(text$1, main, textord, "^", "\\textasciicircum");
 defineSymbol(math, main, rel, "\u2191", "\\uparrow", true);
 defineSymbol(math, main, rel, "\u21d1", "\\Uparrow", true);
 defineSymbol(math, main, rel, "\u2193", "\\downarrow", true);
@@ -4443,8 +4585,6 @@ defineSymbol(math, main, op, "\u2a02", "\\bigotimes");
 defineSymbol(math, main, op, "\u2a01", "\\bigoplus");
 defineSymbol(math, main, op, "\u2a00", "\\bigodot");
 defineSymbol(math, main, op, "\u222e", "\\oint");
-defineSymbol(math, main, op, "\u222f", "\\oiint");
-defineSymbol(math, main, op, "\u2230", "\\oiiint");
 defineSymbol(math, main, op, "\u2a06", "\\bigsqcup");
 defineSymbol(math, main, op, "\u222b", "\\smallint");
 defineSymbol(text$1, main, inner, "\u2026", "\\textellipsis");
@@ -4465,13 +4605,15 @@ defineSymbol(math, main, accent, "\u02c7", "\\check");
 defineSymbol(math, main, accent, "\u005e", "\\hat");
 defineSymbol(math, main, accent, "\u20d7", "\\vec");
 defineSymbol(math, main, accent, "\u02d9", "\\dot");
-defineSymbol(math, main, accent, "\u02da", "\\mathring");
-defineSymbol(math, main, mathord, "\u0131", "\\imath", true);
-defineSymbol(math, main, mathord, "\u0237", "\\jmath", true);
+defineSymbol(math, main, accent, "\u02da", "\\mathring"); // \imath and \jmath should be invariant to \mathrm, \mathbf, etc., so use PUA
+
+defineSymbol(math, main, mathord, "\ue131", "\\@imath");
+defineSymbol(math, main, mathord, "\ue237", "\\@jmath");
+defineSymbol(math, main, textord, "\u0131", "\u0131");
+defineSymbol(math, main, textord, "\u0237", "\u0237");
 defineSymbol(text$1, main, textord, "\u0131", "\\i", true);
 defineSymbol(text$1, main, textord, "\u0237", "\\j", true);
 defineSymbol(text$1, main, textord, "\u00df", "\\ss", true);
-defineSymbol(text$1, main, textord, "\u00e6", "\\ae", true);
 defineSymbol(text$1, main, textord, "\u00e6", "\\ae", true);
 defineSymbol(text$1, main, textord, "\u0153", "\\oe", true);
 defineSymbol(text$1, main, textord, "\u00f8", "\\o", true);
@@ -4509,34 +4651,31 @@ const ligatures = {
   "``": true,
   "''": true
 };
-defineSymbol(text$1, main, textord, "\u2013", "--");
+defineSymbol(text$1, main, textord, "\u2013", "--", true);
 defineSymbol(text$1, main, textord, "\u2013", "\\textendash");
-defineSymbol(text$1, main, textord, "\u2014", "---");
+defineSymbol(text$1, main, textord, "\u2014", "---", true);
 defineSymbol(text$1, main, textord, "\u2014", "\\textemdash");
-defineSymbol(text$1, main, textord, "\u2018", "`");
+defineSymbol(text$1, main, textord, "\u2018", "`", true);
 defineSymbol(text$1, main, textord, "\u2018", "\\textquoteleft");
-defineSymbol(text$1, main, textord, "\u2019", "'");
+defineSymbol(text$1, main, textord, "\u2019", "'", true);
 defineSymbol(text$1, main, textord, "\u2019", "\\textquoteright");
-defineSymbol(text$1, main, textord, "\u201c", "``");
+defineSymbol(text$1, main, textord, "\u201c", "``", true);
 defineSymbol(text$1, main, textord, "\u201c", "\\textquotedblleft");
-defineSymbol(text$1, main, textord, "\u201d", "''");
+defineSymbol(text$1, main, textord, "\u201d", "''", true);
 defineSymbol(text$1, main, textord, "\u201d", "\\textquotedblright"); //  \degree from gensymb package
 
 defineSymbol(math, main, textord, "\u00b0", "\\degree", true);
 defineSymbol(text$1, main, textord, "\u00b0", "\\degree"); // \textdegree from inputenc package
 
 defineSymbol(text$1, main, textord, "\u00b0", "\\textdegree", true); // TODO: In LaTeX, \pounds can generate a different character in text and math
-// mode, but among our fonts, only Main-Italic defines this character "163".
+// mode, but among our fonts, only Main-Regular defines this character "163".
 
-defineSymbol(math, main, mathord, "\u00a3", "\\pounds");
-defineSymbol(math, main, mathord, "\u00a3", "\\mathsterling", true);
-defineSymbol(text$1, main, mathord, "\u00a3", "\\pounds");
-defineSymbol(text$1, main, mathord, "\u00a3", "\\textsterling", true);
+defineSymbol(math, main, textord, "\u00a3", "\\pounds");
+defineSymbol(math, main, textord, "\u00a3", "\\mathsterling", true);
+defineSymbol(text$1, main, textord, "\u00a3", "\\pounds");
+defineSymbol(text$1, main, textord, "\u00a3", "\\textsterling", true);
 defineSymbol(math, ams, textord, "\u2720", "\\maltese");
-defineSymbol(text$1, ams, textord, "\u2720", "\\maltese");
-defineSymbol(text$1, main, spacing, "\u00a0", "\\ ");
-defineSymbol(text$1, main, spacing, "\u00a0", " ");
-defineSymbol(text$1, main, spacing, "\u00a0", "~"); // There are lots of symbols which are the same, so we add them in afterwards.
+defineSymbol(text$1, ams, textord, "\u2720", "\\maltese"); // There are lots of symbols which are the same, so we add them in afterwards.
 // All of these are textords in math mode
 
 const mathTextSymbols = "0123456789/@.\"";
@@ -4547,7 +4686,7 @@ for (let i = 0; i < mathTextSymbols.length; i++) {
 } // All of these are textords in text mode
 
 
-const textSymbols = "0123456789!@*()-=+[]<>|\";:?/.,";
+const textSymbols = "0123456789!@*()-=+\";:?/.,";
 
 for (let i = 0; i < textSymbols.length; i++) {
   const ch = textSymbols.charAt(i);
@@ -4561,12 +4700,31 @@ for (let i = 0; i < letters.length; i++) {
   const ch = letters.charAt(i);
   defineSymbol(math, main, mathord, ch, ch);
   defineSymbol(text$1, main, textord, ch, ch);
-} // The next loop loads wide (surrogate pair) characters.
+} // Blackboard bold and script letters in Unicode range
+
+
+defineSymbol(math, ams, textord, "C", "\u2102"); // blackboard bold
+
+defineSymbol(text$1, ams, textord, "C", "\u2102");
+defineSymbol(math, ams, textord, "H", "\u210D");
+defineSymbol(text$1, ams, textord, "H", "\u210D");
+defineSymbol(math, ams, textord, "N", "\u2115");
+defineSymbol(text$1, ams, textord, "N", "\u2115");
+defineSymbol(math, ams, textord, "P", "\u2119");
+defineSymbol(text$1, ams, textord, "P", "\u2119");
+defineSymbol(math, ams, textord, "Q", "\u211A");
+defineSymbol(text$1, ams, textord, "Q", "\u211A");
+defineSymbol(math, ams, textord, "R", "\u211D");
+defineSymbol(text$1, ams, textord, "R", "\u211D");
+defineSymbol(math, ams, textord, "Z", "\u2124");
+defineSymbol(text$1, ams, textord, "Z", "\u2124");
+defineSymbol(math, main, mathord, "h", "\u210E"); // italic h, Planck constant
+
+defineSymbol(text$1, main, mathord, "h", "\u210E"); // The next loop loads wide (surrogate pair) characters.
 // We support some letters in the Unicode range U+1D400 to U+1D7FF,
 // Mathematical Alphanumeric Symbols.
 // Some editors do not deal well with wide characters. So don't write the
 // string into this file. Instead, create the string from the surrogate pair.
-
 
 let wideChar = "";
 
@@ -4653,22 +4811,13 @@ for (let i = 0; i < 10; i++) {
 // TODO(edemaine): Fix this.
 
 
-const extraLatin = "ÇÐÞçþ";
+const extraLatin = "\u00c7\u00d0\u00de\u00e7\u00fe";
 
 for (let i = 0; i < extraLatin.length; i++) {
   const ch = extraLatin.charAt(i);
   defineSymbol(math, main, mathord, ch, ch);
   defineSymbol(text$1, main, textord, ch, ch);
 }
-
-defineSymbol(text$1, main, textord, "ð", "ð"); // Unicode versions of existing characters
-
-defineSymbol(text$1, main, textord, "\u2013", "–");
-defineSymbol(text$1, main, textord, "\u2014", "—");
-defineSymbol(text$1, main, textord, "\u2018", "‘");
-defineSymbol(text$1, main, textord, "\u2019", "’");
-defineSymbol(text$1, main, textord, "\u201c", "“");
-defineSymbol(text$1, main, textord, "\u201d", "”");
 
 /**
  * This file provides support for Unicode range U+1D400 to U+1D7FF,
@@ -4689,8 +4838,8 @@ defineSymbol(text$1, main, textord, "\u201d", "”");
 
 const wideLatinLetterData = [["mathbf", "textbf", "Main-Bold"], // A-Z bold upright
 ["mathbf", "textbf", "Main-Bold"], // a-z bold upright
-["mathdefault", "textit", "Math-Italic"], // A-Z italic
-["mathdefault", "textit", "Math-Italic"], // a-z italic
+["mathnormal", "textit", "Math-Italic"], // A-Z italic
+["mathnormal", "textit", "Math-Italic"], // a-z italic
 ["boldsymbol", "boldsymbol", "Main-BoldItalic"], // A-Z bold italic
 ["boldsymbol", "boldsymbol", "Main-BoldItalic"], // a-z bold italic
 // Map fancy A-Z letters to script, not calligraphic.
@@ -4775,7 +4924,8 @@ const sizeMultipliers = [// fontMetrics.js:getGlobalMetrics also uses size index
 
 const sizeAtStyle = function sizeAtStyle(size, style) {
   return style.size < 2 ? size : sizeStyleMap[size - 1][style.size - 1];
-};
+}; // In these types, "" (empty string) means "no change".
+
 
 /**
  * This is the main options class. It contains the current style, size, color,
@@ -4804,6 +4954,7 @@ class Options {
     this.fontShape = void 0;
     this.sizeMultiplier = void 0;
     this.maxSize = void 0;
+    this.minRuleThickness = void 0;
     this._fontMetrics = void 0;
     this.style = data.style;
     this.color = data.color;
@@ -4816,6 +4967,7 @@ class Options {
     this.fontShape = data.fontShape || '';
     this.sizeMultiplier = sizeMultipliers[this.size - 1];
     this.maxSize = data.maxSize;
+    this.minRuleThickness = data.minRuleThickness;
     this._fontMetrics = undefined;
   }
   /**
@@ -4835,7 +4987,8 @@ class Options {
       fontFamily: this.fontFamily,
       fontWeight: this.fontWeight,
       fontShape: this.fontShape,
-      maxSize: this.maxSize
+      maxSize: this.maxSize,
+      minRuleThickness: this.minRuleThickness
     };
 
     for (const key in extension) {
@@ -5043,20 +5196,13 @@ class Options {
     return this._fontMetrics;
   }
   /**
-   * A map of color names to CSS colors.
-   * TODO(emily): Remove this when we have real macros
+   * Gets the CSS color of the current options object
    */
 
 
-  /**
-   * Gets the CSS color of the current options object, accounting for the
-   * `colorMap`.
-   */
   getColor() {
     if (this.phantom) {
       return "transparent";
-    } else if (this.color != null && Options.colorMap.hasOwnProperty(this.color)) {
-      return Options.colorMap[this.color];
     } else {
       return this.color;
     }
@@ -5065,64 +5211,6 @@ class Options {
 }
 
 Options.BASESIZE = 6;
-Options.colorMap = {
-  "katex-blue": "#6495ed",
-  "katex-orange": "#ffa500",
-  "katex-pink": "#ff00af",
-  "katex-red": "#df0030",
-  "katex-green": "#28ae7b",
-  "katex-gray": "gray",
-  "katex-purple": "#9d38bd",
-  "katex-blueA": "#ccfaff",
-  "katex-blueB": "#80f6ff",
-  "katex-blueC": "#63d9ea",
-  "katex-blueD": "#11accd",
-  "katex-blueE": "#0c7f99",
-  "katex-tealA": "#94fff5",
-  "katex-tealB": "#26edd5",
-  "katex-tealC": "#01d1c1",
-  "katex-tealD": "#01a995",
-  "katex-tealE": "#208170",
-  "katex-greenA": "#b6ffb0",
-  "katex-greenB": "#8af281",
-  "katex-greenC": "#74cf70",
-  "katex-greenD": "#1fab54",
-  "katex-greenE": "#0d923f",
-  "katex-goldA": "#ffd0a9",
-  "katex-goldB": "#ffbb71",
-  "katex-goldC": "#ff9c39",
-  "katex-goldD": "#e07d10",
-  "katex-goldE": "#a75a05",
-  "katex-redA": "#fca9a9",
-  "katex-redB": "#ff8482",
-  "katex-redC": "#f9685d",
-  "katex-redD": "#e84d39",
-  "katex-redE": "#bc2612",
-  "katex-maroonA": "#ffbde0",
-  "katex-maroonB": "#ff92c6",
-  "katex-maroonC": "#ed5fa6",
-  "katex-maroonD": "#ca337c",
-  "katex-maroonE": "#9e034e",
-  "katex-purpleA": "#ddd7ff",
-  "katex-purpleB": "#c6b9fc",
-  "katex-purpleC": "#aa87ff",
-  "katex-purpleD": "#7854ab",
-  "katex-purpleE": "#543b78",
-  "katex-mintA": "#f5f9e8",
-  "katex-mintB": "#edf2df",
-  "katex-mintC": "#e0e5cc",
-  "katex-grayA": "#f6f7f7",
-  "katex-grayB": "#f0f1f2",
-  "katex-grayC": "#e3e5e6",
-  "katex-grayD": "#d6d8da",
-  "katex-grayE": "#babec2",
-  "katex-grayF": "#888d93",
-  "katex-grayG": "#626569",
-  "katex-grayH": "#3b3e40",
-  "katex-grayI": "#21242c",
-  "katex-kaBlue": "#314453",
-  "katex-kaGreen": "#71B307"
-};
 
 /**
  * This file does conversion between units.  In particular, it provides
@@ -5232,15 +5320,11 @@ const calculateSize = function calculateSize(sizeValue, options) {
 };
 
 /* eslint no-console:0 */
-// The following have to be loaded from Main-Italic font, using class mathit
-const mathitLetters = ["\\imath", "ı", // dotless i
-"\\jmath", "ȷ", // dotless j
-"\\pounds", "\\mathsterling", "\\textsterling", "£"];
+
 /**
  * Looks up the given symbol in fontMetrics, after applying any symbol
  * replacements defined in symbol.js
  */
-
 const lookupSymbol = function lookupSymbol(value, // TODO(#963): Use a union type for this.
 fontName, mode) {
   // Replace the value with its replaced value from symbol.js
@@ -5281,7 +5365,7 @@ const makeSymbol = function makeSymbol(value, fontName, mode, options, classes) 
     symbolNode = new SymbolNode(value, metrics.height, metrics.depth, italic, metrics.skew, metrics.width, classes);
   } else {
     // TODO(emily): Figure out a good way to only print this in development
-    typeof console !== "undefined" && console.warn("No character metrics for '" + value + "' in style '" + fontName + "'");
+    typeof console !== "undefined" && console.warn("No character metrics " + `for '${value}' in style '${fontName}' and mode '${mode}'`);
     symbolNode = new SymbolNode(value, 0, 0, 0, 0, 0, classes);
   }
 
@@ -5304,12 +5388,14 @@ const makeSymbol = function makeSymbol(value, fontName, mode, options, classes) 
 /**
  * Makes a symbol in Main-Regular or AMS-Regular.
  * Used for rel, bin, open, close, inner, and punct.
- *
- * TODO(#953): Make `options` mandatory and always pass it in.
  */
 
 
-const mathsym = function mathsym(value, mode, options, classes = []) {
+const mathsym = function mathsym(value, mode, options, classes) {
+  if (classes === void 0) {
+    classes = [];
+  }
+
   // Decide what font to render the symbol in by its entry in the symbols
   // table.
   // Have a special case for when the value = \ because the \ is used as a
@@ -5317,60 +5403,12 @@ const mathsym = function mathsym(value, mode, options, classes = []) {
   // text ordinal and is therefore not present as a symbol in the symbols
   // table for text, as well as a special case for boldsymbol because it
   // can be used for bold + and -
-  if (options && options.font && options.font === "boldsymbol" && lookupSymbol(value, "Main-Bold", mode).metrics) {
+  if (options.font === "boldsymbol" && lookupSymbol(value, "Main-Bold", mode).metrics) {
     return makeSymbol(value, "Main-Bold", mode, options, classes.concat(["mathbf"]));
   } else if (value === "\\" || symbols[mode][value].font === "main") {
     return makeSymbol(value, "Main-Regular", mode, options, classes);
   } else {
     return makeSymbol(value, "AMS-Regular", mode, options, classes.concat(["amsrm"]));
-  }
-};
-/**
- * Determines which of the two font names (Main-Italic and Math-Italic) and
- * corresponding style tags (maindefault or mathit) to use for default math font,
- * depending on the symbol.
- */
-
-
-const mathdefault = function mathdefault(value, mode, options, classes) {
-  if (/[0-9]/.test(value.charAt(0)) || // glyphs for \imath and \jmath do not exist in Math-Italic so we
-  // need to use Main-Italic instead
-  utils.contains(mathitLetters, value)) {
-    return {
-      fontName: "Main-Italic",
-      fontClass: "mathit"
-    };
-  } else {
-    return {
-      fontName: "Math-Italic",
-      fontClass: "mathdefault"
-    };
-  }
-};
-/**
- * Determines which of the font names (Main-Italic, Math-Italic, and Caligraphic)
- * and corresponding style tags (mathit, mathdefault, or mathcal) to use for font
- * "mathnormal", depending on the symbol.  Use this function instead of fontMap for
- * font "mathnormal".
- */
-
-
-const mathnormal = function mathnormal(value, mode, options, classes) {
-  if (utils.contains(mathitLetters, value)) {
-    return {
-      fontName: "Main-Italic",
-      fontClass: "mathit"
-    };
-  } else if (/[0-9]/.test(value.charAt(0))) {
-    return {
-      fontName: "Caligraphic-Regular",
-      fontClass: "mathcal"
-    };
-  } else {
-    return {
-      fontName: "Math-Italic",
-      fontClass: "mathdefault"
-    };
   }
 };
 /**
@@ -5381,8 +5419,8 @@ const mathnormal = function mathnormal(value, mode, options, classes) {
  */
 
 
-const boldsymbol = function boldsymbol(value, mode, options, classes) {
-  if (lookupSymbol(value, "Math-BoldItalic", mode).metrics) {
+const boldsymbol = function boldsymbol(value, mode, options, classes, type) {
+  if (type !== "textord" && lookupSymbol(value, "Math-BoldItalic", mode).metrics) {
     return {
       fontName: "Math-BoldItalic",
       fontClass: "boldsymbol"
@@ -5420,13 +5458,10 @@ const makeOrd = function makeOrd(group, options, type) {
     let fontName;
     let fontClasses;
 
-    if (fontOrFamily === "boldsymbol" || fontOrFamily === "mathnormal") {
-      const fontData = fontOrFamily === "boldsymbol" ? boldsymbol(text, mode, options, classes) : mathnormal(text, mode, options, classes);
+    if (fontOrFamily === "boldsymbol") {
+      const fontData = boldsymbol(text, mode, options, classes, type);
       fontName = fontData.fontName;
       fontClasses = [fontData.fontClass];
-    } else if (utils.contains(mathitLetters, text)) {
-      fontName = "Main-Italic";
-      fontClasses = ["mathit"];
     } else if (isFont) {
       fontName = fontMap[fontOrFamily].fontName;
       fontClasses = [fontOrFamily];
@@ -5451,8 +5486,7 @@ const makeOrd = function makeOrd(group, options, type) {
 
 
   if (type === "mathord") {
-    const fontLookup = mathdefault(text, mode, options, classes);
-    return makeSymbol(text, fontLookup.fontName, mode, options, classes.concat([fontLookup.fontClass]));
+    return makeSymbol(text, "Math-Italic", mode, options, classes.concat(["mathnormal"]));
   } else if (type === "textord") {
     const font = symbols[mode][text] && symbols[mode][text].font;
 
@@ -5576,7 +5610,7 @@ const makeSvgSpan = (classes, children, options, style) => new Span(classes, chi
 
 const makeLineSpan = function makeLineSpan(className, options, thickness) {
   const line = makeSpan([className], [], options);
-  line.height = thickness || options.fontMetrics().defaultRuleThickness;
+  line.height = Math.max(thickness || options.fontMetrics().defaultRuleThickness, options.minRuleThickness);
   line.style.borderBottomWidth = line.height + "em";
   line.maxFontSize = 1.0;
   return line;
@@ -5864,12 +5898,13 @@ const fontMap = {
     variant: "italic",
     fontName: "Main-Italic"
   },
-  // Default math font, "mathnormal" and "boldsymbol" are missing because they
-  // require the use of several fonts: Main-Italic and Math-Italic for default
-  // math font, Main-Italic, Math-Italic, Caligraphic for "mathnormal", and
-  // Math-BoldItalic and Main-Bold for "boldsymbol".  This is handled by a
-  // special case in makeOrd which ends up calling mathdefault, mathnormal,
-  // and boldsymbol.
+  "mathnormal": {
+    variant: "italic",
+    fontName: "Math-Italic"
+  },
+  // "boldsymbol" is missing because they require the use of multiple fonts:
+  // Math-BoldItalic and Main-Bold.  This is handled by a special case in
+  // makeOrd which ends up calling boldsymbol.
   // families
   "mathbb": {
     variant: "double-struck",
@@ -5904,7 +5939,9 @@ const svgData = {
   // oval to overlay the integrand
   oiintSize2: ["oiintSize2", 1.472, 0.659],
   oiiintSize1: ["oiiintSize1", 1.304, 0.499],
-  oiiintSize2: ["oiiintSize2", 1.98, 0.659]
+  oiiintSize2: ["oiiintSize2", 1.98, 0.659],
+  leftParenInner: ["leftParenInner", 0.875, 0.3],
+  rightParenInner: ["rightParenInner", 0.875, 0.3]
 };
 
 const staticSvg = function staticSvg(value, options) {
@@ -5946,86 +5983,6 @@ var buildCommon = {
   svgData,
   tryCombineChars
 };
-
-/**
- * Asserts that the node is of the given type and returns it with stricter
- * typing. Throws if the node's type does not match.
- */
-function assertNodeType(node, type) {
-  const typedNode = checkNodeType(node, type);
-
-  if (!typedNode) {
-    throw new Error(`Expected node of type ${type}, but got ` + (node ? `node of type ${node.type}` : String(node)));
-  } // $FlowFixMe: Unsure why.
-
-
-  return typedNode;
-}
-/**
- * Returns the node more strictly typed iff it is of the given type. Otherwise,
- * returns null.
- */
-
-function checkNodeType(node, type) {
-  if (node && node.type === type) {
-    // The definition of ParseNode<TYPE> doesn't communicate to flow that
-    // `type: TYPE` (as that's not explicitly mentioned anywhere), though that
-    // happens to be true for all our value types.
-    // $FlowFixMe
-    return node;
-  }
-
-  return null;
-}
-/**
- * Asserts that the node is of the given type and returns it with stricter
- * typing. Throws if the node's type does not match.
- */
-
-function assertAtomFamily(node, family) {
-  const typedNode = checkAtomFamily(node, family);
-
-  if (!typedNode) {
-    throw new Error(`Expected node of type "atom" and family "${family}", but got ` + (node ? node.type === "atom" ? `atom of family ${node.family}` : `node of type ${node.type}` : String(node)));
-  }
-
-  return typedNode;
-}
-/**
- * Returns the node more strictly typed iff it is of the given type. Otherwise,
- * returns null.
- */
-
-function checkAtomFamily(node, family) {
-  return node && node.type === "atom" && node.family === family ? node : null;
-}
-/**
- * Returns the node more strictly typed iff it is of the given type. Otherwise,
- * returns null.
- */
-
-function assertSymbolNodeType(node) {
-  const typedNode = checkSymbolNodeType(node);
-
-  if (!typedNode) {
-    throw new Error(`Expected node of symbol group type, but got ` + (node ? `node of type ${node.type}` : String(node)));
-  }
-
-  return typedNode;
-}
-/**
- * Returns the node more strictly typed iff it is of the given type. Otherwise,
- * returns null.
- */
-
-function checkSymbolNodeType(node) {
-  if (node && (node.type === "atom" || NON_ATOMS.hasOwnProperty(node.type))) {
-    // $FlowFixMe
-    return node;
-  }
-
-  return null;
-}
 
 /**
  * Describes spaces between different classes of atoms.
@@ -6120,6 +6077,21 @@ const tightSpacings = {
   }
 };
 
+/** Context provided to function handlers for error messages. */
+// Note: reverse the order of the return type union will cause a flow error.
+// See https://github.com/facebook/flow/issues/3663.
+// More general version of `HtmlBuilder` for nodes (e.g. \sum, accent types)
+// whose presence impacts super/subscripting. In this case, ParseNode<"supsub">
+// delegates its HTML building to the HtmlBuilder corresponding to these nodes.
+
+/**
+ * Final function spec for use at parse time.
+ * This is almost identical to `FunctionPropSpec`, except it
+ * 1. includes the function handler, and
+ * 2. requires all arguments except argTypes.
+ * It is generated by `defineFunction()` below.
+ */
+
 /**
  * All registered functions.
  * `functions.js` just exports this same dictionary again and makes it public.
@@ -6138,15 +6110,13 @@ const _htmlGroupBuilders = {};
  */
 
 const _mathmlGroupBuilders = {};
-function defineFunction({
-  type,
-  nodeType,
-  names,
-  props,
-  handler,
-  htmlBuilder,
-  mathmlBuilder
-}) {
+function defineFunction(_ref) {
+  let type = _ref.type,
+      names = _ref.names,
+      props = _ref.props,
+      handler = _ref.handler,
+      htmlBuilder = _ref.htmlBuilder,
+      mathmlBuilder = _ref.mathmlBuilder;
   // Set default values of functions
   const data = {
     type,
@@ -6157,15 +6127,10 @@ function defineFunction({
     allowedInMath: props.allowedInMath === undefined ? true : props.allowedInMath,
     numOptionalArgs: props.numOptionalArgs || 0,
     infix: !!props.infix,
-    consumeMode: props.consumeMode,
     handler: handler
   };
 
   for (let i = 0; i < names.length; ++i) {
-    // TODO: The value type of _functions should be a type union of all
-    // possible `FunctionSpec<>` possibilities instead of `FunctionSpec<*>`,
-    // which is an existential type.
-    // $FlowFixMe
     _functions[names[i]] = data;
   }
 
@@ -6185,11 +6150,10 @@ function defineFunction({
  * stand-alone handler provided to `defineFunction`).
  */
 
-function defineFunctionBuilders({
-  type,
-  htmlBuilder,
-  mathmlBuilder
-}) {
+function defineFunctionBuilders(_ref2) {
+  let type = _ref2.type,
+      htmlBuilder = _ref2.htmlBuilder,
+      mathmlBuilder = _ref2.mathmlBuilder;
   defineFunction({
     type,
     names: [],
@@ -6208,8 +6172,7 @@ function defineFunctionBuilders({
 // list of elements, we normalize for different kinds of arguments
 
 const ordargument = function ordargument(arg) {
-  const node = checkNodeType(arg, "ordgroup");
-  return node ? node.body : [arg];
+  return arg.type === "ordgroup" ? arg.body : [arg];
 };
 
 /**
@@ -6222,25 +6185,8 @@ const makeSpan$1 = buildCommon.makeSpan; // Binary atoms (first class `mbin`) ch
 // depending on their surroundings. See TeXbook pg. 442-446, Rules 5 and 6,
 // and the text before Rule 19.
 
-const isBinLeftCanceller = function isBinLeftCanceller(node, isRealGroup) {
-  // TODO: This code assumes that a node's math class is the first element
-  // of its `classes` array. A later cleanup should ensure this, for
-  // instance by changing the signature of `makeSpan`.
-  if (node) {
-    return utils.contains(["mbin", "mopen", "mrel", "mop", "mpunct"], getTypeOfDomTree(node, "right"));
-  } else {
-    return isRealGroup;
-  }
-};
-
-const isBinRightCanceller = function isBinRightCanceller(node, isRealGroup) {
-  if (node) {
-    return utils.contains(["mrel", "mclose", "mpunct"], getTypeOfDomTree(node, "left"));
-  } else {
-    return isRealGroup;
-  }
-};
-
+const binLeftCanceller = ["leftmost", "mbin", "mopen", "mrel", "mop", "mpunct"];
+const binRightCanceller = ["rightmost", "mrel", "mclose", "mpunct"];
 const styleMap = {
   "display": Style$1.DISPLAY,
   "text": Style$1.TEXT,
@@ -6266,111 +6212,168 @@ const DomEnum = {
  * a partial group (e.g. one created by \color). `surrounding` is an array
  * consisting type of nodes that will be added to the left and right.
  */
-const buildExpression = function buildExpression(expression, options, isRealGroup, surrounding = [null, null]) {
+const buildExpression = function buildExpression(expression, options, isRealGroup, surrounding) {
+  if (surrounding === void 0) {
+    surrounding = [null, null];
+  }
+
   // Parse expressions into `groups`.
-  const rawGroups = [];
+  const groups = [];
 
   for (let i = 0; i < expression.length; i++) {
     const output = buildGroup(expression[i], options);
 
     if (output instanceof DocumentFragment) {
       const children = output.children;
-      rawGroups.push(...children);
+      groups.push(...children);
     } else {
-      rawGroups.push(output);
+      groups.push(output);
     }
-  } // At this point `rawGroups` consists entirely of `symbolNode`s and `span`s.
-  // Ignore explicit spaces (e.g., \;, \,) when determining what implicit
-  // spacing should go between atoms of different classes, and add dummy
-  // spans for determining spacings between surrounding atoms.
+  } // If `expression` is a partial group, let the parent handle spacings
+  // to avoid processing groups multiple times.
 
 
-  const nonSpaces = [surrounding[0] ? makeSpan$1([surrounding[0]], [], options) : null, ...rawGroups.filter(group => group && group.classes[0] !== "mspace"), surrounding[1] ? makeSpan$1([surrounding[1]], [], options) : null]; // Before determining what spaces to insert, perform bin cancellation.
+  if (!isRealGroup) {
+    return groups;
+  }
+
+  let glueOptions = options;
+
+  if (expression.length === 1) {
+    const node = expression[0];
+
+    if (node.type === "sizing") {
+      glueOptions = options.havingSize(node.size);
+    } else if (node.type === "styling") {
+      glueOptions = options.havingStyle(styleMap[node.style]);
+    }
+  } // Dummy spans for determining spacings between surrounding atoms.
+  // If `expression` has no atoms on the left or right, class "leftmost"
+  // or "rightmost", respectively, is used to indicate it.
+
+
+  const dummyPrev = makeSpan$1([surrounding[0] || "leftmost"], [], options);
+  const dummyNext = makeSpan$1([surrounding[1] || "rightmost"], [], options); // TODO: These code assumes that a node's math class is the first element
+  // of its `classes` array. A later cleanup should ensure this, for
+  // instance by changing the signature of `makeSpan`.
+  // Before determining what spaces to insert, perform bin cancellation.
   // Binary operators change to ordinary symbols in some contexts.
 
-  for (let i = 1; i < nonSpaces.length - 1; i++) {
-    const nonSpacesI = assert(nonSpaces[i]);
-    const left = getOutermostNode(nonSpacesI, "left");
+  const isRoot = isRealGroup === "root";
+  traverseNonSpaceNodes(groups, (node, prev) => {
+    const prevType = prev.classes[0];
+    const type = node.classes[0];
 
-    if (left.classes[0] === "mbin" && isBinLeftCanceller(nonSpaces[i - 1], isRealGroup)) {
-      left.classes[0] = "mord";
+    if (prevType === "mbin" && utils.contains(binRightCanceller, type)) {
+      prev.classes[0] = "mord";
+    } else if (type === "mbin" && utils.contains(binLeftCanceller, prevType)) {
+      node.classes[0] = "mord";
     }
+  }, {
+    node: dummyPrev
+  }, dummyNext, isRoot);
+  traverseNonSpaceNodes(groups, (node, prev) => {
+    const prevType = getTypeOfDomTree(prev);
+    const type = getTypeOfDomTree(node); // 'mtight' indicates that the node is script or scriptscript style.
 
-    const right = getOutermostNode(nonSpacesI, "right");
+    const space = prevType && type ? node.hasClass("mtight") ? tightSpacings[prevType][type] : spacings[prevType][type] : null;
 
-    if (right.classes[0] === "mbin" && isBinRightCanceller(nonSpaces[i + 1], isRealGroup)) {
-      right.classes[0] = "mord";
+    if (space) {
+      // Insert glue (spacing) after the `prev`.
+      return buildCommon.makeGlue(space, glueOptions);
     }
+  }, {
+    node: dummyPrev
+  }, dummyNext, isRoot);
+  return groups;
+}; // Depth-first traverse non-space `nodes`, calling `callback` with the current and
+// previous node as arguments, optionally returning a node to insert after the
+// previous node. `prev` is an object with the previous node and `insertAfter`
+// function to insert after it. `next` is a node that will be added to the right.
+// Used for bin cancellation and inserting spacings.
+
+const traverseNonSpaceNodes = function traverseNonSpaceNodes(nodes, callback, prev, next, isRoot) {
+  if (next) {
+    // temporarily append the right node, if exists
+    nodes.push(next);
   }
 
-  const groups = [];
-  let j = 0;
+  let i = 0;
 
-  for (let i = 0; i < rawGroups.length; i++) {
-    groups.push(rawGroups[i]); // For any group that is not a space, get the next non-space.  Then
-    // lookup what implicit space should be placed between those atoms and
-    // add it to groups.
+  for (; i < nodes.length; i++) {
+    const node = nodes[i];
+    const partialGroup = checkPartialGroup(node);
 
-    if (rawGroups[i].classes[0] !== "mspace" && j < nonSpaces.length - 1) {
-      // if current non-space node is left dummy span, add a glue before
-      // first real non-space node
-      if (j === 0) {
-        groups.pop();
-        i--;
-      } // Get the type of the current non-space node.  If it's a document
-      // fragment, get the type of the rightmost node in the fragment.
+    if (partialGroup) {
+      // Recursive DFS
+      // $FlowFixMe: make nodes a $ReadOnlyArray by returning a new array
+      traverseNonSpaceNodes(partialGroup.children, callback, prev, null, isRoot);
+      continue;
+    } // Ignore explicit spaces (e.g., \;, \,) when determining what implicit
+    // spacing should go between atoms of different classes
 
 
-      const left = getTypeOfDomTree(nonSpaces[j], "right"); // Get the type of the next non-space node.  If it's a document
-      // fragment, get the type of the leftmost node in the fragment.
+    const nonspace = !node.hasClass("mspace");
 
-      const right = getTypeOfDomTree(nonSpaces[j + 1], "left"); // We use buildExpression inside of sizingGroup, but it returns a
-      // document fragment of elements.  sizingGroup sets `isRealGroup`
-      // to false to avoid processing spans multiple times.
+    if (nonspace) {
+      const result = callback(node, prev.node);
 
-      if (left && right && isRealGroup) {
-        const nonSpacesJp1 = assert(nonSpaces[j + 1]);
-        const space = isLeftTight(nonSpacesJp1) ? tightSpacings[left][right] : spacings[left][right];
-
-        if (space) {
-          let glueOptions = options;
-
-          if (expression.length === 1) {
-            const node = checkNodeType(expression[0], "sizing") || checkNodeType(expression[0], "styling");
-
-            if (!node) ; else if (node.type === "sizing") {
-              glueOptions = options.havingSize(node.size);
-            } else if (node.type === "styling") {
-              glueOptions = options.havingStyle(styleMap[node.style]);
-            }
-          }
-
-          groups.push(buildCommon.makeGlue(space, glueOptions));
+      if (result) {
+        if (prev.insertAfter) {
+          prev.insertAfter(result);
+        } else {
+          // insert at front
+          nodes.unshift(result);
+          i++;
         }
       }
-
-      j++;
     }
+
+    if (nonspace) {
+      prev.node = node;
+    } else if (isRoot && node.hasClass("newline")) {
+      prev.node = makeSpan$1(["leftmost"]); // treat like beginning of line
+    }
+
+    prev.insertAfter = (index => n => {
+      nodes.splice(index + 1, 0, n);
+      i++;
+    })(i);
   }
 
-  return groups;
+  if (next) {
+    nodes.pop();
+  }
+}; // Check if given node is a partial group, i.e., does not affect spacing around.
+
+
+const checkPartialGroup = function checkPartialGroup(node) {
+  if (node instanceof DocumentFragment || node instanceof Anchor || node instanceof Span && node.hasClass("enclosing")) {
+    return node;
+  }
+
+  return null;
 }; // Return the outermost node of a domTree.
 
+
 const getOutermostNode = function getOutermostNode(node, side) {
-  if (node instanceof DocumentFragment || node instanceof Anchor) {
-    const children = node.children;
+  const partialGroup = checkPartialGroup(node);
+
+  if (partialGroup) {
+    const children = partialGroup.children;
 
     if (children.length) {
       if (side === "right") {
         return getOutermostNode(children[children.length - 1], "right");
       } else if (side === "left") {
-        return getOutermostNode(children[0], "right");
+        return getOutermostNode(children[0], "left");
       }
     }
   }
 
   return node;
 }; // Return math atom class (mclass) of a domTree.
+// If `side` is given, it will get the type of the outermost node at given side.
 
 
 const getTypeOfDomTree = function getTypeOfDomTree(node, side) {
@@ -6378,18 +6381,13 @@ const getTypeOfDomTree = function getTypeOfDomTree(node, side) {
     return null;
   }
 
-  node = getOutermostNode(node, side); // This makes a lot of assumptions as to where the type of atom
+  if (side) {
+    node = getOutermostNode(node, side);
+  } // This makes a lot of assumptions as to where the type of atom
   // appears.  We should do a better job of enforcing this.
 
-  return DomEnum[node.classes[0]] || null;
-}; // If `node` is an atom return whether it's been assigned the mtight class.
-// If `node` is a document fragment, return the value of isLeftTight() for the
-// leftmost node in the fragment.
-// 'mtight' indicates that the node is script or scriptscript style.
 
-const isLeftTight = function isLeftTight(node) {
-  node = getOutermostNode(node, "left");
-  return node.hasClass("mtight");
+  return DomEnum[node.classes[0]] || null;
 };
 const makeNullDelimiter = function makeNullDelimiter(options, classes) {
   const moreClasses = ["nulldelimiter"].concat(options.baseSizingClasses());
@@ -6435,10 +6433,6 @@ function buildHTMLUnbreakable(children, options) {
   const body = makeSpan$1(["base"], children, options); // Add strut, which ensures that the top of the HTML element falls at
   // the height of the expression, and the bottom of the HTML element
   // falls at the depth of the expression.
-  // We used to have separate top and bottom struts, where the bottom strut
-  // would like to use `vertical-align: top`, but in IE 9 this lowers the
-  // baseline of the box to the bottom of this strut (instead of staying in
-  // the normal place) so we use an absolute value for vertical-align instead.
 
   const strut = makeSpan$1(["strut"]);
   strut.style.height = body.height + body.depth + "em";
@@ -6462,7 +6456,7 @@ function buildHTML(tree, options) {
   } // Build the expression contained in the tree
 
 
-  const expression = buildExpression(tree, options, true);
+  const expression = buildExpression(tree, options, "root");
   const children = []; // Create one base node for each chunk between potential line breaks.
   // The TeXBook [p.173] says "A formula will be broken only after a
   // relation symbol like $=$ or $<$ or $\rightarrow$, or after a binary
@@ -6477,10 +6471,10 @@ function buildHTML(tree, options) {
 
     if (expression[i].hasClass("mbin") || expression[i].hasClass("mrel") || expression[i].hasClass("allowbreak")) {
       // Put any post-operator glue on same line as operator.
-      // Watch for \nobreak along the way.
+      // Watch for \nobreak along the way, and stop at \newline.
       let nobreak = false;
 
-      while (i < expression.length - 1 && expression[i + 1].hasClass("mspace")) {
+      while (i < expression.length - 1 && expression[i + 1].hasClass("mspace") && !expression[i + 1].hasClass("newline")) {
         i++;
         parts.push(expression[i]);
 
@@ -6638,11 +6632,9 @@ class MathNode {
  */
 
 class TextNode {
-  constructor(text, needsEscape = true) {
+  constructor(text) {
     this.text = void 0;
-    this.needsEscape = void 0;
     this.text = text;
-    this.needsEscape = needsEscape;
   }
   /**
    * Converts the text node into a DOM text node.
@@ -6650,7 +6642,7 @@ class TextNode {
 
 
   toNode() {
-    return document.createTextNode(this.toText());
+    return document.createTextNode(this.text);
   }
   /**
    * Converts the text node into escaped HTML markup
@@ -6659,16 +6651,16 @@ class TextNode {
 
 
   toMarkup() {
-    return this.toText();
+    return utils.escape(this.toText());
   }
   /**
-   * Converts the text node into an escaped string
+   * Converts the text node into a string
    * (representing the text iteself).
    */
 
 
   toText() {
-    return this.needsEscape ? utils.escape(this.text) : this.text;
+    return this.text;
   }
 
 }
@@ -6685,26 +6677,26 @@ class SpaceNode {
     this.width = void 0;
     this.character = void 0;
     this.width = width; // See https://www.w3.org/TR/2000/WD-MathML2-20000328/chapter6.html
-    // for a table of space-like characters.  We consistently use the
-    // &LongNames; because Unicode does not have single characters for
-    // &ThickSpace; (\u2005\u200a) and all negative spaces.
+    // for a table of space-like characters.  We use Unicode
+    // representations instead of &LongNames; as it's not clear how to
+    // make the latter via document.createTextNode.
 
     if (width >= 0.05555 && width <= 0.05556) {
-      this.character = "&VeryThinSpace;"; // \u200a
+      this.character = "\u200a"; // &VeryThinSpace;
     } else if (width >= 0.1666 && width <= 0.1667) {
-      this.character = "&ThinSpace;"; // \u2009
+      this.character = "\u2009"; // &ThinSpace;
     } else if (width >= 0.2222 && width <= 0.2223) {
-      this.character = "&MediumSpace;"; // \u2005
+      this.character = "\u2005"; // &MediumSpace;
     } else if (width >= 0.2777 && width <= 0.2778) {
-      this.character = "&ThickSpace;"; // \u2005\u200a
+      this.character = "\u2005\u200a"; // &ThickSpace;
     } else if (width >= -0.05556 && width <= -0.05555) {
-      this.character = "&NegativeVeryThinSpace;";
+      this.character = "\u200a\u2063"; // &NegativeVeryThinSpace;
     } else if (width >= -0.1667 && width <= -0.1666) {
-      this.character = "&NegativeThinSpace;";
+      this.character = "\u2009\u2063"; // &NegativeThinSpace;
     } else if (width >= -0.2223 && width <= -0.2222) {
-      this.character = "&NegativeMediumSpace;";
+      this.character = "\u205f\u2063"; // &NegativeMediumSpace;
     } else if (width >= -0.2778 && width <= -0.2777) {
-      this.character = "&NegativeThickSpace;";
+      this.character = "\u2005\u2063"; // &NegativeThickSpace;
     } else {
       this.character = null;
     }
@@ -6825,7 +6817,20 @@ const getVariant = function getVariant(group, options) {
   if (font === "mathit") {
     return "italic";
   } else if (font === "boldsymbol") {
-    return "bold-italic";
+    return group.type === "textord" ? "bold" : "bold-italic";
+  } else if (font === "mathbf") {
+    return "bold";
+  } else if (font === "mathbb") {
+    return "double-struck";
+  } else if (font === "mathfrak") {
+    return "fraktur";
+  } else if (font === "mathscr" || font === "mathcal") {
+    // MathML makes no distinction between script and caligrahpic
+    return "script";
+  } else if (font === "mathsf") {
+    return "sans-serif";
+  } else if (font === "mathtt") {
+    return "monospace";
   }
 
   let text = group.text;
@@ -6852,7 +6857,20 @@ const getVariant = function getVariant(group, options) {
  * <mtext> tag.
  */
 
-const buildExpression$1 = function buildExpression(expression, options) {
+const buildExpression$1 = function buildExpression(expression, options, isOrdgroup) {
+  if (expression.length === 1) {
+    const group = buildGroup$1(expression[0], options);
+
+    if (isOrdgroup && group instanceof MathNode && group.type === "mo") {
+      // When TeX writers want to suppress spacing on an operator,
+      // they often put the operator by itself inside braces.
+      group.setAttribute("lspace", "0em");
+      group.setAttribute("rspace", "0em");
+    }
+
+    return [group];
+  }
+
   const groups = [];
   let lastGroup;
 
@@ -6874,13 +6892,24 @@ const buildExpression$1 = function buildExpression(expression, options) {
           lastGroup.children.push(...group.children);
           continue;
         }
+      } else if (lastGroup.type === 'mi' && lastGroup.children.length === 1) {
+        const lastChild = lastGroup.children[0];
+
+        if (lastChild instanceof TextNode && lastChild.text === '\u0338' && (group.type === 'mo' || group.type === 'mi' || group.type === 'mn')) {
+          const child = group.children[0];
+
+          if (child instanceof TextNode && child.text.length > 0) {
+            // Overlay with combining character long solidus
+            child.text = child.text.slice(0, 1) + "\u0338" + child.text.slice(1);
+            groups.pop();
+          }
+        }
       }
     }
 
     groups.push(group);
     lastGroup = group;
-  } // TODO(kevinb): combine \\not with mrels and mords
-
+  }
 
   return groups;
 };
@@ -6889,8 +6918,8 @@ const buildExpression$1 = function buildExpression(expression, options) {
  * if there's more than one.  Returns a single node instead of an array.
  */
 
-const buildExpressionRow = function buildExpressionRow(expression, options) {
-  return makeRow(buildExpression$1(expression, options));
+const buildExpressionRow = function buildExpressionRow(expression, options, isOrdgroup) {
+  return makeRow(buildExpression$1(expression, options, isOrdgroup));
 };
 /**
  * Takes a group from the parser and calls the appropriate groupBuilders function
@@ -6919,7 +6948,7 @@ const buildGroup$1 = function buildGroup(group, options) {
  * we can do appropriate styling.
  */
 
-function buildMathML(tree, texExpression, options) {
+function buildMathML(tree, texExpression, options, isDisplayMode, forMathmlOnly) {
   const expression = buildExpression$1(tree, options); // Wrap up the expression in an mrow so it is presented in the semantics
   // tag correctly, unless it's a single <mrow> or <mtable>.
 
@@ -6935,44 +6964,70 @@ function buildMathML(tree, texExpression, options) {
   const annotation = new mathMLTree.MathNode("annotation", [new mathMLTree.TextNode(texExpression)]);
   annotation.setAttribute("encoding", "application/x-tex");
   const semantics = new mathMLTree.MathNode("semantics", [wrapper, annotation]);
-  const math = new mathMLTree.MathNode("math", [semantics]); // You can't style <math> nodes, so we wrap the node in a span.
+  const math = new mathMLTree.MathNode("math", [semantics]);
+  math.setAttribute("xmlns", "http://www.w3.org/1998/Math/MathML");
+
+  if (isDisplayMode) {
+    math.setAttribute("display", "block");
+  } // You can't style <math> nodes, so we wrap the node in a span.
   // NOTE: The span class is not typed to have <math> nodes as children, and
   // we don't want to make the children type more generic since the children
   // of span are expected to have more fields in `buildHtml` contexts.
-  // $FlowFixMe
 
-  return buildCommon.makeSpan(["katex-mathml"], [math]);
+
+  const wrapperClass = forMathmlOnly ? "katex" : "katex-mathml"; // $FlowFixMe
+
+  return buildCommon.makeSpan([wrapperClass], [math]);
 }
 
 const optionsFromSettings = function optionsFromSettings(settings) {
   return new Options({
     style: settings.displayMode ? Style$1.DISPLAY : Style$1.TEXT,
-    maxSize: settings.maxSize
+    maxSize: settings.maxSize,
+    minRuleThickness: settings.minRuleThickness
   });
+};
+
+const displayWrap = function displayWrap(node, settings) {
+  if (settings.displayMode) {
+    const classes = ["katex-display"];
+
+    if (settings.leqno) {
+      classes.push("leqno");
+    }
+
+    if (settings.fleqn) {
+      classes.push("fleqn");
+    }
+
+    node = buildCommon.makeSpan(classes, [node]);
+  }
+
+  return node;
 };
 
 const buildTree = function buildTree(tree, expression, settings) {
   const options = optionsFromSettings(settings);
-  const mathMLNode = buildMathML(tree, expression, options);
-  const htmlNode = buildHTML(tree, options);
-  const katexNode = buildCommon.makeSpan(["katex"], [mathMLNode, htmlNode]);
+  let katexNode;
 
-  if (settings.displayMode) {
-    return buildCommon.makeSpan(["katex-display"], [katexNode]);
+  if (settings.output === "mathml") {
+    return buildMathML(tree, expression, options, settings.displayMode, true);
+  } else if (settings.output === "html") {
+    const htmlNode = buildHTML(tree, options);
+    katexNode = buildCommon.makeSpan(["katex"], [htmlNode]);
   } else {
-    return katexNode;
+    const mathMLNode = buildMathML(tree, expression, options, settings.displayMode, false);
+    const htmlNode = buildHTML(tree, options);
+    katexNode = buildCommon.makeSpan(["katex"], [mathMLNode, htmlNode]);
   }
+
+  return displayWrap(katexNode, settings);
 };
 const buildHTMLTree = function buildHTMLTree(tree, expression, settings) {
   const options = optionsFromSettings(settings);
   const htmlNode = buildHTML(tree, options);
   const katexNode = buildCommon.makeSpan(["katex"], [htmlNode]);
-
-  if (settings.displayMode) {
-    return buildCommon.makeSpan(["katex-display"], [katexNode]);
-  } else {
-    return katexNode;
-  }
+  return displayWrap(katexNode, settings);
 };
 
 /**
@@ -6991,8 +7046,10 @@ const stretchyCodePoint = {
   overrightarrow: "\u2192",
   underrightarrow: "\u2192",
   xrightarrow: "\u2192",
-  underbrace: "\u23b5",
+  underbrace: "\u23df",
   overbrace: "\u23de",
+  overgroup: "\u23e0",
+  undergroup: "\u23e1",
   overleftrightarrow: "\u2194",
   underleftrightarrow: "\u2194",
   xleftrightarrow: "\u2194",
@@ -7309,15 +7366,53 @@ var stretchy = {
   svgSpan
 };
 
+/**
+ * Asserts that the node is of the given type and returns it with stricter
+ * typing. Throws if the node's type does not match.
+ */
+function assertNodeType(node, type) {
+  if (!node || node.type !== type) {
+    throw new Error(`Expected node of type ${type}, but got ` + (node ? `node of type ${node.type}` : String(node)));
+  }
+
+  return node;
+}
+/**
+ * Returns the node more strictly typed iff it is of the given type. Otherwise,
+ * returns null.
+ */
+
+function assertSymbolNodeType(node) {
+  const typedNode = checkSymbolNodeType(node);
+
+  if (!typedNode) {
+    throw new Error(`Expected node of symbol group type, but got ` + (node ? `node of type ${node.type}` : String(node)));
+  }
+
+  return typedNode;
+}
+/**
+ * Returns the node more strictly typed iff it is of the given type. Otherwise,
+ * returns null.
+ */
+
+function checkSymbolNodeType(node) {
+  if (node && (node.type === "atom" || NON_ATOMS.hasOwnProperty(node.type))) {
+    // $FlowFixMe
+    return node;
+  }
+
+  return null;
+}
+
 // NOTE: Unlike most `htmlBuilder`s, this one handles not only "accent", but
 const htmlBuilder = (grp, options) => {
   // Accents are handled in the TeXbook pg. 443, rule 12.
   let base;
   let group;
-  const supSub = checkNodeType(grp, "supsub");
   let supSubGroup;
 
-  if (supSub) {
+  if (grp && grp.type === "supsub") {
     // If our base is a character box, and we have superscripts and
     // subscripts, the supsub will defer to us. In particular, we want
     // to attach the superscripts and subscripts to the inner body (so
@@ -7326,16 +7421,16 @@ const htmlBuilder = (grp, options) => {
     // sticking the base of the accent into the base of the supsub, and
     // rendering that, while keeping track of where the accent is.
     // The real accent group is the base of the supsub group
-    group = assertNodeType(supSub.base, "accent"); // The character box is the base of the accent group
+    group = assertNodeType(grp.base, "accent"); // The character box is the base of the accent group
 
     base = group.base; // Stick the character box into the base of the supsub group
 
-    supSub.base = base; // Rerender the supsub group with its new base, and store that
+    grp.base = base; // Rerender the supsub group with its new base, and store that
     // result.
 
-    supSubGroup = assertSpan(buildGroup(supSub, options)); // reset original base
+    supSubGroup = assertSpan(buildGroup(grp, options)); // reset original base
 
-    supSub.base = group;
+    grp.base = group;
   } else {
     group = assertNodeType(grp, "accent");
     base = group.base;
@@ -7383,7 +7478,11 @@ const htmlBuilder = (grp, options) => {
       accent = buildCommon.staticSvg("vec", options);
       width = buildCommon.svgData.vec[1];
     } else {
-      accent = buildCommon.makeSymbol(group.label, "Main-Regular", group.mode, options); // Remove the italic correction of the accent, because it only serves to
+      accent = buildCommon.makeOrd({
+        mode: group.mode,
+        text: group.label
+      }, options, "textord");
+      accent = assertSymbolDomNode(accent); // Remove the italic correction of the accent, because it only serves to
       // shift the accent over to a place we don't want.
 
       accent.italic = 0;
@@ -7529,10 +7628,9 @@ defineFunction({
   props: {
     numArgs: 1
   },
-  handler: ({
-    parser,
-    funcName
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const base = args[0];
     return {
       type: "accentUnder",
@@ -7548,8 +7646,8 @@ defineFunction({
     const kern = group.label === "\\utilde" ? 0.12 : 0; // Generate the vlist, with the appropriate kerns
 
     const vlist = buildCommon.makeVList({
-      positionType: "bottom",
-      positionData: accentBody.height + kern,
+      positionType: "top",
+      positionData: innerGroup.height,
       children: [{
         type: "elem",
         elem: accentBody,
@@ -7572,7 +7670,15 @@ defineFunction({
   }
 });
 
-// Stretchy arrows with an optional argument
+// Helper function
+const paddedNode = group => {
+  const node = new mathMLTree.MathNode("mpadded", group ? [group] : []);
+  node.setAttribute("width", "+0.6em");
+  node.setAttribute("lspace", "0.3em");
+  return node;
+}; // Stretchy arrows with an optional argument
+
+
 defineFunction({
   type: "xArrow",
   names: ["\\xleftarrow", "\\xrightarrow", "\\xLeftarrow", "\\xRightarrow", "\\xleftrightarrow", "\\xLeftrightarrow", "\\xhookleftarrow", "\\xhookrightarrow", "\\xmapsto", "\\xrightharpoondown", "\\xrightharpoonup", "\\xleftharpoondown", "\\xleftharpoonup", "\\xrightleftharpoons", "\\xleftrightharpoons", "\\xlongequal", "\\xtwoheadrightarrow", "\\xtwoheadleftarrow", "\\xtofrom", // The next 3 functions are here to support the mhchem extension.
@@ -7583,10 +7689,9 @@ defineFunction({
     numOptionalArgs: 1
   },
 
-  handler({
-    parser,
-    funcName
-  }, args, optArgs) {
+  handler(_ref, args, optArgs) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     return {
       type: "xArrow",
       mode: parser.mode,
@@ -7671,22 +7776,24 @@ defineFunction({
   mathmlBuilder(group, options) {
     const arrowNode = stretchy.mathMLnode(group.label);
     let node;
-    let lowerNode;
 
     if (group.body) {
-      const upperNode = buildGroup$1(group.body, options);
+      const upperNode = paddedNode(buildGroup$1(group.body, options));
 
       if (group.below) {
-        lowerNode = buildGroup$1(group.below, options);
+        const lowerNode = paddedNode(buildGroup$1(group.below, options));
         node = new mathMLTree.MathNode("munderover", [arrowNode, lowerNode, upperNode]);
       } else {
         node = new mathMLTree.MathNode("mover", [arrowNode, upperNode]);
       }
     } else if (group.below) {
-      lowerNode = buildGroup$1(group.below, options);
+      const lowerNode = paddedNode(buildGroup$1(group.below, options));
       node = new mathMLTree.MathNode("munder", [arrowNode, lowerNode]);
     } else {
-      node = new mathMLTree.MathNode("mover", [arrowNode]);
+      // This should never happen.
+      // Parser.js throws an error if there is no argument.
+      node = paddedNode();
+      node = new mathMLTree.MathNode("mover", [arrowNode, node]);
     }
 
     return node;
@@ -7705,9 +7812,8 @@ defineFunction({
     allowedInText: true
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser;
     const arg = assertNodeType(args[0], "ordgroup");
     const group = arg.body;
     let number = "";
@@ -7742,7 +7848,7 @@ const htmlBuilder$1 = (group, options) => {
 };
 
 const mathmlBuilder$1 = (group, options) => {
-  const inner = buildExpression$1(group.body, options);
+  const inner = buildExpression$1(group.body, options.withColor(group.color));
   const node = new mathMLTree.MathNode("mstyle", inner);
   node.setAttribute("mathcolor", group.color);
   return node;
@@ -7758,41 +7864,14 @@ defineFunction({
     argTypes: ["color", "original"]
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser;
     const color = assertNodeType(args[0], "color-token").color;
     const body = args[1];
     return {
       type: "color",
       mode: parser.mode,
       color,
-      body: ordargument(body)
-    };
-  },
-
-  htmlBuilder: htmlBuilder$1,
-  mathmlBuilder: mathmlBuilder$1
-}); // TODO(kevinb): define these using macros
-
-defineFunction({
-  type: "color",
-  names: ["\\blue", "\\orange", "\\pink", "\\red", "\\green", "\\gray", "\\purple", "\\blueA", "\\blueB", "\\blueC", "\\blueD", "\\blueE", "\\tealA", "\\tealB", "\\tealC", "\\tealD", "\\tealE", "\\greenA", "\\greenB", "\\greenC", "\\greenD", "\\greenE", "\\goldA", "\\goldB", "\\goldC", "\\goldD", "\\goldE", "\\redA", "\\redB", "\\redC", "\\redD", "\\redE", "\\maroonA", "\\maroonB", "\\maroonC", "\\maroonD", "\\maroonE", "\\purpleA", "\\purpleB", "\\purpleC", "\\purpleD", "\\purpleE", "\\mintA", "\\mintB", "\\mintC", "\\grayA", "\\grayB", "\\grayC", "\\grayD", "\\grayE", "\\grayF", "\\grayG", "\\grayH", "\\grayI", "\\kaBlue", "\\kaGreen"],
-  props: {
-    numArgs: 1,
-    allowedInText: true,
-    greediness: 3
-  },
-
-  handler({
-    parser,
-    funcName
-  }, args) {
-    const body = args[0];
-    return {
-      type: "color",
-      mode: parser.mode,
-      color: "katex-" + funcName.slice(1),
       body: ordargument(body)
     };
   },
@@ -7810,11 +7889,15 @@ defineFunction({
     argTypes: ["color"]
   },
 
-  handler({
-    parser,
-    breakOnTokenText
-  }, args) {
-    const color = assertNodeType(args[0], "color-token").color; // If we see a styling function, parse out the implicit body
+  handler(_ref2, args) {
+    let parser = _ref2.parser,
+        breakOnTokenText = _ref2.breakOnTokenText;
+    const color = assertNodeType(args[0], "color-token").color; // Set macro \current@color in current namespace to store the current
+    // color, mimicking the behavior of color.sty.
+    // This is currently used just to correctly color a \right
+    // that follows a \color command.
+
+    parser.gullet.macros.set("\\current@color", color); // Parse out the implicit body that should be colored.
 
     const body = parser.parseExpression(true, breakOnTokenText);
     return {
@@ -7844,10 +7927,9 @@ defineFunction({
     allowedInText: true
   },
 
-  handler({
-    parser,
-    funcName
-  }, args, optArgs) {
+  handler(_ref, args, optArgs) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const size = optArgs[0];
     const newRow = funcName === "\\cr";
     let newLine = false;
@@ -7901,6 +7983,208 @@ defineFunction({
     }
 
     return node;
+  }
+
+});
+
+const globalMap = {
+  "\\global": "\\global",
+  "\\long": "\\\\globallong",
+  "\\\\globallong": "\\\\globallong",
+  "\\def": "\\gdef",
+  "\\gdef": "\\gdef",
+  "\\edef": "\\xdef",
+  "\\xdef": "\\xdef",
+  "\\let": "\\\\globallet",
+  "\\futurelet": "\\\\globalfuture"
+};
+
+const checkControlSequence = tok => {
+  const name = tok.text;
+
+  if (/^(?:[\\{}$&#^_]|EOF)$/.test(name)) {
+    throw new ParseError("Expected a control sequence", tok);
+  }
+
+  return name;
+};
+
+const getRHS = parser => {
+  let tok = parser.gullet.popToken();
+
+  if (tok.text === "=") {
+    // consume optional equals
+    tok = parser.gullet.popToken();
+
+    if (tok.text === " ") {
+      // consume one optional space
+      tok = parser.gullet.popToken();
+    }
+  }
+
+  return tok;
+};
+
+const letCommand = (parser, name, tok, global) => {
+  let macro = parser.gullet.macros.get(tok.text);
+
+  if (macro == null) {
+    // don't expand it later even if a macro with the same name is defined
+    // e.g., \let\foo=\frac \def\frac{\relax} \frac12
+    tok.noexpand = true;
+    macro = {
+      tokens: [tok],
+      numArgs: 0,
+      // reproduce the same behavior in expansion
+      unexpandable: !parser.gullet.isExpandable(tok.text)
+    };
+  }
+
+  parser.gullet.macros.set(name, macro, global);
+}; // <assignment> -> <non-macro assignment>|<macro assignment>
+// <non-macro assignment> -> <simple assignment>|\global<non-macro assignment>
+// <macro assignment> -> <definition>|<prefix><macro assignment>
+// <prefix> -> \global|\long|\outer
+
+
+defineFunction({
+  type: "internal",
+  names: ["\\global", "\\long", "\\\\globallong"],
+  props: {
+    numArgs: 0,
+    allowedInText: true
+  },
+
+  handler(_ref) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
+    parser.consumeSpaces();
+    const token = parser.fetch();
+
+    if (globalMap[token.text]) {
+      // KaTeX doesn't have \par, so ignore \long
+      if (funcName === "\\global" || funcName === "\\\\globallong") {
+        token.text = globalMap[token.text];
+      }
+
+      return assertNodeType(parser.parseFunction(), "internal");
+    }
+
+    throw new ParseError(`Invalid token after macro prefix`, token);
+  }
+
+}); // Basic support for macro definitions: \def, \gdef, \edef, \xdef
+// <definition> -> <def><control sequence><definition text>
+// <def> -> \def|\gdef|\edef|\xdef
+// <definition text> -> <parameter text><left brace><balanced text><right brace>
+
+defineFunction({
+  type: "internal",
+  names: ["\\def", "\\gdef", "\\edef", "\\xdef"],
+  props: {
+    numArgs: 0,
+    allowedInText: true
+  },
+
+  handler(_ref2) {
+    let parser = _ref2.parser,
+        funcName = _ref2.funcName;
+    let arg = parser.gullet.consumeArgs(1)[0];
+
+    if (arg.length !== 1) {
+      throw new ParseError("\\gdef's first argument must be a macro name");
+    }
+
+    const name = arg[0].text; // Count argument specifiers, and check they are in the order #1 #2 ...
+
+    let numArgs = 0;
+    arg = parser.gullet.consumeArgs(1)[0];
+
+    while (arg.length === 1 && arg[0].text === "#") {
+      arg = parser.gullet.consumeArgs(1)[0];
+
+      if (arg.length !== 1) {
+        throw new ParseError(`Invalid argument number length "${arg.length}"`);
+      }
+
+      if (!/^[1-9]$/.test(arg[0].text)) {
+        throw new ParseError(`Invalid argument number "${arg[0].text}"`);
+      }
+
+      numArgs++;
+
+      if (parseInt(arg[0].text) !== numArgs) {
+        throw new ParseError(`Argument number "${arg[0].text}" out of order`);
+      }
+
+      arg = parser.gullet.consumeArgs(1)[0];
+    }
+
+    if (funcName === "\\edef" || funcName === "\\xdef") {
+      arg = parser.gullet.expandTokens(arg);
+      arg.reverse(); // to fit in with stack order
+    } // Final arg is the expansion of the macro
+
+
+    parser.gullet.macros.set(name, {
+      tokens: arg,
+      numArgs
+    }, funcName === globalMap[funcName]);
+    return {
+      type: "internal",
+      mode: parser.mode
+    };
+  }
+
+}); // <simple assignment> -> <let assignment>
+// <let assignment> -> \futurelet<control sequence><token><token>
+//     | \let<control sequence><equals><one optional space><token>
+// <equals> -> <optional spaces>|<optional spaces>=
+
+defineFunction({
+  type: "internal",
+  names: ["\\let", "\\\\globallet"],
+  props: {
+    numArgs: 0,
+    allowedInText: true
+  },
+
+  handler(_ref3) {
+    let parser = _ref3.parser,
+        funcName = _ref3.funcName;
+    const name = checkControlSequence(parser.gullet.popToken());
+    parser.gullet.consumeSpaces();
+    const tok = getRHS(parser);
+    letCommand(parser, name, tok, funcName === "\\\\globallet");
+    return {
+      type: "internal",
+      mode: parser.mode
+    };
+  }
+
+}); // ref: https://www.tug.org/TUGboat/tb09-3/tb22bechtolsheim.pdf
+
+defineFunction({
+  type: "internal",
+  names: ["\\futurelet", "\\\\globalfuture"],
+  props: {
+    numArgs: 0,
+    allowedInText: true
+  },
+
+  handler(_ref4) {
+    let parser = _ref4.parser,
+        funcName = _ref4.funcName;
+    const name = checkControlSequence(parser.gullet.popToken());
+    const middle = parser.gullet.popToken();
+    const tok = parser.gullet.popToken();
+    letCommand(parser, name, tok, funcName === "\\\\globalfuture");
+    parser.gullet.pushToken(tok);
+    parser.gullet.pushToken(middle);
+    return {
+      type: "internal",
+      mode: parser.mode
+    };
   }
 
 });
@@ -8030,12 +8314,17 @@ const makeInner = function makeInner(symbol, font, mode) {
     type: "elem",
     elem: inner
   };
+}; // Helper for makeStackedDelim
+
+
+const lap = {
+  type: "kern",
+  size: -0.005
 };
 /**
  * Make a stacked delimiter out of a given delimiter, with the total height at
  * least `heightTotal`. This routine is mentioned on page 442 of the TeXbook.
  */
-
 
 const makeStackedDelim = function makeStackedDelim(delim, heightTotal, center, options, mode, classes) {
   // There are four parts, the top, an optional middle, a repeated part, and a
@@ -8157,7 +8446,7 @@ const makeStackedDelim = function makeStackedDelim(delim, heightTotal, center, o
 
   const minHeight = topHeightTotal + bottomHeightTotal + middleHeightTotal; // Compute the number of copies of the repeat symbol we will need
 
-  const repeatCount = Math.ceil((heightTotal - minHeight) / (middleFactor * repeatHeightTotal)); // Compute the total height of the delimiter including all the symbols
+  const repeatCount = Math.max(0, Math.ceil((heightTotal - minHeight) / (middleFactor * repeatHeightTotal))); // Compute the total height of the delimiter including all the symbols
 
   const realHeightTotal = minHeight + repeatCount * middleFactor * repeatHeightTotal; // The center of the delimiter is placed at the center of the axis. Note
   // that in this context, "center" means that the delimiter should be
@@ -8171,7 +8460,15 @@ const makeStackedDelim = function makeStackedDelim(delim, heightTotal, center, o
   } // Calculate the depth
 
 
-  const depth = realHeightTotal / 2 - axisHeight; // Now, we start building the pieces that will go into the vlist
+  const depth = realHeightTotal / 2 - axisHeight; // This function differs from the TeX procedure in one way.
+  // We shift each repeat element downwards by 0.005em, to prevent a gap
+  // due to browser floating point rounding error.
+  // Then, at the last element-to element joint, we add one extra repeat
+  // element to cover the gap created by the shifts.
+  // Find the shift needed to align the upper end of the extra element at a point
+  // 0.005em above the lower end of the top element.
+
+  const shiftOfExtraElement = (repeatCount + 1) * 0.005 - repeatHeightTotal; // Now, we start building the pieces that will go into the vlist
   // Keep a list of the inner pieces
 
   const inners = []; // Add the bottom symbol
@@ -8181,20 +8478,61 @@ const makeStackedDelim = function makeStackedDelim(delim, heightTotal, center, o
   if (middle === null) {
     // Add that many symbols
     for (let i = 0; i < repeatCount; i++) {
+      inners.push(lap); // overlap
+
       inners.push(makeInner(repeat, font, mode));
     }
   } else {
     // When there is a middle bit, we need the middle part and two repeated
     // sections
     for (let i = 0; i < repeatCount; i++) {
+      inners.push(lap);
       inners.push(makeInner(repeat, font, mode));
-    }
+    } // Insert one extra repeat element.
+
+
+    inners.push({
+      type: "kern",
+      size: shiftOfExtraElement
+    });
+    inners.push(makeInner(repeat, font, mode));
+    inners.push(lap); // Now insert the middle of the brace.
 
     inners.push(makeInner(middle, font, mode));
 
     for (let i = 0; i < repeatCount; i++) {
+      inners.push(lap);
       inners.push(makeInner(repeat, font, mode));
     }
+  } // To cover the gap create by the overlaps, insert one more repeat element,
+  // at a position that juts 0.005 above the bottom of the top element.
+
+
+  if ((repeat === "\u239c" || repeat === "\u239f") && repeatCount === 0) {
+    // Parentheses need a short repeat element in order to avoid an overrun.
+    // We'll make a 0.3em tall element from a SVG.
+    const overlap = buildCommon.svgData.leftParenInner[2] / 2;
+    inners.push({
+      type: "kern",
+      size: -overlap
+    });
+    const pathName = repeat === "\u239c" ? "leftParenInner" : "rightParenInner";
+    const innerSpan = buildCommon.staticSvg(pathName, options);
+    inners.push({
+      type: "elem",
+      elem: innerSpan
+    });
+    inners.push({
+      type: "kern",
+      size: -overlap
+    });
+  } else {
+    inners.push({
+      type: "kern",
+      size: shiftOfExtraElement
+    });
+    inners.push(makeInner(repeat, font, mode));
+    inners.push(lap);
   } // Add the top symbol
 
 
@@ -8215,22 +8553,9 @@ const vbPad = 80; // padding above the surd, measured inside the viewBox.
 
 const emPad = 0.08; // padding, in ems, measured in the document.
 
-const sqrtSvg = function sqrtSvg(sqrtName, height, viewBoxHeight, options) {
-  let alternate;
-
-  if (sqrtName === "sqrtTall") {
-    // sqrtTall is from glyph U23B7 in the font KaTeX_Size4-Regular
-    // One path edge has a variable length. It runs from the viniculumn
-    // to a point near (14 units) the bottom of the surd. The viniculum
-    // is 40 units thick. So the length of the line in question is:
-    const vertSegment = viewBoxHeight - 54 - vbPad;
-    alternate = `M702 ${vbPad}H400000v40H742v${vertSegment}l-4 4-4 4c-.667.7
--2 1.5-4 2.5s-4.167 1.833-6.5 2.5-5.5 1-9.5 1h-12l-28-84c-16.667-52-96.667
--294.333-240-727l-212 -643 -85 170c-4-3.333-8.333-7.667-13 -13l-13-13l77-155
- 77-156c66 199.333 139 419.667 219 661 l218 661zM702 ${vbPad}H400000v40H742z`;
-  }
-
-  const pathNode = new PathNode(sqrtName, alternate);
+const sqrtSvg = function sqrtSvg(sqrtName, height, viewBoxHeight, extraViniculum, options) {
+  const path = sqrtPath(sqrtName, extraViniculum, viewBoxHeight);
+  const pathNode = new PathNode(sqrtName, path);
   const svg = new SvgNode([pathNode], {
     // Note: 1000:1 ratio of viewBox to document em width.
     "width": "400em",
@@ -8252,7 +8577,10 @@ const makeSqrtImage = function makeSqrtImage(height, options) {
 
   const delim = traverseSequence("\\surd", height * newOptions.sizeMultiplier, stackLargeDelimiterSequence, newOptions);
   let sizeMultiplier = newOptions.sizeMultiplier; // default
-  // Create a span containing an SVG image of a sqrt symbol.
+  // The standard sqrt SVGs each have a 0.04em thick viniculum.
+  // If Settings.minRuleThickness is larger than that, we add extraViniculum.
+
+  const extraViniculum = Math.max(0, options.minRuleThickness - options.fontMetrics().sqrtRuleThickness); // Create a span containing an SVG image of a sqrt symbol.
 
   let span;
   let spanHeight = 0;
@@ -8266,7 +8594,8 @@ const makeSqrtImage = function makeSqrtImage(height, options) {
 
   if (delim.type === "small") {
     // Get an SVG that is derived from glyph U+221A in font KaTeX-Main.
-    viewBoxHeight = 1000 + vbPad; // 1000 unit glyph height.
+    // 1000 unit normal glyph height.
+    viewBoxHeight = 1000 + 1000 * extraViniculum + vbPad;
 
     if (height < 1.0) {
       sizeMultiplier = 1.0; // mimic a \textfont radical
@@ -8274,26 +8603,26 @@ const makeSqrtImage = function makeSqrtImage(height, options) {
       sizeMultiplier = 0.7; // mimic a \scriptfont radical
     }
 
-    spanHeight = (1.0 + emPad) / sizeMultiplier;
-    texHeight = 1.00 / sizeMultiplier;
-    span = sqrtSvg("sqrtMain", spanHeight, viewBoxHeight, options);
+    spanHeight = (1.0 + extraViniculum + emPad) / sizeMultiplier;
+    texHeight = (1.00 + extraViniculum) / sizeMultiplier;
+    span = sqrtSvg("sqrtMain", spanHeight, viewBoxHeight, extraViniculum, options);
     span.style.minWidth = "0.853em";
     advanceWidth = 0.833 / sizeMultiplier; // from the font.
   } else if (delim.type === "large") {
     // These SVGs come from fonts: KaTeX_Size1, _Size2, etc.
     viewBoxHeight = (1000 + vbPad) * sizeToMaxHeight[delim.size];
-    texHeight = sizeToMaxHeight[delim.size] / sizeMultiplier;
-    spanHeight = (sizeToMaxHeight[delim.size] + emPad) / sizeMultiplier;
-    span = sqrtSvg("sqrtSize" + delim.size, spanHeight, viewBoxHeight, options);
+    texHeight = (sizeToMaxHeight[delim.size] + extraViniculum) / sizeMultiplier;
+    spanHeight = (sizeToMaxHeight[delim.size] + extraViniculum + emPad) / sizeMultiplier;
+    span = sqrtSvg("sqrtSize" + delim.size, spanHeight, viewBoxHeight, extraViniculum, options);
     span.style.minWidth = "1.02em";
     advanceWidth = 1.0 / sizeMultiplier; // 1.0 from the font.
   } else {
     // Tall sqrt. In TeX, this would be stacked using multiple glyphs.
     // We'll use a single SVG to accomplish the same thing.
-    spanHeight = height + emPad;
-    texHeight = height;
-    viewBoxHeight = Math.floor(1000 * height) + vbPad;
-    span = sqrtSvg("sqrtTall", spanHeight, viewBoxHeight, options);
+    spanHeight = height + extraViniculum + emPad;
+    texHeight = height + extraViniculum;
+    viewBoxHeight = Math.floor(1000 * height + extraViniculum) + vbPad;
+    span = sqrtSvg("sqrtTall", spanHeight, viewBoxHeight, extraViniculum, options);
     span.style.minWidth = "0.742em";
     advanceWidth = 1.056;
   }
@@ -8307,7 +8636,7 @@ const makeSqrtImage = function makeSqrtImage(height, options) {
     // This actually should depend on the chosen font -- e.g. \boldmath
     // should use the thicker surd symbols from e.g. KaTeX_Main-Bold, and
     // have thicker rules.
-    ruleWidth: options.fontMetrics().sqrtRuleThickness * sizeMultiplier
+    ruleWidth: (options.fontMetrics().sqrtRuleThickness + extraViniculum) * sizeMultiplier
   };
 }; // There are three kinds of delimiters, delimiters that stack when they become
 // too large
@@ -8620,8 +8949,10 @@ function checkDelimiter(delim, context) {
 
   if (symDelim && utils.contains(delimiters, symDelim.text)) {
     return symDelim;
+  } else if (symDelim) {
+    throw new ParseError(`Invalid delimiter '${symDelim.text}' after '${context.funcName}'`, delim);
   } else {
-    throw new ParseError("Invalid delimiter: '" + (symDelim ? symDelim.text : JSON.stringify(delim)) + "' after '" + context.funcName + "'", delim);
+    throw new ParseError(`Invalid delimiter type '${delim.type}'`, delim);
   }
 }
 
@@ -8690,10 +9021,18 @@ defineFunction({
     // \left case below triggers parsing of \right in
     //   `const right = parser.parseFunction();`
     // uses this return value.
+    const color = context.parser.gullet.macros.get("\\current@color");
+
+    if (color && typeof color !== "string") {
+      throw new ParseError("\\current@color set to non-string in \\right");
+    }
+
     return {
       type: "leftright-right",
       mode: context.parser.mode,
-      delim: checkDelimiter(args[0], context).text
+      delim: checkDelimiter(args[0], context).text,
+      color // undefined if not set via \color
+
     };
   }
 });
@@ -8719,13 +9058,14 @@ defineFunction({
       mode: parser.mode,
       body,
       left: delim.text,
-      right: right.delim
+      right: right.delim,
+      rightColor: right.color
     };
   },
   htmlBuilder: (group, options) => {
     assertParsed(group); // Build the inner expression
 
-    const inner = buildExpression(group.body, options, true, [null, "mclose"]);
+    const inner = buildExpression(group.body, options, true, ["mopen", "mclose"]);
     let innerHeight = 0;
     let innerDepth = 0;
     let hadMiddle = false; // Calculate its height and depth
@@ -8776,12 +9116,13 @@ defineFunction({
       }
     }
 
-    let rightDelim; // Same for the right delimiter
+    let rightDelim; // Same for the right delimiter, but using color specified by \color
 
     if (group.right === ".") {
       rightDelim = makeNullDelimiter(options, ["mclose"]);
     } else {
-      rightDelim = delimiter.leftRightDelim(group.right, innerHeight, innerDepth, options, group.mode, ["mclose"]);
+      const colorOptions = group.rightColor ? options.withColor(group.rightColor) : options;
+      rightDelim = delimiter.leftRightDelim(group.right, innerHeight, innerDepth, colorOptions, group.mode, ["mclose"]);
     } // Add it to the end of the expression.
 
 
@@ -8801,6 +9142,11 @@ defineFunction({
     if (group.right !== ".") {
       const rightNode = new mathMLTree.MathNode("mo", [makeText(group.right, group.mode)]);
       rightNode.setAttribute("fence", "true");
+
+      if (group.rightColor) {
+        rightNode.setAttribute("mathcolor", group.rightColor);
+      }
+
       inner.push(rightNode);
     }
 
@@ -8848,8 +9194,17 @@ defineFunction({
     return middleDelim;
   },
   mathmlBuilder: (group, options) => {
-    const middleNode = new mathMLTree.MathNode("mo", [makeText(group.delim, group.mode)]);
-    middleNode.setAttribute("fence", "true");
+    // A Firefox \middle will strech a character vertically only if it
+    // is in the fence part of the operator dictionary at:
+    // https://www.w3.org/TR/MathML3/appendixc.html.
+    // So we need to avoid U+2223 and use plain "|" instead.
+    const textNode = group.delim === "\\vert" || group.delim === "|" ? makeText("|", "text") : makeText(group.delim, group.mode);
+    const middleNode = new mathMLTree.MathNode("mo", [textNode]);
+    middleNode.setAttribute("fence", "true"); // MathML gives 5/18em spacing to each <mo> element.
+    // \middle should get delimiter spacing instead.
+
+    middleNode.setAttribute("lspace", "0.05em");
+    middleNode.setAttribute("rspace", "0.05em");
     return middleNode;
   }
 });
@@ -8885,16 +9240,25 @@ const htmlBuilder$2 = (group, options) => {
     } // Add vertical padding
 
 
-    let vertPad = 0; // ref: LaTeX source2e: \fboxsep = 3pt;  \fboxrule = .4pt
-    // ref: cancel package: \advance\totalheight2\p@ % "+2"
+    let vertPad = 0;
+    let ruleThickness = 0; // ref: cancel package: \advance\totalheight2\p@ % "+2"
 
     if (/box/.test(label)) {
-      vertPad = label === "colorbox" ? 0.3 : 0.34;
+      ruleThickness = Math.max(options.fontMetrics().fboxrule, // default
+      options.minRuleThickness // User override.
+      );
+      vertPad = options.fontMetrics().fboxsep + (label === "colorbox" ? 0 : ruleThickness);
     } else {
       vertPad = isSingleChar ? 0.2 : 0;
     }
 
     img = stretchy.encloseSpan(inner, label, vertPad, options);
+
+    if (/fbox|boxed|fcolorbox/.test(label)) {
+      img.style.borderStyle = "solid";
+      img.style.borderWidth = `${ruleThickness}em`;
+    }
+
     imgShift = inner.depth + vertPad;
 
     if (group.backgroundColor) {
@@ -8955,7 +9319,8 @@ const htmlBuilder$2 = (group, options) => {
 };
 
 const mathmlBuilder$2 = (group, options) => {
-  const node = new mathMLTree.MathNode("menclose", [buildGroup$1(group.body, options)]);
+  let fboxsep = 0;
+  const node = new mathMLTree.MathNode(group.label.indexOf("colorbox") > -1 ? "mpadded" : "menclose", [buildGroup$1(group.body, options)]);
 
   switch (group.label) {
     case "\\cancel":
@@ -8975,8 +9340,23 @@ const mathmlBuilder$2 = (group, options) => {
       break;
 
     case "\\fcolorbox":
-      // TODO(ron): I don't know any way to set the border color.
-      node.setAttribute("notation", "box");
+    case "\\colorbox":
+      // <menclose> doesn't have a good notation option. So use <mpadded>
+      // instead. Set some attributes that come included with <menclose>.
+      fboxsep = options.fontMetrics().fboxsep * options.fontMetrics().ptPerEm;
+      node.setAttribute("width", `+${2 * fboxsep}pt`);
+      node.setAttribute("height", `+${2 * fboxsep}pt`);
+      node.setAttribute("lspace", `${fboxsep}pt`); //
+
+      node.setAttribute("voffset", `${fboxsep}pt`);
+
+      if (group.label === "\\fcolorbox") {
+        const thk = Math.max(options.fontMetrics().fboxrule, // default
+        options.minRuleThickness // user override
+        );
+        node.setAttribute("style", "border: " + thk + "em solid " + String(group.borderColor));
+      }
+
       break;
 
     case "\\xcancel":
@@ -9001,10 +9381,9 @@ defineFunction({
     argTypes: ["color", "text"]
   },
 
-  handler({
-    parser,
-    funcName
-  }, args, optArgs) {
+  handler(_ref, args, optArgs) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const color = assertNodeType(args[0], "color-token").color;
     const body = args[1];
     return {
@@ -9029,10 +9408,9 @@ defineFunction({
     argTypes: ["color", "color", "text"]
   },
 
-  handler({
-    parser,
-    funcName
-  }, args, optArgs) {
+  handler(_ref2, args, optArgs) {
+    let parser = _ref2.parser,
+        funcName = _ref2.funcName;
     const borderColor = assertNodeType(args[0], "color-token").color;
     const backgroundColor = assertNodeType(args[1], "color-token").color;
     const body = args[2];
@@ -9054,13 +9432,12 @@ defineFunction({
   names: ["\\fbox"],
   props: {
     numArgs: 1,
-    argTypes: ["text"],
+    argTypes: ["hbox"],
     allowedInText: true
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref3, args) {
+    let parser = _ref3.parser;
     return {
       type: "enclose",
       mode: parser.mode,
@@ -9077,10 +9454,9 @@ defineFunction({
     numArgs: 1
   },
 
-  handler({
-    parser,
-    funcName
-  }, args, optArgs) {
+  handler(_ref4, args, optArgs) {
+    let parser = _ref4.parser,
+        funcName = _ref4.funcName;
     const body = args[0];
     return {
       type: "enclose",
@@ -9100,14 +9476,13 @@ defineFunction({
  * `Parser.js` requires this dictionary via `environments.js`.
  */
 const _environments = {};
-function defineEnvironment({
-  type,
-  names,
-  props,
-  handler,
-  htmlBuilder,
-  mathmlBuilder
-}) {
+function defineEnvironment(_ref) {
+  let type = _ref.type,
+      names = _ref.names,
+      props = _ref.props,
+      handler = _ref.handler,
+      htmlBuilder = _ref.htmlBuilder,
+      mathmlBuilder = _ref.mathmlBuilder;
   // Set default values of environments.
   const data = {
     type,
@@ -9140,13 +9515,13 @@ function getHLines(parser) {
   // Each element in the array tells if the line is dashed.
   const hlineInfo = [];
   parser.consumeSpaces();
-  let nxt = parser.nextToken.text;
+  let nxt = parser.fetch().text;
 
   while (nxt === "\\hline" || nxt === "\\hdashline") {
     parser.consume();
     hlineInfo.push(nxt === "\\hdashline");
     parser.consumeSpaces();
-    nxt = parser.nextToken.text;
+    nxt = parser.fetch().text;
   }
 
   return hlineInfo;
@@ -9159,12 +9534,12 @@ function getHLines(parser) {
  */
 
 
-function parseArray(parser, {
-  hskipBeforeAndAfter,
-  addJot,
-  cols,
-  arraystretch
-}, style) {
+function parseArray(parser, _ref, style) {
+  let hskipBeforeAndAfter = _ref.hskipBeforeAndAfter,
+      addJot = _ref.addJot,
+      cols = _ref.cols,
+      arraystretch = _ref.arraystretch,
+      colSeparationType = _ref.colSeparationType;
   // Parse body of array with \\ temporarily mapped to \cr
   parser.gullet.beginGroup();
   parser.gullet.macros.set("\\\\", "\\cr"); // Get current arraystretch if it's not set by the environment
@@ -9182,8 +9557,10 @@ function parseArray(parser, {
         throw new ParseError(`Invalid \\arraystretch: ${stretch}`);
       }
     }
-  }
+  } // Start group for first cell
 
+
+  parser.gullet.beginGroup();
   let row = [];
   const body = [row];
   const rowGaps = [];
@@ -9193,7 +9570,10 @@ function parseArray(parser, {
 
   while (true) {
     // eslint-disable-line no-constant-condition
+    // Parse each cell in its own group (namespace)
     let cell = parser.parseExpression(false, "\\cr");
+    parser.gullet.endGroup();
+    parser.gullet.beginGroup();
     cell = {
       type: "ordgroup",
       mode: parser.mode,
@@ -9210,7 +9590,7 @@ function parseArray(parser, {
     }
 
     row.push(cell);
-    const next = parser.nextToken.text;
+    const next = parser.fetch().text;
 
     if (next === "&") {
       parser.consume();
@@ -9237,7 +9617,10 @@ function parseArray(parser, {
     } else {
       throw new ParseError("Expected & or \\\\ or \\cr or \\end", parser.nextToken);
     }
-  }
+  } // End cell group
+
+
+  parser.gullet.endGroup(); // End array group defining \\
 
   parser.gullet.endGroup();
   return {
@@ -9249,7 +9632,8 @@ function parseArray(parser, {
     cols,
     rowGaps,
     hskipBeforeAndAfter,
-    hLinesBeforeRow
+    hLinesBeforeRow,
+    colSeparationType
   };
 } // Decides on a style for cells in an array according to whether the given
 // environment name starts with the letter 'd'.
@@ -9270,11 +9654,24 @@ const htmlBuilder$3 = function htmlBuilder(group, options) {
   const hLinesBeforeRow = group.hLinesBeforeRow;
   let nc = 0;
   let body = new Array(nr);
-  const hlines = []; // Horizontal spacing
+  const hlines = [];
+  const ruleThickness = Math.max( // From LaTeX \showthe\arrayrulewidth. Equals 0.04 em.
+  options.fontMetrics().arrayRuleWidth, options.minRuleThickness // User override.
+  ); // Horizontal spacing
 
   const pt = 1 / options.fontMetrics().ptPerEm;
-  const arraycolsep = 5 * pt; // \arraycolsep in article.cls
-  // Vertical spacing
+  let arraycolsep = 5 * pt; // default value, i.e. \arraycolsep in article.cls
+
+  if (group.colSeparationType && group.colSeparationType === "small") {
+    // We're in a {smallmatrix}. Default column space is \thickspace,
+    // i.e. 5/18em = 0.2778em, per amsmath.dtx for {smallmatrix}.
+    // But that needs adjustment because LaTeX applies \scriptstyle to the
+    // entire array, including the colspace, but this function applies
+    // \scriptstyle only inside each element.
+    const localMultiplier = options.havingStyle(Style$1.SCRIPT).sizeMultiplier;
+    arraycolsep = 0.2778 * (localMultiplier / options.sizeMultiplier);
+  } // Vertical spacing
+
 
   const baselineskip = 12 * pt; // see size10.clo
   // Default \jot from ltmath.dtx
@@ -9386,14 +9783,13 @@ const htmlBuilder$3 = function htmlBuilder(group, options) {
         cols.push(colSep);
       }
 
-      if (colDescr.separator === "|") {
+      if (colDescr.separator === "|" || colDescr.separator === ":") {
+        const lineType = colDescr.separator === "|" ? "solid" : "dashed";
         const separator = buildCommon.makeSpan(["vertical-separator"], [], options);
         separator.style.height = totalHeight + "em";
-        separator.style.verticalAlign = -(totalHeight - offset) + "em";
-        cols.push(separator);
-      } else if (colDescr.separator === ":") {
-        const separator = buildCommon.makeSpan(["vertical-separator", "vs-dashed"], [], options);
-        separator.style.height = totalHeight + "em";
+        separator.style.borderRightWidth = `${ruleThickness}em`;
+        separator.style.borderRightStyle = lineType;
+        separator.style.margin = `0 -${ruleThickness / 2}em`;
         separator.style.verticalAlign = -(totalHeight - offset) + "em";
         cols.push(separator);
       } else {
@@ -9462,8 +9858,8 @@ const htmlBuilder$3 = function htmlBuilder(group, options) {
   body = buildCommon.makeSpan(["mtable"], cols); // Add \hline(s), if any.
 
   if (hlines.length > 0) {
-    const line = buildCommon.makeLineSpan("hline", options, 0.05);
-    const dashes = buildCommon.makeLineSpan("hdashline", options, 0.05);
+    const line = buildCommon.makeLineSpan("hline", options, ruleThickness);
+    const dashes = buildCommon.makeLineSpan("hdashline", options, ruleThickness);
     const vListElems = [{
       type: "elem",
       elem: body,
@@ -9498,12 +9894,125 @@ const htmlBuilder$3 = function htmlBuilder(group, options) {
   return buildCommon.makeSpan(["mord"], [body], options);
 };
 
+const alignMap = {
+  c: "center ",
+  l: "left ",
+  r: "right "
+};
+
 const mathmlBuilder$3 = function mathmlBuilder(group, options) {
-  return new mathMLTree.MathNode("mtable", group.body.map(function (row) {
+  let table = new mathMLTree.MathNode("mtable", group.body.map(function (row) {
     return new mathMLTree.MathNode("mtr", row.map(function (cell) {
       return new mathMLTree.MathNode("mtd", [buildGroup$1(cell, options)]);
     }));
-  }));
+  })); // Set column alignment, row spacing, column spacing, and
+  // array lines by setting attributes on the table element.
+  // Set the row spacing. In MathML, we specify a gap distance.
+  // We do not use rowGap[] because MathML automatically increases
+  // cell height with the height/depth of the element content.
+  // LaTeX \arraystretch multiplies the row baseline-to-baseline distance.
+  // We simulate this by adding (arraystretch - 1)em to the gap. This
+  // does a reasonable job of adjusting arrays containing 1 em tall content.
+  // The 0.16 and 0.09 values are found emprically. They produce an array
+  // similar to LaTeX and in which content does not interfere with \hines.
+
+  const gap = group.arraystretch === 0.5 ? 0.1 // {smallmatrix}, {subarray}
+  : 0.16 + group.arraystretch - 1 + (group.addJot ? 0.09 : 0);
+  table.setAttribute("rowspacing", gap + "em"); // MathML table lines go only between cells.
+  // To place a line on an edge we'll use <menclose>, if necessary.
+
+  let menclose = "";
+  let align = "";
+
+  if (group.cols && group.cols.length > 0) {
+    // Find column alignment, column spacing, and  vertical lines.
+    const cols = group.cols;
+    let columnLines = "";
+    let prevTypeWasAlign = false;
+    let iStart = 0;
+    let iEnd = cols.length;
+
+    if (cols[0].type === "separator") {
+      menclose += "top ";
+      iStart = 1;
+    }
+
+    if (cols[cols.length - 1].type === "separator") {
+      menclose += "bottom ";
+      iEnd -= 1;
+    }
+
+    for (let i = iStart; i < iEnd; i++) {
+      if (cols[i].type === "align") {
+        align += alignMap[cols[i].align];
+
+        if (prevTypeWasAlign) {
+          columnLines += "none ";
+        }
+
+        prevTypeWasAlign = true;
+      } else if (cols[i].type === "separator") {
+        // MathML accepts only single lines between cells.
+        // So we read only the first of consecutive separators.
+        if (prevTypeWasAlign) {
+          columnLines += cols[i].separator === "|" ? "solid " : "dashed ";
+          prevTypeWasAlign = false;
+        }
+      }
+    }
+
+    table.setAttribute("columnalign", align.trim());
+
+    if (/[sd]/.test(columnLines)) {
+      table.setAttribute("columnlines", columnLines.trim());
+    }
+  } // Set column spacing.
+
+
+  if (group.colSeparationType === "align") {
+    const cols = group.cols || [];
+    let spacing = "";
+
+    for (let i = 1; i < cols.length; i++) {
+      spacing += i % 2 ? "0em " : "1em ";
+    }
+
+    table.setAttribute("columnspacing", spacing.trim());
+  } else if (group.colSeparationType === "alignat") {
+    table.setAttribute("columnspacing", "0em");
+  } else if (group.colSeparationType === "small") {
+    table.setAttribute("columnspacing", "0.2778em");
+  } else {
+    table.setAttribute("columnspacing", "1em");
+  } // Address \hline and \hdashline
+
+
+  let rowLines = "";
+  const hlines = group.hLinesBeforeRow;
+  menclose += hlines[0].length > 0 ? "left " : "";
+  menclose += hlines[hlines.length - 1].length > 0 ? "right " : "";
+
+  for (let i = 1; i < hlines.length - 1; i++) {
+    rowLines += hlines[i].length === 0 ? "none " // MathML accepts only a single line between rows. Read one element.
+    : hlines[i][0] ? "dashed " : "solid ";
+  }
+
+  if (/[sd]/.test(rowLines)) {
+    table.setAttribute("rowlines", rowLines.trim());
+  }
+
+  if (menclose !== "") {
+    table = new mathMLTree.MathNode("menclose", [table]);
+    table.setAttribute("notation", menclose.trim());
+  }
+
+  if (group.arraystretch && group.arraystretch < 1) {
+    // A small array. Wrap in scriptstyle so row gap is not too large.
+    table = new mathMLTree.MathNode("mstyle", [table]);
+    table.setAttribute("scriptlevel", "1");
+  }
+
+  return table;
 }; // Convenience function for aligned and alignedat environments.
 
 
@@ -9529,13 +10038,12 @@ const alignedHandler = function alignedHandler(context, args) {
     mode: context.mode,
     body: []
   };
-  const ordgroup = checkNodeType(args[0], "ordgroup");
 
-  if (ordgroup) {
+  if (args[0] && args[0].type === "ordgroup") {
     let arg0 = "";
 
-    for (let i = 0; i < ordgroup.body.length; i++) {
-      const textord = assertNodeType(ordgroup.body[i], "textord");
+    for (let i = 0; i < args[0].body.length; i++) {
+      const textord = assertNodeType(args[0].body[i], "textord");
       arg0 += textord.text;
     }
 
@@ -9586,6 +10094,7 @@ const alignedHandler = function alignedHandler(context, args) {
     };
   }
 
+  res.colSeparationType = isAligned ? "align" : "alignat";
   return res;
 }; // Arrays are part of LaTeX, defined in lttab.dtx so its documentation
 // is part of the source2e.pdf file of LaTeX2e source documentation.
@@ -9669,8 +10178,75 @@ defineEnvironment({
       mode: context.mode,
       body: [res],
       left: delimiters[0],
-      right: delimiters[1]
+      right: delimiters[1],
+      rightColor: undefined // \right uninfluenced by \color in array
+
     } : res;
+  },
+
+  htmlBuilder: htmlBuilder$3,
+  mathmlBuilder: mathmlBuilder$3
+});
+defineEnvironment({
+  type: "array",
+  names: ["smallmatrix"],
+  props: {
+    numArgs: 0
+  },
+
+  handler(context) {
+    const payload = {
+      arraystretch: 0.5
+    };
+    const res = parseArray(context.parser, payload, "script");
+    res.colSeparationType = "small";
+    return res;
+  },
+
+  htmlBuilder: htmlBuilder$3,
+  mathmlBuilder: mathmlBuilder$3
+});
+defineEnvironment({
+  type: "array",
+  names: ["subarray"],
+  props: {
+    numArgs: 1
+  },
+
+  handler(context, args) {
+    // Parsing of {subarray} is similar to {array}
+    const symNode = checkSymbolNodeType(args[0]);
+    const colalign = symNode ? [args[0]] : assertNodeType(args[0], "ordgroup").body;
+    const cols = colalign.map(function (nde) {
+      const node = assertSymbolNodeType(nde);
+      const ca = node.text; // {subarray} only recognizes "l" & "c"
+
+      if ("lc".indexOf(ca) !== -1) {
+        return {
+          type: "align",
+          align: ca
+        };
+      }
+
+      throw new ParseError("Unknown column alignment: " + ca, nde);
+    });
+
+    if (cols.length > 1) {
+      throw new ParseError("{subarray} can contain only one column");
+    }
+
+    let res = {
+      cols,
+      hskipBeforeAndAfter: false,
+      arraystretch: 0.5
+    };
+    res = parseArray(context.parser, res, "script");
+
+    if (res.body.length > 0 && res.body[0].length > 1) {
+      throw new ParseError("{subarray} can contain only one column");
+    }
+
+    return res;
   },
 
   htmlBuilder: htmlBuilder$3,
@@ -9680,10 +10256,11 @@ defineEnvironment({
 // \left\{\begin{array}{@{}l@{\quad}l@{}} … \end{array}\right.
 // {dcases} is a {cases} environment where cells are set in \displaystyle,
 // as defined in mathtools.sty.
+// {rcases} is another mathtools environment. It's brace is on the right side.
 
 defineEnvironment({
   type: "array",
-  names: ["cases", "dcases"],
+  names: ["cases", "dcases", "rcases", "drcases"],
   props: {
     numArgs: 0
   },
@@ -9714,8 +10291,9 @@ defineEnvironment({
       type: "leftright",
       mode: context.mode,
       body: [res],
-      left: "\\{",
-      right: "."
+      left: context.envName.indexOf("r") > -1 ? "." : "\\{",
+      right: context.envName.indexOf("r") > -1 ? "\\}" : ".",
+      rightColor: undefined
     };
   },
 
@@ -9806,10 +10384,9 @@ defineFunction({
     argTypes: ["text"]
   },
 
-  handler({
-    parser,
-    funcName
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const nameGroup = args[0];
 
     if (nameGroup.type !== "ordgroup") {
@@ -9871,8 +10448,44 @@ function htmlBuilder$4(group, options) {
 }
 
 function mathmlBuilder$4(group, options) {
+  let node;
   const inner = buildExpression$1(group.body, options);
-  return mathMLTree.newDocumentFragment(inner);
+
+  if (group.mclass === "minner") {
+    return mathMLTree.newDocumentFragment(inner);
+  } else if (group.mclass === "mord") {
+    if (group.isCharacterBox) {
+      node = inner[0];
+      node.type = "mi";
+    } else {
+      node = new mathMLTree.MathNode("mi", inner);
+    }
+  } else {
+    if (group.isCharacterBox) {
+      node = inner[0];
+      node.type = "mo";
+    } else {
+      node = new mathMLTree.MathNode("mo", inner);
+    } // Set spacing based on what is the most likely adjacent atom type.
+    // See TeXbook p170.
+
+
+    if (group.mclass === "mbin") {
+      node.attributes.lspace = "0.22em"; // medium space
+
+      node.attributes.rspace = "0.22em";
+    } else if (group.mclass === "mpunct") {
+      node.attributes.lspace = "0em";
+      node.attributes.rspace = "0.17em"; // thinspace
+    } else if (group.mclass === "mopen" || group.mclass === "mclose") {
+      node.attributes.lspace = "0em";
+      node.attributes.rspace = "0em";
+    } // MathML <mo> default space is 5/18 em, so <mrel> needs no action.
+    // Ref: https://developer.mozilla.org/en-US/docs/Web/MathML/Element/mo
+
+  }
+
+  return node;
 } // Math class commands except \mathop
 
 
@@ -9883,16 +10496,17 @@ defineFunction({
     numArgs: 1
   },
 
-  handler({
-    parser,
-    funcName
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const body = args[0];
     return {
       type: "mclass",
       mode: parser.mode,
       mclass: "m" + funcName.substr(5),
-      body: ordargument(body)
+      // TODO(kevinb): don't prefix with 'm'
+      body: ordargument(body),
+      isCharacterBox: utils.isCharacterBox(body)
     };
   },
 
@@ -9921,14 +10535,14 @@ defineFunction({
     numArgs: 2
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref2, args) {
+    let parser = _ref2.parser;
     return {
       type: "mclass",
       mode: parser.mode,
       mclass: binrelClass(args[0]),
-      body: [args[1]]
+      body: [args[1]],
+      isCharacterBox: utils.isCharacterBox(args[1])
     };
   }
 
@@ -9941,10 +10555,9 @@ defineFunction({
     numArgs: 2
   },
 
-  handler({
-    parser,
-    funcName
-  }, args) {
+  handler(_ref3, args) {
+    let parser = _ref3.parser,
+        funcName = _ref3.funcName;
     const baseArg = args[1];
     const shiftedArg = args[0];
     let mclass;
@@ -9961,6 +10574,7 @@ defineFunction({
       mode: baseArg.mode,
       limits: true,
       alwaysHandleSupSub: true,
+      parentIsSupSub: false,
       symbol: false,
       suppressBaseShift: funcName !== "\\stackrel",
       body: ordargument(baseArg)
@@ -9976,7 +10590,8 @@ defineFunction({
       type: "mclass",
       mode: parser.mode,
       mclass,
-      body: [supsub]
+      body: [supsub],
+      isCharacterBox: utils.isCharacterBox(supsub)
     };
   },
 
@@ -10014,10 +10629,9 @@ defineFunction({
     numArgs: 1,
     greediness: 2
   },
-  handler: ({
-    parser,
-    funcName
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const body = args[0];
     let func = funcName;
 
@@ -10042,10 +10656,10 @@ defineFunction({
     numArgs: 1,
     greediness: 2
   },
-  handler: ({
-    parser
-  }, args) => {
-    const body = args[0]; // amsbsy.sty's \boldsymbol uses \binrel spacing to inherit the
+  handler: (_ref2, args) => {
+    let parser = _ref2.parser;
+    const body = args[0];
+    const isCharacterBox = utils.isCharacterBox(body); // amsbsy.sty's \boldsymbol uses \binrel spacing to inherit the
     // argument's bin|rel|ord status
 
     return {
@@ -10057,25 +10671,24 @@ defineFunction({
         mode: parser.mode,
         font: "boldsymbol",
         body
-      }]
+      }],
+      isCharacterBox: isCharacterBox
     };
   }
 }); // Old font changing functions
 
 defineFunction({
   type: "font",
-  names: ["\\rm", "\\sf", "\\tt", "\\bf", "\\it"],
+  names: ["\\rm", "\\sf", "\\tt", "\\bf", "\\it", "\\cal"],
   props: {
     numArgs: 0,
     allowedInText: true
   },
-  handler: ({
-    parser,
-    funcName,
-    breakOnTokenText
-  }, args) => {
+  handler: (_ref3, args) => {
+    let parser = _ref3.parser,
+        funcName = _ref3.funcName,
+        breakOnTokenText = _ref3.breakOnTokenText;
     const mode = parser.mode;
-    parser.consumeSpaces();
     const body = parser.parseExpression(true, breakOnTokenText);
     const style = `math${funcName.slice(1)}`;
     return {
@@ -10093,23 +10706,30 @@ defineFunction({
   mathmlBuilder: mathmlBuilder$5
 });
 
-const htmlBuilder$6 = (group, options) => {
-  // Fractions are handled in the TeXbook on pages 444-445, rules 15(a-e).
+const adjustStyle = (size, originalStyle) => {
   // Figure out what style this fraction should be in based on the
   // function used
-  let style = options.style;
+  let style = originalStyle;
 
-  if (group.size === "display") {
-    style = Style$1.DISPLAY;
-  } else if (group.size === "text" && style.size === Style$1.DISPLAY.size) {
+  if (size === "display") {
+    // Get display style as a default.
+    // If incoming style is sub/sup, use style.text() to get correct size.
+    style = style.id >= Style$1.SCRIPT.id ? style.text() : Style$1.DISPLAY;
+  } else if (size === "text" && style.size === Style$1.DISPLAY.size) {
     // We're in a \tfrac but incoming style is displaystyle, so:
     style = Style$1.TEXT;
-  } else if (group.size === "script") {
+  } else if (size === "script") {
     style = Style$1.SCRIPT;
-  } else if (group.size === "scriptscript") {
+  } else if (size === "scriptscript") {
     style = Style$1.SCRIPTSCRIPT;
   }
 
+  return style;
+};
+
+const htmlBuilder$6 = (group, options) => {
+  // Fractions are handled in the TeXbook on pages 444-445, rules 15(a-e).
+  const style = adjustStyle(group.size, options.style);
   const nstyle = style.fracNum();
   const dstyle = style.fracDen();
   let newOptions;
@@ -10152,7 +10772,7 @@ const htmlBuilder$6 = (group, options) => {
   let clearance;
   let denomShift;
 
-  if (style.size === Style$1.DISPLAY.size) {
+  if (style.size === Style$1.DISPLAY.size || group.size === "display") {
     numShift = options.fontMetrics().num1;
 
     if (ruleWidth > 0) {
@@ -10263,7 +10883,7 @@ const htmlBuilder$6 = (group, options) => {
 };
 
 const mathmlBuilder$6 = (group, options) => {
-  const node = new mathMLTree.MathNode("mfrac", [buildGroup$1(group.numer, options), buildGroup$1(group.denom, options)]);
+  let node = new mathMLTree.MathNode("mfrac", [buildGroup$1(group.numer, options), buildGroup$1(group.denom, options)]);
 
   if (!group.hasBarLine) {
     node.setAttribute("linethickness", "0px");
@@ -10272,11 +10892,20 @@ const mathmlBuilder$6 = (group, options) => {
     node.setAttribute("linethickness", ruleWidth + "em");
   }
 
+  const style = adjustStyle(group.size, options.style);
+
+  if (style.size !== options.style.size) {
+    node = new mathMLTree.MathNode("mstyle", [node]);
+    const isDisplay = style.size === Style$1.DISPLAY.size ? "true" : "false";
+    node.setAttribute("displaystyle", isDisplay);
+    node.setAttribute("scriptlevel", "0");
+  }
+
   if (group.leftDelim != null || group.rightDelim != null) {
     const withDelims = [];
 
     if (group.leftDelim != null) {
-      const leftOp = new mathMLTree.MathNode("mo", [new mathMLTree.TextNode(group.leftDelim)]);
+      const leftOp = new mathMLTree.MathNode("mo", [new mathMLTree.TextNode(group.leftDelim.replace("\\", ""))]);
       leftOp.setAttribute("fence", "true");
       withDelims.push(leftOp);
     }
@@ -10284,7 +10913,7 @@ const mathmlBuilder$6 = (group, options) => {
     withDelims.push(node);
 
     if (group.rightDelim != null) {
-      const rightOp = new mathMLTree.MathNode("mo", [new mathMLTree.TextNode(group.rightDelim)]);
+      const rightOp = new mathMLTree.MathNode("mo", [new mathMLTree.TextNode(group.rightDelim.replace("\\", ""))]);
       rightOp.setAttribute("fence", "true");
       withDelims.push(rightOp);
     }
@@ -10303,10 +10932,9 @@ defineFunction({
     numArgs: 2,
     greediness: 2
   },
-  handler: ({
-    parser,
-    funcName
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const numer = args[0];
     const denom = args[1];
     let hasBarLine;
@@ -10389,11 +11017,10 @@ defineFunction({
     infix: true
   },
 
-  handler({
-    parser,
-    funcName,
-    token
-  }) {
+  handler(_ref2) {
+    let parser = _ref2.parser,
+        funcName = _ref2.funcName,
+        token = _ref2.token;
     let replaceWith;
 
     switch (funcName) {
@@ -10452,30 +11079,13 @@ defineFunction({
     argTypes: ["math", "math", "size", "text", "math", "math"]
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref3, args) {
+    let parser = _ref3.parser;
     const numer = args[4];
     const denom = args[5]; // Look into the parse nodes to get the desired delimiters.
 
-    let leftNode = checkNodeType(args[0], "ordgroup");
-
-    if (leftNode) {
-      leftNode = assertAtomFamily(leftNode.body[0], "open");
-    } else {
-      leftNode = assertAtomFamily(args[0], "open");
-    }
-
-    const leftDelim = delimFromValue(leftNode.text);
-    let rightNode = checkNodeType(args[1], "ordgroup");
-
-    if (rightNode) {
-      rightNode = assertAtomFamily(rightNode.body[0], "close");
-    } else {
-      rightNode = assertAtomFamily(args[1], "close");
-    }
-
-    const rightDelim = delimFromValue(rightNode.text);
+    const leftDelim = args[0].type === "atom" && args[0].family === "open" ? delimFromValue(args[0].text) : null;
+    const rightDelim = args[1].type === "atom" && args[1].family === "close" ? delimFromValue(args[1].text) : null;
     const barNode = assertNodeType(args[2], "size");
     let hasBarLine;
     let barSize = null;
@@ -10492,15 +11102,15 @@ defineFunction({
 
 
     let size = "auto";
-    let styl = checkNodeType(args[3], "ordgroup");
+    let styl = args[3];
 
-    if (styl) {
+    if (styl.type === "ordgroup") {
       if (styl.body.length > 0) {
         const textOrd = assertNodeType(styl.body[0], "textord");
         size = stylArray[Number(textOrd.text)];
       }
     } else {
-      styl = assertNodeType(args[3], "textord");
+      styl = assertNodeType(styl, "textord");
       size = stylArray[Number(styl.text)];
     }
 
@@ -10531,11 +11141,10 @@ defineFunction({
     infix: true
   },
 
-  handler({
-    parser,
-    funcName,
-    token
-  }, args) {
+  handler(_ref4, args) {
+    let parser = _ref4.parser,
+        funcName = _ref4.funcName,
+        token = _ref4.token;
     return {
       type: "infix",
       mode: parser.mode,
@@ -10553,10 +11162,9 @@ defineFunction({
     numArgs: 3,
     argTypes: ["math", "size", "math"]
   },
-  handler: ({
-    parser,
-    funcName
-  }, args) => {
+  handler: (_ref5, args) => {
+    let parser = _ref5.parser,
+        funcName = _ref5.funcName;
     const numer = args[0];
     const barSize = assert(assertNodeType(args[1], "infix").size);
     const denom = args[2];
@@ -10584,14 +11192,13 @@ const htmlBuilder$7 = (grp, options) => {
 
   let supSubGroup;
   let group;
-  const supSub = checkNodeType(grp, "supsub");
 
-  if (supSub) {
+  if (grp.type === "supsub") {
     // Ref: LaTeX source2e: }}}}\limits}
     // i.e. LaTeX treats the brace similar to an op and passes it
     // with \limits, so we need to assign supsub style.
-    supSubGroup = supSub.sup ? buildGroup(supSub.sup, options.havingStyle(style.sup()), options) : buildGroup(supSub.sub, options.havingStyle(style.sub()), options);
-    group = assertNodeType(supSub.base, "horizBrace");
+    supSubGroup = grp.sup ? buildGroup(grp.sup, options.havingStyle(style.sup()), options) : buildGroup(grp.sub, options.havingStyle(style.sub()), options);
+    group = assertNodeType(grp.base, "horizBrace");
   } else {
     group = assertNodeType(grp, "horizBrace");
   } // Build the base group
@@ -10697,10 +11304,9 @@ defineFunction({
     numArgs: 1
   },
 
-  handler({
-    parser,
-    funcName
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     return {
       type: "horizBrace",
       mode: parser.mode,
@@ -10722,11 +11328,18 @@ defineFunction({
     argTypes: ["url", "original"],
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser;
     const body = args[1];
     const href = assertNodeType(args[0], "url").url;
+
+    if (!parser.settings.isTrusted({
+      command: "\\href",
+      url: href
+    })) {
+      return parser.formatUnsupportedCmd("\\href");
+    }
+
     return {
       type: "href",
       mode: parser.mode,
@@ -10757,10 +11370,17 @@ defineFunction({
     argTypes: ["url"],
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref2, args) => {
+    let parser = _ref2.parser;
     const href = assertNodeType(args[0], "url").url;
+
+    if (!parser.settings.isTrusted({
+      command: "\\url",
+      url: href
+    })) {
+      return parser.formatUnsupportedCmd("\\url");
+    }
+
     const chars = [];
 
     for (let i = 0; i < href.length; i++) {
@@ -10793,15 +11413,120 @@ defineFunction({
 });
 
 defineFunction({
+  type: "html",
+  names: ["\\htmlClass", "\\htmlId", "\\htmlStyle", "\\htmlData"],
+  props: {
+    numArgs: 2,
+    argTypes: ["raw", "original"],
+    allowedInText: true
+  },
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName,
+        token = _ref.token;
+    const value = assertNodeType(args[0], "raw").string;
+    const body = args[1];
+
+    if (parser.settings.strict) {
+      parser.settings.reportNonstrict("htmlExtension", "HTML extension is disabled on strict mode");
+    }
+
+    let trustContext;
+    const attributes = {};
+
+    switch (funcName) {
+      case "\\htmlClass":
+        attributes.class = value;
+        trustContext = {
+          command: "\\htmlClass",
+          class: value
+        };
+        break;
+
+      case "\\htmlId":
+        attributes.id = value;
+        trustContext = {
+          command: "\\htmlId",
+          id: value
+        };
+        break;
+
+      case "\\htmlStyle":
+        attributes.style = value;
+        trustContext = {
+          command: "\\htmlStyle",
+          style: value
+        };
+        break;
+
+      case "\\htmlData":
+        {
+          const data = value.split(",");
+
+          for (let i = 0; i < data.length; i++) {
+            const keyVal = data[i].split("=");
+
+            if (keyVal.length !== 2) {
+              throw new ParseError("Error parsing key-value for \\htmlData");
+            }
+
+            attributes["data-" + keyVal[0].trim()] = keyVal[1].trim();
+          }
+
+          trustContext = {
+            command: "\\htmlData",
+            attributes
+          };
+          break;
+        }
+
+      default:
+        throw new Error("Unrecognized html command");
+    }
+
+    if (!parser.settings.isTrusted(trustContext)) {
+      return parser.formatUnsupportedCmd(funcName);
+    }
+
+    return {
+      type: "html",
+      mode: parser.mode,
+      attributes,
+      body: ordargument(body)
+    };
+  },
+  htmlBuilder: (group, options) => {
+    const elements = buildExpression(group.body, options, false);
+    const classes = ["enclosing"];
+
+    if (group.attributes.class) {
+      classes.push(...group.attributes.class.trim().split(/\s+/));
+    }
+
+    const span = buildCommon.makeSpan(classes, elements, options);
+
+    for (const attr in group.attributes) {
+      if (attr !== "class" && group.attributes.hasOwnProperty(attr)) {
+        span.setAttribute(attr, group.attributes[attr]);
+      }
+    }
+
+    return span;
+  },
+  mathmlBuilder: (group, options) => {
+    return buildExpressionRow(group.body, options);
+  }
+});
+
+defineFunction({
   type: "htmlmathml",
   names: ["\\html@mathml"],
   props: {
     numArgs: 2,
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser;
     return {
       type: "htmlmathml",
       mode: parser.mode,
@@ -10818,6 +11543,178 @@ defineFunction({
   }
 });
 
+const sizeData = function sizeData(str) {
+  if (/^[-+]? *(\d+(\.\d*)?|\.\d+)$/.test(str)) {
+    // str is a number with no unit specified.
+    // default unit is bp, per graphix package.
+    return {
+      number: +str,
+      unit: "bp"
+    };
+  } else {
+    const match = /([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/.exec(str);
+
+    if (!match) {
+      throw new ParseError("Invalid size: '" + str + "' in \\includegraphics");
+    }
+
+    const data = {
+      number: +(match[1] + match[2]),
+      // sign + magnitude, cast to number
+      unit: match[3]
+    };
+
+    if (!validUnit(data)) {
+      throw new ParseError("Invalid unit: '" + data.unit + "' in \\includegraphics.");
+    }
+
+    return data;
+  }
+};
+
+defineFunction({
+  type: "includegraphics",
+  names: ["\\includegraphics"],
+  props: {
+    numArgs: 1,
+    numOptionalArgs: 1,
+    argTypes: ["raw", "url"],
+    allowedInText: false
+  },
+  handler: (_ref, args, optArgs) => {
+    let parser = _ref.parser;
+    let width = {
+      number: 0,
+      unit: "em"
+    };
+    let height = {
+      number: 0.9,
+      unit: "em"
+    }; // sorta character sized.
+
+    let totalheight = {
+      number: 0,
+      unit: "em"
+    };
+    let alt = "";
+
+    if (optArgs[0]) {
+      const attributeStr = assertNodeType(optArgs[0], "raw").string; // Parser.js does not parse key/value pairs. We get a string.
+
+      const attributes = attributeStr.split(",");
+
+      for (let i = 0; i < attributes.length; i++) {
+        const keyVal = attributes[i].split("=");
+
+        if (keyVal.length === 2) {
+          const str = keyVal[1].trim();
+
+          switch (keyVal[0].trim()) {
+            case "alt":
+              alt = str;
+              break;
+
+            case "width":
+              width = sizeData(str);
+              break;
+
+            case "height":
+              height = sizeData(str);
+              break;
+
+            case "totalheight":
+              totalheight = sizeData(str);
+              break;
+
+            default:
+              throw new ParseError("Invalid key: '" + keyVal[0] + "' in \\includegraphics.");
+          }
+        }
+      }
+    }
+
+    const src = assertNodeType(args[0], "url").url;
+
+    if (alt === "") {
+      // No alt given. Use the file name. Strip away the path.
+      alt = src;
+      alt = alt.replace(/^.*[\\/]/, '');
+      alt = alt.substring(0, alt.lastIndexOf('.'));
+    }
+
+    if (!parser.settings.isTrusted({
+      command: "\\includegraphics",
+      url: src
+    })) {
+      return parser.formatUnsupportedCmd("\\includegraphics");
+    }
+
+    return {
+      type: "includegraphics",
+      mode: parser.mode,
+      alt: alt,
+      width: width,
+      height: height,
+      totalheight: totalheight,
+      src: src
+    };
+  },
+  htmlBuilder: (group, options) => {
+    const height = calculateSize(group.height, options);
+    let depth = 0;
+
+    if (group.totalheight.number > 0) {
+      depth = calculateSize(group.totalheight, options) - height;
+      depth = Number(depth.toFixed(2));
+    }
+
+    let width = 0;
+
+    if (group.width.number > 0) {
+      width = calculateSize(group.width, options);
+    }
+
+    const style = {
+      height: height + depth + "em"
+    };
+
+    if (width > 0) {
+      style.width = width + "em";
+    }
+
+    if (depth > 0) {
+      style.verticalAlign = -depth + "em";
+    }
+
+    const node = new Img(group.src, group.alt, style);
+    node.height = height;
+    node.depth = depth;
+    return node;
+  },
+  mathmlBuilder: (group, options) => {
+    const node = new mathMLTree.MathNode("mglyph", []);
+    node.setAttribute("alt", group.alt);
+    const height = calculateSize(group.height, options);
+    let depth = 0;
+
+    if (group.totalheight.number > 0) {
+      depth = calculateSize(group.totalheight, options) - height;
+      depth = depth.toFixed(2);
+      node.setAttribute("valign", "-" + depth + "em");
+    }
+
+    node.setAttribute("height", height + depth + "em");
+
+    if (group.width.number > 0) {
+      const width = calculateSize(group.width, options);
+      node.setAttribute("width", width + "em");
+    }
+
+    node.setAttribute("src", group.src);
+    return node;
+  }
+});
+
 // Horizontal spacing commands
 
 defineFunction({
@@ -10829,10 +11726,9 @@ defineFunction({
     allowedInText: true
   },
 
-  handler({
-    parser,
-    funcName
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const size = assertNodeType(args[0], "size");
 
     if (parser.settings.strict) {
@@ -10882,10 +11778,9 @@ defineFunction({
     numArgs: 1,
     allowedInText: true
   },
-  handler: ({
-    parser,
-    funcName
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const body = args[0];
     return {
       type: "lap",
@@ -10912,21 +11807,16 @@ defineFunction({
     // two items involved in the lap.
     // Next, use a strut to set the height of the HTML bounding box.
     // Otherwise, a tall argument may be misplaced.
+    // This code resolved issue #1153
 
     const strut = buildCommon.makeSpan(["strut"]);
     strut.style.height = node.height + node.depth + "em";
     strut.style.verticalAlign = -node.depth + "em";
     node.children.unshift(strut); // Next, prevent vertical misplacement when next to something tall.
+    // This code resolves issue #1234
 
-    node = buildCommon.makeVList({
-      positionType: "firstBaseline",
-      children: [{
-        type: "elem",
-        elem: node
-      }]
-    }, options); // Get the horizontal spacing correct relative to adjacent items.
-
-    return buildCommon.makeSpan(["mord"], [node], options);
+    node = buildCommon.makeSpan(["thinbox"], [node], options);
+    return buildCommon.makeSpan(["mord", "vbox"], [node], options);
   },
   mathmlBuilder: (group, options) => {
     // mathllap, mathrlap, mathclap
@@ -10948,23 +11838,18 @@ defineFunction({
   props: {
     numArgs: 0,
     allowedInText: true,
-    allowedInMath: false,
-    consumeMode: "math"
+    allowedInMath: false
   },
 
-  handler({
-    funcName,
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let funcName = _ref.funcName,
+        parser = _ref.parser;
     const outerMode = parser.mode;
     parser.switchMode("math");
     const close = funcName === "\\(" ? "\\)" : "$";
-    const body = parser.parseExpression(false, close); // We can't expand the next symbol after the closing $ until after
-    // switching modes back.  So don't consume within expect.
-
-    parser.expect(close, false);
+    const body = parser.parseExpression(false, close);
+    parser.expect(close);
     parser.switchMode(outerMode);
-    parser.consume();
     return {
       type: "styling",
       mode: parser.mode,
@@ -11016,9 +11901,8 @@ defineFunction({
   props: {
     numArgs: 4
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser;
     return {
       type: "mathchoice",
       mode: parser.mode,
@@ -11039,31 +11923,142 @@ defineFunction({
   }
 });
 
+// For an operator with limits, assemble the base, sup, and sub into a span.
+const assembleSupSub = (base, supGroup, subGroup, options, style, slant, baseShift) => {
+  base = buildCommon.makeSpan([], [base]);
+  let sub;
+  let sup; // We manually have to handle the superscripts and subscripts. This,
+  // aside from the kern calculations, is copied from supsub.
+
+  if (supGroup) {
+    const elem = buildGroup(supGroup, options.havingStyle(style.sup()), options);
+    sup = {
+      elem,
+      kern: Math.max(options.fontMetrics().bigOpSpacing1, options.fontMetrics().bigOpSpacing3 - elem.depth)
+    };
+  }
+
+  if (subGroup) {
+    const elem = buildGroup(subGroup, options.havingStyle(style.sub()), options);
+    sub = {
+      elem,
+      kern: Math.max(options.fontMetrics().bigOpSpacing2, options.fontMetrics().bigOpSpacing4 - elem.height)
+    };
+  } // Build the final group as a vlist of the possible subscript, base,
+  // and possible superscript.
+
+
+  let finalGroup;
+
+  if (sup && sub) {
+    const bottom = options.fontMetrics().bigOpSpacing5 + sub.elem.height + sub.elem.depth + sub.kern + base.depth + baseShift;
+    finalGroup = buildCommon.makeVList({
+      positionType: "bottom",
+      positionData: bottom,
+      children: [{
+        type: "kern",
+        size: options.fontMetrics().bigOpSpacing5
+      }, {
+        type: "elem",
+        elem: sub.elem,
+        marginLeft: -slant + "em"
+      }, {
+        type: "kern",
+        size: sub.kern
+      }, {
+        type: "elem",
+        elem: base
+      }, {
+        type: "kern",
+        size: sup.kern
+      }, {
+        type: "elem",
+        elem: sup.elem,
+        marginLeft: slant + "em"
+      }, {
+        type: "kern",
+        size: options.fontMetrics().bigOpSpacing5
+      }]
+    }, options);
+  } else if (sub) {
+    const top = base.height - baseShift; // Shift the limits by the slant of the symbol. Note
+    // that we are supposed to shift the limits by 1/2 of the slant,
+    // but since we are centering the limits adding a full slant of
+    // margin will shift by 1/2 that.
+
+    finalGroup = buildCommon.makeVList({
+      positionType: "top",
+      positionData: top,
+      children: [{
+        type: "kern",
+        size: options.fontMetrics().bigOpSpacing5
+      }, {
+        type: "elem",
+        elem: sub.elem,
+        marginLeft: -slant + "em"
+      }, {
+        type: "kern",
+        size: sub.kern
+      }, {
+        type: "elem",
+        elem: base
+      }]
+    }, options);
+  } else if (sup) {
+    const bottom = base.depth + baseShift;
+    finalGroup = buildCommon.makeVList({
+      positionType: "bottom",
+      positionData: bottom,
+      children: [{
+        type: "elem",
+        elem: base
+      }, {
+        type: "kern",
+        size: sup.kern
+      }, {
+        type: "elem",
+        elem: sup.elem,
+        marginLeft: slant + "em"
+      }, {
+        type: "kern",
+        size: options.fontMetrics().bigOpSpacing5
+      }]
+    }, options);
+  } else {
+    // This case probably shouldn't occur (this would mean the
+    // supsub was sending us a group with no superscript or
+    // subscript) but be safe.
+    return base;
+  }
+
+  return buildCommon.makeSpan(["mop", "op-limits"], [finalGroup], options);
+};
+
 // Limits, symbols
-// NOTE: Unlike most `htmlBuilder`s, this one handles not only "op", but also
+// Most operators have a large successor symbol, but these don't.
+const noSuccessor = ["\\smallint"]; // NOTE: Unlike most `htmlBuilder`s, this one handles not only "op", but also
+// "supsub" since some of them (like \int) can affect super/subscripting.
+
 const htmlBuilder$8 = (grp, options) => {
   // Operators are handled in the TeXbook pg. 443-444, rule 13(a).
   let supGroup;
   let subGroup;
   let hasLimits = false;
   let group;
-  const supSub = checkNodeType(grp, "supsub");
 
-  if (supSub) {
+  if (grp.type === "supsub") {
     // If we have limits, supsub will pass us its group to handle. Pull
     // out the superscript and subscript and set the group to the op in
     // its base.
-    supGroup = supSub.sup;
-    subGroup = supSub.sub;
-    group = assertNodeType(supSub.base, "op");
+    supGroup = grp.sup;
+    subGroup = grp.sub;
+    group = assertNodeType(grp.base, "op");
     hasLimits = true;
   } else {
     group = assertNodeType(grp, "op");
   }
 
-  const style = options.style; // Most operators have a large successor symbol, but these don't.
-
-  const noSuccessor = ["\\smallint"];
+  const style = options.style;
   let large = false;
 
   if (style.size === Style$1.DISPLAY.size && group.symbol && !utils.contains(noSuccessor, group.name)) {
@@ -11129,7 +12124,7 @@ const htmlBuilder$8 = (grp, options) => {
     const output = [];
 
     for (let i = 1; i < group.name.length; i++) {
-      output.push(buildCommon.mathsym(group.name[i], group.mode));
+      output.push(buildCommon.mathsym(group.name[i], group.mode, options));
     }
 
     base = buildCommon.makeSpan(["mop"], output, options);
@@ -11153,115 +12148,7 @@ const htmlBuilder$8 = (grp, options) => {
   }
 
   if (hasLimits) {
-    // IE 8 clips \int if it is in a display: inline-block. We wrap it
-    // in a new span so it is an inline, and works.
-    base = buildCommon.makeSpan([], [base]);
-    let sub;
-    let sup; // We manually have to handle the superscripts and subscripts. This,
-    // aside from the kern calculations, is copied from supsub.
-
-    if (supGroup) {
-      const elem = buildGroup(supGroup, options.havingStyle(style.sup()), options);
-      sup = {
-        elem,
-        kern: Math.max(options.fontMetrics().bigOpSpacing1, options.fontMetrics().bigOpSpacing3 - elem.depth)
-      };
-    }
-
-    if (subGroup) {
-      const elem = buildGroup(subGroup, options.havingStyle(style.sub()), options);
-      sub = {
-        elem,
-        kern: Math.max(options.fontMetrics().bigOpSpacing2, options.fontMetrics().bigOpSpacing4 - elem.height)
-      };
-    } // Build the final group as a vlist of the possible subscript, base,
-    // and possible superscript.
-
-
-    let finalGroup;
-
-    if (sup && sub) {
-      const bottom = options.fontMetrics().bigOpSpacing5 + sub.elem.height + sub.elem.depth + sub.kern + base.depth + baseShift;
-      finalGroup = buildCommon.makeVList({
-        positionType: "bottom",
-        positionData: bottom,
-        children: [{
-          type: "kern",
-          size: options.fontMetrics().bigOpSpacing5
-        }, {
-          type: "elem",
-          elem: sub.elem,
-          marginLeft: -slant + "em"
-        }, {
-          type: "kern",
-          size: sub.kern
-        }, {
-          type: "elem",
-          elem: base
-        }, {
-          type: "kern",
-          size: sup.kern
-        }, {
-          type: "elem",
-          elem: sup.elem,
-          marginLeft: slant + "em"
-        }, {
-          type: "kern",
-          size: options.fontMetrics().bigOpSpacing5
-        }]
-      }, options);
-    } else if (sub) {
-      const top = base.height - baseShift; // Shift the limits by the slant of the symbol. Note
-      // that we are supposed to shift the limits by 1/2 of the slant,
-      // but since we are centering the limits adding a full slant of
-      // margin will shift by 1/2 that.
-
-      finalGroup = buildCommon.makeVList({
-        positionType: "top",
-        positionData: top,
-        children: [{
-          type: "kern",
-          size: options.fontMetrics().bigOpSpacing5
-        }, {
-          type: "elem",
-          elem: sub.elem,
-          marginLeft: -slant + "em"
-        }, {
-          type: "kern",
-          size: sub.kern
-        }, {
-          type: "elem",
-          elem: base
-        }]
-      }, options);
-    } else if (sup) {
-      const bottom = base.depth + baseShift;
-      finalGroup = buildCommon.makeVList({
-        positionType: "bottom",
-        positionData: bottom,
-        children: [{
-          type: "elem",
-          elem: base
-        }, {
-          type: "kern",
-          size: sup.kern
-        }, {
-          type: "elem",
-          elem: sup.elem,
-          marginLeft: slant + "em"
-        }, {
-          type: "kern",
-          size: options.fontMetrics().bigOpSpacing5
-        }]
-      }, options);
-    } else {
-      // This case probably shouldn't occur (this would mean the
-      // supsub was sending us a group with no superscript or
-      // subscript) but be safe.
-      return base;
-    }
-
-    return buildCommon.makeSpan(["mop", "op-limits"], [finalGroup], options);
+    return assembleSupSub(base, supGroup, subGroup, options, style, slant, baseShift);
   } else {
     if (baseShift) {
       base.style.position = "relative";
@@ -11273,24 +12160,31 @@ const htmlBuilder$8 = (grp, options) => {
 };
 
 const mathmlBuilder$8 = (group, options) => {
-  let node; // TODO(emily): handle big operators using the `largeop` attribute
+  let node;
 
   if (group.symbol) {
     // This is a symbol. Just add the symbol.
     node = new MathNode("mo", [makeText(group.name, group.mode)]);
+
+    if (utils.contains(noSuccessor, group.name)) {
+      node.setAttribute("largeop", "false");
+    }
   } else if (group.body) {
     // This is an operator with children. Add them.
     node = new MathNode("mo", buildExpression$1(group.body, options));
   } else {
     // This is a text operator. Add all of the characters from the
     // operator's name.
-    // TODO(emily): Add a space in the middle of some of these
-    // operators, like \limsup.
     node = new MathNode("mi", [new TextNode(group.name.slice(1))]); // Append an <mo>&ApplyFunction;</mo>.
     // ref: https://www.w3.org/TR/REC-MathML/chap3_2.html#sec3.2.4
 
     const operator = new MathNode("mo", [makeText("\u2061", "text")]);
-    return newDocumentFragment([node, operator]);
+
+    if (group.parentIsSupSub) {
+      node = new MathNode("mo", [node, operator]);
+    } else {
+      node = newDocumentFragment([node, operator]);
+    }
   }
 
   return node;
@@ -11303,7 +12197,7 @@ const singleCharBigOps = {
   "\u22c0": "\\bigwedge",
   "\u22c1": "\\bigvee",
   "\u22c2": "\\bigcap",
-  "\u22c3": "\\bigcap",
+  "\u22c3": "\\bigcup",
   "\u2a00": "\\bigodot",
   "\u2a01": "\\bigoplus",
   "\u2a02": "\\bigotimes",
@@ -11316,10 +12210,9 @@ defineFunction({
   props: {
     numArgs: 0
   },
-  handler: ({
-    parser,
-    funcName
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     let fName = funcName;
 
     if (fName.length === 1) {
@@ -11330,6 +12223,7 @@ defineFunction({
       type: "op",
       mode: parser.mode,
       limits: true,
+      parentIsSupSub: false,
       symbol: true,
       name: fName
     };
@@ -11345,14 +12239,14 @@ defineFunction({
   props: {
     numArgs: 1
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref2, args) => {
+    let parser = _ref2.parser;
     const body = args[0];
     return {
       type: "op",
       mode: parser.mode,
       limits: false,
+      parentIsSupSub: false,
       symbol: false,
       body: ordargument(body)
     };
@@ -11379,14 +12273,14 @@ defineFunction({
     numArgs: 0
   },
 
-  handler({
-    parser,
-    funcName
-  }) {
+  handler(_ref3) {
+    let parser = _ref3.parser,
+        funcName = _ref3.funcName;
     return {
       type: "op",
       mode: parser.mode,
       limits: false,
+      parentIsSupSub: false,
       symbol: false,
       name: funcName
     };
@@ -11403,14 +12297,14 @@ defineFunction({
     numArgs: 0
   },
 
-  handler({
-    parser,
-    funcName
-  }) {
+  handler(_ref4) {
+    let parser = _ref4.parser,
+        funcName = _ref4.funcName;
     return {
       type: "op",
       mode: parser.mode,
       limits: true,
+      parentIsSupSub: false,
       symbol: false,
       name: funcName
     };
@@ -11427,10 +12321,9 @@ defineFunction({
     numArgs: 0
   },
 
-  handler({
-    parser,
-    funcName
-  }) {
+  handler(_ref5) {
+    let parser = _ref5.parser,
+        funcName = _ref5.funcName;
     let fName = funcName;
 
     if (fName.length === 1) {
@@ -11441,6 +12334,7 @@ defineFunction({
       type: "op",
       mode: parser.mode,
       limits: false,
+      parentIsSupSub: false,
       symbol: true,
       name: fName
     };
@@ -11450,123 +12344,166 @@ defineFunction({
   mathmlBuilder: mathmlBuilder$8
 });
 
+// NOTE: Unlike most `htmlBuilder`s, this one handles not only
+// "operatorname", but also  "supsub" since \operatorname* can
+const htmlBuilder$9 = (grp, options) => {
+  // Operators are handled in the TeXbook pg. 443-444, rule 13(a).
+  let supGroup;
+  let subGroup;
+  let hasLimits = false;
+  let group;
+
+  if (grp.type === "supsub") {
+    // If we have limits, supsub will pass us its group to handle. Pull
+    // out the superscript and subscript and set the group to the op in
+    // its base.
+    supGroup = grp.sup;
+    subGroup = grp.sub;
+    group = assertNodeType(grp.base, "operatorname");
+    hasLimits = true;
+  } else {
+    group = assertNodeType(grp, "operatorname");
+  }
+
+  let base;
+
+  if (group.body.length > 0) {
+    const body = group.body.map(child => {
+      // $FlowFixMe: Check if the node has a string `text` property.
+      const childText = child.text;
+
+      if (typeof childText === "string") {
+        return {
+          type: "textord",
+          mode: child.mode,
+          text: childText
+        };
+      } else {
+        return child;
+      }
+    }); // Consolidate function names into symbol characters.
+
+    const expression = buildExpression(body, options.withFont("mathrm"), true);
+
+    for (let i = 0; i < expression.length; i++) {
+      const child = expression[i];
+
+      if (child instanceof SymbolNode) {
+        // Per amsopn package,
+        // change minus to hyphen and \ast to asterisk
+        child.text = child.text.replace(/\u2212/, "-").replace(/\u2217/, "*");
+      }
+    }
+
+    base = buildCommon.makeSpan(["mop"], expression, options);
+  } else {
+    base = buildCommon.makeSpan(["mop"], [], options);
+  }
+
+  if (hasLimits) {
+    return assembleSupSub(base, supGroup, subGroup, options, options.style, 0, 0);
+  } else {
+    return base;
+  }
+};
+
+const mathmlBuilder$9 = (group, options) => {
+  // The steps taken here are similar to the html version.
+  let expression = buildExpression$1(group.body, options.withFont("mathrm")); // Is expression a string or has it something like a fraction?
+
+  let isAllString = true; // default
+
+  for (let i = 0; i < expression.length; i++) {
+    const node = expression[i];
+
+    if (node instanceof mathMLTree.SpaceNode) ; else if (node instanceof mathMLTree.MathNode) {
+      switch (node.type) {
+        case "mi":
+        case "mn":
+        case "ms":
+        case "mspace":
+        case "mtext":
+          break;
+        // Do nothing yet.
+
+        case "mo":
+          {
+            const child = node.children[0];
+
+            if (node.children.length === 1 && child instanceof mathMLTree.TextNode) {
+              child.text = child.text.replace(/\u2212/, "-").replace(/\u2217/, "*");
+            } else {
+              isAllString = false;
+            }
+
+            break;
+          }
+
+        default:
+          isAllString = false;
+      }
+    } else {
+      isAllString = false;
+    }
+  }
+
+  if (isAllString) {
+    // Write a single TextNode instead of multiple nested tags.
+    const word = expression.map(node => node.toText()).join("");
+    expression = [new mathMLTree.TextNode(word)];
+  }
+
+  const identifier = new mathMLTree.MathNode("mi", expression);
+  identifier.setAttribute("mathvariant", "normal"); // \u2061 is the same as &ApplyFunction;
+  // ref: https://www.w3schools.com/charsets/ref_html_entities_a.asp
+
+  const operator = new mathMLTree.MathNode("mo", [makeText("\u2061", "text")]);
+
+  if (group.parentIsSupSub) {
+    return new mathMLTree.MathNode("mo", [identifier, operator]);
+  } else {
+    return mathMLTree.newDocumentFragment([identifier, operator]);
+  }
+}; // \operatorname
 // amsopn.dtx: \mathop{#1\kern\z@\operator@font#3}\newmcodes@
+
 
 defineFunction({
   type: "operatorname",
-  names: ["\\operatorname"],
+  names: ["\\operatorname", "\\operatorname*"],
   props: {
     numArgs: 1
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const body = args[0];
     return {
       type: "operatorname",
       mode: parser.mode,
-      body: ordargument(body)
+      body: ordargument(body),
+      alwaysHandleSupSub: funcName === "\\operatorname*",
+      limits: false,
+      parentIsSupSub: false
     };
   },
-  htmlBuilder: (group, options) => {
-    if (group.body.length > 0) {
-      const body = group.body.map(child => {
-        // $FlowFixMe: Check if the node has a string `text` property.
-        const childText = child.text;
-
-        if (typeof childText === "string") {
-          return {
-            type: "textord",
-            mode: child.mode,
-            text: childText
-          };
-        } else {
-          return child;
-        }
-      }); // Consolidate function names into symbol characters.
-
-      const expression = buildExpression(body, options.withFont("mathrm"), true);
-
-      for (let i = 0; i < expression.length; i++) {
-        const child = expression[i];
-
-        if (child instanceof SymbolNode) {
-          // Per amsopn package,
-          // change minus to hyphen and \ast to asterisk
-          child.text = child.text.replace(/\u2212/, "-").replace(/\u2217/, "*");
-        }
-      }
-
-      return buildCommon.makeSpan(["mop"], expression, options);
-    } else {
-      return buildCommon.makeSpan(["mop"], [], options);
-    }
-  },
-  mathmlBuilder: (group, options) => {
-    // The steps taken here are similar to the html version.
-    let expression = buildExpression$1(group.body, options.withFont("mathrm")); // Is expression a string or has it something like a fraction?
-
-    let isAllString = true; // default
-
-    for (let i = 0; i < expression.length; i++) {
-      const node = expression[i];
-
-      if (node instanceof mathMLTree.SpaceNode) ; else if (node instanceof mathMLTree.MathNode) {
-        switch (node.type) {
-          case "mi":
-          case "mn":
-          case "ms":
-          case "mspace":
-          case "mtext":
-            break;
-          // Do nothing yet.
-
-          case "mo":
-            {
-              const child = node.children[0];
-
-              if (node.children.length === 1 && child instanceof mathMLTree.TextNode) {
-                child.text = child.text.replace(/\u2212/, "-").replace(/\u2217/, "*");
-              } else {
-                isAllString = false;
-              }
-
-              break;
-            }
-
-          default:
-            isAllString = false;
-        }
-      } else {
-        isAllString = false;
-      }
-    }
-
-    if (isAllString) {
-      // Write a single TextNode instead of multiple nested tags.
-      const word = expression.map(node => node.toText()).join(""); // word has already been escaped by `node.toText()`
-
-      expression = [new mathMLTree.TextNode(word, false)];
-    }
-
-    const identifier = new mathMLTree.MathNode("mi", expression);
-    identifier.setAttribute("mathvariant", "normal"); // \u2061 is the same as &ApplyFunction;
-    // ref: https://www.w3schools.com/charsets/ref_html_entities_a.asp
-
-    const operator = new mathMLTree.MathNode("mo", [makeText("\u2061", "text")]);
-    return mathMLTree.newDocumentFragment([identifier, operator]);
-  }
+  htmlBuilder: htmlBuilder$9,
+  mathmlBuilder: mathmlBuilder$9
 });
 
 defineFunctionBuilders({
   type: "ordgroup",
 
   htmlBuilder(group, options) {
+    if (group.semisimple) {
+      return buildCommon.makeFragment(buildExpression(group.body, options, false));
+    }
+
     return buildCommon.makeSpan(["mord"], buildExpression(group.body, options, true), options);
   },
 
   mathmlBuilder(group, options) {
-    return buildExpressionRow(group.body, options);
+    return buildExpressionRow(group.body, options, true);
   }
 
 });
@@ -11578,9 +12515,8 @@ defineFunction({
     numArgs: 1
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser;
     const body = args[0];
     return {
       type: "overline",
@@ -11596,6 +12532,7 @@ defineFunction({
 
     const line = buildCommon.makeLineSpan("overline-line", options); // Generate the vlist, with the appropriate kerns
 
+    const defaultRuleThickness = options.fontMetrics().defaultRuleThickness;
     const vlist = buildCommon.makeVList({
       positionType: "firstBaseline",
       children: [{
@@ -11603,13 +12540,13 @@ defineFunction({
         elem: innerGroup
       }, {
         type: "kern",
-        size: 3 * line.height
+        size: 3 * defaultRuleThickness
       }, {
         type: "elem",
         elem: line
       }, {
         type: "kern",
-        size: line.height
+        size: defaultRuleThickness
       }]
     }, options);
     return buildCommon.makeSpan(["mord", "overline"], [vlist], options);
@@ -11632,9 +12569,8 @@ defineFunction({
     numArgs: 1,
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref, args) => {
+    let parser = _ref.parser;
     const body = args[0];
     return {
       type: "phantom",
@@ -11660,9 +12596,8 @@ defineFunction({
     numArgs: 1,
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref2, args) => {
+    let parser = _ref2.parser;
     const body = args[0];
     return {
       type: "hphantom",
@@ -11689,13 +12624,16 @@ defineFunction({
         type: "elem",
         elem: node
       }]
-    }, options);
-    return node;
+    }, options); // For spacing, TeX treats \smash as a math group (same spacing as ord).
+
+    return buildCommon.makeSpan(["mord"], [node], options);
   },
   mathmlBuilder: (group, options) => {
     const inner = buildExpression$1(ordargument(group.body), options);
-    const node = new mathMLTree.MathNode("mphantom", inner);
+    const phantom = new mathMLTree.MathNode("mphantom", inner);
+    const node = new mathMLTree.MathNode("mpadded", [phantom]);
     node.setAttribute("height", "0px");
+    node.setAttribute("depth", "0px");
     return node;
   }
 });
@@ -11706,9 +12644,8 @@ defineFunction({
     numArgs: 1,
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args) => {
+  handler: (_ref3, args) => {
+    let parser = _ref3.parser;
     const body = args[0];
     return {
       type: "vphantom",
@@ -11723,76 +12660,9 @@ defineFunction({
   },
   mathmlBuilder: (group, options) => {
     const inner = buildExpression$1(ordargument(group.body), options);
-    const node = new mathMLTree.MathNode("mphantom", inner);
+    const phantom = new mathMLTree.MathNode("mphantom", inner);
+    const node = new mathMLTree.MathNode("mpadded", [phantom]);
     node.setAttribute("width", "0px");
-    return node;
-  }
-});
-
-function sizingGroup(value, options, baseOptions) {
-  const inner = buildExpression(value, options, false);
-  const multiplier = options.sizeMultiplier / baseOptions.sizeMultiplier; // Add size-resetting classes to the inner list and set maxFontSize
-  // manually. Handle nested size changes.
-
-  for (let i = 0; i < inner.length; i++) {
-    const pos = inner[i].classes.indexOf("sizing");
-
-    if (pos < 0) {
-      Array.prototype.push.apply(inner[i].classes, options.sizingClasses(baseOptions));
-    } else if (inner[i].classes[pos + 1] === "reset-size" + options.size) {
-      // This is a nested size change: e.g., inner[i] is the "b" in
-      // `\Huge a \small b`. Override the old size (the `reset-` class)
-      // but not the new size.
-      inner[i].classes[pos + 1] = "reset-size" + baseOptions.size;
-    }
-
-    inner[i].height *= multiplier;
-    inner[i].depth *= multiplier;
-  }
-
-  return buildCommon.makeFragment(inner);
-}
-const sizeFuncs = ["\\tiny", "\\sixptsize", "\\scriptsize", "\\footnotesize", "\\small", "\\normalsize", "\\large", "\\Large", "\\LARGE", "\\huge", "\\Huge"];
-const htmlBuilder$9 = (group, options) => {
-  // Handle sizing operators like \Huge. Real TeX doesn't actually allow
-  // these functions inside of math expressions, so we do some special
-  // handling.
-  const newOptions = options.havingSize(group.size);
-  return sizingGroup(group.body, newOptions, options);
-};
-defineFunction({
-  type: "sizing",
-  names: sizeFuncs,
-  props: {
-    numArgs: 0,
-    allowedInText: true
-  },
-  handler: ({
-    breakOnTokenText,
-    funcName,
-    parser
-  }, args) => {
-    parser.consumeSpaces();
-    const body = parser.parseExpression(false, breakOnTokenText);
-    return {
-      type: "sizing",
-      mode: parser.mode,
-      // Figure out what size to use based on the list of functions above
-      size: sizeFuncs.indexOf(funcName) + 1,
-      body
-    };
-  },
-  htmlBuilder: htmlBuilder$9,
-  mathmlBuilder: (group, options) => {
-    const newOptions = options.havingSize(group.size);
-    const inner = buildExpression$1(group.body, newOptions);
-    const node = new mathMLTree.MathNode("mstyle", inner); // TODO(emily): This doesn't produce the correct size for nested size
-    // changes, because we don't keep state of what style we're currently
-    // in, so we can't reset the size to normal before changing it.  Now
-    // that we're passing an options parameter we should be able to fix
-    // this.
-
-    node.setAttribute("mathsize", newOptions.sizeMultiplier + "em");
     return node;
   }
 });
@@ -11802,13 +12672,12 @@ defineFunction({
   names: ["\\raisebox"],
   props: {
     numArgs: 2,
-    argTypes: ["size", "text"],
+    argTypes: ["size", "hbox"],
     allowedInText: true
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser;
     const amount = assertNodeType(args[0], "size").value;
     const body = args[1];
     return {
@@ -11820,21 +12689,7 @@ defineFunction({
   },
 
   htmlBuilder(group, options) {
-    const text = {
-      type: "text",
-      mode: group.mode,
-      body: ordargument(group.body),
-      font: "mathrm" // simulate \textrm
-
-    };
-    const sizedText = {
-      type: "sizing",
-      mode: group.mode,
-      body: [text],
-      size: 6 // simulate \normalsize
-
-    };
-    const body = htmlBuilder$9(sizedText, options);
+    const body = buildGroup(group.body, options);
     const dy = calculateSize(group.dy, options);
     return buildCommon.makeVList({
       positionType: "shift",
@@ -11864,9 +12719,8 @@ defineFunction({
     argTypes: ["size", "size", "size"]
   },
 
-  handler({
-    parser
-  }, args, optArgs) {
+  handler(_ref, args, optArgs) {
+    let parser = _ref.parser;
     const shift = optArgs[0];
     const width = assertNodeType(args[0], "size");
     const height = assertNodeType(args[1], "size");
@@ -11883,14 +12737,9 @@ defineFunction({
     // Make an empty span for the rule
     const rule = buildCommon.makeSpan(["mord", "rule"], [], options); // Calculate the shift, width, and height of the rule, and account for units
 
-    let shift = 0;
-
-    if (group.shift) {
-      shift = calculateSize(group.shift, options);
-    }
-
     const width = calculateSize(group.width, options);
-    const height = calculateSize(group.height, options); // Style the rule to the right size
+    const height = calculateSize(group.height, options);
+    const shift = group.shift ? calculateSize(group.shift, options) : 0; // Style the rule to the right size
 
     rule.style.borderRightWidth = width + "em";
     rule.style.borderTopWidth = height + "em";
@@ -11907,12 +12756,93 @@ defineFunction({
   },
 
   mathmlBuilder(group, options) {
-    // TODO(emily): Figure out if there's an actual way to draw black boxes
-    // in MathML.
-    const node = new mathMLTree.MathNode("mrow");
-    return node;
+    const width = calculateSize(group.width, options);
+    const height = calculateSize(group.height, options);
+    const shift = group.shift ? calculateSize(group.shift, options) : 0;
+    const color = options.color && options.getColor() || "black";
+    const rule = new mathMLTree.MathNode("mspace");
+    rule.setAttribute("mathbackground", color);
+    rule.setAttribute("width", width + "em");
+    rule.setAttribute("height", height + "em");
+    const wrapper = new mathMLTree.MathNode("mpadded", [rule]);
+
+    if (shift >= 0) {
+      wrapper.setAttribute("height", "+" + shift + "em");
+    } else {
+      wrapper.setAttribute("height", shift + "em");
+      wrapper.setAttribute("depth", "+" + -shift + "em");
+    }
+
+    wrapper.setAttribute("voffset", shift + "em");
+    return wrapper;
   }
 
+});
+
+function sizingGroup(value, options, baseOptions) {
+  const inner = buildExpression(value, options, false);
+  const multiplier = options.sizeMultiplier / baseOptions.sizeMultiplier; // Add size-resetting classes to the inner list and set maxFontSize
+  // manually. Handle nested size changes.
+
+  for (let i = 0; i < inner.length; i++) {
+    const pos = inner[i].classes.indexOf("sizing");
+
+    if (pos < 0) {
+      Array.prototype.push.apply(inner[i].classes, options.sizingClasses(baseOptions));
+    } else if (inner[i].classes[pos + 1] === "reset-size" + options.size) {
+      // This is a nested size change: e.g., inner[i] is the "b" in
+      // `\Huge a \small b`. Override the old size (the `reset-` class)
+      // but not the new size.
+      inner[i].classes[pos + 1] = "reset-size" + baseOptions.size;
+    }
+
+    inner[i].height *= multiplier;
+    inner[i].depth *= multiplier;
+  }
+
+  return buildCommon.makeFragment(inner);
+}
+const sizeFuncs = ["\\tiny", "\\sixptsize", "\\scriptsize", "\\footnotesize", "\\small", "\\normalsize", "\\large", "\\Large", "\\LARGE", "\\huge", "\\Huge"];
+const htmlBuilder$a = (group, options) => {
+  // Handle sizing operators like \Huge. Real TeX doesn't actually allow
+  // these functions inside of math expressions, so we do some special
+  // handling.
+  const newOptions = options.havingSize(group.size);
+  return sizingGroup(group.body, newOptions, options);
+};
+defineFunction({
+  type: "sizing",
+  names: sizeFuncs,
+  props: {
+    numArgs: 0,
+    allowedInText: true
+  },
+  handler: (_ref, args) => {
+    let breakOnTokenText = _ref.breakOnTokenText,
+        funcName = _ref.funcName,
+        parser = _ref.parser;
+    const body = parser.parseExpression(false, breakOnTokenText);
+    return {
+      type: "sizing",
+      mode: parser.mode,
+      // Figure out what size to use based on the list of functions above
+      size: sizeFuncs.indexOf(funcName) + 1,
+      body
+    };
+  },
+  htmlBuilder: htmlBuilder$a,
+  mathmlBuilder: (group, options) => {
+    const newOptions = options.havingSize(group.size);
+    const inner = buildExpression$1(group.body, newOptions);
+    const node = new mathMLTree.MathNode("mstyle", inner); // TODO(emily): This doesn't produce the correct size for nested size
+    // changes, because we don't keep state of what style we're currently
+    // in, so we can't reset the size to normal before changing it.  Now
+    // that we're passing an options parameter we should be able to fix
+    // this.
+
+    node.setAttribute("mathsize", newOptions.sizeMultiplier + "em");
+    return node;
+  }
 });
 
 // smash, with optional [tb], as in AMS
@@ -11924,9 +12854,8 @@ defineFunction({
     numOptionalArgs: 1,
     allowedInText: true
   },
-  handler: ({
-    parser
-  }, args, optArgs) => {
+  handler: (_ref, args, optArgs) => {
+    let parser = _ref.parser;
     let smashHeight = false;
     let smashDepth = false;
     const tbArg = optArgs[0] && assertNodeType(optArgs[0], "ordgroup");
@@ -11967,7 +12896,7 @@ defineFunction({
     };
   },
   htmlBuilder: (group, options) => {
-    const node = buildCommon.makeSpan(["mord"], [buildGroup(group.body, options)]);
+    const node = buildCommon.makeSpan([], [buildGroup(group.body, options)]);
 
     if (!group.smashHeight && !group.smashDepth) {
       return node;
@@ -11997,13 +12926,15 @@ defineFunction({
     // from acting on that line height. So we'll call makeVList now.
 
 
-    return buildCommon.makeVList({
+    const smashedNode = buildCommon.makeVList({
       positionType: "firstBaseline",
       children: [{
         type: "elem",
         elem: node
       }]
-    }, options);
+    }, options); // For spacing, TeX treats \hphantom as a math group (same spacing as ord).
+
+    return buildCommon.makeSpan(["mord"], [smashedNode], options);
   },
   mathmlBuilder: (group, options) => {
     const node = new mathMLTree.MathNode("mpadded", [buildGroup$1(group.body, options)]);
@@ -12028,9 +12959,8 @@ defineFunction({
     numOptionalArgs: 1
   },
 
-  handler({
-    parser
-  }, args, optArgs) {
+  handler(_ref, args, optArgs) {
+    let parser = _ref.parser;
     const index = optArgs[0];
     const body = args[0];
     return {
@@ -12149,13 +13079,11 @@ defineFunction({
     allowedInText: true
   },
 
-  handler({
-    breakOnTokenText,
-    funcName,
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let breakOnTokenText = _ref.breakOnTokenText,
+        funcName = _ref.funcName,
+        parser = _ref.parser;
     // parse out the implicit body
-    parser.consumeSpaces();
     const body = parser.parseExpression(true, breakOnTokenText); // TODO: Refactor to avoid duplicating styleMap in multiple places (e.g.
     // here and in buildHTML and de-dupe the enumeration of all the styles).
     // $FlowFixMe: The names above exactly match the styles.
@@ -12180,15 +13108,7 @@ defineFunction({
 
   mathmlBuilder(group, options) {
     // Figure out what style we're changing to.
-    // TODO(kevinb): dedupe this with buildHTML.js
-    // This will be easier of handling of styling nodes is in the same file.
-    const styleMap = {
-      "display": Style$1.DISPLAY,
-      "text": Style$1.TEXT,
-      "script": Style$1.SCRIPT,
-      "scriptscript": Style$1.SCRIPTSCRIPT
-    };
-    const newStyle = styleMap[group.style];
+    const newStyle = styleMap$1[group.style];
     const newOptions = options.havingStyle(newStyle);
     const inner = buildExpression$1(group.body, newOptions);
     const node = new mathMLTree.MathNode("mstyle", inner);
@@ -12223,6 +13143,9 @@ const htmlBuilderDelegate = function htmlBuilderDelegate(group, options) {
     // (e.g. `\displaystyle\sum_2^3`)
     const delegate = base.limits && (options.style.size === Style$1.DISPLAY.size || base.alwaysHandleSupSub);
     return delegate ? htmlBuilder$8 : null;
+  } else if (base.type === "operatorname") {
+    const delegate = base.alwaysHandleSupSub && (options.style.size === Style$1.DISPLAY.size || base.limits);
+    return delegate ? htmlBuilder$9 : null;
   } else if (base.type === "accent") {
     return utils.isCharacterBox(base.base) ? htmlBuilder : null;
   } else if (base.type === "horizBrace") {
@@ -12383,15 +13306,18 @@ defineFunctionBuilders({
     let isBrace = false;
     let isOver;
     let isSup;
-    const horizBrace = checkNodeType(group.base, "horizBrace");
 
-    if (horizBrace) {
+    if (group.base && group.base.type === "horizBrace") {
       isSup = !!group.sup;
 
-      if (isSup === horizBrace.isOver) {
+      if (isSup === group.base.isOver) {
         isBrace = true;
-        isOver = horizBrace.isOver;
+        isOver = group.base.isOver;
       }
+    }
+
+    if (group.base && (group.base.type === "op" || group.base.type === "operatorname")) {
+      group.base.parentIsSupSub = true;
     }
 
     const children = [buildGroup$1(group.base, options)];
@@ -12411,7 +13337,9 @@ defineFunctionBuilders({
     } else if (!group.sub) {
       const base = group.base;
 
-      if (base && base.type === "op" && base.limits && options.style === Style$1.DISPLAY) {
+      if (base && base.type === "op" && base.limits && (options.style === Style$1.DISPLAY || base.alwaysHandleSupSub)) {
+        nodeType = "mover";
+      } else if (base && base.type === "operatorname" && base.alwaysHandleSupSub && (base.limits || options.style === Style$1.DISPLAY)) {
         nodeType = "mover";
       } else {
         nodeType = "msup";
@@ -12419,7 +13347,9 @@ defineFunctionBuilders({
     } else if (!group.sup) {
       const base = group.base;
 
-      if (base && base.type === "op" && base.limits && options.style === Style$1.DISPLAY) {
+      if (base && base.type === "op" && base.limits && (options.style === Style$1.DISPLAY || base.alwaysHandleSupSub)) {
+        nodeType = "munder";
+      } else if (base && base.type === "operatorname" && base.alwaysHandleSupSub && (base.limits || options.style === Style$1.DISPLAY)) {
         nodeType = "munder";
       } else {
         nodeType = "msub";
@@ -12428,6 +13358,8 @@ defineFunctionBuilders({
       const base = group.base;
 
       if (base && base.type === "op" && base.limits && options.style === Style$1.DISPLAY) {
+        nodeType = "munderover";
+      } else if (base && base.type === "operatorname" && base.alwaysHandleSupSub && (options.style === Style$1.DISPLAY || base.limits)) {
         nodeType = "munderover";
       } else {
         nodeType = "msubsup";
@@ -12458,6 +13390,10 @@ defineFunctionBuilders({
       }
     } else if (group.family === "punct") {
       node.setAttribute("separator", "true");
+    } else if (group.family === "open" || group.family === "close") {
+      // Delims built here should not stretch vertically.
+      // See delimsizing.js for stretchy delims.
+      node.setAttribute("stretchy", "false");
     }
 
     return node;
@@ -12586,13 +13522,25 @@ defineFunctionBuilders({
 
 });
 
+const pad = () => {
+  const padNode = new mathMLTree.MathNode("mtd", []);
+  padNode.setAttribute("width", "50%");
+  return padNode;
+};
+
 defineFunctionBuilders({
   type: "tag",
 
   mathmlBuilder(group, options) {
-    const table = new mathMLTree.MathNode("mtable", [new mathMLTree.MathNode("mlabeledtr", [new mathMLTree.MathNode("mtd", [buildExpressionRow(group.tag, options)]), new mathMLTree.MathNode("mtd", [buildExpressionRow(group.body, options)])])]);
-    table.setAttribute("side", "right");
-    return table;
+    const table = new mathMLTree.MathNode("mtable", [new mathMLTree.MathNode("mtr", [pad(), new mathMLTree.MathNode("mtd", [buildExpressionRow(group.body, options)]), pad(), new mathMLTree.MathNode("mtd", [buildExpressionRow(group.tag, options)])])]);
+    table.setAttribute("width", "100%");
+    return table; // TODO: Left-aligned tags.
+    // Currently, the group and options passed here do not contain
+    // enough info to set tag alignment. `leqno` is in Settings but it is
+    // not passed to Options. On the HTML side, leqno is
+    // set by a CSS class applied in buildTree.js. That would have worked
+    // in MathML if browsers supported <mlabeledtr>. Since they don't, we
+    // need to rewrite the way this function is called.
   }
 
 });
@@ -12605,10 +13553,12 @@ const textFontFamilies = {
   "\\textnormal": "textrm"
 };
 const textFontWeights = {
-  "\\textbf": "textbf"
+  "\\textbf": "textbf",
+  "\\textmd": "textmd"
 };
 const textFontShapes = {
-  "\\textit": "textit"
+  "\\textit": "textit",
+  "\\textup": "textup"
 };
 
 const optionsWithFont = (group, options) => {
@@ -12629,20 +13579,18 @@ defineFunction({
   type: "text",
   names: [// Font families
   "\\text", "\\textrm", "\\textsf", "\\texttt", "\\textnormal", // Font weights
-  "\\textbf", // Font Shapes
-  "\\textit"],
+  "\\textbf", "\\textmd", // Font Shapes
+  "\\textit", "\\textup"],
   props: {
     numArgs: 1,
     argTypes: ["text"],
     greediness: 2,
-    allowedInText: true,
-    consumeMode: "text"
+    allowedInText: true
   },
 
-  handler({
-    parser,
-    funcName
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser,
+        funcName = _ref.funcName;
     const body = args[0];
     return {
       type: "text",
@@ -12673,9 +13621,8 @@ defineFunction({
     allowedInText: true
   },
 
-  handler({
-    parser
-  }, args) {
+  handler(_ref, args) {
+    let parser = _ref.parser;
     return {
       type: "underline",
       mode: parser.mode,
@@ -12690,18 +13637,19 @@ defineFunction({
 
     const line = buildCommon.makeLineSpan("underline-line", options); // Generate the vlist, with the appropriate kerns
 
+    const defaultRuleThickness = options.fontMetrics().defaultRuleThickness;
     const vlist = buildCommon.makeVList({
       positionType: "top",
       positionData: innerGroup.height,
       children: [{
         type: "kern",
-        size: line.height
+        size: defaultRuleThickness
       }, {
         type: "elem",
         elem: line
       }, {
         type: "kern",
-        size: 3 * line.height
+        size: 3 * defaultRuleThickness
       }, {
         type: "elem",
         elem: innerGroup
@@ -12817,17 +13765,31 @@ const tokenRegexString = `(${spaceRegexString}+)|` + // whitespace
 `${combiningDiacriticalMarkString}*` + // ...plus accents
 "|\\\\verb\\*([^]).*?\\3" + // \verb*
 "|\\\\verb([^*a-zA-Z]).*?\\4" + // \verb unstarred
+"|\\\\operatorname\\*" + // \operatorname*
 `|${controlWordWhitespaceRegexString}` + // \macroName + spaces
 `|${controlSymbolRegexString})`; // \\, \', etc.
+
 /** Main Lexer class */
 
 class Lexer {
-  constructor(input) {
+  // category codes, only supports comment characters (14) for now
+  constructor(input, settings) {
     this.input = void 0;
+    this.settings = void 0;
     this.tokenRegex = void 0;
+    this.catcodes = void 0;
     // Separate accents from characters
     this.input = input;
+    this.settings = settings;
     this.tokenRegex = new RegExp(tokenRegexString, 'g');
+    this.catcodes = {
+      "%": 14 // comment character
+
+    };
+  }
+
+  setCatcode(char, code) {
+    this.catcodes[char] = code;
   }
   /**
    * This function lexes a single token.
@@ -12848,7 +13810,23 @@ class Lexer {
       throw new ParseError(`Unexpected character: '${input[pos]}'`, new Token(input[pos], new SourceLocation(this, pos, pos + 1)));
     }
 
-    let text = match[2] || " "; // Trim any trailing whitespace from control word match
+    let text = match[2] || " ";
+
+    if (this.catcodes[text] === 14) {
+      // comment character
+      const nlIndex = input.indexOf('\n', this.tokenRegex.lastIndex);
+
+      if (nlIndex === -1) {
+        this.tokenRegex.lastIndex = input.length; // EOF
+
+        this.settings.reportNonstrict("commentAtEnd", "% comment has no terminating newline; LaTeX would " + "fail because of commenting the end of math mode (e.g. $)");
+      } else {
+        this.tokenRegex.lastIndex = nlIndex + 1;
+      }
+
+      return this.lex();
+    } // Trim any trailing whitespace from control word match
+
 
     const controlMatch = text.match(controlWordWhitespaceRegex);
 
@@ -12875,7 +13853,15 @@ class Namespace {
    * of initial (global-level) mappings, which will constantly change
    * according to any global/top-level `set`s done.
    */
-  constructor(builtins = {}, globalMacros = {}) {
+  constructor(builtins, globalMacros) {
+    if (builtins === void 0) {
+      builtins = {};
+    }
+
+    if (globalMacros === void 0) {
+      globalMacros = {};
+    }
+
     this.current = void 0;
     this.builtins = void 0;
     this.undefStack = void 0;
@@ -12947,7 +13933,11 @@ class Namespace {
    */
 
 
-  set(name, value, global = false) {
+  set(name, value, global) {
+    if (global === void 0) {
+      global = false;
+    }
+
     if (global) {
       // Global set is equivalent to setting in all groups.  Simulate this
       // by destroying any undos currently scheduled for this name,
@@ -12986,7 +13976,37 @@ function defineMacro(name, body) {
   builtinMacros[name] = body;
 } //////////////////////////////////////////////////////////////////////
 // macro tools
-// LaTeX's \@firstoftwo{#1}{#2} expands to #1, skipping #2
+
+defineMacro("\\noexpand", function (context) {
+  // The expansion is the token itself; but that token is interpreted
+  // as if its meaning were ‘\relax’ if it is a control sequence that
+  // would ordinarily be expanded by TeX’s expansion rules.
+  const t = context.popToken();
+
+  if (context.isExpandable(t.text)) {
+    t.noexpand = true;
+    t.treatAsRelax = true;
+  }
+
+  return {
+    tokens: [t],
+    numArgs: 0
+  };
+});
+defineMacro("\\expandafter", function (context) {
+  // TeX first reads the token that comes immediately after \expandafter,
+  // without expanding it; let’s call this token t. Then TeX reads the
+  // token that comes after t (and possibly more tokens, if that token
+  // has an argument), replacing it by its expansion. Finally TeX puts
+  // t back in front of that expansion.
+  const t = context.popToken();
+  context.expandOnce(true); // expand only an expandable token
+
+  return {
+    tokens: [t],
+    numArgs: 0
+  };
+}); // LaTeX's \@firstoftwo{#1}{#2} expands to #1, skipping #2
 // TeX source: \long\def\@firstoftwo#1#2{#1}
 
 defineMacro("\\@firstoftwo", function (context) {
@@ -13005,12 +14025,14 @@ defineMacro("\\@secondoftwo", function (context) {
     numArgs: 0
   };
 }); // LaTeX's \@ifnextchar{#1}{#2}{#3} looks ahead to the next (unexpanded)
-// symbol.  If it matches #1, then the macro expands to #2; otherwise, #3.
-// Note, however, that it does not consume the next symbol in either case.
+// symbol that isn't a space, consuming any spaces but not consuming the
+// first nonspace character.  If that nonspace character matches #1, then
+// the macro expands to #2; otherwise, it expands to #3.
 
 defineMacro("\\@ifnextchar", function (context) {
   const args = context.consumeArgs(3); // symbol, if, else
 
+  context.consumeSpaces();
   const nextToken = context.future();
 
   if (args[0].length === 1 && args[0][0].text === nextToken.text) {
@@ -13123,70 +14145,6 @@ defineMacro("\\char", function (context) {
   }
 
   return `\\@char{${number}}`;
-}); // Basic support for macro definitions:
-//     \def\macro{expansion}
-//     \def\macro#1{expansion}
-//     \def\macro#1#2{expansion}
-//     \def\macro#1#2#3#4#5#6#7#8#9{expansion}
-// Also the \gdef and \global\def equivalents
-
-const def = (context, global) => {
-  let arg = context.consumeArgs(1)[0];
-
-  if (arg.length !== 1) {
-    throw new ParseError("\\gdef's first argument must be a macro name");
-  }
-
-  const name = arg[0].text; // Count argument specifiers, and check they are in the order #1 #2 ...
-
-  let numArgs = 0;
-  arg = context.consumeArgs(1)[0];
-
-  while (arg.length === 1 && arg[0].text === "#") {
-    arg = context.consumeArgs(1)[0];
-
-    if (arg.length !== 1) {
-      throw new ParseError(`Invalid argument number length "${arg.length}"`);
-    }
-
-    if (!/^[1-9]$/.test(arg[0].text)) {
-      throw new ParseError(`Invalid argument number "${arg[0].text}"`);
-    }
-
-    numArgs++;
-
-    if (parseInt(arg[0].text) !== numArgs) {
-      throw new ParseError(`Argument number "${arg[0].text}" out of order`);
-    }
-
-    arg = context.consumeArgs(1)[0];
-  } // Final arg is the expansion of the macro
-
-
-  context.macros.set(name, {
-    tokens: arg,
-    numArgs
-  }, global);
-  return '';
-};
-
-defineMacro("\\gdef", context => def(context, true));
-defineMacro("\\def", context => def(context, false));
-defineMacro("\\global", context => {
-  const next = context.consumeArgs(1)[0];
-
-  if (next.length !== 1) {
-    throw new ParseError("Invalid command after \\global");
-  }
-
-  const command = next[0].text; // TODO: Should expand command
-
-  if (command === "\\def") {
-    // \global\def is equivalent to \gdef
-    return def(context, true);
-  } else {
-    throw new ParseError(`Invalid command '${command}' after \\global`);
-  }
 }); // \newcommand{\macro}[args]{definition}
 // \renewcommand{\macro}[args]{definition}
 // TODO: Optional arguments: \newcommand{\macro}[args][default]{definition}
@@ -13240,14 +14198,32 @@ const newcommand = (context, existsOK, nonexistsOK) => {
 
 defineMacro("\\newcommand", context => newcommand(context, false, true));
 defineMacro("\\renewcommand", context => newcommand(context, true, false));
-defineMacro("\\providecommand", context => newcommand(context, true, true)); //////////////////////////////////////////////////////////////////////
+defineMacro("\\providecommand", context => newcommand(context, true, true)); // terminal (console) tools
+
+defineMacro("\\message", context => {
+  const arg = context.consumeArgs(1)[0]; // eslint-disable-next-line no-console
+
+  console.log(arg.reverse().map(token => token.text).join(""));
+  return '';
+});
+defineMacro("\\errmessage", context => {
+  const arg = context.consumeArgs(1)[0]; // eslint-disable-next-line no-console
+
+  console.error(arg.reverse().map(token => token.text).join(""));
+  return '';
+});
+defineMacro("\\show", context => {
+  const tok = context.popToken();
+  const name = tok.text; // eslint-disable-next-line no-console
+
+  console.log(tok, context.macros.get(name), functions[name], symbols.math[name], symbols.text[name]);
+  return '';
+}); //////////////////////////////////////////////////////////////////////
 // Grouping
 // \let\bgroup={ \let\egroup=}
 
 defineMacro("\\bgroup", "{");
-defineMacro("\\egroup", "}");
-defineMacro("\\begingroup", "{");
-defineMacro("\\endgroup", "}"); // Symbols from latex.ltx:
+defineMacro("\\egroup", "}"); // Symbols from latex.ltx:
 // \def\lq{`}
 // \def\rq{'}
 // \def \aa {\r a}
@@ -13265,17 +14241,7 @@ defineMacro("\\AA", "\\r A"); // Copyright (C) and registered (R) symbols. Use r
 
 defineMacro("\\textcopyright", "\\html@mathml{\\textcircled{c}}{\\char`©}");
 defineMacro("\\copyright", "\\TextOrMath{\\textcopyright}{\\text{\\textcopyright}}");
-defineMacro("\\textregistered", "\\html@mathml{\\textcircled{\\scriptsize R}}{\\char`®}"); // Unicode double-struck letters
-
-defineMacro("\u2102", "\\mathbb{C}");
-defineMacro("\u210D", "\\mathbb{H}");
-defineMacro("\u2115", "\\mathbb{N}");
-defineMacro("\u2119", "\\mathbb{P}");
-defineMacro("\u211A", "\\mathbb{Q}");
-defineMacro("\u211D", "\\mathbb{R}");
-defineMacro("\u2124", "\\mathbb{Z}");
-defineMacro("\u210E", "\\mathit{h}"); // Planck constant
-// Characters omitted from Unicode range 1D400–1D7FF
+defineMacro("\\textregistered", "\\html@mathml{\\textcircled{\\scriptsize R}}{\\char`®}"); // Characters omitted from Unicode range 1D400–1D7FF
 
 defineMacro("\u212C", "\\mathscr{B}"); // script
 
@@ -13289,7 +14255,9 @@ defineMacro("\u211B", "\\mathscr{R}");
 defineMacro("\u212D", "\\mathfrak{C}"); // Fraktur
 
 defineMacro("\u210C", "\\mathfrak{H}");
-defineMacro("\u2128", "\\mathfrak{Z}"); // Unicode middle dot
+defineMacro("\u2128", "\\mathfrak{Z}"); // Define \Bbbk with a macro that works in both HTML and MathML.
+
+defineMacro("\\Bbbk", "\\Bbb{k}"); // Unicode middle dot
 // The KaTeX fonts do not contain U+00B7. Instead, \cdotp displays
 // the dot at U+22C5 and gives it punct spacing.
 
@@ -13301,8 +14269,9 @@ defineMacro("\\clap", "\\mathclap{\\textrm{#1}}"); // \not is defined by base/fo
 // \DeclareMathSymbol{\not}{\mathrel}{symbols}{"36}
 // It's thus treated like a \mathrel, but defined by a symbol that has zero
 // width but extends to the right.  We use \rlap to get that spacing.
+// For MathML we write U+0338 here. buildMathML.js will then do the overlay.
 
-defineMacro("\\not", '\\mathrel{\\mathrlap\\@not}'); // Negated symbols from base/fontmath.ltx:
+defineMacro("\\not", '\\html@mathml{\\mathrel{\\mathrlap\\@not}}{\\char"338}'); // Negated symbols from base/fontmath.ltx:
 // \def\neq{\not=} \let\ne=\neq
 // \DeclareRobustCommand
 //   \notin{\mathrel{\m@th\mathpalette\c@ncel\in}}
@@ -13331,7 +14300,13 @@ defineMacro("\u231E", "\\llcorner");
 defineMacro("\u231F", "\\lrcorner");
 defineMacro("\u00A9", "\\copyright");
 defineMacro("\u00AE", "\\textregistered");
-defineMacro("\uFE0F", "\\textregistered"); //////////////////////////////////////////////////////////////////////
+defineMacro("\uFE0F", "\\textregistered"); // The KaTeX fonts have corners at codepoints that don't match Unicode.
+// For MathML purposes, use the Unicode code point.
+
+defineMacro("\\ulcorner", "\\html@mathml{\\@ulcorner}{\\mathop{\\char\"231c}}");
+defineMacro("\\urcorner", "\\html@mathml{\\@urcorner}{\\mathop{\\char\"231d}}");
+defineMacro("\\llcorner", "\\html@mathml{\\@llcorner}{\\mathop{\\char\"231e}}");
+defineMacro("\\lrcorner", "\\html@mathml{\\@lrcorner}{\\mathop{\\char\"231f}}"); //////////////////////////////////////////////////////////////////////
 // LaTeX_2ε
 // \vdots{\vbox{\baselineskip4\p@  \lineskiplimit\z@
 // \kern6\p@\hbox{.}\hbox{.}\hbox{.}}}
@@ -13355,7 +14330,9 @@ defineMacro("\\varSigma", "\\mathit{\\Sigma}");
 defineMacro("\\varUpsilon", "\\mathit{\\Upsilon}");
 defineMacro("\\varPhi", "\\mathit{\\Phi}");
 defineMacro("\\varPsi", "\\mathit{\\Psi}");
-defineMacro("\\varOmega", "\\mathit{\\Omega}"); // \renewcommand{\colon}{\nobreak\mskip2mu\mathpunct{}\nonscript
+defineMacro("\\varOmega", "\\mathit{\\Omega}"); //\newcommand{\substack}[1]{\subarray{c}#1\endsubarray}
+
+defineMacro("\\substack", "\\begin{subarray}{c}#1\\end{subarray}"); // \renewcommand{\colon}{\nobreak\mskip2mu\mathpunct{}\nonscript
 // \mkern-\thinmuskip{:}\mskip6muplus1mu\relax}
 
 defineMacro("\\colon", "\\nobreak\\mskip2mu\\mathpunct{}" + "\\mathchoice{\\mkern-3mu}{\\mkern-3mu}{}{}{:}\\mskip6mu"); // \newcommand{\boxed}[1]{\fbox{\m@th$\displaystyle#1$}}
@@ -13572,10 +14549,11 @@ defineMacro("\\bmod", "\\mathchoice{\\mskip1mu}{\\mskip1mu}{\\mskip5mu}{\\mskip5
 defineMacro("\\pod", "\\allowbreak" + "\\mathchoice{\\mkern18mu}{\\mkern8mu}{\\mkern8mu}{\\mkern8mu}(#1)");
 defineMacro("\\pmod", "\\pod{{\\rm mod}\\mkern6mu#1}");
 defineMacro("\\mod", "\\allowbreak" + "\\mathchoice{\\mkern18mu}{\\mkern12mu}{\\mkern12mu}{\\mkern12mu}" + "{\\rm mod}\\,\\,#1"); // \pmb    --   A simulation of bold.
-// It works by typesetting three copies of the argument with small offsets.
-// Ref: a rather lengthy macro in ambsy.sty
+// The version in ambsy.sty works by typesetting three copies of the argument
+// with small offsets. We use two copies. We omit the vertical offset because
+// of rendering problems that makeVList encounters in Safari.
 
-defineMacro("\\pmb", "\\html@mathml{\\@binrel{#1}{" + "\\mathrlap{#1}" + "\\mathrlap{\\mkern0.4mu\\raisebox{0.4mu}{$#1$}}" + "{\\mkern0.8mu#1}" + "}}{\\mathbf{#1}}"); //////////////////////////////////////////////////////////////////////
+defineMacro("\\pmb", "\\html@mathml{" + "\\@binrel{#1}{\\mathrlap{#1}\\kern0.5px#1}}" + "{\\mathbf{#1}}"); //////////////////////////////////////////////////////////////////////
 // LaTeX source2e
 // \\ defaults to \newline, but changes to \cr within array environment
 
@@ -13596,13 +14574,13 @@ defineMacro("\\TeX", "\\textrm{\\html@mathml{" + "T\\kern-.1667em\\raisebox{-.5e
 //         \TeX}
 // This code aligns the top of the A with the T (from the perspective of TeX's
 // boxes, though visually the A appears to extend above slightly).
-// We compute the corresponding \raisebox when A is rendered at \scriptsize,
-// which is size3, which has a scale factor of 0.7 (see Options.js).
+// We compute the corresponding \raisebox when A is rendered in \normalsize
+// \scriptstyle, which has a scale factor of 0.7 (see Options.js).
 
 const latexRaiseA = metricMap['Main-Regular']["T".charCodeAt(0)][1] - 0.7 * metricMap['Main-Regular']["A".charCodeAt(0)][1] + "em";
-defineMacro("\\LaTeX", "\\textrm{\\html@mathml{" + `L\\kern-.36em\\raisebox{${latexRaiseA}}{\\scriptsize A}` + "\\kern-.15em\\TeX}{LaTeX}}"); // New KaTeX logo based on tweaking LaTeX logo
+defineMacro("\\LaTeX", "\\textrm{\\html@mathml{" + `L\\kern-.36em\\raisebox{${latexRaiseA}}{\\scriptstyle A}` + "\\kern-.15em\\TeX}{LaTeX}}"); // New KaTeX logo based on tweaking LaTeX logo
 
-defineMacro("\\KaTeX", "\\textrm{\\html@mathml{" + `K\\kern-.17em\\raisebox{${latexRaiseA}}{\\scriptsize A}` + "\\kern-.15em\\TeX}{KaTeX}}"); // \DeclareRobustCommand\hspace{\@ifstar\@hspacer\@hspace}
+defineMacro("\\KaTeX", "\\textrm{\\html@mathml{" + `K\\kern-.17em\\raisebox{${latexRaiseA}}{\\scriptstyle A}` + "\\kern-.15em\\TeX}{KaTeX}}"); // \DeclareRobustCommand\hspace{\@ifstar\@hspacer\@hspace}
 // \def\@hspace#1{\hskip  #1\relax}
 // \def\@hspacer#1{\vrule \@width\z@\nobreak
 //                 \hskip #1\hskip \z@skip}
@@ -13618,31 +14596,37 @@ defineMacro("\\ordinarycolon", ":"); //\def\vcentcolon{\mathrel{\mathop\ordinary
 
 defineMacro("\\vcentcolon", "\\mathrel{\\mathop\\ordinarycolon}"); // \providecommand*\dblcolon{\vcentcolon\mathrel{\mkern-.9mu}\vcentcolon}
 
-defineMacro("\\dblcolon", "\\mathrel{\\vcentcolon\\mathrel{\\mkern-.9mu}\\vcentcolon}"); // \providecommand*\coloneqq{\vcentcolon\mathrel{\mkern-1.2mu}=}
+defineMacro("\\dblcolon", "\\html@mathml{" + "\\mathrel{\\vcentcolon\\mathrel{\\mkern-.9mu}\\vcentcolon}}" + "{\\mathop{\\char\"2237}}"); // \providecommand*\coloneqq{\vcentcolon\mathrel{\mkern-1.2mu}=}
 
-defineMacro("\\coloneqq", "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}=}"); // \providecommand*\Coloneqq{\dblcolon\mathrel{\mkern-1.2mu}=}
+defineMacro("\\coloneqq", "\\html@mathml{" + "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}=}}" + "{\\mathop{\\char\"2254}}"); // ≔
+// \providecommand*\Coloneqq{\dblcolon\mathrel{\mkern-1.2mu}=}
 
-defineMacro("\\Coloneqq", "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}=}"); // \providecommand*\coloneq{\vcentcolon\mathrel{\mkern-1.2mu}\mathrel{-}}
+defineMacro("\\Coloneqq", "\\html@mathml{" + "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}=}}" + "{\\mathop{\\char\"2237\\char\"3d}}"); // \providecommand*\coloneq{\vcentcolon\mathrel{\mkern-1.2mu}\mathrel{-}}
 
-defineMacro("\\coloneq", "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}"); // \providecommand*\Coloneq{\dblcolon\mathrel{\mkern-1.2mu}\mathrel{-}}
+defineMacro("\\coloneq", "\\html@mathml{" + "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}" + "{\\mathop{\\char\"3a\\char\"2212}}"); // \providecommand*\Coloneq{\dblcolon\mathrel{\mkern-1.2mu}\mathrel{-}}
 
-defineMacro("\\Coloneq", "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}"); // \providecommand*\eqqcolon{=\mathrel{\mkern-1.2mu}\vcentcolon}
+defineMacro("\\Coloneq", "\\html@mathml{" + "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\mathrel{-}}}" + "{\\mathop{\\char\"2237\\char\"2212}}"); // \providecommand*\eqqcolon{=\mathrel{\mkern-1.2mu}\vcentcolon}
 
-defineMacro("\\eqqcolon", "\\mathrel{=\\mathrel{\\mkern-1.2mu}\\vcentcolon}"); // \providecommand*\Eqqcolon{=\mathrel{\mkern-1.2mu}\dblcolon}
+defineMacro("\\eqqcolon", "\\html@mathml{" + "\\mathrel{=\\mathrel{\\mkern-1.2mu}\\vcentcolon}}" + "{\\mathop{\\char\"2255}}"); // ≕
+// \providecommand*\Eqqcolon{=\mathrel{\mkern-1.2mu}\dblcolon}
 
-defineMacro("\\Eqqcolon", "\\mathrel{=\\mathrel{\\mkern-1.2mu}\\dblcolon}"); // \providecommand*\eqcolon{\mathrel{-}\mathrel{\mkern-1.2mu}\vcentcolon}
+defineMacro("\\Eqqcolon", "\\html@mathml{" + "\\mathrel{=\\mathrel{\\mkern-1.2mu}\\dblcolon}}" + "{\\mathop{\\char\"3d\\char\"2237}}"); // \providecommand*\eqcolon{\mathrel{-}\mathrel{\mkern-1.2mu}\vcentcolon}
 
-defineMacro("\\eqcolon", "\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\vcentcolon}"); // \providecommand*\Eqcolon{\mathrel{-}\mathrel{\mkern-1.2mu}\dblcolon}
+defineMacro("\\eqcolon", "\\html@mathml{" + "\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\vcentcolon}}" + "{\\mathop{\\char\"2239}}"); // \providecommand*\Eqcolon{\mathrel{-}\mathrel{\mkern-1.2mu}\dblcolon}
 
-defineMacro("\\Eqcolon", "\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\dblcolon}"); // \providecommand*\colonapprox{\vcentcolon\mathrel{\mkern-1.2mu}\approx}
+defineMacro("\\Eqcolon", "\\html@mathml{" + "\\mathrel{\\mathrel{-}\\mathrel{\\mkern-1.2mu}\\dblcolon}}" + "{\\mathop{\\char\"2212\\char\"2237}}"); // \providecommand*\colonapprox{\vcentcolon\mathrel{\mkern-1.2mu}\approx}
 
-defineMacro("\\colonapprox", "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\approx}"); // \providecommand*\Colonapprox{\dblcolon\mathrel{\mkern-1.2mu}\approx}
+defineMacro("\\colonapprox", "\\html@mathml{" + "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\approx}}" + "{\\mathop{\\char\"3a\\char\"2248}}"); // \providecommand*\Colonapprox{\dblcolon\mathrel{\mkern-1.2mu}\approx}
 
-defineMacro("\\Colonapprox", "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\approx}"); // \providecommand*\colonsim{\vcentcolon\mathrel{\mkern-1.2mu}\sim}
+defineMacro("\\Colonapprox", "\\html@mathml{" + "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\approx}}" + "{\\mathop{\\char\"2237\\char\"2248}}"); // \providecommand*\colonsim{\vcentcolon\mathrel{\mkern-1.2mu}\sim}
 
-defineMacro("\\colonsim", "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\sim}"); // \providecommand*\Colonsim{\dblcolon\mathrel{\mkern-1.2mu}\sim}
+defineMacro("\\colonsim", "\\html@mathml{" + "\\mathrel{\\vcentcolon\\mathrel{\\mkern-1.2mu}\\sim}}" + "{\\mathop{\\char\"3a\\char\"223c}}"); // \providecommand*\Colonsim{\dblcolon\mathrel{\mkern-1.2mu}\sim}
 
-defineMacro("\\Colonsim", "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\sim}"); // Some Unicode characters are implemented with macros to mathtools functions.
+defineMacro("\\Colonsim", "\\html@mathml{" + "\\mathrel{\\dblcolon\\mathrel{\\mkern-1.2mu}\\sim}}" + "{\\mathop{\\char\"2237\\char\"223c}}"); // Some Unicode characters are implemented with macros to mathtools functions.
+
+defineMacro("\u2237", "\\dblcolon"); // ::
+
+defineMacro("\u2239", "\\eqcolon"); // -:
 
 defineMacro("\u2254", "\\coloneqq"); // :=
 
@@ -13674,18 +14658,48 @@ defineMacro("\\approxcolon", "\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\vcentc
 defineMacro("\\approxcoloncolon", "\\mathrel{\\approx\\mathrel{\\mkern-1.2mu}\\dblcolon}"); // Present in newtxmath, pxfonts and txfonts
 
 defineMacro("\\notni", "\\html@mathml{\\not\\ni}{\\mathrel{\\char`\u220C}}");
-defineMacro("\\limsup", "\\DOTSB\\mathop{\\operatorname{lim\\,sup}}\\limits");
-defineMacro("\\liminf", "\\DOTSB\\mathop{\\operatorname{lim\\,inf}}\\limits"); //////////////////////////////////////////////////////////////////////
-// semantic
-// The semantic package renders the next two items by calling a glyph from the
-// bbold package. Those glyphs do not exist in the KaTeX fonts. Hence the macros.
+defineMacro("\\limsup", "\\DOTSB\\operatorname*{lim\\,sup}");
+defineMacro("\\liminf", "\\DOTSB\\operatorname*{lim\\,inf}"); //////////////////////////////////////////////////////////////////////
+// MathML alternates for KaTeX glyphs in the Unicode private area
 
-defineMacro("\u27e6", "\\mathopen{[\\mkern-3.2mu[}"); // blackboard bold [
+defineMacro("\\gvertneqq", "\\html@mathml{\\@gvertneqq}{\u2269}");
+defineMacro("\\lvertneqq", "\\html@mathml{\\@lvertneqq}{\u2268}");
+defineMacro("\\ngeqq", "\\html@mathml{\\@ngeqq}{\u2271}");
+defineMacro("\\ngeqslant", "\\html@mathml{\\@ngeqslant}{\u2271}");
+defineMacro("\\nleqq", "\\html@mathml{\\@nleqq}{\u2270}");
+defineMacro("\\nleqslant", "\\html@mathml{\\@nleqslant}{\u2270}");
+defineMacro("\\nshortmid", "\\html@mathml{\\@nshortmid}{∤}");
+defineMacro("\\nshortparallel", "\\html@mathml{\\@nshortparallel}{∦}");
+defineMacro("\\nsubseteqq", "\\html@mathml{\\@nsubseteqq}{\u2288}");
+defineMacro("\\nsupseteqq", "\\html@mathml{\\@nsupseteqq}{\u2289}");
+defineMacro("\\varsubsetneq", "\\html@mathml{\\@varsubsetneq}{⊊}");
+defineMacro("\\varsubsetneqq", "\\html@mathml{\\@varsubsetneqq}{⫋}");
+defineMacro("\\varsupsetneq", "\\html@mathml{\\@varsupsetneq}{⊋}");
+defineMacro("\\varsupsetneqq", "\\html@mathml{\\@varsupsetneqq}{⫌}");
+defineMacro("\\imath", "\\html@mathml{\\@imath}{\u0131}");
+defineMacro("\\jmath", "\\html@mathml{\\@jmath}{\u0237}"); //////////////////////////////////////////////////////////////////////
+// stmaryrd and semantic
+// The stmaryrd and semantic packages render the next four items by calling a
+// glyph. Those glyphs do not exist in the KaTeX fonts. Hence the macros.
 
-defineMacro("\u27e7", "\\mathclose{]\\mkern-3.2mu]}"); // blackboard bold ]
+defineMacro("\\llbracket", "\\html@mathml{" + "\\mathopen{[\\mkern-3.2mu[}}" + "{\\mathopen{\\char`\u27e6}}");
+defineMacro("\\rrbracket", "\\html@mathml{" + "\\mathclose{]\\mkern-3.2mu]}}" + "{\\mathclose{\\char`\u27e7}}");
+defineMacro("\u27e6", "\\llbracket"); // blackboard bold [
+
+defineMacro("\u27e7", "\\rrbracket"); // blackboard bold ]
+
+defineMacro("\\lBrace", "\\html@mathml{" + "\\mathopen{\\{\\mkern-3.2mu[}}" + "{\\mathopen{\\char`\u2983}}");
+defineMacro("\\rBrace", "\\html@mathml{" + "\\mathclose{]\\mkern-3.2mu\\}}}" + "{\\mathclose{\\char`\u2984}}");
+defineMacro("\u2983", "\\lBrace"); // blackboard bold {
+
+defineMacro("\u2984", "\\rBrace"); // blackboard bold }
 // TODO: Create variable sized versions of the last two items. I believe that
 // will require new font glyphs.
-//////////////////////////////////////////////////////////////////////
+// The stmaryrd function `\minuso` provides a "Plimsoll" symbol that
+// superimposes the characters \circ and \mathminus. Used in chemistry.
+
+defineMacro("\\minuso", "\\mathbin{\\html@mathml{" + "{\\mathrlap{\\mathchoice{\\kern{0.145em}}{\\kern{0.145em}}" + "{\\kern{0.1015em}}{\\kern{0.0725em}}\\circ}{-}}}" + "{\\char`⦵}}");
+defineMacro("⦵", "\\minuso"); //////////////////////////////////////////////////////////////////////
 // texvc.sty
 // The texvc package contains macros available in mediawiki pages.
 // We omit the functions deprecated at
@@ -13744,7 +14758,7 @@ defineMacro("\\Rarr", "\\Rightarrow");
 defineMacro("\\real", "\\Re");
 defineMacro("\\reals", "\\mathbb{R}");
 defineMacro("\\Reals", "\\mathbb{R}");
-defineMacro("\\Rho", "\\mathrm{R}");
+defineMacro("\\Rho", "\\mathrm{P}");
 defineMacro("\\sdot", "\\cdot");
 defineMacro("\\sect", "\\S");
 defineMacro("\\spades", "\\spadesuit");
@@ -13755,7 +14769,78 @@ defineMacro("\\Tau", "\\mathrm{T}");
 defineMacro("\\thetasym", "\\vartheta"); // TODO: defineMacro("\\varcoppa", "\\\mbox{\\coppa}");
 
 defineMacro("\\weierp", "\\wp");
-defineMacro("\\Zeta", "\\mathrm{Z}");
+defineMacro("\\Zeta", "\\mathrm{Z}"); //////////////////////////////////////////////////////////////////////
+// statmath.sty
+// https://ctan.math.illinois.edu/macros/latex/contrib/statmath/statmath.pdf
+
+defineMacro("\\argmin", "\\DOTSB\\operatorname*{arg\\,min}");
+defineMacro("\\argmax", "\\DOTSB\\operatorname*{arg\\,max}");
+defineMacro("\\plim", "\\DOTSB\\mathop{\\operatorname{plim}}\\limits"); //////////////////////////////////////////////////////////////////////
+// braket.sty
+// http://ctan.math.washington.edu/tex-archive/macros/latex/contrib/braket/braket.pdf
+
+defineMacro("\\bra", "\\mathinner{\\langle{#1}|}");
+defineMacro("\\ket", "\\mathinner{|{#1}\\rangle}");
+defineMacro("\\braket", "\\mathinner{\\langle{#1}\\rangle}");
+defineMacro("\\Bra", "\\left\\langle#1\\right|");
+defineMacro("\\Ket", "\\left|#1\\right\\rangle"); // Custom Khan Academy colors, should be moved to an optional package
+
+defineMacro("\\blue", "\\textcolor{##6495ed}{#1}");
+defineMacro("\\orange", "\\textcolor{##ffa500}{#1}");
+defineMacro("\\pink", "\\textcolor{##ff00af}{#1}");
+defineMacro("\\red", "\\textcolor{##df0030}{#1}");
+defineMacro("\\green", "\\textcolor{##28ae7b}{#1}");
+defineMacro("\\gray", "\\textcolor{gray}{#1}");
+defineMacro("\\purple", "\\textcolor{##9d38bd}{#1}");
+defineMacro("\\blueA", "\\textcolor{##ccfaff}{#1}");
+defineMacro("\\blueB", "\\textcolor{##80f6ff}{#1}");
+defineMacro("\\blueC", "\\textcolor{##63d9ea}{#1}");
+defineMacro("\\blueD", "\\textcolor{##11accd}{#1}");
+defineMacro("\\blueE", "\\textcolor{##0c7f99}{#1}");
+defineMacro("\\tealA", "\\textcolor{##94fff5}{#1}");
+defineMacro("\\tealB", "\\textcolor{##26edd5}{#1}");
+defineMacro("\\tealC", "\\textcolor{##01d1c1}{#1}");
+defineMacro("\\tealD", "\\textcolor{##01a995}{#1}");
+defineMacro("\\tealE", "\\textcolor{##208170}{#1}");
+defineMacro("\\greenA", "\\textcolor{##b6ffb0}{#1}");
+defineMacro("\\greenB", "\\textcolor{##8af281}{#1}");
+defineMacro("\\greenC", "\\textcolor{##74cf70}{#1}");
+defineMacro("\\greenD", "\\textcolor{##1fab54}{#1}");
+defineMacro("\\greenE", "\\textcolor{##0d923f}{#1}");
+defineMacro("\\goldA", "\\textcolor{##ffd0a9}{#1}");
+defineMacro("\\goldB", "\\textcolor{##ffbb71}{#1}");
+defineMacro("\\goldC", "\\textcolor{##ff9c39}{#1}");
+defineMacro("\\goldD", "\\textcolor{##e07d10}{#1}");
+defineMacro("\\goldE", "\\textcolor{##a75a05}{#1}");
+defineMacro("\\redA", "\\textcolor{##fca9a9}{#1}");
+defineMacro("\\redB", "\\textcolor{##ff8482}{#1}");
+defineMacro("\\redC", "\\textcolor{##f9685d}{#1}");
+defineMacro("\\redD", "\\textcolor{##e84d39}{#1}");
+defineMacro("\\redE", "\\textcolor{##bc2612}{#1}");
+defineMacro("\\maroonA", "\\textcolor{##ffbde0}{#1}");
+defineMacro("\\maroonB", "\\textcolor{##ff92c6}{#1}");
+defineMacro("\\maroonC", "\\textcolor{##ed5fa6}{#1}");
+defineMacro("\\maroonD", "\\textcolor{##ca337c}{#1}");
+defineMacro("\\maroonE", "\\textcolor{##9e034e}{#1}");
+defineMacro("\\purpleA", "\\textcolor{##ddd7ff}{#1}");
+defineMacro("\\purpleB", "\\textcolor{##c6b9fc}{#1}");
+defineMacro("\\purpleC", "\\textcolor{##aa87ff}{#1}");
+defineMacro("\\purpleD", "\\textcolor{##7854ab}{#1}");
+defineMacro("\\purpleE", "\\textcolor{##543b78}{#1}");
+defineMacro("\\mintA", "\\textcolor{##f5f9e8}{#1}");
+defineMacro("\\mintB", "\\textcolor{##edf2df}{#1}");
+defineMacro("\\mintC", "\\textcolor{##e0e5cc}{#1}");
+defineMacro("\\grayA", "\\textcolor{##f6f7f7}{#1}");
+defineMacro("\\grayB", "\\textcolor{##f0f1f2}{#1}");
+defineMacro("\\grayC", "\\textcolor{##e3e5e6}{#1}");
+defineMacro("\\grayD", "\\textcolor{##d6d8da}{#1}");
+defineMacro("\\grayE", "\\textcolor{##babec2}{#1}");
+defineMacro("\\grayF", "\\textcolor{##888d93}{#1}");
+defineMacro("\\grayG", "\\textcolor{##626569}{#1}");
+defineMacro("\\grayH", "\\textcolor{##3b3e40}{#1}");
+defineMacro("\\grayI", "\\textcolor{##21242c}{#1}");
+defineMacro("\\kaBlue", "\\textcolor{##314453}{#1}");
+defineMacro("\\kaGreen", "\\textcolor{##71B307}{#1}");
 
 /**
  * This file contains the “gullet” where macros are expanded
@@ -13798,7 +14883,7 @@ class MacroExpander {
 
 
   feed(input) {
-    this.lexer = new Lexer(input);
+    this.lexer = new Lexer(input, this.settings);
   }
   /**
    * Switches between "text" and "math" modes.
@@ -13944,18 +15029,22 @@ class MacroExpander {
    * At the moment, macro expansion doesn't handle delimited macros,
    * i.e. things like those defined by \def\foo#1\end{…}.
    * See the TeX book page 202ff. for details on how those should behave.
+   *
+   * If expandableOnly, only expandable tokens are expanded and
+   * an undefined control sequence results in an error.
    */
 
 
-  expandOnce() {
+  expandOnce(expandableOnly) {
     const topToken = this.popToken();
     const name = topToken.text;
+    const expansion = !topToken.noexpand ? this._getExpansion(name) : null;
 
-    const expansion = this._getExpansion(name);
+    if (expansion == null || expandableOnly && expansion.unexpandable) {
+      if (expandableOnly && expansion == null && name[0] === "\\" && !this.isDefined(name)) {
+        throw new ParseError("Undefined control sequence: " + name);
+      }
 
-    if (expansion == null) {
-      // mainly checking for undefined here
-      // Fully expanded
       this.pushToken(topToken);
       return topToken;
     }
@@ -14024,7 +15113,9 @@ class MacroExpander {
       if (expanded instanceof Token) {
         // \relax stops the expansion, but shouldn't get returned (a
         // null return value couldn't get implemented as a function).
-        if (expanded.text === "\\relax") {
+        // the token after \noexpand is interpreted as if its meaning
+        // were ‘\relax’
+        if (expanded.text === "\\relax" || expanded.treatAsRelax) {
           this.stack.pop();
         } else {
           return this.stack.pop(); // === expanded
@@ -14043,18 +15134,29 @@ class MacroExpander {
 
 
   expandMacro(name) {
-    if (!this.macros.get(name)) {
-      return undefined;
-    }
+    return this.macros.has(name) ? this.expandTokens([new Token(name)]) : undefined;
+  }
+  /**
+   * Fully expand the given token stream and return the resulting list of tokens
+   */
 
+
+  expandTokens(tokens) {
     const output = [];
     const oldStackLength = this.stack.length;
-    this.pushToken(new Token(name));
+    this.pushTokens(tokens);
 
     while (this.stack.length > oldStackLength) {
-      const expanded = this.expandOnce(); // expandOnce returns Token if and only if it's fully expanded.
+      const expanded = this.expandOnce(true); // expand only expandable tokens
+      // expandOnce returns Token if and only if it's fully expanded.
 
       if (expanded instanceof Token) {
+        if (expanded.treatAsRelax) {
+          // the expansion of \noexpand is the token itself
+          expanded.noexpand = false;
+          expanded.treatAsRelax = false;
+        }
+
         output.push(this.stack.pop());
       }
     }
@@ -14103,7 +15205,7 @@ class MacroExpander {
         }
       }
 
-      const bodyLexer = new Lexer(expansion);
+      const bodyLexer = new Lexer(expansion, this.settings);
       const tokens = [];
       let tok = bodyLexer.lex();
 
@@ -14134,698 +15236,388 @@ class MacroExpander {
   isDefined(name) {
     return this.macros.has(name) || functions.hasOwnProperty(name) || symbols.math.hasOwnProperty(name) || symbols.text.hasOwnProperty(name) || implicitCommands.hasOwnProperty(name);
   }
+  /**
+   * Determine whether a command is expandable.
+   */
+
+
+  isExpandable(name) {
+    const macro = this.macros.get(name);
+    return macro != null ? typeof macro === "string" || typeof macro === "function" || !macro.unexpandable // TODO(ylem): #2085
+    : functions.hasOwnProperty(name)
+    /* && !functions[name].primitive*/
+    ;
+  }
 
 }
 
-// Mapping of Unicode accent characters to their LaTeX equivalent in text and
-// math mode (when they exist).
-var unicodeAccents = {
-  '\u0301': {
-    text: "\\'",
-    math: '\\acute'
+/* eslint no-constant-condition:0 */
+
+const unicodeAccents = {
+  "́": {
+    "text": "\\'",
+    "math": "\\acute"
   },
-  '\u0300': {
-    text: '\\`',
-    math: '\\grave'
+  "̀": {
+    "text": "\\`",
+    "math": "\\grave"
   },
-  '\u0308': {
-    text: '\\"',
-    math: '\\ddot'
+  "̈": {
+    "text": "\\\"",
+    "math": "\\ddot"
   },
-  '\u0303': {
-    text: '\\~',
-    math: '\\tilde'
+  "̃": {
+    "text": "\\~",
+    "math": "\\tilde"
   },
-  '\u0304': {
-    text: '\\=',
-    math: '\\bar'
+  "̄": {
+    "text": "\\=",
+    "math": "\\bar"
   },
-  '\u0306': {
-    text: '\\u',
-    math: '\\breve'
+  "̆": {
+    "text": "\\u",
+    "math": "\\breve"
   },
-  '\u030c': {
-    text: '\\v',
-    math: '\\check'
+  "̌": {
+    "text": "\\v",
+    "math": "\\check"
   },
-  '\u0302': {
-    text: '\\^',
-    math: '\\hat'
+  "̂": {
+    "text": "\\^",
+    "math": "\\hat"
   },
-  '\u0307': {
-    text: '\\.',
-    math: '\\dot'
+  "̇": {
+    "text": "\\.",
+    "math": "\\dot"
   },
-  '\u030a': {
-    text: '\\r',
-    math: '\\mathring'
+  "̊": {
+    "text": "\\r",
+    "math": "\\mathring"
   },
-  '\u030b': {
-    text: '\\H'
+  "̋": {
+    "text": "\\H"
   }
 };
-
-// This file is GENERATED by unicodeMake.js. DO NOT MODIFY.
-var unicodeSymbols = {
-  "\u00e1": "\u0061\u0301",
-  // á = \'{a}
-  "\u00e0": "\u0061\u0300",
-  // à = \`{a}
-  "\u00e4": "\u0061\u0308",
-  // ä = \"{a}
-  "\u01df": "\u0061\u0308\u0304",
-  // ǟ = \"\={a}
-  "\u00e3": "\u0061\u0303",
-  // ã = \~{a}
-  "\u0101": "\u0061\u0304",
-  // ā = \={a}
-  "\u0103": "\u0061\u0306",
-  // ă = \u{a}
-  "\u1eaf": "\u0061\u0306\u0301",
-  // ắ = \u\'{a}
-  "\u1eb1": "\u0061\u0306\u0300",
-  // ằ = \u\`{a}
-  "\u1eb5": "\u0061\u0306\u0303",
-  // ẵ = \u\~{a}
-  "\u01ce": "\u0061\u030c",
-  // ǎ = \v{a}
-  "\u00e2": "\u0061\u0302",
-  // â = \^{a}
-  "\u1ea5": "\u0061\u0302\u0301",
-  // ấ = \^\'{a}
-  "\u1ea7": "\u0061\u0302\u0300",
-  // ầ = \^\`{a}
-  "\u1eab": "\u0061\u0302\u0303",
-  // ẫ = \^\~{a}
-  "\u0227": "\u0061\u0307",
-  // ȧ = \.{a}
-  "\u01e1": "\u0061\u0307\u0304",
-  // ǡ = \.\={a}
-  "\u00e5": "\u0061\u030a",
-  // å = \r{a}
-  "\u01fb": "\u0061\u030a\u0301",
-  // ǻ = \r\'{a}
-  "\u1e03": "\u0062\u0307",
-  // ḃ = \.{b}
-  "\u0107": "\u0063\u0301",
-  // ć = \'{c}
-  "\u010d": "\u0063\u030c",
-  // č = \v{c}
-  "\u0109": "\u0063\u0302",
-  // ĉ = \^{c}
-  "\u010b": "\u0063\u0307",
-  // ċ = \.{c}
-  "\u010f": "\u0064\u030c",
-  // ď = \v{d}
-  "\u1e0b": "\u0064\u0307",
-  // ḋ = \.{d}
-  "\u00e9": "\u0065\u0301",
-  // é = \'{e}
-  "\u00e8": "\u0065\u0300",
-  // è = \`{e}
-  "\u00eb": "\u0065\u0308",
-  // ë = \"{e}
-  "\u1ebd": "\u0065\u0303",
-  // ẽ = \~{e}
-  "\u0113": "\u0065\u0304",
-  // ē = \={e}
-  "\u1e17": "\u0065\u0304\u0301",
-  // ḗ = \=\'{e}
-  "\u1e15": "\u0065\u0304\u0300",
-  // ḕ = \=\`{e}
-  "\u0115": "\u0065\u0306",
-  // ĕ = \u{e}
-  "\u011b": "\u0065\u030c",
-  // ě = \v{e}
-  "\u00ea": "\u0065\u0302",
-  // ê = \^{e}
-  "\u1ebf": "\u0065\u0302\u0301",
-  // ế = \^\'{e}
-  "\u1ec1": "\u0065\u0302\u0300",
-  // ề = \^\`{e}
-  "\u1ec5": "\u0065\u0302\u0303",
-  // ễ = \^\~{e}
-  "\u0117": "\u0065\u0307",
-  // ė = \.{e}
-  "\u1e1f": "\u0066\u0307",
-  // ḟ = \.{f}
-  "\u01f5": "\u0067\u0301",
-  // ǵ = \'{g}
-  "\u1e21": "\u0067\u0304",
-  // ḡ = \={g}
-  "\u011f": "\u0067\u0306",
-  // ğ = \u{g}
-  "\u01e7": "\u0067\u030c",
-  // ǧ = \v{g}
-  "\u011d": "\u0067\u0302",
-  // ĝ = \^{g}
-  "\u0121": "\u0067\u0307",
-  // ġ = \.{g}
-  "\u1e27": "\u0068\u0308",
-  // ḧ = \"{h}
-  "\u021f": "\u0068\u030c",
-  // ȟ = \v{h}
-  "\u0125": "\u0068\u0302",
-  // ĥ = \^{h}
-  "\u1e23": "\u0068\u0307",
-  // ḣ = \.{h}
-  "\u00ed": "\u0069\u0301",
-  // í = \'{i}
-  "\u00ec": "\u0069\u0300",
-  // ì = \`{i}
-  "\u00ef": "\u0069\u0308",
-  // ï = \"{i}
-  "\u1e2f": "\u0069\u0308\u0301",
-  // ḯ = \"\'{i}
-  "\u0129": "\u0069\u0303",
-  // ĩ = \~{i}
-  "\u012b": "\u0069\u0304",
-  // ī = \={i}
-  "\u012d": "\u0069\u0306",
-  // ĭ = \u{i}
-  "\u01d0": "\u0069\u030c",
-  // ǐ = \v{i}
-  "\u00ee": "\u0069\u0302",
-  // î = \^{i}
-  "\u01f0": "\u006a\u030c",
-  // ǰ = \v{j}
-  "\u0135": "\u006a\u0302",
-  // ĵ = \^{j}
-  "\u1e31": "\u006b\u0301",
-  // ḱ = \'{k}
-  "\u01e9": "\u006b\u030c",
-  // ǩ = \v{k}
-  "\u013a": "\u006c\u0301",
-  // ĺ = \'{l}
-  "\u013e": "\u006c\u030c",
-  // ľ = \v{l}
-  "\u1e3f": "\u006d\u0301",
-  // ḿ = \'{m}
-  "\u1e41": "\u006d\u0307",
-  // ṁ = \.{m}
-  "\u0144": "\u006e\u0301",
-  // ń = \'{n}
-  "\u01f9": "\u006e\u0300",
-  // ǹ = \`{n}
-  "\u00f1": "\u006e\u0303",
-  // ñ = \~{n}
-  "\u0148": "\u006e\u030c",
-  // ň = \v{n}
-  "\u1e45": "\u006e\u0307",
-  // ṅ = \.{n}
-  "\u00f3": "\u006f\u0301",
-  // ó = \'{o}
-  "\u00f2": "\u006f\u0300",
-  // ò = \`{o}
-  "\u00f6": "\u006f\u0308",
-  // ö = \"{o}
-  "\u022b": "\u006f\u0308\u0304",
-  // ȫ = \"\={o}
-  "\u00f5": "\u006f\u0303",
-  // õ = \~{o}
-  "\u1e4d": "\u006f\u0303\u0301",
-  // ṍ = \~\'{o}
-  "\u1e4f": "\u006f\u0303\u0308",
-  // ṏ = \~\"{o}
-  "\u022d": "\u006f\u0303\u0304",
-  // ȭ = \~\={o}
-  "\u014d": "\u006f\u0304",
-  // ō = \={o}
-  "\u1e53": "\u006f\u0304\u0301",
-  // ṓ = \=\'{o}
-  "\u1e51": "\u006f\u0304\u0300",
-  // ṑ = \=\`{o}
-  "\u014f": "\u006f\u0306",
-  // ŏ = \u{o}
-  "\u01d2": "\u006f\u030c",
-  // ǒ = \v{o}
-  "\u00f4": "\u006f\u0302",
-  // ô = \^{o}
-  "\u1ed1": "\u006f\u0302\u0301",
-  // ố = \^\'{o}
-  "\u1ed3": "\u006f\u0302\u0300",
-  // ồ = \^\`{o}
-  "\u1ed7": "\u006f\u0302\u0303",
-  // ỗ = \^\~{o}
-  "\u022f": "\u006f\u0307",
-  // ȯ = \.{o}
-  "\u0231": "\u006f\u0307\u0304",
-  // ȱ = \.\={o}
-  "\u0151": "\u006f\u030b",
-  // ő = \H{o}
-  "\u1e55": "\u0070\u0301",
-  // ṕ = \'{p}
-  "\u1e57": "\u0070\u0307",
-  // ṗ = \.{p}
-  "\u0155": "\u0072\u0301",
-  // ŕ = \'{r}
-  "\u0159": "\u0072\u030c",
-  // ř = \v{r}
-  "\u1e59": "\u0072\u0307",
-  // ṙ = \.{r}
-  "\u015b": "\u0073\u0301",
-  // ś = \'{s}
-  "\u1e65": "\u0073\u0301\u0307",
-  // ṥ = \'\.{s}
-  "\u0161": "\u0073\u030c",
-  // š = \v{s}
-  "\u1e67": "\u0073\u030c\u0307",
-  // ṧ = \v\.{s}
-  "\u015d": "\u0073\u0302",
-  // ŝ = \^{s}
-  "\u1e61": "\u0073\u0307",
-  // ṡ = \.{s}
-  "\u1e97": "\u0074\u0308",
-  // ẗ = \"{t}
-  "\u0165": "\u0074\u030c",
-  // ť = \v{t}
-  "\u1e6b": "\u0074\u0307",
-  // ṫ = \.{t}
-  "\u00fa": "\u0075\u0301",
-  // ú = \'{u}
-  "\u00f9": "\u0075\u0300",
-  // ù = \`{u}
-  "\u00fc": "\u0075\u0308",
-  // ü = \"{u}
-  "\u01d8": "\u0075\u0308\u0301",
-  // ǘ = \"\'{u}
-  "\u01dc": "\u0075\u0308\u0300",
-  // ǜ = \"\`{u}
-  "\u01d6": "\u0075\u0308\u0304",
-  // ǖ = \"\={u}
-  "\u01da": "\u0075\u0308\u030c",
-  // ǚ = \"\v{u}
-  "\u0169": "\u0075\u0303",
-  // ũ = \~{u}
-  "\u1e79": "\u0075\u0303\u0301",
-  // ṹ = \~\'{u}
-  "\u016b": "\u0075\u0304",
-  // ū = \={u}
-  "\u1e7b": "\u0075\u0304\u0308",
-  // ṻ = \=\"{u}
-  "\u016d": "\u0075\u0306",
-  // ŭ = \u{u}
-  "\u01d4": "\u0075\u030c",
-  // ǔ = \v{u}
-  "\u00fb": "\u0075\u0302",
-  // û = \^{u}
-  "\u016f": "\u0075\u030a",
-  // ů = \r{u}
-  "\u0171": "\u0075\u030b",
-  // ű = \H{u}
-  "\u1e7d": "\u0076\u0303",
-  // ṽ = \~{v}
-  "\u1e83": "\u0077\u0301",
-  // ẃ = \'{w}
-  "\u1e81": "\u0077\u0300",
-  // ẁ = \`{w}
-  "\u1e85": "\u0077\u0308",
-  // ẅ = \"{w}
-  "\u0175": "\u0077\u0302",
-  // ŵ = \^{w}
-  "\u1e87": "\u0077\u0307",
-  // ẇ = \.{w}
-  "\u1e98": "\u0077\u030a",
-  // ẘ = \r{w}
-  "\u1e8d": "\u0078\u0308",
-  // ẍ = \"{x}
-  "\u1e8b": "\u0078\u0307",
-  // ẋ = \.{x}
-  "\u00fd": "\u0079\u0301",
-  // ý = \'{y}
-  "\u1ef3": "\u0079\u0300",
-  // ỳ = \`{y}
-  "\u00ff": "\u0079\u0308",
-  // ÿ = \"{y}
-  "\u1ef9": "\u0079\u0303",
-  // ỹ = \~{y}
-  "\u0233": "\u0079\u0304",
-  // ȳ = \={y}
-  "\u0177": "\u0079\u0302",
-  // ŷ = \^{y}
-  "\u1e8f": "\u0079\u0307",
-  // ẏ = \.{y}
-  "\u1e99": "\u0079\u030a",
-  // ẙ = \r{y}
-  "\u017a": "\u007a\u0301",
-  // ź = \'{z}
-  "\u017e": "\u007a\u030c",
-  // ž = \v{z}
-  "\u1e91": "\u007a\u0302",
-  // ẑ = \^{z}
-  "\u017c": "\u007a\u0307",
-  // ż = \.{z}
-  "\u00c1": "\u0041\u0301",
-  // Á = \'{A}
-  "\u00c0": "\u0041\u0300",
-  // À = \`{A}
-  "\u00c4": "\u0041\u0308",
-  // Ä = \"{A}
-  "\u01de": "\u0041\u0308\u0304",
-  // Ǟ = \"\={A}
-  "\u00c3": "\u0041\u0303",
-  // Ã = \~{A}
-  "\u0100": "\u0041\u0304",
-  // Ā = \={A}
-  "\u0102": "\u0041\u0306",
-  // Ă = \u{A}
-  "\u1eae": "\u0041\u0306\u0301",
-  // Ắ = \u\'{A}
-  "\u1eb0": "\u0041\u0306\u0300",
-  // Ằ = \u\`{A}
-  "\u1eb4": "\u0041\u0306\u0303",
-  // Ẵ = \u\~{A}
-  "\u01cd": "\u0041\u030c",
-  // Ǎ = \v{A}
-  "\u00c2": "\u0041\u0302",
-  // Â = \^{A}
-  "\u1ea4": "\u0041\u0302\u0301",
-  // Ấ = \^\'{A}
-  "\u1ea6": "\u0041\u0302\u0300",
-  // Ầ = \^\`{A}
-  "\u1eaa": "\u0041\u0302\u0303",
-  // Ẫ = \^\~{A}
-  "\u0226": "\u0041\u0307",
-  // Ȧ = \.{A}
-  "\u01e0": "\u0041\u0307\u0304",
-  // Ǡ = \.\={A}
-  "\u00c5": "\u0041\u030a",
-  // Å = \r{A}
-  "\u01fa": "\u0041\u030a\u0301",
-  // Ǻ = \r\'{A}
-  "\u1e02": "\u0042\u0307",
-  // Ḃ = \.{B}
-  "\u0106": "\u0043\u0301",
-  // Ć = \'{C}
-  "\u010c": "\u0043\u030c",
-  // Č = \v{C}
-  "\u0108": "\u0043\u0302",
-  // Ĉ = \^{C}
-  "\u010a": "\u0043\u0307",
-  // Ċ = \.{C}
-  "\u010e": "\u0044\u030c",
-  // Ď = \v{D}
-  "\u1e0a": "\u0044\u0307",
-  // Ḋ = \.{D}
-  "\u00c9": "\u0045\u0301",
-  // É = \'{E}
-  "\u00c8": "\u0045\u0300",
-  // È = \`{E}
-  "\u00cb": "\u0045\u0308",
-  // Ë = \"{E}
-  "\u1ebc": "\u0045\u0303",
-  // Ẽ = \~{E}
-  "\u0112": "\u0045\u0304",
-  // Ē = \={E}
-  "\u1e16": "\u0045\u0304\u0301",
-  // Ḗ = \=\'{E}
-  "\u1e14": "\u0045\u0304\u0300",
-  // Ḕ = \=\`{E}
-  "\u0114": "\u0045\u0306",
-  // Ĕ = \u{E}
-  "\u011a": "\u0045\u030c",
-  // Ě = \v{E}
-  "\u00ca": "\u0045\u0302",
-  // Ê = \^{E}
-  "\u1ebe": "\u0045\u0302\u0301",
-  // Ế = \^\'{E}
-  "\u1ec0": "\u0045\u0302\u0300",
-  // Ề = \^\`{E}
-  "\u1ec4": "\u0045\u0302\u0303",
-  // Ễ = \^\~{E}
-  "\u0116": "\u0045\u0307",
-  // Ė = \.{E}
-  "\u1e1e": "\u0046\u0307",
-  // Ḟ = \.{F}
-  "\u01f4": "\u0047\u0301",
-  // Ǵ = \'{G}
-  "\u1e20": "\u0047\u0304",
-  // Ḡ = \={G}
-  "\u011e": "\u0047\u0306",
-  // Ğ = \u{G}
-  "\u01e6": "\u0047\u030c",
-  // Ǧ = \v{G}
-  "\u011c": "\u0047\u0302",
-  // Ĝ = \^{G}
-  "\u0120": "\u0047\u0307",
-  // Ġ = \.{G}
-  "\u1e26": "\u0048\u0308",
-  // Ḧ = \"{H}
-  "\u021e": "\u0048\u030c",
-  // Ȟ = \v{H}
-  "\u0124": "\u0048\u0302",
-  // Ĥ = \^{H}
-  "\u1e22": "\u0048\u0307",
-  // Ḣ = \.{H}
-  "\u00cd": "\u0049\u0301",
-  // Í = \'{I}
-  "\u00cc": "\u0049\u0300",
-  // Ì = \`{I}
-  "\u00cf": "\u0049\u0308",
-  // Ï = \"{I}
-  "\u1e2e": "\u0049\u0308\u0301",
-  // Ḯ = \"\'{I}
-  "\u0128": "\u0049\u0303",
-  // Ĩ = \~{I}
-  "\u012a": "\u0049\u0304",
-  // Ī = \={I}
-  "\u012c": "\u0049\u0306",
-  // Ĭ = \u{I}
-  "\u01cf": "\u0049\u030c",
-  // Ǐ = \v{I}
-  "\u00ce": "\u0049\u0302",
-  // Î = \^{I}
-  "\u0130": "\u0049\u0307",
-  // İ = \.{I}
-  "\u0134": "\u004a\u0302",
-  // Ĵ = \^{J}
-  "\u1e30": "\u004b\u0301",
-  // Ḱ = \'{K}
-  "\u01e8": "\u004b\u030c",
-  // Ǩ = \v{K}
-  "\u0139": "\u004c\u0301",
-  // Ĺ = \'{L}
-  "\u013d": "\u004c\u030c",
-  // Ľ = \v{L}
-  "\u1e3e": "\u004d\u0301",
-  // Ḿ = \'{M}
-  "\u1e40": "\u004d\u0307",
-  // Ṁ = \.{M}
-  "\u0143": "\u004e\u0301",
-  // Ń = \'{N}
-  "\u01f8": "\u004e\u0300",
-  // Ǹ = \`{N}
-  "\u00d1": "\u004e\u0303",
-  // Ñ = \~{N}
-  "\u0147": "\u004e\u030c",
-  // Ň = \v{N}
-  "\u1e44": "\u004e\u0307",
-  // Ṅ = \.{N}
-  "\u00d3": "\u004f\u0301",
-  // Ó = \'{O}
-  "\u00d2": "\u004f\u0300",
-  // Ò = \`{O}
-  "\u00d6": "\u004f\u0308",
-  // Ö = \"{O}
-  "\u022a": "\u004f\u0308\u0304",
-  // Ȫ = \"\={O}
-  "\u00d5": "\u004f\u0303",
-  // Õ = \~{O}
-  "\u1e4c": "\u004f\u0303\u0301",
-  // Ṍ = \~\'{O}
-  "\u1e4e": "\u004f\u0303\u0308",
-  // Ṏ = \~\"{O}
-  "\u022c": "\u004f\u0303\u0304",
-  // Ȭ = \~\={O}
-  "\u014c": "\u004f\u0304",
-  // Ō = \={O}
-  "\u1e52": "\u004f\u0304\u0301",
-  // Ṓ = \=\'{O}
-  "\u1e50": "\u004f\u0304\u0300",
-  // Ṑ = \=\`{O}
-  "\u014e": "\u004f\u0306",
-  // Ŏ = \u{O}
-  "\u01d1": "\u004f\u030c",
-  // Ǒ = \v{O}
-  "\u00d4": "\u004f\u0302",
-  // Ô = \^{O}
-  "\u1ed0": "\u004f\u0302\u0301",
-  // Ố = \^\'{O}
-  "\u1ed2": "\u004f\u0302\u0300",
-  // Ồ = \^\`{O}
-  "\u1ed6": "\u004f\u0302\u0303",
-  // Ỗ = \^\~{O}
-  "\u022e": "\u004f\u0307",
-  // Ȯ = \.{O}
-  "\u0230": "\u004f\u0307\u0304",
-  // Ȱ = \.\={O}
-  "\u0150": "\u004f\u030b",
-  // Ő = \H{O}
-  "\u1e54": "\u0050\u0301",
-  // Ṕ = \'{P}
-  "\u1e56": "\u0050\u0307",
-  // Ṗ = \.{P}
-  "\u0154": "\u0052\u0301",
-  // Ŕ = \'{R}
-  "\u0158": "\u0052\u030c",
-  // Ř = \v{R}
-  "\u1e58": "\u0052\u0307",
-  // Ṙ = \.{R}
-  "\u015a": "\u0053\u0301",
-  // Ś = \'{S}
-  "\u1e64": "\u0053\u0301\u0307",
-  // Ṥ = \'\.{S}
-  "\u0160": "\u0053\u030c",
-  // Š = \v{S}
-  "\u1e66": "\u0053\u030c\u0307",
-  // Ṧ = \v\.{S}
-  "\u015c": "\u0053\u0302",
-  // Ŝ = \^{S}
-  "\u1e60": "\u0053\u0307",
-  // Ṡ = \.{S}
-  "\u0164": "\u0054\u030c",
-  // Ť = \v{T}
-  "\u1e6a": "\u0054\u0307",
-  // Ṫ = \.{T}
-  "\u00da": "\u0055\u0301",
-  // Ú = \'{U}
-  "\u00d9": "\u0055\u0300",
-  // Ù = \`{U}
-  "\u00dc": "\u0055\u0308",
-  // Ü = \"{U}
-  "\u01d7": "\u0055\u0308\u0301",
-  // Ǘ = \"\'{U}
-  "\u01db": "\u0055\u0308\u0300",
-  // Ǜ = \"\`{U}
-  "\u01d5": "\u0055\u0308\u0304",
-  // Ǖ = \"\={U}
-  "\u01d9": "\u0055\u0308\u030c",
-  // Ǚ = \"\v{U}
-  "\u0168": "\u0055\u0303",
-  // Ũ = \~{U}
-  "\u1e78": "\u0055\u0303\u0301",
-  // Ṹ = \~\'{U}
-  "\u016a": "\u0055\u0304",
-  // Ū = \={U}
-  "\u1e7a": "\u0055\u0304\u0308",
-  // Ṻ = \=\"{U}
-  "\u016c": "\u0055\u0306",
-  // Ŭ = \u{U}
-  "\u01d3": "\u0055\u030c",
-  // Ǔ = \v{U}
-  "\u00db": "\u0055\u0302",
-  // Û = \^{U}
-  "\u016e": "\u0055\u030a",
-  // Ů = \r{U}
-  "\u0170": "\u0055\u030b",
-  // Ű = \H{U}
-  "\u1e7c": "\u0056\u0303",
-  // Ṽ = \~{V}
-  "\u1e82": "\u0057\u0301",
-  // Ẃ = \'{W}
-  "\u1e80": "\u0057\u0300",
-  // Ẁ = \`{W}
-  "\u1e84": "\u0057\u0308",
-  // Ẅ = \"{W}
-  "\u0174": "\u0057\u0302",
-  // Ŵ = \^{W}
-  "\u1e86": "\u0057\u0307",
-  // Ẇ = \.{W}
-  "\u1e8c": "\u0058\u0308",
-  // Ẍ = \"{X}
-  "\u1e8a": "\u0058\u0307",
-  // Ẋ = \.{X}
-  "\u00dd": "\u0059\u0301",
-  // Ý = \'{Y}
-  "\u1ef2": "\u0059\u0300",
-  // Ỳ = \`{Y}
-  "\u0178": "\u0059\u0308",
-  // Ÿ = \"{Y}
-  "\u1ef8": "\u0059\u0303",
-  // Ỹ = \~{Y}
-  "\u0232": "\u0059\u0304",
-  // Ȳ = \={Y}
-  "\u0176": "\u0059\u0302",
-  // Ŷ = \^{Y}
-  "\u1e8e": "\u0059\u0307",
-  // Ẏ = \.{Y}
-  "\u0179": "\u005a\u0301",
-  // Ź = \'{Z}
-  "\u017d": "\u005a\u030c",
-  // Ž = \v{Z}
-  "\u1e90": "\u005a\u0302",
-  // Ẑ = \^{Z}
-  "\u017b": "\u005a\u0307",
-  // Ż = \.{Z}
-  "\u03ac": "\u03b1\u0301",
-  // ά = \'{α}
-  "\u1f70": "\u03b1\u0300",
-  // ὰ = \`{α}
-  "\u1fb1": "\u03b1\u0304",
-  // ᾱ = \={α}
-  "\u1fb0": "\u03b1\u0306",
-  // ᾰ = \u{α}
-  "\u03ad": "\u03b5\u0301",
-  // έ = \'{ε}
-  "\u1f72": "\u03b5\u0300",
-  // ὲ = \`{ε}
-  "\u03ae": "\u03b7\u0301",
-  // ή = \'{η}
-  "\u1f74": "\u03b7\u0300",
-  // ὴ = \`{η}
-  "\u03af": "\u03b9\u0301",
-  // ί = \'{ι}
-  "\u1f76": "\u03b9\u0300",
-  // ὶ = \`{ι}
-  "\u03ca": "\u03b9\u0308",
-  // ϊ = \"{ι}
-  "\u0390": "\u03b9\u0308\u0301",
-  // ΐ = \"\'{ι}
-  "\u1fd2": "\u03b9\u0308\u0300",
-  // ῒ = \"\`{ι}
-  "\u1fd1": "\u03b9\u0304",
-  // ῑ = \={ι}
-  "\u1fd0": "\u03b9\u0306",
-  // ῐ = \u{ι}
-  "\u03cc": "\u03bf\u0301",
-  // ό = \'{ο}
-  "\u1f78": "\u03bf\u0300",
-  // ὸ = \`{ο}
-  "\u03cd": "\u03c5\u0301",
-  // ύ = \'{υ}
-  "\u1f7a": "\u03c5\u0300",
-  // ὺ = \`{υ}
-  "\u03cb": "\u03c5\u0308",
-  // ϋ = \"{υ}
-  "\u03b0": "\u03c5\u0308\u0301",
-  // ΰ = \"\'{υ}
-  "\u1fe2": "\u03c5\u0308\u0300",
-  // ῢ = \"\`{υ}
-  "\u1fe1": "\u03c5\u0304",
-  // ῡ = \={υ}
-  "\u1fe0": "\u03c5\u0306",
-  // ῠ = \u{υ}
-  "\u03ce": "\u03c9\u0301",
-  // ώ = \'{ω}
-  "\u1f7c": "\u03c9\u0300",
-  // ὼ = \`{ω}
-  "\u038e": "\u03a5\u0301",
-  // Ύ = \'{Υ}
-  "\u1fea": "\u03a5\u0300",
-  // Ὺ = \`{Υ}
-  "\u03ab": "\u03a5\u0308",
-  // Ϋ = \"{Υ}
-  "\u1fe9": "\u03a5\u0304",
-  // Ῡ = \={Υ}
-  "\u1fe8": "\u03a5\u0306",
-  // Ῠ = \u{Υ}
-  "\u038f": "\u03a9\u0301",
-  // Ώ = \'{Ω}
-  "\u1ffa": "\u03a9\u0300" // Ὼ = \`{Ω}
-
+const unicodeSymbols = {
+  "á": "á",
+  "à": "à",
+  "ä": "ä",
+  "ǟ": "ǟ",
+  "ã": "ã",
+  "ā": "ā",
+  "ă": "ă",
+  "ắ": "ắ",
+  "ằ": "ằ",
+  "ẵ": "ẵ",
+  "ǎ": "ǎ",
+  "â": "â",
+  "ấ": "ấ",
+  "ầ": "ầ",
+  "ẫ": "ẫ",
+  "ȧ": "ȧ",
+  "ǡ": "ǡ",
+  "å": "å",
+  "ǻ": "ǻ",
+  "ḃ": "ḃ",
+  "ć": "ć",
+  "č": "č",
+  "ĉ": "ĉ",
+  "ċ": "ċ",
+  "ď": "ď",
+  "ḋ": "ḋ",
+  "é": "é",
+  "è": "è",
+  "ë": "ë",
+  "ẽ": "ẽ",
+  "ē": "ē",
+  "ḗ": "ḗ",
+  "ḕ": "ḕ",
+  "ĕ": "ĕ",
+  "ě": "ě",
+  "ê": "ê",
+  "ế": "ế",
+  "ề": "ề",
+  "ễ": "ễ",
+  "ė": "ė",
+  "ḟ": "ḟ",
+  "ǵ": "ǵ",
+  "ḡ": "ḡ",
+  "ğ": "ğ",
+  "ǧ": "ǧ",
+  "ĝ": "ĝ",
+  "ġ": "ġ",
+  "ḧ": "ḧ",
+  "ȟ": "ȟ",
+  "ĥ": "ĥ",
+  "ḣ": "ḣ",
+  "í": "í",
+  "ì": "ì",
+  "ï": "ï",
+  "ḯ": "ḯ",
+  "ĩ": "ĩ",
+  "ī": "ī",
+  "ĭ": "ĭ",
+  "ǐ": "ǐ",
+  "î": "î",
+  "ǰ": "ǰ",
+  "ĵ": "ĵ",
+  "ḱ": "ḱ",
+  "ǩ": "ǩ",
+  "ĺ": "ĺ",
+  "ľ": "ľ",
+  "ḿ": "ḿ",
+  "ṁ": "ṁ",
+  "ń": "ń",
+  "ǹ": "ǹ",
+  "ñ": "ñ",
+  "ň": "ň",
+  "ṅ": "ṅ",
+  "ó": "ó",
+  "ò": "ò",
+  "ö": "ö",
+  "ȫ": "ȫ",
+  "õ": "õ",
+  "ṍ": "ṍ",
+  "ṏ": "ṏ",
+  "ȭ": "ȭ",
+  "ō": "ō",
+  "ṓ": "ṓ",
+  "ṑ": "ṑ",
+  "ŏ": "ŏ",
+  "ǒ": "ǒ",
+  "ô": "ô",
+  "ố": "ố",
+  "ồ": "ồ",
+  "ỗ": "ỗ",
+  "ȯ": "ȯ",
+  "ȱ": "ȱ",
+  "ő": "ő",
+  "ṕ": "ṕ",
+  "ṗ": "ṗ",
+  "ŕ": "ŕ",
+  "ř": "ř",
+  "ṙ": "ṙ",
+  "ś": "ś",
+  "ṥ": "ṥ",
+  "š": "š",
+  "ṧ": "ṧ",
+  "ŝ": "ŝ",
+  "ṡ": "ṡ",
+  "ẗ": "ẗ",
+  "ť": "ť",
+  "ṫ": "ṫ",
+  "ú": "ú",
+  "ù": "ù",
+  "ü": "ü",
+  "ǘ": "ǘ",
+  "ǜ": "ǜ",
+  "ǖ": "ǖ",
+  "ǚ": "ǚ",
+  "ũ": "ũ",
+  "ṹ": "ṹ",
+  "ū": "ū",
+  "ṻ": "ṻ",
+  "ŭ": "ŭ",
+  "ǔ": "ǔ",
+  "û": "û",
+  "ů": "ů",
+  "ű": "ű",
+  "ṽ": "ṽ",
+  "ẃ": "ẃ",
+  "ẁ": "ẁ",
+  "ẅ": "ẅ",
+  "ŵ": "ŵ",
+  "ẇ": "ẇ",
+  "ẘ": "ẘ",
+  "ẍ": "ẍ",
+  "ẋ": "ẋ",
+  "ý": "ý",
+  "ỳ": "ỳ",
+  "ÿ": "ÿ",
+  "ỹ": "ỹ",
+  "ȳ": "ȳ",
+  "ŷ": "ŷ",
+  "ẏ": "ẏ",
+  "ẙ": "ẙ",
+  "ź": "ź",
+  "ž": "ž",
+  "ẑ": "ẑ",
+  "ż": "ż",
+  "Á": "Á",
+  "À": "À",
+  "Ä": "Ä",
+  "Ǟ": "Ǟ",
+  "Ã": "Ã",
+  "Ā": "Ā",
+  "Ă": "Ă",
+  "Ắ": "Ắ",
+  "Ằ": "Ằ",
+  "Ẵ": "Ẵ",
+  "Ǎ": "Ǎ",
+  "Â": "Â",
+  "Ấ": "Ấ",
+  "Ầ": "Ầ",
+  "Ẫ": "Ẫ",
+  "Ȧ": "Ȧ",
+  "Ǡ": "Ǡ",
+  "Å": "Å",
+  "Ǻ": "Ǻ",
+  "Ḃ": "Ḃ",
+  "Ć": "Ć",
+  "Č": "Č",
+  "Ĉ": "Ĉ",
+  "Ċ": "Ċ",
+  "Ď": "Ď",
+  "Ḋ": "Ḋ",
+  "É": "É",
+  "È": "È",
+  "Ë": "Ë",
+  "Ẽ": "Ẽ",
+  "Ē": "Ē",
+  "Ḗ": "Ḗ",
+  "Ḕ": "Ḕ",
+  "Ĕ": "Ĕ",
+  "Ě": "Ě",
+  "Ê": "Ê",
+  "Ế": "Ế",
+  "Ề": "Ề",
+  "Ễ": "Ễ",
+  "Ė": "Ė",
+  "Ḟ": "Ḟ",
+  "Ǵ": "Ǵ",
+  "Ḡ": "Ḡ",
+  "Ğ": "Ğ",
+  "Ǧ": "Ǧ",
+  "Ĝ": "Ĝ",
+  "Ġ": "Ġ",
+  "Ḧ": "Ḧ",
+  "Ȟ": "Ȟ",
+  "Ĥ": "Ĥ",
+  "Ḣ": "Ḣ",
+  "Í": "Í",
+  "Ì": "Ì",
+  "Ï": "Ï",
+  "Ḯ": "Ḯ",
+  "Ĩ": "Ĩ",
+  "Ī": "Ī",
+  "Ĭ": "Ĭ",
+  "Ǐ": "Ǐ",
+  "Î": "Î",
+  "İ": "İ",
+  "Ĵ": "Ĵ",
+  "Ḱ": "Ḱ",
+  "Ǩ": "Ǩ",
+  "Ĺ": "Ĺ",
+  "Ľ": "Ľ",
+  "Ḿ": "Ḿ",
+  "Ṁ": "Ṁ",
+  "Ń": "Ń",
+  "Ǹ": "Ǹ",
+  "Ñ": "Ñ",
+  "Ň": "Ň",
+  "Ṅ": "Ṅ",
+  "Ó": "Ó",
+  "Ò": "Ò",
+  "Ö": "Ö",
+  "Ȫ": "Ȫ",
+  "Õ": "Õ",
+  "Ṍ": "Ṍ",
+  "Ṏ": "Ṏ",
+  "Ȭ": "Ȭ",
+  "Ō": "Ō",
+  "Ṓ": "Ṓ",
+  "Ṑ": "Ṑ",
+  "Ŏ": "Ŏ",
+  "Ǒ": "Ǒ",
+  "Ô": "Ô",
+  "Ố": "Ố",
+  "Ồ": "Ồ",
+  "Ỗ": "Ỗ",
+  "Ȯ": "Ȯ",
+  "Ȱ": "Ȱ",
+  "Ő": "Ő",
+  "Ṕ": "Ṕ",
+  "Ṗ": "Ṗ",
+  "Ŕ": "Ŕ",
+  "Ř": "Ř",
+  "Ṙ": "Ṙ",
+  "Ś": "Ś",
+  "Ṥ": "Ṥ",
+  "Š": "Š",
+  "Ṧ": "Ṧ",
+  "Ŝ": "Ŝ",
+  "Ṡ": "Ṡ",
+  "Ť": "Ť",
+  "Ṫ": "Ṫ",
+  "Ú": "Ú",
+  "Ù": "Ù",
+  "Ü": "Ü",
+  "Ǘ": "Ǘ",
+  "Ǜ": "Ǜ",
+  "Ǖ": "Ǖ",
+  "Ǚ": "Ǚ",
+  "Ũ": "Ũ",
+  "Ṹ": "Ṹ",
+  "Ū": "Ū",
+  "Ṻ": "Ṻ",
+  "Ŭ": "Ŭ",
+  "Ǔ": "Ǔ",
+  "Û": "Û",
+  "Ů": "Ů",
+  "Ű": "Ű",
+  "Ṽ": "Ṽ",
+  "Ẃ": "Ẃ",
+  "Ẁ": "Ẁ",
+  "Ẅ": "Ẅ",
+  "Ŵ": "Ŵ",
+  "Ẇ": "Ẇ",
+  "Ẍ": "Ẍ",
+  "Ẋ": "Ẋ",
+  "Ý": "Ý",
+  "Ỳ": "Ỳ",
+  "Ÿ": "Ÿ",
+  "Ỹ": "Ỹ",
+  "Ȳ": "Ȳ",
+  "Ŷ": "Ŷ",
+  "Ẏ": "Ẏ",
+  "Ź": "Ź",
+  "Ž": "Ž",
+  "Ẑ": "Ẑ",
+  "Ż": "Ż",
+  "ά": "ά",
+  "ὰ": "ὰ",
+  "ᾱ": "ᾱ",
+  "ᾰ": "ᾰ",
+  "έ": "έ",
+  "ὲ": "ὲ",
+  "ή": "ή",
+  "ὴ": "ὴ",
+  "ί": "ί",
+  "ὶ": "ὶ",
+  "ϊ": "ϊ",
+  "ΐ": "ΐ",
+  "ῒ": "ῒ",
+  "ῑ": "ῑ",
+  "ῐ": "ῐ",
+  "ό": "ό",
+  "ὸ": "ὸ",
+  "ύ": "ύ",
+  "ὺ": "ὺ",
+  "ϋ": "ϋ",
+  "ΰ": "ΰ",
+  "ῢ": "ῢ",
+  "ῡ": "ῡ",
+  "ῠ": "ῠ",
+  "ώ": "ώ",
+  "ὼ": "ὼ",
+  "Ύ": "Ύ",
+  "Ὺ": "Ὺ",
+  "Ϋ": "Ϋ",
+  "Ῡ": "Ῡ",
+  "Ῠ": "Ῠ",
+  "Ώ": "Ώ",
+  "Ὼ": "Ὼ"
 };
-
-/* eslint no-constant-condition:0 */
 
 /**
  * This file contains the parser used to parse out a TeX expression from the
@@ -14879,9 +15671,13 @@ class Parser {
    */
 
 
-  expect(text, consume = true) {
-    if (this.nextToken.text !== text) {
-      throw new ParseError("Expected '" + text + "', got '" + this.nextToken.text + "'", this.nextToken);
+  expect(text, consume) {
+    if (consume === void 0) {
+      consume = true;
+    }
+
+    if (this.fetch().text !== text) {
+      throw new ParseError(`Expected '${text}', got '${this.fetch().text}'`, this.fetch());
     }
 
     if (consume) {
@@ -14889,13 +15685,26 @@ class Parser {
     }
   }
   /**
-   * Considers the current look ahead token as consumed,
-   * and fetches the one after that as the new look ahead.
+   * Discards the current lookahead token, considering it consumed.
    */
 
 
   consume() {
-    this.nextToken = this.gullet.expandNextToken();
+    this.nextToken = null;
+  }
+  /**
+   * Return the current lookahead token, or if there isn't one (at the
+   * beginning, or if the previous lookahead token was consume()d),
+   * fetch the next token as the new lookahead token and return it.
+   */
+
+
+  fetch() {
+    if (this.nextToken == null) {
+      this.nextToken = this.gullet.expandNextToken();
+    }
+
+    return this.nextToken;
   }
   /**
    * Switches between "text" and "math" modes.
@@ -14912,37 +15721,31 @@ class Parser {
 
 
   parse() {
-    // Create a group namespace for the math expression.
-    // (LaTeX creates a new group for every $...$, $$...$$, \[...\].)
-    this.gullet.beginGroup(); // Use old \color behavior (same as LaTeX's \textcolor) if requested.
+    if (!this.settings.globalGroup) {
+      // Create a group namespace for the math expression.
+      // (LaTeX creates a new group for every $...$, $$...$$, \[...\].)
+      this.gullet.beginGroup();
+    } // Use old \color behavior (same as LaTeX's \textcolor) if requested.
     // We do this within the group for the math expression, so it doesn't
     // pollute settings.macros.
+
 
     if (this.settings.colorIsTextColor) {
       this.gullet.macros.set("\\color", "\\textcolor");
     } // Try to parse the input
 
 
-    this.consume();
     const parse = this.parseExpression(false); // If we succeeded, make sure there's an EOF at the end
 
-    this.expect("EOF", false); // End the group namespace for the expression
+    this.expect("EOF"); // End the group namespace for the expression
 
-    this.gullet.endGroup();
+    if (!this.settings.globalGroup) {
+      this.gullet.endGroup();
+    }
+
     return parse;
   }
 
-  /**
-   * Parses an "expression", which is a list of atoms.
-   *
-   * `breakOnInfix`: Should the parsing stop when we hit infix nodes? This
-   *                 happens when functions have higher precendence han infix
-   *                 nodes in implicit parses.
-   *
-   * `breakOnTokenText`: The text of the token that the expression should end
-   *                     with, or `null` if something else should end the
-   *                     expression.
-   */
   parseExpression(breakOnInfix, breakOnTokenText) {
     const body = []; // Keep adding atoms to the body until we can't parse any more atoms (either
     // we reached the end, a }, or a \right)
@@ -14953,7 +15756,7 @@ class Parser {
         this.consumeSpaces();
       }
 
-      const lex = this.nextToken;
+      const lex = this.fetch();
 
       if (Parser.endOfExpression.indexOf(lex.text) !== -1) {
         break;
@@ -14971,6 +15774,8 @@ class Parser {
 
       if (!atom) {
         break;
+      } else if (atom.type === "internal") {
+        continue;
       }
 
       body.push(atom);
@@ -14996,15 +15801,13 @@ class Parser {
     let funcName;
 
     for (let i = 0; i < body.length; i++) {
-      const node = checkNodeType(body[i], "infix");
-
-      if (node) {
+      if (body[i].type === "infix") {
         if (overIndex !== -1) {
-          throw new ParseError("only one infix operator per group", node.token);
+          throw new ParseError("only one infix operator per group", body[i].token);
         }
 
         overIndex = i;
-        funcName = node.replaceWith;
+        funcName = body[i].replaceWith;
       }
     }
 
@@ -15053,12 +15856,10 @@ class Parser {
    * Handle a subscript or superscript with nice errors.
    */
   handleSupSubscript(name) {
-    const symbolToken = this.nextToken;
+    const symbolToken = this.fetch();
     const symbol = symbolToken.text;
     this.consume();
-    this.consumeSpaces(); // ignore spaces before sup/subscript argument
-
-    const group = this.parseGroup(name, false, Parser.SUPSUB_GREEDINESS);
+    const group = this.parseGroup(name, false, Parser.SUPSUB_GREEDINESS, undefined, undefined, true); // ignore spaces before sup/subscript argument
 
     if (!group) {
       throw new ParseError("Expected group after '" + symbol + "'", symbolToken);
@@ -15072,8 +15873,7 @@ class Parser {
    */
 
 
-  handleUnsupportedCmd() {
-    const text = this.nextToken.text;
+  formatUnsupportedCmd(text) {
     const textordArray = [];
 
     for (let i = 0; i < text.length; i++) {
@@ -15095,7 +15895,6 @@ class Parser {
       color: this.settings.errorColor,
       body: [textNode]
     };
-    this.consume();
     return colorNode;
   }
   /**
@@ -15120,16 +15919,17 @@ class Parser {
       // Guaranteed in math mode, so eat any spaces first.
       this.consumeSpaces(); // Lex the first token
 
-      const lex = this.nextToken;
+      const lex = this.fetch();
 
       if (lex.text === "\\limits" || lex.text === "\\nolimits") {
         // We got a limit control
-        const opNode = checkNodeType(base, "op");
-
-        if (opNode) {
+        if (base && base.type === "op") {
           const limits = lex.text === "\\limits";
-          opNode.limits = limits;
-          opNode.alwaysHandleSupSub = true;
+          base.limits = limits;
+          base.alwaysHandleSupSub = true;
+        } else if (base && base.type === "operatorname" && base.alwaysHandleSupSub) {
+          const limits = lex.text === "\\limits";
+          base.limits = limits;
         } else {
           throw new ParseError("Limit controls must follow a math operator", lex);
         }
@@ -15164,7 +15964,7 @@ class Parser {
         const primes = [prime];
         this.consume(); // Keep lexing tokens until we get something that's not a prime
 
-        while (this.nextToken.text === "'") {
+        while (this.fetch().text === "'") {
           // For each one, add another prime to the list
           primes.push(prime);
           this.consume();
@@ -15172,7 +15972,7 @@ class Parser {
         // superscript in with the primes.
 
 
-        if (this.nextToken.text === "^") {
+        if (this.fetch().text === "^") {
           primes.push(this.handleSupSubscript("superscript"));
         } // Put everything into an ordgroup as the superscript
 
@@ -15182,8 +15982,6 @@ class Parser {
           mode: this.mode,
           body: primes
         };
-      } else if (lex.text === "%") {
-        this.consumeComment();
       } else {
         // If it wasn't ^, _, or ', stop parsing super/subscripts
         break;
@@ -15213,7 +16011,7 @@ class Parser {
 
   parseFunction(breakOnTokenText, name, // For error reporting.
   greediness) {
-    const token = this.nextToken;
+    const token = this.fetch();
     const func = token.text;
     const funcData = functions[func];
 
@@ -15221,24 +16019,14 @@ class Parser {
       return null;
     }
 
+    this.consume(); // consume command token
+
     if (greediness != null && funcData.greediness <= greediness) {
       throw new ParseError("Got function '" + func + "' with no arguments" + (name ? " as " + name : ""), token);
     } else if (this.mode === "text" && !funcData.allowedInText) {
       throw new ParseError("Can't use function '" + func + "' in text mode", token);
     } else if (this.mode === "math" && funcData.allowedInMath === false) {
       throw new ParseError("Can't use function '" + func + "' in math mode", token);
-    } // Consume the command token after possibly switching to the
-    // mode specified by the function (for instant mode switching),
-    // and then immediately switch back.
-
-
-    if (funcData.consumeMode) {
-      const oldMode = this.mode;
-      this.switchMode(funcData.consumeMode);
-      this.consume();
-      this.switchMode(oldMode);
-    } else {
-      this.consume();
     }
 
     const _this$parseArguments = this.parseArguments(func, funcData),
@@ -15294,22 +16082,14 @@ class Parser {
       //  put spaces between the arguments (e.g., ‘\row x n’), because
       //  TeX doesn’t use single spaces as undelimited arguments."
 
-      if (i > 0 && !isOptional) {
-        this.consumeSpaces();
-      } // Also consume leading spaces in math mode, as parseSymbol
+      const consumeSpaces = i > 0 && !isOptional || // Also consume leading spaces in math mode, as parseSymbol
       // won't know what to do with them.  This can only happen with
       // macros, e.g. \frac\foo\foo where \foo expands to a space symbol.
-      // In LaTeX, the \foo's get treated as (blank) arguments).
+      // In LaTeX, the \foo's get treated as (blank) arguments.
       // In KaTeX, for now, both spaces will get consumed.
       // TODO(edemaine)
-
-
-      if (i === 0 && !isOptional && this.mode === "math") {
-        this.consumeSpaces();
-      }
-
-      const nextToken = this.nextToken;
-      const arg = this.parseGroupOfType("argument to '" + func + "'", argType, isOptional, baseGreediness);
+      i === 0 && !isOptional && this.mode === "math";
+      const arg = this.parseGroupOfType(`argument to '${func}'`, argType, isOptional, baseGreediness, consumeSpaces);
 
       if (!arg) {
         if (isOptional) {
@@ -15317,7 +16097,7 @@ class Parser {
           continue;
         }
 
-        throw new ParseError("Expected group after '" + func + "'", nextToken);
+        throw new ParseError(`Expected group after '${func}'`, this.fetch());
       }
 
       (isOptional ? optArgs : args).push(arg);
@@ -15333,56 +16113,89 @@ class Parser {
    */
 
 
-  parseGroupOfType(name, type, optional, greediness) {
+  parseGroupOfType(name, type, optional, greediness, consumeSpaces) {
     switch (type) {
       case "color":
+        if (consumeSpaces) {
+          this.consumeSpaces();
+        }
+
         return this.parseColorGroup(optional);
 
       case "size":
+        if (consumeSpaces) {
+          this.consumeSpaces();
+        }
+
         return this.parseSizeGroup(optional);
 
       case "url":
-        return this.parseUrlGroup(optional);
+        return this.parseUrlGroup(optional, consumeSpaces);
 
       case "math":
       case "text":
-        return this.parseGroup(name, optional, greediness, undefined, type);
+        return this.parseGroup(name, optional, greediness, undefined, type, consumeSpaces);
+
+      case "hbox":
+        {
+          // hbox argument type wraps the argument in the equivalent of
+          // \hbox, which is like \text but switching to \textstyle size.
+          const group = this.parseGroup(name, optional, greediness, undefined, "text", consumeSpaces);
+
+          if (!group) {
+            return group;
+          }
+
+          const styledGroup = {
+            type: "styling",
+            mode: group.mode,
+            body: [group],
+            style: "text" // simulate \textstyle
+
+          };
+          return styledGroup;
+        }
+
+      case "raw":
+        {
+          if (consumeSpaces) {
+            this.consumeSpaces();
+          }
+
+          if (optional && this.fetch().text === "{") {
+            return null;
+          }
+
+          const token = this.parseStringGroup("raw", optional, true);
+
+          if (token) {
+            return {
+              type: "raw",
+              mode: "text",
+              string: token.text
+            };
+          } else {
+            throw new ParseError("Expected raw group", this.fetch());
+          }
+        }
 
       case "original":
       case null:
       case undefined:
-        return this.parseGroup(name, optional, greediness);
+        return this.parseGroup(name, optional, greediness, undefined, undefined, consumeSpaces);
 
       default:
-        throw new ParseError("Unknown group type as " + name, this.nextToken);
+        throw new ParseError("Unknown group type as " + name, this.fetch());
     }
   }
+  /**
+   * Discard any space tokens, fetching the next non-space token.
+   */
+
 
   consumeSpaces() {
-    while (this.nextToken.text === " ") {
+    while (this.fetch().text === " ") {
       this.consume();
-    }
-  }
-
-  consumeComment() {
-    // the newline character is normalized in Lexer, check original source
-    while (this.nextToken.text !== "EOF" && this.nextToken.loc && this.nextToken.loc.getSource().indexOf("\n") === -1) {
-      this.consume();
-    }
-
-    if (this.nextToken.text === "EOF") {
-      this.settings.reportNonstrict("commentAtEnd", "% comment has no terminating newline; LaTeX would " + "fail because of commenting the end of math mode (e.g. $)");
-    }
-
-    if (this.mode === "math") {
-      this.consumeSpaces(); // ignore spaces in math mode
-    } else if (this.nextToken.loc) {
-      // text mode
-      const source = this.nextToken.loc.getSource();
-
-      if (source.indexOf("\n") === source.length - 1) {
-        this.consumeSpaces(); // if no space after the first newline
-      }
     }
   }
   /**
@@ -15395,15 +16208,14 @@ class Parser {
   optional, raw) {
     const groupBegin = optional ? "[" : "{";
     const groupEnd = optional ? "]" : "}";
-    const nextToken = this.nextToken;
+    const beginToken = this.fetch();
 
-    if (nextToken.text !== groupBegin) {
+    if (beginToken.text !== groupBegin) {
       if (optional) {
         return null;
-      } else if (raw && nextToken.text !== "EOF" && /[^{}[\]]/.test(nextToken.text)) {
-        // allow a single character in raw string group
+      } else if (raw && beginToken.text !== "EOF" && /[^{}[\]]/.test(beginToken.text)) {
         this.consume();
-        return nextToken;
+        return beginToken;
       }
     }
 
@@ -15411,24 +16223,16 @@ class Parser {
     this.mode = "text";
     this.expect(groupBegin);
     let str = "";
-    const firstToken = this.nextToken;
+    const firstToken = this.fetch();
     let nested = 0; // allow nested braces in raw string group
 
     let lastToken = firstToken;
+    let nextToken;
 
-    while (raw && nested > 0 || this.nextToken.text !== groupEnd) {
-      switch (this.nextToken.text) {
+    while ((nextToken = this.fetch()).text !== groupEnd || raw && nested > 0) {
+      switch (nextToken.text) {
         case "EOF":
           throw new ParseError("Unexpected end of input in " + modeName, firstToken.range(lastToken, str));
-
-        case "%":
-          if (!raw) {
-            // allow % in raw string group
-            this.consumeComment();
-            continue;
-          }
-
-          break;
 
         case groupBegin:
           nested++;
@@ -15439,13 +16243,13 @@ class Parser {
           break;
       }
 
-      lastToken = this.nextToken;
+      lastToken = nextToken;
       str += lastToken.text;
       this.consume();
     }
 
-    this.mode = outerMode;
     this.expect(groupEnd);
+    this.mode = outerMode;
     return firstToken.range(lastToken, str);
   }
   /**
@@ -15458,17 +16262,13 @@ class Parser {
   parseRegexGroup(regex, modeName) {
     const outerMode = this.mode;
     this.mode = "text";
-    const firstToken = this.nextToken;
+    const firstToken = this.fetch();
     let lastToken = firstToken;
     let str = "";
+    let nextToken;
 
-    while (this.nextToken.text !== "EOF" && (regex.test(str + this.nextToken.text) || this.nextToken.text === "%")) {
-      if (this.nextToken.text === "%") {
-        this.consumeComment();
-        continue;
-      }
-
-      lastToken = this.nextToken;
+    while ((nextToken = this.fetch()).text !== "EOF" && regex.test(str + nextToken.text)) {
+      lastToken = nextToken;
       str += lastToken.text;
       this.consume();
     }
@@ -15522,7 +16322,7 @@ class Parser {
     let res;
     let isBlank = false;
 
-    if (!optional && this.nextToken.text !== "{") {
+    if (!optional && this.fetch().text !== "{") {
       res = this.parseRegexGroup(/^[-+]? *(?:$|\d+|\d+\.\d*|\.\d*) *[a-z]{0,2} *$/, "size");
     } else {
       res = this.parseStringGroup("size", optional);
@@ -15565,12 +16365,17 @@ class Parser {
     };
   }
   /**
-   * Parses an URL, checking escaped letters and allowed protocols.
+   * Parses an URL, checking escaped letters and allowed protocols,
+   * and setting the catcode of % as an active character (as in \hyperref).
    */
 
 
-  parseUrlGroup(optional) {
+  parseUrlGroup(optional, consumeSpaces) {
+    this.gullet.lexer.setCatcode("%", 13); // active character
+
     const res = this.parseStringGroup("url", optional, true); // get raw string
+
+    this.gullet.lexer.setCatcode("%", 14); // comment character
 
     if (!res) {
       return null;
@@ -15581,14 +16386,6 @@ class Parser {
 
 
     const url = res.text.replace(/\\([#$%&~_^{}])/g, '$1');
-    let protocol = /^\s*([^\\/#]*?)(?::|&#0*58|&#x0*3a)/i.exec(url);
-    protocol = protocol != null ? protocol[1] : "_relative";
-    const allowed = this.settings.allowedProtocols;
-
-    if (!utils.contains(allowed, "*") && !utils.contains(allowed, protocol)) {
-      throw new ParseError(`Forbidden protocol '${protocol}'`, res);
-    }
-
     return {
       type: "url",
       mode: this.mode,
@@ -15610,38 +16407,47 @@ class Parser {
 
 
   parseGroup(name, // For error reporting.
-  optional, greediness, breakOnTokenText, mode) {
+  optional, greediness, breakOnTokenText, mode, consumeSpaces) {
+    // Switch to specified mode
     const outerMode = this.mode;
-    const firstToken = this.nextToken;
-    const text = firstToken.text; // Switch to specified mode
 
     if (mode) {
       this.switchMode(mode);
-    }
+    } // Consume spaces if requested, crucially *after* we switch modes,
+    // so that the next non-space token is parsed in the correct mode.
 
-    let result; // Try to parse an open brace
 
-    if (text === (optional ? "[" : "{")) {
-      // Start a new group namespace
+    if (consumeSpaces) {
+      this.consumeSpaces();
+    } // Get first token
+
+
+    const firstToken = this.fetch();
+    const text = firstToken.text;
+    let result; // Try to parse an open brace or \begingroup
+
+    if (optional ? text === "[" : text === "{" || text === "\\begingroup") {
+      this.consume();
+      const groupEnd = Parser.endOfGroup[text]; // Start a new group namespace
+
       this.gullet.beginGroup(); // If we get a brace, parse an expression
 
-      this.consume();
-      const expression = this.parseExpression(false, optional ? "]" : "}");
-      const lastToken = this.nextToken; // Switch mode back before consuming symbol after close brace
+      const expression = this.parseExpression(false, groupEnd);
+      const lastToken = this.fetch(); // Check that we got a matching closing brace
 
-      if (mode) {
-        this.switchMode(outerMode);
-      } // End group namespace before consuming symbol after close brace
+      this.expect(groupEnd); // End group namespace
 
-
-      this.gullet.endGroup(); // Make sure we get a close brace
-
-      this.expect(optional ? "]" : "}");
-      return {
+      this.gullet.endGroup();
+      result = {
         type: "ordgroup",
         mode: this.mode,
         loc: SourceLocation.range(firstToken, lastToken),
-        body: expression
+        body: expression,
+        // A group formed by \begingroup...\endgroup is a semi-simple group
+        // which doesn't affect spacing in math mode, i.e., is transparent.
+        // https://tex.stackexchange.com/questions/1930/when-should-one-
+        // use-begingroup-instead-of-bgroup
+        semisimple: text === "\\begingroup" || undefined
       };
     } else if (optional) {
       // Return nothing for an optional group
@@ -15656,7 +16462,8 @@ class Parser {
           throw new ParseError("Undefined control sequence: " + text, firstToken);
         }
 
-        result = this.handleUnsupportedCmd();
+        result = this.formatUnsupportedCmd(text);
+        this.consume();
       }
     } // Switch mode back
 
@@ -15718,12 +16525,12 @@ class Parser {
   }
   /**
    * Parse a single symbol out of the string. Here, we handle single character
-   * symbols and special functions like verbatim
+   * symbols and special functions like \verb.
    */
 
 
   parseSymbol() {
-    const nucleus = this.nextToken;
+    const nucleus = this.fetch();
     let text = nucleus.text;
 
     if (/^\\verb[^a-zA-Z]/.test(text)) {
@@ -15750,9 +16557,6 @@ class Parser {
         body: arg,
         star
       };
-    } else if (text === "%") {
-      this.consumeComment();
-      return this.parseSymbol();
     } // At this point, we should have a symbol, possibly with accents.
     // First expand any accented base symbol according to unicodeSymbols.
 
@@ -15820,11 +16624,18 @@ class Parser {
         } else if (this.mode === "math") {
           this.settings.reportNonstrict("unicodeTextInMathMode", `Unicode text character "${text[0]}" used in math mode`, nucleus);
         }
-      }
+      } // All nonmathematical Unicode characters are rendered as if they
+      // are in text mode (wrapped in \text) because that's what it
+      // takes to render them in LaTeX.  Setting `mode: this.mode` is
+      // another natural choice (the user requested math mode), but
+      // this makes it more difficult for getCharacterMetrics() to
+      // distinguish Unicode characters without metrics and those for
+      // which we want to simulate the letter M.
+
 
       symbol = {
         type: "textord",
-        mode: this.mode,
+        mode: "text",
         loc: SourceLocation.range(nucleus),
         text
       };
@@ -15864,7 +16675,24 @@ class Parser {
   }
 
 }
-Parser.endOfExpression = ["}", "\\end", "\\right", "&"];
+Parser.endOfExpression = ["}", "\\endgroup", "\\end", "\\right", "&"];
+Parser.endOfGroup = {
+  "[": "]",
+  "{": "}",
+  "\\begingroup": "\\endgroup"
+  /**
+   * Parses an "expression", which is a list of atoms.
+   *
+   * `breakOnInfix`: Should the parsing stop when we hit infix nodes? This
+   *                 happens when functions have higher precendence han infix
+   *                 nodes in implicit parses.
+   *
+   * `breakOnTokenText`: The text of the token that the expression should end
+   *                     with, or `null` if something else should end the
+   *                     expression.
+   */
+
+};
 Parser.SUPSUB_GREEDINESS = 1;
 
 /**
@@ -15998,7 +16826,7 @@ var katex = {
   /**
    * Current KaTeX version
    */
-  version: "0.10.0",
+  version: "0.12.0",
 
   /**
    * Renders the given LaTeX into an HTML+MathML combination, and adds
