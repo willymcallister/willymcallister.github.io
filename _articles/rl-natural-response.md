@@ -304,12 +304,14 @@ $K = \text I_0$
 Done! We found a function and two constants and the differential equation came true. The general solution for the natural response of an $\text{RL}$ circuit is,
 
 $\boxed{i(t) = \text I_0\,e^{-\text Rt/\text L}}$
+{: .colorbox :}
 
 What about the voltage? The voltage $v(t)$ falls out of Ohm's Law, 
 
 $v = \text R \, i$
 
 $\boxed{v(t) = \text R\,\text I_0\,e^{-\text Rt/\text L}}$
+{: .colorbox :}
 
 I always like to see what the equations look like,
 

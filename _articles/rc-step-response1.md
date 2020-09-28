@@ -115,7 +115,7 @@ As usual, when a problem involves two energy sources engineers wonder if superpo
 
 We find the step function using the method of *homogeneous and particular solutions*, based on a non-obvious theory of differential equations, stated here without proof, 
 
->The total solution to a non-homogeneous differential equation can be found by the sum of the **general** solution of the circuit's natural response with **any particular** response (found without regard for the initial conditions), followed by applying the initial conditions to resolve unknown constants.
+>The total solution to a non-homogeneous differential equation can be found by adding the **general** solution of the circuit's natural response to **any** particular response (found without regard for the initial conditions), followed by applying the initial conditions to resolve unknown constants.
 
 This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
 
@@ -379,6 +379,7 @@ $K_n = \text V_0 - \text V_\text S$
 Replace $K_n$ in the total response and we have the step response we've been looking for,
 
 $\boxed{v_{tot} = (\text V_0 - \text V_\text S)\,e^{-t/\text{RC}} + \text V_\text S}$
+{: .colorbox :}
 
 The total response looks like this,
 
@@ -402,6 +403,7 @@ $v_{tot} = - \text V_\text S\,e^{-t/\text{RC}} + \text V_\text S$
 or
 
 $\boxed{v_{tot} = \text V_\text S \left (1 - e^{-t/\text{RC}}\right )}$
+{: .colorbox :}
 
 {% include d3/rc_step_response_total0.html %}
 If the capacitor voltage starts at $0$ the RC step total response is $v_{tot} = \text V_\text S \, \left (1 - e^{-t/\text{RC}}\right )$.

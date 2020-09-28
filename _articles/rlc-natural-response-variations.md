@@ -349,6 +349,7 @@ We found both amplitude constants, $A_1$ and $A_2$. They both exist and they are
 This is the last step of our long journey to find the current. Put $A_2$ into the proposed solution and, after a lot of hard work, the solution for the $\text{RLC}$ under damped response is,
 
 $\boxed{i = \dfrac{\text V_0}{\omega_d \text L} e^{-\alpha t} \sin \omega_d t}$
+{: .colorbox :}
 
 As a reminder,
 
@@ -651,6 +652,7 @@ Hey! We got two constants. That validates our proposed solution.
 We have the over damped solution,
 
 $\boxed{i = \dfrac{\text V_0}{(s_1 - s_2) \, \text L} \left ( e^{s_1 t} - e^{s_2 t} \right )}$
+{: .colorbox :}
 
 #### Example over damped response 
 {:.no_toc}
@@ -807,6 +809,7 @@ $K_2 = \dfrac{\text V_0}{\text L}$
 Yay! We found constant values for both $K_1$ and $K_2$, so our original proposed solution is a valid solution. Put $K_2$ into the valid solution and we get the critically damped response with an initial voltage,
 
 $\boxed{i = \dfrac{\text V_0}{\text L}\, t\, e^{-\alpha t}}$
+{: .colorbox :}
 
 #### Critically damped with an initial voltage example
 {:.no_toc}
@@ -969,6 +972,7 @@ $i = \text I_0 e^{-\alpha t} - \alpha \text I_0\,t\,e^{-\alpha t}$
 or 
 
 $\boxed{i = \text I_0 e^{-\alpha t}(1 - \alpha t)}$
+{: .colorbox :}
 
 #### Critically damped with an initial current example
 {:.no_toc}

@@ -147,6 +147,7 @@ $F = \dfrac{1}{4\pi\epsilon_0} \dfrac{qQ}{\cancel L} \dfrac{\cancel L}{a(a+L)}$
 {% endcapture %}{% include details.html %} 
 
 $\boxed{F = \dfrac{1}{4\pi\epsilon_0} \dfrac{q\,Q}{a(a+L)}}$
+{: .colorbox :}
 
 ### Final thoughts
 

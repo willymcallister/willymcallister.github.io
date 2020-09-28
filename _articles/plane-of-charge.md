@@ -256,6 +256,7 @@ $E = -\dfrac{\sigma}{2\epsilon_0} \,\cos \theta \,\bigg\| _{0}^{\pi/2} = -\dfrac
 The electric field near an infinite plane of charge is,
 
 $\boxed{ E = \dfrac{\sigma}{2\epsilon_0}\;\text{newtons/coulomb}}$
+{: .colorbox :}
 
 We've been keeping track of the direction of the field in our head the whole time. The field points straight away from the plane.
 

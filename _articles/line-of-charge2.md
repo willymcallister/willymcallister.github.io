@@ -289,6 +289,7 @@ $\displaystyle E_y = \int_{-\pi/2}^{+\pi/2} \dfrac{1}{4\pi\epsilon_0} \dfrac{\la
 $\displaystyle E_y = \dfrac{1}{4\pi\epsilon_0} \dfrac{\lambda}{a} \,\sin\,\theta \,\bigg\| _{-\pi/2}^{+\pi/2} = \dfrac{1}{4\pi\epsilon_0} \dfrac{\lambda}{a}\,(+1 - -1) = \dfrac{1}{4\pi\epsilon_0} \dfrac{\lambda}{a}\,(2)$
 
 $\boxed{E_y = \dfrac{\lambda}{2\pi\epsilon_0} \dfrac{1}{a}}$
+{: .colorbox :}
 
 This is the *specific* solution for the electric field from a very long line, at any distance $a$ away from the mid-point. 
 

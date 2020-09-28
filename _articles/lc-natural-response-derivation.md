@@ -367,6 +367,7 @@ $A_2 = \sqrt{\dfrac{\text C}{\text{L}}}\,\text V_0$
 And finally, after a lot of hard work, the $\text{LC}$ natural response current is,
 
 $\boxed{i = \sqrt{\dfrac{\text C}{\text L}}\,\text V_0 \sin \omega_\circ t}$
+{: .colorbox :}
 
 The current is a sine wave with radian frequency $\omega_\circ$ and an amplitude determined by the starting voltage and the component values.
 
@@ -387,7 +388,7 @@ $v = \text L \sqrt{\dfrac{\text C}{\text L}}\,\text V_0 \, \sqrt{\dfrac{1}{\text
 Lots of things cancel, leaving us with something quite simple,
 
 $\boxed{v = \text V_0 \cos \omega_\circ t}$
-
+{: .colorbox :}
 
 The radian frequency is determined by $\omega_\circ = \sqrt{\dfrac{1}{\text{LC}}}$.
 

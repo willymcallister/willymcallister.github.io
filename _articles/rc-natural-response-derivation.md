@@ -273,6 +273,7 @@ We have $s$ and $K$ that make the differential equation true. *Drum roll please*
 The solution for the natural response of an $\text{RC}$ circuit is,
 
 $\boxed{v(t) = \text V_0\,e^{-t/\text{RC}}}$
+{: .colorbox :}
 
 where $\text V_0$ is the starting voltage on the capacitor. 
 

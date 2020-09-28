@@ -95,6 +95,7 @@ The prefix *deci-* comes from the Latin word *decimus* for one tenth. It is also
 This practical chain of reasoning lead Bell engineers to define the decibel we use today, abbreviated $\text{dB}$,
 
 $\boxed{\text{Gain in }\text{dB} = 10 \log_{10}\dfrac{p_1}{p_0}}$
+{: .colorbox :}
 
 Notice the decibel is a dimensionless quantity. It's not $\text{dB}$ of watts, it's just $\text{dB}$.
 
@@ -177,6 +178,7 @@ A gain of $15\,\text{dB}$ represents a power ratio of $31.62:1$.
 In general, to go from $\text{dB}$ to power ratio,
 
 $\boxed{\dfrac{p_1}{p_0} = 10^{\text{dB}/10}}$
+{: .colorbox :}
 {% endcapture %}{% include details.html %}
 
 ## Comparing voltages using decibels
@@ -233,6 +235,7 @@ $10 \log_{10}\dfrac{v_1^2}{v_0^2} = 2 \cdot 10 \log_{10}\dfrac{v_1}{v_0}$
 The leading $10$  turns into a $20$ and gives us the definition of a decibel when taking the ratio of voltages (or any other quantity proportional to the square root of power),
 
 $\boxed{\text{Gain in } \text{dB} = 20 \log_{10}\dfrac{v_1}{v_0}}$
+{: .colorbox :}
 
 It may seem goofy to have a second definition for the decibel, but we need it to get a consistent meaning for $\text{dB}$.
 
@@ -305,6 +308,7 @@ Compare this voltage ratio to the the power ratio we worked out in Example 1.
 In general, to go from $\text{dB}$ to voltage ratio,
 
 $\boxed{\dfrac{v_1}{v_0} = 10^{\text{dB}/20}}$
+{: .colorbox :}
 {% endcapture %}{% include details.html %}
 
 ## Example 7
