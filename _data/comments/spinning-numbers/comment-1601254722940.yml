@@ -1,0 +1,15 @@
+_id: c0cf9760-0125-11eb-9b21-0794714b9b6f
+_parent: 'https://spinningnumbers.org/'
+replying_to: '5'
+message: >-
+  Derek - I don't have any worked examples yet for AC analysis. When you work
+  with and AC circuit you are looking at frequency response and phase shift
+  using the language of filters and transforms. The complex exponentials from
+  Euler's Identity are embedded in things like the definition of the Fourier
+  Transform. One related spot where we apply Euler's Identity to an important
+  result is here:
+  https://spinningnumbers.org/a/lc-natural-response-derivation.html#eulers-identities
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-09-28T00:58:42.931Z'
