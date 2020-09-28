@@ -1,0 +1,14 @@
+_id: a85a13c0-0127-11eb-9b21-0794714b9b6f
+_parent: 'https://spinningnumbers.org/a/voltage-divider.html'
+replying_to: '3'
+message: >-
+  Nathanael - A voltage divider is used when you need a voltage in your circuit
+  that isn't already supplied by a power supply or battery. If you have a
+  circuit powered by a 9 volt battery and you need 1.5 volts for some reason. It
+  is usually much cheaper to design a voltage divider with two resistors
+  compared to buying a 1.5 volt battery. Resistors cost pennies, but a battery
+  costs a dollar.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-09-28T01:12:20.985Z'
