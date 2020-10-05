@@ -158,7 +158,9 @@ The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ a
 
 Setting the area is equivalent to placing that many diodes in parallel.
 
-### Opamp model
+### Opamp models
+
+Circuit Sandbox has two opamp models, an ideal model and a somewhat realistic model with power supply pins and non-perfect input and output resistance.
 
 The ideal opamp symbol has two inputs (v+ and v-) and an output (vo). There are no positive and negative power supply inputs. The extra input, vg, is the reference for the output voltage. 
 
@@ -167,6 +169,12 @@ The ideal opamp symbol has two inputs (v+ and v-) and an output (vo). There are 
 The defining equation for the opamp is: A(vp - vn) = vo - vg
 
 The default gain is A $= 30{,}000$. If the input voltages are identical then the output voltage will be vg. If you plan on symmetric power supply voltages, connect vg to ground. If they are not symmetric set vg half way between whatever power inputs you intend for your opamp. 
+
+The realistic opamp model symbol has power pins,
+
+![Circuit Sandbox opamp2 symbol]({% link i/circuit_sandbox_opamp2_symbol.png %}){: height="140px" :}{: .centered :}
+
+More information on this opamp model will appear soon.
 
 ## System information
 

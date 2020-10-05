@@ -9,35 +9,35 @@ comments: true
 
 {% capture summary %}show answer{% endcapture %}  
 {% capture details %}  
-From the video, the gain expression for the non-inverting amplifier is,
+From the video: The gain expression for the non-inverting amplifier is,
 
 $v_o = v_{in}$  
 
 The gain is $1$.
 {% endcapture %}{% include details.html %}
 
-**Starting from a blank schematic, design and simulate an unity-gain buffer amplifier with a gain of $1$.**
+Open a [blank schematic](https://spinningnumbers.org/circuit-sandbox/index.html) in a new tab.
 
-Include a voltage probe on the output port.
+**Design and simulate a unity-gain buffer amplifier with a gain of $1$.**
 
-[Circuit sandbox](https://spinningnumbers.org/circuit-sandbox/index.html)
+* Drive the unity-gain buffer with a sine wave voltage source.
 
-**Click on TRAN to run a transient simulation.** 
+* Add a voltage probe on the output port.
+
+* Click on **TRAN** to run a transient simulation.
 
 Does the simulation match your gain calculation?
 
 **Add a voltage probe to $v_{in}$ and simulate again.**
 
-Notice how the output and input voltages overlap one another.
+Notice how the output and input voltages overlap.
 
-**Change the value of the input voltage and run TRAN again.**
-
-Hint: Double-click on the input voltage source to modify its magnitude. 
+**Change the value of the input voltage and run another TRAN.**
 
 Verify the buffer amplifier does what you expect.
  
-**Click the <i class="fas fa-download fa-lg" ></i> download icon in the upper left.**  
-**Open the data.csv file in Excel or Matlab or any text editor.**
+**Click the <i class="fas fa-download fa-lg" ></i> download icon.**  
+**Open the resulting data.csv file in Excel or Matlab or any text editor.**
 
 Notice that $v_o$ and $v_{in}$ are the same. When we model an ideal opamp the virtual ground is perfect, $v_o = v_{in}$. In the real world there will be a very slight difference due to the *offset voltage* of a real opamp. You find the offset voltage listed on the opamp's data sheet.
 
