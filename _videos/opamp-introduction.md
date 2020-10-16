@@ -2,7 +2,7 @@
 layout: video
 title:  "What is an operational amplifier?"
 author: Willy McAllister
-youtubeID: lJDjWZqhpVc
+youtubeID: 3Gjkt8q4MAQ
 comments: true
 ---
 
