@@ -158,23 +158,31 @@ The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ a
 
 Setting the area is equivalent to placing that many diodes in parallel.
 
-### Opamp models
+### Opamp model
 
-Circuit Sandbox has two opamp models, an ideal model and a somewhat realistic model with power supply pins and non-perfect input and output resistance.
+Circuit Sandbox has two opamp models, an ideal model and a realistic model with power supply pins and non-perfect input and output resistance.
 
-The ideal opamp symbol has two inputs (v+ and v-) and an output (vo). There are no positive and negative power supply inputs. The extra input, vg, is the reference for the output voltage. 
+#### Ideal model
+{:.no_toc}
+
+The ideal opamp symbol has two inputs ($\sf v$+ and $\sf v$-) and an output ($\sf{vo}$). There are no positive and negative power supply inputs. The extra input, $\sf{vg}$, is the reference for the output voltage. 
 
 ![Circuit Sandbox opamp symbol]({% link i/circuit_sandbox_opamp_symbol.png %}){: height="140px" :}{: .centered :}
 
-The defining equation for the opamp is: A(vp - vn) = vo - vg
+The defining equation for the opamp is: $(\sf{vo} - \sf{vg}) = \text A(\sf v$+ $\,- \,\,\sf v$-$)$
 
-The default gain is A $= 30{,}000$. If the input voltages are identical then the output voltage will be vg. If you plan on symmetric power supply voltages, connect vg to ground. If they are not symmetric set vg half way between whatever power inputs you intend for your opamp. 
+The default gain is $\text A = 30{,}000$. If the input voltages are identical then the output voltage will be $\sf{vg}$. If you plan on symmetric power supply voltages, connect $\sf{vg}$ to ground. If they are not symmetric set $\sf{vg}$ half way between whatever power inputs you intend for your opamp. 
 
-The realistic opamp model symbol has power pins,
+#### Realistic model
+{:.no_toc}
 
-![Circuit Sandbox opamp2 symbol]({% link i/circuit_sandbox_opamp2_symbol.png %}){: height="140px" :}{: .centered :}
+The realistic opamp model symbol includes power pins,
 
-More information on this opamp model will appear soon.
+![Circuit Sandbox opamp2 symbol]({% link i/circuit_sandbox_opamp2_symbol.png %}){: height="160px" :}{: .centered :}
+
+It obeys a similar defining equation: $\sf{vo} = \text A(\sf v$+ $\,- \,\,\sf v$-$)$
+
+More information on this opamp model will appear here soon.
 
 ## System information
 
