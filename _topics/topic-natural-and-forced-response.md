@@ -79,7 +79,9 @@ If you connect an external energy source to a circuit its behavior changes. The 
 
 ### RL
 
-[![]({% link i/article.svg %}) RL natural response]({% link _articles/rl-natural-response.md %})
+[![]({% link i/article.svg %}) RL natural response --- intuition]({% link _articles/rl-natural-response-intuition.md %})
+
+[![]({% link i/article.svg %}) RL natural response --- derivation]({% link _articles/rl-natural-response-derivation.md %})
 
 ---
 

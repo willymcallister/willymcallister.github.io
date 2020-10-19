@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Introducing a realistic opamp model. UNDER CONSTRUCTION
+Introducing a realistic opamp model, **UNDER CONSTRUCTION**
 
 ![Opamp schematic symbol]({% link i/circuit_sandbox_opamp2_symbol.png %}){: height="200px" :}{: .centered :}
 
