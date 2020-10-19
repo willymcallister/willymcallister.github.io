@@ -27,7 +27,7 @@ The *natural response* of a circuit is what the circuit does "naturally" when it
 
 Why do we study the $\text{RL}$ natural response? Because it appears any time a wire is involved in a circuit. If the wire is formed into a coil we call it an inductor. Even if it is not coiled up, every wire and every trace on a circuit board has a small inductance that might be important. Gold bond wires in an integrated circuit have enough inductance to be important in very fast circuits. There is always inductance around and always resistance nearby.
 
-## Intuitive description
+## Setup
 
 To get the $\text{RL}$ circuit to do something, we call on an outside helper to create a current in the inductor. Then we disconnect the external circuit, step back, and watch what happens.
 
@@ -43,9 +43,12 @@ How do we know all the current flows through just the inductor and no current fl
 
 $v = \text{L}\,\dfrac{di}{dt}$
 
-The current from the source is constant. The derivative of any constant is always $0$.
+A derivative with respect to time is a measure of how a value is changing.  
+The derivative with respect to time of a constant is always $0$.  
 
-In derivative notation we say, $\dfrac{di}{dt} = \dfrac{d}{dt}\text I_0 = 0$. 
+Since the current from the source is constant, in derivative notation we say, 
+
+$\dfrac{di}{dt} = \dfrac{d}{dt}\text I_0 = 0$. 
 
 If we put this value into the inductor equation we get,
 
@@ -53,15 +56,15 @@ $v = \text L\,\dfrac{di}{dt}=\text L \cdot 0$
 
 $v = 0$ 
 
-The voltage across the inductor (and therefore both resistors) is $0$. Ohm's Law tells us a resistor with $0$ volts has $0$ current. Therefore, all of $\text I_0$ flows through the inductor.
+So the voltage across the inductor (and therefore both resistors) is $0$. Ohm's Law tells us a resistor with $0$ volts has $0$ current. Therefore, all of $\text I_0$ must be flowing through through the inductor. 
 
->When current in an inductor is constant (also known as **DC** or zero frequency) it has $0$ volts across its ends, just like an ideal wire. The inductor "looks like" a short circuit.
+>When current in an inductor is constant (also known as **DC** or zero frequency) it has $0$ volts across it, just like an ideal wire. Under these conditions the inductor appears to be a short circuit.
 
 Summary: Before the switch opens,  
 Current in the inductor is $\text I_0$.  
 Voltage across the inductor and resistor is $0$ volts.
 
-### Initial conditions
+## Initial conditions
 
 We know what's going on when the switch is closed. The next step is to find the $i$'s and $v$'s just *after* the switch opens. These are called the *initial conditions*. Opening the switch is an abrupt change to the circuit. What happens to current and voltage? Do they stay the same? Do they jump to some new value? We have to figure it out.
 
@@ -79,7 +82,7 @@ The helper circuit has done its job and we won't pay attention to it from now on
 After the switch is thrown open, $\text R0$ provides a path for the current from the current source. It is not nice to ask a current source to drive an open circuit. The ideal current source creates an infinite voltage if it tries to drive current into an open circuit. If you simulate this circuit without $\text R0$ the simulator will be very unhappy. (For a similar reason, you should never short out an ideal voltage source, to avoid infinite current.)  
 {% endcapture %}{% include details.html %} 
 
-#### Initial current
+### Initial current
 {:.no_toc}
 
 An instant after the switch opens, at $t=0^+$, what happens to the inductor current? Does it stop? Does it continue? Does it change?
@@ -120,7 +123,7 @@ $i(0^+) = i(0^-) = \text I_0$
 
 This is the initial condition for the $\text{RL}$ current.
 
-#### Initial voltage
+### Initial voltage
 {:.no_toc}
 
 What happens to voltage when the switch opens? All of a sudden there is a current forced to flow in $\text R$---so the voltage jumps abruptly up to $v = \text I_0\,\text R$. 
@@ -139,7 +142,7 @@ In the mechanical analogy, the voltage is analogous to the force. Nothing stops 
 
 We reasoned our way through the switch event. 
 
-### What happens after a long time? 
+## What happens after a long time? 
 
 Before we look at what happens after the switch event, let's first think about what happens in the long run. If we wait a long time, magnetic energy in the inductor emerges as current, which eventually is transformed into heat by the resistor. When all the energy has turned into heat, $i$ will be $0$, and $v$ will be $0$. This is the *final state* of our circuit. 
 
@@ -148,7 +151,7 @@ $i(t)$ and $v(t)$ look like this with the long-time response added,
 ![Current after a long time]({% link i/rl_natural_response8.svg %})
 ![Voltage after a long time]({% link i/rl_natural_response9.svg %})
 
-### What happens in between?
+## What happens in between?
 
 ![RL circuit]({% link i/rl_natural_response15.svg %}){: .centered :}
 
