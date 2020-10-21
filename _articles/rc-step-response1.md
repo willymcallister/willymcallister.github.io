@@ -109,17 +109,17 @@ Solving a non-homogeneous differential equation is not the simplest thing in the
 
 The electrical reason the step response is challenging is because of the two energy sources. Energy comes from 1. the input voltage source and 2. the initial charge on the capacitor. The trouble is the two energy sources have no relationship to each other. This complicates the problem and makes it difficult to solve all at once. 
 
-As usual, when a problem involves two energy sources engineers wonder if superposition can somehow be applied. **This is NOT a classical EE superposition (different energy sources), it is a differential equation theory. We are taking a "math route" to the answer**
+As usual, when a problem involves two energy sources engineers wonder if superposition can somehow be applied. **This is NOT classical EE superposition (different energy sources), it is a differential equation theorem. We are taking a "math route" to the answer**
 
 ## Solve a driven circuit
 
-We find the step function using the method of *homogeneous and particular solutions*, based on a non-obvious theory of differential equations, stated here without proof, 
+We find the step function using the method of *homogeneous and particular solutions*, based on a non-obvious theorem of differential equations, stated here without proof, 
 
 >The total solution to a non-homogeneous differential equation can be found by adding the **general** solution of the circuit's natural response to **any** particular response (found without regard for the initial conditions), followed by applying the initial conditions to resolve unknown constants.
 
-This is a pretty bold theory to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
+This is a pretty bold theorem to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
 
-In mathematical vocabulary the the theory says,
+In mathematical vocabulary the the theorem says,
 
 Complete solution = homogeneous solution + particular solution 
 
@@ -137,7 +137,7 @@ where $tot$, $n$, and $f$ stand for total response, natural response, and the fo
 
 **NOTE: These are not exactly the same thing according to Felipe Ribas.** 
 
-The theory allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: We hunt for exactly one particular response, one that is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. You might say the forced response is one particular particular response. 
+The theorem allows us to pick *any* particular response---we could choose any of the myriad solutions described by the general solution. However... Ingenious part: We hunt for exactly one particular response, one that is relatively easy to find and has a nice real-world significance. Somewhere in the family of curves represented by the general solution you always find *the one* particular response that corresponds to the long-term steady-state behavior of the circuit---the place the circuit ends up after the natural response dies out. You might say the forced response is one particular particular response. 
 
 {% capture details %}
 What is meant by,  

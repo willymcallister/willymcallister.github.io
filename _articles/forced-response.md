@@ -75,7 +75,7 @@ The authors derive the step response using the first definition of forced respon
 
 **Forced response: The circuit’s final steady state, caused by the forcing input.**
 
-This method is based on a theory of non-homogeneous differential equations,
+This method is based on a theorem of non-homogeneous differential equations,
 
 >The total solution to a non-homogeneous differential equation can be found by adding the **general** solution of the circuit's natural response to **any** particular response, followed by applying the initial conditions to resolve unknown constants.
 
@@ -83,11 +83,11 @@ First find the *general* form of the natural response (the general form is the o
 
 $v_n = K_n\,e^{st}$
 
-The theory says we are allowed to find any particular response. We actually search for a very specific particular response, the one that represents the long term steady-state response of the circuit. This particular particular response is pretty easy to find because it looks a lot like the forcing input. We give it the name *forced response*. The forced response to a step input is the step voltage,
+The theorem says we are allowed to find any particular response. We actually search for a very specific particular response, the one that represents the long term steady-state response of the circuit. This particular particular response is pretty easy to find because it looks a lot like the forcing input. We give it the name *forced response*. The forced response to a step input is the step voltage,
 
 $v_f = \text V_\text S$ 
 
-The theory says we add $v_n + v_f$ to get the total response in general form,
+The theorem says we add $v_n + v_f$ to get the total response in general form,
 
 $v_{tot} = K_n\,e^{-t/\text{RC}} + \text V_\text S$
 
