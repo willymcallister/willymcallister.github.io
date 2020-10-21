@@ -1,11 +1,11 @@
 ---
 layout: article
-title:  "RC step response1"
+title:  "RC step response derivation"
 author: Willy McAllister
 comments: true
 ---
 
-When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*. 
+When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*.  
 
 ![RC step response circuit]({% link i/rc_step1.svg %}){: .centered :}
 
@@ -117,7 +117,7 @@ We find the step function using the method of *homogeneous and particular soluti
 
 >The total solution to a non-homogeneous differential equation can be found by adding the **general** solution of the circuit's natural response to **any** particular response (found without regard for the initial conditions), followed by applying the initial conditions to resolve unknown constants.
 
-This is a pretty bold theorem to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equations.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
+This is a pretty bold theorem to state without proof. It is central to finding the step response. For the moment please take it on faith. [Here]({% link _articles/differential-equation-theorem.md %}) is my attempt to explain. If you have taken a differential equation class, what we are doing is called the [method of undetermined coefficients](https://www.khanacademy.org/math/differential-equations/second-order-differential-equations#undetermined-coefficients). 
 
 In mathematical vocabulary the the theorem says,
 
