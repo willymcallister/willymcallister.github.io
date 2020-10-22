@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-We develop an intuition for the natural response of a resistor inductor $(\text{RL})$ circuit. 
+We develop an intuition for the natural response of a resistor-inductor $(\text{RL})$ circuit. 
 
 ![RL natural response circuit]({% link i/rl_natural_response1.svg %}){: .centered :}
 

@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-We investigate the *natural response* of a resistor inductor $(\text{RL})$ circuit. This derivation is similar to the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}).
+We investigate the *natural response* of a resistor-inductor $(\text{RL})$ circuit. This derivation is similar to the [RC natural response]({% link _articles/rc-natural-response-derivation.md %}).
 
 ![RL natural response circuit]({% link i/rl_natural_response1.svg %}){: .centered :}
 
