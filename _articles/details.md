@@ -102,3 +102,16 @@ And even more inside an inner details tag.
 {% endcapture %}{% include details.html %}
 
 The markdown source file for this article is in \_articles/details.md.
+
+## Tooltip
+
+Leading text --- <span class="tooltip">tool tip anchor
+  <span class="tooltipcontent"><img src="{% link i/rc_step_superposition_natural.svg %}" alt="Superposition sub-circuits." />
+  </span>
+</span> --- trailing text.
+
+At this point it is possible to express <span class="tooltip">$r$ in terms of $x$ <span class="tooltipcontent"><img src="{% link i/line_of_charge2_3.svg %}" alt="Line of charge with a test charge to the side" /></span></span>,
+
+LEADING TEXT <span class="tooltip">ANCHOR TEXT <span class="tooltipcontent"><img src="{% link i/rc_step_superposition_natural.svg %}" alt="ALT TEXT" /></span></span> TRAILING TEXT
+
+And we move on.
