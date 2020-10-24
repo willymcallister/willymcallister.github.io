@@ -43,29 +43,35 @@ If you connect an external energy source to a circuit its behavior changes. The 
 
 ### RC
 
-[![]({% link i/article.svg %}) RC natural response — intuition]({% link _articles/rc-natural-response-intuition.md %})
+[![]({% link i/article.svg %}) RC natural response —-- intuition]({% link _articles/rc-natural-response-intuition.md %})
 
-[![]({% link i/article.svg %}) RC natural response — derivation]({% link _articles/rc-natural-response-derivation.md %})
+[![]({% link i/article.svg %}) RC natural response —-- derivation]({% link _articles/rc-natural-response-derivation.md %})
 
-[![]({% link i/video.svg %}) RC natural response — intuition]({% link _videos/rc-natural-response-intuition.md %})
+[![]({% link i/video.svg %}) RC natural response —-- intuition]({% link _videos/rc-natural-response-intuition.md %})
 
-[![]({% link i/video.svg %}) RC natural response — derivation]({% link _videos/rc-natural-response-derivation.md %})
+[![]({% link i/video.svg %}) RC natural response —-- derivation]({% link _videos/rc-natural-response-derivation.md %})
 
-[![]({% link i/video.svg %}) RC natural response — example]({% link _videos/rc-natural-response-example.md %})
+[![]({% link i/video.svg %}) RC natural response —-- example]({% link _videos/rc-natural-response-example.md %})
 
 ---
 
 ### RC step response
 
-[![]({% link i/article.svg %}) RC step response]({% link _articles/rc-step-response.md %})
+[![]({% link i/article.svg %}) RC step response --- intuition]({% link _articles/rc-step-response-intuition.md %})
 
-[![]({% link i/video.svg %}) RC step response — intuition]({% link _videos/rc-step-response-intuition.md %})
+[![]({% link i/article.svg %}) RC step response --- derivation]({% link _articles/rc-step-response-derivation.md %})
 
-[![]({% link i/video.svg %}) RC step response — setup (1)]({% link _videos/rc-step-response-setup.md %})
+[![]({% link i/article.svg %}) Forced response]({% link _articles/forced-response.md %}) --- can be defined two ways
 
-[![]({% link i/video.svg %}) RC step response — solve (2)]({% link _videos/rc-step-response-solve.md %})
+[![]({% link i/article.svg %}) Differential equation theorem]({% link _articles/differential-equation-theorem.md %}) --- essential part of the step response derivation
 
-[![]({% link i/video.svg %}) RC step response — example (3)]({% link _videos/rc-step-response-example.md %})
+[![]({% link i/video.svg %}) RC step response —-- intuition]({% link _videos/rc-step-response-intuition.md %})
+
+[![]({% link i/video.svg %}) RC step response —-- setup (1)]({% link _videos/rc-step-response-setup.md %})
+
+[![]({% link i/video.svg %}) RC step response —-- solve (2)]({% link _videos/rc-step-response-solve.md %})
+
+[![]({% link i/video.svg %}) RC step response —-- example (3)]({% link _videos/rc-step-response-example.md %})
 
 ---
 
@@ -87,33 +93,33 @@ If you connect an external energy source to a circuit its behavior changes. The 
 
 ### LC
 
-[![]({% link i/article.svg %}) LC natural response — intuition]({% link _articles/lc-natural-response-intuition.md %})
+[![]({% link i/article.svg %}) LC natural response —-- intuition]({% link _articles/lc-natural-response-intuition.md %})
 
-[![]({% link i/article.svg %}) LC natural response — derivation]({% link _articles/lc-natural-response-derivation.md %})
+[![]({% link i/article.svg %}) LC natural response —-- derivation]({% link _articles/lc-natural-response-derivation.md %})
 
-[![]({% link i/video.svg %}) LC natural response — intuition (1)]({% link _videos/lc-natural-response-intuition1.md %})
+[![]({% link i/video.svg %}) LC natural response —-- intuition (1)]({% link _videos/lc-natural-response-intuition1.md %})
 
-[![]({% link i/video.svg %}) LC natural response — intuition (2)]({% link _videos/lc-natural-response-intuition2.md %})
+[![]({% link i/video.svg %}) LC natural response —-- intuition (2)]({% link _videos/lc-natural-response-intuition2.md %})
 
-[![]({% link i/video.svg %}) LC natural response — derivation (1)]({% link _videos/lc-natural-response-derivation1.md %})
+[![]({% link i/video.svg %}) LC natural response —-- derivation (1)]({% link _videos/lc-natural-response-derivation1.md %})
 
-[![]({% link i/video.svg %}) LC natural response — derivation (2)]({% link _videos/lc-natural-response-derivation2.md %})
+[![]({% link i/video.svg %}) LC natural response —-- derivation (2)]({% link _videos/lc-natural-response-derivation2.md %})
 
-[![]({% link i/video.svg %}) LC natural response — derivation (3)]({% link _videos/lc-natural-response-derivation3.md %})
+[![]({% link i/video.svg %}) LC natural response —-- derivation (3)]({% link _videos/lc-natural-response-derivation3.md %})
 
-[![]({% link i/video.svg %}) LC natural response — derivation (4)]({% link _videos/lc-natural-response-derivation4.md %})
+[![]({% link i/video.svg %}) LC natural response —-- derivation (4)]({% link _videos/lc-natural-response-derivation4.md %})
 
-[![]({% link i/video.svg %}) LC natural response — example]({% link _videos/lc-natural-response-example.md %})
+[![]({% link i/video.svg %}) LC natural response —-- example]({% link _videos/lc-natural-response-example.md %})
 
 ---
 
 ### RLC
 
-[![]({% link i/article.svg %}) RLC natural response — intuition]({% link _articles/rlc-natural-response-intuition.md %})
+[![]({% link i/article.svg %}) RLC natural response —-- intuition]({% link _articles/rlc-natural-response-intuition.md %})
 
-[![]({% link i/article.svg %}) RLC natural response — derivation]({% link _articles/rlc-natural-response-derivation.md %})
+[![]({% link i/article.svg %}) RLC natural response —-- derivation]({% link _articles/rlc-natural-response-derivation.md %})
 
-[![]({% link i/article.svg %}) RLC natural response — variations]({% link _articles/rlc-natural-response-variations.md %})
+[![]({% link i/article.svg %}) RLC natural response —-- variations]({% link _articles/rlc-natural-response-variations.md %})
 
 ---
 

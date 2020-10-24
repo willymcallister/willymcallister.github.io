@@ -110,7 +110,7 @@ Adding one particular solution you know to every possible homogeneous solution g
 
 ## Apply to the step response
 
-This is how we found the [$\text{RC}$ step response]({% link _articles/rc-step-response1.md %}). $h$ is the homogeneous solution, the general form of the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}). $f_1$ is the particular response we found called the forced response. It is probably the easiest particular response to find since we guess it resembles $g$ the forcing input. $f_2$ is the general form of the total step response (since it still includes $K_n$). We apply the initial condition to resolve $K_n$ and end up with the final answer.
+This is how we found the [$\text{RC}$ step response]({% link _articles/rc-step-response-derivation.md %}). $h$ is the homogeneous solution, the general form of the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}). $f_1$ is the particular response we found called the forced response. It is probably the easiest particular response to find since we guess it resembles $g$ the forcing input. $f_2$ is the general form of the total step response (since it still includes $K_n$). We apply the initial condition to resolve $K_n$ and end up with the final answer.
 
 ## Reference
 
