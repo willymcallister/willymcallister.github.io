@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- The Circuit Sandbox simulator is translated to [Hungarian](#circuit-sandbox-simulator)!  
+New --- Substantial upgrade to the [RC Step Response]({% link _topics/topic-natural-and-forced-response.md %}#rc-step-response) articles. I learned some interesting things I never knew about [Forced Response]({% link _articles/forced-response.md %}).
 
 ---
 
