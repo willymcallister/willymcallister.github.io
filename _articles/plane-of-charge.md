@@ -275,6 +275,7 @@ This example was for an infinite plane of charge. In the real world there is no 
 
 ### Related 
 {:.no_toc} 
+
 Khan Academy videos. 
 
 [Field from an infinite plate - part 1](https://www.khanacademy.org/science/physics/electric-charge-electric-force-and-voltage/electric-field/v/proof-advanced-field-from-infinite-plate-part-1)  

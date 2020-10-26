@@ -9,8 +9,7 @@ We look at the electric field around a line of charge.
 
 ![Line of charge with a test charge off to the side]({{ site.baseurl }}{% link i/line_of_charge2_1.svg %}){: .centered :}
 
-Test charge $q$ is off to the side of the line.  
-This time we find the electric field instead of the electric force. If you would like to review electric field, check [here]({{ site.baseurl }}{% link _articles/electric-field.md %}). 
+Test charge $q$ is off to the side of the line. This time we find the electric field instead of the electric force. 
 
 Written by Willy McAllister. 
 
@@ -24,19 +23,25 @@ Written by Willy McAllister.
 
 ----
 
+### Related articles
+
+* [Electric field]({{ site.baseurl }}{% link _articles/electric-field.md %})
+
+---
+
 ## Predictions
 
 Before diving in, I would like you to predict how this will turn out. Assume the test charge is positioned across from the mid-point of a line of charge. 
 
-P1. What direction is $q$ being pushed or pulled by the line of charge? \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+P1. What direction is $q$ being pushed or pulled by the line of charge?  
 
-P2. What direction does the electric field vector point at the location of test charge $q$? \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+P2. What direction does the electric field vector point at the location of test charge $q$?  
 
-P3. Can you identify any symmetry we could use during the derivation?  \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+P3. Describe any symmetry we could use during the derivation.   
 
-P4. In the previous example the test charge was off the end of the line. We found the force fell off as $1/\text{distance}^2$. For this example, with the test location to the side, how will the electric field fall off? \_\_\_\_\_\_\_\_\_\_\_\_\_\_ (faster or slower than $1/\text{distance}^2$)? 
+P4. In the previous example the test charge was off the end of the line. We found the force fell off as $1/\text{distance}^2$. For this example, with the test location to the side, will the electric field fall off faster or slower than $1/\text{distance}^2$? 
 
-P5. If you feel brave, make a guess at a function. \_\_\_\_\_\_\_\_\_\_\_\_\_\_
+P5. If you feel brave, make a guess at a function.  
 
 ## Electric field near a line of charge
 
