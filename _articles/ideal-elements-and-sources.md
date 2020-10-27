@@ -9,7 +9,7 @@ A circuit is made of *elements*. Usually at least one element is a *source* that
 
 We define sources and components as ideal mathematical abstractions.
 
-The next article is about [real-world circuit elements]({{ site.baseurl }}{% link _articles/real-world-elements.md %}) that come close to the ideal versions.  
+The next article is about [real-world circuit elements]({% link _articles/real-world-elements.md %}) that come close to the ideal versions.  
 
 Written by Willy McAllister.
 
@@ -48,24 +48,23 @@ Later on we will learn about components (transistors) that have more than two te
 
 The two common symbols for constant voltage sources look like this,
 
-![Voltage source symbols]({{ site.baseurl }}{% link i/source_voltage_symbols.svg %}){: .centered :}
+![Voltage source symbols]({% link i/source_voltage_symbols.svg %}){: .centered :}
 
 The symbol on the left is a battery. The long horizontal line represents the positive terminal of the battery, and the short horizontal line is the negative terminal. Sometimes the battery is not marked with $+$ and $-$ signs, so this long-line short-line thing is something you want to memorize. 
 
 {% capture summary %}origin of the battery symbol{% endcapture %}
 {% capture details %}
 The battery symbol is a reminder of the very first battery invented by Volta. A stack of alternating dissimilar metal disks,
-{% capture image %}battery_stack.png{% endcapture %} 
-{% capture alt %}The battery symbol originated from the stack of alternating metals in Volta's battery.{% endcapture %}
-{% capture height %}300px{% endcapture %} 
-{% include image_centered_without_caption.html %}
+
+![The battery symbol originated from the stack of alternating metals in Volta's battery.]({% link i/battery_stack.png %}){: .centered }{: height="300px" :}
 {% endcapture %}{% include details.html %}
 
 The circle symbol represents some other kind of voltage source, a power supply or generator. It is best practice to draw the $+$ and $-$ signs inside the circle instead of on the outside. That way they don't get confused with other voltage labels added to the schematic later.
 
 An ideal constant voltage source has a fixed output voltage, independent of the current,
 
-![Voltage source i-v plot]({{ site.baseurl }}{% link i/source_constant_voltage_i-v.svg %}){: .centered :}
+![Voltage source i-v plot]({% link i/source_constant_voltage_i-v.svg %}){: .centered :}
+
 Current versus voltage plot for a constant voltage source. The current is determined by the components connected to the voltage source.
 {:.caption :}
 
@@ -82,7 +81,8 @@ The plot above is an example of a coordinate system we use a lot. The independen
 
 A variable voltage source generates a known voltage as a function of time,
 
-![Variable voltage source]({{ site.baseurl }}{% link i/source_variable_voltage_v-t.svg %}){: .centered :}
+![Variable voltage source]({% link i/source_variable_voltage_v-t.svg %}){: .centered :}
+
 Voltage versus *time* plot for a variable voltage source.
 {:.caption :}
 
@@ -101,7 +101,7 @@ Sawtooth wave ![Sawtooth wave voltage source]({% link /i/source_sawtooth_voltage
 
 The symbol for a variable voltage source looks like this, or some variation,
 
-![Variable voltage source symbol]({{ site.baseurl }}{% link i/source_variable_voltage_symbol.svg %}){: .centered :}
+![Variable voltage source symbol]({% link i/source_variable_voltage_symbol.svg %}){: .centered :}
 
 The squiggle inside the circle suggests a sine wave generator. You will come across different versions of this symbol for other waveform shapes.
 
@@ -111,13 +111,14 @@ If the circuit demands a huge current, an ideal mathematical model of a voltage 
 
 The symbol for a constant current source looks like this,
 
-![Constant current source symbol]({{ site.baseurl }}{% link i/source_constant_current_symbol.svg %}){: .centered :}
+![Constant current source symbol]({% link i/source_constant_current_symbol.svg %}){: .centered :}
 
 The arrow indicates the direction of current flow.
 
 An ideal constant current source has a fixed output current, independent of the voltage connected to its terminals,
 
-![Current source i-v plot]({{ site.baseurl }}{% link i/source_constant_current_i-v.svg %}){: .centered :}
+![Current source i-v plot]({% link i/source_constant_current_i-v.svg %}){: .centered :}
+
 Current versus voltage plot for a constant current source. The voltage is determined by the components connected to the current source.
 {:.caption :}
 
@@ -131,31 +132,39 @@ The idea of a current source is kind of weird, but it is important.
 
 {% capture summary %}real current sources{% endcapture %}
 {% capture details %}
-A battery has a constant voltage and variable current. That's why it is a good real-world example of an ideal voltage source.
-
-A current source is the opposite, a source of constant current and variable voltage. These are less familiar because you can't buy a current source in the grocery store.
+A battery has a constant voltage and variable current. That's why it is a good real-world example of an ideal voltage source. A current source is the opposite, a source of constant current and variable voltage. These are less familiar because you can't go to the grocery store and buy a current source.
 
 It is possible to build a current source as a rather complicated instrument.
 
-Current sources are mostly used when we model transistors in a computer simulation. There is a region of a transistor's behavior that looks a lot like a current source.
+Current sources are used a lot when we model transistors in computer simulation. A region of a transistor's behavior looks a lot like a current source.
 
-This is the current-vs-voltage plot of a MOSFET transistor,
+This is a MOSFET transistor symbol,
 
-{% capture image %}mosfet_i-v.svg{% endcapture %} 
-{% capture alt %}MOSFET i-v characteristic{% endcapture %}
-{% capture caption %}From the Wikipedia article on the [MOSFET](https://en.wikipedia.org/wiki/MOSFET).{% endcapture %}
-{% include image_centered_with_caption.html %}
+![MOSFET terminals: Gait, Drain, Source]({% link i/mosfet_terminals.svg %}){: .centered }
 
-Notice the blue lines to the right of the red line are horizontal---the area labeled *saturation region*. In that area the current is constant and the voltage can be any value within a voltage range. For this MOSFET, the saturation region starts around 2 volts and extends above 10 volts. 
+This is the $i$-$v$ plot of a MOSFET transistor. The horizontal axis is the voltage between the Drain terminal and Source terminal. The vertical axis is the current flowing into the Drain and coming out of the Source. Each blue line represents a different Gate voltage, $\text V_{\text{GS}}$.
 
-In the saturation region, a MOSFET is acting like a current source. We use an ideal current source as part of the MOSFET model to create that horizontal behavior during simulation.
+![MOSFET i-v characteristic]({% link i/mosfet_i-v.svg %}){: .centered }{: height="300px" :}
+
+Wikipedia article on the [MOSFET](https://en.wikipedia.org/wiki/MOSFET).
+{: .caption :}
+
+Notice the blue lines to the right of the red curve are horizontal---the area labeled *saturation region*. In that range of drain voltage the current is constant for any value of $\text V_{\text{DS}}$. 
+
+In the saturation region, the MOSFET acts like a current source. We use an ideal current source in the MOSFET simulation model to create that horizontal behavior.
+
+![MOSFET simple simulation model]({% link i/mosfet_simulation_model.svg %}){: .centered }
+
+The MOSFET simulation model includes a *voltage-controlled* current source (the diamond shape). It's current is determined by a voltage found elsewhere in the model.
+{: .caption :}
+
 {% endcapture %}{% include details.html %}
 
 ## Resistor
 
 The two symbols for a resistor look like this,
 
-![Resistor symbols]({{ site.baseurl }}{% link i/resistor_symbols.svg %}){: .centered :}
+![Resistor symbols]({% link i/resistor_symbols.svg %}){: .centered :}
 
 In the US and Japan the resistor symbol is a zig-zag. In the UK, Europe and other parts of the world, the resistor is drawn as a box.
 
@@ -173,7 +182,8 @@ Here is the $i$-$v$ plot for a resistor. The line on the plot is Ohm's Law solve
 
 $i = \dfrac{1}{\text R}\,v\qquad$ The slope of the line is $1/\text R$.
 
-![Resistor i-v plot]({{ site.baseurl }}{% link i/resistor_i-v.svg %}){: .centered :} 
+![Resistor i-v plot]({% link i/resistor_i-v.svg %}){: .centered :} 
+
 Current versus voltage plot for a resistor.
 {:.caption :} 
 
@@ -329,7 +339,7 @@ An expression like $dv/dt$ is called a [derivative](https://www.khanacademy.org/
 
 The some symbols for a capacitor look like this,
 
-![Capacitor symbols]({{ site.baseurl }}{% link i/capacitor_symbols.svg %}){: .centered :}
+![Capacitor symbols]({% link i/capacitor_symbols.svg %}){: .centered :}
 
 The version with the curved line is used for capacitors that require one terminal to have a positive voltage with respect to the other terminal ("electrolytic" capacitors). The curved line indicates the terminal that needs to be kept at the more negative voltage.
 
@@ -388,7 +398,7 @@ The *unit* of inductance is the *henry*, $\text H$, named after American scienti
 
 The symbol for an inductor looks like this,
 
-![Inductor symbol]({{ site.baseurl }}{% link i/inductor_symbol1.svg %}){: .centered :}
+![Inductor symbol]({% link i/inductor_symbol1.svg %}){: .centered :}
 
 It looks like a wire wrapped around in a coil, since that is the usual way to make an inductor.
 

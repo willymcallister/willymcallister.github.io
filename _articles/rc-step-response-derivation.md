@@ -184,11 +184,10 @@ Let's work our strategy and see what happens.
 
 To find the natural response $v_n$ we suppress (turn off, set to zero, short) the input,
 
-{% capture image %}rc_step4a.svg{% endcapture %} 
-{% capture alt %}$\text{RC}$ step with input suppressed{% endcapture %}
-{% capture height %}180px{% endcapture %}
-{% capture caption %}Find the natural response with the input suppressed. To suppress a voltage source, replace it with a short. (For more on suppressing sources see [Superposition]({% link _articles/superposition.md %}#suppress-the-inputs).){% endcapture %} 
-{% include image_centered_with_caption.html %}
+![RC step with input suppressed]({% link i/rc_step4a.svg %}){: .centered }{: height="180px" :}
+
+Find the natural response with the input suppressed. To suppress a voltage source, replace it with a short. (For more on suppressing sources see [Superposition]({% link _articles/superposition.md %}#suppress-the-inputs).)
+{: .caption :}
 
 We already worked through the [$\text{RC}$ natural response]({% link _articles/rc-natural-response-derivation.md %}) in great detail. This is a quick repeat of the derivation. 
 

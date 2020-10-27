@@ -68,7 +68,7 @@ Second, put both teams on the field, but no referee. If there is no referee to b
 
 Now the referee shows up. He blows his whistle and shouts, "I mean it! Go to your respective ends!" The referee is the voltage in this analogy. He's the pressure that makes players/charges move. The players end their chit-chat and move off in the direction they are told. Along the way a red player might come near a blue player and they have a little interaction, but the referee expects players to keep moving. 
 
-![Manchester (red) vs. Chelsea (Blue)]({{ site.baseurl }}{% link i/manchester-chelsea.jpg %}){: .centered }
+![Manchester (red) vs. Chelsea (Blue)]({% link i/manchester-chelsea.jpg %}){: .centered }
 
 Manchester United's Wayne Rooney and Chelsea's Didier Drogba have a chat. (FA Cup Final 2007 - Photo by Neal Simpson - EMPICS/PA Images via Getty Images)
 {: .caption :}
@@ -89,11 +89,9 @@ So which way is downhill for electric charge? It's downhill both ways! Electrons
 
 We don't often draw energy diagrams in beginning electronics. It's hard to draw two downhills on a single graph. If positive charge rolls down the page then electrons roll up the page (up is downhill for an electron). Too weird. 
 
-In the video on [visualizing voltage]({{ site.baseurl }}{% link _videos/voltage.md %}) I draw a mountain as an energy diagram. I'm careful to only mention electrons rolling down the mountain and avoided talking about positive charge spontaneously rolling uphill. 
-{% capture image %}basic_voltage_analogy.svg{% endcapture %}  
-{% capture alt %}Voltage is analogous to elevation{% endcapture %}
-{% capture height %}200px{% endcapture %}  
-{% include image_centered_without_caption.html %}
+In the video on [visualizing voltage]({% link _videos/voltage.md %}) I draw a mountain as an energy diagram. I'm careful to only mention electrons rolling down the mountain and avoided talking about positive charge spontaneously rolling uphill. 
+
+![Voltage is analogous to elevation]({% link i/basic_voltage_analogy.svg %}){: .centered }{: height="200px" :}
 
 The gravity analogy for voltage is fine for talking about one type of charge, but struggles if you include both.
 

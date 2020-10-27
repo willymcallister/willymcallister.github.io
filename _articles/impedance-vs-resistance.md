@@ -13,9 +13,10 @@ Impedance and resistance are similar ideas. Both represent how a component oppos
 
 *Impedance* is the generalized notion of voltage divided by current for any component. 
 
-{% capture image %}sign_convention_for_passives.svg{% endcapture %} 
-{% capture alt %}Voltage and current in R, C, and L{% endcapture %}
-{% include image_centered_without_caption.html %}
+![Voltage and current in R, C, and L]({% link i/sign_convention_for_passives.svg %}){: .centered }
+
+Manchester United's Wayne Rooney and Chelsea's Didier Drogba have a chat. (FA Cup Final 2007 - Photo by Neal Simpson - EMPICS/PA Images via Getty Images)
+{: .caption :}
 
 For the specific case of a resistor, the ratio of voltage to current is called *resistance* instead of impedance. For inductors and capacitors, we use the term *impedance*, but it has the same general meaning: the ratio of voltage to current.
 
