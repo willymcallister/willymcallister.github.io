@@ -5,11 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Insert these useful templates into markdown documents to embed images into articles. There are variations for left/center/right images along with text-style text or caption-style caption. Each template is paired with an html include file you save in your \_includes folder. 
-
-# Pending question
-**Can I make use of the link check?**
-![RC step response circuit]({% link i/rc_step1a.svg %}){: .centered }
+Insert these useful templates into markdown documents to embed images into articles. There are variations for left/center/right images along with text-style or caption-style. Each template is paired with an html include file you save in your \_includes folder. 
 
 ----
 
@@ -21,59 +17,29 @@ Insert these useful templates into markdown documents to embed images into artic
 
 ----
 
-## Image_centered_without_caption
+## Centered image
 
-Insert template into markdown,
+Use conventional markdown syntax for most centered images without a caption,
+
 ```
-{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
-{% capture alt %}ALT_TEXT{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% include image_centered_without_caption.html %}{% endraw %}
+![Ant in amber]({% link i/ant_in_amber.jpg %}){: .centered }{: height="200px" :}
 ```
 
-Include file: \_includes/image_centered_without_caption.html
+![Ant in amber]({% link i/ant_in_amber.jpg %}){: .centered }{: height="200px" :}
+
+or with a caption,
+
 ```
-{% raw %}<div>
-  <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
-</div>
-<div style="clear: both;"></div>{% endraw %}
-```
+![Ant in amber]({% link i/ant_in_amber.jpg %}){: .centered }{: height="200px" :}
 
-Example,
-
-{% capture image %}electric-eel.jpg{% endcapture %} 
-{% capture alt %}Electric eel{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% include image_centered_without_caption.html %}
-
-## Image_centered_with_caption
-
-Insert template into markdown,
-```
-{% raw %}{% capture image %}IMAGE_FILE_NAME{% endcapture %} 
-{% capture alt %}ALT_TEXT{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% capture caption %}CAPTION{% endcapture %}
-{% include image_centered_with_caption.html %}{% endraw %}
+An ant preserved in amber.
+{: .caption :}
 ```
 
-Include file: \_includes/image_centered_with_caption.html
-```
-{% raw %}<div>
-  <p><img class="centered" height="{{ height }}" src="../i/{{ image }}" alt="{{ alt }}"></p>
-</div>
-<div class="caption">
-  {{ caption | markdownify }}
-</div>{% endraw %}
-```
+![Ant in amber]({% link i/ant_in_amber.jpg %}){: .centered }{: height="200px" :}
 
-Example,
-
-{% capture image %}electric-eel.jpg{% endcapture %} 
-{% capture alt %}Electric eel{% endcapture %}
-{% capture height %}200px{% endcapture %} 
-{% capture caption %}This is an **electric eel**.{% endcapture %}
-{% include image_centered_with_caption.html %}
+An ant preserved in amber.
+{: .caption :}
 
 ## Image_left_without_caption
 
@@ -94,6 +60,15 @@ Include file: \_includes/image_left_without_caption.html
 </div> 
 <div style="clear: both;"></div>{% endraw %}
 ```
+
+Example,
+
+{% capture image %}ant_in_amber.jpg{% endcapture %}  
+{% capture alt %}Ant in droplet of amber{% endcapture %}  
+{% capture height %}200px{% endcapture %}  
+{% include image_left_without_caption.html %}  
+
+Regular text follows.
 
 ## Image_left_with_caption
 
@@ -160,7 +135,7 @@ Example,
 {% capture alt %}Ant encased in a drop of amber{% endcapture %}
 {% capture height %}200px{% endcapture %}   
 {% capture description %} 
-Amber is the fossilized form of tree resin. Think of it as a natural form of plastic.  
+Amber is the fossilized form of tree resin, basically a natural form of plastic.  
 {% endcapture %}{% include image_left_with_text.html %}
 
 ## Image_right_with_caption
@@ -233,7 +208,8 @@ Find the 'diode' setting on your multimeter. This can be used to determine the f
 
 ## Caption style
 
-Typical style for a caption,
+Typical style for a caption, specified in assets/main.scss,
+
 ```
 {% raw %}$grey-color:         #757575 !default;
 
