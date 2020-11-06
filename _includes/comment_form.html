@@ -72,7 +72,10 @@ function showReCaptcha() {
   var node = document.createElement("div");
   node.setAttribute('class', 'g-recaptcha');
   node.setAttribute('data-sitekey', '{{ site.reCaptcha.siteKey }}');
-  node.setAttribute('data-theme', localStorage.theme);
+  if (window.matchMedia && 
+      window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      node.setAttribute('data-theme', "dark");
+  }
   document.getElementById("reCaptcha").appendChild(node);
 }
 showReCaptcha();
