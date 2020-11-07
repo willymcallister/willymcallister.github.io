@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- Substantial upgrade to the [RC Step Response]({% link _topics/topic-natural-and-forced-response.md %}#rc-step-response) articles. I learned some interesting things I never knew about [Forced Response]({% link _articles/forced-response.md %}).
+New --- Substantial upgrade to the [RC Step Response]({% link _topics/topic-natural-and-forced-response.md %}#rc-step-response) articles, and I share some interesting things I learned about [Forced Response]({% link _articles/forced-response.md %}).
 
 ---
 
