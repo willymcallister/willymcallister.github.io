@@ -256,22 +256,25 @@ You can do the same thing if you call Circuit Sandbox from an html \<input\> sta
 Your choices for analyses are dc, ac, and tran.
 
 Here are your part choices,
-```'''```
-   var parts_map = {
-    'g': [Ground],
-    'L': [Label],
-    'v': [VSource],
-    'i': [ISource],
-    'r': [Resistor],
-    'c': [Capacitor],
-    'l': [Inductor],
-    'o': [OpAmp],
-    'd': [Diode],
-    'n': [NFet],
-    'p': [PFet],
-    's': [Probe],
-    'a': [Ammeter]
-   };
+```
+    var parts_map = {
+        'g': [Ground, "Ground_connection"],
+        'L': [Label, "Node_label"],
+        'v': [VSource, "Voltage_source"],
+        'i': [ISource, "Current_source"],
+        'r': [Resistor, "Resistor"],
+        'c': [Capacitor, "Capacitor"],
+        'l': [Inductor, "Inductor"],
+        'd': [Diode, "Diode"],
+        'p': [PFet, "PFet"],
+        'n': [NFet, "NFet"],
+        'pnp': [PNP, "PNP"],
+        'npn': [NPN, "NPN"],
+        'o' : [OpAmp, "Op_Amp"],    (ideal)
+        'o2': [OpAmp2, "Op_Amp"],   (realistic)
+        's' : [Probe, "Voltage_probe"],
+        'a' : [Ammeter, "Current_probe"]
+    };
 ```
 
 ## Translation
@@ -310,7 +313,7 @@ Another simulator is [JADE](http://computationstructures.org/exercises/sandboxes
 
 ## Licensing
 
-© 2017-18 Willy McAllister, © 2016 Khan Academy, Inc., © 2012 EdX, © 2011 MIT EECS
+© 2017-20 Willy McAllister, © 2012 EdX, © 2011, 2018 MIT EECS
 
 This work is licensed under the Creative Commons ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)) Attribution-NonCommercial-ShareAlike 4.0 International. 
 
