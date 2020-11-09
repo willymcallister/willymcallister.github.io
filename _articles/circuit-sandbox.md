@@ -9,8 +9,22 @@ comments: true
 
 A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. The circuit simulator is written entirely in JavaScript---it is not a version of SPICE. 
 
-|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} English](https://spinningnumbers.org/circuit-sandbox/index.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} español](https://spinningnumbers.org/circuit-sandbox/index-es.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} português](https://spinningnumbers.org/circuit-sandbox/index-pt.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} magyarul](https://spinningnumbers.org/circuit-sandbox/index-hu.html)|
-|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 简体中文](https://spinningnumbers.org/circuit-sandbox/index-zh.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} 日本語](https://spinningnumbers.org/circuit-sandbox/index-ja.html)|[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} हिन्दी](https://spinningnumbers.org/circuit-sandbox/index-hi.html)|
+[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html) simulator with selectable language,
+
+<table>
+    <tr>
+        <td>English</td>
+        <td>Español</td>
+        <td>Português</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>हिन्दी<br>(Hindi)</td>
+        <td>日本語<br>(Japanese)</td>
+        <td>简体中文<br>(Simplified Chinese)</td>
+        <td>Magyarul<br>(Hungarian)</td>
+    </tr>
+</table>
 {:.noborder}
 
 Can you help translate Circuit Sandbox into other languages? [It’s easy!](#translation)
@@ -262,9 +276,9 @@ Here are your part choices,
 
 ## Translation
 
-If you can help translate the Circuit Sandbox into other languages, that would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/gh-pages/Translation-table.docx) for you to translate.
+Want to help translate the Circuit Sandbox into other languages? That would be great! If you are fluent in English and another language, especially the technical terms used in the simulator, I could really use your help. Contact me by email and I will provide a [table of about 170 terms and phrases](https://github.com/willymcallister/circuit-sandbox/blob/gh-pages/Translation-table.docx) for you to translate.
 
-So far, Circuit Sandbox is available in,
+Circuit Sandbox is available in,
 
 * English, en-US.js
 * Spanish, es.js (courtesy of Khan Academy volunteer translators)
