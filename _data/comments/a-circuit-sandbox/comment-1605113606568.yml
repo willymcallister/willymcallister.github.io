@@ -1,0 +1,8 @@
+_id: 6abdad80-243e-11eb-8300-a1839a7b70a9
+_parent: 'https://spinningnumbers.org/a/circuit-sandbox.html'
+replying_to: ''
+message: "I made simple Op amp circuit, and when I click DC analysis I get: Newton method failed. Here is the circuit:\r\nPositive of Op Amp is connected to positive of 1V DC. Negative of DC voltage is connected to GND.\r\nNegative of Op amp connects to R1=1K, then other side of R1 connects to GND. \r\nThe negative of Op Amp also connects to Rf=1K which connects to output of Op Amp.\r\nI expect Op Amp output = 2V.\r\nI advise to fix this bug."
+name: marzk
+email: cbd1e9c5845690f6cd0e10650819b4fd
+hp: ''
+date: '2020-11-11T16:53:26.563Z'
