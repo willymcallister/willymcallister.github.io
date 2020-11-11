@@ -1,7 +1,7 @@
 _id: b60f4640-2475-11eb-98d5-45e9f08b9b70
 _parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
 replying_to: ''
-message: "Testing a web link in a comment.\r\n\r\n[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height=\"70px\" :} Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html){:target=\"_blank\"}"
+message: "Testing a web link in a comment.\r\n\r\n[Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html){:target=\"_blank\"}"
 name: Willy McAllister
 email: 72f6ffec6e34ab5d69f3811272b5ae97
 hp: ''
