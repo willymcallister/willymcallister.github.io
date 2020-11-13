@@ -1,0 +1,15 @@
+_id: e042c910-2604-11eb-afc8-250e9ccc7488
+_parent: 'https://spinningnumbers.org/a/circuit-sandbox.html'
+replying_to: '10'
+message: >-
+  The two opamp models are 'ideal" and a more recent addition, "realistic". The
+  ideal model is used in exercises. It may be replaced over time. The realistic
+  model has exposed power pins you have to connect yourself, which is just what
+  you would have if you retrieve SPICE models from opamp manufacturers. Yes, the
+  schematic is a little more involved, but that's how it's done in the real
+  world. You can connect the power pins two ways: by wires to DC sources or
+  connect via wire labels with the same name. Your choice.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-11-13T23:06:35.376Z'
