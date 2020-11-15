@@ -1,0 +1,10 @@
+_id: 2af321b0-269d-11eb-88b5-918d3e09ded8
+_parent: 'https://spinningnumbers.org/a/circuit-sandbox.html'
+replying_to: '11'
+message: >-
+  DC simulation doesn't need a probe. It shows the voltage at every node. The
+  voltage probe is used for AC and TRAN simulations.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-11-14T17:16:44.129Z'

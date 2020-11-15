@@ -1,0 +1,8 @@
+_id: 9b870160-25fa-11eb-8be0-f14d9a9e2979
+_parent: 'https://spinningnumbers.org/a/circuit-sandbox.html'
+replying_to: '10'
+message: "Thank you Willy. I used the other Op Amp, and neglected to connect the rails. It is working now. \r\nBut I have suggestion: Instead of having two Op Amp options, make them one, and user \r\ndouble click on it, and enter positive, and negative rail values. After that user does not \r\nhave to wire them explicitly in the circuit.\r\nRight now one of them must be wired explicitly. The other you must wire the GND, but the Hi rail \r\nvalue is unknown."
+name: Marzk
+email: cbd1e9c5845690f6cd0e10650819b4fd
+hp: ''
+date: '2020-11-13T21:53:05.010Z'
