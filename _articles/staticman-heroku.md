@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-[Staticman](https://staticman.net) is a small web service that handles the POST requests from your forms, runs various forms of validation and manipulation and pushes the result to your repository as data files.
+[Staticman](https://staticman.net) is a small web service that handles a POST request from your comment form, runs various validations and pushes the resulting comment file to your repository.
 
 Configure and deploy an instance of [Staticman](https://staticman.net) at [Heroku](https://heroku.com). 
 
@@ -13,10 +13,6 @@ Configure and deploy an instance of [Staticman](https://staticman.net) at [Herok
 * reCaptcha v2 for spam reduction
 * MailGun, a free mailing list service for Notifications
 * Comments are moderated 
-
-This is mostly an Installation Guide and partly a Theory of Operation. Corrections and clarifications are very much welcomed.
-
-This guide does not cover the _include files for implementing commenting on your Jekyll site. See my [_includes/comments*](https://github.com/willymcallister/willymcallister.github.io/tree/master/_includes) and the [credits](#credits) at the end.
 
 ----
 
@@ -27,6 +23,10 @@ This guide does not cover the _include files for implementing commenting on your
 {:toc}
 
 ----
+
+This is mostly an Installation Guide and partly a Theory of Operation. Corrections and clarifications are very much welcomed.
+
+This guide does not cover the _include files for implementing commenting on your Jekyll site. See my [_includes/comments*](https://github.com/willymcallister/willymcallister.github.io/tree/master/_includes) and the [credits](#credits) at the end.
 
 ## Create a GitHub bot account
 
@@ -499,7 +499,7 @@ heroku config:add --app yourAppName "AKISMET_SITE=https://spinningnumbers.org"
 ```
 
 ```
-heroku config:add --app yourAppName "AKISMET_API_KEY=yourAPIkey"
+heroku config:add --app yourAppName "AKISMET_API_KEY=yourAkismetAPIkey"
 ```
 
 ### Testing Akismet TBD
@@ -772,3 +772,21 @@ curl -s --user 'api:YOUR_API_KEY' -X DELETE \
 
 If you are setting up your own system, feel free to practice here. Add comments to this page to see how it works. It takes 5-10 seconds for Staticman to awaken at Heroku and respond with an Accepted! message. This site is moderated, so I have to approve your comment before it appears.
 
+## Appendix --- Fighting spam
+
+An idea from TerminalAddict at [Jekyll Talk](https://talk.jekyllrb.com/t/staticman-fighting-spam/2388/8)...  (still need to understand how this is called),
+
+Specifically, changing the html to button type=“button”, then dynamically changing to type=“submit” takes care of 99.999%. This JS function seems to be the bizzo!
+
+```
+var verifyCaptcha = function(response) {
+    if(response.length == 0) {
+    } else {
+        var _el=$('#comment-form-submit');
+        _el.removeAttr("disabled");
+        _el.addClass('button-primary dark-blue-bg');
+        _el.attr('aria-disabled', 'false');
+        _el.attr('type', 'submit');
+    }
+};
+```
