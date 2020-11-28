@@ -1,0 +1,19 @@
+_id: 3b2ddfb0-3157-11eb-bc47-bfcd667d9bdc
+_parent: 'https://spinningnumbers.org/a/delta-wye-derivations.html'
+replying_to: ''
+message: >-
+  Hi Will, Thank you for your derivation, it does help me a lot to understand
+  these transformations. However, I still have some curiosity (or skepticism)
+  regarding superposition argument that being used here. All derivation methods
+  above developed from the step of equating resistance between nodes (Rxy, Rxz,
+  Ryz) of 2 configurations (Y-delta). How exactly you use superposition
+  principle to justify that? For reference, I already read your article about
+  superposition, linearity, and its application on simple circuit i.e. How to
+  decompose problem with more than one source, switching off voltage/current
+  source, etc. I just can't make connection between those simple example to this
+  transformation. Would you kindle explain that to me? Thank you in advance.
+  Regards - Rahmat
+name: Rahmat Waluyo
+email: a679cc52085a9f488132990b64fbe2b9
+hp: ''
+date: '2020-11-28T08:53:49.271Z'
