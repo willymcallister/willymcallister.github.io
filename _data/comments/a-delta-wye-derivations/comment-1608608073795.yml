@@ -1,0 +1,8 @@
+_id: 9b8a8090-4406-11eb-a661-b1b0b03ca6dd
+_parent: 'https://spinningnumbers.org/a/delta-wye-derivations.html'
+replying_to: '5'
+message: "Thank you Will! you sure are dedicated. Now I get a clearer idea on how superposition applied on this transformation. By assuming initial network as blackbox, we could find any equivalent circuit by equating V/I value (which is located outside the blackbox). It is somehow similar to Thevenin and Norton Theorem with addition of superposition. \r\nThere is one thing that nag me a bit. In initial derivation, you supress the current source while in later derivation (the one using conductance instead resistance) you supress the voltage instead. I wonder if I could get same results by suppressing voltage source using resistance instead of conductance (I will manage it myself, it will be a good exercise)\r\nBack to current article, I think you really put effort in it. Adding circuit for illustration helps a lot. And you even revise symbol for series element (before, you use + which might get confused with addition operator). Though I almost mistake it for subtraction before I realize that it goes a bit longer. All in all, I'd say thank you for keeping this site floating as it is now."
+name: Rahmat Waluyo
+email: ''
+hp: ''
+date: '2020-12-22T03:34:33.791Z'
