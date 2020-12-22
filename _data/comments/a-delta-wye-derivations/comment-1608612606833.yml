@@ -1,0 +1,18 @@
+_id: 2949b040-4411-11eb-b9b7-d9f01f8e05b1
+_parent: 'https://spinningnumbers.org/a/delta-wye-derivations.html'
+replying_to: '5'
+message: >-
+  I'm so glad the revised article was clear. The superposition argument is
+  applied in a nearly identical way in the proof of Thevenin's Theorem. It took
+  me a fair amount of fiddling to come up with the two external circuits
+  (current sources for one, voltage sources for the other). Suppressing the
+  extra two sources has to give you just the right open or short behavior. If
+  you come up with an alternative I would be interested to know what you did.
+  Thanks for the feedback on the "in series" symbol. The one I picked looks a
+  bit like a minus sign. You may see that change if I find a better symbol.
+  There is no standard "in series with" symbol like there is for || "in parallel
+  with".
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2020-12-22T04:50:06.806Z'
