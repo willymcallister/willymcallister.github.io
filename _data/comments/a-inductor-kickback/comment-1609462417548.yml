@@ -1,0 +1,11 @@
+_id: c80f1cd0-4bcb-11eb-96a4-5fde15411b93
+_parent: 'https://spinningnumbers.org/a/inductor-kickback.html'
+replying_to: '1'
+message: >-
+  Zac - I get the same NaN (Not a Number) when I run the simulation model. That
+  means I messed up something in recent upgrades to the simulator. I will work
+  on it.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-01-01T00:53:37.546Z'
