@@ -1,0 +1,10 @@
+_id: 152b6b30-4ebb-11eb-8392-8d5a4a49fbc9
+_parent: 'https://spinningnumbers.org/a/inductor-kickback.html'
+replying_to: '1'
+message: >-
+  The NaN issue with FET devices in Circuit Sandbox has been resolved. The
+  simulation model in this article now works.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-01-04T18:31:38.963Z'
