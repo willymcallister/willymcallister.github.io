@@ -1,0 +1,8 @@
+_id: 8fd2acb0-5fda-11eb-8a12-cf31424094db
+_parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
+replying_to: '12'
+message: "I took most of the scripts from [Travis Downs](https://travisdowns.github.io/blog/2020/02/05/now-with-comments.html)\r\n\r\nI run my own instance of Staticman at Heroku and I added Akismet and Mailgun following your guide.\r\n\r\nHere is my website: [AverageLinuxUser.com](https://averagelinuxuser.com/)"
+name: Dmytro
+email: 219064871a3cd2b20131563691c0dd21
+hp: ''
+date: '2021-01-26T13:29:48.939Z'
