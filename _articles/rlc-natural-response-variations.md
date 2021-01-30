@@ -695,7 +695,7 @@ And here is what it looks like,
 
 ![RLC over damped current]({{ site.baseurl }}{% link i/rlc_overdamped_current.svg %}){: .centered :}
 
-Series $\text{RLC}$ over damped current. The two gray traces show the two decaying exponentials. $+1.25\,e^{+t}$ and $-1.25\,e^{-9t}$. Add them together to get the natural response. $\text R = 10$ ohms, $\text L = 1$ henry, and $\text C = 1/9$ farad.
+Series $\text{RLC}$ over damped current. The two gray traces show the two decaying exponentials. $+1.25\,e^{-t}$ and $-1.25\,e^{-9t}$. Add them together to get the natural response. $\text R = 10$ ohms, $\text L = 1$ henry, and $\text C = 1/9$ farad.
 {: .caption :}
 
 The response start at zero because the two exponentials cancel each other. One of them decays away rapidly, leaving a single exponential decay over time. The response never goes negative. 
