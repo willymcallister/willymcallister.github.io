@@ -18,7 +18,7 @@ $j\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
 Sine emerges along the imaginary axis, the vector sum of two spinning numbers, so the vector sum actually produces $j\sin \omega t$,
 
 |The green spinning number is| $+\dfrac{1}{2} e^{+j\omega t}$|
-|The pink spinning number is| $\enspace -\dfrac{1}{2} e^{-j\omega t}$|
+|The pink spinning number is| $-\dfrac{1}{2} e^{-j\omega t}$|
 {:.noborder}
 
 The negative sign reverses the pink spinning number. It starts on the negative real axis while the green spinning number starts on the positive real axis. (If you reload the web page watch where the two vectors start at $t = 0$.)
