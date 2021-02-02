@@ -16,8 +16,8 @@ $\cos \omega t = \dfrac{1}{2} (e^{+j\omega t} + e^{-j\omega t})$
 
 Cosine emerges on the real axis, the vector sum of two spinning numbers, 
 
-|The spinning green vector is| $+\dfrac{1}{2} e^{+j\omega t}$| 
-|The spinning red vector is| $+\dfrac{1}{2} e^{-j\omega t}$| 
+|The green spinning number is| $+\dfrac{1}{2} e^{+j\omega t}$| 
+|The red spinning number is| $+\dfrac{1}{2} e^{-j\omega t}$| 
 {:.noborder}
 
 Cosine (the orange dot) is the vector sum of green and red.

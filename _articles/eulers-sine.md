@@ -8,7 +8,7 @@ audio_file : assets/audio/Book_Bag_Jammy_Jams.mp3
 
 {% include d3a/eulers-sine-d3.html %}
 
-<audio src="{{ page.audio_file | relative_url }}" controls loop></audio>
+<audio autoplay="true" src="{{ page.audio_file | relative_url }}" controls loop></audio>
 
 
 ### Euler's formula for sine
@@ -17,11 +17,11 @@ $j\sin \omega t = \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t})$
 
 Sine emerges along the imaginary axis, the vector sum of two spinning numbers, so the vector sum actually produces $j\sin \omega t$,
 
-|The green vector is| $+\dfrac{1}{2} e^{+j\omega t}$|
-|The pink vector is| $\enspace -\dfrac{1}{2} e^{-j\omega t}$|
+|The green spinning number is| $+\dfrac{1}{2} e^{+j\omega t}$|
+|The pink spinning number is| $\enspace -\dfrac{1}{2} e^{-j\omega t}$|
 {:.noborder}
 
-The negative sign reverses the pink vector. It starts on the negative real axis while the green vector starts on the positive real axis. (If you reload the web page watch where the two vectors start at $t = 0$.)
+The negative sign reverses the pink spinning number. It starts on the negative real axis while the green spinning number starts on the positive real axis. (If you reload the web page watch where the two vectors start at $t = 0$.)
 
 Sine (the yellow dot on the imaginary axis) is the vector sum of green and pink.
 

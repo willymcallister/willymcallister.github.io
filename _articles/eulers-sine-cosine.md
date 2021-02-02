@@ -8,7 +8,7 @@ audio_file : assets/audio/Sunday_Stroll_Huma_Huma.mp3
 
 {% include d3a/eulers-sine-cosine-d3.html %} 
 
-<audio src="{{ page.audio_file | relative_url }}" controls loop></audio> 
+<audio autoplay="true" src="{{ page.audio_file | relative_url }}" controls loop></audio> 
 
 ### Euler's formulas for sine and cosine
 
@@ -22,9 +22,9 @@ j\sin \omega t &= \dfrac{1}{2} (e^{+j\omega t} - e^{-j\omega t}) \\
 
 Sine and cosine emerge from vector sum of three spinning numbers in Euler's Formula, 
 
-|The green vector is| $+\dfrac{1}{2} e^{+j\omega t}$|                    |
-|The pink vector is| $-\dfrac{1}{2} e^{-j\omega t}$| (used to make sine) | 
-|The red vector is| $+\dfrac{1}{2} e^{-j\omega t}$| (used to make cosine)|
+|The green spinning number is| $+\dfrac{1}{2} e^{+j\omega t}$|                    |
+|The pink spinning number is| $-\dfrac{1}{2} e^{-j\omega t}$| (used to make sine) | 
+|The red spinning number is| $+\dfrac{1}{2} e^{-j\omega t}$| (used to make cosine)|
 {:.noborder}
 
 Sine is the yellow dot on the imaginary axis, the vector sum of green and pink.
