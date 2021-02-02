@@ -3,11 +3,12 @@ layout: article
 title:  "Euler's cosine"
 author: Willy McAllister
 comments: true
+audio_file : assets/audio/NirvanaVEVO_Chris _Zabriskie.mp3
 ---
 
 {% include d3a/eulers-cosine-d3.html %} 
 
-<audio src="https://www.youtube.com/audiolibrary_download?vid=4ce80a47a63a7fa1" controls loop></audio>  
+<audio autoplay="true" src="{{ page.audio_file | relative_url }}" controls loop></audio> 
 
 ### Euler's formula for cosine
 
@@ -23,6 +24,8 @@ Cosine (the orange dot) is the vector sum of green and red.
 
 Created by Willy McAllister.
 
-<small>Just music, no narration. The background music is *NirvanaVEVO* by Chris Zabriskie. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}</small>
+<small>Just music, no narration. The background music is *NirvanaVEVO* by Chris Zabriskie,  
+[Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/), [Source](http://chriszabriskie.com/uvp/), [Artist](http://chriszabriskie.com/)</small>
+{% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
 <small>Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-cosine-d3.html).</small>

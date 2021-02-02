@@ -3,11 +3,13 @@ layout: article
 title:  "Euler's sine"
 author: Willy McAllister
 comments: true
+audio_file : assets/audio/Book_Bag_Jammy_Jams.mp3
 ---
 
 {% include d3a/eulers-sine-d3.html %}
 
-<audio src="https://www.youtube.com/audiolibrary_download?vid=14c363704697d79b" controls loop></audio>
+<audio src="{{ page.audio_file | relative_url }}" controls loop></audio>
+
 
 ### Euler's formula for sine
 

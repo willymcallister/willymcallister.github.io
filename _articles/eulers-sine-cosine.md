@@ -3,11 +3,12 @@ layout: article
 title:  "Euler's sine and cosine"
 author: Willy McAllister
 comments: true
+audio_file : assets/audio/Sunday_Stroll_Huma_Huma.mp3
 ---
 
 {% include d3a/eulers-sine-cosine-d3.html %} 
 
-<audio src="https://www.youtube.com/audiolibrary_download?vid=78599bdd7a0a465e" controls loop></audio>
+<audio src="{{ page.audio_file | relative_url }}" controls loop></audio> 
 
 ### Euler's formulas for sine and cosine
 
