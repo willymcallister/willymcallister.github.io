@@ -37,4 +37,4 @@ Created by Willy McAllister.
 
 <small>Just music, no narration. The background music is *Sunday Stroll* by Huma Huma. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}</small>
 
-<small>Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-cosine-d3.html). The image is being computed on the fly by your device.</small>
+<small>Animated with d3.js, [source code](https://github.com/willymcallister/willymcallister.github.io/blob/master/_includes/d3a/eulers-sine-cosine-d3.html). The image is being computed on the fly by your device.</small>

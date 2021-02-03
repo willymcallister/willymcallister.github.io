@@ -29,4 +29,4 @@ Created by Willy McAllister.
 
 <small>Just music, no narration. The background music is *Book Bag* by E's Jammy Jams. {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}</small>
 
-<small>Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-sinewave-d3.html).</small>
+<small>Animated with d3.js, [source code](https://github.com/willymcallister/willymcallister.github.io/blob/master/_includes/d3a/eulers-sine-d3.html).</small>

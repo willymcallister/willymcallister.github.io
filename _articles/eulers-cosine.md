@@ -28,4 +28,4 @@ Created by Willy McAllister.
 [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/), [Source](http://chriszabriskie.com/uvp/), [Artist](http://chriszabriskie.com/)</small>
 {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
-<small>Animated with d3.js, [source code](https://github.com/willymcallister/spinningnumbers/tree/master/_articles/eulers-cosine-d3.html).</small>
+<small>Animated with d3.js, [source code](https://github.com/willymcallister/willymcallister.github.io/blob/master/_includes/d3a/eulers-cosine-d3.html).</small>
