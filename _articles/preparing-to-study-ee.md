@@ -21,13 +21,13 @@ Good question! Here is a summary of the math and science preparation that will h
 
 ## Math fundamentals
 
-* [Equation of a line, slope, y-intercept](https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions)
-* [Quadratic formula](https://www.khanacademy.org/math/algebra/quadratics/solving-quadratics-using-the-quadratic-formula)
-* [Exponents](https://www.khanacademy.org/math/algebra-basics/core-algebra-exponent-expressions)
-* [Radians](v/introduction-to-radians)
-* [Vectors, vector addition](https://www.khanacademy.org/math/precalculus/vectors-precalc/vector-basic/v/introduction-to-vectors-and-scalars)
-* [Solving simultaneous equations](https://www.khanacademy.org//math/algebra/systems-of-linear-equations)
-* [Complex numbers](https://www.khanacademy.org/math/algebra2/introduction-to-complex-numbers-algebra-2)
+* [Equation of a line, slope, y-intercept](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:forms-of-linear-equations)
+* [Quadratic formula](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations)
+* [Exponents](https://www.khanacademy.org/math/algebra-basics/alg-basics-expressions-with-exponents)
+* [Radians](https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:trig/x2ec2f6f830c9fb89:radians/v/introduction-to-radians)
+* [Vectors, vector addition](https://www.khanacademy.org/math/precalculus/x9e81a4f98389efdf:vectors)
+* [Solving simultaneous equations](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:systems-of-equations)
+* [Complex numbers](https://www.khanacademy.org/math/algebra2/x2ec2f6f830c9fb89:complex)
 
 ## Trigonometry
 
@@ -35,7 +35,7 @@ Good question! Here is a summary of the math and science preparation that will h
 
 {% capture summary %}SOH CAH TOA{% endcapture %}  
 {% capture details %} 
-![SOHCAHTOA triangle]({{ site.baseurl }}{% link i/sohcahtoa.svg%}){: .centered :}
+![SOHCAHTOA triangle]({% link i/sohcahtoa.svg%}){: .centered :}
 
 Here's a way to remember the definitions of $\sin$, $\cos$, and $\tan$.
 
@@ -52,8 +52,8 @@ $\tan \theta = \dfrac{\text{opposite}}{\text{adjacent}}\quad\qquad \textbf T\tex
 
 It really helps to get to know the meaning of *derivative* from calculus. You don't have to be an expert, but check out these links to get a basic idea of a what a derivative is,
 
-* [Limits](https://www.khanacademy.org/math/differential-calculus/limits-topic)
-* [Derivatives](https://www.khanacademy.org/math/differential-calculus/taking-derivatives)
+* [Limits](https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new)
+* [Derivatives](https://www.khanacademy.org/math/differential-calculus/dc-diff-intro)
 
 {% capture summary %}Notation for derivatives{% endcapture %}  
 {% capture details %} 
@@ -66,13 +66,13 @@ $\dfrac{dy}{dx}$
 
 When you say it out loud, say it like this, "$dy \, dx$", not "$dy$ over $dx$".
 
-The style of Leibniz's notation gives us a hint that derivatives can be treated like fractions. This comes up when you study the [chain rule](https://www.khanacademy.org/math/ap-calculus-ab/product-quotient-chain-rules-ab/chain-rule-ab/v/chain-rule-introduction). You will also hear this called *differential* notation, where the individual terms $dy$ and $dx$ are called *differentials*.
+The style of Leibniz's notation gives us a hint that derivatives can be treated like fractions. This comes up when you study the [chain rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new). You will also hear this called *differential* notation, where the individual terms $dy$ and $dx$ are called *differentials*.
 
 Second-order derivatives are two derivatives in a row. They use a notation like exponents,
 
 The second derivative $\dfrac{d}{dx} \left (\dfrac{dy}{dx}\right )$ is the same as $\dfrac{d^2 y}{dx^2}$
 
-Leibnitz also invented the elongaged "s" character $\displaystyle \int$ we use for the integral symbol.
+Leibnitz also invented the elongated "s" character $\displaystyle \int$ we use for the integral symbol.
 
 **Prime notation**  
 The **prime notation** was introduced by Joseph-Louis Lagrange. The function $f^\prime(x)$ stands for the first derivative of $f(x)$ with respect to the independent variable $x$. Say this as "$f$ prime of $x$."
@@ -94,11 +94,10 @@ When you move beyond resistor circuits and include capacitors or inductors, thes
 These are the calculus concepts we use in electrical engineering:
 
 * [Derivative of simple functions (xⁿ where n is an integer](https://www.khanacademy.org/math/differential-calculus/taking-derivatives/derivative-intro/v/calculus-derivatives-2-5-new-hd-version) )
-* [Derivative of eˣ](https://www.khanacademy.org/math/differential-calculus/taking-derivatives/chain-rule/v/derivatives-of-sin-x-cos-x-tan-x-e-x-and-ln-x)
+* [Derivative of eˣ, sine, and cosine](https://www.khanacademy.org/math/differential-calculus/taking-derivatives/chain-rule/v/derivatives-of-sin-x-cos-x-tan-x-e-x-and-ln-x)
 * [Notation for integral](https://www.khanacademy.org/math/integral-calculus/indefinite-definite-integrals/indefinite_integrals/v/antiderivatives-and-indefinite-integrals)
 * [Integral of xⁿ ](https://www.khanacademy.org/math/integral-calculus/indefinite-definite-integrals/indefinite_integrals/v/indefinite-integrals-of-x-raised-to-a-power)
 * [Evaluating definite integrals](https://www.khanacademy.org/math/integral-calculus/indefinite-definite-integrals/riemann-sums/v/riemann-sums-and-integrals)
-* [Derivative of sine and cosine](https://www.khanacademy.org/math/differential-calculus/taking-derivatives/chain-rule/v/derivatives-of-sin-x-cos-x-tan-x-e-x-and-ln-x)
 * [Line integral](https://www.khanacademy.org/math/multivariable-calculus/line-integrals-topic/line_integrals/v/introduction-to-the-line-integral)
 
 Differential equations: When we need to solve first-order differential equations, we will walk through the solution step by step (example: the RC natural response), so you don't need to have already studied differential equations. The most advanced problems involve second-order differential equations, and again, we go through the solution step by step. 
