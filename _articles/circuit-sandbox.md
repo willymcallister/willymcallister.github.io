@@ -164,6 +164,8 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 The simulator has simple models for semiconductor devices and an ideal operational amplifier. Each model has just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
 
+The simulator's solver is based on the linear algebra technique of MNA, which stands for *Modified Nodal Analysis*. MNA is an extension of Kirchhoff's Current Law.
+
 ### Diode model
 
 The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ ampere. The diode's Area parameter scales the saturation current to Area $\times \,\text I_\text s$. 
@@ -186,6 +188,19 @@ The ideal opamp symbol has two inputs ($\sf v$+ and $\sf v$-) and an output ($\s
 The defining equation for the opamp is: $(\sf{vo} - \sf{vg}) = \text A(\sf v$+ $\,- \,\,\sf v$-$)$
 
 The default gain is $\text A = 30{,}000$. If the input voltages are identical then the output voltage will be $\sf{vg}$. If you plan on symmetric power supply voltages, connect $\sf{vg}$ to ground. If they are not symmetric set $\sf{vg}$ half way between whatever power inputs you intend for your opamp. 
+
+{% capture details %}
+The simulation model for the ideal op-amp does not work by finding the voltage at its output based on the inputs, but rather it assumes the difference between its two input terminals is zero.
+
+$1/A(v(no) - v(ng)) - (v(np)-v(nn))) = 0$
+
+The two assumptions for the ideal op-amp (zero input current, zero potential difference at the inputs) only hold if the surrounding circuit is properly configured for negative feedback. Because of this, the solver may give erroneous results if negative feedback is not present. This problem actually persists in many commercial circuit simulators---if you hook up a circuit with the input terminals reversed (so it would not operate properly in practice due to lack of negative feedback) the simulation may behave as if there is no problem. 
+
+Note also the output of the ideal op-amp is not limited by any power supply---this circuit will happily generate hundreds of volts on the output.
+
+Reference [link](https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNA5.html)
+{% endcapture %}
+{% capture summary %}Caveats{% endcapture %}{% include details.html %}
 
 #### Realistic model
 {:.no_toc}
@@ -307,7 +322,7 @@ Many people have wrapped front-end interfaces around SPICE to allow designers to
 
 An excellent version of SPICE is available from [Linear Technology](https://www.linear.com/), a semiconductor manufacturing company in Milpitas, California. The program is [LTSpice (from linear.com)](https://www.linear.com/designtools/software/#LTspice) or [LTSpice (from analog.com)](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html). LTSpice runs on Windows, Macintosh, and Linux machines with Windows emulation. It is free to download and use. 
 
-Note: Linear Technologies was purchased by [Analog Devices](www.analog.com) in 2017. The web sites have been merged together.
+Note: Linear Technologies was purchased by [Analog Devices](https://www.analog.com) in 2017. The web sites have been merged together.
 
 Another simulator is [JADE](http://computationstructures.org/exercises/sandboxes/jade.html). This is also a creation of Chris Terman at MIT. It's a follow-on to Circuit Sandbox with improved features for digital design and logic simulation. Here's an [intro video](http://computationstructures.org/exercises/tool_docs/jade.html).
 
