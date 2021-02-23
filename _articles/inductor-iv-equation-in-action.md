@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-The inductor is one of the [ideal circuit elements]({{ site.baseurl }}{% link _articles/ideal-elements-and-sources.md %}#inductor). We learn more about how an inductor behaves by looking closely at its $i$-$v$ equation.
+The inductor is one of the [ideal circuit elements]({% link _articles/ideal-elements-and-sources.md %}#inductor). We learn more about how an inductor behaves by looking closely at its $i$-$v$ equation.
 
 Written by Willy McAllister.
 
@@ -68,7 +68,7 @@ Now we have an inductor with its $i$-$v$ equation: $v = \text L\,\dfrac{di}{dt}$
 This tells us the voltage across the inductor is proportional not to current but rather the *rate of change* of current through the inductor. That's what $di/dt$ means.
 
 For real-world resistors, we have to take care that voltage and current don't get too big for the resistor to handle. 
-For real-world inductors, we have to be careful the *rate of change of current* does't get too big for the inductor to handle. This can be tricky. It is very easy to create a big change of current when you open or close a switch. In the article on [inductor kickback]({{ site.baseurl }}{% link _articles/inductor-kickback.md %}) we design for this situation.
+For real-world inductors, we have to be careful the *rate of change of current* does't get too big for the inductor to handle. This can be tricky. It is very easy to create a big change of current when you open or close a switch. In the article on [inductor kickback]({% link _articles/inductor-kickback.md %}) we design for this situation.
 
 ## Inductor and current source
 
@@ -99,7 +99,7 @@ If current is constant in an inductor, then $v = \text L\,di/dt = 0$. Zero volts
 
 ### Simulation model
 
-Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B168%2C72%2C216%2C72%5D%5D%2C%5B%22i%22%2C%5B168%2C120%2C2%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22dc(2)%22%2C%22_json_%22%3A1%7D%2C%5B%220%22%2C%221%22%5D%5D%2C%5B%22s%22%2C%5B216%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A2%7D%2C%5B%221%22%5D%5D%2C%5B%22l%22%2C%5B216%2C72%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22l%22%3A%225u%22%2C%22_json_%22%3A3%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B216%2C120%2C192%2C120%5D%5D%2C%5B%22w%22%2C%5B168%2C120%2C192%2C120%5D%5D%2C%5B%22g%22%2C%5B192%2C120%2C0%5D%2C%7B%22_json_%22%3A6%7D%2C%5B%220%22%5D%5D%2C%5B%22view%22%2C94.6424%2C32.20688%2C3.8147%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%22.0009%22%2C%221000%22%5D%5D) of a $5\,\mu\text H$ inductor with constant $2\,\text{mA}$ current source. Open the link and click on TRANS in the top menu bar to run a transient simulation. The result is pretty boring. The voltage across the inductor is $0$. Change the inductor or current to anything you want, the answer is always $0$. 
+Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B168%2C72%2C216%2C72%5D%5D%2C%5B%22i%22%2C%5B168%2C120%2C2%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22dc(2)%22%2C%22_json_%22%3A1%7D%2C%5B%220%22%2C%221%22%5D%5D%2C%5B%22s%22%2C%5B216%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A2%7D%2C%5B%221%22%5D%5D%2C%5B%22l%22%2C%5B216%2C72%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22l%22%3A%225u%22%2C%22_json_%22%3A3%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B216%2C120%2C192%2C120%5D%5D%2C%5B%22w%22%2C%5B168%2C120%2C192%2C120%5D%5D%2C%5B%22g%22%2C%5B192%2C120%2C0%5D%2C%7B%22_json_%22%3A6%7D%2C%5B%220%22%5D%5D%2C%5B%22view%22%2C94.6424%2C32.20688%2C3.8147%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%22.0009%22%2C%221000%22%5D%5D){:target="_blank"} of a $5\,\mu\text H$ inductor with constant $2\,\text{mA}$ current source. Open the link and click on TRANS in the top menu bar to run a transient simulation. The result is pretty boring. The voltage across the inductor is $0$. Change the inductor or current to anything you want, the answer is always $0$. 
 
 ### Sometimes an inductor "looks like" a short
 
@@ -127,19 +127,19 @@ $\dfrac{di}{dt}= \dfrac{3}{10 \times 10^{-3}} = 300 \,\text{amperes}/\text{sec}$
 
 That means the current through the inductor will have a rising slope of $300\,\text{amperes}/\text{second}$. 
 
-![Inductor current ramp]({{ site.baseurl }}{% link i/inductor_in_action_current_ramp.svg %}){: .centered :}
+![Inductor current ramp]({% link i/inductor_in_action_current_ramp.svg %}){: .centered :}
 
 That is kind of amazing, but that's what the equation predicts. Needless to say, this is not a practical circuit. We just want see what happens with a constant voltage. If we build this circuit the current would ramp up until our real-world voltage source couldn't keep up with the demand for more current. But over a short time span, this is how real inductors work.
 
 ### Simulation model
 
-Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B216%2C72%2C200%2C72%5D%5D%2C%5B%22w%22%2C%5B168%2C72%2C184%2C72%5D%5D%2C%5B%22a%22%2C%5B184%2C72%2C0%5D%2C%7B%22color%22%3A%22magenta%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A2%7D%2C%5B%221%22%2C%222%22%5D%5D%2C%5B%22s%22%2C%5B216%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A3%7D%2C%5B%222%22%5D%5D%2C%5B%22l%22%2C%5B216%2C72%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22l%22%3A%2210m%22%2C%22_json_%22%3A4%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B216%2C120%2C192%2C120%5D%5D%2C%5B%22w%22%2C%5B168%2C120%2C192%2C120%5D%5D%2C%5B%22g%22%2C%5B192%2C120%2C0%5D%2C%7B%22_json_%22%3A7%7D%2C%5B%220%22%5D%5D%2C%5B%22v%22%2C%5B168%2C72%2C4%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22dc(3)%22%2C%22_json_%22%3A8%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22view%22%2C94.6424%2C32.20688%2C3.8147%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%225%22%2C%221000%22%5D%5D) of the inductor with voltage source circuit. Open the link and click on TRANS in the top menu to run a transient simulation.
+Here's a [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B216%2C72%2C200%2C72%5D%5D%2C%5B%22w%22%2C%5B168%2C72%2C184%2C72%5D%5D%2C%5B%22a%22%2C%5B184%2C72%2C0%5D%2C%7B%22color%22%3A%22magenta%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A2%7D%2C%5B%221%22%2C%222%22%5D%5D%2C%5B%22s%22%2C%5B216%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A3%7D%2C%5B%222%22%5D%5D%2C%5B%22l%22%2C%5B216%2C72%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22l%22%3A%2210m%22%2C%22_json_%22%3A4%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B216%2C120%2C192%2C120%5D%5D%2C%5B%22w%22%2C%5B168%2C120%2C192%2C120%5D%5D%2C%5B%22g%22%2C%5B192%2C120%2C0%5D%2C%7B%22_json_%22%3A7%7D%2C%5B%220%22%5D%5D%2C%5B%22v%22%2C%5B168%2C72%2C4%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22dc(3)%22%2C%22_json_%22%3A8%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22view%22%2C94.6424%2C32.20688%2C3.8147%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%225%22%2C%221000%22%5D%5D){:target="_blank"} of the inductor with voltage source circuit. Open the link and click on TRANS in the top menu to run a transient simulation.
 
 ## Example
 
 We can actually come up with something more useful than an infinitely-rising current ramp. If we change the voltage source so it reverses direction every once in a while, we get a more interesting and potentially useful circuit. 
 
-![Inductor voltage square wave]({{ site.baseurl }}{% link i/inductor_in_action_triangle.svg %}){: .centered :}{: height="160px"}
+![Inductor voltage square wave]({% link i/inductor_in_action_triangle.svg %}){: .centered :}{: height="160px"}
 
 Here's a challenge for you: Assume the square wave amplitude is $\pm1\,\text V$ and the frequency is $1\,\text{MHz}$ $($has a period of $1\,\mu\text{sec})$.
 
@@ -180,9 +180,9 @@ Hint: Work out $di/dt$ for the two different states of the input voltage.
 
 ### Simulation model
 
-[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B248%2C120%2C200%2C120%5D%5D%2C%5B%22w%22%2C%5B152%2C120%2C200%2C120%5D%5D%2C%5B%22g%22%2C%5B200%2C120%2C0%5D%2C%7B%22_json_%22%3A2%7D%2C%5B%220%22%5D%5D%2C%5B%22s%22%2C%5B248%2C72%2C0%5D%2C%7B%22color%22%3A%22red%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A3%7D%2C%5B%222%22%5D%5D%2C%5B%22w%22%2C%5B248%2C72%2C208%2C72%5D%5D%2C%5B%22w%22%2C%5B152%2C72%2C192%2C72%5D%5D%2C%5B%22a%22%2C%5B192%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A6%7D%2C%5B%221%22%2C%222%22%5D%5D%2C%5B%22l%22%2C%5B248%2C72%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22l%22%3A%225u%22%2C%22_json_%22%3A7%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22v%22%2C%5B152%2C72%2C4%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22square(-1%2C1%2C1M%2C50)%22%2C%22_json_%22%3A8%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22view%22%2C102.6424%2C32.20688%2C3.814697265625%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%223u%22%2C%221000%22%5D%5D) of the pulsed voltage source circuit. Open the link and click on TRANS to run a transient simulation. 
+[Simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B248%2C120%2C200%2C120%5D%5D%2C%5B%22w%22%2C%5B152%2C120%2C200%2C120%5D%5D%2C%5B%22g%22%2C%5B200%2C120%2C0%5D%2C%7B%22_json_%22%3A2%7D%2C%5B%220%22%5D%5D%2C%5B%22s%22%2C%5B248%2C72%2C0%5D%2C%7B%22color%22%3A%22red%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A3%7D%2C%5B%222%22%5D%5D%2C%5B%22w%22%2C%5B248%2C72%2C208%2C72%5D%5D%2C%5B%22w%22%2C%5B152%2C72%2C192%2C72%5D%5D%2C%5B%22a%22%2C%5B192%2C72%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A6%7D%2C%5B%221%22%2C%222%22%5D%5D%2C%5B%22l%22%2C%5B248%2C72%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22l%22%3A%225u%22%2C%22_json_%22%3A7%7D%2C%5B%222%22%2C%220%22%5D%5D%2C%5B%22v%22%2C%5B152%2C72%2C4%5D%2C%7B%22name%22%3A%22%22%2C%22value%22%3A%22square(-1%2C1%2C1M%2C50)%22%2C%22_json_%22%3A8%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22view%22%2C102.6424%2C32.20688%2C3.814697265625%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%223u%22%2C%221000%22%5D%5D){:target="_blank"} of the pulsed voltage source circuit. Open the link and click on TRANS to run a transient simulation. 
 
-The inductor is "integrating" the voltage over time, as indictated by the value of the current at any moment. This is an exact "dual" of a [capacitor integrating current]({{ site.baseurl }}{% link _articles/capacitor-iv-equation-in-action.md %}).
+The inductor is "integrating" the voltage over time, as indicated by the value of the current at any moment. This is an exact "dual" of a [capacitor integrating current]({% link _articles/capacitor-iv-equation-in-action.md %}).
 
 ### Explore 
 
@@ -204,9 +204,6 @@ This is the most useful mental image to have when looking at an inductor.
 Inductance, $\text L$, is analogous to mass or inertia in a mechanical system. The energy in the magnetic field of an inductor doesn't allow the current to change instantaneously, just like the heavy mass of the car tends to resist changes in velocity. A car cannot start or stop instantaneously. It takes time to accelerate or brake. An inductor is basically the electrical version of Newton's First Law of Motion (also called the Law of Inertia): A body in motion tends to stay in motion. For an inductor it goes like this: A current in motion tends to stay in motion.
 
 The current in an inductor does not (will not) change instantaneously.
-
-
-
 
 ## Summary
 {:.no_toc}
