@@ -283,6 +283,6 @@ We haven't shown how to create these logic functions with electronic circuits, b
 
 ["A Mind At Play --- How Claude Shannon Invented the Information Age"](https://www.amazon.com/Mind-Play-Shannon-Invented-Information/dp/1476766681), Jimmy Soni and Rob Goldman, 2017. This is a biography about one of the most influential engineers of the 20th century. You may not have heard of him, but I guarantee he has had an influence on your life.
 
-[A Mathematical Theory of Communication - original paper](http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), Claude E. Shannon, *Bell Systems Technical Journal*, Vol. 27, pp. 379–423, 623–656, July and October, 1948. This groundbreaking paper created the field of Information Theory. The term *bit* appears in print for the very first time near the end of page 1.
+[A Mathematical Theory of Communication - original paper](https://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf), Claude E. Shannon, *Bell Systems Technical Journal*, Vol. 27, pp. 379–423, 623–656, July and October, 1948. This groundbreaking paper created the field of Information Theory. The term *bit* appears in print for the very first time near the end of page 1.
 
 [A mathematical theory of communication - Khan Academy video](https://www.khanacademy.org/computing/computer-science/informationtheory/moderninfotheory/v/a-mathematical-theory-of-communication) demonstrates the information redundancy in English.

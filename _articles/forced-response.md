@@ -201,7 +201,7 @@ Using [separable differential equation]({% link _articles/rc-step-response-deriv
 
 Science Direct [Forced response](https://www.sciencedirect.com/topics/computer-science/forced-response) is defined as the steady-state response, see Figure 2–6.
 
-[MIT Signals and Systems lecture notes](http://web.mit.edu/16.unified/www/FALL/signalssystems/Lecture16_17.pdf) --- Forced response is the particular steady-state response that resembles the input, see slide 5. See also [MIT Transient Analysis of First Order RC and RL circuits lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/lecture-notes/transient1_rl_rc.pdf) for a similar definition on page 8.
+[MIT Signals and Systems lecture notes](https://web.mit.edu/16.unified/www/FALL/signalssystems/Lecture16_17.pdf) --- Forced response is the particular steady-state response that resembles the input, see slide 5. See also [MIT Transient Analysis of First Order RC and RL circuits lecture notes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/lecture-notes/transient1_rl_rc.pdf) for a similar definition on page 8.
 
 Stack Exchange question [Difference between natural response and forced response?](https://electronics.stackexchange.com/questions/93061/difference-between-natural-response-and-forced-response). The forced response is defined as the system's response to an external stimulus with zero initial conditions. See the detailed answer by **Felipe Ribas**. He finds the forced response using an "adjustment factor" (an additional exponential term) to "correct" the natural response.
 

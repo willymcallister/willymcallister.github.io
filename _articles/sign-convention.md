@@ -72,7 +72,7 @@ Ohm's Law is $v = i \,\text R$. We know the value of $\text R$ is always positiv
 
 {% capture summary %}Are there negative resistors?{% endcapture %}  
 {% capture details %}  
-Every resistor in this course has a positive resistance. There are some exotic devices called tunnel diodes that seem like they have negative resistance. Tunnel diodes are quite rare. As [Borg](http://www.startrek.com/database_article/borg) electrical engineers say, "Resistance is positive."  
+Every resistor in this course has a positive resistance. There are some exotic devices called tunnel diodes that seem like they have negative resistance. Tunnel diodes are quite rare. As [Borg](https://www.startrek.com/database_article/borg) electrical engineers say, "Resistance is positive."  
 {% endcapture %}{% include details.html %}
 
 Suppose we connect a real battery to a real resistor and touch voltmeter probes to the resistor. The red voltmeter probe defines which resistor terminal we consider to be the $+$ polarity. The black probe defines the $-$ voltage polarity. 

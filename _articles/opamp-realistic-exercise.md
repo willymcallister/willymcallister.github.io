@@ -156,7 +156,7 @@ Open-loop $3\,\text{dB}$ point is $0.15848932\,\text{Hz}$
 
 Jacob White was one of the folks who wrote the book on numerical simulations for circuits in the 80's and 90's so I'm sure there's some genius stuff going on. If I'm looking at the right part it just looks like a **current source driving a resistor** with a **gain based off of the gain** (so he's summing some internal feedback)... Then whatever the output ends up being he assigns that to the appropriate supply. - Joe Steinmeyer
 
-http://www.analog-electronics.eu/-electronics/modified-nodal-analysis/modified-nodal-analysis.xhtml 
+https://www.analog-electronics.eu/-electronics/modified-nodal-analysis/modified-nodal-analysis.xhtml 
 
 
 https://ieeexplore.ieee.org/document/1015781 L. M. Wedepohl and L. Jackson, “Modified nodal analysis: an essential addition to electrical circuit theory and analysis,” Engineering Science and Education Journal, vol. 11, pp. 84–92, June 1992.
@@ -179,4 +179,4 @@ https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNAMatrixRulesOpAmp.html Rule
 
 https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA2.html Simple example of MNA for just passives.
 
-http://www.analog-electronics.eu/analog-electronics/modified-nodal-analysis/modified-nodal-analysis.xhtml Modified Nodal Analysis---the inspiration for Circuit Sandbox's simulation engine. This link may come alive in the future. In the meantime, here's a [copy of the article]({% link _articles/modified-nodal-analysis.pdf %}).
+https://www.analog-electronics.eu/analog-electronics/modified-nodal-analysis/modified-nodal-analysis.xhtml Modified Nodal Analysis---the inspiration for Circuit Sandbox's simulation engine. This link may come alive in the future. In the meantime, here's a [copy of the article]({% link _articles/modified-nodal-analysis.pdf %}).

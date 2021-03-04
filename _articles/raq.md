@@ -324,7 +324,7 @@ Answer: $1$ nanoliter is the volume of a cube $100$ microns on a side.
 
 $1$ cubic micron, $\mu^3 = 10^{-6}$ nanoliter
 
-$1$ red blood cell $= 100 \,\mu^3$, [source](http://book.bionumbers.org/how-big-is-a-human-cell/)
+$1$ red blood cell $= 100 \,\mu^3$, [source](https://book.bionumbers.org/how-big-is-a-human-cell/)
 {% endcapture %}{% include details.html %}
 
 #### How many water molecules are there in a raindrop?

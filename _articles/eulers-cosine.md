@@ -25,7 +25,7 @@ Cosine (the orange dot) is the vector sum of green and red.
 Created by Willy McAllister.
 
 <small>Just music, no narration. The background music is *NirvanaVEVO* by Chris Zabriskie,  
-[Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/), [Source](http://chriszabriskie.com/uvp/), [Artist](http://chriszabriskie.com/)</small>
+[Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/), [Source](https://chriszabriskie.com/uvp/), [Artist](https://chriszabriskie.com/)</small>
 {% comment %}https://bulbahsan.github.io/youtube-library-player/youtube-library-player/index.html{% endcomment %}
 
 <small>Animated with d3.js, [source code](https://github.com/willymcallister/willymcallister.github.io/blob/master/_includes/d3a/eulers-cosine-d3.html).</small>
