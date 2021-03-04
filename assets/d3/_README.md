@@ -1,6 +1,6 @@
 # Spinning Numbers D3.js graphs
 
-This repository contains the code for static images (graphs) for spinningnumbers.org. The images are created with [D3.js](http://d3js.org). I chose this as an alternative to Khan Academy's [graphie](http://graphie-to-png.kasandbox.org/) program. I use D3js for static and animated graphs that require computed waveforms like exponentials or sines.
+This repository contains the code for static images (graphs) for spinningnumbers.org. The images are created with [D3.js](https://d3js.org). I chose this as an alternative to Khan Academy's [graphie](http://graphie-to-png.kasandbox.org/) program. I use D3js for static and animated graphs that require computed waveforms like exponentials or sines.
 
 ## D3 static images
 
