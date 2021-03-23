@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- Substantial upgrade to the [RC Step Response]({% link _topics/topic-natural-and-forced-response.md %}#rc-step-response) articles, and I share some interesting things I learned about [Forced Response]({% link _articles/forced-response.md %}).
+New --- Circuit Sandbox is now available en français.
 
 ---
 
@@ -49,6 +49,9 @@ Electric force is described by Coulomb's Law. Electric field. Formal definition 
 
 ### [Digital electronics]({% link _topics/topic-digital.md %})
 Basic concepts underlying digital hardware design.
+
+### [Signals]({% link _topics/topic-signals.md %})
+Basic concepts of signal processing. Properties of sine waves. (under development) 
 
 ### [Circuit sandbox simulator]({% link _articles/circuit-sandbox.md %})
 

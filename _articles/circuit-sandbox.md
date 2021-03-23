@@ -305,6 +305,7 @@ Circuit Sandbox is available in,
 * Hindi, hi.js (courtesy of Aniruddh Pratap Singh, a 12th grade student who wants to become an engineer.)
 * Portuguese, pt-BR.js (courtesy of Luís F. V. Peres, graduando em engenharia elétrica de Universidade de São Paulo)
 * Hungarian, hu.js (courtesy of Török Attila)
+* French, fr.js (contributed by Laurent Defoy, Institute De La Providence Herve, Belgium)
 
 ## The Circuit Sandbox was created at MIT
 
@@ -324,7 +325,7 @@ An excellent version of SPICE is available from [Linear Technology](https://www.
 
 Note: Linear Technologies was purchased by [Analog Devices](https://www.analog.com) in 2017. The web sites have been merged together.
 
-Another simulator is [JADE](http://computationstructures.org/exercises/sandboxes/jade.html). This is also a creation of Chris Terman at MIT. It's a follow-on to Circuit Sandbox with improved features for digital design and logic simulation. Here's an [intro video](http://computationstructures.org/exercises/tool_docs/jade.html).
+Another simulator is [JADE](https://computationstructures.org/exercises/sandboxes/jade.html). This is also a creation of Chris Terman at MIT. It's a follow-on to Circuit Sandbox with improved features for digital design and logic simulation. Here's an [intro video](https://computationstructures.org/exercises/tool_docs/jade.html).
 
 ## Licensing
 
