@@ -16,13 +16,13 @@ A simulator for learning about circuits. Circuit Sandbox includes schematic capt
         <td>English</td>
         <td>Español</td>
         <td>Português</td>
-        <td>&nbsp;</td>
+        <td>French</td>
     </tr>
     <tr>
+        <td>Magyarul<br>(Hungarian)</td>
         <td>हिन्दी<br>(Hindi)</td>
         <td>日本語<br>(Japanese)</td>
         <td>简体中文<br>(Simplified Chinese)</td>
-        <td>Magyarul<br>(Hungarian)</td>
     </tr>
 </table>
 {:.noborder}
