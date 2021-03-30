@@ -55,7 +55,7 @@ If you connect an external energy source to a circuit its behavior changes. The 
 
 ---
 
-### RC step response
+### RC step
 
 [![]({% link i/article.svg %}) RC step response --- intuition]({% link _articles/rc-step-response-intuition.md %})
 
