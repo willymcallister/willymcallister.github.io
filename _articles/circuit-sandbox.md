@@ -329,7 +329,7 @@ Another simulator is [JADE](https://computationstructures.org/exercises/sandboxe
 
 ## Licensing
 
-© 2017-20 Willy McAllister, © 2012 EdX, © 2011, 2018 MIT EECS
+© 2017-Present Willy McAllister, © 2012 EdX, © 2011, 2018 MIT EECS
 
 This work is licensed under the Creative Commons ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)) Attribution-NonCommercial-ShareAlike 4.0 International. 
 
