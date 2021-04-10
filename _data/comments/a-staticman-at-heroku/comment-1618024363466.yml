@@ -1,0 +1,11 @@
+_id: 9d97bf70-99aa-11eb-b327-fdf446cd7c44
+_parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
+replying_to: '14'
+message: >-
+  I don't think there's anything specific to Jekyll in Staticman. All the
+  triggering logic is in the comment form submission. The response is sent to
+  your comments folder with an assumed structure.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-04-10T03:12:43.462Z'
