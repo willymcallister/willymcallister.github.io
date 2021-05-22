@@ -1,0 +1,14 @@
+_id: 16129f90-bb27-11eb-9553-45a6ad8bf25b
+_parent: 'https://spinningnumbers.org/a/demorgan2.html'
+replying_to: '1'
+message: >-
+  Gadgets - There is no simple way to implement a 4I OR function with NANDs. If
+  you limit yourself to just 2I NAND gates you create three OR functions and
+  combine them to get a 4I OR. Each OR function is three NAND gates. Two are
+  configured as inverters for the inputs. The output of the two inverters are
+  combined with a third NAND. If you draw that NAND with its DeMorgan "or"
+  symbol you can more easily see the overall OR function.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-05-22T17:56:51.539Z'
