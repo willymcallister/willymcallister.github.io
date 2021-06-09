@@ -7,7 +7,7 @@ comments: true
 
 We demonstrate [DeMorgan's theorem]({{ site.baseurl }}{% link _articles/demorgan.md %}) in action.
 
-DeMorgan makes it easier to read logic diagrams and lets you clearly show your *design intent*. Your logic designs become easier to understand and much easier to get right.
+DeMorgan's theorem makes it easier to read logic diagrams. It lets you clearly show the *intent* of your design. Logic diagrams become easier to understand and *much* easier to get right.
 
 Written by Willy McAllister.
 
