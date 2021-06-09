@@ -1,0 +1,10 @@
+_id: ce5bc9a0-9999-11eb-8adb-9f67f8bdcf1f
+_parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
+replying_to: ''
+message: >-
+  Does this work without Jekyll? I have a custom generator like Jekyll that I
+  made with Jinja2 templates, so I assume it still would.
+name: Breadcrumb
+email: 65ee840d204f150fc6f5a71bfeb0fb44
+hp: ''
+date: '2021-04-10T01:12:24.106Z'
