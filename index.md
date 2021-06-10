@@ -29,7 +29,7 @@ Kirchhoff's Laws, node voltage method, mesh and loop current methods.
 Linearity and superposition. Source transformation. Thévenin and Norton equivalents.
 
 ### [Natural and forced response]({% link _topics/topic-natural-and-forced-response.md %})
-Natural response is what a circuit does with its own internal stored energy.  
+Capacitor and inductor $i$-$v$ equations. Natural response is what a circuit does with its internal stored energy. Forced response is due to energy applied from outside. 
 
 ### [AC circuit analysis]({% link _topics/topic-ac-analysis.md %})
 If we limit signals to only sine waves, we get AC analysis based on complex exponentials. 
