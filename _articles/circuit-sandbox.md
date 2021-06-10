@@ -7,7 +7,7 @@ comments: true
 
 [![Run circuit sandbox]({% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]]){:target="_blank"}  
 
-A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. The circuit simulation engine is written entirely in JavaScript---it is not a version of SPICE. Circuit Sandbox analyzes circuits using [Modified Nodal Analysis (MNA)](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html).
+A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. The circuit simulation engine is written entirely in JavaScript---it is not a version of SPICE. The Circuit Sandbox simulation engine is based on [Modified Nodal Analysis (MNA)](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html).
 
 [![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html){:target="_blank"} simulator with selectable language,
 
@@ -164,7 +164,7 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 The simulator has simple models for semiconductor devices and an ideal operational amplifier. Each model has just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
 
-The simulator's solver is based on the linear algebra technique of MNA, which stands for *Modified Nodal Analysis*. MNA is an extension of Kirchhoff's Current Law.
+The simulator's solver a technique called *Modified Nodal Analysis* (MNA), based on the application of Kirchhoff's Current Law. (Whereas the SPICE simulator is based on Kirchhoff's Voltage Law.)
 
 ### Diode model
 
@@ -178,7 +178,7 @@ Setting the area is equivalent to placing that many diodes in parallel.
 
 Circuit Sandbox has two opamp models, an ideal model and a realistic model with power supply pins and non-perfect input and output resistance.
 
-#### Ideal model
+#### Ideal opamp model
 {:.no_toc}
 
 The ideal opamp symbol has two inputs ($\sf v$+ and $\sf v$-) and an output ($\sf{vo}$). There are no positive and negative power supply inputs. The extra input, $\sf{vg}$, is the reference for the output voltage. 
@@ -187,22 +187,20 @@ The ideal opamp symbol has two inputs ($\sf v$+ and $\sf v$-) and an output ($\s
 
 The defining equation for the opamp is: $(\sf{vo} - \sf{vg}) = \text A(\sf v$+ $\,- \,\,\sf v$-$)$
 
-The default gain is $\text A = 30{,}000$. If the input voltages are identical then the output voltage will be $\sf{vg}$. If you plan on symmetric power supply voltages, connect $\sf{vg}$ to ground. If they are not symmetric set $\sf{vg}$ half way between whatever power inputs you intend for your opamp. 
+The default gain is $\text A = 30{,}000$. You can change it to anything you want. If the input voltages are identical then the output voltage will be $\sf{vg}$. To simulate symmetric power supply voltages, connect $\sf{vg}$ to ground. To simulate a single-sided power supply (one side is ground, the other is $\text{+Vs}$) set $\sf{vg}$ to $\text{Vs}/2$. It is your responsibility to make sure $\sf{vo}$ stays between the power rails.
 
 {% capture details %}
-The simulation model for the ideal op-amp does not work by finding the voltage at its output based on the inputs, but rather it assumes the difference between its two input terminals is zero.
+The MNA simulation model for the ideal op-amp *assumes* the difference between its two input terminals is zero. It is your responsibility make sure the circuit surrounding the opamp causes this to be true. 
 
-$1/A(v(no) - v(ng)) - (v(np)-v(nn))) = 0$
+The two assumptions for the ideal op-amp (zero input current, zero potential difference at the inputs) only hold if the surrounding circuit is properly configured for negative feedback. The solver may give erroneous results if negative feedback is not present. 
 
-The two assumptions for the ideal op-amp (zero input current, zero potential difference at the inputs) only hold if the surrounding circuit is properly configured for negative feedback. Because of this, the solver may give erroneous results if negative feedback is not present. This problem actually persists in many commercial circuit simulators---if you hook up a circuit with the input terminals reversed (so it would not operate properly in practice due to lack of negative feedback) the simulation may behave as if there is no problem. 
+The output of the ideal op-amp is not limited by any power supply rail---it will happily generate hundreds of volts on the output.
 
-Note also the output of the ideal op-amp is not limited by any power supply---this circuit will happily generate hundreds of volts on the output.
-
-Reference [link](https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNA5.html)
+See [Modified Nodal Analysis - Swarthmore](https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNA5.html#Caveats)
 {% endcapture %}
 {% capture summary %}Caveats{% endcapture %}{% include details.html %}
 
-#### Realistic model
+#### Realistic opamp model
 {:.no_toc}
 
 The realistic opamp model symbol includes power pins,
