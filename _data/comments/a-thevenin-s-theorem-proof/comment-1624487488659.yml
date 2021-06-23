@@ -1,0 +1,8 @@
+_id: c00e3950-d472-11eb-aba1-ad3ab40d5f75
+_parent: 'https://spinningnumbers.org/a/thevenin-proof.html'
+replying_to: ''
+message: "Hi Willy! Stupendous article. Your chosen orientation of introducing the topic, with a specific example first followed by the general proof, is magnitudes more understandable than the traditional mathematical route of proof first: example later. It's not like the theorem popped into the enlightened minds of Helmholtz or Thévenin on one bright, sunny day! Other creators on YouTube like 3Blue1Brown echo this pedagogy as well.\r\n\r\nAlternatively, have you considered if a similar proof/derivation could be made for Norton's theorem? I suppose you would convert all of the arguments, substituting current division in for voltage division and likewise for the Ohm's Law claims, to arrive at an equation similar only in group variables. Once you peek under the hood of, say, V_T or I_T, it would make sense for their representations to be different.\r\n\r\nCheers!"
+name: Nick Schrombeck
+email: ee629d93e3ddbf7bb0b8560500a7b8a2
+hp: ''
+date: '2021-06-23T22:31:28.656Z'
