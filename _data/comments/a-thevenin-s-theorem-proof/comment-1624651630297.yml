@@ -1,0 +1,8 @@
+_id: ec687c70-d5f0-11eb-9fba-a779ecaef368
+_parent: 'http://localhost:4000/a/thevenin-proof.html'
+replying_to: '4'
+message: "Toi - Sorry for the very response. That made-up current source is indeed puzzling. Let me try to justify it. If you look at the example circuit you see a 2k resistor on the far right. We consider it the \"load\" resistor drawing current from the rest of the circuit. If you change the value of that resistor the current _i_ will go up or down. That resistor gets taken away as we derive the Thevenin equivalent of what's left. \r\n\r\nAs we work on the solution we want to account for that current _i_. We can't just set it to zero, because it is only zero when the load is disconnected. We have to account for all possible load resistors. One choice would be to connect a general valued load resistor, RL. This RL allows a voltage and a current to appear at the port. Then your goal would be to develop an expression that looks like v = VT - iRT that does not mention RL. (Remember, RL is not inside the Thevenin Equivalent.) I don't know how to do that. \r\n\r\nWhat are the other choices for things you could connect? Could be a voltage source, or it could be a current source. Either of these will allow a voltage to appear and a current to flow out of the port. The current source turns out to produce a simpler math.\r\n\r\nSo the real answer is: If we use a resistor load the math is too hard, so a current source works better."
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-06-25T20:07:10.293Z'
