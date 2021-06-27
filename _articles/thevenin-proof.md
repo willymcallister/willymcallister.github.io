@@ -34,7 +34,7 @@ Any combination of resistors and sources can be simplified down to a single curr
 
 One of the surprising concepts from linear circuit theory is the idea that two circuits can be *equivalent*. Two circuits are equivalent if they display the same $i$-$v$ behavior *at a selected port*. Thévenin's theorem says: A complicated linear circuit can be replaced with an equivalent Thévenin circuit made from one voltage source in series with one resistor. 
 
-In an earlier article, [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}), we learned how to turn any resistor network into a single resistor. Thévenin's theorem is the next step. It teaches us how to simplify a network of resistors *and* sources. If you have a complicated circuit the theorem shows you how to construct a simple equivalent circuit. 
+In an earlier article, [simplifying resistor networks]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}), we learned how to turn any resistor network into a single resistor. That's an example of equivalence. Thévenin's theorem is the next step. It shows us how to simplify a network of resistors *and* sources. If you have a complicated circuit the theorem shows you how to construct a simple equivalent circuit. 
 
 In this article we prove Thévenin's theorem using the principle of [superposition]({{ site.baseurl }}{% link _articles/superposition.md %}). The [following article]({{ site.baseurl }}{% link _articles/thevenin-howto.md %}) shows practical steps to create a Thévenin equivalent of a circuit. The proof and the practical design steps are separate ideas, often mixed together in many texts. 
 
@@ -69,7 +69,7 @@ The demonstration is pretty clever. We use the the principle of superposition. (
 
 {% capture summary %}linearity and superposition{% endcapture %}  
 {% capture details %}  
-This proof relies on your understanding of linearity and the resulting circuit analysis method called superposition. If you want to refresh on these important theories, please take a break from this proof and visit <a href="/a/linearity.html">linearity</a> and <a href="/a/superposition.html">superposition</a>. Then come back and finish up this proof.  
+This proof relies on your understanding of linearity and the resulting circuit analysis method called superposition. If you want to refresh on these important ideas, please take a break from this proof and visit <a href="/a/linearity.html">linearity</a> and <a href="/a/superposition.html">superposition</a>. Then come back and finish up here.  
 {% endcapture %}{% include details.html %} 
 
 ### Review - solve a circuit with superposition
@@ -77,7 +77,7 @@ This proof relies on your understanding of linearity and the resulting circuit a
 To solve a circuit using superposition, 
 
 * Break the circuit up into multiple sub-circuits. Create one sub-circuit for each independent source.
-* To create a sub-circuit keep one source and turn off or *suppress* all the others.  
+* To create a sub-circuit keep one source turned on and turn off or *suppress* all the others.  
     - To suppress a *voltage* source, replace it with a *short* circuit.
     - To suppress a *current* source, replace it with an *open* circuit.  
 
@@ -93,9 +93,9 @@ Before diving into the proof, we do a clever trick. We connect something to the 
 Linear network with an external current source connected to the port.
 {: .caption :}
 
-The external current source contributes something special to the superposition solution. The extra current source means one sub-circuit has *all* internal sources suppressed, which leaves just a resistor network. 
+The external current source contributes something special to the superposition solution---one sub-circuit will have *all* internal sources suppressed, leaving just a resistor network. 
 
-This made-up current source may sound bogus, but please wait and see what happens.
+This made-up current source may sound bogus, but wait and see what happens.
 
 {% capture summary %}alternatives to a current source{% endcapture %}  
 {% capture details %}  
@@ -104,7 +104,7 @@ Plugging in a current source is the simplest way to get control of $i$. It's pos
 
 ### Solve by superposition
 
-The first step in a superposition problem is to draw all the sub-circuits, one for each source. Each sub-circuit leaves one source on and suppresses the others. Then we analyze each sub-circuit. Finally we add up (superimpose) the individual contributions to get the overall answer. With three sources we build three sub-circuits to get three contributions to $v$. 
+The first step in a superposition solution is to draw the sub-circuits, one for each source. Each sub-circuit keeps one source on and suppresses the others. Then we analyze each sub-circuit. Finally we add up (superimpose) the individual contributions to get the overall answer. With three sources we build three sub-circuits to get three contributions to $v$. 
 
 **Sub-circuit 1.** Turn on the $5\,\text V$ source, suppress the others. The two current sources become open circuits. Solve for $v_{5\text V}$,
 
@@ -122,15 +122,14 @@ $v_{5\text V} = 5\,\dfrac{1000}{1000 + 1000} = 2.5\,\text V$
 
 $i = 0$.
 
-Find a single $\text R_\text{equiv}$ to represent the resistor network, then apply the $2\,\text{mA}$ current,
+Find a single $\text R_\text{equiv}$ to represent the resistor network, then apply the $2\,\text{mA}$ current,  
+(The vertical bar symbol $\parallel$ is shorthand for "in parallel with.")
 
 $\text R_\text{equiv} = 500 + 1000 \parallel 1000 = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000}$
 
 $\text R_\text{equiv} = 1000\,\Omega$
 
 $v_{2\,\text{mA}} = 2\,\text{mA}\cdot \text R_\text{equiv} = 2\,\text{mA}\cdot 1000\Omega = 2\,\text V$
-
-(The vertical bar symbol $\parallel$ is shorthand for "in parallel with.")
 
 **Sub-circuit 3.** Turn on the external $\text I_\text{ext}$ source, suppress the others. *All* the internal sources are off, leaving only the resistor network from the original circuit. Solve for $v_{\text{Iext}}$,
 
@@ -158,15 +157,19 @@ $v = 2.5 + 2 - 1000\,\text I_\text{ext}$
 
 $v = 4.5 - 1000\,i$
 
+This tells you what the voltage will be at the port for any current $i$ flowing out of the port.
+
 **Equivalent circuit.** Can we construct a circuit with one voltage source and one resistor that obeys this same $i$-$v$ equation? Yes we can! Here it is,
 
 ![Thévenin equivalent of example circuit]({{ site.baseurl }}{% link i/thevenin27.svg %}){: .centered :}
+
+$v = 4.5 - 1000\,i$
 
 The values for the voltage source and resistor are pulled straight out of the equation. When $i = 0$ there is no voltage drop across the resistor and the voltage on the port is $4.5\,\text V$. When $i$ is not $0$ the port voltage is $4.5\,\text V$ minus whatever voltage drop appears across the resistor, $-1000\,i$.
 
 This circuit is the *Thévenin equivalent* of the circuit we started with. $4.5\,\text V$ is the *Thévenin voltage*. $1000\,\Omega$ is the *Thévenin resistance*. 
 
-This model is valid for the particular port we selected. The $i$-$v$ behavior is *exactly the same* as the original circuit, for any $i$ and any $v$. Connect any load to the port of the Thévenin equivalent and the same current and voltage appear, just like the original circuit.
+This model is valid for the particular port we selected. The $i$-$v$ behavior is *exactly* the same as the original circuit, for any $i$ and any $v$. Connect any load to the port of the Thévenin equivalent and the same current and voltage appear, just like the original circuit.
 
 ### Simulation models
 
@@ -176,8 +179,10 @@ Open this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.h
 * Look at the current and voltage for the $2\,\text k\Omega$ load resistor on the right. Are they the same? 
 * Change the load resistor in both circuits by double-clicking on the resistor symbols. Change RL and RLth to anything, but make them the same value. 
 * Run DC analysis again. 
+* What happens to the current and voltage on the load resistor? 
+* Are $i$ and $v$ the same for any load resistor value you pick? 
 
-What happens to the current and voltage on the load resistor? Are $i$ and $v$ the same for any load resistor value you pick? They are always the same because both circuits have the same $i$-$v$ equation. Pretty cool, eh? This is what is meant by an *equivalent* circuit.
+They are always the same because both circuits have the same $i$-$v$ equation. Pretty cool, eh? This is what it means to be an *equivalent* circuit.
 
 Try out this [simulation model](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["w",[392,192,368,192]],["w",[328,192,352,192]],["w",[304,256,392,256]],["w",[392,192,392,200]],["w",[248,200,248,192]],["w",[248,248,248,256]],["w",[392,248,392,256]],["w",[248,256,304,256]],["a",[352,192,0],{"color":"magenta","offset":"0","_json_":8},["9","1"]],["w",[312,136,256,136]],["w",[208,136,256,136]],["g",[304,256,0],{"_json_":11},["0"]],["w",[248,192,280,192]],["r",[328,192,5],{"name":"Rth","r":"1k","_json_":13},["9","8"]],["v",[248,200,4],{"name":"Vth","value":"dc(4.5)","_json_":14},["8","0"]],["a",[352,72,0],{"color":"magenta","offset":"0","_json_":15},["5","2"]],["g",[256,136,0],{"_json_":16},["0"]],["w",[392,128,392,136]],["w",[312,128,312,136]],["w",[104,136,208,136]],["w",[208,128,208,136]],["w",[104,128,104,136]],["w",[312,80,312,72]],["w",[392,72,392,80]],["w",[232,72,208,72]],["w",[208,80,208,72]],["w",[104,72,136,72]],["w",[104,80,104,72]],["r",[208,80,0],{"name":"R2","r":"1000","_json_":28},["3","0"]],["r",[232,72,3],{"name":"R3","r":"500","_json_":29},["3","6"]],["r",[184,72,5],{"name":"R1","r":"1k","_json_":30},["4","7"]],["i",[312,128,2],{"name":"I","value":"dc(2.m)","_json_":31},["0","5"]],["v",[104,80,4],{"name":"V","value":"dc(5)","_json_":32},["7","0"]],["a",[288,72,0],{"color":"magenta","offset":"0","_json_":33},["6","5"]],["w",[280,72,288,72]],["w",[312,72,304,72]],["a",[192,72,0],{"color":"magenta","offset":"0","_json_":36},["4","3"]],["w",[184,72,192,72]],["w",[392,136,312,136]],["w",[368,72,392,72]],["w",[352,72,312,72]],["i",[392,80,0],{"name":"","value":"dc(1m)","_json_":41},["2","0"]],["i",[392,200,0],{"name":"","value":"dc(1m)","_json_":42},["1","0"]],["view",-11.5,21.30000000000001,1.5625,"50","10","1G",null,"100","0.01","1000"]]){:target="_blank"} where the external load has been changed to a current source.
 
@@ -188,7 +193,7 @@ Try out this [simulation model](https://spinningnumbers.org/circuit-sandbox/inde
 
 The Thévenin equivalent still works when loaded with a current source. 
 
-* For more fun, change the load to a voltage source see what happens. 
+* Change the load to a voltage source see what happens. 
 
 ## Proof of Thévenin's theorem
 
@@ -346,9 +351,9 @@ The various pieces of the proof become the basis for a step-by-step process to f
 
 The two theorems have an interesting history and naming honors. 
 
-Thévenin's theorem was derived in 1853 by German scientist Hermann von Helmholtz and independently thirty years later---in 1883---by Léon Charles Thévenin, an electrical engineer with the national phone company of France, Postes et Télégraphes Telecommunications (PTT). The first publication by Helmholtz did not become widely known. Thirty years later, Thévenin thought he had invented something new. In the United States, we give Thévenin name credit. Don't be sad for Helmholtz though. His name is on plenty of great ideas in engineering and physics.
+Thévenin's theorem was derived in 1853 by German scientist Hermann von Helmholtz and independently thirty years later---in 1883---by Léon Charles Thévenin, an electrical engineer with the national phone company of France, Postes et Télégraphes Telecommunications (PTT). The first publication by Helmholtz did not become widely known. Thirty years later, Thévenin thought he had invented something new. In the United States, we give Thévenin name credit. Don't feel sad for Helmholtz though. His name is on plenty of great ideas in engineering and physics.
 
-Norton's theorem was derived by Hans Ferdinand Mayer a researcher at Siemens & Halske, and independently derived by Edward Lawry Norton, an engineer at Bell Labs. They published their work the same month in 1926. The theorem may also be called the Mayer-Norton theorem.
+Norton's theorem was derived by Hans Ferdinand Mayer, a researcher at Siemens & Halske in Germany, and independently derived by Edward Lawry Norton, an engineer at Bell Labs. They published their work the same month in 1926. The theorem may also be called the Mayer-Norton theorem.
 
 Back then engineering discoveries did not travel widely or rapidly. Now we have the Web but these people did not. If you know other names for these theorems I would be interested to hear from you.
 

@@ -122,16 +122,11 @@ Here is the circuit with the two internal sources suppressed---the voltage sourc
 
 ![Circuit to find RT, sources suppressed]({{ site.baseurl }}{% link i/thevenin30.svg %}){: .centered :}
 
-With all the sources gone, what's left? A resistor network. So let's reduce the network to a single equivalent resistance,
+With all the sources gone, what's left? A resistor network. So let's reduce the network to a single equivalent resistance ($\parallel$ is a shorthand notation for "in parallel with"),
 
 $\bold R = 500 + (1000 \parallel 1000) = 500 + \dfrac{1000 \cdot 1000}{1000 + 1000}$
 
 $\bold R = 1000\,\Omega$
-
-{% capture summary %}$\parallel${% endcapture %}  
-{% capture details %}  
-$\parallel$ is a shorthand notation for "in parallel with"  
-{% endcapture %}{% include details.html %} 
 
 #### Thévenin voltage
 {:.no_toc}
