@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-[![Run circuit sandbox]({% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]]){:target="_blank"}  
+[![Run circuit sandbox]({% link i/circuit_sandbox2.jpg %}){: height="180px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B264%2C80%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B272%2C72%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B152%2C136%2C208%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C136%2C208%2C136%5D%5D%2C%5B%22g%22%2C%5B208%2C136%2C0%5D%2C%7B%22_json_%22%3A5%7D%2C%5B%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C128%2C152%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C128%2C264%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C256%2C64%5D%5D%2C%5B%22w%22%2C%5B232%2C64%2C240%2C64%5D%5D%2C%5B%22a%22%2C%5B240%2C64%2C0%5D%2C%7B%22color%22%3A%22magenta%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A10%7D%2C%5B%222%22%2C%22Vout%22%5D%5D%2C%5B%22L%22%2C%5B272%2C72%2C0%5D%2C%7B%22label%22%3A%22Vout%22%2C%22_json_%22%3A11%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22v%22%2C%5B152%2C80%2C0%5D%2C%7B%22name%22%3A%22Vin%22%2C%22value%22%3A%22step(0%2C1%2C0%2C1n)%22%2C%22_json_%22%3A12%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B232%2C64%2C1%5D%2C%7B%22name%22%3A%22R1%22%2C%22r%22%3A%221k%22%2C%22_json_%22%3A13%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22c%22%2C%5B264%2C80%2C0%5D%2C%7B%22name%22%3A%22C1%22%2C%22c%22%3A%221u%22%2C%22_json_%22%3A14%7D%2C%5B%22Vout%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C80%2C152%2C64%5D%5D%2C%5B%22w%22%2C%5B152%2C64%2C184%2C64%5D%5D%2C%5B%22s%22%2C%5B264%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A17%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22view%22%2C86.928%2C19.6336%2C3.0517578125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%226m%22%2C%221000%22%5D%5D){:target="_blank"}  
 
 A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. The circuit simulation engine is written entirely in JavaScript---it is not a version of SPICE.
 
@@ -47,7 +47,7 @@ YOU DON'T NEED TO READ THE REST OF THIS UNLESS YOU GET STUCK.
 
 To create a circuit, drag components from the part bin on the right onto the schematic.
 
-[![Run circuit sandbox]({% link i/circuit_sandbox_schematic.png %}){: height="340px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]]){:target="_blank"}
+[![Run circuit sandbox]({% link i/circuit_sandbox_schematic.png %}){: height="340px" :}{: .centered :}](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B264%2C80%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B272%2C72%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B152%2C136%2C208%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C136%2C208%2C136%5D%5D%2C%5B%22g%22%2C%5B208%2C136%2C0%5D%2C%7B%22_json_%22%3A5%7D%2C%5B%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C128%2C152%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C128%2C264%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C256%2C64%5D%5D%2C%5B%22w%22%2C%5B232%2C64%2C240%2C64%5D%5D%2C%5B%22a%22%2C%5B240%2C64%2C0%5D%2C%7B%22color%22%3A%22magenta%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A10%7D%2C%5B%222%22%2C%22Vout%22%5D%5D%2C%5B%22L%22%2C%5B272%2C72%2C0%5D%2C%7B%22label%22%3A%22Vout%22%2C%22_json_%22%3A11%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22v%22%2C%5B152%2C80%2C0%5D%2C%7B%22name%22%3A%22Vin%22%2C%22value%22%3A%22step(0%2C1%2C0%2C1n)%22%2C%22_json_%22%3A12%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B232%2C64%2C1%5D%2C%7B%22name%22%3A%22R1%22%2C%22r%22%3A%221k%22%2C%22_json_%22%3A13%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22c%22%2C%5B264%2C80%2C0%5D%2C%7B%22name%22%3A%22C1%22%2C%22c%22%3A%221u%22%2C%22_json_%22%3A14%7D%2C%5B%22Vout%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C80%2C152%2C64%5D%5D%2C%5B%22w%22%2C%5B152%2C64%2C184%2C64%5D%5D%2C%5B%22s%22%2C%5B264%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A17%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22view%22%2C86.928%2C19.6336%2C3.0517578125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%226m%22%2C%221000%22%5D%5D){:target="_blank"}
 
 Sample output: Click on **TRAN** to perform a *transient* analysis, a plot of voltage vs. time.
 
@@ -88,7 +88,7 @@ To create the $\text{RC}$ circuit shown above, follow these steps starting from 
 * Click OK. The simulation is performed and a plot should appear.
 {% endcapture %}{% include details.html %} 
 
-Here is the completed [$\underline{\text{RC}}$ circuit](https://spinningnumbers.org/circuit-sandbox/index.html?value=[["s",[264,64,0],{"color":"cyan","offset":"0","_json_":0},["Vout"]],["w",[152,64,184,64]],["w",[152,80,152,64]],["c",[264,80,0],{"name":"C1","c":"1u","_json_":3},["Vout","0"]],["r",[232,64,1],{"name":"R1","r":"1k","_json_":4},["1","2"]],["v",[152,80,0],{"name":"Vin","value":"step(0,1,0,1n)","_json_":5},["2","0"]],["L",[272,72,0],{"label":"Vout","_json_":6},["Vout"]],["a",[240,64,0],{"color":"magenta","offset":"0","_json_":7},["1","Vout"]],["w",[232,64,240,64]],["w",[264,64,256,64]],["w",[264,128,264,136]],["w",[152,128,152,136]],["g",[208,136,0],{"_json_":12},["0"]],["w",[264,136,208,136]],["w",[152,136,208,136]],["w",[272,72,264,72]],["w",[264,64,264,72]],["w",[264,80,264,72]],["view",84.428,21.1336,3.0517578125,"50","10","1G",null,"100","6m","1000"]]){:target="_blank"}.
+Here is the completed [$\underline{\text{RC}}$ circuit](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B264%2C80%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B272%2C72%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B152%2C136%2C208%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C136%2C208%2C136%5D%5D%2C%5B%22g%22%2C%5B208%2C136%2C0%5D%2C%7B%22_json_%22%3A5%7D%2C%5B%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C128%2C152%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C128%2C264%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C256%2C64%5D%5D%2C%5B%22w%22%2C%5B232%2C64%2C240%2C64%5D%5D%2C%5B%22a%22%2C%5B240%2C64%2C0%5D%2C%7B%22color%22%3A%22magenta%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A10%7D%2C%5B%222%22%2C%22Vout%22%5D%5D%2C%5B%22L%22%2C%5B272%2C72%2C0%5D%2C%7B%22label%22%3A%22Vout%22%2C%22_json_%22%3A11%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22v%22%2C%5B152%2C80%2C0%5D%2C%7B%22name%22%3A%22Vin%22%2C%22value%22%3A%22step(0%2C1%2C0%2C1n)%22%2C%22_json_%22%3A12%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B232%2C64%2C1%5D%2C%7B%22name%22%3A%22R1%22%2C%22r%22%3A%221k%22%2C%22_json_%22%3A13%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22c%22%2C%5B264%2C80%2C0%5D%2C%7B%22name%22%3A%22C1%22%2C%22c%22%3A%221u%22%2C%22_json_%22%3A14%7D%2C%5B%22Vout%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C80%2C152%2C64%5D%5D%2C%5B%22w%22%2C%5B152%2C64%2C184%2C64%5D%5D%2C%5B%22s%22%2C%5B264%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A17%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22view%22%2C86.928%2C19.6336%2C3.0517578125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%226m%22%2C%221000%22%5D%5D){:target="_blank"}.
 
 ## Help 
 
@@ -162,7 +162,7 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 ## Device models
 
-The simulator has simple models for semiconductor devices and an ideal operational amplifier. Each model has just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
+The simulator has simple models for semiconductor devices (diode, bjt, mosfet) and two operational amplifiers. Each model has just a few adjustable parameters. For more sophisticated simulations, check out the other circuit simulator resources mentioned below. 
 
 The simulator's solver a technique called [Modified Nodal Analysis (MNA)](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html), based on the application of Kirchhoff's Current Law. (Whereas the SPICE simulator is based on Kirchhoff's Voltage Law.)
 
@@ -173,6 +173,34 @@ The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ a
 ![Circuit Sandbox diode symbol]({% link i/circuit_sandbox_diode_symbol.png %}){: height="180px" :}{: .centered :}
 
 Setting the area is equivalent to placing that many diodes in parallel.
+
+### MOSFET model
+
+$\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2$ (SPICE parameter KP)
+
+$\lambda = 0.05\,\text V^-1 \qquad 1/\lambda = 20\,\text V$
+
+Threshold voltage $V_T = 0.5$
+
+**Cut off region**, $V_{GS} \leq V_T$
+
+$I_{D} = 0$
+
+**Non-saturation (Linear) region**, $V_{GS} > V_T$ and $V_{DS} < (V_{GS} - V_T)$
+
+$I_D = \mu C_{ox} \dfrac{W}{L} \left [ (V_{GS} - V_T) V_{DS} - \dfrac{(V_{DS})^2}{2}\right] (1 + \lambda V_{DS})$
+
+$I_D = \mu C_{ox} \dfrac{W}{L} \left [ V_{GS} - V_T - \dfrac{(V_{DS})}{2}\right] V_{DS} (1 + \lambda V_{DS})$
+
+**Saturation region**, $V_{GS} > V_T$ and $V_{DS} > (V_{GS} - V_T)$
+
+$I_{D} = \mu C_{ox} \dfrac{W}{L} \left [ \dfrac{(V_{GS} - V_T)^2}{2} \right] (1 + \lambda V_{DS})$
+
+**Boundary between Linear and Saturation regions**
+
+$I_D = \mu C_{ox} \dfrac{W}{L} (V_{DS})^2$
+
+![mosfet parameters]({% link i/mosfet_parameters.png %}){: height="300px" :}{: .centered :}
 
 ### Opamp model
 
@@ -254,10 +282,16 @@ https://spinningnumbers.org/circuit-sandbox/index.html?parts=g,v,r,s&analyses=dc
 
 A URL parameter list starts with a ? question mark. Each parameter is separated by an & ampersand character. Notice there are no quote marks.
 
-You can also provide an initial schematic. Draw up a circuit and grab the URL with the <i class="fas fa-link"></i> link. The circuit JSON is captured in the value parameter. Append the part and analysis options like this with ampersands,
+You can also provide an initial schematic. Draw up a circuit and grab the URL with the <i class="fas fa-link"></i> link. The circuit JSON is captured in the *value* parameter. Append the *part* and *analysis* options separated by ampersands,
 
 ```
 https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",0.5,36.5,4,"50",null,null,null,"100","0.01","1000"]]&parts=g,v,r,s&analyses=dc,tran
+```
+
+Circuit Sandbox uuencodes links so they survive trips through email. This same link looks like this when uuencoded,
+
+```
+https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B128%2C112%2C104%2C112%5D%5D%2C%5B%22w%22%2C%5B80%2C112%2C104%2C112%5D%5D%2C%5B%22w%22%2C%5B80%2C64%2C128%2C64%5D%5D%2C%5B%22v%22%2C%5B80%2C64%2C0%5D%2C%7B%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A3%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B128%2C64%2C0%5D%2C%7B%22r%22%3A%221%22%2C%22_json_%22%3A4%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22g%22%2C%5B104%2C112%2C0%5D%2C%7B%22_json_%22%3A5%7D%2C%5B%220%22%5D%5D%2C%5B%22view%22%2C0.5%2C36.5%2C4%2Cnull%2Cnull%2Cnull%2Cnull%2C%22100%22%2C%220.01%22%2C%221000%22%5D%5D
 ```
 
 You can do the same thing if you call Circuit Sandbox from an html \<input\> statement---this time with quotes,
@@ -266,9 +300,9 @@ You can do the same thing if you call Circuit Sandbox from an html \<input\> sta
 <input type="hidden" class="schematic" height="400" width="600" parts="g,v,r,s" analyses="dc,tran" value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",25.5,44,4,null,null,null,null,"100","0.01","1000"]]>
 ```
 
-Your choices for analyses are dc, ac, and tran.
+Your choices for analyses are **dc**, **ac**, and **tran**.
 
-Here are your part choices,
+Here are your part choices, each part has a one-letter name,
 ```
     var parts_map = {
         'g': [Ground, "Ground_connection"],

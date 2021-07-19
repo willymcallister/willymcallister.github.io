@@ -1,6 +1,6 @@
 ---
 layout: article
-title:  "Realistic opamp exercise"
+title:  "Realistic opamp"
 author: Willy McAllister
 comments: true
 ---
@@ -16,21 +16,23 @@ comments: true
 
 ---- 
 
-## Introducing a realistic opamp model 
+## Introduction
 
 ![Opamp schematic symbol]({% link i/circuit_sandbox_opamp2_symbol.png %}){: height="200px" :}{: .centered :}
 
-This opamp model is a differential amplifier with realistic properties. It measures the difference in voltage between its two input ports. It amplifies that difference by the gain factor $\text A$ and puts the result on the output port.
+This opamp model is a differential amplifier with semi-realistic properties. It measures the difference in voltage between its two input ports. It amplifies that difference by the gain factor $\text A$ (default: $100{,}000$) and puts the result on the output port.
 
 $\sf{vo} = \text A (\sf v$+ $- \,\,\sf v$-$)$
 
-This realistic opamp model has two power supply pins, $\small{\sf{Vs+}}$ and $\small{\sf{Vs-}}$. The power supplies limit how far the output voltage, $\sf{vo}$, can swing. $\sf{vo}$ always has to be between the two supply voltages. For more details see the [Circuit Sandbox opamp model]({% link _articles/circuit-sandbox.md %}#opamp-model).  
+This realistic opamp model has two power supply pins, $\small{\sf{Vs+}}$ and $\small{\sf{Vs-}}$. The power supplies limit how far the output voltage, $\sf{vo}$, can swing. $\sf{vo}$ is always be between the two supply voltages. 
 
-You can modify various properties by double-clicking on the opamp symbol in the Circuit Sandbox. This model allows you to adjust Gain, Rin (resistance between $\sf v$+ and $\sf v$-), Rout (resistance in series with the output).
+The model has a high input resistance between the input pins (default: $1\,\text M \Omega$), and a small output resistance in series with the output driver (default: $1\,\Omega$). Both of these parameters, and the gain, can be adjusted by double-clicking on the opamp symbol.
 
-### Prepare a simple circuit
+For more details see the [Circuit Sandbox opamp model]({% link _articles/circuit-sandbox.md %}#opamp-model).  
 
-Open this incomplete [realistic opamp schematic](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22L%22%2C%5B208%2C128%2C7%5D%2C%7B%22label%22%3A%22%3F%3F%3F%22%2C%22_json_%22%3A0%7D%2C%5B%22%3F%3F%3F%22%5D%5D%2C%5B%22L%22%2C%5B208%2C64%2C3%5D%2C%7B%22label%22%3A%22%3F%3F%3F%22%2C%22_json_%22%3A1%7D%2C%5B%22%3F%3F%3F%22%5D%5D%2C%5B%22L%22%2C%5B328%2C48%2C3%5D%2C%7B%22label%22%3A%22Vs%2B%22%2C%22_json_%22%3A2%7D%2C%5B%22Vs%2B%22%5D%5D%2C%5B%22L%22%2C%5B328%2C144%2C1%5D%2C%7B%22label%22%3A%22Vs-%22%2C%22_json_%22%3A3%7D%2C%5B%22Vs-%22%5D%5D%2C%5B%22v%22%2C%5B328%2C96%2C0%5D%2C%7B%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A4%7D%2C%5B%2210%22%2C%22Vs-%22%5D%5D%2C%5B%22v%22%2C%5B328%2C48%2C0%5D%2C%7B%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A5%7D%2C%5B%22Vs%2B%22%2C%2210%22%5D%5D%2C%5B%22o2%22%2C%5B184%2C88%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22Gain%22%3A%2210%22%2C%22Rout%22%3A%221%22%2C%22Rin%22%3A%221.0e6%22%2C%22_json_%22%3A6%7D%2C%5B%229%22%2C%228%22%2C%22vout%22%2C%227%22%2C%226%22%5D%5D%2C%5B%22s%22%2C%5B248%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A7%7D%2C%5B%225%22%5D%5D%2C%5B%22w%22%2C%5B248%2C96%2C232%2C96%5D%5D%2C%5B%22v%22%2C%5B56%2C104%2C0%5D%2C%7B%22name%22%3A%22v%2B%22%2C%22value%22%3A%22dc(1.1)%22%2C%22_json_%22%3A9%7D%2C%5B%224%22%2C%223%22%5D%5D%2C%5B%22L%22%2C%5B248%2C96%2C0%5D%2C%7B%22label%22%3A%22vout%22%2C%22_json_%22%3A10%7D%2C%5B%22vout%22%5D%5D%2C%5B%22v%22%2C%5B144%2C104%2C0%5D%2C%7B%22name%22%3A%22v-%22%2C%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A11%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22view%22%2C-11.800000000000011%2C-18.760000000000005%2C1.953125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.0099%22%2C%221000%22%5D%5D){:target="_blank"}.
+## Prepare a simple circuit
+
+Open this incomplete [realistic opamp schematic](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22L%22%2C%5B208%2C128%2C7%5D%2C%7B%22label%22%3A%22%3F%3F%3F%22%2C%22_json_%22%3A0%7D%2C%5B%22%3F%3F%3F%22%5D%5D%2C%5B%22L%22%2C%5B208%2C64%2C3%5D%2C%7B%22label%22%3A%22%3F%3F%3F%22%2C%22_json_%22%3A1%7D%2C%5B%22%3F%3F%3F%22%5D%5D%2C%5B%22L%22%2C%5B328%2C48%2C3%5D%2C%7B%22label%22%3A%22Vs%2B%22%2C%22_json_%22%3A2%7D%2C%5B%22Vs%2B%22%5D%5D%2C%5B%22L%22%2C%5B328%2C144%2C1%5D%2C%7B%22label%22%3A%22Vs-%22%2C%22_json_%22%3A3%7D%2C%5B%22Vs-%22%5D%5D%2C%5B%22v%22%2C%5B328%2C96%2C0%5D%2C%7B%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A4%7D%2C%5B%2210%22%2C%22Vs-%22%5D%5D%2C%5B%22v%22%2C%5B328%2C48%2C0%5D%2C%7B%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A5%7D%2C%5B%22Vs%2B%22%2C%2210%22%5D%5D%2C%5B%22o2%22%2C%5B184%2C88%2C0%5D%2C%7B%22name%22%3A%22%22%2C%22Gain%22%3A%2210%22%2C%22Rout%22%3A%221%22%2C%22Rin%22%3A%221.0e6%22%2C%22_json_%22%3A6%7D%2C%5B%229%22%2C%228%22%2C%22vout%22%2C%227%22%2C%226%22%5D%5D%2C%5B%22s%22%2C%5B248%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A7%7D%2C%5B%225%22%5D%5D%2C%5B%22w%22%2C%5B248%2C96%2C232%2C96%5D%5D%2C%5B%22v%22%2C%5B56%2C104%2C0%5D%2C%7B%22name%22%3A%22v%2B%22%2C%22value%22%3A%22dc(1.1)%22%2C%22_json_%22%3A9%7D%2C%5B%224%22%2C%223%22%5D%5D%2C%5B%22L%22%2C%5B248%2C96%2C0%5D%2C%7B%22label%22%3A%22vout%22%2C%22_json_%22%3A10%7D%2C%5B%22vout%22%5D%5D%2C%5B%22v%22%2C%5B144%2C104%2C0%5D%2C%7B%22name%22%3A%22v-%22%2C%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A11%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22view%22%2C-11.811%2C-18.76%2C1.953125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%220.0099%22%2C%221000%22%5D%5D){:target="_blank"}.
 
 **Double-click on the opamp. Give it a name like "Op1".**
 
@@ -58,7 +60,7 @@ The output resistance is $1\,\Omega$. (Resistance in series with the output pin.
 
 You can leave these values alone most of the time. 
 
-We don't need this opamp any more. Please delete it.  
+We don't need this opamp any more. Please delete it from your schematic.  
 {% endcapture %}{% include details.html %}
 
 Build a circuit,
@@ -182,18 +184,16 @@ https://ieeexplore.ieee.org/document/4321725 Development of Modified Nodal Analy
 
 https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119078388.app2 Modified Nodal Analysis Stamps
 
-Original paper:  
-C. Ho, A. Ruehli, and P. Brennan. The modified nodal approach to network analysis. IEEE Transactions on Circuits and Systems, 22(6):504–509, June 1975.
+Original MNA paper:  
+C. Ho, A. Ruehli, and P. Brennan. The modified nodal approach to network analysis. IEEE Transactions on Circuits and Systems, 22(6):504–509, June 1975. [pdf]({% link assets/MNA75.pdf %})
 
 Swarthmore:  
-Intro: [https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html) (revised version)  
-Opamps: [https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNA5.html](https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNA5.html). The equation for the op-amp is not in terms of the voltage at its output, but rather it specifies that the two input terminals are at the same potential.
+Introduction to Circuit Analysis with Matlab: [https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA1.html) (revised version)  
+Opamps: [https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA5.html](https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA5.html). 
 
-Caveat: The two ideal op-amp assumptions (no input current, no potential difference at inputs) only hold for circuits with negative feedback.  Because of this, the MNA method as applied here can give erroneous results if negative feedback is not present.  This problem actually persists in many commercial circuit simulators -- you can hook up a circuit with the input terminals reversed (so that it would not operate properly in practice due to lack of negative feedback) and the simulation behaves as if there is no problem.  Note also that the output of the op-amp is not limited by any power supply -- this circuit will happily generate hundreds of volts.
+"The equation for the op-amp is not in terms of the voltage at its output, but rather it specifies that the two input terminals are at the same potential."
 
-Rules for Forming MNA Matrices without OpAmps: https://www.swarthmore.edu/NatSci/echeeve1/Ref/mna/MNAMatrixRulesOpAmp.html 
+"Caveat: The two ideal op-amp assumptions (no input current, no potential difference at inputs) only hold for circuits with negative feedback.  Because of this, the MNA method as applied here can give erroneous results if negative feedback is not present.  This problem actually persists in many commercial circuit simulators -- you can hook up a circuit with the input terminals reversed (so that it would not operate properly in practice due to lack of negative feedback) and the simulation behaves as if there is no problem.  Note also that the output of the op-amp is not limited by any power supply -- this circuit will happily generate hundreds of volts."
 
-Simple example of MNA for just passives: https://lpsa.swarthmore.edu/Systems/Electrical/mna/MNA2.html 
-
-Inspiration for Circuit Sandbox's simulation engine,    
+Referenced by Circuit Sandbox's simulation engine,    
 https://www.analog-electronics.eu/analog-electronics/modified-nodal-analysis/modified-nodal-analysis.xhtml. This link may come alive in the future. In the meantime, here's a copy of the article, [MNA]({% link assets/modified-nodal-analysis.pdf %}){:target="_blank"}
