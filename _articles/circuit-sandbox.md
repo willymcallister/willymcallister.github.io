@@ -168,19 +168,21 @@ The simulator's solver a technique called [Modified Nodal Analysis (MNA)](https:
 
 ### Diode model
 
-The default diode saturation current is $\text I_\text s = 1.0\times 10^{-14}$ ampere. The diode's Area parameter scales the saturation current to Area $\times \,\text I_\text s$. 
+![Circuit Sandbox diode symbol]({% link i/circuit_sandbox_diode_symbol.png %}){: height="200px" :}{: .centered :}
 
-![Circuit Sandbox diode symbol]({% link i/circuit_sandbox_diode_symbol.png %}){: height="180px" :}{: .centered :}
-
-Setting the area is equivalent to placing that many diodes in parallel.
+The default saturation current is $\text I_\text s = 1.0\times 10^{-14}$ ampere.  
+The Area parameter scales the saturation current to Area $\times \,\text I_\text s$. 
 
 ### MOSFET model
 
-![Circuit Sandbox nmos fet symbol]({% link i/circuit_sandbox_nmos_symbol.png %}){: height="200px" :}{: .centered :}
+![Circuit Sandbox nmos fet symbol]({% link i/circuit_sandbox_nmos_symbol.png %}){: height="180px" :}$\quad$ ![Circuit Sandbox pmos fet symbol]({% link i/circuit_sandbox_pmos_symbol.png %}){: height="180px" :}  
 
-$\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2\quad$ SPICE parameter KP
+N-type and P-type MOSFETs
+{: .caption :}
 
-$V_T = 0.5\quad$ Threshold voltage 
+$\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2\quad$ (SPICE parameter KP)
+
+$V_T = 0.5\quad$ Threshold voltage (positive number for both N and P types)
 
 $\lambda = 0.05\,\text V^{-1} \qquad 1/\lambda = 20\,\text V$
 
@@ -188,7 +190,7 @@ $\lambda = 0.05\,\text V^{-1} \qquad 1/\lambda = 20\,\text V$
 
 $I_{D} = 0$
 
-**Non-saturation (Linear) region**, $V_{GS} > V_T$ and $V_{DS} < (V_{GS} - V_T)$
+**Linear (Non-saturation) region**, $V_{GS} > V_T$ and $V_{DS} < (V_{GS} - V_T)$
 
 $I_D = \mu C_{ox} \dfrac{W}{L} \left [ V_{GS} - V_T - \dfrac{V_{DS}}{2}\right] V_{DS} \,(1 + \lambda V_{DS})$
 
@@ -201,6 +203,9 @@ $I_{D} = \mu C_{ox} \dfrac{W}{L} \left [ \dfrac{(V_{GS} - V_T)^2}{2} \right] (1 
 $I_D = \mu C_{ox} \dfrac{W}{L} (V_{DS})^2$
 
 ![mosfet parameters]({% link i/mosfet_parameters.png %}){: height="300px" :}{: .centered :}
+
+References: [Univ Colorado](https://ecee.colorado.edu/~bart/book/models4.htm), 
+[UC Berkeley](https://inst.eecs.berkeley.edu/~ee105/fa05/handouts/discussions/Discussion5.pdf)
 
 ### Opamp model
 
