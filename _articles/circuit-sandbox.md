@@ -176,11 +176,13 @@ Setting the area is equivalent to placing that many diodes in parallel.
 
 ### MOSFET model
 
-$\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2$ (SPICE parameter KP)
+![Circuit Sandbox nmos fet symbol]({% link i/circuit_sandbox_nmos_symbol.png %}){: height="200px" :}{: .centered :}
 
-$\lambda = 0.05\,\text V^-1 \qquad 1/\lambda = 20\,\text V$
+$\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2\quad$ SPICE parameter KP
 
-Threshold voltage $V_T = 0.5$
+$V_T = 0.5\quad$ Threshold voltage 
+
+$\lambda = 0.05\,\text V^{-1} \qquad 1/\lambda = 20\,\text V$
 
 **Cut off region**, $V_{GS} \leq V_T$
 
@@ -188,9 +190,7 @@ $I_{D} = 0$
 
 **Non-saturation (Linear) region**, $V_{GS} > V_T$ and $V_{DS} < (V_{GS} - V_T)$
 
-$I_D = \mu C_{ox} \dfrac{W}{L} \left [ (V_{GS} - V_T) V_{DS} - \dfrac{(V_{DS})^2}{2}\right] (1 + \lambda V_{DS})$
-
-$I_D = \mu C_{ox} \dfrac{W}{L} \left [ V_{GS} - V_T - \dfrac{(V_{DS})}{2}\right] V_{DS} (1 + \lambda V_{DS})$
+$I_D = \mu C_{ox} \dfrac{W}{L} \left [ V_{GS} - V_T - \dfrac{V_{DS}}{2}\right] V_{DS} \,(1 + \lambda V_{DS})$
 
 **Saturation region**, $V_{GS} > V_T$ and $V_{DS} > (V_{GS} - V_T)$
 
@@ -288,13 +288,13 @@ You can also provide an initial schematic. Draw up a circuit and grab the URL wi
 https://spinningnumbers.org/circuit-sandbox/index.html?value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",0.5,36.5,4,"50",null,null,null,"100","0.01","1000"]]&parts=g,v,r,s&analyses=dc,tran
 ```
 
-Circuit Sandbox uuencodes links so they survive trips through email. This same link looks like this when uuencoded,
+Circuit Sandbox encodes URL links so they survive trips through email. This same link looks like this when encoded,
 
 ```
 https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B128%2C112%2C104%2C112%5D%5D%2C%5B%22w%22%2C%5B80%2C112%2C104%2C112%5D%5D%2C%5B%22w%22%2C%5B80%2C64%2C128%2C64%5D%5D%2C%5B%22v%22%2C%5B80%2C64%2C0%5D%2C%7B%22value%22%3A%22dc(1)%22%2C%22_json_%22%3A3%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B128%2C64%2C0%5D%2C%7B%22r%22%3A%221%22%2C%22_json_%22%3A4%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22g%22%2C%5B104%2C112%2C0%5D%2C%7B%22_json_%22%3A5%7D%2C%5B%220%22%5D%5D%2C%5B%22view%22%2C0.5%2C36.5%2C4%2Cnull%2Cnull%2Cnull%2Cnull%2C%22100%22%2C%220.01%22%2C%221000%22%5D%5D
 ```
 
-You can do the same thing if you call Circuit Sandbox from an html \<input\> statement---this time with quotes,
+You can also initialize a schematic if you call Circuit Sandbox from an html \<input\> statement---this time with quotes,
 
 ```
 <input type="hidden" class="schematic" height="400" width="600" parts="g,v,r,s" analyses="dc,tran" value=[["g",[104,112,0],{"_json_":0},["0"]],["r",[128,64,0],{"r":"1","_json_":1},["1","0"]],["v",[80,64,0],{"value":"dc(1)","_json_":2},["1","0"]],["w",[80,64,128,64]],["w",[80,112,104,112]],["w",[128,112,104,112]],["view",25.5,44,4,null,null,null,null,"100","0.01","1000"]]>

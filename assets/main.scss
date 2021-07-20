@@ -393,10 +393,7 @@ a.youtube_link:link, a.youtube_link:visited {
 .tooltip .tooltipcontent {
   visibility: hidden;
   width: 400px;
-  //background-color: #eee;
   background: var(--details-background-color);
-
-  color: #000;
   text-align: center;
   padding: 5px 0;
   border-radius: 4px; 

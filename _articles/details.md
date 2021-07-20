@@ -5,12 +5,14 @@ author: Willy McAllister
 comments: true
 ---
 
-Here's a template for inserting an html ```\<details\>``` tag into markdown. It allows markdown syntax inside the summary and the body of a ```\<details\>``` tag. This works with Jekyll's Kramdown dialect of markdown, served by GitHub Pages.
+Here's a method for inserting an html ```\<details\>``` tag into markdown. It allows markdown syntax inside the summary and the body of a ```\<details\>``` tag. This works with Jekyll's Kramdown dialect of markdown, served by GitHub Pages.
 
 {% capture details %}
 DETAILS
 {% endcapture %}
 {% capture summary %}SUMMARY{% endcapture %}{% include details.html %}
+
+There's also template/tag/style code for inserting a <span class="tooltip">tooltip<span class="tooltipcontent">This is a tooltip</span></span>.
 
 ----
 
@@ -22,7 +24,8 @@ DETAILS
 
 ----
 
-## Markdown template
+## Details tag
+### Details markdown template
 
 Copy and paste these four lines into your markdown document.  
 
@@ -35,7 +38,18 @@ DETAILS
 
 Replace DETAILS and SUMMARY with your content.
 
-## Include file
+Alternative: 
+
+```
+<details markdown=block>
+<summary markdown=span>A *Summary*</summary>
+These are the **details** for this item.
+</details>
+```
+
+See also [Jekyll accordion](https://jekyllcodex.org/without-plugin/accordion/).
+
+### Details include file
 
 The last line of the template references a file: \_includes/details.html. Create a file with this code and put it in your \_includes folder.
 
@@ -46,7 +60,7 @@ The last line of the template references a file: \_includes/details.html. Create
 </details>{% endraw %}
 ```
 
-## Details style
+### Details style
 
 Example css styles for the details tag, saved in /assets/main.scss.
 
@@ -77,7 +91,7 @@ details summary {
 }{% endraw %}
 ```
 
-## Examples
+### Details examples
 
 ### Markdown syntax, equations, and images inside details tag
 
@@ -105,13 +119,76 @@ The markdown source file for this article is in \_articles/details.md.
 
 ## Tooltip
 
+Here are examples of tooltips created in markdown, 
+
+Leading text --- <span class="tooltip">tooltip anchor<span class="tooltipcontent">tooltip with text</span></span> --- trailing text.
+
 Leading text --- <span class="tooltip">tool tip anchor
   <span class="tooltipcontent"><img src="{% link i/rc_step_superposition_natural.svg %}" alt="Superposition sub-circuits." />
-  </span>
+  <br>tooltip with image</span>
 </span> --- trailing text.
 
-At this point it is possible to express <span class="tooltip">$r$ in terms of $x$ <span class="tooltipcontent"><img src="{% link i/line_of_charge2_3.svg %}" alt="Line of charge with a test charge to the side" /></span></span>,
+At this point it is possible to express <span class="tooltip">$r$ in terms of $x$ <span class="tooltipcontent"><img src="{% link i/line_of_charge2_3.svg %}" alt="Line of charge with a test charge to the side" /></span></span>.
 
+### Tooltip markdown template
+
+To create a text tooltip, copy and paste this template into your markdown source,
+
+```
+LEADING TEXT <span class="tooltip">ANCHOR TEXT<span class="tooltipcontent">TOOLTIP TEXT</span></span> TRAILING TEXT.
+```
+
+For a tool tip with an image, use this template,
+
+```
 LEADING TEXT <span class="tooltip">ANCHOR TEXT <span class="tooltipcontent"><img src="{% link i/rc_step_superposition_natural.svg %}" alt="ALT TEXT" /></span></span> TRAILING TEXT
+```
 
-And we move on.
+
+### Tooltip style
+
+The styling for the tool tip is in /assets/main.scss,
+
+```
+///
+/// Tool Tip, from https://www.w3schools.com/css/css_tooltip.asp
+///
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dashed #ccc; /* dots under the anchor text */
+}
+
+/* Tooltip content */
+.tooltip .tooltipcontent {
+  visibility: hidden;
+  width: 400px;
+  background: var(--details-background-color);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 4px; 
+  /* Position the tooltip content */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Show the tooltip content when you mouse over the tooltip anchor text */
+.tooltip:hover .tooltipcontent {
+  visibility: visible;
+}
+```
+
+## Opening a link in a new tab
+
+Append ```{:target="_blank"}``` to the link specification.
+
+Example: [spinning numbers](https://spinningnumbers.org){:target="_blank"}
+
+Code:
+```
+[spinning numbers](https://spinningnumbers.org){:target="_blank"}
+```
