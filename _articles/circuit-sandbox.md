@@ -9,7 +9,7 @@ comments: true
 
 A simulator for learning about circuits. Circuit Sandbox includes schematic capture and a circuit simulation engine. The circuit simulation engine is written entirely in JavaScript---it is not a version of SPICE.
 
-[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html){:target="_blank"} simulator with selectable language,
+[![circuit sandbox]({% link i/circuit_sandbox1.png %}){: height="70px" :} Circuit Sandbox](https://spinningnumbers.org/circuit-sandbox/index.html){:target="_blank"} simulator, available in
 
 <table>
     <tr>
@@ -215,6 +215,10 @@ $I_D = \mu C_{ox} \dfrac{W}{L} \dfrac{(V_{DS})^2}{2}\quad$ or $\quad I_D = \mu C
 This is the rising parabola in the graph. 
 
 ![mosfet parameters]({% link i/mosfet_parameters.png %}){: height="300px" :}{: .centered :}
+
+![Circuit Sandbox nmos model]({% link i/circuit_sandbox_nmos_model.svg %})
+
+Here's the [spreadsheet]({% link assets/MOSFET_model.xlsx %}) of the MOSFET model equations creating an I-V plot.
 
 References: [Univ Colorado](https://ecee.colorado.edu/~bart/book/models4.htm), 
 [UC Berkeley](https://inst.eecs.berkeley.edu/~ee105/fa05/handouts/discussions/Discussion5.pdf)

@@ -15,16 +15,13 @@ The $\text{RC}$ step response is the most popular article at Spinning Numbers. T
 
 [![]({% link i/article.svg %}) Differential equation theorem]({% link _articles/differential-equation-theorem.md %}) --- essential part of the step response derivation
 
-
----
 ---
 
->If you are looking for the original article that combined Intuition with Derivation, here it is. I recommend the updated articles linked above.
+>This is the original RC Step Response article. It combines Intuition and Derivation, which has now been separated and expanded in the articles listed above. I recommend the updated articles.
 
 ---
----
 
-## RC Step Response original article
+## RC Step Response (original article)
 {:.no_toc}
 
 When something changes in a circuit, the voltages and currents adjust to the new conditions. If the change is an abrupt step the response is called the *step response*. This step response happens billions of times every second inside digital devices. That means this is the most important analog circuit in digital electronics.
@@ -72,7 +69,7 @@ The input is an abrupt voltage step starting at $\text V_0$ and instantly jumps 
 
 {% capture summary %}the step is instantaneous{% endcapture %}  
 {% capture details %}  
-A step function is an ideal mathematical idea. The voltage has only two values, $\text V_0$ and $\text V_{\text S}$. There are no in-between values. When we draw a step with a vertical orange line at $t = 0$ it's simply a graphical connection between the top and bottom horizontal lines. The vertical line isn't meant to suggest intermediate voltage values exist at $t = 0$. Technically, the step function does not meet the definition of a mathematical function, since there's this weirdness at $t=0$.
+A step function is an ideal mathematical idea. The voltage has two values, $\text V_0$ and $\text V_{\text S}$. There are no in-between values. When we draw a step with a vertical orange line at $t = 0$ it's simply a graphical connection between the top and bottom horizontal lines. The vertical line isn't meant to suggest intermediate voltage values exist at $t = 0$. Technically, the step function does not meet the definition of a mathematical function, since there's this weirdness at $t=0$.
 
 In the real world, step functions always have some finite slope. We still call it a step if the slope is really steep relative to the response of the $\text{RC}$ circuit. It's close enough to an ideal step if it looks like a step on the time scale we are interested in.  
 {% endcapture %}{% include details.html %} 
