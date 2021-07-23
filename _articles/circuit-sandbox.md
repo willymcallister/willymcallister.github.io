@@ -180,11 +180,19 @@ The Area parameter scales the saturation current to Area $\times \,\text I_\text
 N-type and P-type MOSFETs
 {: .caption :}
 
+**Fixed parameters**  
 $\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2\quad$ (SPICE parameter KP)
 
-$V_T = 0.5\quad$ Threshold voltage (positive number for both N and P types)
+**Adjustable parameters**  
+$W/L$ is the area of the device. The default value is $2$. 
 
-$\lambda = 0.05\,\text V^{-1} \qquad 1/\lambda = 20\,\text V$
+$V_T$ is the threshold voltage (positive for both N and P types) (SPICE parameter VT0).  
+The default value is $0.5\,\text V$. When $V_{GS}$ is less than $V_T$ the drain current $I_D$ is $0$. 
+
+$\lambda$ is channel-length modulation (SPICE parameter LAMBDA).  
+The default value is $0.05\,\text V^{-1}$, $1/\lambda = 20\,\text V$. Lambda ($\lambda$) together with $I_D$ determines the small signal output resistance (the slope of the lines in the saturation region),
+
+$r_D = \dfrac{1}{\lambda I_D}\quad$ 
 
 **Cut off region**, $V_{GS} \leq V_T$
 
@@ -200,7 +208,11 @@ $I_{D} = \mu C_{ox} \dfrac{W}{L} \left [ \dfrac{(V_{GS} - V_T)^2}{2} \right] (1 
 
 **Boundary between Linear and Saturation regions**
 
-$I_D = \mu C_{ox} \dfrac{W}{L} (V_{DS})^2$
+The MOSFET's behavior changes from Linear and Saturation when $V_{DS} = (V_{GS} - V_T)$. This is the point where the two equations for drain current intersect (have the same value). That drain current is,
+
+$I_D = \mu C_{ox} \dfrac{W}{L} \dfrac{(V_{DS})^2}{2}\quad$ or $\quad I_D = \mu C_{ox} \dfrac{W}{L} \dfrac{(V_{GS}-V_T)^2}{2}$
+
+This is the rising parabola in the graph. 
 
 ![mosfet parameters]({% link i/mosfet_parameters.png %}){: height="300px" :}{: .centered :}
 
