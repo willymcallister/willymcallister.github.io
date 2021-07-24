@@ -17,7 +17,7 @@ The $\text{RC}$ step response is the most popular article at Spinning Numbers. T
 
 ---
 
->This is the original RC Step Response article. It combines Intuition and Derivation, which has now been separated and expanded in the articles listed above. I recommend the updated articles.
+>This is my original RC Step Response article combining Intuition and Derivation. It's now updated and expanded into separate articles listed above. I recommend the updated articles.
 
 ---
 
