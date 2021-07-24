@@ -180,6 +180,8 @@ The Area parameter scales the saturation current to Area $\times \,\text I_\text
 N-type and P-type MOSFETs
 {: .caption :}
 
+The MOSFET model in Circuit Sandbox is the *quadratic model*. The equation for the Linear region is a quadratic equation, $aV_{DS}^2 + bV_{DS} + c = 0$. It  includes a term ($\lambda$) to model the resistance of the drain-to-source current path.
+
 **Fixed parameters**  
 $\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2\quad$ (SPICE parameter KP)
 
@@ -190,7 +192,7 @@ $V_T$ is the threshold voltage (positive for both N and P types) (SPICE paramete
 The default value is $0.5\,\text V$. When $V_{GS}$ is less than $V_T$ the drain current $I_D$ is $0$. 
 
 $\lambda$ is channel-length modulation (SPICE parameter LAMBDA).  
-The default value is $0.05\,\text V^{-1}$, $1/\lambda = 20\,\text V$. Lambda ($\lambda$) together with $I_D$ determines the small signal output resistance (the slope of the lines in the saturation region),
+The default value is $0.05\,\text V^{-1}$, $1/\lambda = 20\,\text V$. Lambda ($\lambda$) together with $I_D$ determines the small signal output resistance (the upward tilt of the lines in the saturation region),
 
 $r_D = \dfrac{1}{\lambda I_D}\quad$ 
 
@@ -208,17 +210,15 @@ $I_{D} = \mu C_{ox} \dfrac{W}{L} \left [ \dfrac{(V_{GS} - V_T)^2}{2} \right] (1 
 
 **Boundary between Linear and Saturation regions**
 
-The MOSFET's behavior changes from Linear and Saturation when $V_{DS} = (V_{GS} - V_T)$. This is the point where the two equations for drain current intersect (have the same value). That drain current is,
+The MOSFET's behavior changes from Linear and Saturation when $V_{DS} = (V_{GS} - V_T)$. This is the point where the two equations for drain current intersect. That drain current is,
 
 $I_D = \mu C_{ox} \dfrac{W}{L} \dfrac{(V_{DS})^2}{2}\quad$ or $\quad I_D = \mu C_{ox} \dfrac{W}{L} \dfrac{(V_{GS}-V_T)^2}{2}$
 
 This is the rising parabola in the graph. 
 
-![mosfet parameters]({% link i/mosfet_parameters.png %}){: height="300px" :}{: .centered :}
-
 ![Circuit Sandbox nmos model]({% link i/circuit_sandbox_nmos_model.svg %})
 
-Here's the [spreadsheet]({% link assets/MOSFET_model.xlsx %}) of the MOSFET model equations creating an I-V plot.
+Here's the [spreadsheet]({% link assets/MOSFET_model.xlsx %}) of the MOSFET model equations creating this $I_{D}$ vs $V_{DS}$ plot.
 
 References: [Univ Colorado](https://ecee.colorado.edu/~bart/book/models4.htm), 
 [UC Berkeley](https://inst.eecs.berkeley.edu/~ee105/fa05/handouts/discussions/Discussion5.pdf)
