@@ -180,7 +180,7 @@ The Area parameter scales the saturation current to Area $\times \,\text I_\text
 N-type and P-type MOSFETs
 {: .caption :}
 
-The MOSFET model in Circuit Sandbox is the *quadratic model*. The equation for the Linear region is a quadratic equation, $aV_{DS}^2 + bV_{DS} + c = 0$. It  includes a term ($\lambda$) to model the resistance of the drain-to-source current path.
+The MOSFET model in Circuit Sandbox is the *quadratic model*. The Linear region is modeled by a quadratic equation, $aV_{DS}^2 + bV_{DS} + c = 0$, described below. Another feature is the parameter ($\lambda$) that models the resistance of the drain-to-source current path.
 
 **Fixed parameters**  
 $\mu C_{ox} = 20 \times 10^{-6} \,\text{A/V}^2 = 20\,\mu \text{A/V}^2\quad$ (SPICE parameter KP)
