@@ -68,7 +68,7 @@ Refresh me on the [scaling property and linearity]({{ site.baseurl }}{% link _ar
 
 ## Example 0
 
-(This is a "toy" example to give you a feel for how to apply superposition.) 
+(This is a "toy" example to give you a feel for superposition.) 
 
 Let's use the same resistor function, but we change the input to two voltage sources, 
 
@@ -90,7 +90,7 @@ $\text{Vs1} + \text{Vs2} - i \,\text R = 0$
 
 and solve for $i$,
 
-\\[\tag{conventional solution}i = f(\text{Vs1}+\text{Vs2}) = {\dfrac{\text{Vs1} +\text{Vs2}}{\text R}}\\] 
+$i = f(\text{Vs1}+\text{Vs2}) = {\dfrac{\text{Vs1} +\text{Vs2}}{\text R}}\qquad$ (conventional solution) 
 
 ### Solve using the principle of superposition
 
@@ -104,9 +104,7 @@ Now let's use the principle of superposition to solve the circuit.
 
 Since we know our circuit can be modeled as a linear function, we can say,
 
-$i = f(\text{Vs1} + \text{Vs2})$  
-is equivalent to  
-$i = f(\text{Vs1}) + f(\text{Vs2})$
+$i = f(\text{Vs1} + \text{Vs2})$  is equivalent to $i = f(\text{Vs1}) + f(\text{Vs2})$
 
 This suggests an intriguing possibility. It says we can compute the output current the conventional way, $i = f(\text{Vs1} + \text{Vs2})$, or, we could get the same answer applying single inputs, $f(\text{Vs1})$ and $f(\text{Vs2})$, and then add the results together. 
 
@@ -153,13 +151,13 @@ $out_3 = f(0,0,in_3)$</p>
 
 #### Solve the two circuits
 
-Now we solve each circuit individually,
+Now we solve each sub-circuit individually,
 
-$i_1 = \text R\cdot\text{Vs1} \qquad$ and $\qquad i_2 = \text R\cdot\text{Vs2}$
+$i_1 = \dfrac{\text{Vs1}}{\text R} \qquad$ and $\qquad i_2 = \dfrac{\text{Vs2}}{\text R}$
 
 where $i_1$ is the current caused by source $\text{Vs}1$, and $i_2$ is the current caused by source $\text{Vs}2$. 
 
-(You can come up with your own system for naming all the different $i$ and $v$ variables that make up the two new circuits.)
+(You can come up with your own system for naming all the different $i$ and $v$ variables that make up the two sub-circuits.)
 
 #### Superimpose (add) the two solutions
 
@@ -169,7 +167,9 @@ $i = i_1 + i_2$
 
 $i = \dfrac{\text{Vs1}}{\text R} + \dfrac{\text{Vs2}}{\text R}$
 
-\\[\tag{superposition solution}{i = \dfrac{\text{Vs1}+\text{Vs2}}{\text R}}\\]
+or,
+
+${i = \dfrac{\text{Vs1}+\text{Vs2}}{\text R}}\qquad$ (superposition solution)
 
 Check it out! Compare this superposition solution to the conventional solution we got above. They're the same!
 
@@ -244,9 +244,9 @@ $\quad +i_{\text R1} \qquad - i_{\text R2} \qquad +\text{Is} \quad = 0$
 
 $+\dfrac{\text{Vs}-v}{\text{R1}} \quad - \dfrac{v}{\text{R2}} \qquad + \text{Is} \quad = 0$
 
-We can rearrange this to get an expression for $v$ by gathering like terms together on the right side,
+Rearrange this to get an expression for $v$ by pushing everything but $v$ over to the right side,
 
-\\[\tag{conventional solution}v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text R2}{\text R1+\text R2}\,\text{Is}\\]
+$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\,\text R2}{\text R1+\text R2}\,\text{Is}\qquad$ (conventional solution)
 
 {% capture summary %}please show the algebra{% endcapture %}  
 {% capture details %}    
@@ -336,15 +336,15 @@ We complete the superposition analysis by adding the two voltage contributions.
 
 $v = v_{Vs} + v_{Is}$
 
-\\[\tag{superposition solution}v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}\\]
+$v = \dfrac{\text{R2}}{\text R1 + \text R2}\,\text{Vs} + \dfrac{\text R1\cdot\text R2}{\text R1+\text R2}\,\text{Is}\qquad$ (superposition solution)
 
 As predicted, we get the same result as the conventional solution shown above. With superposition, there is no approximation involved. The solutions are exactly the same. The key thing to notice is that the two simpler circuits took less work to analyze.
 
 ## Closing thoughts 
 
-If you have a circuit made from linear elements, you get to use the principle of superposition. This means the original complicated circuit is really made of simpler circuits that happen to be sitting on top of each other. It seems like magic, but this means superimposed circuits don't affect each other or intertwine at all. Every simple circuit is blissfully unaware of the others until you do the final addition. 
+If you have a circuit made from linear elements, it's a chance to use the principle of superposition. The original complicated circuit is really made of simpler circuits that happen to be sitting on top of each other. It seems like magic, but this means superimposed sub-circuits don't affect each other or intertwine at all. Every sub-circuit is blissfully unaware of the others until you do the final addition. 
 
-This is a marvelous property of *linear* circuits, and it is one of the reasons we love linearity so much. Circuits that are not linear (*non-linear* circuits) don't have this property, and superposition cannot be applied. (But don't worry, we love non-linear circuits, too, just in a different way.)
+This is a marvelous property of *linear* circuits, and it is one of the reasons we love linearity so much. Circuits that are not linear (*non-linear* circuits) don't have this property, and superposition cannot be applied. (We love non-linear circuits, too, just in a different way.)
 
 ## Summary
 {:.no_toc}
