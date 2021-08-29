@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -18,30 +16,34 @@
    viewBox="0 0 336 144"
    style="enable-background:new 0 0 336 144;"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="circuit_terminology_loop1.svg"><metadata
-     id="metadata105"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs103" /><sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
-     id="namedview101"
-     showgrid="false"
-     inkscape:zoom="2.0178571"
-     inkscape:cx="168"
-     inkscape:cy="72"
-     inkscape:current-layer="Layer_1" /><style
-     type="text/css"
-     id="style3">
+   sodipodi:docname="circuit_terminology_loop1.svg"
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"><metadata
+   id="metadata2627"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs2625" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1272"
+   inkscape:window-height="622"
+   id="namedview2623"
+   showgrid="false"
+   inkscape:zoom="1.8988095"
+   inkscape:cx="183.27273"
+   inkscape:cy="72"
+   inkscape:window-x="64"
+   inkscape:window-y="33"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style2524">
 	.st0{fill:none;}
 	.st1{fill:#E07D10;}
 	.st2{fill:none;stroke:#ED5FA6;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
@@ -113,208 +115,269 @@
 	.st68{fill:none;stroke:#21242C;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st69{fill:none;stroke:#11ACCD;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
 	.st70{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-</style><path
-     class="st29"
-     d="M294,36H48c-6.6,0-12,5.4-12,12v60c0,6.6,5.4,12,12,12h246c6.6,0,12-5.4,12-12V48C306,41.4,300.6,36,294,36z"
-     id="path5" /><circle
-     class="st29"
-     cx="90"
-     cy="78"
-     r="30"
-     id="circle7" /><ellipse
-     class="st29"
-     cx="222"
-     cy="78"
-     rx="72"
-     ry="30"
-     id="ellipse9" /><g
-     id="g11"><circle
-       cx="138"
-       cy="36"
-       r="3"
-       id="circle13" /><rect
-       x="132"
-       y="30"
-       class="st0"
-       width="12"
-       height="12"
-       id="rect15" /></g><g
-     id="g17"><circle
-       cx="222"
-       cy="36"
-       r="3"
-       id="circle19" /><rect
-       x="216"
-       y="30"
-       class="st0"
-       width="12"
-       height="12"
-       id="rect21" /></g><g
-     id="g23"><circle
-       cx="222"
-       cy="120"
-       r="3"
-       id="circle25" /><rect
-       x="216"
-       y="114"
-       class="st0"
-       width="12"
-       height="12"
-       id="rect27" /></g><g
-     id="g29"><circle
-       cx="138"
-       cy="120"
-       r="3"
-       id="circle31" /><rect
-       x="132"
-       y="114"
-       class="st0"
-       width="12"
-       height="12"
-       id="rect33" /></g><g
-     id="g35"><circle
-       class="st27"
-       cx="36"
-       cy="78"
-       r="18"
-       id="circle37" /><polyline
-       class="st22"
-       points="54,36 36,36 36,60  "
-       id="polyline39" /><polyline
-       class="st20"
-       points="36,96 36,120 306,120  "
-       id="polyline41" /><line
-       class="st25"
-       x1="36"
-       y1="64.5"
-       x2="36"
-       y2="76.5"
-       id="line43" /><line
-       class="st25"
-       x1="30"
-       y1="70.5"
-       x2="42"
-       y2="70.5"
-       id="line45" /><line
-       class="st25"
-       x1="30"
-       y1="88.5"
-       x2="42"
-       y2="88.5"
-       id="line47" /></g><g
-     id="g49"><line
-       class="st20"
-       x1="119.4"
-       y1="36"
-       x2="138"
-       y2="36"
-       id="line51" /><polyline
-       class="st24"
-       points="72.6,36 76.5,27 84.3,45 92.1,27 99.9,45 107.7,27 115.5,45 119.4,36  "
-       id="polyline53" /><line
-       class="st20"
-       x1="54"
-       y1="36"
-       x2="72.6"
-       y2="36"
-       id="line55" /><rect
-       x="54"
-       y="24"
-       class="st0"
-       width="84"
-       height="24"
-       id="rect57" /></g><g
-     id="g59"><line
-       class="st20"
-       x1="203.4"
-       y1="36"
-       x2="222"
-       y2="36"
-       id="line61" /><polyline
-       class="st24"
-       points="156.6,36 160.5,27 168.3,45 176.1,27 183.9,45 191.7,27 199.5,45 203.4,36  "
-       id="polyline63" /><line
-       class="st20"
-       x1="138"
-       y1="36"
-       x2="156.6"
-       y2="36"
-       id="line65" /><rect
-       x="138"
-       y="24"
-       class="st0"
-       width="84"
-       height="24"
-       id="rect67" /></g><g
-     id="g69"><line
-       class="st20"
-       x1="138"
-       y1="54.6"
-       x2="138"
-       y2="36"
-       id="line71" /><polyline
-       class="st24"
-       points="138,101.4 129,97.5 147,89.7 129,81.9 147,74.1 129,66.3 147,58.5 138,54.6  "
-       id="polyline73" /><line
-       class="st20"
-       x1="138"
-       y1="120"
-       x2="138"
-       y2="101.4"
-       id="line75" /><rect
-       x="126"
-       y="36"
-       class="st0"
-       width="24"
-       height="84"
-       id="rect77" /></g><g
-     id="g79"><line
-       class="st20"
-       x1="222"
-       y1="54.6"
-       x2="222"
-       y2="36"
-       id="line81" /><polyline
-       class="st24"
-       points="222,101.4 213,97.5 231,89.7 213,81.9 231,74.1 213,66.3 231,58.5 222,54.6  "
-       id="polyline83" /><line
-       class="st20"
-       x1="222"
-       y1="120"
-       x2="222"
-       y2="101.4"
-       id="line85" /><rect
-       x="210"
-       y="36"
-       class="st0"
-       width="24"
-       height="84"
-       id="rect87" /></g><g
-     id="g89"><line
-       class="st20"
-       x1="306"
-       y1="54.6"
-       x2="306"
-       y2="36"
-       id="line91" /><polyline
-       class="st24"
-       points="306,101.4 297,97.5 315,89.7 297,81.9 315,74.1 297,66.3 315,58.5 306,54.6  "
-       id="polyline93" /><line
-       class="st20"
-       x1="306"
-       y1="120"
-       x2="306"
-       y2="101.4"
-       id="line95" /><rect
-       x="294"
-       y="36"
-       class="st0"
-       width="24"
-       height="84"
-       id="rect97" /></g><line
-     class="st20"
-     x1="306"
-     y1="36"
-     x2="216"
-     y2="36"
-     id="line99" /></svg>
+</style>
+<path
+   class="st29"
+   d="M294,36H48c-6.6,0-12,5.4-12,12v60c0,6.6,5.4,12,12,12h246c6.6,0,12-5.4,12-12V48C306,41.4,300.6,36,294,36z"
+   id="path2526"
+   style="stroke:#3c91e5;stroke-opacity:1" />
+<circle
+   class="st29"
+   cx="90"
+   cy="78"
+   r="30"
+   id="circle2528" />
+<ellipse
+   class="st29"
+   cx="222"
+   cy="78"
+   rx="72"
+   ry="30"
+   id="ellipse2530"
+   style="stroke:#ff5555;stroke-opacity:1" />
+<g
+   id="g2536">
+	<circle
+   cx="138"
+   cy="36"
+   r="3"
+   id="circle2532" />
+	<rect
+   x="132"
+   y="30"
+   class="st0"
+   width="12"
+   height="12"
+   id="rect2534" />
+</g>
+<g
+   id="g2542">
+	<circle
+   cx="222"
+   cy="36"
+   r="3"
+   id="circle2538" />
+	<rect
+   x="216"
+   y="30"
+   class="st0"
+   width="12"
+   height="12"
+   id="rect2540" />
+</g>
+<g
+   id="g2548">
+	<circle
+   cx="222"
+   cy="120"
+   r="3"
+   id="circle2544" />
+	<rect
+   x="216"
+   y="114"
+   class="st0"
+   width="12"
+   height="12"
+   id="rect2546" />
+</g>
+<g
+   id="g2554">
+	<circle
+   cx="138"
+   cy="120"
+   r="3"
+   id="circle2550" />
+	<rect
+   x="132"
+   y="114"
+   class="st0"
+   width="12"
+   height="12"
+   id="rect2552" />
+</g>
+<g
+   id="g2568">
+	<circle
+   class="st27"
+   cx="36"
+   cy="78"
+   r="18"
+   id="circle2556" />
+	<polyline
+   class="st22"
+   points="54,36 36,36 36,60  "
+   id="polyline2558" />
+	<polyline
+   class="st20"
+   points="36,96 36,120 306,120  "
+   id="polyline2560" />
+	<line
+   class="st25"
+   x1="36"
+   y1="64.5"
+   x2="36"
+   y2="76.5"
+   id="line2562" />
+	<line
+   class="st25"
+   x1="30"
+   y1="70.5"
+   x2="42"
+   y2="70.5"
+   id="line2564" />
+	<line
+   class="st25"
+   x1="30"
+   y1="88.5"
+   x2="42"
+   y2="88.5"
+   id="line2566" />
+</g>
+<g
+   id="g2578">
+	<line
+   class="st20"
+   x1="119.4"
+   y1="36"
+   x2="138"
+   y2="36"
+   id="line2570" />
+	<polyline
+   class="st24"
+   points="72.6,36 76.5,27 84.3,45 92.1,27 99.9,45 107.7,27 115.5,45 119.4,36  "
+   id="polyline2572" />
+	<line
+   class="st20"
+   x1="54"
+   y1="36"
+   x2="72.6"
+   y2="36"
+   id="line2574" />
+	<rect
+   x="54"
+   y="24"
+   class="st0"
+   width="84"
+   height="24"
+   id="rect2576" />
+</g>
+<g
+   id="g2588">
+	<line
+   class="st20"
+   x1="203.4"
+   y1="36"
+   x2="222"
+   y2="36"
+   id="line2580" />
+	<polyline
+   class="st24"
+   points="156.6,36 160.5,27 168.3,45 176.1,27 183.9,45 191.7,27 199.5,45 203.4,36  "
+   id="polyline2582" />
+	<line
+   class="st20"
+   x1="138"
+   y1="36"
+   x2="156.6"
+   y2="36"
+   id="line2584" />
+	<rect
+   x="138"
+   y="24"
+   class="st0"
+   width="84"
+   height="24"
+   id="rect2586" />
+</g>
+<g
+   id="g2598">
+	<line
+   class="st20"
+   x1="138"
+   y1="54.6"
+   x2="138"
+   y2="36"
+   id="line2590" />
+	<polyline
+   class="st24"
+   points="138,101.4 129,97.5 147,89.7 129,81.9 147,74.1 129,66.3 147,58.5 138,54.6  "
+   id="polyline2592" />
+	<line
+   class="st20"
+   x1="138"
+   y1="120"
+   x2="138"
+   y2="101.4"
+   id="line2594" />
+	<rect
+   x="126"
+   y="36"
+   class="st0"
+   width="24"
+   height="84"
+   id="rect2596" />
+</g>
+<g
+   id="g2608">
+	<line
+   class="st20"
+   x1="222"
+   y1="54.6"
+   x2="222"
+   y2="36"
+   id="line2600" />
+	<polyline
+   class="st24"
+   points="222,101.4 213,97.5 231,89.7 213,81.9 231,74.1 213,66.3 231,58.5 222,54.6  "
+   id="polyline2602" />
+	<line
+   class="st20"
+   x1="222"
+   y1="120"
+   x2="222"
+   y2="101.4"
+   id="line2604" />
+	<rect
+   x="210"
+   y="36"
+   class="st0"
+   width="24"
+   height="84"
+   id="rect2606" />
+</g>
+<g
+   id="g2618">
+	<line
+   class="st20"
+   x1="306"
+   y1="54.6"
+   x2="306"
+   y2="36"
+   id="line2610" />
+	<polyline
+   class="st24"
+   points="306,101.4 297,97.5 315,89.7 297,81.9 315,74.1 297,66.3 315,58.5 306,54.6  "
+   id="polyline2612" />
+	<line
+   class="st20"
+   x1="306"
+   y1="120"
+   x2="306"
+   y2="101.4"
+   id="line2614" />
+	<rect
+   x="294"
+   y="36"
+   class="st0"
+   width="24"
+   height="84"
+   id="rect2616" />
+</g>
+<line
+   class="st20"
+   x1="306"
+   y1="36"
+   x2="216"
+   y2="36"
+   id="line2620" />
+</svg>

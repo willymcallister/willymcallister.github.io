@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -18,8 +16,11 @@
    viewBox="0 0 336 144"
    style="enable-background:new 0 0 336 144;"
    xml:space="preserve"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="circuit_terminology_loop2.svg"><metadata
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   sodipodi:docname="circuit_terminology_loop2.svg"
+   inkscape:export-filename="/Users/willymcallister/KA/spinningnumbers/images/circuit_terminology_loop2.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"><metadata
      id="metadata111"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
@@ -32,14 +33,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
+     inkscape:window-width="1278"
+     inkscape:window-height="673"
      id="namedview107"
      showgrid="false"
      inkscape:zoom="2.0178571"
      inkscape:cx="168"
      inkscape:cy="72.000002"
-     inkscape:current-layer="Layer_1" /><style
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0" /><style
      type="text/css"
      id="style3">
 	.st0{fill:none;stroke:#1FAB54;stroke-width:6;stroke-miterlimit:10;}
@@ -125,7 +130,8 @@
      style="fill:none;stroke:#1fab54;stroke-width:6;stroke-miterlimit:10;stroke-dasharray:none" /><path
      class="st30"
      d="M291,35H45c-6.6,0-12,5.4-12,12v60c0,6.6,5.4,12,12,12h246c6.6,0,12-5.4,12-12V47C303,40.4,297.6,35,291,35z"
-     id="path7" /><circle
+     id="path7"
+     style="stroke:#3c91e5;stroke-opacity:1" /><circle
      class="st30"
      cx="93"
      cy="79"
@@ -137,7 +143,7 @@
      rx="61.075203"
      ry="27.725645"
      id="ellipse11"
-     style="fill:none;stroke:#ff9c39;stroke-width:6;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><g
+     style="fill:none;stroke:#ff5555;stroke-width:6;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" /><g
      id="g13"><circle
        cx="135"
        cy="35"
@@ -333,10 +339,10 @@
      cy="79"
      r="27"
      id="circle103"
-     style="stroke:#ff5555" /><circle
+     style="stroke:#ff9c39;stroke-opacity:1" /><circle
      class="st30"
      cx="261"
      cy="79"
      r="27"
      id="circle105"
-     style="stroke:#3c91e5;stroke-opacity:1" /></svg>
+     style="stroke:#ff9c39;stroke-opacity:1" /></svg>
