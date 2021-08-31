@@ -5,9 +5,12 @@ author: Willy McAllister
 comments: true
 ---
 
-The fundamental laws are Ohm's Law (along with the $i$-$v$ equations for capacitor and inductor) and Kirchhoff's Laws. We applied Ohm's Law a few times already for [series]({{ site.baseurl }}{% link _articles/series-resistors.md %}) and [parallel]({{ site.baseurl }}{% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({{ site.baseurl }}{% link _articles/voltage-divider.md %}), and [simplifying a resistor network]({{ site.baseurl }}{% link _articles/simplify-resistor-networks.md %}). 
-
-Now we add [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({{ site.baseurl }}{% link _articles/kirchhoffs-voltage-law.md %}) to our box of tricks and solve a circuit. 
+In circuit design and analysis the "fundamental laws" are,
+* Ohm's Law for resistors
+* The corresponding $i$-$v$ equations for capacitors and inductors 
+* Kirchhoff's Laws 
+ 
+We used Ohm's Law a few times already to figure out [series]({% link _articles/series-resistors.md %}) and [parallel]({% link _articles/parallel-resistors.md %}) resistors, the [voltage divider]({% link _articles/voltage-divider.md %}), and [simplifying a resistor network]({% link _articles/simplify-resistor-networks.md %}). Now we add [Kirchhoff's Current Law]({% link _articles/kirchhoffs-current-law.md %}) and [Kirchhoff's Voltage Law]({% link _articles/kirchhoffs-voltage-law.md %}) to our bag of tricks for solving circuits. 
 
 ----
 
@@ -22,7 +25,7 @@ Now we add [Kirchhoff's Current Law]({{ site.baseurl }}{% link _articles/kirchho
 ### Where we're headed 
 {:.no_toc}
 
-Ohm's Law plus Kirchhoff's Laws (KCL and KVL) are powerful tools for solving simple circuits, using this strategy,
+Ohm's Law in combination with Kirchhoff's Laws (KCL and KVL) are powerful tools for solving simple circuits, using this strategy,
 
 * Give names to voltages and currents. 
 * Select the independent variable, either $i$ or $v$. 
@@ -34,66 +37,70 @@ Ohm's Law plus Kirchhoff's Laws (KCL and KVL) are powerful tools for solving sim
 
 Our task is to find the unknown currents and voltages in this circuit,
 
-![example circuit]({{ site.baseurl }}{% link i/fundamental_laws0.svg %}){: .centered :}
+![example circuit]({% link i/fundamental_laws0.svg %}){: .centered :}
 
 ## Apply the fundamental laws
 
 We will take these steps to work our way to a solution,
 
-1. Assign names and polarity to voltages and currents using the [sign convention for passive components]({{ site.baseurl }}{% link _articles/sign-convention.md %}). 
-1. Select the independent variable to produce the simplest equations. The choice is between $i$'s or $v$'s as the independent variable.
-1. Write equations using KCL, KVL, or both. Make sure every element participates in at least one equation.
+1. Assign names and polarity to voltages and currents using the [sign convention for passive components]({% link _articles/sign-convention.md %}). 
+1. Select the independent variable to produce the simplest equations. We have a choice between $i$'s or $v$'s as the independent variable.
+1. Write equations using KCL, KVL, or both. Make sure every circuit element participates in at least one equation.
 1. Solve the system of equations for the independent variable.
 1. Solve the remaining unknowns. 
 
 ## Assign names and polarity 
 
-It helps to give names to voltages, currents, and nodes, and make a list of what we do and do not know.
+The first step in a circuit analysis is to give symbolic names to voltages, currents, and nodes. This creates our vocabulary for writing equations. 
 
-![circuit with names]({{ site.baseurl }}{% link i/fundamental_laws1.svg %}){: .centered :}
+![circuit with names]({% link i/fundamental_laws1.svg %}){: .centered :}
 
-Here are features of this circuit, and the voltages and currents we will discover during the analysis,
+Let's make a list of what we know about this circuit, the features of the circuit, 
 
-* $5$ elements
-* $3$ nodes, $\green a$, $\green b$, and $\green c$. 
-* $3$ meshes (inner loops). 
-* $1$ source voltage, $v_{\text S}$, and $2$ element voltages, $v_1$ and $v_2$. 
-* $1$ source current, $i_{\text S}$, and $3$ element currents, $i_1$, $i_2$ and $i_3$.  
+* $5$ circuit elements
+* $3$ nodes, $\green a$, $\green b$, and $\green c$ 
+* $3$ meshes (inner loops) 
+* $1$ source voltage, $v_{\text S}$
+* $1$ source current, $i_{\text S}$
 
-{% capture summary %}review node{% endcapture %}  
+and another list of what we don't know, yet, the voltages and currents we will discover during the analysis,
+
+* $2$ element voltages, $v_1$ and $v_2$ 
+* $3$ element currents, $i_1$, $i_2$ and $i_3$  
+
+{% capture summary %}review node, loop, mesh{% endcapture %}  
 {% capture details %} 
-A [*node*]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}#node) is a junction where $2$ or more elements connect.  
+A [*node*]({% link _articles/circuit-terminology.md %}#node) is a junction where $2$ or more elements connect.  
+A [*loop*]({% link _articles/circuit-terminology.md %}#loop) is *any* closed path through circuit elements.  
+A [*mesh*]({% link _articles/circuit-terminology.md %}#mesh) is a loop that has no other loops inside it.  
 {% endcapture %}{% include details.html %}
 
-{% capture summary %}review mesh and loop{% endcapture %}  
-{% capture details %}  
-A *loop* is any closed path through circuit elements. A *mesh* is a loop that has no other loops inside it. Examples can be found in [Circuit terminology]({{ site.baseurl }}{% link _articles/circuit-terminology.md %}#loop).  
-{% endcapture %}{% include details.html %}
-
-When we assign polarity to voltage and current we use the sign convention for passive components. The current arrow always points into the positive voltage of each resistor. 
+When we assign polarity to voltage and current labels we use the sign convention for passive components. The current arrow points into the positive voltage of each resistor. 
 
 This circuit has three nodes, redrawn here to highlight the junctions at nodes $b$ and $c$.
 
-![circuit with node highlighted]({{ site.baseurl }}{% link i/fundamental_laws1b.svg %}){: .centered :}
+![circuit with node highlighted]({% link i/fundamental_laws1b.svg %}){: .centered :}
 
 (There is an obvious opportunity to simplify the two parallel resistors, $6\,\Omega$ with $5\,\Omega$. However, we will not do that, because we want to focus on the analysis procedure.)
 
 ## Select the independent variable
 
-At this point we have to choose the independent variable. Should it be $v$ or $i$? 
+At this point we have to (get to) choose the independent variable. Should it be $v$ or $i$? 
 
 A good way to make this choice is to compare the number of unknown voltages to unknown currents. There are $2$ unknown voltages, and $3$ unknown currents. If we select voltage as the independent variable, we will have equations with $2$ voltage terms as opposed to $3$ current terms. $2$ is less that $3$, so we choose voltage as our independent variable.
 
 ## Write independent equations
 
-Since we have two unknowns, $v_1$ and $v_2$, we need to come up with two independent equations. Our choice will be, 
+Since we have two unknowns, $v_1$ and $v_2$, we need to come up with two independent equations. 
+
+I look at the circuit and pick two interesting features. Node $b$ has several connections, making it a focal point of the circuit. The left mesh nicely includes the all the remaining circuit elements that don't already touch node $b$. 
+
+Our choice will be, 
 
 * a KVL equation around the left mesh  
 * a KCL equation at node $b$ 
 
-I look at the circuit and pick two interesting features. Node $b$ has several connections, making it a focal point of the circuit. The left mesh nicely includes the all the remaining circuit elements that don't already touch node $b$. 
-
-Admittedly, I used my own experience in electronics to make these choices. As you do more problems like this, you will build your intuition, too.
+Admittedly, I used my own design experience to make these choices. As you do more problems like this, you will build your intuition, too.
 
 When you write equations, make sure every circuit element participates in at least one equation. Every element has to have a chance to influence the outcome. 
 
@@ -101,7 +108,7 @@ When you write equations, make sure every circuit element participates in at lea
 
 The left mesh is the one with the orange circle. 
 
-![circuit with mesh highlighted]({{ site.baseurl }}{% link i/fundamental_laws3.svg %}){: .centered :}
+![circuit with mesh highlighted]({% link i/fundamental_laws3.svg %}){: .centered :}
 
 We start at the lower left corner where you see the ground symbol, and travel clockwise around the mesh adding up voltages. Kirchhoff's Voltage Law says the sum of element voltages around a loop must add up to zero.
 
@@ -124,7 +131,7 @@ The $\sum$ symbol is the Greek letter capital Sigma. In mathematical notation it
 
 We will get our second equation by writing Kirchhoff's Current Law at node $b$. 
 
-![KCL for node b]({{ site.baseurl }}{% link i/fundamental_laws1a.svg %}){: .centered :}
+![KCL for node b]({% link i/fundamental_laws1a.svg %}){: .centered :}
 
 One form of Kirchhoff's Current Law says the currents flowing into a node must equal the currents flowing out of the node.
 
@@ -246,7 +253,7 @@ $v_2 = 60 \,\text V$
 
 $v_1$ and $v_2$ are both solved. 
 
-![Schematic with solved v1 and v2]({{ site.baseurl }}{% link i/fundamental_laws2.svg %}){: .centered :}
+![Schematic with solved v1 and v2]({% link i/fundamental_laws2.svg %}){: .centered :}
 
 Now we can go after the unknown currents, using Ohm's Law.
 
@@ -263,7 +270,7 @@ $i_3 = \dfrac{v_2}{5} = \dfrac{60}{5} \qquad i_3 = 12\,\text A$
 
 All done! The solved circuit looks like this,
 
-![solved circuit]({{ site.baseurl }}{% link i/fundamental_laws4.svg %}){: .centered :}
+![solved circuit]({% link i/fundamental_laws4.svg %}){: .centered :}
 {% endcapture %}{% include details.html %}
 
 ## Summary
@@ -279,4 +286,4 @@ The steps to a solution,
 4. Solve the system of equations.
 5. Solve for the other unknowns.   
 
-You may be thinking this process is somewhat arbitrary and improvised. You are not mistaken. Coming next, we will talk about two efficient and well-organized methods for solving any circuit, the [Node Voltage Method]({{ site.baseurl }}{% link _articles/node-voltage.md %}), and the [Mesh Current Method]({{ site.baseurl }}{% link _articles/mesh-current.md %}).
+You may be thinking this process is somewhat arbitrary and improvised. You are not mistaken. Coming next, we will talk about two efficient and well-organized methods for solving any circuit, the [Node Voltage Method]({% link _articles/node-voltage.md %}), and the [Mesh Current Method]({% link _articles/mesh-current.md %}).
