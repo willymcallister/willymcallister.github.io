@@ -157,7 +157,7 @@ $i_1 = \dfrac{\text{Vs1}}{\text R} \qquad$ and $\qquad i_2 = \dfrac{\text{Vs2}}{
 
 where $i_1$ is the current caused by source $\text{Vs}1$, and $i_2$ is the current caused by source $\text{Vs}2$. 
 
-(You can come up with your own system for naming all the different $i$ and $v$ variables that make up the two sub-circuits.)
+(You can come up with your own naming system for all the different $i$ and $v$ variables that make up the two sub-circuits.)
 
 #### Superimpose (add) the two solutions
 
