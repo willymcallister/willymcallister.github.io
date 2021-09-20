@@ -1,0 +1,8 @@
+_id: 72aa8bb0-1a53-11ec-8020-650f0ab42654
+_parent: 'https://spinningnumbers.org/a/three-point-charges.html'
+replying_to: '2'
+message: "Joel,\r\nCharges act on each other pair-wise. The presence of the third charge does not interact or interfere with the pair-wise force computation. If you have q0--q1--q2 in a straight line and you want to know the force on q1... compute the Coulomb force for q0-q1 and add it to the force from q1-q2. For the force on q3 you work out q0-q3 plus q1-q3. The direction of each force is found by simply looking at the sign of each charge. (Don't try to include the force's direction in the Coulomb algebra, it's too hard to get right. Just do it by inspection.)"
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-09-20T20:43:45.224Z'
