@@ -1,0 +1,18 @@
+_id: 34d8fec0-1b07-11ec-8177-39432d37d4a6
+_parent: 'https://spinningnumbers.org/a/staticman-heroku.html'
+replying_to: '18'
+message: >-
+  Yuri - There are two accounts, 'willymcallister' is my main github presence,
+  with the web site contents and circuit simulator. The 'bot account is
+  separate. It has no content, it represents a github identity used by my
+  Staticman instance running at Heroku. Staticman at Heroku receives the comment
+  submission from you, formats it, and comes back into github using the 'bot's
+  identity/password. The 'bot is an approved contributor to the regular
+  willymcallister github account. The 'bot submits the comment file as a Pull
+  Request to the Spinning Numbers repository (willymcallister.github.io). When I
+  accept the PR it triggers a site rebuild and the comment magically appears on
+  the otherwise static site.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2021-09-21T18:10:30.909Z'
