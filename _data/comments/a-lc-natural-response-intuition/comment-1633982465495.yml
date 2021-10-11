@@ -1,0 +1,12 @@
+_id: f7914dc0-2acd-11ec-a045-1b536ed9908f
+_parent: 'https://spinningnumbers.org/a/lc-natural-response-intuition.html'
+replying_to: ''
+message: >-
+  Hi. In the sim model there is a GND at the bottom of the cap and inductor
+  (This GND is not shown in the circuit on this page) So, once charge starts
+  flowing from the cap into the inductor why doest it just go to GND (low
+  resistance) ? Why does it cycle back to the -ve cap terminal?
+name: Sid
+email: 96f40792a5942e810f15228a050703f4
+hp: ''
+date: '2021-10-11T20:01:05.491Z'
