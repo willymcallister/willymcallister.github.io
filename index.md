@@ -88,10 +88,6 @@ Tips on the best way to [print]({% link printing.md %}) articles from Spinning N
 #### [Everything]({% link _topics/everything.md %})
 List of [everything]({% link _topics/everything.md %}) on Spinning Numbers---topics, articles, videos, images, and on and on.
 
-#### External resources
-
-[Glossary of electrical terms](https://electricalschool.org/)
-
 ----
 
 ### Greetings
