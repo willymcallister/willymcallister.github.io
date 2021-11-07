@@ -5,7 +5,7 @@ author: Willy McAllister
 comments: true
 ---
 
-Sometimes you get stuck when simplifying a resistor network. Sometimes, no matter how hard you look, you can't find a series or parallel combination to simplify. When that happens it's time to try the $\Delta - \text Y$ *transformation*, or 'Delta-Wye' transformation. 
+Sometimes you get stuck when simplifying a resistor network. Sometimes, no matter how hard you try, you can't find a series or parallel combination to simplify. When that happens it's time to try the $\Delta\text{\textendash}\text Y$ transformation, or *Delta-Wye transformation*. 
 
 Written by Willy McAllister.
 
@@ -25,11 +25,11 @@ The *Delta* and *Wye* names come from the shapes of the circuits, which resemble
 
 Drawing $\Delta$ and $\text Y$ this way emphasizes the 3 terminals. The $\text Y$ is also called a *star*. 
 
-You can redraw the resistors to square them up. This is called a $\pi - \text T$ configuration.
+You can redraw the resistors to square them up. This is called a $\pi\text{\textendash}\text T$ configuration.
 
 ![Pi and T configurations]({% link i/delta_wye2.svg %}){: .centered :} 
 
-$\pi - \text T$ is what you might see in a typical schematic. The same transformation equations apply, it is just a different nickname.
+$\pi\text{\textendash}\text T$ is what you might see in a typical schematic. The same transformation equations apply, it is just a different nickname.
 
 Something to notice: The two configurations have a different number of nodes. $\Delta$ has three nodes while $\text Y$ has four nodes. (The extra node is in the middle.)
 
@@ -190,6 +190,73 @@ The original five resistors simplify down to a single $4\,\Omega$ resistor.
 $\Delta - \text Y$ transformations are another tool in your bag of tricks for simplifying circuits.
 
 Don't bother to memorize the transformation equations. If the need arises, you can look them up. For the curious: Find a full derivation of the transform equations is in this [article]({% link _articles/delta-wye-derivations.md %}).
+
+
+## Appendices
+### Delta to Wye Calculator
+
+$R1 = \dfrac{Rb\,Rc}{Ra + Rb + Rc}$
+
+$R2 = \dfrac{Ra\,Rc}{Ra + Rb + Rc}$
+
+$R3 = \dfrac{Ra\,Rb}{Ra + Rb + Rc}$
+
+<script>
+function delta2wye() {
+  var valRa = parseFloat(document.getElementById("valueRa").value);
+  var valRb = parseFloat(document.getElementById("valueRb").value);
+  var valRc = parseFloat(document.getElementById("valueRc").value);
+  var R1 = (valRb * valRc) / (valRa + valRb + valRc);
+  document.getElementById('displayR1').innerHTML = R1.toFixed(2);   
+  var R2 = (valRa * valRc) / (valRa + valRb + valRc);
+  document.getElementById('displayR2').innerHTML = R2.toFixed(2);
+  var R3 = (valRa * valRb) / (valRa + valRb + valRc);
+  //ansR3.value = R3.toFixed(2); 
+  document.getElementById('displayR3').innerHTML = R3.toFixed(2);
+}
+</script>
+|![Delta configuration]({% link i/wye.svg %}) |$Ra\colon$ <input type="text" id="valueRa" name="Ra" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$Rb\colon$ <input type="text" id="valueRb" name="Rb" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$Rc\colon$ <input type="text" id="valueRc" name="Rc" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ |
+{:.noborder }
+
+
+<input type="button" style="padding: 10px; background-color: #e8e8e8; border-radius: 10px; font-size: 1em" name="Submit" value=" delta to wye " onclick="delta2wye()"> 
+
+| ![Wye configuration]({% link i/wye.svg %}) |$R1\colon$ <span id='displayR1' style="font-size: 1.1em">\_\_\_\_</span> $\Omega$ <br><br>$R2\colon$ <span id='displayR2' style="font-size: 1.1em">\_\_\_\_</span> $\Omega$ <br><br>$R3\colon$ <span id='displayR3' style="font-size: 1.1em">\_\_\_\_</span> $\Omega$   |
+{:.noborder }
+
+
+
+<hr>
+
+### Wye to Delta Calculator
+
+$Ra = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R1}$
+
+$Rb = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R2}$
+
+$Rc = \dfrac{R1\,R2 + R2\,R3 + R3\,R1}{R3}$
+
+<script>
+function wye2delta() {
+  var valR1 = parseFloat(document.getElementById("valueR1").value);
+  var valR2 = parseFloat(document.getElementById("valueR2").value);
+  var valR3 = parseFloat(document.getElementById("valueR3").value);
+  var Ra = (valR1 * valR2 + valR2 * valR3 + valR3 * valR1)  / valR1;
+  document.getElementById('displayRa').innerHTML = Ra.toFixed(2); 
+  var Rb = (valR1 * valR2 + valR2 * valR3 + valR3 * valR1)  / valR2;
+  document.getElementById('displayRb').innerHTML = Rb.toFixed(2);
+  var Rc = (valR1 * valR2 + valR2 * valR3 + valR3 * valR1)  / valR3;
+  document.getElementById('displayRc').innerHTML = Rc.toFixed(2);
+}
+</script>
+|![Wye configuration]({% link i/wye.svg %}) |$R1\colon$ <input type="text" id="valueR1" name="R1" value="1" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$R2\colon$ <input type="text" id="valueR2" name="R2" value="1" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$R3\colon$ <input type="text" id="valueR3" name="R3" value="1" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ |
+{:.noborder }
+
+
+<input type="button" style="padding: 10px; background-color: #e8e8e8; border-radius: 10px; font-size: 1em" name="Submit" value=" wye to delta " onclick="wye2delta()"> 
+
+| ![Delta configuration]({% link i/delta.svg %}) |$Ra\colon$ <span id='displayRa' style="font-size: 1.1em">\_\_\_\_</span> $\Omega$ <br><br>$Rb\colon$ <span id='displayRb' style="font-size: 1.1em">\_\_\_\_</span> $\Omega$ <br><br>$Rc\colon$ <span id='displayRc' style="font-size: 1.1em">\_\_\_\_</span> $\Omega$   |
+{:.noborder }
 
 
 
