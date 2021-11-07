@@ -215,7 +215,7 @@ function delta2wye() {
   document.getElementById('displayR3').innerHTML = R3.toFixed(2);
 }
 </script>
-|![Delta configuration]({% link i/wye.svg %}) |$Ra\colon$ <input type="text" id="valueRa" name="Ra" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$Rb\colon$ <input type="text" id="valueRb" name="Rb" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$Rc\colon$ <input type="text" id="valueRc" name="Rc" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ |
+|![Delta configuration]({% link i/delta.svg %}) |$Ra\colon$ <input type="text" id="valueRa" name="Ra" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$Rb\colon$ <input type="text" id="valueRb" name="Rb" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ <br><br>$Rc\colon$ <input type="text" id="valueRc" name="Rc" value="3" size="8" style="text-align:right;font-size:1.1em;"> $\Omega$ |
 {:.noborder }
 
 
