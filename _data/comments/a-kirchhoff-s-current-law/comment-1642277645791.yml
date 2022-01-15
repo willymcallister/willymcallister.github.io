@@ -1,0 +1,16 @@
+_id: b062e090-763f-11ec-9db6-897450332d09
+_parent: 'https://spinningnumbers.org/a/kirchhoffs-current-law.html'
+replying_to: '2'
+message: >-
+  Dixon - The diagram inside the "show answer" for Problem 3 is intentionally
+  different than the diagram in the problem statement. The two diagrams are
+  equivalent, but in the case of the "show answer" diagram, all the arrows are
+  arranged to point _out_ of the node. Notice two arrows changed direction and
+  their corresponding current values changed sign. The purpose of doing this
+  arrow-flipping stunt is to help you get all the signs in the KCL equation
+  correct. If you are comfortable writing KCL based on the first diagram by all
+  means you should do it that way.
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2022-01-15T20:14:05.790Z'
