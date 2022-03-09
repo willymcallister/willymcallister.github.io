@@ -1,0 +1,8 @@
+_id: d1196be0-9ff9-11ec-8d26-a9200df20d0b
+_parent: 'https://spinningnumbers.org/a/parallel-conductance.html'
+replying_to: '2'
+message: "The formula for conductance in series looks just like the formula for resistors in parallel.\r\n\r\n1/Geq = 1/G1 + 1/G2 + 1/G3 + ...\r\n\r\nI've never used this one myself. It's too simple to use the series resistor formula without all the reciprocals...\r\n\r\nReq = R1 + R2 + R3 + ..."
+name: Willy McAllister
+email: 72f6ffec6e34ab5d69f3811272b5ae97
+hp: ''
+date: '2022-03-09T22:39:44.748Z'
