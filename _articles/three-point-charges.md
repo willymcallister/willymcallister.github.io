@@ -21,12 +21,12 @@ Written by Willy McAllister.
 
 ----
 
-### Where we are headed 
+### Where we are headed
 {:.no_toc}
 
-When you have more than two point charges pushing and pulling on each other, use Coulomb's Law to find the force between pairs of charges. Then combine the forces with vector addition.
+When you have more than two point charges pushing or pulling on each other, use Coulomb's Law to find the force between pairs of charges. Then combine the forces with vector addition.
 
-We use the Law of Cosines and the Law of Sines to solve force triangles.
+We solve force triangles with the Law of Cosines and the Law of Sines.
 
 ----
 
@@ -39,11 +39,13 @@ $\vec F = \dfrac{1}{4\pi\epsilon_0}\dfrac{q_0\,q_1}{r^2}\,\bold{\hat r_{01}}$
 $q_0$ and $q_1$ are the two point charges involved.  
 $r$ is the distance between the charges.
 
-$\bold{\hat r_{01}}$ is a unit vector (length $1$) pointing from one charge to the other. We include this to make the right side of the equation a vector. $\bold{\hat r}$ is pronounced "r hat."
+$\bold{\hat r_{01}}$ represents a unit vector (length $1$) pointing from one charge to the other. We include this to make the right side of the equation a vector. $\bold{\hat r}$ is pronounced "r hat."
 
 $\epsilon_0$ is a [constant]({{ site.baseurl }}{% link _articles/electric-force.md %}#epsilon_0-permittivity-of-free-space) equal to $8.85 \times 10^{-12}$ coulomb$^2/$newton-meter$^2$.
 
 $K = \dfrac{1}{4\pi\epsilon_0} = 9\times 10^9$ newton-meter$^2/$coulomb$^2$
+
+Note: We don't actually use the vector $\bold{\hat r_{01}}$ in Coulomb's Law computations. See the [Pro Tip](#pro-tip-applying-coulombs-law).
 
 ## Multiple charges
 
@@ -62,11 +64,11 @@ We will work through an example with three charges, but before diving in let's r
 Solving the force with three point charges is basically an exercise in solving triangles. There will be two triangles involved,
 
 * A physical triangle with three charges on the corners. 
-* A different triangle of force vectors pushing or pulling on the selected charge.
+* A force triangle of vectors pushing or pulling on the selected charge.
 
-Sometimes a test question is designed to give you a simple force triangle you can solve in your head, but usually the force triangle isn't that easy. We will cover a general method for solving any triangle based on the Law of Cosines and the Law of Sines.
+Sometimes a test question is designed to give you a simple force triangle you can solve in your head, but usually the force triangle isn't that easy. Here's a general method for solving any triangle based on the Law of Cosines and the Law of Sines.
 
-Here is an arbitrary triangle with its sides and angles labeled,
+Given an arbitrary triangle with its sides and angles labeled,
 
 ![Arbitrary triangle]({{ site.baseurl }}{% link i/law_of_cosines_sines.svg %}){: .centered :}
 
@@ -105,36 +107,39 @@ A three-charge problem usually unfolds like this,
 
 **Given three charges at the corners of a $\mathbf{30\degree -- \,60\degree -- \,90\degree}$triangle, find the force on $q_0$.** 
 
-
 ![Three point charges]({{ site.baseurl }}{% link i/three_point_charges1.svg %}){: .centered :}
 
-Let $q_0 = +1$, $q_1 = +2$, and $q_3 = -3$, all in units of coulombs $(\text C)$. The distance between $q_0$ and $q_1$ is $1\,\text m$. All three charges are static, meaning they don't move. Think of them as glued to the page or pinned down with a thumbtack.
+Let $q_0 = +1$, $q_1 = +2$, and $q_3 = -3$, all in units of coulombs $(\text C)$. The distance between $q_0$ and $q_1$ is $1\,\text m$. All three charges are static, meaning they don't move. Think of them as pinned down to the page with a thumbtack.
 
 ### Predict
 
 Before we do the math, use your intuition to predict the result. 
-* Draw the charge triangle on a piece of paper. 
+* Sketch the charge triangle on a piece of paper. 
 * Sketch your estimate of the two force vectors pushing/pulling on $q_0$. 
-* Sketch a vector with your prediction of the total force on $q_0$.
+* Predict the total force vector on $q_0$.
+
+### Pro Tip: Applying Coulomb's Law
+
+The best way to apply Coulomb's Law is to manage direction and magnitude separately, and combine the results,
+1. Find the direction of the force. The force always acts along the straight line between the two charges. If the charges are 'like' the force is repelling, so the charges are pushed away from each other. If the charges are 'unlike' the force is attractive, so the charges  pull together. Do this step simply by looking at the charge signs, there's no special formula.  
+2. Find the magnitude of the force. Use Coulomb's Law and enter the absolute value of the charges in the numerator. Then compute the magnitude of the force. 
+3. Combine the direction from step 1 with the magnitude from step 2 to derive the electric force vector. 
+
+If you attempt to find the force vector's magnitude and direction in a single step using a vector form of Coulomb's Law with signed charges and vector notation you will almost always mess it up. It's really hard to get right. Just use the 3-step process.
 
 ### Charge triangle
 
-The first thing to do is complete the details of the charge triangle with all the angles and sides. (This should be a familiar triangle from geometry class.)
+The first thing to do is redraw the charge triangle with its angles and sides. (This $30\degree -- \,60\degree -- \,90\degree$triangle should be a familiar from geometry class.)
 
 ![Charge triangle with sides labeled]({{ site.baseurl }}{% link i/three_point_charges2.svg %}){: .centered :}
 
->For Coulomb's Law problems we manage direction separate from magnitude. 
-
-Next, sketch the individual force vectors. There are two force vectors to think about, {$q_1$ to $q_0$}, and {$q_2$ to $q_0$}. We can sketch them on the triangle,
+Next, find the direction of the individual force vectors. There are two force vectors to think about, {$q_1$ to $q_0$}, and {$q_2$ to $q_0$}. We sketch them on the triangle,
 
 ![Charge triangle with force vector direction]({{ site.baseurl }}{% link i/three_point_charges3.svg %}){: .centered :}
 
-Force vectors point along straight lines between charges. We don't know the length of the vectors, yet.
-{: .caption :}
+A force vector always points along the straight line between two charges. We don't know the lengths (magnitudes) of the vectors, yet. That comes next.
 
 Apply Coulomb's Law to find the magnitude of each force, 
-
->Use the absolute value of the charges in the numerator of Coulomb's Law.
 
 $\|\vec F\| = K \,\dfrac{q_0\, q_n}{r^2}$
 
@@ -142,13 +147,13 @@ $\blueD{\|\vec F_{10}\|} = K \,\dfrac{1 \cdot 2}{1^2} =  2K\qquad\quad$ (repels)
 
 $\greenD{\|\vec F_{20}\|} = K \,\dfrac{1 \cdot 3}{2^2} = 0.75K\qquad$ (attracts)
 
-We have the magnitude and direction of the pairwise forces, 
+This gives us both the magnitude and direction of the pairwise forces, 
 
 ![Force triangle]({{ site.baseurl }}{% link i/three_point_charges4.svg %}){: .centered :}
 
-### Force triangle 
+### Force triangle
 
-The final step is to perform the vector sum of $\blueD{\vec F_{10}}$ and $\greenD{\vec F_{20}}$ to find the resultant force on $q_0$. 
+To find the resultant force on $q_0$ we perform the vector sum of $\blueD{\vec F_{10}}$ and $\greenD{\vec F_{20}}$.
 
 If you are new to vector addition, check [here](https://www.khanacademy.org/math/precalculus/vectors-precalc/vector-addition-subtraction/v/adding-and-subtracting-vectors).
 
