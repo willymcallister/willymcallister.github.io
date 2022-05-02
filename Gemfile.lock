@@ -225,6 +225,8 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.4)
     multipart-post (2.1.1)
+    nokogiri (1.12.3-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.12.3-x86_64-darwin)
       racc (~> 1.4)
     octokit (4.21.0)
@@ -270,6 +272,7 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  universal-darwin-21
   x86_64-darwin-19
 
 DEPENDENCIES
@@ -279,7 +282,7 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.6.8p205
 
 BUNDLED WITH
-   2.2.26
+   2.2.33
