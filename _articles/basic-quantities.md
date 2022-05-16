@@ -29,9 +29,13 @@ Electrical power is the product of voltage and current, $p = i \, v$, in units o
 
 ## Charge
 
-Our awareness of electric charge comes from carefully observing nature. We observe a force between objects that, like gravity, seems to act at a distance. Even though the force is invisible, we know it is there. We made up a name for what causes this force. We call it *charge*. 
+Our awareness of electricity comes from carefully observing nature. It started with *static electricity*, also called *electrostatics*, where you rub materials against each other, like a balloon on a sweater.  We observe a force between rubbed objects. This *electric force* seems act at a distance (the objects don't have to be touching). In that way electric force bears a resemblance to gravity. Even though electric force is invisible, we know it is there because we see and feel and measure the attraction or repulsion. Scientists made up a name for what causes this force. We call it *charge*.
 
-If you fiddle around with static electricity you will eventually conclude there are two types of electric charge. Opposite charges attract, and like charges repel. That is the most basic rule of electricity. Compare this to gravity. There is only one type of gravity: it only attracts. Gravity never repels. Compared to our daily experience with gravity, electricity can seem kind of weird. 
+If you fiddle around with static electricity long enough you eventually conclude there are two types of electric charge. The interaction between the two types is captured by this most basic rule of electricity, 
+
+**Opposite charges attract; like charges repel**. 
+
+Compare this to gravity. Gravity has only one type; it only attracts. Gravity never repels. Our daily experience makes us intimately familiar with gravity, but electricity can seem kind of weird. Electric charge can attract *and* repel. It takes a little getting used to. See [this article]({% link _articles/charge.md %}) for more details on how charge is measured.
 
 ## Conductors, insulators, semiconductors
 
@@ -120,7 +124,7 @@ That's current in a nutshell.
 
 **How *should* we talk about current?** When discussing current, terms like *through* and *in* make sense. Current flows *through* a resistor; current flows *in* a wire. If you hear, "the current across ...", it should sound funny (as in funny/odd). The words through and across are used for voltage, not current. If you hear, "the speed of the current", that should sound funny, too.
 
-## Voltage 
+## Voltage
 
 To get our initial toehold on the concept of voltage, we create an analogy, 
 
