@@ -1,0 +1,11 @@
+_id: fe59f4a0-0dc5-11ed-a5a3-cb4ebbe4d63e
+_parent: 'https://spinningnumbers.org/a/diode-equation.html'
+replying_to: ''
+message: >-
+  Increasing temperature will actually increase the current, not decrease it as
+  in your plot. The reason is that the Is factor increases rapidly with
+  temperature.
+name: Kurt
+email: ''
+hp: ''
+date: '2022-07-27T16:05:54.758Z'
