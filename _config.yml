@@ -40,10 +40,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-google_analytics: UA-91424157-1
+#google_analytics: UA-91424157-1
+google_analytics: G-ZJNMX98GXW
 
 # Staticman comments
+#staticmanUrl: https://spinningnumbers-staticmandev2.herokuapp.com/v3/entry/github/willymcallister/willymcallister.github.io/master/comments
 staticmanUrl: https://spinningnumbers-staticmandev2.herokuapp.com/v2/entry/willymcallister/willymcallister.github.io/master/comments
+
 enableComments: true
 
 # reCAPTCHA keys
