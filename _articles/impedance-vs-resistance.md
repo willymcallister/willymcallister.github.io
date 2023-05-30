@@ -5,11 +5,11 @@ author: Willy McAllister
 comments: true
 ---
 
-**What's the difference between resistance and impedance?**
+**What is the difference between resistance and impedance?**
 
 Impedance and resistance are similar ideas. Both represent how a component opposes or fights against the flow of current. 
 
-*Resistance* is a measure of voltage divided by resistance in a resistor.
+*Resistance* is a measure of voltage divided by current in a resistor.
 
 *Impedance* is the generalized notion of voltage divided by current for any component. 
 
