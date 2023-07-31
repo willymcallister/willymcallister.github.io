@@ -23,10 +23,10 @@ Written by Willy McAllister.
 
 ----
 
-### Where we're headed 
+### Where we're headed
 {:.no_toc}
 
-A "voltage divider" is the pattern of two resistor in series, with an input voltage applied to both ends and an output voltage measured across one of the resistors.
+A *voltage divider* is the pattern of two resistor in series, with an input voltage applied to both ends and an output voltage measured across one of the resistors.
 
 The output voltage is a function of the input voltage and the ratio of resistor values,
 
