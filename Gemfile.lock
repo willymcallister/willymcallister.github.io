@@ -273,6 +273,7 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
+  arm64-darwin-22
   universal-darwin-20
   universal-darwin-21
   x86_64-darwin-19
@@ -285,7 +286,7 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 RUBY VERSION
-   ruby 2.6.8p205
+   ruby 3.1.4p223
 
 BUNDLED WITH
    2.2.33
