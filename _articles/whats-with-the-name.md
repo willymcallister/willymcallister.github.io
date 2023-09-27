@@ -54,3 +54,4 @@ If you want to know more and you can't stand to wait, jump to [AC analysis intro
 
 The animated logo is created in [D3.js](https://d3js.org). The source code is [logo-d3.html](https://github.com/willymcallister/spinningnumbers/tree/master/_includes/d3a).
 
+[The unique properties of imaginary numbers](https://www.facebook.com/reel/623027616608886?fs=e&s=TIeQ9V&mibextid=0NULKw) Veritasium
