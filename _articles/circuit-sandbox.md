@@ -90,7 +90,7 @@ To create the $\text{RC}$ circuit shown above, follow these steps starting from 
 
 Here is the completed [$\underline{\text{RC}}$ circuit](https://spinningnumbers.org/circuit-sandbox/index.html?value=%5B%5B%22w%22%2C%5B264%2C80%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B272%2C72%2C264%2C72%5D%5D%2C%5B%22w%22%2C%5B152%2C136%2C208%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C136%2C208%2C136%5D%5D%2C%5B%22g%22%2C%5B208%2C136%2C0%5D%2C%7B%22_json_%22%3A5%7D%2C%5B%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C128%2C152%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C128%2C264%2C136%5D%5D%2C%5B%22w%22%2C%5B264%2C64%2C256%2C64%5D%5D%2C%5B%22w%22%2C%5B232%2C64%2C240%2C64%5D%5D%2C%5B%22a%22%2C%5B240%2C64%2C0%5D%2C%7B%22color%22%3A%22magenta%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A10%7D%2C%5B%222%22%2C%22Vout%22%5D%5D%2C%5B%22L%22%2C%5B272%2C72%2C0%5D%2C%7B%22label%22%3A%22Vout%22%2C%22_json_%22%3A11%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22v%22%2C%5B152%2C80%2C0%5D%2C%7B%22name%22%3A%22Vin%22%2C%22value%22%3A%22step(0%2C1%2C0%2C1n)%22%2C%22_json_%22%3A12%7D%2C%5B%221%22%2C%220%22%5D%5D%2C%5B%22r%22%2C%5B232%2C64%2C1%5D%2C%7B%22name%22%3A%22R1%22%2C%22r%22%3A%221k%22%2C%22_json_%22%3A13%7D%2C%5B%222%22%2C%221%22%5D%5D%2C%5B%22c%22%2C%5B264%2C80%2C0%5D%2C%7B%22name%22%3A%22C1%22%2C%22c%22%3A%221u%22%2C%22_json_%22%3A14%7D%2C%5B%22Vout%22%2C%220%22%5D%5D%2C%5B%22w%22%2C%5B152%2C80%2C152%2C64%5D%5D%2C%5B%22w%22%2C%5B152%2C64%2C184%2C64%5D%5D%2C%5B%22s%22%2C%5B264%2C64%2C0%5D%2C%7B%22color%22%3A%22cyan%22%2C%22offset%22%3A%220%22%2C%22_json_%22%3A17%7D%2C%5B%22Vout%22%5D%5D%2C%5B%22view%22%2C86.928%2C19.6336%2C3.0517578125%2C%2250%22%2C%2210%22%2C%221G%22%2Cnull%2C%22100%22%2C%226m%22%2C%221000%22%5D%5D){:target="_blank"}.
 
-## Help 
+## Help
 
 Add a component: Tap on a part in the parts bin, then tap on the schematic.
 
@@ -124,7 +124,7 @@ You can give a node a name by attaching the label part---the short straight line
 
 You can add unattached text annotation to the circuit with the same label part. Place a node label anywhere on the schematic. It does not have to be connected to anything.
 
-## On-screen controls 
+## On-screen controls
 
 ![Scroll/pan]({% link i/circuit_sandbox_scroll_controls.png %}){:height="40px"}  Scroll/Pan     
 ![Zoom]({% link i/circuit_sandbox_zoom_controls.png %}){:height="80px"}  Zoom in, out, fit          
@@ -283,7 +283,7 @@ If you have a touch device (tablet or smart phone),
 * One finger selects a component or drags a selection rectangle 
 * Two fingers pan the schematic window
 
-#### Tablet 
+#### Tablet
 {:.no_toc}
 
 On a tablet you can save *one* circuit file. When you save a circuit, it is tucked into a memory area inside your browser. When you open the saved circuit, the circuit file is retrieved from browser memory. If you want to keep your work, be sure to save before leaving the web page.
@@ -359,6 +359,7 @@ Circuit Sandbox is available in,
 * Portuguese, pt-BR.js (courtesy of Luís F. V. Peres, graduando em engenharia elétrica de Universidade de São Paulo)
 * Hungarian, hu.js (courtesy of Török Attila)
 * French, fr.js (contributed by Laurent Defoy, Institute De La Providence Herve, Belgium)
+* Italian, it.js (contributed by Paolo Giarrusso)
 
 ## The Circuit Sandbox was created at MIT
 
