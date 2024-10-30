@@ -17,6 +17,7 @@ A simulator for learning about circuits. Circuit Sandbox includes schematic capt
         <td>Español</td>
         <td>Português</td>
         <td>French</td>
+        <td>Čeština<br>(Czech)</td>
     </tr>
     <tr>
         <td>Magyarul<br>(Hungarian)</td>
@@ -360,6 +361,7 @@ Circuit Sandbox is available in,
 * Hungarian, hu.js (courtesy of Török Attila)
 * French, fr.js (contributed by Laurent Defoy, Institute De La Providence Herve, Belgium)
 * Italian, it.js (contributed by Paolo Giarrusso)
+* Czech, cz.js (contributed by Professor Martin Novák, Czech Technical University in Prague, Czech Republic)
 
 ## The Circuit Sandbox was created at MIT
 

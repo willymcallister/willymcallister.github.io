@@ -7,7 +7,7 @@ comments: true
 
 Welcome to Spinning Numbers. Learn about electricity and electrical engineering.
 
-New --- Circuit Sandbox is now available in italiano (September 2023).
+New --- Circuit Sandbox is now available in Czech (November 2024), our tenth language.
 
 ---
 
@@ -69,6 +69,7 @@ Basic concepts of signal processing. Properties of sine waves. (under developmen
         <td>日本語<br>(Japanese)</td>
         <td>简体中文<br>(Chinese)</td>
         <td>Magyarul<br>(Hungarian)</td>
+        <td>Čeština<br>(Czech)</td>
     </tr>
 </table>
 {:.noborder}
