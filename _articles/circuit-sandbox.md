@@ -17,13 +17,14 @@ A simulator for learning about circuits. Circuit Sandbox includes schematic capt
         <td>Español</td>
         <td>Português</td>
         <td>French</td>
-        <td>Čeština<br>(Czech)</td>
+        <td>Italian</td>
     </tr>
     <tr>
         <td>Magyarul<br>(Hungarian)</td>
         <td>हिन्दी<br>(Hindi)</td>
         <td>日本語<br>(Japanese)</td>
         <td>简体中文<br>(Simplified Chinese)</td>
+        <td>Čeština<br>(Czech)</td>
     </tr>
 </table>
 {:.noborder}
@@ -97,17 +98,19 @@ Add a component: Tap on a part in the parts bin, then tap on the schematic.
 
 Add a wire: Touch on a connection (open circle) to start a wire. Drag. Release.
 
-Select: Drag a rectangle to select components. Shift-click to include another component (desktop only).
+Select: Tap or drag a rectangle to select components. Shift-click to include another component.
 
 Move: Touch and drag to a new location.
 
-Delete: Tap to select, then tap the <i class="fas fa-times fa-lg"></i> icon or hit BACKSPACE on the keyboard.
+Delete: Select the part(s), then tap <i class="fas fa-times fa-lg"></i> or hit backspace/delete on the keyboard.
 
-Rotate/Reflect: Tap to select, then tap on the 
-<i class="fas fa-redo"></i> 
-Rotate icon or type the letter "**r**" to rotate 90. Repeat for more rotations and reflections (8 total).
+Rotate/Reflect: Select the part(s), then tap on <i class="fas fa-redo"></i> or hit the keyboard letter "**r**" to rotate 90. Repeat for more rotations and reflections (8 total).
 
 Properties: Double-tap on a component to change its properties like resistance or voltage.
+
+Scroll/Pan: Tap on-screen scroll/pan arrows, or mouse or trackpad Alt-drag.
+
+Zoom: Tap on-screen zoom controls or the mouse scroll wheel, or trackpad.
 
 Numbers may be entered using engineering notation,
 
@@ -127,7 +130,7 @@ You can add unattached text annotation to the circuit with the same label part. 
 
 ## On-screen controls
 
-![Scroll/pan]({% link i/circuit_sandbox_scroll_controls.png %}){:height="40px"}  Scroll/Pan     
+![Scroll/Pan]({% link i/circuit_sandbox_scroll_controls.png %}){:height="40px"}  Scroll/Pan     
 ![Zoom]({% link i/circuit_sandbox_zoom_controls.png %}){:height="80px"}  Zoom in, out, fit          
 ![Rotate]({% link i/circuit_sandbox_rotate_control.png %}){:height="40px"}  Rotate          
 ![Delete]({% link i/circuit_sandbox_delete_control.png %}){:height="40px"} Delete        
