@@ -23,7 +23,7 @@ A simulator for learning about circuits. Circuit Sandbox includes schematic capt
         <td>Magyarul<br>(Hungarian)</td>
         <td>हिन्दी<br>(Hindi)</td>
         <td>日本語<br>(Japanese)</td>
-        <td>简体中文<br>(Simplified Chinese)</td>
+        <td>简体中文<br>(Chinese)</td>
         <td>Čeština<br>(Czech)</td>
     </tr>
 </table>
@@ -110,7 +110,7 @@ Properties: Double-tap on a component to change its properties like resistance o
 
 Scroll/Pan: Tap on-screen scroll/pan arrows, or mouse or trackpad Alt-drag.
 
-Zoom: Tap on-screen zoom controls or the mouse scroll wheel, or trackpad.
+Zoom: Tap on-screen zoom controls, or use the mouse scroll wheel or trackpad.
 
 Numbers may be entered using engineering notation,
 
