@@ -59,11 +59,11 @@ Basic concepts of signal processing. Properties of sine waves. (under developmen
 
 <table>
     <tr>
-        <td width="25%">English</td>
-        <td width="25%">Español</td>
-        <td width="25%">Italiano</td>
-        <td width="25%">French</td>
-        <td width="25%">Português</td>
+        <td>English</td>
+        <td>Español</td>
+        <td>Italiano</td>
+        <td>French</td>
+        <td>Português</td>
     </tr>
     <tr>
         <td>हिन्दी<br>(Hindi)</td>
