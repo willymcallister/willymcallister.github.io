@@ -16,7 +16,7 @@ A simulator for learning about circuits. Circuit Sandbox includes schematic capt
         <td>English</td>
         <td>Español</td>
         <td>Português</td>
-        <td>French</td>
+        <td>Français</td>
         <td>Italian</td>
     </tr>
     <tr>
@@ -412,3 +412,5 @@ This version of the simulator includes additions by Willy McAllister, including,
 * Sharable link
 * Touch sensitivity
 * Internationalization
+
+In 2025, Github user [Spitfire972](https://github.com/Spitfire972) contributed functionality for zooming and panning the schematic canvas.
