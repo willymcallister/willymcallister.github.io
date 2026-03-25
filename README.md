@@ -26,3 +26,11 @@ The new feature of Spinning Numbers not found in the [Khan Academy's EE subject]
 ----
 
 
+# Deploy locally
+
+```
+git clone https://github.com/willymcallister/willymcallister.github.io
+cd willymcallister.github.io
+bundle install
+bundle exec jekyll serve
+``
